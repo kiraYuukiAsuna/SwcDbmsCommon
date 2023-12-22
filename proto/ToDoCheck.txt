@@ -1,0 +1,15 @@
+    rpc DeleteUser(DeleteUserRequest) returns (DeleteUserResponse) {}
+
+    rpc GetUser(GetUserRequest) returns (GetUserResponse) {}
+
+    rpc GetUserPermissionGroup(GetUserPermissionGroupRequest) returns (GetUserPermissionGroupResponse){}
+    rpc GetPermissionGroup(GetPermissionGroupRequest) returns (GetPermissionGroupResponse){}
+    rpc GetAllPermissionGroup(GetAllPermissionGroupRequest) returns (GetAllPermissionGroupResponse){}
+    rpc ChangeUserPermissionGroup(ChangeUserPermissionGroupRequest) returns (ChangeUserPermissionGroupResponse){}
+    
+    rpc GetSwcNodeData(GetSwcNodeDataRequest) returns (GetSwcNodeDataResponse){}
+    
+    rpc GetSwcNodeDataListByTimeAndUser(GetSwcNodeDataListByTimeAndUserRequest) returns (GetSwcNodeDataListByTimeAndUserResponse){}
+    
+    rpc BackupFullDatabase(BackupFullDatabaseRequest) returns (BackupFullDatabaseResponse){}
+    
