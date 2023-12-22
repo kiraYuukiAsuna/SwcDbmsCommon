@@ -7,8 +7,8 @@
 package service
 
 import (
-	request "DBMS/Generated/proto/request"
-	response "DBMS/Generated/proto/response"
+	request "DBMS/SwcDbmsCommon/Generated/go/proto/request"
+	response "DBMS/SwcDbmsCommon/Generated/go/proto/response"
 	context "context"
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"

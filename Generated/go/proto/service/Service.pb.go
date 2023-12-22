@@ -7,9 +7,9 @@
 package service
 
 import (
-	_ "DBMS/Generated/proto/message"
-	request "DBMS/Generated/proto/request"
-	response "DBMS/Generated/proto/response"
+	_ "DBMS/SwcDbmsCommon/Generated/go/proto/message"
+	request "DBMS/SwcDbmsCommon/Generated/go/proto/request"
+	response "DBMS/SwcDbmsCommon/Generated/go/proto/response"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	timestamppb "google.golang.org/protobuf/types/known/timestamppb"

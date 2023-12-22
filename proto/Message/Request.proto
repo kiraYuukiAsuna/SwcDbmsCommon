@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-option go_package = "DBMS/Generated/proto/request";
+option go_package = "DBMS/SwcDbmsCommon/Generated/go/proto/request";
 
 package proto;
 

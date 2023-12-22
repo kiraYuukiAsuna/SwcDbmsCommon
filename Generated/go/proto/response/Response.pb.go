@@ -7,7 +7,7 @@
 package response
 
 import (
-	message "DBMS/Generated/proto/message"
+	message "DBMS/SwcDbmsCommon/Generated/go/proto/message"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	timestamppb "google.golang.org/protobuf/types/known/timestamppb"

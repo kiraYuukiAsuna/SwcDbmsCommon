@@ -9,7 +9,7 @@ It translates gRPC into RESTful JSON APIs.
 package service
 
 import (
-	"DBMS/Generated/proto/request"
+	"DBMS/SwcDbmsCommon/Generated/go/proto/request"
 	"context"
 	"io"
 	"net/http"
