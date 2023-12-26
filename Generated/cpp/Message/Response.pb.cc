@@ -1005,8 +1005,9 @@ const char descriptor_table_protodef_Message_2fResponse_2eproto[] PROTOBUF_SECTI
   "csMetaInfoV1\"\177\n\035GetAllDailyStatisticsRes"
   "ponse\022\016\n\006status\030\001 \001(\010\022\017\n\007Message\030\002 \001(\t\022="
   "\n\023DailyStatisticsInfo\030\003 \003(\0132 .proto.Dail"
-  "yStatisticsMetaInfoV1B\037Z\035DBMS/Generated/"
-  "proto/responseP\000b\006proto3"
+  "yStatisticsMetaInfoV1B0Z.DBMS/SwcDbmsCom"
+  "mon/Generated/go/proto/responseP\000b\006proto"
+  "3"
   ;
 static const ::_pbi::DescriptorTable* const descriptor_table_Message_2fResponse_2eproto_deps[2] = {
   &::descriptor_table_Message_2fMessage_2eproto,
@@ -1014,7 +1015,7 @@ static const ::_pbi::DescriptorTable* const descriptor_table_Message_2fResponse_
 };
 static ::_pbi::once_flag descriptor_table_Message_2fResponse_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_Message_2fResponse_2eproto = {
-    false, false, 3664, descriptor_table_protodef_Message_2fResponse_2eproto,
+    false, false, 3681, descriptor_table_protodef_Message_2fResponse_2eproto,
     "Message/Response.proto",
     &descriptor_table_Message_2fResponse_2eproto_once, descriptor_table_Message_2fResponse_2eproto_deps, 2, 34,
     schemas, file_default_instances, TableStruct_Message_2fResponse_2eproto::offsets,

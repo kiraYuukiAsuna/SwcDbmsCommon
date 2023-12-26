@@ -105,8 +105,9 @@ const char descriptor_table_protodef_Service_2fService_2eproto[] PROTOBUF_SECTIO
   "est\032!.proto.GetDailyStatisticsResponse\"\000"
   "\022d\n\025GetAllDailyStatistics\022#.proto.GetAll"
   "DailyStatisticsRequest\032$.proto.GetAllDai"
-  "lyStatisticsResponse\"\000B\036Z\034DBMS/Generated"
-  "/proto/serviceP\000b\006proto3"
+  "lyStatisticsResponse\"\000B/Z-DBMS/SwcDbmsCo"
+  "mmon/Generated/go/proto/serviceP\000b\006proto"
+  "3"
   ;
 static const ::_pbi::DescriptorTable* const descriptor_table_Service_2fService_2eproto_deps[4] = {
   &::descriptor_table_Message_2fMessage_2eproto,
@@ -116,7 +117,7 @@ static const ::_pbi::DescriptorTable* const descriptor_table_Service_2fService_2
 };
 static ::_pbi::once_flag descriptor_table_Service_2fService_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_Service_2fService_2eproto = {
-    false, false, 3104, descriptor_table_protodef_Service_2fService_2eproto,
+    false, false, 3121, descriptor_table_protodef_Service_2fService_2eproto,
     "Service/Service.proto",
     &descriptor_table_Service_2fService_2eproto_once, descriptor_table_Service_2fService_2eproto_deps, 4, 0,
     schemas, file_default_instances, TableStruct_Service_2fService_2eproto::offsets,

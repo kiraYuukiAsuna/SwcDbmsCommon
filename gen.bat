@@ -14,10 +14,10 @@ mkdir "apiref"
 mkdir "apiref/openapiv2"
 "Bin/protobuf/bin/protoc.exe" -I=Bin/protobuf/include -I=proto proto/Service/* -I=Bin/protobuf/include/protoc-gen-openapiv2/options --plugin=protoc-gen-openapiv2=Bin/protobuf/bin/protoc-gen-openapiv2.exe --openapiv2_out apiref/openapiv2 --openapiv2_opt generate_unbound_methods=true
 
-move "Generated\go\DBMS\Generated\proto" "Generated\go\proto"
+move "Generated\go\DBMS\SwcDbmsCommon\Generated\go\proto" "Generated\go\proto"
 move "Generated\go\Service\Service.pb.gw.go" "Generated\go\proto\service"
 rmdir /s /q "Generated\go\DBMS
-rmdir /s /q "Generated\go\service"
+rmdir /s /q "Generated\go\Service"
 
 "Bin/protobuf/bin/protoc.exe" -I=Bin/protobuf/include -I=proto proto/Message/* --plugin=protoc-gen-grpc=Bin/protobuf/bin/grpc_cpp_plugin.exe --cpp_out=Generated/cpp --grpc_out=Generated/cpp
 

@@ -62,6 +62,18 @@ message ProjectMetaInfoV1{
     string WorkMode = 9;
 }
 
+message SwcSnapshot{
+    string SwcSnapshotCollectionName = 1;
+    google.protobuf.Timestamp CreateTime = 2;
+}
+
+message SwcIncrementOperation{
+    string IncrementOperationCollectionName = 1;
+    string StartSnapshot = 2;
+    string EndSnapshot = 3;
+    google.protobuf.Timestamp CreateTime = 4;
+}
+
 message SwcMetaInfoV1{
     MetaInfoBase Base = 1;
     string Name = 2;
@@ -70,7 +82,8 @@ message SwcMetaInfoV1{
     string SwcType = 5;
     google.protobuf.Timestamp CreateTime = 6;
     google.protobuf.Timestamp LastModifiedTime = 7;
-
+    repeated SwcSnapshot SwcSnapshotList = 8;
+    repeated SwcIncrementOperation SwcIncrementOperationList = 9;
 }
 
 message SwcNodeInternalDataV1{

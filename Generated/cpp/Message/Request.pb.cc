@@ -940,8 +940,9 @@ const char descriptor_table_protodef_Message_2fRequest_2eproto[] PROTOBUF_SECTIO
   "MetaInfoV1\022=\n\023DailyStatisticsInfo\030\002 \001(\0132"
   " .proto.DailyStatisticsMetaInfoV1\"G\n\034Get"
   "AllDailyStatisticsRequest\022\'\n\010UserInfo\030\001 "
-  "\001(\0132\025.proto.UserMetaInfoV1B\036Z\034DBMS/Gener"
-  "ated/proto/requestP\000b\006proto3"
+  "\001(\0132\025.proto.UserMetaInfoV1B/Z-DBMS/SwcDb"
+  "msCommon/Generated/go/proto/requestP\000b\006p"
+  "roto3"
   ;
 static const ::_pbi::DescriptorTable* const descriptor_table_Message_2fRequest_2eproto_deps[2] = {
   &::descriptor_table_Message_2fMessage_2eproto,
@@ -949,7 +950,7 @@ static const ::_pbi::DescriptorTable* const descriptor_table_Message_2fRequest_2
 };
 static ::_pbi::once_flag descriptor_table_Message_2fRequest_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_Message_2fRequest_2eproto = {
-    false, false, 3788, descriptor_table_protodef_Message_2fRequest_2eproto,
+    false, false, 3805, descriptor_table_protodef_Message_2fRequest_2eproto,
     "Message/Request.proto",
     &descriptor_table_Message_2fRequest_2eproto_once, descriptor_table_Message_2fRequest_2eproto_deps, 2, 34,
     schemas, file_default_instances, TableStruct_Message_2fRequest_2eproto::offsets,

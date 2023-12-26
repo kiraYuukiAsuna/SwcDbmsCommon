@@ -1967,6 +1967,24 @@
         }
       }
     },
+    "protoSwcIncrementOperation": {
+      "type": "object",
+      "properties": {
+        "IncrementOperationCollectionName": {
+          "type": "string"
+        },
+        "StartSnapshot": {
+          "type": "string"
+        },
+        "EndSnapshot": {
+          "type": "string"
+        },
+        "CreateTime": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
     "protoSwcMetaInfoV1": {
       "type": "object",
       "properties": {
@@ -1992,6 +2010,20 @@
         "LastModifiedTime": {
           "type": "string",
           "format": "date-time"
+        },
+        "SwcSnapshotList": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/protoSwcSnapshot"
+          }
+        },
+        "SwcIncrementOperationList": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/protoSwcIncrementOperation"
+          }
         }
       }
     },
@@ -2070,6 +2102,18 @@
         "FeatureValue": {
           "type": "integer",
           "format": "int32"
+        }
+      }
+    },
+    "protoSwcSnapshot": {
+      "type": "object",
+      "properties": {
+        "SwcSnapshotCollectionName": {
+          "type": "string"
+        },
+        "CreateTime": {
+          "type": "string",
+          "format": "date-time"
         }
       }
     },

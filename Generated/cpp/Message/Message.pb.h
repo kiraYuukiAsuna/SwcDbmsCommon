@@ -67,6 +67,9 @@ extern ProjectPermissionMetaInfoV1DefaultTypeInternal _ProjectPermissionMetaInfo
 class SwcDataV1;
 struct SwcDataV1DefaultTypeInternal;
 extern SwcDataV1DefaultTypeInternal _SwcDataV1_default_instance_;
+class SwcIncrementOperation;
+struct SwcIncrementOperationDefaultTypeInternal;
+extern SwcIncrementOperationDefaultTypeInternal _SwcIncrementOperation_default_instance_;
 class SwcMetaInfoV1;
 struct SwcMetaInfoV1DefaultTypeInternal;
 extern SwcMetaInfoV1DefaultTypeInternal _SwcMetaInfoV1_default_instance_;
@@ -76,6 +79,9 @@ extern SwcNodeDataV1DefaultTypeInternal _SwcNodeDataV1_default_instance_;
 class SwcNodeInternalDataV1;
 struct SwcNodeInternalDataV1DefaultTypeInternal;
 extern SwcNodeInternalDataV1DefaultTypeInternal _SwcNodeInternalDataV1_default_instance_;
+class SwcSnapshot;
+struct SwcSnapshotDefaultTypeInternal;
+extern SwcSnapshotDefaultTypeInternal _SwcSnapshot_default_instance_;
 class UserMetaInfoV1;
 struct UserMetaInfoV1DefaultTypeInternal;
 extern UserMetaInfoV1DefaultTypeInternal _UserMetaInfoV1_default_instance_;
@@ -91,9 +97,11 @@ template<> ::proto::PermissionGroupMetaInfoV1* Arena::CreateMaybeMessage<::proto
 template<> ::proto::ProjectMetaInfoV1* Arena::CreateMaybeMessage<::proto::ProjectMetaInfoV1>(Arena*);
 template<> ::proto::ProjectPermissionMetaInfoV1* Arena::CreateMaybeMessage<::proto::ProjectPermissionMetaInfoV1>(Arena*);
 template<> ::proto::SwcDataV1* Arena::CreateMaybeMessage<::proto::SwcDataV1>(Arena*);
+template<> ::proto::SwcIncrementOperation* Arena::CreateMaybeMessage<::proto::SwcIncrementOperation>(Arena*);
 template<> ::proto::SwcMetaInfoV1* Arena::CreateMaybeMessage<::proto::SwcMetaInfoV1>(Arena*);
 template<> ::proto::SwcNodeDataV1* Arena::CreateMaybeMessage<::proto::SwcNodeDataV1>(Arena*);
 template<> ::proto::SwcNodeInternalDataV1* Arena::CreateMaybeMessage<::proto::SwcNodeInternalDataV1>(Arena*);
+template<> ::proto::SwcSnapshot* Arena::CreateMaybeMessage<::proto::SwcSnapshot>(Arena*);
 template<> ::proto::UserMetaInfoV1* Arena::CreateMaybeMessage<::proto::UserMetaInfoV1>(Arena*);
 template<> ::proto::UserPermissionOverrideMetaInfoV1* Arena::CreateMaybeMessage<::proto::UserPermissionOverrideMetaInfoV1>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
@@ -1614,6 +1622,384 @@ class ProjectMetaInfoV1 final :
 };
 // -------------------------------------------------------------------
 
+class SwcSnapshot final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:proto.SwcSnapshot) */ {
+ public:
+  inline SwcSnapshot() : SwcSnapshot(nullptr) {}
+  ~SwcSnapshot() override;
+  explicit PROTOBUF_CONSTEXPR SwcSnapshot(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  SwcSnapshot(const SwcSnapshot& from);
+  SwcSnapshot(SwcSnapshot&& from) noexcept
+    : SwcSnapshot() {
+    *this = ::std::move(from);
+  }
+
+  inline SwcSnapshot& operator=(const SwcSnapshot& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline SwcSnapshot& operator=(SwcSnapshot&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const SwcSnapshot& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const SwcSnapshot* internal_default_instance() {
+    return reinterpret_cast<const SwcSnapshot*>(
+               &_SwcSnapshot_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    7;
+
+  friend void swap(SwcSnapshot& a, SwcSnapshot& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(SwcSnapshot* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() != nullptr &&
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(SwcSnapshot* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  SwcSnapshot* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<SwcSnapshot>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const SwcSnapshot& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const SwcSnapshot& from) {
+    SwcSnapshot::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
+
+  private:
+  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(SwcSnapshot* other);
+
+  private:
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "proto.SwcSnapshot";
+  }
+  protected:
+  explicit SwcSnapshot(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kSwcSnapshotCollectionNameFieldNumber = 1,
+    kCreateTimeFieldNumber = 2,
+  };
+  // string SwcSnapshotCollectionName = 1;
+  void clear_swcsnapshotcollectionname();
+  const std::string& swcsnapshotcollectionname() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_swcsnapshotcollectionname(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_swcsnapshotcollectionname();
+  PROTOBUF_NODISCARD std::string* release_swcsnapshotcollectionname();
+  void set_allocated_swcsnapshotcollectionname(std::string* swcsnapshotcollectionname);
+  private:
+  const std::string& _internal_swcsnapshotcollectionname() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_swcsnapshotcollectionname(const std::string& value);
+  std::string* _internal_mutable_swcsnapshotcollectionname();
+  public:
+
+  // .google.protobuf.Timestamp CreateTime = 2;
+  bool has_createtime() const;
+  private:
+  bool _internal_has_createtime() const;
+  public:
+  void clear_createtime();
+  const ::PROTOBUF_NAMESPACE_ID::Timestamp& createtime() const;
+  PROTOBUF_NODISCARD ::PROTOBUF_NAMESPACE_ID::Timestamp* release_createtime();
+  ::PROTOBUF_NAMESPACE_ID::Timestamp* mutable_createtime();
+  void set_allocated_createtime(::PROTOBUF_NAMESPACE_ID::Timestamp* createtime);
+  private:
+  const ::PROTOBUF_NAMESPACE_ID::Timestamp& _internal_createtime() const;
+  ::PROTOBUF_NAMESPACE_ID::Timestamp* _internal_mutable_createtime();
+  public:
+  void unsafe_arena_set_allocated_createtime(
+      ::PROTOBUF_NAMESPACE_ID::Timestamp* createtime);
+  ::PROTOBUF_NAMESPACE_ID::Timestamp* unsafe_arena_release_createtime();
+
+  // @@protoc_insertion_point(class_scope:proto.SwcSnapshot)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr swcsnapshotcollectionname_;
+    ::PROTOBUF_NAMESPACE_ID::Timestamp* createtime_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_Message_2fMessage_2eproto;
+};
+// -------------------------------------------------------------------
+
+class SwcIncrementOperation final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:proto.SwcIncrementOperation) */ {
+ public:
+  inline SwcIncrementOperation() : SwcIncrementOperation(nullptr) {}
+  ~SwcIncrementOperation() override;
+  explicit PROTOBUF_CONSTEXPR SwcIncrementOperation(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  SwcIncrementOperation(const SwcIncrementOperation& from);
+  SwcIncrementOperation(SwcIncrementOperation&& from) noexcept
+    : SwcIncrementOperation() {
+    *this = ::std::move(from);
+  }
+
+  inline SwcIncrementOperation& operator=(const SwcIncrementOperation& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline SwcIncrementOperation& operator=(SwcIncrementOperation&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const SwcIncrementOperation& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const SwcIncrementOperation* internal_default_instance() {
+    return reinterpret_cast<const SwcIncrementOperation*>(
+               &_SwcIncrementOperation_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    8;
+
+  friend void swap(SwcIncrementOperation& a, SwcIncrementOperation& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(SwcIncrementOperation* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() != nullptr &&
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(SwcIncrementOperation* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  SwcIncrementOperation* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<SwcIncrementOperation>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const SwcIncrementOperation& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const SwcIncrementOperation& from) {
+    SwcIncrementOperation::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
+
+  private:
+  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(SwcIncrementOperation* other);
+
+  private:
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "proto.SwcIncrementOperation";
+  }
+  protected:
+  explicit SwcIncrementOperation(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kIncrementOperationCollectionNameFieldNumber = 1,
+    kStartSnapshotFieldNumber = 2,
+    kEndSnapshotFieldNumber = 3,
+    kCreateTimeFieldNumber = 4,
+  };
+  // string IncrementOperationCollectionName = 1;
+  void clear_incrementoperationcollectionname();
+  const std::string& incrementoperationcollectionname() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_incrementoperationcollectionname(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_incrementoperationcollectionname();
+  PROTOBUF_NODISCARD std::string* release_incrementoperationcollectionname();
+  void set_allocated_incrementoperationcollectionname(std::string* incrementoperationcollectionname);
+  private:
+  const std::string& _internal_incrementoperationcollectionname() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_incrementoperationcollectionname(const std::string& value);
+  std::string* _internal_mutable_incrementoperationcollectionname();
+  public:
+
+  // string StartSnapshot = 2;
+  void clear_startsnapshot();
+  const std::string& startsnapshot() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_startsnapshot(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_startsnapshot();
+  PROTOBUF_NODISCARD std::string* release_startsnapshot();
+  void set_allocated_startsnapshot(std::string* startsnapshot);
+  private:
+  const std::string& _internal_startsnapshot() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_startsnapshot(const std::string& value);
+  std::string* _internal_mutable_startsnapshot();
+  public:
+
+  // string EndSnapshot = 3;
+  void clear_endsnapshot();
+  const std::string& endsnapshot() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_endsnapshot(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_endsnapshot();
+  PROTOBUF_NODISCARD std::string* release_endsnapshot();
+  void set_allocated_endsnapshot(std::string* endsnapshot);
+  private:
+  const std::string& _internal_endsnapshot() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_endsnapshot(const std::string& value);
+  std::string* _internal_mutable_endsnapshot();
+  public:
+
+  // .google.protobuf.Timestamp CreateTime = 4;
+  bool has_createtime() const;
+  private:
+  bool _internal_has_createtime() const;
+  public:
+  void clear_createtime();
+  const ::PROTOBUF_NAMESPACE_ID::Timestamp& createtime() const;
+  PROTOBUF_NODISCARD ::PROTOBUF_NAMESPACE_ID::Timestamp* release_createtime();
+  ::PROTOBUF_NAMESPACE_ID::Timestamp* mutable_createtime();
+  void set_allocated_createtime(::PROTOBUF_NAMESPACE_ID::Timestamp* createtime);
+  private:
+  const ::PROTOBUF_NAMESPACE_ID::Timestamp& _internal_createtime() const;
+  ::PROTOBUF_NAMESPACE_ID::Timestamp* _internal_mutable_createtime();
+  public:
+  void unsafe_arena_set_allocated_createtime(
+      ::PROTOBUF_NAMESPACE_ID::Timestamp* createtime);
+  ::PROTOBUF_NAMESPACE_ID::Timestamp* unsafe_arena_release_createtime();
+
+  // @@protoc_insertion_point(class_scope:proto.SwcIncrementOperation)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr incrementoperationcollectionname_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr startsnapshot_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr endsnapshot_;
+    ::PROTOBUF_NAMESPACE_ID::Timestamp* createtime_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_Message_2fMessage_2eproto;
+};
+// -------------------------------------------------------------------
+
 class SwcMetaInfoV1 final :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:proto.SwcMetaInfoV1) */ {
  public:
@@ -1662,7 +2048,7 @@ class SwcMetaInfoV1 final :
                &_SwcMetaInfoV1_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    7;
+    9;
 
   friend void swap(SwcMetaInfoV1& a, SwcMetaInfoV1& b) {
     a.Swap(&b);
@@ -1735,6 +2121,8 @@ class SwcMetaInfoV1 final :
   // accessors -------------------------------------------------------
 
   enum : int {
+    kSwcSnapshotListFieldNumber = 8,
+    kSwcIncrementOperationListFieldNumber = 9,
     kNameFieldNumber = 2,
     kDescriptionFieldNumber = 3,
     kCreatorFieldNumber = 4,
@@ -1743,6 +2131,42 @@ class SwcMetaInfoV1 final :
     kCreateTimeFieldNumber = 6,
     kLastModifiedTimeFieldNumber = 7,
   };
+  // repeated .proto.SwcSnapshot SwcSnapshotList = 8;
+  int swcsnapshotlist_size() const;
+  private:
+  int _internal_swcsnapshotlist_size() const;
+  public:
+  void clear_swcsnapshotlist();
+  ::proto::SwcSnapshot* mutable_swcsnapshotlist(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::proto::SwcSnapshot >*
+      mutable_swcsnapshotlist();
+  private:
+  const ::proto::SwcSnapshot& _internal_swcsnapshotlist(int index) const;
+  ::proto::SwcSnapshot* _internal_add_swcsnapshotlist();
+  public:
+  const ::proto::SwcSnapshot& swcsnapshotlist(int index) const;
+  ::proto::SwcSnapshot* add_swcsnapshotlist();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::proto::SwcSnapshot >&
+      swcsnapshotlist() const;
+
+  // repeated .proto.SwcIncrementOperation SwcIncrementOperationList = 9;
+  int swcincrementoperationlist_size() const;
+  private:
+  int _internal_swcincrementoperationlist_size() const;
+  public:
+  void clear_swcincrementoperationlist();
+  ::proto::SwcIncrementOperation* mutable_swcincrementoperationlist(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::proto::SwcIncrementOperation >*
+      mutable_swcincrementoperationlist();
+  private:
+  const ::proto::SwcIncrementOperation& _internal_swcincrementoperationlist(int index) const;
+  ::proto::SwcIncrementOperation* _internal_add_swcincrementoperationlist();
+  public:
+  const ::proto::SwcIncrementOperation& swcincrementoperationlist(int index) const;
+  ::proto::SwcIncrementOperation* add_swcincrementoperationlist();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::proto::SwcIncrementOperation >&
+      swcincrementoperationlist() const;
+
   // string Name = 2;
   void clear_name();
   const std::string& name() const;
@@ -1861,6 +2285,8 @@ class SwcMetaInfoV1 final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::proto::SwcSnapshot > swcsnapshotlist_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::proto::SwcIncrementOperation > swcincrementoperationlist_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr name_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr description_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr creator_;
@@ -1923,7 +2349,7 @@ class SwcNodeInternalDataV1 final :
                &_SwcNodeInternalDataV1_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    8;
+    10;
 
   friend void swap(SwcNodeInternalDataV1& a, SwcNodeInternalDataV1& b) {
     a.Swap(&b);
@@ -2192,7 +2618,7 @@ class SwcNodeDataV1 final :
                &_SwcNodeDataV1_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    9;
+    11;
 
   friend void swap(SwcNodeDataV1& a, SwcNodeDataV1& b) {
     a.Swap(&b);
@@ -2441,7 +2867,7 @@ class SwcDataV1 final :
                &_SwcDataV1_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    10;
+    12;
 
   friend void swap(SwcDataV1& a, SwcDataV1& b) {
     a.Swap(&b);
@@ -2598,7 +3024,7 @@ class DailyStatisticsMetaInfoV1 final :
                &_DailyStatisticsMetaInfoV1_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    11;
+    13;
 
   friend void swap(DailyStatisticsMetaInfoV1& a, DailyStatisticsMetaInfoV1& b) {
     a.Swap(&b);
@@ -4753,6 +5179,384 @@ inline void ProjectMetaInfoV1::set_allocated_workmode(std::string* workmode) {
 
 // -------------------------------------------------------------------
 
+// SwcSnapshot
+
+// string SwcSnapshotCollectionName = 1;
+inline void SwcSnapshot::clear_swcsnapshotcollectionname() {
+  _impl_.swcsnapshotcollectionname_.ClearToEmpty();
+}
+inline const std::string& SwcSnapshot::swcsnapshotcollectionname() const {
+  // @@protoc_insertion_point(field_get:proto.SwcSnapshot.SwcSnapshotCollectionName)
+  return _internal_swcsnapshotcollectionname();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void SwcSnapshot::set_swcsnapshotcollectionname(ArgT0&& arg0, ArgT... args) {
+ 
+ _impl_.swcsnapshotcollectionname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:proto.SwcSnapshot.SwcSnapshotCollectionName)
+}
+inline std::string* SwcSnapshot::mutable_swcsnapshotcollectionname() {
+  std::string* _s = _internal_mutable_swcsnapshotcollectionname();
+  // @@protoc_insertion_point(field_mutable:proto.SwcSnapshot.SwcSnapshotCollectionName)
+  return _s;
+}
+inline const std::string& SwcSnapshot::_internal_swcsnapshotcollectionname() const {
+  return _impl_.swcsnapshotcollectionname_.Get();
+}
+inline void SwcSnapshot::_internal_set_swcsnapshotcollectionname(const std::string& value) {
+  
+  _impl_.swcsnapshotcollectionname_.Set(value, GetArenaForAllocation());
+}
+inline std::string* SwcSnapshot::_internal_mutable_swcsnapshotcollectionname() {
+  
+  return _impl_.swcsnapshotcollectionname_.Mutable(GetArenaForAllocation());
+}
+inline std::string* SwcSnapshot::release_swcsnapshotcollectionname() {
+  // @@protoc_insertion_point(field_release:proto.SwcSnapshot.SwcSnapshotCollectionName)
+  return _impl_.swcsnapshotcollectionname_.Release();
+}
+inline void SwcSnapshot::set_allocated_swcsnapshotcollectionname(std::string* swcsnapshotcollectionname) {
+  if (swcsnapshotcollectionname != nullptr) {
+    
+  } else {
+    
+  }
+  _impl_.swcsnapshotcollectionname_.SetAllocated(swcsnapshotcollectionname, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.swcsnapshotcollectionname_.IsDefault()) {
+    _impl_.swcsnapshotcollectionname_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:proto.SwcSnapshot.SwcSnapshotCollectionName)
+}
+
+// .google.protobuf.Timestamp CreateTime = 2;
+inline bool SwcSnapshot::_internal_has_createtime() const {
+  return this != internal_default_instance() && _impl_.createtime_ != nullptr;
+}
+inline bool SwcSnapshot::has_createtime() const {
+  return _internal_has_createtime();
+}
+inline const ::PROTOBUF_NAMESPACE_ID::Timestamp& SwcSnapshot::_internal_createtime() const {
+  const ::PROTOBUF_NAMESPACE_ID::Timestamp* p = _impl_.createtime_;
+  return p != nullptr ? *p : reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Timestamp&>(
+      ::PROTOBUF_NAMESPACE_ID::_Timestamp_default_instance_);
+}
+inline const ::PROTOBUF_NAMESPACE_ID::Timestamp& SwcSnapshot::createtime() const {
+  // @@protoc_insertion_point(field_get:proto.SwcSnapshot.CreateTime)
+  return _internal_createtime();
+}
+inline void SwcSnapshot::unsafe_arena_set_allocated_createtime(
+    ::PROTOBUF_NAMESPACE_ID::Timestamp* createtime) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.createtime_);
+  }
+  _impl_.createtime_ = createtime;
+  if (createtime) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.SwcSnapshot.CreateTime)
+}
+inline ::PROTOBUF_NAMESPACE_ID::Timestamp* SwcSnapshot::release_createtime() {
+  
+  ::PROTOBUF_NAMESPACE_ID::Timestamp* temp = _impl_.createtime_;
+  _impl_.createtime_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::PROTOBUF_NAMESPACE_ID::Timestamp* SwcSnapshot::unsafe_arena_release_createtime() {
+  // @@protoc_insertion_point(field_release:proto.SwcSnapshot.CreateTime)
+  
+  ::PROTOBUF_NAMESPACE_ID::Timestamp* temp = _impl_.createtime_;
+  _impl_.createtime_ = nullptr;
+  return temp;
+}
+inline ::PROTOBUF_NAMESPACE_ID::Timestamp* SwcSnapshot::_internal_mutable_createtime() {
+  
+  if (_impl_.createtime_ == nullptr) {
+    auto* p = CreateMaybeMessage<::PROTOBUF_NAMESPACE_ID::Timestamp>(GetArenaForAllocation());
+    _impl_.createtime_ = p;
+  }
+  return _impl_.createtime_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::Timestamp* SwcSnapshot::mutable_createtime() {
+  ::PROTOBUF_NAMESPACE_ID::Timestamp* _msg = _internal_mutable_createtime();
+  // @@protoc_insertion_point(field_mutable:proto.SwcSnapshot.CreateTime)
+  return _msg;
+}
+inline void SwcSnapshot::set_allocated_createtime(::PROTOBUF_NAMESPACE_ID::Timestamp* createtime) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.createtime_);
+  }
+  if (createtime) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(createtime));
+    if (message_arena != submessage_arena) {
+      createtime = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, createtime, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  _impl_.createtime_ = createtime;
+  // @@protoc_insertion_point(field_set_allocated:proto.SwcSnapshot.CreateTime)
+}
+
+// -------------------------------------------------------------------
+
+// SwcIncrementOperation
+
+// string IncrementOperationCollectionName = 1;
+inline void SwcIncrementOperation::clear_incrementoperationcollectionname() {
+  _impl_.incrementoperationcollectionname_.ClearToEmpty();
+}
+inline const std::string& SwcIncrementOperation::incrementoperationcollectionname() const {
+  // @@protoc_insertion_point(field_get:proto.SwcIncrementOperation.IncrementOperationCollectionName)
+  return _internal_incrementoperationcollectionname();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void SwcIncrementOperation::set_incrementoperationcollectionname(ArgT0&& arg0, ArgT... args) {
+ 
+ _impl_.incrementoperationcollectionname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:proto.SwcIncrementOperation.IncrementOperationCollectionName)
+}
+inline std::string* SwcIncrementOperation::mutable_incrementoperationcollectionname() {
+  std::string* _s = _internal_mutable_incrementoperationcollectionname();
+  // @@protoc_insertion_point(field_mutable:proto.SwcIncrementOperation.IncrementOperationCollectionName)
+  return _s;
+}
+inline const std::string& SwcIncrementOperation::_internal_incrementoperationcollectionname() const {
+  return _impl_.incrementoperationcollectionname_.Get();
+}
+inline void SwcIncrementOperation::_internal_set_incrementoperationcollectionname(const std::string& value) {
+  
+  _impl_.incrementoperationcollectionname_.Set(value, GetArenaForAllocation());
+}
+inline std::string* SwcIncrementOperation::_internal_mutable_incrementoperationcollectionname() {
+  
+  return _impl_.incrementoperationcollectionname_.Mutable(GetArenaForAllocation());
+}
+inline std::string* SwcIncrementOperation::release_incrementoperationcollectionname() {
+  // @@protoc_insertion_point(field_release:proto.SwcIncrementOperation.IncrementOperationCollectionName)
+  return _impl_.incrementoperationcollectionname_.Release();
+}
+inline void SwcIncrementOperation::set_allocated_incrementoperationcollectionname(std::string* incrementoperationcollectionname) {
+  if (incrementoperationcollectionname != nullptr) {
+    
+  } else {
+    
+  }
+  _impl_.incrementoperationcollectionname_.SetAllocated(incrementoperationcollectionname, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.incrementoperationcollectionname_.IsDefault()) {
+    _impl_.incrementoperationcollectionname_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:proto.SwcIncrementOperation.IncrementOperationCollectionName)
+}
+
+// string StartSnapshot = 2;
+inline void SwcIncrementOperation::clear_startsnapshot() {
+  _impl_.startsnapshot_.ClearToEmpty();
+}
+inline const std::string& SwcIncrementOperation::startsnapshot() const {
+  // @@protoc_insertion_point(field_get:proto.SwcIncrementOperation.StartSnapshot)
+  return _internal_startsnapshot();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void SwcIncrementOperation::set_startsnapshot(ArgT0&& arg0, ArgT... args) {
+ 
+ _impl_.startsnapshot_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:proto.SwcIncrementOperation.StartSnapshot)
+}
+inline std::string* SwcIncrementOperation::mutable_startsnapshot() {
+  std::string* _s = _internal_mutable_startsnapshot();
+  // @@protoc_insertion_point(field_mutable:proto.SwcIncrementOperation.StartSnapshot)
+  return _s;
+}
+inline const std::string& SwcIncrementOperation::_internal_startsnapshot() const {
+  return _impl_.startsnapshot_.Get();
+}
+inline void SwcIncrementOperation::_internal_set_startsnapshot(const std::string& value) {
+  
+  _impl_.startsnapshot_.Set(value, GetArenaForAllocation());
+}
+inline std::string* SwcIncrementOperation::_internal_mutable_startsnapshot() {
+  
+  return _impl_.startsnapshot_.Mutable(GetArenaForAllocation());
+}
+inline std::string* SwcIncrementOperation::release_startsnapshot() {
+  // @@protoc_insertion_point(field_release:proto.SwcIncrementOperation.StartSnapshot)
+  return _impl_.startsnapshot_.Release();
+}
+inline void SwcIncrementOperation::set_allocated_startsnapshot(std::string* startsnapshot) {
+  if (startsnapshot != nullptr) {
+    
+  } else {
+    
+  }
+  _impl_.startsnapshot_.SetAllocated(startsnapshot, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.startsnapshot_.IsDefault()) {
+    _impl_.startsnapshot_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:proto.SwcIncrementOperation.StartSnapshot)
+}
+
+// string EndSnapshot = 3;
+inline void SwcIncrementOperation::clear_endsnapshot() {
+  _impl_.endsnapshot_.ClearToEmpty();
+}
+inline const std::string& SwcIncrementOperation::endsnapshot() const {
+  // @@protoc_insertion_point(field_get:proto.SwcIncrementOperation.EndSnapshot)
+  return _internal_endsnapshot();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void SwcIncrementOperation::set_endsnapshot(ArgT0&& arg0, ArgT... args) {
+ 
+ _impl_.endsnapshot_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:proto.SwcIncrementOperation.EndSnapshot)
+}
+inline std::string* SwcIncrementOperation::mutable_endsnapshot() {
+  std::string* _s = _internal_mutable_endsnapshot();
+  // @@protoc_insertion_point(field_mutable:proto.SwcIncrementOperation.EndSnapshot)
+  return _s;
+}
+inline const std::string& SwcIncrementOperation::_internal_endsnapshot() const {
+  return _impl_.endsnapshot_.Get();
+}
+inline void SwcIncrementOperation::_internal_set_endsnapshot(const std::string& value) {
+  
+  _impl_.endsnapshot_.Set(value, GetArenaForAllocation());
+}
+inline std::string* SwcIncrementOperation::_internal_mutable_endsnapshot() {
+  
+  return _impl_.endsnapshot_.Mutable(GetArenaForAllocation());
+}
+inline std::string* SwcIncrementOperation::release_endsnapshot() {
+  // @@protoc_insertion_point(field_release:proto.SwcIncrementOperation.EndSnapshot)
+  return _impl_.endsnapshot_.Release();
+}
+inline void SwcIncrementOperation::set_allocated_endsnapshot(std::string* endsnapshot) {
+  if (endsnapshot != nullptr) {
+    
+  } else {
+    
+  }
+  _impl_.endsnapshot_.SetAllocated(endsnapshot, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.endsnapshot_.IsDefault()) {
+    _impl_.endsnapshot_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:proto.SwcIncrementOperation.EndSnapshot)
+}
+
+// .google.protobuf.Timestamp CreateTime = 4;
+inline bool SwcIncrementOperation::_internal_has_createtime() const {
+  return this != internal_default_instance() && _impl_.createtime_ != nullptr;
+}
+inline bool SwcIncrementOperation::has_createtime() const {
+  return _internal_has_createtime();
+}
+inline const ::PROTOBUF_NAMESPACE_ID::Timestamp& SwcIncrementOperation::_internal_createtime() const {
+  const ::PROTOBUF_NAMESPACE_ID::Timestamp* p = _impl_.createtime_;
+  return p != nullptr ? *p : reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Timestamp&>(
+      ::PROTOBUF_NAMESPACE_ID::_Timestamp_default_instance_);
+}
+inline const ::PROTOBUF_NAMESPACE_ID::Timestamp& SwcIncrementOperation::createtime() const {
+  // @@protoc_insertion_point(field_get:proto.SwcIncrementOperation.CreateTime)
+  return _internal_createtime();
+}
+inline void SwcIncrementOperation::unsafe_arena_set_allocated_createtime(
+    ::PROTOBUF_NAMESPACE_ID::Timestamp* createtime) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.createtime_);
+  }
+  _impl_.createtime_ = createtime;
+  if (createtime) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.SwcIncrementOperation.CreateTime)
+}
+inline ::PROTOBUF_NAMESPACE_ID::Timestamp* SwcIncrementOperation::release_createtime() {
+  
+  ::PROTOBUF_NAMESPACE_ID::Timestamp* temp = _impl_.createtime_;
+  _impl_.createtime_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::PROTOBUF_NAMESPACE_ID::Timestamp* SwcIncrementOperation::unsafe_arena_release_createtime() {
+  // @@protoc_insertion_point(field_release:proto.SwcIncrementOperation.CreateTime)
+  
+  ::PROTOBUF_NAMESPACE_ID::Timestamp* temp = _impl_.createtime_;
+  _impl_.createtime_ = nullptr;
+  return temp;
+}
+inline ::PROTOBUF_NAMESPACE_ID::Timestamp* SwcIncrementOperation::_internal_mutable_createtime() {
+  
+  if (_impl_.createtime_ == nullptr) {
+    auto* p = CreateMaybeMessage<::PROTOBUF_NAMESPACE_ID::Timestamp>(GetArenaForAllocation());
+    _impl_.createtime_ = p;
+  }
+  return _impl_.createtime_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::Timestamp* SwcIncrementOperation::mutable_createtime() {
+  ::PROTOBUF_NAMESPACE_ID::Timestamp* _msg = _internal_mutable_createtime();
+  // @@protoc_insertion_point(field_mutable:proto.SwcIncrementOperation.CreateTime)
+  return _msg;
+}
+inline void SwcIncrementOperation::set_allocated_createtime(::PROTOBUF_NAMESPACE_ID::Timestamp* createtime) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.createtime_);
+  }
+  if (createtime) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(createtime));
+    if (message_arena != submessage_arena) {
+      createtime = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, createtime, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  _impl_.createtime_ = createtime;
+  // @@protoc_insertion_point(field_set_allocated:proto.SwcIncrementOperation.CreateTime)
+}
+
+// -------------------------------------------------------------------
+
 // SwcMetaInfoV1
 
 // .proto.MetaInfoBase Base = 1;
@@ -5213,6 +6017,86 @@ inline void SwcMetaInfoV1::set_allocated_lastmodifiedtime(::PROTOBUF_NAMESPACE_I
   }
   _impl_.lastmodifiedtime_ = lastmodifiedtime;
   // @@protoc_insertion_point(field_set_allocated:proto.SwcMetaInfoV1.LastModifiedTime)
+}
+
+// repeated .proto.SwcSnapshot SwcSnapshotList = 8;
+inline int SwcMetaInfoV1::_internal_swcsnapshotlist_size() const {
+  return _impl_.swcsnapshotlist_.size();
+}
+inline int SwcMetaInfoV1::swcsnapshotlist_size() const {
+  return _internal_swcsnapshotlist_size();
+}
+inline void SwcMetaInfoV1::clear_swcsnapshotlist() {
+  _impl_.swcsnapshotlist_.Clear();
+}
+inline ::proto::SwcSnapshot* SwcMetaInfoV1::mutable_swcsnapshotlist(int index) {
+  // @@protoc_insertion_point(field_mutable:proto.SwcMetaInfoV1.SwcSnapshotList)
+  return _impl_.swcsnapshotlist_.Mutable(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::proto::SwcSnapshot >*
+SwcMetaInfoV1::mutable_swcsnapshotlist() {
+  // @@protoc_insertion_point(field_mutable_list:proto.SwcMetaInfoV1.SwcSnapshotList)
+  return &_impl_.swcsnapshotlist_;
+}
+inline const ::proto::SwcSnapshot& SwcMetaInfoV1::_internal_swcsnapshotlist(int index) const {
+  return _impl_.swcsnapshotlist_.Get(index);
+}
+inline const ::proto::SwcSnapshot& SwcMetaInfoV1::swcsnapshotlist(int index) const {
+  // @@protoc_insertion_point(field_get:proto.SwcMetaInfoV1.SwcSnapshotList)
+  return _internal_swcsnapshotlist(index);
+}
+inline ::proto::SwcSnapshot* SwcMetaInfoV1::_internal_add_swcsnapshotlist() {
+  return _impl_.swcsnapshotlist_.Add();
+}
+inline ::proto::SwcSnapshot* SwcMetaInfoV1::add_swcsnapshotlist() {
+  ::proto::SwcSnapshot* _add = _internal_add_swcsnapshotlist();
+  // @@protoc_insertion_point(field_add:proto.SwcMetaInfoV1.SwcSnapshotList)
+  return _add;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::proto::SwcSnapshot >&
+SwcMetaInfoV1::swcsnapshotlist() const {
+  // @@protoc_insertion_point(field_list:proto.SwcMetaInfoV1.SwcSnapshotList)
+  return _impl_.swcsnapshotlist_;
+}
+
+// repeated .proto.SwcIncrementOperation SwcIncrementOperationList = 9;
+inline int SwcMetaInfoV1::_internal_swcincrementoperationlist_size() const {
+  return _impl_.swcincrementoperationlist_.size();
+}
+inline int SwcMetaInfoV1::swcincrementoperationlist_size() const {
+  return _internal_swcincrementoperationlist_size();
+}
+inline void SwcMetaInfoV1::clear_swcincrementoperationlist() {
+  _impl_.swcincrementoperationlist_.Clear();
+}
+inline ::proto::SwcIncrementOperation* SwcMetaInfoV1::mutable_swcincrementoperationlist(int index) {
+  // @@protoc_insertion_point(field_mutable:proto.SwcMetaInfoV1.SwcIncrementOperationList)
+  return _impl_.swcincrementoperationlist_.Mutable(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::proto::SwcIncrementOperation >*
+SwcMetaInfoV1::mutable_swcincrementoperationlist() {
+  // @@protoc_insertion_point(field_mutable_list:proto.SwcMetaInfoV1.SwcIncrementOperationList)
+  return &_impl_.swcincrementoperationlist_;
+}
+inline const ::proto::SwcIncrementOperation& SwcMetaInfoV1::_internal_swcincrementoperationlist(int index) const {
+  return _impl_.swcincrementoperationlist_.Get(index);
+}
+inline const ::proto::SwcIncrementOperation& SwcMetaInfoV1::swcincrementoperationlist(int index) const {
+  // @@protoc_insertion_point(field_get:proto.SwcMetaInfoV1.SwcIncrementOperationList)
+  return _internal_swcincrementoperationlist(index);
+}
+inline ::proto::SwcIncrementOperation* SwcMetaInfoV1::_internal_add_swcincrementoperationlist() {
+  return _impl_.swcincrementoperationlist_.Add();
+}
+inline ::proto::SwcIncrementOperation* SwcMetaInfoV1::add_swcincrementoperationlist() {
+  ::proto::SwcIncrementOperation* _add = _internal_add_swcincrementoperationlist();
+  // @@protoc_insertion_point(field_add:proto.SwcMetaInfoV1.SwcIncrementOperationList)
+  return _add;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::proto::SwcIncrementOperation >&
+SwcMetaInfoV1::swcincrementoperationlist() const {
+  // @@protoc_insertion_point(field_list:proto.SwcMetaInfoV1.SwcIncrementOperationList)
+  return _impl_.swcincrementoperationlist_;
 }
 
 // -------------------------------------------------------------------
@@ -6464,6 +7348,10 @@ inline void DailyStatisticsMetaInfoV1::set_activeusernumber(int32_t value) {
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------
