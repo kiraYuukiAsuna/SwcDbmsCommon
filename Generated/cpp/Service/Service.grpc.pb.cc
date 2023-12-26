@@ -44,6 +44,12 @@ static const char* DBMS_method_names[] = {
   "/proto.DBMS/UpdateSwc",
   "/proto.DBMS/GetSwcMetaInfo",
   "/proto.DBMS/GetAllSwcMetaInfo",
+  "/proto.DBMS/CreateSwcSnapshot",
+  "/proto.DBMS/DeleteSwcSnapshot",
+  "/proto.DBMS/GetAllSnapshotMetaInfo",
+  "/proto.DBMS/GetSnapshot",
+  "/proto.DBMS/GetAllIncrementOperationMetaInfo",
+  "/proto.DBMS/GetIncrementOperation",
   "/proto.DBMS/CreateSwcNodeData",
   "/proto.DBMS/DeleteSwcNodeData",
   "/proto.DBMS/UpdateSwcNodeData",
@@ -87,18 +93,24 @@ DBMS::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, cons
   , rpcmethod_UpdateSwc_(DBMS_method_names[19], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   , rpcmethod_GetSwcMetaInfo_(DBMS_method_names[20], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   , rpcmethod_GetAllSwcMetaInfo_(DBMS_method_names[21], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_CreateSwcNodeData_(DBMS_method_names[22], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_DeleteSwcNodeData_(DBMS_method_names[23], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_UpdateSwcNodeData_(DBMS_method_names[24], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_GetSwcNodeData_(DBMS_method_names[25], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_GetSwcFullNodeData_(DBMS_method_names[26], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_GetSwcNodeDataListByTimeAndUser_(DBMS_method_names[27], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_BackupFullDatabase_(DBMS_method_names[28], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_CreateDailyStatistics_(DBMS_method_names[29], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_DeleteDailyStatistics_(DBMS_method_names[30], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_UpdateDailyStatistics_(DBMS_method_names[31], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_GetDailyStatistics_(DBMS_method_names[32], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_GetAllDailyStatistics_(DBMS_method_names[33], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_CreateSwcSnapshot_(DBMS_method_names[22], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_DeleteSwcSnapshot_(DBMS_method_names[23], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_GetAllSnapshotMetaInfo_(DBMS_method_names[24], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_GetSnapshot_(DBMS_method_names[25], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_GetAllIncrementOperationMetaInfo_(DBMS_method_names[26], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_GetIncrementOperation_(DBMS_method_names[27], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_CreateSwcNodeData_(DBMS_method_names[28], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_DeleteSwcNodeData_(DBMS_method_names[29], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_UpdateSwcNodeData_(DBMS_method_names[30], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_GetSwcNodeData_(DBMS_method_names[31], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_GetSwcFullNodeData_(DBMS_method_names[32], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_GetSwcNodeDataListByTimeAndUser_(DBMS_method_names[33], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_BackupFullDatabase_(DBMS_method_names[34], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_CreateDailyStatistics_(DBMS_method_names[35], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_DeleteDailyStatistics_(DBMS_method_names[36], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_UpdateDailyStatistics_(DBMS_method_names[37], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_GetDailyStatistics_(DBMS_method_names[38], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_GetAllDailyStatistics_(DBMS_method_names[39], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   {}
 
 ::grpc::Status DBMS::Stub::CreateUser(::grpc::ClientContext* context, const ::proto::CreateUserRequest& request, ::proto::CreateUserResponse* response) {
@@ -607,6 +619,144 @@ void DBMS::Stub::async::GetAllSwcMetaInfo(::grpc::ClientContext* context, const 
   return result;
 }
 
+::grpc::Status DBMS::Stub::CreateSwcSnapshot(::grpc::ClientContext* context, const ::proto::CreateSwcSnapshotRequest& request, ::proto::CreateSwcSnapshotResponse* response) {
+  return ::grpc::internal::BlockingUnaryCall< ::proto::CreateSwcSnapshotRequest, ::proto::CreateSwcSnapshotResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_CreateSwcSnapshot_, context, request, response);
+}
+
+void DBMS::Stub::async::CreateSwcSnapshot(::grpc::ClientContext* context, const ::proto::CreateSwcSnapshotRequest* request, ::proto::CreateSwcSnapshotResponse* response, std::function<void(::grpc::Status)> f) {
+  ::grpc::internal::CallbackUnaryCall< ::proto::CreateSwcSnapshotRequest, ::proto::CreateSwcSnapshotResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_CreateSwcSnapshot_, context, request, response, std::move(f));
+}
+
+void DBMS::Stub::async::CreateSwcSnapshot(::grpc::ClientContext* context, const ::proto::CreateSwcSnapshotRequest* request, ::proto::CreateSwcSnapshotResponse* response, ::grpc::ClientUnaryReactor* reactor) {
+  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_CreateSwcSnapshot_, context, request, response, reactor);
+}
+
+::grpc::ClientAsyncResponseReader< ::proto::CreateSwcSnapshotResponse>* DBMS::Stub::PrepareAsyncCreateSwcSnapshotRaw(::grpc::ClientContext* context, const ::proto::CreateSwcSnapshotRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::proto::CreateSwcSnapshotResponse, ::proto::CreateSwcSnapshotRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_CreateSwcSnapshot_, context, request);
+}
+
+::grpc::ClientAsyncResponseReader< ::proto::CreateSwcSnapshotResponse>* DBMS::Stub::AsyncCreateSwcSnapshotRaw(::grpc::ClientContext* context, const ::proto::CreateSwcSnapshotRequest& request, ::grpc::CompletionQueue* cq) {
+  auto* result =
+    this->PrepareAsyncCreateSwcSnapshotRaw(context, request, cq);
+  result->StartCall();
+  return result;
+}
+
+::grpc::Status DBMS::Stub::DeleteSwcSnapshot(::grpc::ClientContext* context, const ::proto::DeleteSwcSnapshotRequest& request, ::proto::DeleteSwcSnapshotResponse* response) {
+  return ::grpc::internal::BlockingUnaryCall< ::proto::DeleteSwcSnapshotRequest, ::proto::DeleteSwcSnapshotResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_DeleteSwcSnapshot_, context, request, response);
+}
+
+void DBMS::Stub::async::DeleteSwcSnapshot(::grpc::ClientContext* context, const ::proto::DeleteSwcSnapshotRequest* request, ::proto::DeleteSwcSnapshotResponse* response, std::function<void(::grpc::Status)> f) {
+  ::grpc::internal::CallbackUnaryCall< ::proto::DeleteSwcSnapshotRequest, ::proto::DeleteSwcSnapshotResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_DeleteSwcSnapshot_, context, request, response, std::move(f));
+}
+
+void DBMS::Stub::async::DeleteSwcSnapshot(::grpc::ClientContext* context, const ::proto::DeleteSwcSnapshotRequest* request, ::proto::DeleteSwcSnapshotResponse* response, ::grpc::ClientUnaryReactor* reactor) {
+  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_DeleteSwcSnapshot_, context, request, response, reactor);
+}
+
+::grpc::ClientAsyncResponseReader< ::proto::DeleteSwcSnapshotResponse>* DBMS::Stub::PrepareAsyncDeleteSwcSnapshotRaw(::grpc::ClientContext* context, const ::proto::DeleteSwcSnapshotRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::proto::DeleteSwcSnapshotResponse, ::proto::DeleteSwcSnapshotRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_DeleteSwcSnapshot_, context, request);
+}
+
+::grpc::ClientAsyncResponseReader< ::proto::DeleteSwcSnapshotResponse>* DBMS::Stub::AsyncDeleteSwcSnapshotRaw(::grpc::ClientContext* context, const ::proto::DeleteSwcSnapshotRequest& request, ::grpc::CompletionQueue* cq) {
+  auto* result =
+    this->PrepareAsyncDeleteSwcSnapshotRaw(context, request, cq);
+  result->StartCall();
+  return result;
+}
+
+::grpc::Status DBMS::Stub::GetAllSnapshotMetaInfo(::grpc::ClientContext* context, const ::proto::GetAllSnapshotMetaInfoRequest& request, ::proto::GetAllSnapshotMetaInfoResponse* response) {
+  return ::grpc::internal::BlockingUnaryCall< ::proto::GetAllSnapshotMetaInfoRequest, ::proto::GetAllSnapshotMetaInfoResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_GetAllSnapshotMetaInfo_, context, request, response);
+}
+
+void DBMS::Stub::async::GetAllSnapshotMetaInfo(::grpc::ClientContext* context, const ::proto::GetAllSnapshotMetaInfoRequest* request, ::proto::GetAllSnapshotMetaInfoResponse* response, std::function<void(::grpc::Status)> f) {
+  ::grpc::internal::CallbackUnaryCall< ::proto::GetAllSnapshotMetaInfoRequest, ::proto::GetAllSnapshotMetaInfoResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetAllSnapshotMetaInfo_, context, request, response, std::move(f));
+}
+
+void DBMS::Stub::async::GetAllSnapshotMetaInfo(::grpc::ClientContext* context, const ::proto::GetAllSnapshotMetaInfoRequest* request, ::proto::GetAllSnapshotMetaInfoResponse* response, ::grpc::ClientUnaryReactor* reactor) {
+  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetAllSnapshotMetaInfo_, context, request, response, reactor);
+}
+
+::grpc::ClientAsyncResponseReader< ::proto::GetAllSnapshotMetaInfoResponse>* DBMS::Stub::PrepareAsyncGetAllSnapshotMetaInfoRaw(::grpc::ClientContext* context, const ::proto::GetAllSnapshotMetaInfoRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::proto::GetAllSnapshotMetaInfoResponse, ::proto::GetAllSnapshotMetaInfoRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_GetAllSnapshotMetaInfo_, context, request);
+}
+
+::grpc::ClientAsyncResponseReader< ::proto::GetAllSnapshotMetaInfoResponse>* DBMS::Stub::AsyncGetAllSnapshotMetaInfoRaw(::grpc::ClientContext* context, const ::proto::GetAllSnapshotMetaInfoRequest& request, ::grpc::CompletionQueue* cq) {
+  auto* result =
+    this->PrepareAsyncGetAllSnapshotMetaInfoRaw(context, request, cq);
+  result->StartCall();
+  return result;
+}
+
+::grpc::Status DBMS::Stub::GetSnapshot(::grpc::ClientContext* context, const ::proto::GetSnapshotRequest& request, ::proto::GetSnapshotResponse* response) {
+  return ::grpc::internal::BlockingUnaryCall< ::proto::GetSnapshotRequest, ::proto::GetSnapshotResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_GetSnapshot_, context, request, response);
+}
+
+void DBMS::Stub::async::GetSnapshot(::grpc::ClientContext* context, const ::proto::GetSnapshotRequest* request, ::proto::GetSnapshotResponse* response, std::function<void(::grpc::Status)> f) {
+  ::grpc::internal::CallbackUnaryCall< ::proto::GetSnapshotRequest, ::proto::GetSnapshotResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetSnapshot_, context, request, response, std::move(f));
+}
+
+void DBMS::Stub::async::GetSnapshot(::grpc::ClientContext* context, const ::proto::GetSnapshotRequest* request, ::proto::GetSnapshotResponse* response, ::grpc::ClientUnaryReactor* reactor) {
+  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetSnapshot_, context, request, response, reactor);
+}
+
+::grpc::ClientAsyncResponseReader< ::proto::GetSnapshotResponse>* DBMS::Stub::PrepareAsyncGetSnapshotRaw(::grpc::ClientContext* context, const ::proto::GetSnapshotRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::proto::GetSnapshotResponse, ::proto::GetSnapshotRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_GetSnapshot_, context, request);
+}
+
+::grpc::ClientAsyncResponseReader< ::proto::GetSnapshotResponse>* DBMS::Stub::AsyncGetSnapshotRaw(::grpc::ClientContext* context, const ::proto::GetSnapshotRequest& request, ::grpc::CompletionQueue* cq) {
+  auto* result =
+    this->PrepareAsyncGetSnapshotRaw(context, request, cq);
+  result->StartCall();
+  return result;
+}
+
+::grpc::Status DBMS::Stub::GetAllIncrementOperationMetaInfo(::grpc::ClientContext* context, const ::proto::GetAllIncrementOperationMetaInfoRequest& request, ::proto::GetAllIncrementOperationMetaInfoResponse* response) {
+  return ::grpc::internal::BlockingUnaryCall< ::proto::GetAllIncrementOperationMetaInfoRequest, ::proto::GetAllIncrementOperationMetaInfoResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_GetAllIncrementOperationMetaInfo_, context, request, response);
+}
+
+void DBMS::Stub::async::GetAllIncrementOperationMetaInfo(::grpc::ClientContext* context, const ::proto::GetAllIncrementOperationMetaInfoRequest* request, ::proto::GetAllIncrementOperationMetaInfoResponse* response, std::function<void(::grpc::Status)> f) {
+  ::grpc::internal::CallbackUnaryCall< ::proto::GetAllIncrementOperationMetaInfoRequest, ::proto::GetAllIncrementOperationMetaInfoResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetAllIncrementOperationMetaInfo_, context, request, response, std::move(f));
+}
+
+void DBMS::Stub::async::GetAllIncrementOperationMetaInfo(::grpc::ClientContext* context, const ::proto::GetAllIncrementOperationMetaInfoRequest* request, ::proto::GetAllIncrementOperationMetaInfoResponse* response, ::grpc::ClientUnaryReactor* reactor) {
+  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetAllIncrementOperationMetaInfo_, context, request, response, reactor);
+}
+
+::grpc::ClientAsyncResponseReader< ::proto::GetAllIncrementOperationMetaInfoResponse>* DBMS::Stub::PrepareAsyncGetAllIncrementOperationMetaInfoRaw(::grpc::ClientContext* context, const ::proto::GetAllIncrementOperationMetaInfoRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::proto::GetAllIncrementOperationMetaInfoResponse, ::proto::GetAllIncrementOperationMetaInfoRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_GetAllIncrementOperationMetaInfo_, context, request);
+}
+
+::grpc::ClientAsyncResponseReader< ::proto::GetAllIncrementOperationMetaInfoResponse>* DBMS::Stub::AsyncGetAllIncrementOperationMetaInfoRaw(::grpc::ClientContext* context, const ::proto::GetAllIncrementOperationMetaInfoRequest& request, ::grpc::CompletionQueue* cq) {
+  auto* result =
+    this->PrepareAsyncGetAllIncrementOperationMetaInfoRaw(context, request, cq);
+  result->StartCall();
+  return result;
+}
+
+::grpc::Status DBMS::Stub::GetIncrementOperation(::grpc::ClientContext* context, const ::proto::GetIncrementOperationRequest& request, ::proto::GetIncrementOperationResponse* response) {
+  return ::grpc::internal::BlockingUnaryCall< ::proto::GetIncrementOperationRequest, ::proto::GetIncrementOperationResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_GetIncrementOperation_, context, request, response);
+}
+
+void DBMS::Stub::async::GetIncrementOperation(::grpc::ClientContext* context, const ::proto::GetIncrementOperationRequest* request, ::proto::GetIncrementOperationResponse* response, std::function<void(::grpc::Status)> f) {
+  ::grpc::internal::CallbackUnaryCall< ::proto::GetIncrementOperationRequest, ::proto::GetIncrementOperationResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetIncrementOperation_, context, request, response, std::move(f));
+}
+
+void DBMS::Stub::async::GetIncrementOperation(::grpc::ClientContext* context, const ::proto::GetIncrementOperationRequest* request, ::proto::GetIncrementOperationResponse* response, ::grpc::ClientUnaryReactor* reactor) {
+  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetIncrementOperation_, context, request, response, reactor);
+}
+
+::grpc::ClientAsyncResponseReader< ::proto::GetIncrementOperationResponse>* DBMS::Stub::PrepareAsyncGetIncrementOperationRaw(::grpc::ClientContext* context, const ::proto::GetIncrementOperationRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::proto::GetIncrementOperationResponse, ::proto::GetIncrementOperationRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_GetIncrementOperation_, context, request);
+}
+
+::grpc::ClientAsyncResponseReader< ::proto::GetIncrementOperationResponse>* DBMS::Stub::AsyncGetIncrementOperationRaw(::grpc::ClientContext* context, const ::proto::GetIncrementOperationRequest& request, ::grpc::CompletionQueue* cq) {
+  auto* result =
+    this->PrepareAsyncGetIncrementOperationRaw(context, request, cq);
+  result->StartCall();
+  return result;
+}
+
 ::grpc::Status DBMS::Stub::CreateSwcNodeData(::grpc::ClientContext* context, const ::proto::CreateSwcNodeDataRequest& request, ::proto::CreateSwcNodeDataResponse* response) {
   return ::grpc::internal::BlockingUnaryCall< ::proto::CreateSwcNodeDataRequest, ::proto::CreateSwcNodeDataResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_CreateSwcNodeData_, context, request, response);
 }
@@ -1107,6 +1257,66 @@ DBMS::Service::Service() {
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       DBMS_method_names[22],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
+      new ::grpc::internal::RpcMethodHandler< DBMS::Service, ::proto::CreateSwcSnapshotRequest, ::proto::CreateSwcSnapshotResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
+          [](DBMS::Service* service,
+             ::grpc::ServerContext* ctx,
+             const ::proto::CreateSwcSnapshotRequest* req,
+             ::proto::CreateSwcSnapshotResponse* resp) {
+               return service->CreateSwcSnapshot(ctx, req, resp);
+             }, this)));
+  AddMethod(new ::grpc::internal::RpcServiceMethod(
+      DBMS_method_names[23],
+      ::grpc::internal::RpcMethod::NORMAL_RPC,
+      new ::grpc::internal::RpcMethodHandler< DBMS::Service, ::proto::DeleteSwcSnapshotRequest, ::proto::DeleteSwcSnapshotResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
+          [](DBMS::Service* service,
+             ::grpc::ServerContext* ctx,
+             const ::proto::DeleteSwcSnapshotRequest* req,
+             ::proto::DeleteSwcSnapshotResponse* resp) {
+               return service->DeleteSwcSnapshot(ctx, req, resp);
+             }, this)));
+  AddMethod(new ::grpc::internal::RpcServiceMethod(
+      DBMS_method_names[24],
+      ::grpc::internal::RpcMethod::NORMAL_RPC,
+      new ::grpc::internal::RpcMethodHandler< DBMS::Service, ::proto::GetAllSnapshotMetaInfoRequest, ::proto::GetAllSnapshotMetaInfoResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
+          [](DBMS::Service* service,
+             ::grpc::ServerContext* ctx,
+             const ::proto::GetAllSnapshotMetaInfoRequest* req,
+             ::proto::GetAllSnapshotMetaInfoResponse* resp) {
+               return service->GetAllSnapshotMetaInfo(ctx, req, resp);
+             }, this)));
+  AddMethod(new ::grpc::internal::RpcServiceMethod(
+      DBMS_method_names[25],
+      ::grpc::internal::RpcMethod::NORMAL_RPC,
+      new ::grpc::internal::RpcMethodHandler< DBMS::Service, ::proto::GetSnapshotRequest, ::proto::GetSnapshotResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
+          [](DBMS::Service* service,
+             ::grpc::ServerContext* ctx,
+             const ::proto::GetSnapshotRequest* req,
+             ::proto::GetSnapshotResponse* resp) {
+               return service->GetSnapshot(ctx, req, resp);
+             }, this)));
+  AddMethod(new ::grpc::internal::RpcServiceMethod(
+      DBMS_method_names[26],
+      ::grpc::internal::RpcMethod::NORMAL_RPC,
+      new ::grpc::internal::RpcMethodHandler< DBMS::Service, ::proto::GetAllIncrementOperationMetaInfoRequest, ::proto::GetAllIncrementOperationMetaInfoResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
+          [](DBMS::Service* service,
+             ::grpc::ServerContext* ctx,
+             const ::proto::GetAllIncrementOperationMetaInfoRequest* req,
+             ::proto::GetAllIncrementOperationMetaInfoResponse* resp) {
+               return service->GetAllIncrementOperationMetaInfo(ctx, req, resp);
+             }, this)));
+  AddMethod(new ::grpc::internal::RpcServiceMethod(
+      DBMS_method_names[27],
+      ::grpc::internal::RpcMethod::NORMAL_RPC,
+      new ::grpc::internal::RpcMethodHandler< DBMS::Service, ::proto::GetIncrementOperationRequest, ::proto::GetIncrementOperationResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
+          [](DBMS::Service* service,
+             ::grpc::ServerContext* ctx,
+             const ::proto::GetIncrementOperationRequest* req,
+             ::proto::GetIncrementOperationResponse* resp) {
+               return service->GetIncrementOperation(ctx, req, resp);
+             }, this)));
+  AddMethod(new ::grpc::internal::RpcServiceMethod(
+      DBMS_method_names[28],
+      ::grpc::internal::RpcMethod::NORMAL_RPC,
       new ::grpc::internal::RpcMethodHandler< DBMS::Service, ::proto::CreateSwcNodeDataRequest, ::proto::CreateSwcNodeDataResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
           [](DBMS::Service* service,
              ::grpc::ServerContext* ctx,
@@ -1115,7 +1325,7 @@ DBMS::Service::Service() {
                return service->CreateSwcNodeData(ctx, req, resp);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
-      DBMS_method_names[23],
+      DBMS_method_names[29],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
       new ::grpc::internal::RpcMethodHandler< DBMS::Service, ::proto::DeleteSwcNodeDataRequest, ::proto::DeleteSwcNodeDataResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
           [](DBMS::Service* service,
@@ -1125,7 +1335,7 @@ DBMS::Service::Service() {
                return service->DeleteSwcNodeData(ctx, req, resp);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
-      DBMS_method_names[24],
+      DBMS_method_names[30],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
       new ::grpc::internal::RpcMethodHandler< DBMS::Service, ::proto::UpdateSwcNodeDataRequest, ::proto::UpdateSwcNodeDataResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
           [](DBMS::Service* service,
@@ -1135,7 +1345,7 @@ DBMS::Service::Service() {
                return service->UpdateSwcNodeData(ctx, req, resp);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
-      DBMS_method_names[25],
+      DBMS_method_names[31],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
       new ::grpc::internal::RpcMethodHandler< DBMS::Service, ::proto::GetSwcNodeDataRequest, ::proto::GetSwcNodeDataResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
           [](DBMS::Service* service,
@@ -1145,7 +1355,7 @@ DBMS::Service::Service() {
                return service->GetSwcNodeData(ctx, req, resp);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
-      DBMS_method_names[26],
+      DBMS_method_names[32],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
       new ::grpc::internal::RpcMethodHandler< DBMS::Service, ::proto::GetSwcFullNodeDataRequest, ::proto::GetSwcFullNodeDataResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
           [](DBMS::Service* service,
@@ -1155,7 +1365,7 @@ DBMS::Service::Service() {
                return service->GetSwcFullNodeData(ctx, req, resp);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
-      DBMS_method_names[27],
+      DBMS_method_names[33],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
       new ::grpc::internal::RpcMethodHandler< DBMS::Service, ::proto::GetSwcNodeDataListByTimeAndUserRequest, ::proto::GetSwcNodeDataListByTimeAndUserResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
           [](DBMS::Service* service,
@@ -1165,7 +1375,7 @@ DBMS::Service::Service() {
                return service->GetSwcNodeDataListByTimeAndUser(ctx, req, resp);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
-      DBMS_method_names[28],
+      DBMS_method_names[34],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
       new ::grpc::internal::RpcMethodHandler< DBMS::Service, ::proto::BackupFullDatabaseRequest, ::proto::BackupFullDatabaseResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
           [](DBMS::Service* service,
@@ -1175,7 +1385,7 @@ DBMS::Service::Service() {
                return service->BackupFullDatabase(ctx, req, resp);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
-      DBMS_method_names[29],
+      DBMS_method_names[35],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
       new ::grpc::internal::RpcMethodHandler< DBMS::Service, ::proto::CreateDailyStatisticsRequest, ::proto::CreateDailyStatisticsResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
           [](DBMS::Service* service,
@@ -1185,7 +1395,7 @@ DBMS::Service::Service() {
                return service->CreateDailyStatistics(ctx, req, resp);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
-      DBMS_method_names[30],
+      DBMS_method_names[36],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
       new ::grpc::internal::RpcMethodHandler< DBMS::Service, ::proto::DeleteDailyStatisticsRequest, ::proto::DeleteDailyStatisticsResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
           [](DBMS::Service* service,
@@ -1195,7 +1405,7 @@ DBMS::Service::Service() {
                return service->DeleteDailyStatistics(ctx, req, resp);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
-      DBMS_method_names[31],
+      DBMS_method_names[37],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
       new ::grpc::internal::RpcMethodHandler< DBMS::Service, ::proto::UpdateDailyStatisticsRequest, ::proto::UpdateDailyStatisticsResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
           [](DBMS::Service* service,
@@ -1205,7 +1415,7 @@ DBMS::Service::Service() {
                return service->UpdateDailyStatistics(ctx, req, resp);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
-      DBMS_method_names[32],
+      DBMS_method_names[38],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
       new ::grpc::internal::RpcMethodHandler< DBMS::Service, ::proto::GetDailyStatisticsRequest, ::proto::GetDailyStatisticsResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
           [](DBMS::Service* service,
@@ -1215,7 +1425,7 @@ DBMS::Service::Service() {
                return service->GetDailyStatistics(ctx, req, resp);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
-      DBMS_method_names[33],
+      DBMS_method_names[39],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
       new ::grpc::internal::RpcMethodHandler< DBMS::Service, ::proto::GetAllDailyStatisticsRequest, ::proto::GetAllDailyStatisticsResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
           [](DBMS::Service* service,
@@ -1377,6 +1587,48 @@ DBMS::Service::~Service() {
 }
 
 ::grpc::Status DBMS::Service::GetAllSwcMetaInfo(::grpc::ServerContext* context, const ::proto::GetAllSwcMetaInfoRequest* request, ::proto::GetAllSwcMetaInfoResponse* response) {
+  (void) context;
+  (void) request;
+  (void) response;
+  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+}
+
+::grpc::Status DBMS::Service::CreateSwcSnapshot(::grpc::ServerContext* context, const ::proto::CreateSwcSnapshotRequest* request, ::proto::CreateSwcSnapshotResponse* response) {
+  (void) context;
+  (void) request;
+  (void) response;
+  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+}
+
+::grpc::Status DBMS::Service::DeleteSwcSnapshot(::grpc::ServerContext* context, const ::proto::DeleteSwcSnapshotRequest* request, ::proto::DeleteSwcSnapshotResponse* response) {
+  (void) context;
+  (void) request;
+  (void) response;
+  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+}
+
+::grpc::Status DBMS::Service::GetAllSnapshotMetaInfo(::grpc::ServerContext* context, const ::proto::GetAllSnapshotMetaInfoRequest* request, ::proto::GetAllSnapshotMetaInfoResponse* response) {
+  (void) context;
+  (void) request;
+  (void) response;
+  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+}
+
+::grpc::Status DBMS::Service::GetSnapshot(::grpc::ServerContext* context, const ::proto::GetSnapshotRequest* request, ::proto::GetSnapshotResponse* response) {
+  (void) context;
+  (void) request;
+  (void) response;
+  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+}
+
+::grpc::Status DBMS::Service::GetAllIncrementOperationMetaInfo(::grpc::ServerContext* context, const ::proto::GetAllIncrementOperationMetaInfoRequest* request, ::proto::GetAllIncrementOperationMetaInfoResponse* response) {
+  (void) context;
+  (void) request;
+  (void) response;
+  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+}
+
+::grpc::Status DBMS::Service::GetIncrementOperation(::grpc::ServerContext* context, const ::proto::GetIncrementOperationRequest* request, ::proto::GetIncrementOperationResponse* response) {
   (void) context;
   (void) request;
   (void) response;

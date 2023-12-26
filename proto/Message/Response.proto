@@ -136,6 +136,40 @@ message GetAllSwcMetaInfoResponse{
     repeated SwcMetaInfoV1 SwcInfo = 3;
 }
 
+message CreateSwcSnapshotResponse{
+    bool status = 1;
+    string Message = 2;
+}
+
+message DeleteSwcSnapshotResponse{
+    bool status = 1;
+    string Message = 2;
+}
+
+message GetAllSnapshotMetaInfoResponse{
+    bool status = 1;
+    string Message = 2;
+    repeated SwcSnapshotMetaInfoV1 SwcSnapshotList = 3;
+}
+
+message GetSnapshotResponse{
+    bool status = 1;
+    string Message = 2;
+    SwcDataV1 SwcNodeData = 3;
+}
+
+message GetAllIncrementOperationMetaInfoResponse{
+    bool status = 1;
+    string Message = 2;
+    repeated SwcIncrementOperationMetaInfoV1 SwcIncrementOperationList = 3;
+}
+
+message GetIncrementOperationResponse{
+    bool status = 1;
+    string Message = 2;
+    repeated SwcIncrementOperationV1 SwcIncrementOperationList = 3;
+}
+
 message CreateSwcNodeDataResponse{
     bool status = 1;
     string Message = 2;

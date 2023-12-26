@@ -208,6 +208,38 @@
         ]
       }
     },
+    "/proto.DBMS/CreateSwcSnapshot": {
+      "post": {
+        "operationId": "DBMS_CreateSwcSnapshot",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/protoCreateSwcSnapshotResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/protoCreateSwcSnapshotRequest"
+            }
+          }
+        ],
+        "tags": [
+          "DBMS"
+        ]
+      }
+    },
     "/proto.DBMS/CreateUser": {
       "post": {
         "operationId": "DBMS_CreateUser",
@@ -368,6 +400,38 @@
         ]
       }
     },
+    "/proto.DBMS/DeleteSwcSnapshot": {
+      "post": {
+        "operationId": "DBMS_DeleteSwcSnapshot",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/protoDeleteSwcSnapshotResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/protoDeleteSwcSnapshotRequest"
+            }
+          }
+        ],
+        "tags": [
+          "DBMS"
+        ]
+      }
+    },
     "/proto.DBMS/DeleteUser": {
       "post": {
         "operationId": "DBMS_DeleteUser",
@@ -432,6 +496,38 @@
         ]
       }
     },
+    "/proto.DBMS/GetAllIncrementOperationMetaInfo": {
+      "post": {
+        "operationId": "DBMS_GetAllIncrementOperationMetaInfo",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/protoGetAllIncrementOperationMetaInfoResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/protoGetAllIncrementOperationMetaInfoRequest"
+            }
+          }
+        ],
+        "tags": [
+          "DBMS"
+        ]
+      }
+    },
     "/proto.DBMS/GetAllPermissionGroup": {
       "post": {
         "operationId": "DBMS_GetAllPermissionGroup",
@@ -488,6 +584,38 @@
             "required": true,
             "schema": {
               "$ref": "#/definitions/protoGetAllProjectRequest"
+            }
+          }
+        ],
+        "tags": [
+          "DBMS"
+        ]
+      }
+    },
+    "/proto.DBMS/GetAllSnapshotMetaInfo": {
+      "post": {
+        "operationId": "DBMS_GetAllSnapshotMetaInfo",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/protoGetAllSnapshotMetaInfoResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/protoGetAllSnapshotMetaInfoRequest"
             }
           }
         ],
@@ -592,6 +720,38 @@
         ]
       }
     },
+    "/proto.DBMS/GetIncrementOperation": {
+      "post": {
+        "operationId": "DBMS_GetIncrementOperation",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/protoGetIncrementOperationResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/protoGetIncrementOperationRequest"
+            }
+          }
+        ],
+        "tags": [
+          "DBMS"
+        ]
+      }
+    },
     "/proto.DBMS/GetPermissionGroup": {
       "post": {
         "operationId": "DBMS_GetPermissionGroup",
@@ -648,6 +808,38 @@
             "required": true,
             "schema": {
               "$ref": "#/definitions/protoGetProjectRequest"
+            }
+          }
+        ],
+        "tags": [
+          "DBMS"
+        ]
+      }
+    },
+    "/proto.DBMS/GetSnapshot": {
+      "post": {
+        "operationId": "DBMS_GetSnapshot",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/protoGetSnapshotResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/protoGetSnapshotRequest"
             }
           }
         ],
@@ -1267,6 +1459,28 @@
         }
       }
     },
+    "protoCreateSwcSnapshotRequest": {
+      "type": "object",
+      "properties": {
+        "UserInfo": {
+          "$ref": "#/definitions/protoUserMetaInfoV1"
+        },
+        "SwcName": {
+          "type": "string"
+        }
+      }
+    },
+    "protoCreateSwcSnapshotResponse": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "boolean"
+        },
+        "Message": {
+          "type": "string"
+        }
+      }
+    },
     "protoCreateUserRequest": {
       "type": "object",
       "properties": {
@@ -1461,6 +1675,31 @@
         }
       }
     },
+    "protoDeleteSwcSnapshotRequest": {
+      "type": "object",
+      "properties": {
+        "UserInfo": {
+          "$ref": "#/definitions/protoUserMetaInfoV1"
+        },
+        "SwcName": {
+          "type": "string"
+        },
+        "SwcSnapshotCollectionName": {
+          "type": "string"
+        }
+      }
+    },
+    "protoDeleteSwcSnapshotResponse": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "boolean"
+        },
+        "Message": {
+          "type": "string"
+        }
+      }
+    },
     "protoDeleteUserRequest": {
       "type": "object",
       "properties": {
@@ -1505,6 +1744,32 @@
           "items": {
             "type": "object",
             "$ref": "#/definitions/protoDailyStatisticsMetaInfoV1"
+          }
+        }
+      }
+    },
+    "protoGetAllIncrementOperationMetaInfoRequest": {
+      "type": "object",
+      "properties": {
+        "UserInfo": {
+          "$ref": "#/definitions/protoUserMetaInfoV1"
+        }
+      }
+    },
+    "protoGetAllIncrementOperationMetaInfoResponse": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "boolean"
+        },
+        "Message": {
+          "type": "string"
+        },
+        "SwcIncrementOperationList": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/protoSwcIncrementOperationMetaInfoV1"
           }
         }
       }
@@ -1557,6 +1822,32 @@
           "items": {
             "type": "object",
             "$ref": "#/definitions/protoProjectMetaInfoV1"
+          }
+        }
+      }
+    },
+    "protoGetAllSnapshotMetaInfoRequest": {
+      "type": "object",
+      "properties": {
+        "UserInfo": {
+          "$ref": "#/definitions/protoUserMetaInfoV1"
+        }
+      }
+    },
+    "protoGetAllSnapshotMetaInfoResponse": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "boolean"
+        },
+        "Message": {
+          "type": "string"
+        },
+        "SwcSnapshotList": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/protoSwcSnapshotMetaInfoV1"
           }
         }
       }
@@ -1638,6 +1929,35 @@
         }
       }
     },
+    "protoGetIncrementOperationRequest": {
+      "type": "object",
+      "properties": {
+        "UserInfo": {
+          "$ref": "#/definitions/protoUserMetaInfoV1"
+        },
+        "IncrementOperationCollectionName": {
+          "type": "string"
+        }
+      }
+    },
+    "protoGetIncrementOperationResponse": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "boolean"
+        },
+        "Message": {
+          "type": "string"
+        },
+        "SwcIncrementOperationList": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/protoSwcIncrementOperationV1"
+          }
+        }
+      }
+    },
     "protoGetPermissionGroupRequest": {
       "type": "object",
       "properties": {
@@ -1685,6 +2005,31 @@
         },
         "ProjectInfo": {
           "$ref": "#/definitions/protoProjectMetaInfoV1"
+        }
+      }
+    },
+    "protoGetSnapshotRequest": {
+      "type": "object",
+      "properties": {
+        "UserInfo": {
+          "$ref": "#/definitions/protoUserMetaInfoV1"
+        },
+        "SwcSnapshotCollectionName": {
+          "type": "string"
+        }
+      }
+    },
+    "protoGetSnapshotResponse": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "boolean"
+        },
+        "Message": {
+          "type": "string"
+        },
+        "SwcNodeData": {
+          "$ref": "#/definitions/protoSwcDataV1"
         }
       }
     },
@@ -1863,6 +2208,16 @@
         }
       }
     },
+    "protoIncrementOperationV1": {
+      "type": "string",
+      "enum": [
+        "Unknown",
+        "Create",
+        "Delete",
+        "Update"
+      ],
+      "default": "Unknown"
+    },
     "protoMetaInfoBase": {
       "type": "object",
       "properties": {
@@ -1967,9 +2322,12 @@
         }
       }
     },
-    "protoSwcIncrementOperation": {
+    "protoSwcIncrementOperationMetaInfoV1": {
       "type": "object",
       "properties": {
+        "Base": {
+          "$ref": "#/definitions/protoMetaInfoBase"
+        },
         "IncrementOperationCollectionName": {
           "type": "string"
         },
@@ -1982,6 +2340,20 @@
         "CreateTime": {
           "type": "string",
           "format": "date-time"
+        }
+      }
+    },
+    "protoSwcIncrementOperationV1": {
+      "type": "object",
+      "properties": {
+        "Base": {
+          "$ref": "#/definitions/protoMetaInfoBase"
+        },
+        "IncrementOperation": {
+          "$ref": "#/definitions/protoIncrementOperationV1"
+        },
+        "SwcNodeData": {
+          "$ref": "#/definitions/protoSwcNodeDataV1"
         }
       }
     },
@@ -2011,18 +2383,18 @@
           "type": "string",
           "format": "date-time"
         },
-        "SwcSnapshotList": {
+        "SwcSnapshotMetaInfoList": {
           "type": "array",
           "items": {
             "type": "object",
-            "$ref": "#/definitions/protoSwcSnapshot"
+            "$ref": "#/definitions/protoSwcSnapshotMetaInfoV1"
           }
         },
-        "SwcIncrementOperationList": {
+        "SwcIncrementOperationMetaInfoList": {
           "type": "array",
           "items": {
             "type": "object",
-            "$ref": "#/definitions/protoSwcIncrementOperation"
+            "$ref": "#/definitions/protoSwcIncrementOperationMetaInfoV1"
           }
         }
       }
@@ -2105,9 +2477,12 @@
         }
       }
     },
-    "protoSwcSnapshot": {
+    "protoSwcSnapshotMetaInfoV1": {
       "type": "object",
       "properties": {
+        "Base": {
+          "$ref": "#/definitions/protoMetaInfoBase"
+        },
         "SwcSnapshotCollectionName": {
           "type": "string"
         },

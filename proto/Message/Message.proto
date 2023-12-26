@@ -62,16 +62,31 @@ message ProjectMetaInfoV1{
     string WorkMode = 9;
 }
 
-message SwcSnapshot{
-    string SwcSnapshotCollectionName = 1;
-    google.protobuf.Timestamp CreateTime = 2;
+message SwcSnapshotMetaInfoV1{
+    MetaInfoBase Base = 1;
+    string SwcSnapshotCollectionName = 2;
+    google.protobuf.Timestamp CreateTime = 3;
 }
 
-message SwcIncrementOperation{
-    string IncrementOperationCollectionName = 1;
-    string StartSnapshot = 2;
-    string EndSnapshot = 3;
-    google.protobuf.Timestamp CreateTime = 4;
+message SwcIncrementOperationMetaInfoV1{
+    MetaInfoBase Base = 1;
+    string IncrementOperationCollectionName = 2;
+    string StartSnapshot = 3;
+    string EndSnapshot = 4;
+    google.protobuf.Timestamp CreateTime = 5;
+}
+
+enum IncrementOperationV1{
+    Unknown = 0;
+    Create = 1;
+    Delete = 2;
+    Update = 3;
+}
+
+message SwcIncrementOperationV1{
+    MetaInfoBase Base = 1;
+    IncrementOperationV1 IncrementOperation = 2;
+    SwcNodeDataV1 SwcNodeData = 3;
 }
 
 message SwcMetaInfoV1{
@@ -82,8 +97,8 @@ message SwcMetaInfoV1{
     string SwcType = 5;
     google.protobuf.Timestamp CreateTime = 6;
     google.protobuf.Timestamp LastModifiedTime = 7;
-    repeated SwcSnapshot SwcSnapshotList = 8;
-    repeated SwcIncrementOperation SwcIncrementOperationList = 9;
+    repeated SwcSnapshotMetaInfoV1 SwcSnapshotMetaInfoList = 8;
+    repeated SwcIncrementOperationMetaInfoV1 SwcIncrementOperationMetaInfoList = 9;
 }
 
 message SwcNodeInternalDataV1{

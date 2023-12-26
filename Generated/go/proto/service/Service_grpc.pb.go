@@ -43,6 +43,12 @@ const (
 	DBMS_UpdateSwc_FullMethodName                        = "/proto.DBMS/UpdateSwc"
 	DBMS_GetSwcMetaInfo_FullMethodName                   = "/proto.DBMS/GetSwcMetaInfo"
 	DBMS_GetAllSwcMetaInfo_FullMethodName                = "/proto.DBMS/GetAllSwcMetaInfo"
+	DBMS_CreateSwcSnapshot_FullMethodName                = "/proto.DBMS/CreateSwcSnapshot"
+	DBMS_DeleteSwcSnapshot_FullMethodName                = "/proto.DBMS/DeleteSwcSnapshot"
+	DBMS_GetAllSnapshotMetaInfo_FullMethodName           = "/proto.DBMS/GetAllSnapshotMetaInfo"
+	DBMS_GetSnapshot_FullMethodName                      = "/proto.DBMS/GetSnapshot"
+	DBMS_GetAllIncrementOperationMetaInfo_FullMethodName = "/proto.DBMS/GetAllIncrementOperationMetaInfo"
+	DBMS_GetIncrementOperation_FullMethodName            = "/proto.DBMS/GetIncrementOperation"
 	DBMS_CreateSwcNodeData_FullMethodName                = "/proto.DBMS/CreateSwcNodeData"
 	DBMS_DeleteSwcNodeData_FullMethodName                = "/proto.DBMS/DeleteSwcNodeData"
 	DBMS_UpdateSwcNodeData_FullMethodName                = "/proto.DBMS/UpdateSwcNodeData"
@@ -83,6 +89,12 @@ type DBMSClient interface {
 	UpdateSwc(ctx context.Context, in *request.UpdateSwcRequest, opts ...grpc.CallOption) (*response.UpdateSwcResponse, error)
 	GetSwcMetaInfo(ctx context.Context, in *request.GetSwcMetaInfoRequest, opts ...grpc.CallOption) (*response.GetSwcMetaInfoResponse, error)
 	GetAllSwcMetaInfo(ctx context.Context, in *request.GetAllSwcMetaInfoRequest, opts ...grpc.CallOption) (*response.GetAllSwcMetaInfoResponse, error)
+	CreateSwcSnapshot(ctx context.Context, in *request.CreateSwcSnapshotRequest, opts ...grpc.CallOption) (*response.CreateSwcSnapshotResponse, error)
+	DeleteSwcSnapshot(ctx context.Context, in *request.DeleteSwcSnapshotRequest, opts ...grpc.CallOption) (*response.DeleteSwcSnapshotResponse, error)
+	GetAllSnapshotMetaInfo(ctx context.Context, in *request.GetAllSnapshotMetaInfoRequest, opts ...grpc.CallOption) (*response.GetAllSnapshotMetaInfoResponse, error)
+	GetSnapshot(ctx context.Context, in *request.GetSnapshotRequest, opts ...grpc.CallOption) (*response.GetSnapshotResponse, error)
+	GetAllIncrementOperationMetaInfo(ctx context.Context, in *request.GetAllIncrementOperationMetaInfoRequest, opts ...grpc.CallOption) (*response.GetAllIncrementOperationMetaInfoResponse, error)
+	GetIncrementOperation(ctx context.Context, in *request.GetIncrementOperationRequest, opts ...grpc.CallOption) (*response.GetIncrementOperationResponse, error)
 	CreateSwcNodeData(ctx context.Context, in *request.CreateSwcNodeDataRequest, opts ...grpc.CallOption) (*response.CreateSwcNodeDataResponse, error)
 	DeleteSwcNodeData(ctx context.Context, in *request.DeleteSwcNodeDataRequest, opts ...grpc.CallOption) (*response.DeleteSwcNodeDataResponse, error)
 	UpdateSwcNodeData(ctx context.Context, in *request.UpdateSwcNodeDataRequest, opts ...grpc.CallOption) (*response.UpdateSwcNodeDataResponse, error)
@@ -303,6 +315,60 @@ func (c *dBMSClient) GetAllSwcMetaInfo(ctx context.Context, in *request.GetAllSw
 	return out, nil
 }
 
+func (c *dBMSClient) CreateSwcSnapshot(ctx context.Context, in *request.CreateSwcSnapshotRequest, opts ...grpc.CallOption) (*response.CreateSwcSnapshotResponse, error) {
+	out := new(response.CreateSwcSnapshotResponse)
+	err := c.cc.Invoke(ctx, DBMS_CreateSwcSnapshot_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *dBMSClient) DeleteSwcSnapshot(ctx context.Context, in *request.DeleteSwcSnapshotRequest, opts ...grpc.CallOption) (*response.DeleteSwcSnapshotResponse, error) {
+	out := new(response.DeleteSwcSnapshotResponse)
+	err := c.cc.Invoke(ctx, DBMS_DeleteSwcSnapshot_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *dBMSClient) GetAllSnapshotMetaInfo(ctx context.Context, in *request.GetAllSnapshotMetaInfoRequest, opts ...grpc.CallOption) (*response.GetAllSnapshotMetaInfoResponse, error) {
+	out := new(response.GetAllSnapshotMetaInfoResponse)
+	err := c.cc.Invoke(ctx, DBMS_GetAllSnapshotMetaInfo_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *dBMSClient) GetSnapshot(ctx context.Context, in *request.GetSnapshotRequest, opts ...grpc.CallOption) (*response.GetSnapshotResponse, error) {
+	out := new(response.GetSnapshotResponse)
+	err := c.cc.Invoke(ctx, DBMS_GetSnapshot_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *dBMSClient) GetAllIncrementOperationMetaInfo(ctx context.Context, in *request.GetAllIncrementOperationMetaInfoRequest, opts ...grpc.CallOption) (*response.GetAllIncrementOperationMetaInfoResponse, error) {
+	out := new(response.GetAllIncrementOperationMetaInfoResponse)
+	err := c.cc.Invoke(ctx, DBMS_GetAllIncrementOperationMetaInfo_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *dBMSClient) GetIncrementOperation(ctx context.Context, in *request.GetIncrementOperationRequest, opts ...grpc.CallOption) (*response.GetIncrementOperationResponse, error) {
+	out := new(response.GetIncrementOperationResponse)
+	err := c.cc.Invoke(ctx, DBMS_GetIncrementOperation_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 func (c *dBMSClient) CreateSwcNodeData(ctx context.Context, in *request.CreateSwcNodeDataRequest, opts ...grpc.CallOption) (*response.CreateSwcNodeDataResponse, error) {
 	out := new(response.CreateSwcNodeDataResponse)
 	err := c.cc.Invoke(ctx, DBMS_CreateSwcNodeData_FullMethodName, in, out, opts...)
@@ -437,6 +503,12 @@ type DBMSServer interface {
 	UpdateSwc(context.Context, *request.UpdateSwcRequest) (*response.UpdateSwcResponse, error)
 	GetSwcMetaInfo(context.Context, *request.GetSwcMetaInfoRequest) (*response.GetSwcMetaInfoResponse, error)
 	GetAllSwcMetaInfo(context.Context, *request.GetAllSwcMetaInfoRequest) (*response.GetAllSwcMetaInfoResponse, error)
+	CreateSwcSnapshot(context.Context, *request.CreateSwcSnapshotRequest) (*response.CreateSwcSnapshotResponse, error)
+	DeleteSwcSnapshot(context.Context, *request.DeleteSwcSnapshotRequest) (*response.DeleteSwcSnapshotResponse, error)
+	GetAllSnapshotMetaInfo(context.Context, *request.GetAllSnapshotMetaInfoRequest) (*response.GetAllSnapshotMetaInfoResponse, error)
+	GetSnapshot(context.Context, *request.GetSnapshotRequest) (*response.GetSnapshotResponse, error)
+	GetAllIncrementOperationMetaInfo(context.Context, *request.GetAllIncrementOperationMetaInfoRequest) (*response.GetAllIncrementOperationMetaInfoResponse, error)
+	GetIncrementOperation(context.Context, *request.GetIncrementOperationRequest) (*response.GetIncrementOperationResponse, error)
 	CreateSwcNodeData(context.Context, *request.CreateSwcNodeDataRequest) (*response.CreateSwcNodeDataResponse, error)
 	DeleteSwcNodeData(context.Context, *request.DeleteSwcNodeDataRequest) (*response.DeleteSwcNodeDataResponse, error)
 	UpdateSwcNodeData(context.Context, *request.UpdateSwcNodeDataRequest) (*response.UpdateSwcNodeDataResponse, error)
@@ -521,6 +593,24 @@ func (UnimplementedDBMSServer) GetSwcMetaInfo(context.Context, *request.GetSwcMe
 }
 func (UnimplementedDBMSServer) GetAllSwcMetaInfo(context.Context, *request.GetAllSwcMetaInfoRequest) (*response.GetAllSwcMetaInfoResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetAllSwcMetaInfo not implemented")
+}
+func (UnimplementedDBMSServer) CreateSwcSnapshot(context.Context, *request.CreateSwcSnapshotRequest) (*response.CreateSwcSnapshotResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CreateSwcSnapshot not implemented")
+}
+func (UnimplementedDBMSServer) DeleteSwcSnapshot(context.Context, *request.DeleteSwcSnapshotRequest) (*response.DeleteSwcSnapshotResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method DeleteSwcSnapshot not implemented")
+}
+func (UnimplementedDBMSServer) GetAllSnapshotMetaInfo(context.Context, *request.GetAllSnapshotMetaInfoRequest) (*response.GetAllSnapshotMetaInfoResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetAllSnapshotMetaInfo not implemented")
+}
+func (UnimplementedDBMSServer) GetSnapshot(context.Context, *request.GetSnapshotRequest) (*response.GetSnapshotResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetSnapshot not implemented")
+}
+func (UnimplementedDBMSServer) GetAllIncrementOperationMetaInfo(context.Context, *request.GetAllIncrementOperationMetaInfoRequest) (*response.GetAllIncrementOperationMetaInfoResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetAllIncrementOperationMetaInfo not implemented")
+}
+func (UnimplementedDBMSServer) GetIncrementOperation(context.Context, *request.GetIncrementOperationRequest) (*response.GetIncrementOperationResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetIncrementOperation not implemented")
 }
 func (UnimplementedDBMSServer) CreateSwcNodeData(context.Context, *request.CreateSwcNodeDataRequest) (*response.CreateSwcNodeDataResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CreateSwcNodeData not implemented")
@@ -967,6 +1057,114 @@ func _DBMS_GetAllSwcMetaInfo_Handler(srv interface{}, ctx context.Context, dec f
 	return interceptor(ctx, in, info, handler)
 }
 
+func _DBMS_CreateSwcSnapshot_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(request.CreateSwcSnapshotRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(DBMSServer).CreateSwcSnapshot(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: DBMS_CreateSwcSnapshot_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(DBMSServer).CreateSwcSnapshot(ctx, req.(*request.CreateSwcSnapshotRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _DBMS_DeleteSwcSnapshot_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(request.DeleteSwcSnapshotRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(DBMSServer).DeleteSwcSnapshot(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: DBMS_DeleteSwcSnapshot_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(DBMSServer).DeleteSwcSnapshot(ctx, req.(*request.DeleteSwcSnapshotRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _DBMS_GetAllSnapshotMetaInfo_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(request.GetAllSnapshotMetaInfoRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(DBMSServer).GetAllSnapshotMetaInfo(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: DBMS_GetAllSnapshotMetaInfo_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(DBMSServer).GetAllSnapshotMetaInfo(ctx, req.(*request.GetAllSnapshotMetaInfoRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _DBMS_GetSnapshot_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(request.GetSnapshotRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(DBMSServer).GetSnapshot(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: DBMS_GetSnapshot_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(DBMSServer).GetSnapshot(ctx, req.(*request.GetSnapshotRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _DBMS_GetAllIncrementOperationMetaInfo_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(request.GetAllIncrementOperationMetaInfoRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(DBMSServer).GetAllIncrementOperationMetaInfo(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: DBMS_GetAllIncrementOperationMetaInfo_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(DBMSServer).GetAllIncrementOperationMetaInfo(ctx, req.(*request.GetAllIncrementOperationMetaInfoRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _DBMS_GetIncrementOperation_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(request.GetIncrementOperationRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(DBMSServer).GetIncrementOperation(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: DBMS_GetIncrementOperation_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(DBMSServer).GetIncrementOperation(ctx, req.(*request.GetIncrementOperationRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 func _DBMS_CreateSwcNodeData_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(request.CreateSwcNodeDataRequest)
 	if err := dec(in); err != nil {
@@ -1277,6 +1475,30 @@ var DBMS_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "GetAllSwcMetaInfo",
 			Handler:    _DBMS_GetAllSwcMetaInfo_Handler,
+		},
+		{
+			MethodName: "CreateSwcSnapshot",
+			Handler:    _DBMS_CreateSwcSnapshot_Handler,
+		},
+		{
+			MethodName: "DeleteSwcSnapshot",
+			Handler:    _DBMS_DeleteSwcSnapshot_Handler,
+		},
+		{
+			MethodName: "GetAllSnapshotMetaInfo",
+			Handler:    _DBMS_GetAllSnapshotMetaInfo_Handler,
+		},
+		{
+			MethodName: "GetSnapshot",
+			Handler:    _DBMS_GetSnapshot_Handler,
+		},
+		{
+			MethodName: "GetAllIncrementOperationMetaInfo",
+			Handler:    _DBMS_GetAllIncrementOperationMetaInfo_Handler,
+		},
+		{
+			MethodName: "GetIncrementOperation",
+			Handler:    _DBMS_GetIncrementOperation_Handler,
 		},
 		{
 			MethodName: "CreateSwcNodeData",
