@@ -1409,8 +1409,8 @@
     "protoCreateSwcNodeDataRequest": {
       "type": "object",
       "properties": {
-        "UserInfo": {
-          "$ref": "#/definitions/protoUserMetaInfoV1"
+        "UserToken": {
+          "type": "string"
         },
         "SwcInfo": {
           "$ref": "#/definitions/protoSwcMetaInfoV1"
@@ -1428,9 +1428,6 @@
         },
         "Message": {
           "type": "string"
-        },
-        "SwcData": {
-          "$ref": "#/definitions/protoSwcDataV1"
         }
       }
     },
@@ -1462,8 +1459,8 @@
     "protoCreateSwcSnapshotRequest": {
       "type": "object",
       "properties": {
-        "UserInfo": {
-          "$ref": "#/definitions/protoUserMetaInfoV1"
+        "UserToken": {
+          "type": "string"
         },
         "SwcName": {
           "type": "string"
@@ -1625,8 +1622,8 @@
     "protoDeleteSwcNodeDataRequest": {
       "type": "object",
       "properties": {
-        "UserInfo": {
-          "$ref": "#/definitions/protoUserMetaInfoV1"
+        "UserToken": {
+          "type": "string"
         },
         "SwcInfo": {
           "$ref": "#/definitions/protoSwcMetaInfoV1"
@@ -1644,9 +1641,6 @@
         },
         "Message": {
           "type": "string"
-        },
-        "SwcData": {
-          "$ref": "#/definitions/protoSwcDataV1"
         }
       }
     },
@@ -1678,8 +1672,8 @@
     "protoDeleteSwcSnapshotRequest": {
       "type": "object",
       "properties": {
-        "UserInfo": {
-          "$ref": "#/definitions/protoUserMetaInfoV1"
+        "UserToken": {
+          "type": "string"
         },
         "SwcName": {
           "type": "string"
@@ -1703,6 +1697,9 @@
     "protoDeleteUserRequest": {
       "type": "object",
       "properties": {
+        "UserToken": {
+          "type": "string"
+        },
         "UserInfo": {
           "$ref": "#/definitions/protoUserMetaInfoV1"
         }
@@ -1716,9 +1713,6 @@
         },
         "Message": {
           "type": "string"
-        },
-        "UserInfo": {
-          "$ref": "#/definitions/protoUserMetaInfoV1"
         }
       }
     },
@@ -1751,8 +1745,8 @@
     "protoGetAllIncrementOperationMetaInfoRequest": {
       "type": "object",
       "properties": {
-        "UserInfo": {
-          "$ref": "#/definitions/protoUserMetaInfoV1"
+        "UserToken": {
+          "type": "string"
         }
       }
     },
@@ -1829,8 +1823,8 @@
     "protoGetAllSnapshotMetaInfoRequest": {
       "type": "object",
       "properties": {
-        "UserInfo": {
-          "$ref": "#/definitions/protoUserMetaInfoV1"
+        "UserToken": {
+          "type": "string"
         }
       }
     },
@@ -1932,8 +1926,8 @@
     "protoGetIncrementOperationRequest": {
       "type": "object",
       "properties": {
-        "UserInfo": {
-          "$ref": "#/definitions/protoUserMetaInfoV1"
+        "UserToken": {
+          "type": "string"
         },
         "IncrementOperationCollectionName": {
           "type": "string"
@@ -2011,8 +2005,8 @@
     "protoGetSnapshotRequest": {
       "type": "object",
       "properties": {
-        "UserInfo": {
-          "$ref": "#/definitions/protoUserMetaInfoV1"
+        "UserToken": {
+          "type": "string"
         },
         "SwcSnapshotCollectionName": {
           "type": "string"
@@ -2334,9 +2328,6 @@
         "StartSnapshot": {
           "type": "string"
         },
-        "EndSnapshot": {
-          "type": "string"
-        },
         "CreateTime": {
           "type": "string",
           "format": "date-time"
@@ -2396,6 +2387,9 @@
             "type": "object",
             "$ref": "#/definitions/protoSwcIncrementOperationMetaInfoV1"
           }
+        },
+        "CurrentIncrementOperationCollectionName": {
+          "type": "string"
         }
       }
     },
@@ -2545,8 +2539,8 @@
     "protoUpdateSwcNodeDataRequest": {
       "type": "object",
       "properties": {
-        "UserInfo": {
-          "$ref": "#/definitions/protoUserMetaInfoV1"
+        "UserToken": {
+          "type": "string"
         },
         "SwcInfo": {
           "$ref": "#/definitions/protoSwcMetaInfoV1"
@@ -2564,9 +2558,6 @@
         },
         "Message": {
           "type": "string"
-        },
-        "SwcNodeData": {
-          "$ref": "#/definitions/protoSwcNodeDataV1"
         }
       }
     },
@@ -2639,6 +2630,9 @@
         },
         "UserInfo": {
           "$ref": "#/definitions/protoUserMetaInfoV1"
+        },
+        "UserToken": {
+          "type": "string"
         }
       }
     },
@@ -2708,6 +2702,9 @@
           "type": "boolean"
         },
         "Message": {
+          "type": "string"
+        },
+        "UserToken": {
           "type": "string"
         }
       }

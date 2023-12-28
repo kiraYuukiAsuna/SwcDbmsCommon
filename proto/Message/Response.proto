@@ -16,7 +16,6 @@ message CreateUserResponse{
 message DeleteUserResponse{
     bool status = 1;
     string Message = 2;
-    UserMetaInfoV1 UserInfo = 3;
 }
 
 message UpdateUserResponse{
@@ -41,6 +40,7 @@ message UserLoginResponse{
     bool status = 1;
     string Message = 2;
     UserMetaInfoV1 UserInfo = 3;
+    string UserToken = 4;
 }
 
 message UserLogoutResponse{
@@ -51,6 +51,7 @@ message UserLogoutResponse{
 message UserOnlineHeartBeatResponse{
     bool status = 1;
     string Message = 2;
+    string UserToken = 3;
 }
 
 message GetUserPermissionGroupResponse{
@@ -173,19 +174,16 @@ message GetIncrementOperationResponse{
 message CreateSwcNodeDataResponse{
     bool status = 1;
     string Message = 2;
-    SwcDataV1 SwcData = 3;
 }
 
 message DeleteSwcNodeDataResponse{
     bool status = 1;
     string Message = 2;
-    SwcDataV1 SwcData = 3;
 }
 
 message UpdateSwcNodeDataResponse{
     bool status = 1;
     string Message = 2;
-    SwcNodeDataV1 SwcNodeData = 3;
 }
 
 message GetSwcNodeDataResponse{

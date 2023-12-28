@@ -1970,9 +1970,8 @@ class SwcIncrementOperationMetaInfoV1 final :
   enum : int {
     kIncrementOperationCollectionNameFieldNumber = 2,
     kStartSnapshotFieldNumber = 3,
-    kEndSnapshotFieldNumber = 4,
     kBaseFieldNumber = 1,
-    kCreateTimeFieldNumber = 5,
+    kCreateTimeFieldNumber = 4,
   };
   // string IncrementOperationCollectionName = 2;
   void clear_incrementoperationcollectionname();
@@ -2002,20 +2001,6 @@ class SwcIncrementOperationMetaInfoV1 final :
   std::string* _internal_mutable_startsnapshot();
   public:
 
-  // string EndSnapshot = 4;
-  void clear_endsnapshot();
-  const std::string& endsnapshot() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_endsnapshot(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_endsnapshot();
-  PROTOBUF_NODISCARD std::string* release_endsnapshot();
-  void set_allocated_endsnapshot(std::string* endsnapshot);
-  private:
-  const std::string& _internal_endsnapshot() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_endsnapshot(const std::string& value);
-  std::string* _internal_mutable_endsnapshot();
-  public:
-
   // .proto.MetaInfoBase Base = 1;
   bool has_base() const;
   private:
@@ -2034,7 +2019,7 @@ class SwcIncrementOperationMetaInfoV1 final :
       ::proto::MetaInfoBase* base);
   ::proto::MetaInfoBase* unsafe_arena_release_base();
 
-  // .google.protobuf.Timestamp CreateTime = 5;
+  // .google.protobuf.Timestamp CreateTime = 4;
   bool has_createtime() const;
   private:
   bool _internal_has_createtime() const;
@@ -2062,7 +2047,6 @@ class SwcIncrementOperationMetaInfoV1 final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr incrementoperationcollectionname_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr startsnapshot_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr endsnapshot_;
     ::proto::MetaInfoBase* base_;
     ::PROTOBUF_NAMESPACE_ID::Timestamp* createtime_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
@@ -2387,6 +2371,7 @@ class SwcMetaInfoV1 final :
     kDescriptionFieldNumber = 3,
     kCreatorFieldNumber = 4,
     kSwcTypeFieldNumber = 5,
+    kCurrentIncrementOperationCollectionNameFieldNumber = 10,
     kBaseFieldNumber = 1,
     kCreateTimeFieldNumber = 6,
     kLastModifiedTimeFieldNumber = 7,
@@ -2483,6 +2468,20 @@ class SwcMetaInfoV1 final :
   std::string* _internal_mutable_swctype();
   public:
 
+  // string CurrentIncrementOperationCollectionName = 10;
+  void clear_currentincrementoperationcollectionname();
+  const std::string& currentincrementoperationcollectionname() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_currentincrementoperationcollectionname(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_currentincrementoperationcollectionname();
+  PROTOBUF_NODISCARD std::string* release_currentincrementoperationcollectionname();
+  void set_allocated_currentincrementoperationcollectionname(std::string* currentincrementoperationcollectionname);
+  private:
+  const std::string& _internal_currentincrementoperationcollectionname() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_currentincrementoperationcollectionname(const std::string& value);
+  std::string* _internal_mutable_currentincrementoperationcollectionname();
+  public:
+
   // .proto.MetaInfoBase Base = 1;
   bool has_base() const;
   private:
@@ -2551,6 +2550,7 @@ class SwcMetaInfoV1 final :
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr description_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr creator_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr swctype_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr currentincrementoperationcollectionname_;
     ::proto::MetaInfoBase* base_;
     ::PROTOBUF_NAMESPACE_ID::Timestamp* createtime_;
     ::PROTOBUF_NAMESPACE_ID::Timestamp* lastmodifiedtime_;
@@ -5860,57 +5860,7 @@ inline void SwcIncrementOperationMetaInfoV1::set_allocated_startsnapshot(std::st
   // @@protoc_insertion_point(field_set_allocated:proto.SwcIncrementOperationMetaInfoV1.StartSnapshot)
 }
 
-// string EndSnapshot = 4;
-inline void SwcIncrementOperationMetaInfoV1::clear_endsnapshot() {
-  _impl_.endsnapshot_.ClearToEmpty();
-}
-inline const std::string& SwcIncrementOperationMetaInfoV1::endsnapshot() const {
-  // @@protoc_insertion_point(field_get:proto.SwcIncrementOperationMetaInfoV1.EndSnapshot)
-  return _internal_endsnapshot();
-}
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void SwcIncrementOperationMetaInfoV1::set_endsnapshot(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.endsnapshot_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:proto.SwcIncrementOperationMetaInfoV1.EndSnapshot)
-}
-inline std::string* SwcIncrementOperationMetaInfoV1::mutable_endsnapshot() {
-  std::string* _s = _internal_mutable_endsnapshot();
-  // @@protoc_insertion_point(field_mutable:proto.SwcIncrementOperationMetaInfoV1.EndSnapshot)
-  return _s;
-}
-inline const std::string& SwcIncrementOperationMetaInfoV1::_internal_endsnapshot() const {
-  return _impl_.endsnapshot_.Get();
-}
-inline void SwcIncrementOperationMetaInfoV1::_internal_set_endsnapshot(const std::string& value) {
-  
-  _impl_.endsnapshot_.Set(value, GetArenaForAllocation());
-}
-inline std::string* SwcIncrementOperationMetaInfoV1::_internal_mutable_endsnapshot() {
-  
-  return _impl_.endsnapshot_.Mutable(GetArenaForAllocation());
-}
-inline std::string* SwcIncrementOperationMetaInfoV1::release_endsnapshot() {
-  // @@protoc_insertion_point(field_release:proto.SwcIncrementOperationMetaInfoV1.EndSnapshot)
-  return _impl_.endsnapshot_.Release();
-}
-inline void SwcIncrementOperationMetaInfoV1::set_allocated_endsnapshot(std::string* endsnapshot) {
-  if (endsnapshot != nullptr) {
-    
-  } else {
-    
-  }
-  _impl_.endsnapshot_.SetAllocated(endsnapshot, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.endsnapshot_.IsDefault()) {
-    _impl_.endsnapshot_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:proto.SwcIncrementOperationMetaInfoV1.EndSnapshot)
-}
-
-// .google.protobuf.Timestamp CreateTime = 5;
+// .google.protobuf.Timestamp CreateTime = 4;
 inline bool SwcIncrementOperationMetaInfoV1::_internal_has_createtime() const {
   return this != internal_default_instance() && _impl_.createtime_ != nullptr;
 }
@@ -6741,6 +6691,56 @@ inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::proto::SwcIncrementOpe
 SwcMetaInfoV1::swcincrementoperationmetainfolist() const {
   // @@protoc_insertion_point(field_list:proto.SwcMetaInfoV1.SwcIncrementOperationMetaInfoList)
   return _impl_.swcincrementoperationmetainfolist_;
+}
+
+// string CurrentIncrementOperationCollectionName = 10;
+inline void SwcMetaInfoV1::clear_currentincrementoperationcollectionname() {
+  _impl_.currentincrementoperationcollectionname_.ClearToEmpty();
+}
+inline const std::string& SwcMetaInfoV1::currentincrementoperationcollectionname() const {
+  // @@protoc_insertion_point(field_get:proto.SwcMetaInfoV1.CurrentIncrementOperationCollectionName)
+  return _internal_currentincrementoperationcollectionname();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void SwcMetaInfoV1::set_currentincrementoperationcollectionname(ArgT0&& arg0, ArgT... args) {
+ 
+ _impl_.currentincrementoperationcollectionname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:proto.SwcMetaInfoV1.CurrentIncrementOperationCollectionName)
+}
+inline std::string* SwcMetaInfoV1::mutable_currentincrementoperationcollectionname() {
+  std::string* _s = _internal_mutable_currentincrementoperationcollectionname();
+  // @@protoc_insertion_point(field_mutable:proto.SwcMetaInfoV1.CurrentIncrementOperationCollectionName)
+  return _s;
+}
+inline const std::string& SwcMetaInfoV1::_internal_currentincrementoperationcollectionname() const {
+  return _impl_.currentincrementoperationcollectionname_.Get();
+}
+inline void SwcMetaInfoV1::_internal_set_currentincrementoperationcollectionname(const std::string& value) {
+  
+  _impl_.currentincrementoperationcollectionname_.Set(value, GetArenaForAllocation());
+}
+inline std::string* SwcMetaInfoV1::_internal_mutable_currentincrementoperationcollectionname() {
+  
+  return _impl_.currentincrementoperationcollectionname_.Mutable(GetArenaForAllocation());
+}
+inline std::string* SwcMetaInfoV1::release_currentincrementoperationcollectionname() {
+  // @@protoc_insertion_point(field_release:proto.SwcMetaInfoV1.CurrentIncrementOperationCollectionName)
+  return _impl_.currentincrementoperationcollectionname_.Release();
+}
+inline void SwcMetaInfoV1::set_allocated_currentincrementoperationcollectionname(std::string* currentincrementoperationcollectionname) {
+  if (currentincrementoperationcollectionname != nullptr) {
+    
+  } else {
+    
+  }
+  _impl_.currentincrementoperationcollectionname_.SetAllocated(currentincrementoperationcollectionname, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.currentincrementoperationcollectionname_.IsDefault()) {
+    _impl_.currentincrementoperationcollectionname_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:proto.SwcMetaInfoV1.CurrentIncrementOperationCollectionName)
 }
 
 // -------------------------------------------------------------------

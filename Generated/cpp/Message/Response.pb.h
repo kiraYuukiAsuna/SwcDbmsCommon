@@ -520,7 +520,6 @@ class DeleteUserResponse final :
 
   enum : int {
     kMessageFieldNumber = 2,
-    kUserInfoFieldNumber = 3,
     kStatusFieldNumber = 1,
   };
   // string Message = 2;
@@ -536,24 +535,6 @@ class DeleteUserResponse final :
   inline PROTOBUF_ALWAYS_INLINE void _internal_set_message(const std::string& value);
   std::string* _internal_mutable_message();
   public:
-
-  // .proto.UserMetaInfoV1 UserInfo = 3;
-  bool has_userinfo() const;
-  private:
-  bool _internal_has_userinfo() const;
-  public:
-  void clear_userinfo();
-  const ::proto::UserMetaInfoV1& userinfo() const;
-  PROTOBUF_NODISCARD ::proto::UserMetaInfoV1* release_userinfo();
-  ::proto::UserMetaInfoV1* mutable_userinfo();
-  void set_allocated_userinfo(::proto::UserMetaInfoV1* userinfo);
-  private:
-  const ::proto::UserMetaInfoV1& _internal_userinfo() const;
-  ::proto::UserMetaInfoV1* _internal_mutable_userinfo();
-  public:
-  void unsafe_arena_set_allocated_userinfo(
-      ::proto::UserMetaInfoV1* userinfo);
-  ::proto::UserMetaInfoV1* unsafe_arena_release_userinfo();
 
   // bool status = 1;
   void clear_status();
@@ -573,7 +554,6 @@ class DeleteUserResponse final :
   typedef void DestructorSkippable_;
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr message_;
-    ::proto::UserMetaInfoV1* userinfo_;
     bool status_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
@@ -1256,6 +1236,7 @@ class UserLoginResponse final :
 
   enum : int {
     kMessageFieldNumber = 2,
+    kUserTokenFieldNumber = 4,
     kUserInfoFieldNumber = 3,
     kStatusFieldNumber = 1,
   };
@@ -1271,6 +1252,20 @@ class UserLoginResponse final :
   const std::string& _internal_message() const;
   inline PROTOBUF_ALWAYS_INLINE void _internal_set_message(const std::string& value);
   std::string* _internal_mutable_message();
+  public:
+
+  // string UserToken = 4;
+  void clear_usertoken();
+  const std::string& usertoken() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_usertoken(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_usertoken();
+  PROTOBUF_NODISCARD std::string* release_usertoken();
+  void set_allocated_usertoken(std::string* usertoken);
+  private:
+  const std::string& _internal_usertoken() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_usertoken(const std::string& value);
+  std::string* _internal_mutable_usertoken();
   public:
 
   // .proto.UserMetaInfoV1 UserInfo = 3;
@@ -1309,6 +1304,7 @@ class UserLoginResponse final :
   typedef void DestructorSkippable_;
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr message_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr usertoken_;
     ::proto::UserMetaInfoV1* userinfo_;
     bool status_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
@@ -1604,6 +1600,7 @@ class UserOnlineHeartBeatResponse final :
 
   enum : int {
     kMessageFieldNumber = 2,
+    kUserTokenFieldNumber = 3,
     kStatusFieldNumber = 1,
   };
   // string Message = 2;
@@ -1618,6 +1615,20 @@ class UserOnlineHeartBeatResponse final :
   const std::string& _internal_message() const;
   inline PROTOBUF_ALWAYS_INLINE void _internal_set_message(const std::string& value);
   std::string* _internal_mutable_message();
+  public:
+
+  // string UserToken = 3;
+  void clear_usertoken();
+  const std::string& usertoken() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_usertoken(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_usertoken();
+  PROTOBUF_NODISCARD std::string* release_usertoken();
+  void set_allocated_usertoken(std::string* usertoken);
+  private:
+  const std::string& _internal_usertoken() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_usertoken(const std::string& value);
+  std::string* _internal_mutable_usertoken();
   public:
 
   // bool status = 1;
@@ -1638,6 +1649,7 @@ class UserOnlineHeartBeatResponse final :
   typedef void DestructorSkippable_;
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr message_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr usertoken_;
     bool status_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
@@ -5388,7 +5400,6 @@ class CreateSwcNodeDataResponse final :
 
   enum : int {
     kMessageFieldNumber = 2,
-    kSwcDataFieldNumber = 3,
     kStatusFieldNumber = 1,
   };
   // string Message = 2;
@@ -5404,24 +5415,6 @@ class CreateSwcNodeDataResponse final :
   inline PROTOBUF_ALWAYS_INLINE void _internal_set_message(const std::string& value);
   std::string* _internal_mutable_message();
   public:
-
-  // .proto.SwcDataV1 SwcData = 3;
-  bool has_swcdata() const;
-  private:
-  bool _internal_has_swcdata() const;
-  public:
-  void clear_swcdata();
-  const ::proto::SwcDataV1& swcdata() const;
-  PROTOBUF_NODISCARD ::proto::SwcDataV1* release_swcdata();
-  ::proto::SwcDataV1* mutable_swcdata();
-  void set_allocated_swcdata(::proto::SwcDataV1* swcdata);
-  private:
-  const ::proto::SwcDataV1& _internal_swcdata() const;
-  ::proto::SwcDataV1* _internal_mutable_swcdata();
-  public:
-  void unsafe_arena_set_allocated_swcdata(
-      ::proto::SwcDataV1* swcdata);
-  ::proto::SwcDataV1* unsafe_arena_release_swcdata();
 
   // bool status = 1;
   void clear_status();
@@ -5441,7 +5434,6 @@ class CreateSwcNodeDataResponse final :
   typedef void DestructorSkippable_;
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr message_;
-    ::proto::SwcDataV1* swcdata_;
     bool status_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
@@ -5572,7 +5564,6 @@ class DeleteSwcNodeDataResponse final :
 
   enum : int {
     kMessageFieldNumber = 2,
-    kSwcDataFieldNumber = 3,
     kStatusFieldNumber = 1,
   };
   // string Message = 2;
@@ -5588,24 +5579,6 @@ class DeleteSwcNodeDataResponse final :
   inline PROTOBUF_ALWAYS_INLINE void _internal_set_message(const std::string& value);
   std::string* _internal_mutable_message();
   public:
-
-  // .proto.SwcDataV1 SwcData = 3;
-  bool has_swcdata() const;
-  private:
-  bool _internal_has_swcdata() const;
-  public:
-  void clear_swcdata();
-  const ::proto::SwcDataV1& swcdata() const;
-  PROTOBUF_NODISCARD ::proto::SwcDataV1* release_swcdata();
-  ::proto::SwcDataV1* mutable_swcdata();
-  void set_allocated_swcdata(::proto::SwcDataV1* swcdata);
-  private:
-  const ::proto::SwcDataV1& _internal_swcdata() const;
-  ::proto::SwcDataV1* _internal_mutable_swcdata();
-  public:
-  void unsafe_arena_set_allocated_swcdata(
-      ::proto::SwcDataV1* swcdata);
-  ::proto::SwcDataV1* unsafe_arena_release_swcdata();
 
   // bool status = 1;
   void clear_status();
@@ -5625,7 +5598,6 @@ class DeleteSwcNodeDataResponse final :
   typedef void DestructorSkippable_;
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr message_;
-    ::proto::SwcDataV1* swcdata_;
     bool status_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
@@ -5756,7 +5728,6 @@ class UpdateSwcNodeDataResponse final :
 
   enum : int {
     kMessageFieldNumber = 2,
-    kSwcNodeDataFieldNumber = 3,
     kStatusFieldNumber = 1,
   };
   // string Message = 2;
@@ -5772,24 +5743,6 @@ class UpdateSwcNodeDataResponse final :
   inline PROTOBUF_ALWAYS_INLINE void _internal_set_message(const std::string& value);
   std::string* _internal_mutable_message();
   public:
-
-  // .proto.SwcNodeDataV1 SwcNodeData = 3;
-  bool has_swcnodedata() const;
-  private:
-  bool _internal_has_swcnodedata() const;
-  public:
-  void clear_swcnodedata();
-  const ::proto::SwcNodeDataV1& swcnodedata() const;
-  PROTOBUF_NODISCARD ::proto::SwcNodeDataV1* release_swcnodedata();
-  ::proto::SwcNodeDataV1* mutable_swcnodedata();
-  void set_allocated_swcnodedata(::proto::SwcNodeDataV1* swcnodedata);
-  private:
-  const ::proto::SwcNodeDataV1& _internal_swcnodedata() const;
-  ::proto::SwcNodeDataV1* _internal_mutable_swcnodedata();
-  public:
-  void unsafe_arena_set_allocated_swcnodedata(
-      ::proto::SwcNodeDataV1* swcnodedata);
-  ::proto::SwcNodeDataV1* unsafe_arena_release_swcnodedata();
 
   // bool status = 1;
   void clear_status();
@@ -5809,7 +5762,6 @@ class UpdateSwcNodeDataResponse final :
   typedef void DestructorSkippable_;
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr message_;
-    ::proto::SwcNodeDataV1* swcnodedata_;
     bool status_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
@@ -7723,91 +7675,6 @@ inline void DeleteUserResponse::set_allocated_message(std::string* message) {
   // @@protoc_insertion_point(field_set_allocated:proto.DeleteUserResponse.Message)
 }
 
-// .proto.UserMetaInfoV1 UserInfo = 3;
-inline bool DeleteUserResponse::_internal_has_userinfo() const {
-  return this != internal_default_instance() && _impl_.userinfo_ != nullptr;
-}
-inline bool DeleteUserResponse::has_userinfo() const {
-  return _internal_has_userinfo();
-}
-inline const ::proto::UserMetaInfoV1& DeleteUserResponse::_internal_userinfo() const {
-  const ::proto::UserMetaInfoV1* p = _impl_.userinfo_;
-  return p != nullptr ? *p : reinterpret_cast<const ::proto::UserMetaInfoV1&>(
-      ::proto::_UserMetaInfoV1_default_instance_);
-}
-inline const ::proto::UserMetaInfoV1& DeleteUserResponse::userinfo() const {
-  // @@protoc_insertion_point(field_get:proto.DeleteUserResponse.UserInfo)
-  return _internal_userinfo();
-}
-inline void DeleteUserResponse::unsafe_arena_set_allocated_userinfo(
-    ::proto::UserMetaInfoV1* userinfo) {
-  if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userinfo_);
-  }
-  _impl_.userinfo_ = userinfo;
-  if (userinfo) {
-    
-  } else {
-    
-  }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.DeleteUserResponse.UserInfo)
-}
-inline ::proto::UserMetaInfoV1* DeleteUserResponse::release_userinfo() {
-  
-  ::proto::UserMetaInfoV1* temp = _impl_.userinfo_;
-  _impl_.userinfo_ = nullptr;
-#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
-  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
-  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
-  if (GetArenaForAllocation() == nullptr) { delete old; }
-#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
-  if (GetArenaForAllocation() != nullptr) {
-    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
-  }
-#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
-  return temp;
-}
-inline ::proto::UserMetaInfoV1* DeleteUserResponse::unsafe_arena_release_userinfo() {
-  // @@protoc_insertion_point(field_release:proto.DeleteUserResponse.UserInfo)
-  
-  ::proto::UserMetaInfoV1* temp = _impl_.userinfo_;
-  _impl_.userinfo_ = nullptr;
-  return temp;
-}
-inline ::proto::UserMetaInfoV1* DeleteUserResponse::_internal_mutable_userinfo() {
-  
-  if (_impl_.userinfo_ == nullptr) {
-    auto* p = CreateMaybeMessage<::proto::UserMetaInfoV1>(GetArenaForAllocation());
-    _impl_.userinfo_ = p;
-  }
-  return _impl_.userinfo_;
-}
-inline ::proto::UserMetaInfoV1* DeleteUserResponse::mutable_userinfo() {
-  ::proto::UserMetaInfoV1* _msg = _internal_mutable_userinfo();
-  // @@protoc_insertion_point(field_mutable:proto.DeleteUserResponse.UserInfo)
-  return _msg;
-}
-inline void DeleteUserResponse::set_allocated_userinfo(::proto::UserMetaInfoV1* userinfo) {
-  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
-  if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userinfo_);
-  }
-  if (userinfo) {
-    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(userinfo));
-    if (message_arena != submessage_arena) {
-      userinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, userinfo, submessage_arena);
-    }
-    
-  } else {
-    
-  }
-  _impl_.userinfo_ = userinfo;
-  // @@protoc_insertion_point(field_set_allocated:proto.DeleteUserResponse.UserInfo)
-}
-
 // -------------------------------------------------------------------
 
 // UpdateUserResponse
@@ -8396,6 +8263,56 @@ inline void UserLoginResponse::set_allocated_userinfo(::proto::UserMetaInfoV1* u
   // @@protoc_insertion_point(field_set_allocated:proto.UserLoginResponse.UserInfo)
 }
 
+// string UserToken = 4;
+inline void UserLoginResponse::clear_usertoken() {
+  _impl_.usertoken_.ClearToEmpty();
+}
+inline const std::string& UserLoginResponse::usertoken() const {
+  // @@protoc_insertion_point(field_get:proto.UserLoginResponse.UserToken)
+  return _internal_usertoken();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void UserLoginResponse::set_usertoken(ArgT0&& arg0, ArgT... args) {
+ 
+ _impl_.usertoken_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:proto.UserLoginResponse.UserToken)
+}
+inline std::string* UserLoginResponse::mutable_usertoken() {
+  std::string* _s = _internal_mutable_usertoken();
+  // @@protoc_insertion_point(field_mutable:proto.UserLoginResponse.UserToken)
+  return _s;
+}
+inline const std::string& UserLoginResponse::_internal_usertoken() const {
+  return _impl_.usertoken_.Get();
+}
+inline void UserLoginResponse::_internal_set_usertoken(const std::string& value) {
+  
+  _impl_.usertoken_.Set(value, GetArenaForAllocation());
+}
+inline std::string* UserLoginResponse::_internal_mutable_usertoken() {
+  
+  return _impl_.usertoken_.Mutable(GetArenaForAllocation());
+}
+inline std::string* UserLoginResponse::release_usertoken() {
+  // @@protoc_insertion_point(field_release:proto.UserLoginResponse.UserToken)
+  return _impl_.usertoken_.Release();
+}
+inline void UserLoginResponse::set_allocated_usertoken(std::string* usertoken) {
+  if (usertoken != nullptr) {
+    
+  } else {
+    
+  }
+  _impl_.usertoken_.SetAllocated(usertoken, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.usertoken_.IsDefault()) {
+    _impl_.usertoken_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:proto.UserLoginResponse.UserToken)
+}
+
 // -------------------------------------------------------------------
 
 // UserLogoutResponse
@@ -8542,6 +8459,56 @@ inline void UserOnlineHeartBeatResponse::set_allocated_message(std::string* mess
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   // @@protoc_insertion_point(field_set_allocated:proto.UserOnlineHeartBeatResponse.Message)
+}
+
+// string UserToken = 3;
+inline void UserOnlineHeartBeatResponse::clear_usertoken() {
+  _impl_.usertoken_.ClearToEmpty();
+}
+inline const std::string& UserOnlineHeartBeatResponse::usertoken() const {
+  // @@protoc_insertion_point(field_get:proto.UserOnlineHeartBeatResponse.UserToken)
+  return _internal_usertoken();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void UserOnlineHeartBeatResponse::set_usertoken(ArgT0&& arg0, ArgT... args) {
+ 
+ _impl_.usertoken_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:proto.UserOnlineHeartBeatResponse.UserToken)
+}
+inline std::string* UserOnlineHeartBeatResponse::mutable_usertoken() {
+  std::string* _s = _internal_mutable_usertoken();
+  // @@protoc_insertion_point(field_mutable:proto.UserOnlineHeartBeatResponse.UserToken)
+  return _s;
+}
+inline const std::string& UserOnlineHeartBeatResponse::_internal_usertoken() const {
+  return _impl_.usertoken_.Get();
+}
+inline void UserOnlineHeartBeatResponse::_internal_set_usertoken(const std::string& value) {
+  
+  _impl_.usertoken_.Set(value, GetArenaForAllocation());
+}
+inline std::string* UserOnlineHeartBeatResponse::_internal_mutable_usertoken() {
+  
+  return _impl_.usertoken_.Mutable(GetArenaForAllocation());
+}
+inline std::string* UserOnlineHeartBeatResponse::release_usertoken() {
+  // @@protoc_insertion_point(field_release:proto.UserOnlineHeartBeatResponse.UserToken)
+  return _impl_.usertoken_.Release();
+}
+inline void UserOnlineHeartBeatResponse::set_allocated_usertoken(std::string* usertoken) {
+  if (usertoken != nullptr) {
+    
+  } else {
+    
+  }
+  _impl_.usertoken_.SetAllocated(usertoken, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.usertoken_.IsDefault()) {
+    _impl_.usertoken_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:proto.UserOnlineHeartBeatResponse.UserToken)
 }
 
 // -------------------------------------------------------------------
@@ -11255,91 +11222,6 @@ inline void CreateSwcNodeDataResponse::set_allocated_message(std::string* messag
   // @@protoc_insertion_point(field_set_allocated:proto.CreateSwcNodeDataResponse.Message)
 }
 
-// .proto.SwcDataV1 SwcData = 3;
-inline bool CreateSwcNodeDataResponse::_internal_has_swcdata() const {
-  return this != internal_default_instance() && _impl_.swcdata_ != nullptr;
-}
-inline bool CreateSwcNodeDataResponse::has_swcdata() const {
-  return _internal_has_swcdata();
-}
-inline const ::proto::SwcDataV1& CreateSwcNodeDataResponse::_internal_swcdata() const {
-  const ::proto::SwcDataV1* p = _impl_.swcdata_;
-  return p != nullptr ? *p : reinterpret_cast<const ::proto::SwcDataV1&>(
-      ::proto::_SwcDataV1_default_instance_);
-}
-inline const ::proto::SwcDataV1& CreateSwcNodeDataResponse::swcdata() const {
-  // @@protoc_insertion_point(field_get:proto.CreateSwcNodeDataResponse.SwcData)
-  return _internal_swcdata();
-}
-inline void CreateSwcNodeDataResponse::unsafe_arena_set_allocated_swcdata(
-    ::proto::SwcDataV1* swcdata) {
-  if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.swcdata_);
-  }
-  _impl_.swcdata_ = swcdata;
-  if (swcdata) {
-    
-  } else {
-    
-  }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.CreateSwcNodeDataResponse.SwcData)
-}
-inline ::proto::SwcDataV1* CreateSwcNodeDataResponse::release_swcdata() {
-  
-  ::proto::SwcDataV1* temp = _impl_.swcdata_;
-  _impl_.swcdata_ = nullptr;
-#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
-  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
-  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
-  if (GetArenaForAllocation() == nullptr) { delete old; }
-#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
-  if (GetArenaForAllocation() != nullptr) {
-    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
-  }
-#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
-  return temp;
-}
-inline ::proto::SwcDataV1* CreateSwcNodeDataResponse::unsafe_arena_release_swcdata() {
-  // @@protoc_insertion_point(field_release:proto.CreateSwcNodeDataResponse.SwcData)
-  
-  ::proto::SwcDataV1* temp = _impl_.swcdata_;
-  _impl_.swcdata_ = nullptr;
-  return temp;
-}
-inline ::proto::SwcDataV1* CreateSwcNodeDataResponse::_internal_mutable_swcdata() {
-  
-  if (_impl_.swcdata_ == nullptr) {
-    auto* p = CreateMaybeMessage<::proto::SwcDataV1>(GetArenaForAllocation());
-    _impl_.swcdata_ = p;
-  }
-  return _impl_.swcdata_;
-}
-inline ::proto::SwcDataV1* CreateSwcNodeDataResponse::mutable_swcdata() {
-  ::proto::SwcDataV1* _msg = _internal_mutable_swcdata();
-  // @@protoc_insertion_point(field_mutable:proto.CreateSwcNodeDataResponse.SwcData)
-  return _msg;
-}
-inline void CreateSwcNodeDataResponse::set_allocated_swcdata(::proto::SwcDataV1* swcdata) {
-  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
-  if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.swcdata_);
-  }
-  if (swcdata) {
-    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(swcdata));
-    if (message_arena != submessage_arena) {
-      swcdata = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, swcdata, submessage_arena);
-    }
-    
-  } else {
-    
-  }
-  _impl_.swcdata_ = swcdata;
-  // @@protoc_insertion_point(field_set_allocated:proto.CreateSwcNodeDataResponse.SwcData)
-}
-
 // -------------------------------------------------------------------
 
 // DeleteSwcNodeDataResponse
@@ -11414,91 +11296,6 @@ inline void DeleteSwcNodeDataResponse::set_allocated_message(std::string* messag
   // @@protoc_insertion_point(field_set_allocated:proto.DeleteSwcNodeDataResponse.Message)
 }
 
-// .proto.SwcDataV1 SwcData = 3;
-inline bool DeleteSwcNodeDataResponse::_internal_has_swcdata() const {
-  return this != internal_default_instance() && _impl_.swcdata_ != nullptr;
-}
-inline bool DeleteSwcNodeDataResponse::has_swcdata() const {
-  return _internal_has_swcdata();
-}
-inline const ::proto::SwcDataV1& DeleteSwcNodeDataResponse::_internal_swcdata() const {
-  const ::proto::SwcDataV1* p = _impl_.swcdata_;
-  return p != nullptr ? *p : reinterpret_cast<const ::proto::SwcDataV1&>(
-      ::proto::_SwcDataV1_default_instance_);
-}
-inline const ::proto::SwcDataV1& DeleteSwcNodeDataResponse::swcdata() const {
-  // @@protoc_insertion_point(field_get:proto.DeleteSwcNodeDataResponse.SwcData)
-  return _internal_swcdata();
-}
-inline void DeleteSwcNodeDataResponse::unsafe_arena_set_allocated_swcdata(
-    ::proto::SwcDataV1* swcdata) {
-  if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.swcdata_);
-  }
-  _impl_.swcdata_ = swcdata;
-  if (swcdata) {
-    
-  } else {
-    
-  }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.DeleteSwcNodeDataResponse.SwcData)
-}
-inline ::proto::SwcDataV1* DeleteSwcNodeDataResponse::release_swcdata() {
-  
-  ::proto::SwcDataV1* temp = _impl_.swcdata_;
-  _impl_.swcdata_ = nullptr;
-#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
-  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
-  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
-  if (GetArenaForAllocation() == nullptr) { delete old; }
-#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
-  if (GetArenaForAllocation() != nullptr) {
-    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
-  }
-#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
-  return temp;
-}
-inline ::proto::SwcDataV1* DeleteSwcNodeDataResponse::unsafe_arena_release_swcdata() {
-  // @@protoc_insertion_point(field_release:proto.DeleteSwcNodeDataResponse.SwcData)
-  
-  ::proto::SwcDataV1* temp = _impl_.swcdata_;
-  _impl_.swcdata_ = nullptr;
-  return temp;
-}
-inline ::proto::SwcDataV1* DeleteSwcNodeDataResponse::_internal_mutable_swcdata() {
-  
-  if (_impl_.swcdata_ == nullptr) {
-    auto* p = CreateMaybeMessage<::proto::SwcDataV1>(GetArenaForAllocation());
-    _impl_.swcdata_ = p;
-  }
-  return _impl_.swcdata_;
-}
-inline ::proto::SwcDataV1* DeleteSwcNodeDataResponse::mutable_swcdata() {
-  ::proto::SwcDataV1* _msg = _internal_mutable_swcdata();
-  // @@protoc_insertion_point(field_mutable:proto.DeleteSwcNodeDataResponse.SwcData)
-  return _msg;
-}
-inline void DeleteSwcNodeDataResponse::set_allocated_swcdata(::proto::SwcDataV1* swcdata) {
-  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
-  if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.swcdata_);
-  }
-  if (swcdata) {
-    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(swcdata));
-    if (message_arena != submessage_arena) {
-      swcdata = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, swcdata, submessage_arena);
-    }
-    
-  } else {
-    
-  }
-  _impl_.swcdata_ = swcdata;
-  // @@protoc_insertion_point(field_set_allocated:proto.DeleteSwcNodeDataResponse.SwcData)
-}
-
 // -------------------------------------------------------------------
 
 // UpdateSwcNodeDataResponse
@@ -11571,91 +11368,6 @@ inline void UpdateSwcNodeDataResponse::set_allocated_message(std::string* messag
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   // @@protoc_insertion_point(field_set_allocated:proto.UpdateSwcNodeDataResponse.Message)
-}
-
-// .proto.SwcNodeDataV1 SwcNodeData = 3;
-inline bool UpdateSwcNodeDataResponse::_internal_has_swcnodedata() const {
-  return this != internal_default_instance() && _impl_.swcnodedata_ != nullptr;
-}
-inline bool UpdateSwcNodeDataResponse::has_swcnodedata() const {
-  return _internal_has_swcnodedata();
-}
-inline const ::proto::SwcNodeDataV1& UpdateSwcNodeDataResponse::_internal_swcnodedata() const {
-  const ::proto::SwcNodeDataV1* p = _impl_.swcnodedata_;
-  return p != nullptr ? *p : reinterpret_cast<const ::proto::SwcNodeDataV1&>(
-      ::proto::_SwcNodeDataV1_default_instance_);
-}
-inline const ::proto::SwcNodeDataV1& UpdateSwcNodeDataResponse::swcnodedata() const {
-  // @@protoc_insertion_point(field_get:proto.UpdateSwcNodeDataResponse.SwcNodeData)
-  return _internal_swcnodedata();
-}
-inline void UpdateSwcNodeDataResponse::unsafe_arena_set_allocated_swcnodedata(
-    ::proto::SwcNodeDataV1* swcnodedata) {
-  if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.swcnodedata_);
-  }
-  _impl_.swcnodedata_ = swcnodedata;
-  if (swcnodedata) {
-    
-  } else {
-    
-  }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.UpdateSwcNodeDataResponse.SwcNodeData)
-}
-inline ::proto::SwcNodeDataV1* UpdateSwcNodeDataResponse::release_swcnodedata() {
-  
-  ::proto::SwcNodeDataV1* temp = _impl_.swcnodedata_;
-  _impl_.swcnodedata_ = nullptr;
-#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
-  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
-  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
-  if (GetArenaForAllocation() == nullptr) { delete old; }
-#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
-  if (GetArenaForAllocation() != nullptr) {
-    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
-  }
-#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
-  return temp;
-}
-inline ::proto::SwcNodeDataV1* UpdateSwcNodeDataResponse::unsafe_arena_release_swcnodedata() {
-  // @@protoc_insertion_point(field_release:proto.UpdateSwcNodeDataResponse.SwcNodeData)
-  
-  ::proto::SwcNodeDataV1* temp = _impl_.swcnodedata_;
-  _impl_.swcnodedata_ = nullptr;
-  return temp;
-}
-inline ::proto::SwcNodeDataV1* UpdateSwcNodeDataResponse::_internal_mutable_swcnodedata() {
-  
-  if (_impl_.swcnodedata_ == nullptr) {
-    auto* p = CreateMaybeMessage<::proto::SwcNodeDataV1>(GetArenaForAllocation());
-    _impl_.swcnodedata_ = p;
-  }
-  return _impl_.swcnodedata_;
-}
-inline ::proto::SwcNodeDataV1* UpdateSwcNodeDataResponse::mutable_swcnodedata() {
-  ::proto::SwcNodeDataV1* _msg = _internal_mutable_swcnodedata();
-  // @@protoc_insertion_point(field_mutable:proto.UpdateSwcNodeDataResponse.SwcNodeData)
-  return _msg;
-}
-inline void UpdateSwcNodeDataResponse::set_allocated_swcnodedata(::proto::SwcNodeDataV1* swcnodedata) {
-  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
-  if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.swcnodedata_);
-  }
-  if (swcnodedata) {
-    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(swcnodedata));
-    if (message_arena != submessage_arena) {
-      swcnodedata = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, swcnodedata, submessage_arena);
-    }
-    
-  } else {
-    
-  }
-  _impl_.swcnodedata_ = swcnodedata;
-  // @@protoc_insertion_point(field_set_allocated:proto.UpdateSwcNodeDataResponse.SwcNodeData)
 }
 
 // -------------------------------------------------------------------
