@@ -40,7 +40,7 @@ message UserLoginResponse{
     bool status = 1;
     string Message = 2;
     UserMetaInfoV1 UserInfo = 3;
-    string UserToken = 4;
+    UserVerifyInfoV1 UserVerifyInfo = 4;
 }
 
 message UserLogoutResponse{
@@ -51,7 +51,7 @@ message UserLogoutResponse{
 message UserOnlineHeartBeatResponse{
     bool status = 1;
     string Message = 2;
-    string UserToken = 3;
+    UserVerifyInfoV1 UserVerifyInfo = 3;
 }
 
 message GetUserPermissionGroupResponse{

@@ -291,8 +291,22 @@ struct DailyStatisticsMetaInfoV1DefaultTypeInternal {
   };
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 DailyStatisticsMetaInfoV1DefaultTypeInternal _DailyStatisticsMetaInfoV1_default_instance_;
+PROTOBUF_CONSTEXPR UserVerifyInfoV1::UserVerifyInfoV1(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.username_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.usertoken_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct UserVerifyInfoV1DefaultTypeInternal {
+  PROTOBUF_CONSTEXPR UserVerifyInfoV1DefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~UserVerifyInfoV1DefaultTypeInternal() {}
+  union {
+    UserVerifyInfoV1 _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 UserVerifyInfoV1DefaultTypeInternal _UserVerifyInfoV1_default_instance_;
 }  // namespace proto
-static ::_pb::Metadata file_level_metadata_Message_2fMessage_2eproto[15];
+static ::_pb::Metadata file_level_metadata_Message_2fMessage_2eproto[16];
 static const ::_pb::EnumDescriptor* file_level_enum_descriptors_Message_2fMessage_2eproto[1];
 static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_Message_2fMessage_2eproto = nullptr;
 
@@ -477,6 +491,14 @@ const uint32_t TableStruct_Message_2fMessage_2eproto::offsets[] PROTOBUF_SECTION
   PROTOBUF_FIELD_OFFSET(::proto::DailyStatisticsMetaInfoV1, _impl_.swcquerynumber_),
   PROTOBUF_FIELD_OFFSET(::proto::DailyStatisticsMetaInfoV1, _impl_.nodequerynumber_),
   PROTOBUF_FIELD_OFFSET(::proto::DailyStatisticsMetaInfoV1, _impl_.activeusernumber_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::proto::UserVerifyInfoV1, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::proto::UserVerifyInfoV1, _impl_.username_),
+  PROTOBUF_FIELD_OFFSET(::proto::UserVerifyInfoV1, _impl_.usertoken_),
 };
 static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, -1, sizeof(::proto::MetaInfoBase)},
@@ -494,6 +516,7 @@ static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protode
   { 138, -1, -1, sizeof(::proto::SwcNodeDataV1)},
   { 150, -1, -1, sizeof(::proto::SwcDataV1)},
   { 157, -1, -1, sizeof(::proto::DailyStatisticsMetaInfoV1)},
+  { 180, -1, -1, sizeof(::proto::UserVerifyInfoV1)},
 };
 
 static const ::_pb::Message* const file_default_instances[] = {
@@ -512,6 +535,7 @@ static const ::_pb::Message* const file_default_instances[] = {
   &::proto::_SwcNodeDataV1_default_instance_._instance,
   &::proto::_SwcDataV1_default_instance_._instance,
   &::proto::_DailyStatisticsMetaInfoV1_default_instance_._instance,
+  &::proto::_UserVerifyInfoV1_default_instance_._instance,
 };
 
 const char descriptor_table_protodef_Message_2fMessage_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
@@ -595,20 +619,21 @@ const char descriptor_table_protodef_Message_2fMessage_2eproto[] PROTOBUF_SECTIO
   "iedSwcNumber\030\014 \001(\005\022\035\n\025ModifiedSwcNodeNum"
   "ber\030\r \001(\005\022\032\n\022ProjectQueryNumber\030\016 \001(\005\022\026\n"
   "\016SwcQueryNumber\030\017 \001(\005\022\027\n\017NodeQueryNumber"
-  "\030\020 \001(\005\022\030\n\020ActiveUserNumber\030\021 \001(\005*G\n\024Incr"
-  "ementOperationV1\022\013\n\007Unknown\020\000\022\n\n\006Create\020"
-  "\001\022\n\n\006Delete\020\002\022\n\n\006Update\020\003B/Z-DBMS/SwcDbm"
-  "sCommon/Generated/go/proto/messageP\000b\006pr"
-  "oto3"
+  "\030\020 \001(\005\022\030\n\020ActiveUserNumber\030\021 \001(\005\"7\n\020User"
+  "VerifyInfoV1\022\020\n\010UserName\030\001 \001(\t\022\021\n\tUserTo"
+  "ken\030\002 \001(\t*G\n\024IncrementOperationV1\022\013\n\007Unk"
+  "nown\020\000\022\n\n\006Create\020\001\022\n\n\006Delete\020\002\022\n\n\006Update"
+  "\020\003B/Z-DBMS/SwcDbmsCommon/Generated/go/pr"
+  "oto/messageP\000b\006proto3"
   ;
 static const ::_pbi::DescriptorTable* const descriptor_table_Message_2fMessage_2eproto_deps[1] = {
   &::descriptor_table_google_2fprotobuf_2ftimestamp_2eproto,
 };
 static ::_pbi::once_flag descriptor_table_Message_2fMessage_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_Message_2fMessage_2eproto = {
-    false, false, 3364, descriptor_table_protodef_Message_2fMessage_2eproto,
+    false, false, 3421, descriptor_table_protodef_Message_2fMessage_2eproto,
     "Message/Message.proto",
-    &descriptor_table_Message_2fMessage_2eproto_once, descriptor_table_Message_2fMessage_2eproto_deps, 1, 15,
+    &descriptor_table_Message_2fMessage_2eproto_once, descriptor_table_Message_2fMessage_2eproto_deps, 1, 16,
     schemas, file_default_instances, TableStruct_Message_2fMessage_2eproto::offsets,
     file_level_metadata_Message_2fMessage_2eproto, file_level_enum_descriptors_Message_2fMessage_2eproto,
     file_level_service_descriptors_Message_2fMessage_2eproto,
@@ -6459,6 +6484,259 @@ void DailyStatisticsMetaInfoV1::InternalSwap(DailyStatisticsMetaInfoV1* other) {
       file_level_metadata_Message_2fMessage_2eproto[14]);
 }
 
+// ===================================================================
+
+class UserVerifyInfoV1::_Internal {
+ public:
+};
+
+UserVerifyInfoV1::UserVerifyInfoV1(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:proto.UserVerifyInfoV1)
+}
+UserVerifyInfoV1::UserVerifyInfoV1(const UserVerifyInfoV1& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  UserVerifyInfoV1* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.username_){}
+    , decltype(_impl_.usertoken_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _impl_.username_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.username_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (!from._internal_username().empty()) {
+    _this->_impl_.username_.Set(from._internal_username(), 
+      _this->GetArenaForAllocation());
+  }
+  _impl_.usertoken_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.usertoken_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (!from._internal_usertoken().empty()) {
+    _this->_impl_.usertoken_.Set(from._internal_usertoken(), 
+      _this->GetArenaForAllocation());
+  }
+  // @@protoc_insertion_point(copy_constructor:proto.UserVerifyInfoV1)
+}
+
+inline void UserVerifyInfoV1::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.username_){}
+    , decltype(_impl_.usertoken_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+  _impl_.username_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.username_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  _impl_.usertoken_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.usertoken_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+}
+
+UserVerifyInfoV1::~UserVerifyInfoV1() {
+  // @@protoc_insertion_point(destructor:proto.UserVerifyInfoV1)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void UserVerifyInfoV1::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.username_.Destroy();
+  _impl_.usertoken_.Destroy();
+}
+
+void UserVerifyInfoV1::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void UserVerifyInfoV1::Clear() {
+// @@protoc_insertion_point(message_clear_start:proto.UserVerifyInfoV1)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _impl_.username_.ClearToEmpty();
+  _impl_.usertoken_.ClearToEmpty();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* UserVerifyInfoV1::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // string UserName = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          auto str = _internal_mutable_username();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "proto.UserVerifyInfoV1.UserName"));
+        } else
+          goto handle_unusual;
+        continue;
+      // string UserToken = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
+          auto str = _internal_mutable_usertoken();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "proto.UserVerifyInfoV1.UserToken"));
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* UserVerifyInfoV1::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:proto.UserVerifyInfoV1)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // string UserName = 1;
+  if (!this->_internal_username().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_username().data(), static_cast<int>(this->_internal_username().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "proto.UserVerifyInfoV1.UserName");
+    target = stream->WriteStringMaybeAliased(
+        1, this->_internal_username(), target);
+  }
+
+  // string UserToken = 2;
+  if (!this->_internal_usertoken().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_usertoken().data(), static_cast<int>(this->_internal_usertoken().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "proto.UserVerifyInfoV1.UserToken");
+    target = stream->WriteStringMaybeAliased(
+        2, this->_internal_usertoken(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:proto.UserVerifyInfoV1)
+  return target;
+}
+
+size_t UserVerifyInfoV1::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:proto.UserVerifyInfoV1)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // string UserName = 1;
+  if (!this->_internal_username().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_username());
+  }
+
+  // string UserToken = 2;
+  if (!this->_internal_usertoken().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_usertoken());
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData UserVerifyInfoV1::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    UserVerifyInfoV1::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*UserVerifyInfoV1::GetClassData() const { return &_class_data_; }
+
+
+void UserVerifyInfoV1::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<UserVerifyInfoV1*>(&to_msg);
+  auto& from = static_cast<const UserVerifyInfoV1&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:proto.UserVerifyInfoV1)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (!from._internal_username().empty()) {
+    _this->_internal_set_username(from._internal_username());
+  }
+  if (!from._internal_usertoken().empty()) {
+    _this->_internal_set_usertoken(from._internal_usertoken());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void UserVerifyInfoV1::CopyFrom(const UserVerifyInfoV1& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:proto.UserVerifyInfoV1)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool UserVerifyInfoV1::IsInitialized() const {
+  return true;
+}
+
+void UserVerifyInfoV1::InternalSwap(UserVerifyInfoV1* other) {
+  using std::swap;
+  auto* lhs_arena = GetArenaForAllocation();
+  auto* rhs_arena = other->GetArenaForAllocation();
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.username_, lhs_arena,
+      &other->_impl_.username_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.usertoken_, lhs_arena,
+      &other->_impl_.usertoken_, rhs_arena
+  );
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata UserVerifyInfoV1::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_Message_2fMessage_2eproto_getter, &descriptor_table_Message_2fMessage_2eproto_once,
+      file_level_metadata_Message_2fMessage_2eproto[15]);
+}
+
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace proto
 PROTOBUF_NAMESPACE_OPEN
@@ -6521,6 +6799,10 @@ Arena::CreateMaybeMessage< ::proto::SwcDataV1 >(Arena* arena) {
 template<> PROTOBUF_NOINLINE ::proto::DailyStatisticsMetaInfoV1*
 Arena::CreateMaybeMessage< ::proto::DailyStatisticsMetaInfoV1 >(Arena* arena) {
   return Arena::CreateMessageInternal< ::proto::DailyStatisticsMetaInfoV1 >(arena);
+}
+template<> PROTOBUF_NOINLINE ::proto::UserVerifyInfoV1*
+Arena::CreateMaybeMessage< ::proto::UserVerifyInfoV1 >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::proto::UserVerifyInfoV1 >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE
 

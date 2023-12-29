@@ -98,8 +98,8 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORIT
 PROTOBUF_CONSTEXPR UserLoginResponse::UserLoginResponse(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_.message_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.usertoken_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.userinfo_)*/nullptr
+  , /*decltype(_impl_.userverifyinfo_)*/nullptr
   , /*decltype(_impl_.status_)*/false
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct UserLoginResponseDefaultTypeInternal {
@@ -128,7 +128,7 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORIT
 PROTOBUF_CONSTEXPR UserOnlineHeartBeatResponse::UserOnlineHeartBeatResponse(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_.message_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.usertoken_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.userverifyinfo_)*/nullptr
   , /*decltype(_impl_.status_)*/false
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct UserOnlineHeartBeatResponseDefaultTypeInternal {
@@ -674,7 +674,7 @@ const uint32_t TableStruct_Message_2fResponse_2eproto::offsets[] PROTOBUF_SECTIO
   PROTOBUF_FIELD_OFFSET(::proto::UserLoginResponse, _impl_.status_),
   PROTOBUF_FIELD_OFFSET(::proto::UserLoginResponse, _impl_.message_),
   PROTOBUF_FIELD_OFFSET(::proto::UserLoginResponse, _impl_.userinfo_),
-  PROTOBUF_FIELD_OFFSET(::proto::UserLoginResponse, _impl_.usertoken_),
+  PROTOBUF_FIELD_OFFSET(::proto::UserLoginResponse, _impl_.userverifyinfo_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::proto::UserLogoutResponse, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -691,7 +691,7 @@ const uint32_t TableStruct_Message_2fResponse_2eproto::offsets[] PROTOBUF_SECTIO
   ~0u,  // no _inlined_string_donated_
   PROTOBUF_FIELD_OFFSET(::proto::UserOnlineHeartBeatResponse, _impl_.status_),
   PROTOBUF_FIELD_OFFSET(::proto::UserOnlineHeartBeatResponse, _impl_.message_),
-  PROTOBUF_FIELD_OFFSET(::proto::UserOnlineHeartBeatResponse, _impl_.usertoken_),
+  PROTOBUF_FIELD_OFFSET(::proto::UserOnlineHeartBeatResponse, _impl_.userverifyinfo_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::proto::GetUserPermissionGroupResponse, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -1076,98 +1076,100 @@ const char descriptor_table_protodef_Message_2fResponse_2eproto[] PROTOBUF_SECTI
   " \001(\0132\025.proto.UserMetaInfoV1\"^\n\022GetAllUse"
   "rResponse\022\016\n\006status\030\001 \001(\010\022\017\n\007Message\030\002 \001"
   "(\t\022\'\n\010UserInfo\030\003 \003(\0132\025.proto.UserMetaInf"
-  "oV1\"p\n\021UserLoginResponse\022\016\n\006status\030\001 \001(\010"
-  "\022\017\n\007Message\030\002 \001(\t\022\'\n\010UserInfo\030\003 \001(\0132\025.pr"
-  "oto.UserMetaInfoV1\022\021\n\tUserToken\030\004 \001(\t\"5\n"
-  "\022UserLogoutResponse\022\016\n\006status\030\001 \001(\010\022\017\n\007M"
-  "essage\030\002 \001(\t\"Q\n\033UserOnlineHeartBeatRespo"
-  "nse\022\016\n\006status\030\001 \001(\010\022\017\n\007Message\030\002 \001(\t\022\021\n\t"
-  "UserToken\030\003 \001(\t\"|\n\036GetUserPermissionGrou"
-  "pResponse\022\016\n\006status\030\001 \001(\010\022\017\n\007Message\030\002 \001"
-  "(\t\0229\n\017PermissionGroup\030\003 \001(\0132 .proto.Perm"
-  "issionGroupMetaInfoV1\"x\n\032GetPermissionGr"
-  "oupResponse\022\016\n\006status\030\001 \001(\010\022\017\n\007Message\030\002"
-  " \001(\t\0229\n\017PermissionGroup\030\003 \001(\0132 .proto.Pe"
-  "rmissionGroupMetaInfoV1\"\177\n\035GetAllPermiss"
-  "ionGroupResponse\022\016\n\006status\030\001 \001(\010\022\017\n\007Mess"
-  "age\030\002 \001(\t\022=\n\023PermissionGroupList\030\003 \003(\0132 "
-  ".proto.PermissionGroupMetaInfoV1\"D\n!Chan"
-  "geUserPermissionGroupResponse\022\016\n\006status\030"
-  "\001 \001(\010\022\017\n\007Message\030\002 \001(\t\"g\n\025CreateProjectR"
-  "esponse\022\016\n\006status\030\001 \001(\010\022\017\n\007Message\030\002 \001(\t"
-  "\022-\n\013ProjectInfo\030\003 \001(\0132\030.proto.ProjectMet"
-  "aInfoV1\"g\n\025DeleteProjectResponse\022\016\n\006stat"
-  "us\030\001 \001(\010\022\017\n\007Message\030\002 \001(\t\022-\n\013ProjectInfo"
-  "\030\003 \001(\0132\030.proto.ProjectMetaInfoV1\"g\n\025Upda"
-  "teProjectResponse\022\016\n\006status\030\001 \001(\010\022\017\n\007Mes"
-  "sage\030\002 \001(\t\022-\n\013ProjectInfo\030\003 \001(\0132\030.proto."
-  "ProjectMetaInfoV1\"d\n\022GetProjectResponse\022"
-  "\016\n\006status\030\001 \001(\010\022\017\n\007Message\030\002 \001(\t\022-\n\013Proj"
-  "ectInfo\030\003 \001(\0132\030.proto.ProjectMetaInfoV1\""
-  "g\n\025GetAllProjectResponse\022\016\n\006status\030\001 \001(\010"
-  "\022\017\n\007Message\030\002 \001(\t\022-\n\013ProjectInfo\030\003 \003(\0132\030"
-  ".proto.ProjectMetaInfoV1\"[\n\021CreateSwcRes"
-  "ponse\022\016\n\006status\030\001 \001(\010\022\017\n\007Message\030\002 \001(\t\022%"
-  "\n\007SwcInfo\030\003 \001(\0132\024.proto.SwcMetaInfoV1\"[\n"
-  "\021DeleteSwcResponse\022\016\n\006status\030\001 \001(\010\022\017\n\007Me"
-  "ssage\030\002 \001(\t\022%\n\007SwcInfo\030\003 \001(\0132\024.proto.Swc"
-  "MetaInfoV1\"[\n\021UpdateSwcResponse\022\016\n\006statu"
-  "s\030\001 \001(\010\022\017\n\007Message\030\002 \001(\t\022%\n\007SwcInfo\030\003 \001("
-  "\0132\024.proto.SwcMetaInfoV1\"`\n\026GetSwcMetaInf"
-  "oResponse\022\016\n\006status\030\001 \001(\010\022\017\n\007Message\030\002 \001"
-  "(\t\022%\n\007SwcInfo\030\003 \001(\0132\024.proto.SwcMetaInfoV"
-  "1\"c\n\031GetAllSwcMetaInfoResponse\022\016\n\006status"
-  "\030\001 \001(\010\022\017\n\007Message\030\002 \001(\t\022%\n\007SwcInfo\030\003 \003(\013"
-  "2\024.proto.SwcMetaInfoV1\"<\n\031CreateSwcSnaps"
-  "hotResponse\022\016\n\006status\030\001 \001(\010\022\017\n\007Message\030\002"
-  " \001(\t\"<\n\031DeleteSwcSnapshotResponse\022\016\n\006sta"
-  "tus\030\001 \001(\010\022\017\n\007Message\030\002 \001(\t\"x\n\036GetAllSnap"
-  "shotMetaInfoResponse\022\016\n\006status\030\001 \001(\010\022\017\n\007"
-  "Message\030\002 \001(\t\0225\n\017SwcSnapshotList\030\003 \003(\0132\034"
-  ".proto.SwcSnapshotMetaInfoV1\"]\n\023GetSnaps"
-  "hotResponse\022\016\n\006status\030\001 \001(\010\022\017\n\007Message\030\002"
-  " \001(\t\022%\n\013SwcNodeData\030\003 \001(\0132\020.proto.SwcDat"
-  "aV1\"\226\001\n(GetAllIncrementOperationMetaInfo"
-  "Response\022\016\n\006status\030\001 \001(\010\022\017\n\007Message\030\002 \001("
-  "\t\022I\n\031SwcIncrementOperationList\030\003 \003(\0132&.p"
-  "roto.SwcIncrementOperationMetaInfoV1\"\203\001\n"
-  "\035GetIncrementOperationResponse\022\016\n\006status"
-  "\030\001 \001(\010\022\017\n\007Message\030\002 \001(\t\022A\n\031SwcIncrementO"
-  "perationList\030\003 \003(\0132\036.proto.SwcIncrementO"
-  "perationV1\"<\n\031CreateSwcNodeDataResponse\022"
-  "\016\n\006status\030\001 \001(\010\022\017\n\007Message\030\002 \001(\t\"<\n\031Dele"
-  "teSwcNodeDataResponse\022\016\n\006status\030\001 \001(\010\022\017\n"
-  "\007Message\030\002 \001(\t\"<\n\031UpdateSwcNodeDataRespo"
-  "nse\022\016\n\006status\030\001 \001(\010\022\017\n\007Message\030\002 \001(\t\"`\n\026"
-  "GetSwcNodeDataResponse\022\016\n\006status\030\001 \001(\010\022\017"
-  "\n\007Message\030\002 \001(\t\022%\n\013SwcNodeData\030\003 \001(\0132\020.p"
-  "roto.SwcDataV1\"d\n\032GetSwcFullNodeDataResp"
-  "onse\022\016\n\006status\030\001 \001(\010\022\017\n\007Message\030\002 \001(\t\022%\n"
-  "\013SwcNodeData\030\003 \001(\0132\020.proto.SwcDataV1\"q\n\'"
-  "GetSwcNodeDataListByTimeAndUserResponse\022"
-  "\016\n\006status\030\001 \001(\010\022\017\n\007Message\030\002 \001(\t\022%\n\013SwcN"
-  "odeData\030\003 \001(\0132\020.proto.SwcDataV1\"\211\001\n\032Back"
-  "upFullDatabaseResponse\022\016\n\006status\030\001 \001(\010\022\017"
-  "\n\007Message\030\002 \001(\t\022\025\n\rInstantBackup\030\003 \001(\010\0223"
-  "\n\017DelayBackupTime\030\004 \001(\0132\032.google.protobu"
-  "f.Timestamp\"\177\n\035CreateDailyStatisticsResp"
-  "onse\022\016\n\006status\030\001 \001(\010\022\017\n\007Message\030\002 \001(\t\022=\n"
-  "\023DailyStatisticsInfo\030\003 \001(\0132 .proto.Daily"
-  "StatisticsMetaInfoV1\"\177\n\035DeleteDailyStati"
-  "sticsResponse\022\016\n\006status\030\001 \001(\010\022\017\n\007Message"
-  "\030\002 \001(\t\022=\n\023DailyStatisticsInfo\030\003 \001(\0132 .pr"
-  "oto.DailyStatisticsMetaInfoV1\"\177\n\035UpdateD"
-  "ailyStatisticsResponse\022\016\n\006status\030\001 \001(\010\022\017"
-  "\n\007Message\030\002 \001(\t\022=\n\023DailyStatisticsInfo\030\003"
-  " \001(\0132 .proto.DailyStatisticsMetaInfoV1\"|"
-  "\n\032GetDailyStatisticsResponse\022\016\n\006status\030\001"
-  " \001(\010\022\017\n\007Message\030\002 \001(\t\022=\n\023DailyStatistics"
-  "Info\030\003 \001(\0132 .proto.DailyStatisticsMetaIn"
-  "foV1\"\177\n\035GetAllDailyStatisticsResponse\022\016\n"
-  "\006status\030\001 \001(\010\022\017\n\007Message\030\002 \001(\t\022=\n\023DailyS"
-  "tatisticsInfo\030\003 \003(\0132 .proto.DailyStatist"
-  "icsMetaInfoV1B0Z.DBMS/SwcDbmsCommon/Gene"
-  "rated/go/proto/responseP\000b\006proto3"
+  "oV1\"\216\001\n\021UserLoginResponse\022\016\n\006status\030\001 \001("
+  "\010\022\017\n\007Message\030\002 \001(\t\022\'\n\010UserInfo\030\003 \001(\0132\025.p"
+  "roto.UserMetaInfoV1\022/\n\016UserVerifyInfo\030\004 "
+  "\001(\0132\027.proto.UserVerifyInfoV1\"5\n\022UserLogo"
+  "utResponse\022\016\n\006status\030\001 \001(\010\022\017\n\007Message\030\002 "
+  "\001(\t\"o\n\033UserOnlineHeartBeatResponse\022\016\n\006st"
+  "atus\030\001 \001(\010\022\017\n\007Message\030\002 \001(\t\022/\n\016UserVerif"
+  "yInfo\030\003 \001(\0132\027.proto.UserVerifyInfoV1\"|\n\036"
+  "GetUserPermissionGroupResponse\022\016\n\006status"
+  "\030\001 \001(\010\022\017\n\007Message\030\002 \001(\t\0229\n\017PermissionGro"
+  "up\030\003 \001(\0132 .proto.PermissionGroupMetaInfo"
+  "V1\"x\n\032GetPermissionGroupResponse\022\016\n\006stat"
+  "us\030\001 \001(\010\022\017\n\007Message\030\002 \001(\t\0229\n\017PermissionG"
+  "roup\030\003 \001(\0132 .proto.PermissionGroupMetaIn"
+  "foV1\"\177\n\035GetAllPermissionGroupResponse\022\016\n"
+  "\006status\030\001 \001(\010\022\017\n\007Message\030\002 \001(\t\022=\n\023Permis"
+  "sionGroupList\030\003 \003(\0132 .proto.PermissionGr"
+  "oupMetaInfoV1\"D\n!ChangeUserPermissionGro"
+  "upResponse\022\016\n\006status\030\001 \001(\010\022\017\n\007Message\030\002 "
+  "\001(\t\"g\n\025CreateProjectResponse\022\016\n\006status\030\001"
+  " \001(\010\022\017\n\007Message\030\002 \001(\t\022-\n\013ProjectInfo\030\003 \001"
+  "(\0132\030.proto.ProjectMetaInfoV1\"g\n\025DeletePr"
+  "ojectResponse\022\016\n\006status\030\001 \001(\010\022\017\n\007Message"
+  "\030\002 \001(\t\022-\n\013ProjectInfo\030\003 \001(\0132\030.proto.Proj"
+  "ectMetaInfoV1\"g\n\025UpdateProjectResponse\022\016"
+  "\n\006status\030\001 \001(\010\022\017\n\007Message\030\002 \001(\t\022-\n\013Proje"
+  "ctInfo\030\003 \001(\0132\030.proto.ProjectMetaInfoV1\"d"
+  "\n\022GetProjectResponse\022\016\n\006status\030\001 \001(\010\022\017\n\007"
+  "Message\030\002 \001(\t\022-\n\013ProjectInfo\030\003 \001(\0132\030.pro"
+  "to.ProjectMetaInfoV1\"g\n\025GetAllProjectRes"
+  "ponse\022\016\n\006status\030\001 \001(\010\022\017\n\007Message\030\002 \001(\t\022-"
+  "\n\013ProjectInfo\030\003 \003(\0132\030.proto.ProjectMetaI"
+  "nfoV1\"[\n\021CreateSwcResponse\022\016\n\006status\030\001 \001"
+  "(\010\022\017\n\007Message\030\002 \001(\t\022%\n\007SwcInfo\030\003 \001(\0132\024.p"
+  "roto.SwcMetaInfoV1\"[\n\021DeleteSwcResponse\022"
+  "\016\n\006status\030\001 \001(\010\022\017\n\007Message\030\002 \001(\t\022%\n\007SwcI"
+  "nfo\030\003 \001(\0132\024.proto.SwcMetaInfoV1\"[\n\021Updat"
+  "eSwcResponse\022\016\n\006status\030\001 \001(\010\022\017\n\007Message\030"
+  "\002 \001(\t\022%\n\007SwcInfo\030\003 \001(\0132\024.proto.SwcMetaIn"
+  "foV1\"`\n\026GetSwcMetaInfoResponse\022\016\n\006status"
+  "\030\001 \001(\010\022\017\n\007Message\030\002 \001(\t\022%\n\007SwcInfo\030\003 \001(\013"
+  "2\024.proto.SwcMetaInfoV1\"c\n\031GetAllSwcMetaI"
+  "nfoResponse\022\016\n\006status\030\001 \001(\010\022\017\n\007Message\030\002"
+  " \001(\t\022%\n\007SwcInfo\030\003 \003(\0132\024.proto.SwcMetaInf"
+  "oV1\"<\n\031CreateSwcSnapshotResponse\022\016\n\006stat"
+  "us\030\001 \001(\010\022\017\n\007Message\030\002 \001(\t\"<\n\031DeleteSwcSn"
+  "apshotResponse\022\016\n\006status\030\001 \001(\010\022\017\n\007Messag"
+  "e\030\002 \001(\t\"x\n\036GetAllSnapshotMetaInfoRespons"
+  "e\022\016\n\006status\030\001 \001(\010\022\017\n\007Message\030\002 \001(\t\0225\n\017Sw"
+  "cSnapshotList\030\003 \003(\0132\034.proto.SwcSnapshotM"
+  "etaInfoV1\"]\n\023GetSnapshotResponse\022\016\n\006stat"
+  "us\030\001 \001(\010\022\017\n\007Message\030\002 \001(\t\022%\n\013SwcNodeData"
+  "\030\003 \001(\0132\020.proto.SwcDataV1\"\226\001\n(GetAllIncre"
+  "mentOperationMetaInfoResponse\022\016\n\006status\030"
+  "\001 \001(\010\022\017\n\007Message\030\002 \001(\t\022I\n\031SwcIncrementOp"
+  "erationList\030\003 \003(\0132&.proto.SwcIncrementOp"
+  "erationMetaInfoV1\"\203\001\n\035GetIncrementOperat"
+  "ionResponse\022\016\n\006status\030\001 \001(\010\022\017\n\007Message\030\002"
+  " \001(\t\022A\n\031SwcIncrementOperationList\030\003 \003(\0132"
+  "\036.proto.SwcIncrementOperationV1\"<\n\031Creat"
+  "eSwcNodeDataResponse\022\016\n\006status\030\001 \001(\010\022\017\n\007"
+  "Message\030\002 \001(\t\"<\n\031DeleteSwcNodeDataRespon"
+  "se\022\016\n\006status\030\001 \001(\010\022\017\n\007Message\030\002 \001(\t\"<\n\031U"
+  "pdateSwcNodeDataResponse\022\016\n\006status\030\001 \001(\010"
+  "\022\017\n\007Message\030\002 \001(\t\"`\n\026GetSwcNodeDataRespo"
+  "nse\022\016\n\006status\030\001 \001(\010\022\017\n\007Message\030\002 \001(\t\022%\n\013"
+  "SwcNodeData\030\003 \001(\0132\020.proto.SwcDataV1\"d\n\032G"
+  "etSwcFullNodeDataResponse\022\016\n\006status\030\001 \001("
+  "\010\022\017\n\007Message\030\002 \001(\t\022%\n\013SwcNodeData\030\003 \001(\0132"
+  "\020.proto.SwcDataV1\"q\n\'GetSwcNodeDataListB"
+  "yTimeAndUserResponse\022\016\n\006status\030\001 \001(\010\022\017\n\007"
+  "Message\030\002 \001(\t\022%\n\013SwcNodeData\030\003 \001(\0132\020.pro"
+  "to.SwcDataV1\"\211\001\n\032BackupFullDatabaseRespo"
+  "nse\022\016\n\006status\030\001 \001(\010\022\017\n\007Message\030\002 \001(\t\022\025\n\r"
+  "InstantBackup\030\003 \001(\010\0223\n\017DelayBackupTime\030\004"
+  " \001(\0132\032.google.protobuf.Timestamp\"\177\n\035Crea"
+  "teDailyStatisticsResponse\022\016\n\006status\030\001 \001("
+  "\010\022\017\n\007Message\030\002 \001(\t\022=\n\023DailyStatisticsInf"
+  "o\030\003 \001(\0132 .proto.DailyStatisticsMetaInfoV"
+  "1\"\177\n\035DeleteDailyStatisticsResponse\022\016\n\006st"
+  "atus\030\001 \001(\010\022\017\n\007Message\030\002 \001(\t\022=\n\023DailyStat"
+  "isticsInfo\030\003 \001(\0132 .proto.DailyStatistics"
+  "MetaInfoV1\"\177\n\035UpdateDailyStatisticsRespo"
+  "nse\022\016\n\006status\030\001 \001(\010\022\017\n\007Message\030\002 \001(\t\022=\n\023"
+  "DailyStatisticsInfo\030\003 \001(\0132 .proto.DailyS"
+  "tatisticsMetaInfoV1\"|\n\032GetDailyStatistic"
+  "sResponse\022\016\n\006status\030\001 \001(\010\022\017\n\007Message\030\002 \001"
+  "(\t\022=\n\023DailyStatisticsInfo\030\003 \001(\0132 .proto."
+  "DailyStatisticsMetaInfoV1\"\177\n\035GetAllDaily"
+  "StatisticsResponse\022\016\n\006status\030\001 \001(\010\022\017\n\007Me"
+  "ssage\030\002 \001(\t\022=\n\023DailyStatisticsInfo\030\003 \003(\013"
+  "2 .proto.DailyStatisticsMetaInfoV1B0Z.DB"
+  "MS/SwcDbmsCommon/Generated/go/proto/resp"
+  "onseP\000b\006proto3"
   ;
 static const ::_pbi::DescriptorTable* const descriptor_table_Message_2fResponse_2eproto_deps[2] = {
   &::descriptor_table_Message_2fMessage_2eproto,
@@ -1175,7 +1177,7 @@ static const ::_pbi::DescriptorTable* const descriptor_table_Message_2fResponse_
 };
 static ::_pbi::once_flag descriptor_table_Message_2fResponse_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_Message_2fResponse_2eproto = {
-    false, false, 4193, descriptor_table_protodef_Message_2fResponse_2eproto,
+    false, false, 4254, descriptor_table_protodef_Message_2fResponse_2eproto,
     "Message/Response.proto",
     &descriptor_table_Message_2fResponse_2eproto_once, descriptor_table_Message_2fResponse_2eproto_deps, 2, 40,
     schemas, file_default_instances, TableStruct_Message_2fResponse_2eproto::offsets,
@@ -2538,17 +2540,28 @@ void GetAllUserResponse::InternalSwap(GetAllUserResponse* other) {
 class UserLoginResponse::_Internal {
  public:
   static const ::proto::UserMetaInfoV1& userinfo(const UserLoginResponse* msg);
+  static const ::proto::UserVerifyInfoV1& userverifyinfo(const UserLoginResponse* msg);
 };
 
 const ::proto::UserMetaInfoV1&
 UserLoginResponse::_Internal::userinfo(const UserLoginResponse* msg) {
   return *msg->_impl_.userinfo_;
 }
+const ::proto::UserVerifyInfoV1&
+UserLoginResponse::_Internal::userverifyinfo(const UserLoginResponse* msg) {
+  return *msg->_impl_.userverifyinfo_;
+}
 void UserLoginResponse::clear_userinfo() {
   if (GetArenaForAllocation() == nullptr && _impl_.userinfo_ != nullptr) {
     delete _impl_.userinfo_;
   }
   _impl_.userinfo_ = nullptr;
+}
+void UserLoginResponse::clear_userverifyinfo() {
+  if (GetArenaForAllocation() == nullptr && _impl_.userverifyinfo_ != nullptr) {
+    delete _impl_.userverifyinfo_;
+  }
+  _impl_.userverifyinfo_ = nullptr;
 }
 UserLoginResponse::UserLoginResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
@@ -2561,8 +2574,8 @@ UserLoginResponse::UserLoginResponse(const UserLoginResponse& from)
   UserLoginResponse* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.message_){}
-    , decltype(_impl_.usertoken_){}
     , decltype(_impl_.userinfo_){nullptr}
+    , decltype(_impl_.userverifyinfo_){nullptr}
     , decltype(_impl_.status_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
@@ -2575,16 +2588,11 @@ UserLoginResponse::UserLoginResponse(const UserLoginResponse& from)
     _this->_impl_.message_.Set(from._internal_message(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.usertoken_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.usertoken_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_usertoken().empty()) {
-    _this->_impl_.usertoken_.Set(from._internal_usertoken(), 
-      _this->GetArenaForAllocation());
-  }
   if (from._internal_has_userinfo()) {
     _this->_impl_.userinfo_ = new ::proto::UserMetaInfoV1(*from._impl_.userinfo_);
+  }
+  if (from._internal_has_userverifyinfo()) {
+    _this->_impl_.userverifyinfo_ = new ::proto::UserVerifyInfoV1(*from._impl_.userverifyinfo_);
   }
   _this->_impl_.status_ = from._impl_.status_;
   // @@protoc_insertion_point(copy_constructor:proto.UserLoginResponse)
@@ -2596,18 +2604,14 @@ inline void UserLoginResponse::SharedCtor(
   (void)is_message_owned;
   new (&_impl_) Impl_{
       decltype(_impl_.message_){}
-    , decltype(_impl_.usertoken_){}
     , decltype(_impl_.userinfo_){nullptr}
+    , decltype(_impl_.userverifyinfo_){nullptr}
     , decltype(_impl_.status_){false}
     , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.message_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.message_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.usertoken_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.usertoken_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -2623,8 +2627,8 @@ UserLoginResponse::~UserLoginResponse() {
 inline void UserLoginResponse::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   _impl_.message_.Destroy();
-  _impl_.usertoken_.Destroy();
   if (this != internal_default_instance()) delete _impl_.userinfo_;
+  if (this != internal_default_instance()) delete _impl_.userverifyinfo_;
 }
 
 void UserLoginResponse::SetCachedSize(int size) const {
@@ -2638,11 +2642,14 @@ void UserLoginResponse::Clear() {
   (void) cached_has_bits;
 
   _impl_.message_.ClearToEmpty();
-  _impl_.usertoken_.ClearToEmpty();
   if (GetArenaForAllocation() == nullptr && _impl_.userinfo_ != nullptr) {
     delete _impl_.userinfo_;
   }
   _impl_.userinfo_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.userverifyinfo_ != nullptr) {
+    delete _impl_.userverifyinfo_;
+  }
+  _impl_.userverifyinfo_ = nullptr;
   _impl_.status_ = false;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
@@ -2679,13 +2686,11 @@ const char* UserLoginResponse::_InternalParse(const char* ptr, ::_pbi::ParseCont
         } else
           goto handle_unusual;
         continue;
-      // string UserToken = 4;
+      // .proto.UserVerifyInfoV1 UserVerifyInfo = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
-          auto str = _internal_mutable_usertoken();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          ptr = ctx->ParseMessage(_internal_mutable_userverifyinfo(), ptr);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "proto.UserLoginResponse.UserToken"));
         } else
           goto handle_unusual;
         continue;
@@ -2741,14 +2746,11 @@ uint8_t* UserLoginResponse::_InternalSerialize(
         _Internal::userinfo(this).GetCachedSize(), target, stream);
   }
 
-  // string UserToken = 4;
-  if (!this->_internal_usertoken().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_usertoken().data(), static_cast<int>(this->_internal_usertoken().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "proto.UserLoginResponse.UserToken");
-    target = stream->WriteStringMaybeAliased(
-        4, this->_internal_usertoken(), target);
+  // .proto.UserVerifyInfoV1 UserVerifyInfo = 4;
+  if (this->_internal_has_userverifyinfo()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(4, _Internal::userverifyinfo(this),
+        _Internal::userverifyinfo(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -2774,18 +2776,18 @@ size_t UserLoginResponse::ByteSizeLong() const {
         this->_internal_message());
   }
 
-  // string UserToken = 4;
-  if (!this->_internal_usertoken().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_usertoken());
-  }
-
   // .proto.UserMetaInfoV1 UserInfo = 3;
   if (this->_internal_has_userinfo()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.userinfo_);
+  }
+
+  // .proto.UserVerifyInfoV1 UserVerifyInfo = 4;
+  if (this->_internal_has_userverifyinfo()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.userverifyinfo_);
   }
 
   // bool status = 1;
@@ -2814,12 +2816,13 @@ void UserLoginResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, cons
   if (!from._internal_message().empty()) {
     _this->_internal_set_message(from._internal_message());
   }
-  if (!from._internal_usertoken().empty()) {
-    _this->_internal_set_usertoken(from._internal_usertoken());
-  }
   if (from._internal_has_userinfo()) {
     _this->_internal_mutable_userinfo()->::proto::UserMetaInfoV1::MergeFrom(
         from._internal_userinfo());
+  }
+  if (from._internal_has_userverifyinfo()) {
+    _this->_internal_mutable_userverifyinfo()->::proto::UserVerifyInfoV1::MergeFrom(
+        from._internal_userverifyinfo());
   }
   if (from._internal_status() != 0) {
     _this->_internal_set_status(from._internal_status());
@@ -2846,10 +2849,6 @@ void UserLoginResponse::InternalSwap(UserLoginResponse* other) {
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.message_, lhs_arena,
       &other->_impl_.message_, rhs_arena
-  );
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.usertoken_, lhs_arena,
-      &other->_impl_.usertoken_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(UserLoginResponse, _impl_.status_)
@@ -3099,8 +3098,19 @@ void UserLogoutResponse::InternalSwap(UserLogoutResponse* other) {
 
 class UserOnlineHeartBeatResponse::_Internal {
  public:
+  static const ::proto::UserVerifyInfoV1& userverifyinfo(const UserOnlineHeartBeatResponse* msg);
 };
 
+const ::proto::UserVerifyInfoV1&
+UserOnlineHeartBeatResponse::_Internal::userverifyinfo(const UserOnlineHeartBeatResponse* msg) {
+  return *msg->_impl_.userverifyinfo_;
+}
+void UserOnlineHeartBeatResponse::clear_userverifyinfo() {
+  if (GetArenaForAllocation() == nullptr && _impl_.userverifyinfo_ != nullptr) {
+    delete _impl_.userverifyinfo_;
+  }
+  _impl_.userverifyinfo_ = nullptr;
+}
 UserOnlineHeartBeatResponse::UserOnlineHeartBeatResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
@@ -3112,7 +3122,7 @@ UserOnlineHeartBeatResponse::UserOnlineHeartBeatResponse(const UserOnlineHeartBe
   UserOnlineHeartBeatResponse* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.message_){}
-    , decltype(_impl_.usertoken_){}
+    , decltype(_impl_.userverifyinfo_){nullptr}
     , decltype(_impl_.status_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
@@ -3125,13 +3135,8 @@ UserOnlineHeartBeatResponse::UserOnlineHeartBeatResponse(const UserOnlineHeartBe
     _this->_impl_.message_.Set(from._internal_message(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.usertoken_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.usertoken_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_usertoken().empty()) {
-    _this->_impl_.usertoken_.Set(from._internal_usertoken(), 
-      _this->GetArenaForAllocation());
+  if (from._internal_has_userverifyinfo()) {
+    _this->_impl_.userverifyinfo_ = new ::proto::UserVerifyInfoV1(*from._impl_.userverifyinfo_);
   }
   _this->_impl_.status_ = from._impl_.status_;
   // @@protoc_insertion_point(copy_constructor:proto.UserOnlineHeartBeatResponse)
@@ -3143,17 +3148,13 @@ inline void UserOnlineHeartBeatResponse::SharedCtor(
   (void)is_message_owned;
   new (&_impl_) Impl_{
       decltype(_impl_.message_){}
-    , decltype(_impl_.usertoken_){}
+    , decltype(_impl_.userverifyinfo_){nullptr}
     , decltype(_impl_.status_){false}
     , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.message_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.message_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.usertoken_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.usertoken_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -3169,7 +3170,7 @@ UserOnlineHeartBeatResponse::~UserOnlineHeartBeatResponse() {
 inline void UserOnlineHeartBeatResponse::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   _impl_.message_.Destroy();
-  _impl_.usertoken_.Destroy();
+  if (this != internal_default_instance()) delete _impl_.userverifyinfo_;
 }
 
 void UserOnlineHeartBeatResponse::SetCachedSize(int size) const {
@@ -3183,7 +3184,10 @@ void UserOnlineHeartBeatResponse::Clear() {
   (void) cached_has_bits;
 
   _impl_.message_.ClearToEmpty();
-  _impl_.usertoken_.ClearToEmpty();
+  if (GetArenaForAllocation() == nullptr && _impl_.userverifyinfo_ != nullptr) {
+    delete _impl_.userverifyinfo_;
+  }
+  _impl_.userverifyinfo_ = nullptr;
   _impl_.status_ = false;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
@@ -3212,13 +3216,11 @@ const char* UserOnlineHeartBeatResponse::_InternalParse(const char* ptr, ::_pbi:
         } else
           goto handle_unusual;
         continue;
-      // string UserToken = 3;
+      // .proto.UserVerifyInfoV1 UserVerifyInfo = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
-          auto str = _internal_mutable_usertoken();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          ptr = ctx->ParseMessage(_internal_mutable_userverifyinfo(), ptr);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "proto.UserOnlineHeartBeatResponse.UserToken"));
         } else
           goto handle_unusual;
         continue;
@@ -3267,14 +3269,11 @@ uint8_t* UserOnlineHeartBeatResponse::_InternalSerialize(
         2, this->_internal_message(), target);
   }
 
-  // string UserToken = 3;
-  if (!this->_internal_usertoken().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_usertoken().data(), static_cast<int>(this->_internal_usertoken().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "proto.UserOnlineHeartBeatResponse.UserToken");
-    target = stream->WriteStringMaybeAliased(
-        3, this->_internal_usertoken(), target);
+  // .proto.UserVerifyInfoV1 UserVerifyInfo = 3;
+  if (this->_internal_has_userverifyinfo()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(3, _Internal::userverifyinfo(this),
+        _Internal::userverifyinfo(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -3300,11 +3299,11 @@ size_t UserOnlineHeartBeatResponse::ByteSizeLong() const {
         this->_internal_message());
   }
 
-  // string UserToken = 3;
-  if (!this->_internal_usertoken().empty()) {
+  // .proto.UserVerifyInfoV1 UserVerifyInfo = 3;
+  if (this->_internal_has_userverifyinfo()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_usertoken());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.userverifyinfo_);
   }
 
   // bool status = 1;
@@ -3333,8 +3332,9 @@ void UserOnlineHeartBeatResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to
   if (!from._internal_message().empty()) {
     _this->_internal_set_message(from._internal_message());
   }
-  if (!from._internal_usertoken().empty()) {
-    _this->_internal_set_usertoken(from._internal_usertoken());
+  if (from._internal_has_userverifyinfo()) {
+    _this->_internal_mutable_userverifyinfo()->::proto::UserVerifyInfoV1::MergeFrom(
+        from._internal_userverifyinfo());
   }
   if (from._internal_status() != 0) {
     _this->_internal_set_status(from._internal_status());
@@ -3362,11 +3362,12 @@ void UserOnlineHeartBeatResponse::InternalSwap(UserOnlineHeartBeatResponse* othe
       &_impl_.message_, lhs_arena,
       &other->_impl_.message_, rhs_arena
   );
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.usertoken_, lhs_arena,
-      &other->_impl_.usertoken_, rhs_arena
-  );
-  swap(_impl_.status_, other->_impl_.status_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(UserOnlineHeartBeatResponse, _impl_.status_)
+      + sizeof(UserOnlineHeartBeatResponse::_impl_.status_)
+      - PROTOBUF_FIELD_OFFSET(UserOnlineHeartBeatResponse, _impl_.userverifyinfo_)>(
+          reinterpret_cast<char*>(&_impl_.userverifyinfo_),
+          reinterpret_cast<char*>(&other->_impl_.userverifyinfo_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata UserOnlineHeartBeatResponse::GetMetadata() const {

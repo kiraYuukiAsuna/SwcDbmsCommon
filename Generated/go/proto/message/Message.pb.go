@@ -1382,6 +1382,61 @@ func (x *DailyStatisticsMetaInfoV1) GetActiveUserNumber() int32 {
 	return 0
 }
 
+type UserVerifyInfoV1 struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	UserName  string `protobuf:"bytes,1,opt,name=UserName,proto3" json:"UserName,omitempty"`
+	UserToken string `protobuf:"bytes,2,opt,name=UserToken,proto3" json:"UserToken,omitempty"`
+}
+
+func (x *UserVerifyInfoV1) Reset() {
+	*x = UserVerifyInfoV1{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_Message_Message_proto_msgTypes[15]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *UserVerifyInfoV1) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*UserVerifyInfoV1) ProtoMessage() {}
+
+func (x *UserVerifyInfoV1) ProtoReflect() protoreflect.Message {
+	mi := &file_Message_Message_proto_msgTypes[15]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use UserVerifyInfoV1.ProtoReflect.Descriptor instead.
+func (*UserVerifyInfoV1) Descriptor() ([]byte, []int) {
+	return file_Message_Message_proto_rawDescGZIP(), []int{15}
+}
+
+func (x *UserVerifyInfoV1) GetUserName() string {
+	if x != nil {
+		return x.UserName
+	}
+	return ""
+}
+
+func (x *UserVerifyInfoV1) GetUserToken() string {
+	if x != nil {
+		return x.UserToken
+	}
+	return ""
+}
+
 var File_Message_Message_proto protoreflect.FileDescriptor
 
 var file_Message_Message_proto_rawDesc = []byte{
@@ -1668,15 +1723,20 @@ var file_Message_Message_proto_rawDesc = []byte{
 	0x65, 0x51, 0x75, 0x65, 0x72, 0x79, 0x4e, 0x75, 0x6d, 0x62, 0x65, 0x72, 0x12, 0x2a, 0x0a, 0x10,
 	0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x55, 0x73, 0x65, 0x72, 0x4e, 0x75, 0x6d, 0x62, 0x65, 0x72,
 	0x18, 0x11, 0x20, 0x01, 0x28, 0x05, 0x52, 0x10, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x55, 0x73,
-	0x65, 0x72, 0x4e, 0x75, 0x6d, 0x62, 0x65, 0x72, 0x2a, 0x47, 0x0a, 0x14, 0x49, 0x6e, 0x63, 0x72,
-	0x65, 0x6d, 0x65, 0x6e, 0x74, 0x4f, 0x70, 0x65, 0x72, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x56, 0x31,
-	0x12, 0x0b, 0x0a, 0x07, 0x55, 0x6e, 0x6b, 0x6e, 0x6f, 0x77, 0x6e, 0x10, 0x00, 0x12, 0x0a, 0x0a,
-	0x06, 0x43, 0x72, 0x65, 0x61, 0x74, 0x65, 0x10, 0x01, 0x12, 0x0a, 0x0a, 0x06, 0x44, 0x65, 0x6c,
-	0x65, 0x74, 0x65, 0x10, 0x02, 0x12, 0x0a, 0x0a, 0x06, 0x55, 0x70, 0x64, 0x61, 0x74, 0x65, 0x10,
-	0x03, 0x42, 0x2f, 0x5a, 0x2d, 0x44, 0x42, 0x4d, 0x53, 0x2f, 0x53, 0x77, 0x63, 0x44, 0x62, 0x6d,
-	0x73, 0x43, 0x6f, 0x6d, 0x6d, 0x6f, 0x6e, 0x2f, 0x47, 0x65, 0x6e, 0x65, 0x72, 0x61, 0x74, 0x65,
-	0x64, 0x2f, 0x67, 0x6f, 0x2f, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2f, 0x6d, 0x65, 0x73, 0x73, 0x61,
-	0x67, 0x65, 0x50, 0x00, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x65, 0x72, 0x4e, 0x75, 0x6d, 0x62, 0x65, 0x72, 0x22, 0x4c, 0x0a, 0x10, 0x55, 0x73, 0x65, 0x72,
+	0x56, 0x65, 0x72, 0x69, 0x66, 0x79, 0x49, 0x6e, 0x66, 0x6f, 0x56, 0x31, 0x12, 0x1a, 0x0a, 0x08,
+	0x55, 0x73, 0x65, 0x72, 0x4e, 0x61, 0x6d, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08,
+	0x55, 0x73, 0x65, 0x72, 0x4e, 0x61, 0x6d, 0x65, 0x12, 0x1c, 0x0a, 0x09, 0x55, 0x73, 0x65, 0x72,
+	0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x09, 0x55, 0x73, 0x65,
+	0x72, 0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x2a, 0x47, 0x0a, 0x14, 0x49, 0x6e, 0x63, 0x72, 0x65, 0x6d,
+	0x65, 0x6e, 0x74, 0x4f, 0x70, 0x65, 0x72, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x56, 0x31, 0x12, 0x0b,
+	0x0a, 0x07, 0x55, 0x6e, 0x6b, 0x6e, 0x6f, 0x77, 0x6e, 0x10, 0x00, 0x12, 0x0a, 0x0a, 0x06, 0x43,
+	0x72, 0x65, 0x61, 0x74, 0x65, 0x10, 0x01, 0x12, 0x0a, 0x0a, 0x06, 0x44, 0x65, 0x6c, 0x65, 0x74,
+	0x65, 0x10, 0x02, 0x12, 0x0a, 0x0a, 0x06, 0x55, 0x70, 0x64, 0x61, 0x74, 0x65, 0x10, 0x03, 0x42,
+	0x2f, 0x5a, 0x2d, 0x44, 0x42, 0x4d, 0x53, 0x2f, 0x53, 0x77, 0x63, 0x44, 0x62, 0x6d, 0x73, 0x43,
+	0x6f, 0x6d, 0x6d, 0x6f, 0x6e, 0x2f, 0x47, 0x65, 0x6e, 0x65, 0x72, 0x61, 0x74, 0x65, 0x64, 0x2f,
+	0x67, 0x6f, 0x2f, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2f, 0x6d, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65,
+	0x50, 0x00, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -1692,7 +1752,7 @@ func file_Message_Message_proto_rawDescGZIP() []byte {
 }
 
 var file_Message_Message_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
-var file_Message_Message_proto_msgTypes = make([]protoimpl.MessageInfo, 15)
+var file_Message_Message_proto_msgTypes = make([]protoimpl.MessageInfo, 16)
 var file_Message_Message_proto_goTypes = []interface{}{
 	(IncrementOperationV1)(0),                // 0: proto.IncrementOperationV1
 	(*MetaInfoBase)(nil),                     // 1: proto.MetaInfoBase
@@ -1710,35 +1770,36 @@ var file_Message_Message_proto_goTypes = []interface{}{
 	(*SwcNodeDataV1)(nil),                    // 13: proto.SwcNodeDataV1
 	(*SwcDataV1)(nil),                        // 14: proto.SwcDataV1
 	(*DailyStatisticsMetaInfoV1)(nil),        // 15: proto.DailyStatisticsMetaInfoV1
-	(*timestamppb.Timestamp)(nil),            // 16: google.protobuf.Timestamp
+	(*UserVerifyInfoV1)(nil),                 // 16: proto.UserVerifyInfoV1
+	(*timestamppb.Timestamp)(nil),            // 17: google.protobuf.Timestamp
 }
 var file_Message_Message_proto_depIdxs = []int32{
 	1,  // 0: proto.UserMetaInfoV1.Base:type_name -> proto.MetaInfoBase
-	16, // 1: proto.UserMetaInfoV1.CreateTime:type_name -> google.protobuf.Timestamp
+	17, // 1: proto.UserMetaInfoV1.CreateTime:type_name -> google.protobuf.Timestamp
 	1,  // 2: proto.PermissionGroupMetaInfoV1.Base:type_name -> proto.MetaInfoBase
 	3,  // 3: proto.PermissionGroupMetaInfoV1.GlobalPermission:type_name -> proto.GlobalPermissionMetaInfoV1
 	4,  // 4: proto.PermissionGroupMetaInfoV1.ProjectPermission:type_name -> proto.ProjectPermissionMetaInfoV1
 	4,  // 5: proto.UserPermissionOverrideMetaInfoV1.ProjectPermission:type_name -> proto.ProjectPermissionMetaInfoV1
 	1,  // 6: proto.ProjectMetaInfoV1.Base:type_name -> proto.MetaInfoBase
-	16, // 7: proto.ProjectMetaInfoV1.CreateTime:type_name -> google.protobuf.Timestamp
-	16, // 8: proto.ProjectMetaInfoV1.LastModifiedTime:type_name -> google.protobuf.Timestamp
+	17, // 7: proto.ProjectMetaInfoV1.CreateTime:type_name -> google.protobuf.Timestamp
+	17, // 8: proto.ProjectMetaInfoV1.LastModifiedTime:type_name -> google.protobuf.Timestamp
 	6,  // 9: proto.ProjectMetaInfoV1.UserPermissionOverride:type_name -> proto.UserPermissionOverrideMetaInfoV1
 	1,  // 10: proto.SwcSnapshotMetaInfoV1.Base:type_name -> proto.MetaInfoBase
-	16, // 11: proto.SwcSnapshotMetaInfoV1.CreateTime:type_name -> google.protobuf.Timestamp
+	17, // 11: proto.SwcSnapshotMetaInfoV1.CreateTime:type_name -> google.protobuf.Timestamp
 	1,  // 12: proto.SwcIncrementOperationMetaInfoV1.Base:type_name -> proto.MetaInfoBase
-	16, // 13: proto.SwcIncrementOperationMetaInfoV1.CreateTime:type_name -> google.protobuf.Timestamp
+	17, // 13: proto.SwcIncrementOperationMetaInfoV1.CreateTime:type_name -> google.protobuf.Timestamp
 	1,  // 14: proto.SwcIncrementOperationV1.Base:type_name -> proto.MetaInfoBase
 	0,  // 15: proto.SwcIncrementOperationV1.IncrementOperation:type_name -> proto.IncrementOperationV1
 	13, // 16: proto.SwcIncrementOperationV1.SwcNodeData:type_name -> proto.SwcNodeDataV1
 	1,  // 17: proto.SwcMetaInfoV1.Base:type_name -> proto.MetaInfoBase
-	16, // 18: proto.SwcMetaInfoV1.CreateTime:type_name -> google.protobuf.Timestamp
-	16, // 19: proto.SwcMetaInfoV1.LastModifiedTime:type_name -> google.protobuf.Timestamp
+	17, // 18: proto.SwcMetaInfoV1.CreateTime:type_name -> google.protobuf.Timestamp
+	17, // 19: proto.SwcMetaInfoV1.LastModifiedTime:type_name -> google.protobuf.Timestamp
 	8,  // 20: proto.SwcMetaInfoV1.SwcSnapshotMetaInfoList:type_name -> proto.SwcSnapshotMetaInfoV1
 	9,  // 21: proto.SwcMetaInfoV1.SwcIncrementOperationMetaInfoList:type_name -> proto.SwcIncrementOperationMetaInfoV1
 	1,  // 22: proto.SwcNodeDataV1.Base:type_name -> proto.MetaInfoBase
 	12, // 23: proto.SwcNodeDataV1.SwcNodeInternalData:type_name -> proto.SwcNodeInternalDataV1
-	16, // 24: proto.SwcNodeDataV1.CreateTime:type_name -> google.protobuf.Timestamp
-	16, // 25: proto.SwcNodeDataV1.LastModifiedTime:type_name -> google.protobuf.Timestamp
+	17, // 24: proto.SwcNodeDataV1.CreateTime:type_name -> google.protobuf.Timestamp
+	17, // 25: proto.SwcNodeDataV1.LastModifiedTime:type_name -> google.protobuf.Timestamp
 	13, // 26: proto.SwcDataV1.SwcData:type_name -> proto.SwcNodeDataV1
 	1,  // 27: proto.DailyStatisticsMetaInfoV1.Base:type_name -> proto.MetaInfoBase
 	28, // [28:28] is the sub-list for method output_type
@@ -1934,6 +1995,18 @@ func file_Message_Message_proto_init() {
 				return nil
 			}
 		}
+		file_Message_Message_proto_msgTypes[15].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*UserVerifyInfoV1); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
 	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
@@ -1941,7 +2014,7 @@ func file_Message_Message_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_Message_Message_proto_rawDesc,
 			NumEnums:      1,
-			NumMessages:   15,
+			NumMessages:   16,
 			NumExtensions: 0,
 			NumServices:   0,
 		},

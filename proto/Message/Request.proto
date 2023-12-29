@@ -12,7 +12,7 @@ message CreateUserRequest{
 }
 
 message DeleteUserRequest{
-    string UserToken = 1;
+    UserVerifyInfoV1 UserVerifyInfo = 1;
     UserMetaInfoV1 UserInfo = 2;
 }
 
@@ -110,48 +110,48 @@ message GetAllSwcMetaInfoRequest{
 }
 
 message CreateSwcSnapshotRequest{
-    string UserToken = 1;
+    UserVerifyInfoV1 UserVerifyInfo = 1;
     string SwcName = 2;
 }
 
 message DeleteSwcSnapshotRequest{
-    string UserToken = 1;
+    UserVerifyInfoV1 UserVerifyInfo = 1;
     string SwcName = 2;
     string SwcSnapshotCollectionName = 3;
 }
 
 message GetAllSnapshotMetaInfoRequest{
-    string UserToken = 1;
+    UserVerifyInfoV1 UserVerifyInfo = 1;
 }
 
 message GetSnapshotRequest{
-    string UserToken = 1;
+    UserVerifyInfoV1 UserVerifyInfo = 1;
     string SwcSnapshotCollectionName = 2;
 }
 
 message GetAllIncrementOperationMetaInfoRequest{
-    string UserToken = 2;
+    UserVerifyInfoV1 UserVerifyInfo = 2;
 }
 
 message GetIncrementOperationRequest{
-    string UserToken = 1;
+    UserVerifyInfoV1 UserVerifyInfo = 1;
     string IncrementOperationCollectionName = 2;
 }
 
 message CreateSwcNodeDataRequest{
-    string UserToken = 1;
+    UserVerifyInfoV1 UserVerifyInfo = 1;
     SwcMetaInfoV1 SwcInfo = 2;
     SwcDataV1 SwcData = 3;
 }
 
 message DeleteSwcNodeDataRequest{
-    string UserToken = 1;
+    UserVerifyInfoV1 UserVerifyInfo = 1;
     SwcMetaInfoV1 SwcInfo = 2;
     SwcDataV1 SwcData = 3;
 }
 
 message UpdateSwcNodeDataRequest{
-    string UserToken = 1;
+    UserVerifyInfoV1 UserVerifyInfo = 1;
     SwcMetaInfoV1 SwcInfo = 2;
     SwcNodeDataV1 SwcNodeData = 3;
 }

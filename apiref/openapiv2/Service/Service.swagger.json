@@ -1409,8 +1409,8 @@
     "protoCreateSwcNodeDataRequest": {
       "type": "object",
       "properties": {
-        "UserToken": {
-          "type": "string"
+        "UserVerifyInfo": {
+          "$ref": "#/definitions/protoUserVerifyInfoV1"
         },
         "SwcInfo": {
           "$ref": "#/definitions/protoSwcMetaInfoV1"
@@ -1459,8 +1459,8 @@
     "protoCreateSwcSnapshotRequest": {
       "type": "object",
       "properties": {
-        "UserToken": {
-          "type": "string"
+        "UserVerifyInfo": {
+          "$ref": "#/definitions/protoUserVerifyInfoV1"
         },
         "SwcName": {
           "type": "string"
@@ -1622,8 +1622,8 @@
     "protoDeleteSwcNodeDataRequest": {
       "type": "object",
       "properties": {
-        "UserToken": {
-          "type": "string"
+        "UserVerifyInfo": {
+          "$ref": "#/definitions/protoUserVerifyInfoV1"
         },
         "SwcInfo": {
           "$ref": "#/definitions/protoSwcMetaInfoV1"
@@ -1672,8 +1672,8 @@
     "protoDeleteSwcSnapshotRequest": {
       "type": "object",
       "properties": {
-        "UserToken": {
-          "type": "string"
+        "UserVerifyInfo": {
+          "$ref": "#/definitions/protoUserVerifyInfoV1"
         },
         "SwcName": {
           "type": "string"
@@ -1697,8 +1697,8 @@
     "protoDeleteUserRequest": {
       "type": "object",
       "properties": {
-        "UserToken": {
-          "type": "string"
+        "UserVerifyInfo": {
+          "$ref": "#/definitions/protoUserVerifyInfoV1"
         },
         "UserInfo": {
           "$ref": "#/definitions/protoUserMetaInfoV1"
@@ -1745,8 +1745,8 @@
     "protoGetAllIncrementOperationMetaInfoRequest": {
       "type": "object",
       "properties": {
-        "UserToken": {
-          "type": "string"
+        "UserVerifyInfo": {
+          "$ref": "#/definitions/protoUserVerifyInfoV1"
         }
       }
     },
@@ -1823,8 +1823,8 @@
     "protoGetAllSnapshotMetaInfoRequest": {
       "type": "object",
       "properties": {
-        "UserToken": {
-          "type": "string"
+        "UserVerifyInfo": {
+          "$ref": "#/definitions/protoUserVerifyInfoV1"
         }
       }
     },
@@ -1926,8 +1926,8 @@
     "protoGetIncrementOperationRequest": {
       "type": "object",
       "properties": {
-        "UserToken": {
-          "type": "string"
+        "UserVerifyInfo": {
+          "$ref": "#/definitions/protoUserVerifyInfoV1"
         },
         "IncrementOperationCollectionName": {
           "type": "string"
@@ -2005,8 +2005,8 @@
     "protoGetSnapshotRequest": {
       "type": "object",
       "properties": {
-        "UserToken": {
-          "type": "string"
+        "UserVerifyInfo": {
+          "$ref": "#/definitions/protoUserVerifyInfoV1"
         },
         "SwcSnapshotCollectionName": {
           "type": "string"
@@ -2539,8 +2539,8 @@
     "protoUpdateSwcNodeDataRequest": {
       "type": "object",
       "properties": {
-        "UserToken": {
-          "type": "string"
+        "UserVerifyInfo": {
+          "$ref": "#/definitions/protoUserVerifyInfoV1"
         },
         "SwcInfo": {
           "$ref": "#/definitions/protoSwcMetaInfoV1"
@@ -2631,8 +2631,8 @@
         "UserInfo": {
           "$ref": "#/definitions/protoUserMetaInfoV1"
         },
-        "UserToken": {
-          "type": "string"
+        "UserVerifyInfo": {
+          "$ref": "#/definitions/protoUserVerifyInfoV1"
         }
       }
     },
@@ -2704,8 +2704,8 @@
         "Message": {
           "type": "string"
         },
-        "UserToken": {
-          "type": "string"
+        "UserVerifyInfo": {
+          "$ref": "#/definitions/protoUserVerifyInfoV1"
         }
       }
     },
@@ -2716,6 +2716,17 @@
           "$ref": "#/definitions/protoProjectPermissionMetaInfoV1"
         },
         "UserName": {
+          "type": "string"
+        }
+      }
+    },
+    "protoUserVerifyInfoV1": {
+      "type": "object",
+      "properties": {
+        "UserName": {
+          "type": "string"
+        },
+        "UserToken": {
           "type": "string"
         }
       }

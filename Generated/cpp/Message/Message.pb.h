@@ -92,6 +92,9 @@ extern UserMetaInfoV1DefaultTypeInternal _UserMetaInfoV1_default_instance_;
 class UserPermissionOverrideMetaInfoV1;
 struct UserPermissionOverrideMetaInfoV1DefaultTypeInternal;
 extern UserPermissionOverrideMetaInfoV1DefaultTypeInternal _UserPermissionOverrideMetaInfoV1_default_instance_;
+class UserVerifyInfoV1;
+struct UserVerifyInfoV1DefaultTypeInternal;
+extern UserVerifyInfoV1DefaultTypeInternal _UserVerifyInfoV1_default_instance_;
 }  // namespace proto
 PROTOBUF_NAMESPACE_OPEN
 template<> ::proto::DailyStatisticsMetaInfoV1* Arena::CreateMaybeMessage<::proto::DailyStatisticsMetaInfoV1>(Arena*);
@@ -109,6 +112,7 @@ template<> ::proto::SwcNodeInternalDataV1* Arena::CreateMaybeMessage<::proto::Sw
 template<> ::proto::SwcSnapshotMetaInfoV1* Arena::CreateMaybeMessage<::proto::SwcSnapshotMetaInfoV1>(Arena*);
 template<> ::proto::UserMetaInfoV1* Arena::CreateMaybeMessage<::proto::UserMetaInfoV1>(Arena*);
 template<> ::proto::UserPermissionOverrideMetaInfoV1* Arena::CreateMaybeMessage<::proto::UserPermissionOverrideMetaInfoV1>(Arena*);
+template<> ::proto::UserVerifyInfoV1* Arena::CreateMaybeMessage<::proto::UserVerifyInfoV1>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
 namespace proto {
 
@@ -3577,6 +3581,175 @@ class DailyStatisticsMetaInfoV1 final :
     int32_t swcquerynumber_;
     int32_t nodequerynumber_;
     int32_t activeusernumber_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_Message_2fMessage_2eproto;
+};
+// -------------------------------------------------------------------
+
+class UserVerifyInfoV1 final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:proto.UserVerifyInfoV1) */ {
+ public:
+  inline UserVerifyInfoV1() : UserVerifyInfoV1(nullptr) {}
+  ~UserVerifyInfoV1() override;
+  explicit PROTOBUF_CONSTEXPR UserVerifyInfoV1(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  UserVerifyInfoV1(const UserVerifyInfoV1& from);
+  UserVerifyInfoV1(UserVerifyInfoV1&& from) noexcept
+    : UserVerifyInfoV1() {
+    *this = ::std::move(from);
+  }
+
+  inline UserVerifyInfoV1& operator=(const UserVerifyInfoV1& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline UserVerifyInfoV1& operator=(UserVerifyInfoV1&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const UserVerifyInfoV1& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const UserVerifyInfoV1* internal_default_instance() {
+    return reinterpret_cast<const UserVerifyInfoV1*>(
+               &_UserVerifyInfoV1_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    15;
+
+  friend void swap(UserVerifyInfoV1& a, UserVerifyInfoV1& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(UserVerifyInfoV1* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() != nullptr &&
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(UserVerifyInfoV1* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  UserVerifyInfoV1* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<UserVerifyInfoV1>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const UserVerifyInfoV1& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const UserVerifyInfoV1& from) {
+    UserVerifyInfoV1::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
+
+  private:
+  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(UserVerifyInfoV1* other);
+
+  private:
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "proto.UserVerifyInfoV1";
+  }
+  protected:
+  explicit UserVerifyInfoV1(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kUserNameFieldNumber = 1,
+    kUserTokenFieldNumber = 2,
+  };
+  // string UserName = 1;
+  void clear_username();
+  const std::string& username() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_username(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_username();
+  PROTOBUF_NODISCARD std::string* release_username();
+  void set_allocated_username(std::string* username);
+  private:
+  const std::string& _internal_username() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_username(const std::string& value);
+  std::string* _internal_mutable_username();
+  public:
+
+  // string UserToken = 2;
+  void clear_usertoken();
+  const std::string& usertoken() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_usertoken(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_usertoken();
+  PROTOBUF_NODISCARD std::string* release_usertoken();
+  void set_allocated_usertoken(std::string* usertoken);
+  private:
+  const std::string& _internal_usertoken() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_usertoken(const std::string& value);
+  std::string* _internal_mutable_usertoken();
+  public:
+
+  // @@protoc_insertion_point(class_scope:proto.UserVerifyInfoV1)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr username_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr usertoken_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -7989,9 +8162,115 @@ inline void DailyStatisticsMetaInfoV1::set_activeusernumber(int32_t value) {
   // @@protoc_insertion_point(field_set:proto.DailyStatisticsMetaInfoV1.ActiveUserNumber)
 }
 
+// -------------------------------------------------------------------
+
+// UserVerifyInfoV1
+
+// string UserName = 1;
+inline void UserVerifyInfoV1::clear_username() {
+  _impl_.username_.ClearToEmpty();
+}
+inline const std::string& UserVerifyInfoV1::username() const {
+  // @@protoc_insertion_point(field_get:proto.UserVerifyInfoV1.UserName)
+  return _internal_username();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void UserVerifyInfoV1::set_username(ArgT0&& arg0, ArgT... args) {
+ 
+ _impl_.username_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:proto.UserVerifyInfoV1.UserName)
+}
+inline std::string* UserVerifyInfoV1::mutable_username() {
+  std::string* _s = _internal_mutable_username();
+  // @@protoc_insertion_point(field_mutable:proto.UserVerifyInfoV1.UserName)
+  return _s;
+}
+inline const std::string& UserVerifyInfoV1::_internal_username() const {
+  return _impl_.username_.Get();
+}
+inline void UserVerifyInfoV1::_internal_set_username(const std::string& value) {
+  
+  _impl_.username_.Set(value, GetArenaForAllocation());
+}
+inline std::string* UserVerifyInfoV1::_internal_mutable_username() {
+  
+  return _impl_.username_.Mutable(GetArenaForAllocation());
+}
+inline std::string* UserVerifyInfoV1::release_username() {
+  // @@protoc_insertion_point(field_release:proto.UserVerifyInfoV1.UserName)
+  return _impl_.username_.Release();
+}
+inline void UserVerifyInfoV1::set_allocated_username(std::string* username) {
+  if (username != nullptr) {
+    
+  } else {
+    
+  }
+  _impl_.username_.SetAllocated(username, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.username_.IsDefault()) {
+    _impl_.username_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:proto.UserVerifyInfoV1.UserName)
+}
+
+// string UserToken = 2;
+inline void UserVerifyInfoV1::clear_usertoken() {
+  _impl_.usertoken_.ClearToEmpty();
+}
+inline const std::string& UserVerifyInfoV1::usertoken() const {
+  // @@protoc_insertion_point(field_get:proto.UserVerifyInfoV1.UserToken)
+  return _internal_usertoken();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void UserVerifyInfoV1::set_usertoken(ArgT0&& arg0, ArgT... args) {
+ 
+ _impl_.usertoken_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:proto.UserVerifyInfoV1.UserToken)
+}
+inline std::string* UserVerifyInfoV1::mutable_usertoken() {
+  std::string* _s = _internal_mutable_usertoken();
+  // @@protoc_insertion_point(field_mutable:proto.UserVerifyInfoV1.UserToken)
+  return _s;
+}
+inline const std::string& UserVerifyInfoV1::_internal_usertoken() const {
+  return _impl_.usertoken_.Get();
+}
+inline void UserVerifyInfoV1::_internal_set_usertoken(const std::string& value) {
+  
+  _impl_.usertoken_.Set(value, GetArenaForAllocation());
+}
+inline std::string* UserVerifyInfoV1::_internal_mutable_usertoken() {
+  
+  return _impl_.usertoken_.Mutable(GetArenaForAllocation());
+}
+inline std::string* UserVerifyInfoV1::release_usertoken() {
+  // @@protoc_insertion_point(field_release:proto.UserVerifyInfoV1.UserToken)
+  return _impl_.usertoken_.Release();
+}
+inline void UserVerifyInfoV1::set_allocated_usertoken(std::string* usertoken) {
+  if (usertoken != nullptr) {
+    
+  } else {
+    
+  }
+  _impl_.usertoken_.SetAllocated(usertoken, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.usertoken_.IsDefault()) {
+    _impl_.usertoken_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:proto.UserVerifyInfoV1.UserToken)
+}
+
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------

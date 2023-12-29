@@ -36,7 +36,7 @@ struct CreateUserRequestDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CreateUserRequestDefaultTypeInternal _CreateUserRequest_default_instance_;
 PROTOBUF_CONSTEXPR DeleteUserRequest::DeleteUserRequest(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.usertoken_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.userverifyinfo_)*/nullptr
   , /*decltype(_impl_.userinfo_)*/nullptr
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct DeleteUserRequestDefaultTypeInternal {
@@ -323,8 +323,8 @@ struct GetAllSwcMetaInfoRequestDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetAllSwcMetaInfoRequestDefaultTypeInternal _GetAllSwcMetaInfoRequest_default_instance_;
 PROTOBUF_CONSTEXPR CreateSwcSnapshotRequest::CreateSwcSnapshotRequest(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.usertoken_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.swcname_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.swcname_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.userverifyinfo_)*/nullptr
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct CreateSwcSnapshotRequestDefaultTypeInternal {
   PROTOBUF_CONSTEXPR CreateSwcSnapshotRequestDefaultTypeInternal()
@@ -337,9 +337,9 @@ struct CreateSwcSnapshotRequestDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CreateSwcSnapshotRequestDefaultTypeInternal _CreateSwcSnapshotRequest_default_instance_;
 PROTOBUF_CONSTEXPR DeleteSwcSnapshotRequest::DeleteSwcSnapshotRequest(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.usertoken_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.swcname_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.swcname_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.swcsnapshotcollectionname_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.userverifyinfo_)*/nullptr
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct DeleteSwcSnapshotRequestDefaultTypeInternal {
   PROTOBUF_CONSTEXPR DeleteSwcSnapshotRequestDefaultTypeInternal()
@@ -352,7 +352,7 @@ struct DeleteSwcSnapshotRequestDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 DeleteSwcSnapshotRequestDefaultTypeInternal _DeleteSwcSnapshotRequest_default_instance_;
 PROTOBUF_CONSTEXPR GetAllSnapshotMetaInfoRequest::GetAllSnapshotMetaInfoRequest(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.usertoken_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.userverifyinfo_)*/nullptr
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct GetAllSnapshotMetaInfoRequestDefaultTypeInternal {
   PROTOBUF_CONSTEXPR GetAllSnapshotMetaInfoRequestDefaultTypeInternal()
@@ -365,8 +365,8 @@ struct GetAllSnapshotMetaInfoRequestDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetAllSnapshotMetaInfoRequestDefaultTypeInternal _GetAllSnapshotMetaInfoRequest_default_instance_;
 PROTOBUF_CONSTEXPR GetSnapshotRequest::GetSnapshotRequest(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.usertoken_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.swcsnapshotcollectionname_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.swcsnapshotcollectionname_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.userverifyinfo_)*/nullptr
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct GetSnapshotRequestDefaultTypeInternal {
   PROTOBUF_CONSTEXPR GetSnapshotRequestDefaultTypeInternal()
@@ -379,7 +379,7 @@ struct GetSnapshotRequestDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetSnapshotRequestDefaultTypeInternal _GetSnapshotRequest_default_instance_;
 PROTOBUF_CONSTEXPR GetAllIncrementOperationMetaInfoRequest::GetAllIncrementOperationMetaInfoRequest(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.usertoken_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.userverifyinfo_)*/nullptr
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct GetAllIncrementOperationMetaInfoRequestDefaultTypeInternal {
   PROTOBUF_CONSTEXPR GetAllIncrementOperationMetaInfoRequestDefaultTypeInternal()
@@ -392,8 +392,8 @@ struct GetAllIncrementOperationMetaInfoRequestDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetAllIncrementOperationMetaInfoRequestDefaultTypeInternal _GetAllIncrementOperationMetaInfoRequest_default_instance_;
 PROTOBUF_CONSTEXPR GetIncrementOperationRequest::GetIncrementOperationRequest(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.usertoken_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.incrementoperationcollectionname_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.incrementoperationcollectionname_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.userverifyinfo_)*/nullptr
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct GetIncrementOperationRequestDefaultTypeInternal {
   PROTOBUF_CONSTEXPR GetIncrementOperationRequestDefaultTypeInternal()
@@ -406,7 +406,7 @@ struct GetIncrementOperationRequestDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetIncrementOperationRequestDefaultTypeInternal _GetIncrementOperationRequest_default_instance_;
 PROTOBUF_CONSTEXPR CreateSwcNodeDataRequest::CreateSwcNodeDataRequest(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.usertoken_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.userverifyinfo_)*/nullptr
   , /*decltype(_impl_.swcinfo_)*/nullptr
   , /*decltype(_impl_.swcdata_)*/nullptr
   , /*decltype(_impl_._cached_size_)*/{}} {}
@@ -421,7 +421,7 @@ struct CreateSwcNodeDataRequestDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CreateSwcNodeDataRequestDefaultTypeInternal _CreateSwcNodeDataRequest_default_instance_;
 PROTOBUF_CONSTEXPR DeleteSwcNodeDataRequest::DeleteSwcNodeDataRequest(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.usertoken_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.userverifyinfo_)*/nullptr
   , /*decltype(_impl_.swcinfo_)*/nullptr
   , /*decltype(_impl_.swcdata_)*/nullptr
   , /*decltype(_impl_._cached_size_)*/{}} {}
@@ -436,7 +436,7 @@ struct DeleteSwcNodeDataRequestDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 DeleteSwcNodeDataRequestDefaultTypeInternal _DeleteSwcNodeDataRequest_default_instance_;
 PROTOBUF_CONSTEXPR UpdateSwcNodeDataRequest::UpdateSwcNodeDataRequest(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.usertoken_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.userverifyinfo_)*/nullptr
   , /*decltype(_impl_.swcinfo_)*/nullptr
   , /*decltype(_impl_.swcnodedata_)*/nullptr
   , /*decltype(_impl_._cached_size_)*/{}} {}
@@ -598,7 +598,7 @@ const uint32_t TableStruct_Message_2fRequest_2eproto::offsets[] PROTOBUF_SECTION
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::proto::DeleteUserRequest, _impl_.usertoken_),
+  PROTOBUF_FIELD_OFFSET(::proto::DeleteUserRequest, _impl_.userverifyinfo_),
   PROTOBUF_FIELD_OFFSET(::proto::DeleteUserRequest, _impl_.userinfo_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::proto::UpdateUserRequest, _internal_metadata_),
@@ -759,7 +759,7 @@ const uint32_t TableStruct_Message_2fRequest_2eproto::offsets[] PROTOBUF_SECTION
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::proto::CreateSwcSnapshotRequest, _impl_.usertoken_),
+  PROTOBUF_FIELD_OFFSET(::proto::CreateSwcSnapshotRequest, _impl_.userverifyinfo_),
   PROTOBUF_FIELD_OFFSET(::proto::CreateSwcSnapshotRequest, _impl_.swcname_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::proto::DeleteSwcSnapshotRequest, _internal_metadata_),
@@ -767,7 +767,7 @@ const uint32_t TableStruct_Message_2fRequest_2eproto::offsets[] PROTOBUF_SECTION
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::proto::DeleteSwcSnapshotRequest, _impl_.usertoken_),
+  PROTOBUF_FIELD_OFFSET(::proto::DeleteSwcSnapshotRequest, _impl_.userverifyinfo_),
   PROTOBUF_FIELD_OFFSET(::proto::DeleteSwcSnapshotRequest, _impl_.swcname_),
   PROTOBUF_FIELD_OFFSET(::proto::DeleteSwcSnapshotRequest, _impl_.swcsnapshotcollectionname_),
   ~0u,  // no _has_bits_
@@ -776,14 +776,14 @@ const uint32_t TableStruct_Message_2fRequest_2eproto::offsets[] PROTOBUF_SECTION
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::proto::GetAllSnapshotMetaInfoRequest, _impl_.usertoken_),
+  PROTOBUF_FIELD_OFFSET(::proto::GetAllSnapshotMetaInfoRequest, _impl_.userverifyinfo_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::proto::GetSnapshotRequest, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::proto::GetSnapshotRequest, _impl_.usertoken_),
+  PROTOBUF_FIELD_OFFSET(::proto::GetSnapshotRequest, _impl_.userverifyinfo_),
   PROTOBUF_FIELD_OFFSET(::proto::GetSnapshotRequest, _impl_.swcsnapshotcollectionname_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::proto::GetAllIncrementOperationMetaInfoRequest, _internal_metadata_),
@@ -791,14 +791,14 @@ const uint32_t TableStruct_Message_2fRequest_2eproto::offsets[] PROTOBUF_SECTION
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::proto::GetAllIncrementOperationMetaInfoRequest, _impl_.usertoken_),
+  PROTOBUF_FIELD_OFFSET(::proto::GetAllIncrementOperationMetaInfoRequest, _impl_.userverifyinfo_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::proto::GetIncrementOperationRequest, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::proto::GetIncrementOperationRequest, _impl_.usertoken_),
+  PROTOBUF_FIELD_OFFSET(::proto::GetIncrementOperationRequest, _impl_.userverifyinfo_),
   PROTOBUF_FIELD_OFFSET(::proto::GetIncrementOperationRequest, _impl_.incrementoperationcollectionname_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::proto::CreateSwcNodeDataRequest, _internal_metadata_),
@@ -806,7 +806,7 @@ const uint32_t TableStruct_Message_2fRequest_2eproto::offsets[] PROTOBUF_SECTION
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::proto::CreateSwcNodeDataRequest, _impl_.usertoken_),
+  PROTOBUF_FIELD_OFFSET(::proto::CreateSwcNodeDataRequest, _impl_.userverifyinfo_),
   PROTOBUF_FIELD_OFFSET(::proto::CreateSwcNodeDataRequest, _impl_.swcinfo_),
   PROTOBUF_FIELD_OFFSET(::proto::CreateSwcNodeDataRequest, _impl_.swcdata_),
   ~0u,  // no _has_bits_
@@ -815,7 +815,7 @@ const uint32_t TableStruct_Message_2fRequest_2eproto::offsets[] PROTOBUF_SECTION
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::proto::DeleteSwcNodeDataRequest, _impl_.usertoken_),
+  PROTOBUF_FIELD_OFFSET(::proto::DeleteSwcNodeDataRequest, _impl_.userverifyinfo_),
   PROTOBUF_FIELD_OFFSET(::proto::DeleteSwcNodeDataRequest, _impl_.swcinfo_),
   PROTOBUF_FIELD_OFFSET(::proto::DeleteSwcNodeDataRequest, _impl_.swcdata_),
   ~0u,  // no _has_bits_
@@ -824,7 +824,7 @@ const uint32_t TableStruct_Message_2fRequest_2eproto::offsets[] PROTOBUF_SECTION
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::proto::UpdateSwcNodeDataRequest, _impl_.usertoken_),
+  PROTOBUF_FIELD_OFFSET(::proto::UpdateSwcNodeDataRequest, _impl_.userverifyinfo_),
   PROTOBUF_FIELD_OFFSET(::proto::UpdateSwcNodeDataRequest, _impl_.swcinfo_),
   PROTOBUF_FIELD_OFFSET(::proto::UpdateSwcNodeDataRequest, _impl_.swcnodedata_),
   ~0u,  // no _has_bits_
@@ -994,109 +994,116 @@ const char descriptor_table_protodef_Message_2fRequest_2eproto[] PROTOBUF_SECTIO
   "\n\025Message/Request.proto\022\005proto\032\037google/p"
   "rotobuf/timestamp.proto\032\025Message/Message"
   ".proto\"<\n\021CreateUserRequest\022\'\n\010UserInfo\030"
-  "\001 \001(\0132\025.proto.UserMetaInfoV1\"O\n\021DeleteUs"
-  "erRequest\022\021\n\tUserToken\030\001 \001(\t\022\'\n\010UserInfo"
-  "\030\002 \001(\0132\025.proto.UserMetaInfoV1\"<\n\021UpdateU"
-  "serRequest\022\'\n\010UserInfo\030\001 \001(\0132\025.proto.Use"
-  "rMetaInfoV1\"9\n\016GetUserRequest\022\'\n\010UserInf"
-  "o\030\001 \001(\0132\025.proto.UserMetaInfoV1\"<\n\021GetAll"
-  "UserRequest\022\'\n\010UserInfo\030\001 \001(\0132\025.proto.Us"
-  "erMetaInfoV1\"6\n\020UserLoginRequest\022\020\n\010User"
-  "Name\030\001 \001(\t\022\020\n\010Password\030\002 \001(\t\"<\n\021UserLogo"
-  "utRequest\022\'\n\010UserInfo\030\001 \001(\0132\025.proto.User"
-  "MetaInfoV1\"a\n\037UserOnlineHeartBeatNotific"
-  "ation\022\'\n\010UserInfo\030\001 \001(\0132\025.proto.UserMeta"
-  "InfoV1\022\025\n\rHeartBeatTime\030\002 \001(\003\"H\n\035GetUser"
-  "PermissionGroupRequest\022\'\n\010UserInfo\030\001 \001(\013"
-  "2\025.proto.UserMetaInfoV1\"\177\n\031GetPermission"
-  "GroupRequest\022\'\n\010UserInfo\030\001 \001(\0132\025.proto.U"
-  "serMetaInfoV1\0229\n\017PermissionGroup\030\002 \001(\0132 "
-  ".proto.PermissionGroupMetaInfoV1\"G\n\034GetA"
-  "llPermissionGroupRequest\022\'\n\010UserInfo\030\001 \001"
-  "(\0132\025.proto.UserMetaInfoV1\"\265\001\n ChangeUser"
-  "PermissionGroupRequest\022\'\n\010UserInfo\030\001 \001(\013"
-  "2\025.proto.UserMetaInfoV1\022-\n\016TargetUserInf"
-  "o\030\002 \001(\0132\025.proto.UserMetaInfoV1\0229\n\017Permis"
-  "sionGroup\030\003 \001(\0132 .proto.PermissionGroupM"
-  "etaInfoV1\"n\n\024CreateProjectRequest\022\'\n\010Use"
-  "rInfo\030\001 \001(\0132\025.proto.UserMetaInfoV1\022-\n\013Pr"
-  "ojectInfo\030\002 \001(\0132\030.proto.ProjectMetaInfoV"
-  "1\"n\n\024DeleteProjectRequest\022\'\n\010UserInfo\030\001 "
-  "\001(\0132\025.proto.UserMetaInfoV1\022-\n\013ProjectInf"
-  "o\030\002 \001(\0132\030.proto.ProjectMetaInfoV1\"n\n\024Upd"
-  "ateProjectRequest\022\'\n\010UserInfo\030\001 \001(\0132\025.pr"
-  "oto.UserMetaInfoV1\022-\n\013ProjectInfo\030\002 \001(\0132"
-  "\030.proto.ProjectMetaInfoV1\"k\n\021GetProjectR"
-  "equest\022\'\n\010UserInfo\030\001 \001(\0132\025.proto.UserMet"
-  "aInfoV1\022-\n\013ProjectInfo\030\002 \001(\0132\030.proto.Pro"
-  "jectMetaInfoV1\"\?\n\024GetAllProjectRequest\022\'"
-  "\n\010UserInfo\030\001 \001(\0132\025.proto.UserMetaInfoV1\""
-  "b\n\020CreateSwcRequest\022\'\n\010UserInfo\030\001 \001(\0132\025."
-  "proto.UserMetaInfoV1\022%\n\007SwcInfo\030\002 \001(\0132\024."
-  "proto.SwcMetaInfoV1\"b\n\020DeleteSwcRequest\022"
+  "\001 \001(\0132\025.proto.UserMetaInfoV1\"m\n\021DeleteUs"
+  "erRequest\022/\n\016UserVerifyInfo\030\001 \001(\0132\027.prot"
+  "o.UserVerifyInfoV1\022\'\n\010UserInfo\030\002 \001(\0132\025.p"
+  "roto.UserMetaInfoV1\"<\n\021UpdateUserRequest"
+  "\022\'\n\010UserInfo\030\001 \001(\0132\025.proto.UserMetaInfoV"
+  "1\"9\n\016GetUserRequest\022\'\n\010UserInfo\030\001 \001(\0132\025."
+  "proto.UserMetaInfoV1\"<\n\021GetAllUserReques"
+  "t\022\'\n\010UserInfo\030\001 \001(\0132\025.proto.UserMetaInfo"
+  "V1\"6\n\020UserLoginRequest\022\020\n\010UserName\030\001 \001(\t"
+  "\022\020\n\010Password\030\002 \001(\t\"<\n\021UserLogoutRequest\022"
   "\'\n\010UserInfo\030\001 \001(\0132\025.proto.UserMetaInfoV1"
-  "\022%\n\007SwcInfo\030\002 \001(\0132\024.proto.SwcMetaInfoV1\""
-  "b\n\020UpdateSwcRequest\022\'\n\010UserInfo\030\001 \001(\0132\025."
-  "proto.UserMetaInfoV1\022%\n\007SwcInfo\030\002 \001(\0132\024."
-  "proto.SwcMetaInfoV1\"g\n\025GetSwcMetaInfoReq"
-  "uest\022\'\n\010UserInfo\030\001 \001(\0132\025.proto.UserMetaI"
-  "nfoV1\022%\n\007SwcInfo\030\002 \001(\0132\024.proto.SwcMetaIn"
-  "foV1\"C\n\030GetAllSwcMetaInfoRequest\022\'\n\010User"
-  "Info\030\001 \001(\0132\025.proto.UserMetaInfoV1\">\n\030Cre"
-  "ateSwcSnapshotRequest\022\021\n\tUserToken\030\001 \001(\t"
-  "\022\017\n\007SwcName\030\002 \001(\t\"a\n\030DeleteSwcSnapshotRe"
-  "quest\022\021\n\tUserToken\030\001 \001(\t\022\017\n\007SwcName\030\002 \001("
-  "\t\022!\n\031SwcSnapshotCollectionName\030\003 \001(\t\"2\n\035"
-  "GetAllSnapshotMetaInfoRequest\022\021\n\tUserTok"
-  "en\030\001 \001(\t\"J\n\022GetSnapshotRequest\022\021\n\tUserTo"
-  "ken\030\001 \001(\t\022!\n\031SwcSnapshotCollectionName\030\002"
-  " \001(\t\"<\n\'GetAllIncrementOperationMetaInfo"
-  "Request\022\021\n\tUserToken\030\002 \001(\t\"[\n\034GetIncreme"
-  "ntOperationRequest\022\021\n\tUserToken\030\001 \001(\t\022(\n"
-  " IncrementOperationCollectionName\030\002 \001(\t\""
-  "w\n\030CreateSwcNodeDataRequest\022\021\n\tUserToken"
-  "\030\001 \001(\t\022%\n\007SwcInfo\030\002 \001(\0132\024.proto.SwcMetaI"
-  "nfoV1\022!\n\007SwcData\030\003 \001(\0132\020.proto.SwcDataV1"
-  "\"w\n\030DeleteSwcNodeDataRequest\022\021\n\tUserToke"
-  "n\030\001 \001(\t\022%\n\007SwcInfo\030\002 \001(\0132\024.proto.SwcMeta"
-  "InfoV1\022!\n\007SwcData\030\003 \001(\0132\020.proto.SwcDataV"
-  "1\"\177\n\030UpdateSwcNodeDataRequest\022\021\n\tUserTok"
-  "en\030\001 \001(\t\022%\n\007SwcInfo\030\002 \001(\0132\024.proto.SwcMet"
-  "aInfoV1\022)\n\013SwcNodeData\030\003 \001(\0132\024.proto.Swc"
-  "NodeDataV1\"\216\001\n\025GetSwcNodeDataRequest\022\'\n\010"
-  "UserInfo\030\001 \001(\0132\025.proto.UserMetaInfoV1\022%\n"
-  "\007SwcInfo\030\002 \001(\0132\024.proto.SwcMetaInfoV1\022%\n\013"
-  "SwcNodeData\030\003 \001(\0132\020.proto.SwcDataV1\"k\n\031G"
-  "etSwcFullNodeDataRequest\022\'\n\010UserInfo\030\001 \001"
-  "(\0132\025.proto.UserMetaInfoV1\022%\n\007SwcInfo\030\002 \001"
-  "(\0132\024.proto.SwcMetaInfoV1\"\346\001\n&GetSwcNodeD"
-  "ataListByTimeAndUserRequest\022\'\n\010UserInfo\030"
-  "\001 \001(\0132\025.proto.UserMetaInfoV1\022%\n\007SwcInfo\030"
-  "\002 \001(\0132\024.proto.SwcMetaInfoV1\022-\n\tStartTime"
-  "\030\003 \001(\0132\032.google.protobuf.Timestamp\022+\n\007En"
-  "dTime\030\004 \001(\0132\032.google.protobuf.Timestamp\022"
-  "\020\n\010UserName\030\005 \001(\t\"\220\001\n\031BackupFullDatabase"
+  "\"a\n\037UserOnlineHeartBeatNotification\022\'\n\010U"
+  "serInfo\030\001 \001(\0132\025.proto.UserMetaInfoV1\022\025\n\r"
+  "HeartBeatTime\030\002 \001(\003\"H\n\035GetUserPermission"
+  "GroupRequest\022\'\n\010UserInfo\030\001 \001(\0132\025.proto.U"
+  "serMetaInfoV1\"\177\n\031GetPermissionGroupReque"
+  "st\022\'\n\010UserInfo\030\001 \001(\0132\025.proto.UserMetaInf"
+  "oV1\0229\n\017PermissionGroup\030\002 \001(\0132 .proto.Per"
+  "missionGroupMetaInfoV1\"G\n\034GetAllPermissi"
+  "onGroupRequest\022\'\n\010UserInfo\030\001 \001(\0132\025.proto"
+  ".UserMetaInfoV1\"\265\001\n ChangeUserPermission"
+  "GroupRequest\022\'\n\010UserInfo\030\001 \001(\0132\025.proto.U"
+  "serMetaInfoV1\022-\n\016TargetUserInfo\030\002 \001(\0132\025."
+  "proto.UserMetaInfoV1\0229\n\017PermissionGroup\030"
+  "\003 \001(\0132 .proto.PermissionGroupMetaInfoV1\""
+  "n\n\024CreateProjectRequest\022\'\n\010UserInfo\030\001 \001("
+  "\0132\025.proto.UserMetaInfoV1\022-\n\013ProjectInfo\030"
+  "\002 \001(\0132\030.proto.ProjectMetaInfoV1\"n\n\024Delet"
+  "eProjectRequest\022\'\n\010UserInfo\030\001 \001(\0132\025.prot"
+  "o.UserMetaInfoV1\022-\n\013ProjectInfo\030\002 \001(\0132\030."
+  "proto.ProjectMetaInfoV1\"n\n\024UpdateProject"
   "Request\022\'\n\010UserInfo\030\001 \001(\0132\025.proto.UserMe"
-  "taInfoV1\022\025\n\rInstantBackup\030\002 \001(\010\0223\n\017Delay"
-  "BackupTime\030\003 \001(\0132\032.google.protobuf.Times"
-  "tamp\"\206\001\n\034CreateDailyStatisticsRequest\022\'\n"
+  "taInfoV1\022-\n\013ProjectInfo\030\002 \001(\0132\030.proto.Pr"
+  "ojectMetaInfoV1\"k\n\021GetProjectRequest\022\'\n\010"
+  "UserInfo\030\001 \001(\0132\025.proto.UserMetaInfoV1\022-\n"
+  "\013ProjectInfo\030\002 \001(\0132\030.proto.ProjectMetaIn"
+  "foV1\"\?\n\024GetAllProjectRequest\022\'\n\010UserInfo"
+  "\030\001 \001(\0132\025.proto.UserMetaInfoV1\"b\n\020CreateS"
+  "wcRequest\022\'\n\010UserInfo\030\001 \001(\0132\025.proto.User"
+  "MetaInfoV1\022%\n\007SwcInfo\030\002 \001(\0132\024.proto.SwcM"
+  "etaInfoV1\"b\n\020DeleteSwcRequest\022\'\n\010UserInf"
+  "o\030\001 \001(\0132\025.proto.UserMetaInfoV1\022%\n\007SwcInf"
+  "o\030\002 \001(\0132\024.proto.SwcMetaInfoV1\"b\n\020UpdateS"
+  "wcRequest\022\'\n\010UserInfo\030\001 \001(\0132\025.proto.User"
+  "MetaInfoV1\022%\n\007SwcInfo\030\002 \001(\0132\024.proto.SwcM"
+  "etaInfoV1\"g\n\025GetSwcMetaInfoRequest\022\'\n\010Us"
+  "erInfo\030\001 \001(\0132\025.proto.UserMetaInfoV1\022%\n\007S"
+  "wcInfo\030\002 \001(\0132\024.proto.SwcMetaInfoV1\"C\n\030Ge"
+  "tAllSwcMetaInfoRequest\022\'\n\010UserInfo\030\001 \001(\013"
+  "2\025.proto.UserMetaInfoV1\"\\\n\030CreateSwcSnap"
+  "shotRequest\022/\n\016UserVerifyInfo\030\001 \001(\0132\027.pr"
+  "oto.UserVerifyInfoV1\022\017\n\007SwcName\030\002 \001(\t\"\177\n"
+  "\030DeleteSwcSnapshotRequest\022/\n\016UserVerifyI"
+  "nfo\030\001 \001(\0132\027.proto.UserVerifyInfoV1\022\017\n\007Sw"
+  "cName\030\002 \001(\t\022!\n\031SwcSnapshotCollectionName"
+  "\030\003 \001(\t\"P\n\035GetAllSnapshotMetaInfoRequest\022"
+  "/\n\016UserVerifyInfo\030\001 \001(\0132\027.proto.UserVeri"
+  "fyInfoV1\"h\n\022GetSnapshotRequest\022/\n\016UserVe"
+  "rifyInfo\030\001 \001(\0132\027.proto.UserVerifyInfoV1\022"
+  "!\n\031SwcSnapshotCollectionName\030\002 \001(\t\"Z\n\'Ge"
+  "tAllIncrementOperationMetaInfoRequest\022/\n"
+  "\016UserVerifyInfo\030\002 \001(\0132\027.proto.UserVerify"
+  "InfoV1\"y\n\034GetIncrementOperationRequest\022/"
+  "\n\016UserVerifyInfo\030\001 \001(\0132\027.proto.UserVerif"
+  "yInfoV1\022(\n IncrementOperationCollectionN"
+  "ame\030\002 \001(\t\"\225\001\n\030CreateSwcNodeDataRequest\022/"
+  "\n\016UserVerifyInfo\030\001 \001(\0132\027.proto.UserVerif"
+  "yInfoV1\022%\n\007SwcInfo\030\002 \001(\0132\024.proto.SwcMeta"
+  "InfoV1\022!\n\007SwcData\030\003 \001(\0132\020.proto.SwcDataV"
+  "1\"\225\001\n\030DeleteSwcNodeDataRequest\022/\n\016UserVe"
+  "rifyInfo\030\001 \001(\0132\027.proto.UserVerifyInfoV1\022"
+  "%\n\007SwcInfo\030\002 \001(\0132\024.proto.SwcMetaInfoV1\022!"
+  "\n\007SwcData\030\003 \001(\0132\020.proto.SwcDataV1\"\235\001\n\030Up"
+  "dateSwcNodeDataRequest\022/\n\016UserVerifyInfo"
+  "\030\001 \001(\0132\027.proto.UserVerifyInfoV1\022%\n\007SwcIn"
+  "fo\030\002 \001(\0132\024.proto.SwcMetaInfoV1\022)\n\013SwcNod"
+  "eData\030\003 \001(\0132\024.proto.SwcNodeDataV1\"\216\001\n\025Ge"
+  "tSwcNodeDataRequest\022\'\n\010UserInfo\030\001 \001(\0132\025."
+  "proto.UserMetaInfoV1\022%\n\007SwcInfo\030\002 \001(\0132\024."
+  "proto.SwcMetaInfoV1\022%\n\013SwcNodeData\030\003 \001(\013"
+  "2\020.proto.SwcDataV1\"k\n\031GetSwcFullNodeData"
+  "Request\022\'\n\010UserInfo\030\001 \001(\0132\025.proto.UserMe"
+  "taInfoV1\022%\n\007SwcInfo\030\002 \001(\0132\024.proto.SwcMet"
+  "aInfoV1\"\346\001\n&GetSwcNodeDataListByTimeAndU"
+  "serRequest\022\'\n\010UserInfo\030\001 \001(\0132\025.proto.Use"
+  "rMetaInfoV1\022%\n\007SwcInfo\030\002 \001(\0132\024.proto.Swc"
+  "MetaInfoV1\022-\n\tStartTime\030\003 \001(\0132\032.google.p"
+  "rotobuf.Timestamp\022+\n\007EndTime\030\004 \001(\0132\032.goo"
+  "gle.protobuf.Timestamp\022\020\n\010UserName\030\005 \001(\t"
+  "\"\220\001\n\031BackupFullDatabaseRequest\022\'\n\010UserIn"
+  "fo\030\001 \001(\0132\025.proto.UserMetaInfoV1\022\025\n\rInsta"
+  "ntBackup\030\002 \001(\010\0223\n\017DelayBackupTime\030\003 \001(\0132"
+  "\032.google.protobuf.Timestamp\"\206\001\n\034CreateDa"
+  "ilyStatisticsRequest\022\'\n\010UserInfo\030\001 \001(\0132\025"
+  ".proto.UserMetaInfoV1\022=\n\023DailyStatistics"
+  "Info\030\002 \001(\0132 .proto.DailyStatisticsMetaIn"
+  "foV1\"\206\001\n\034DeleteDailyStatisticsRequest\022\'\n"
   "\010UserInfo\030\001 \001(\0132\025.proto.UserMetaInfoV1\022="
   "\n\023DailyStatisticsInfo\030\002 \001(\0132 .proto.Dail"
-  "yStatisticsMetaInfoV1\"\206\001\n\034DeleteDailySta"
+  "yStatisticsMetaInfoV1\"\206\001\n\034UpdateDailySta"
   "tisticsRequest\022\'\n\010UserInfo\030\001 \001(\0132\025.proto"
   ".UserMetaInfoV1\022=\n\023DailyStatisticsInfo\030\002"
-  " \001(\0132 .proto.DailyStatisticsMetaInfoV1\"\206"
-  "\001\n\034UpdateDailyStatisticsRequest\022\'\n\010UserI"
-  "nfo\030\001 \001(\0132\025.proto.UserMetaInfoV1\022=\n\023Dail"
-  "yStatisticsInfo\030\002 \001(\0132 .proto.DailyStati"
-  "sticsMetaInfoV1\"\203\001\n\031GetDailyStatisticsRe"
-  "quest\022\'\n\010UserInfo\030\001 \001(\0132\025.proto.UserMeta"
-  "InfoV1\022=\n\023DailyStatisticsInfo\030\002 \001(\0132 .pr"
-  "oto.DailyStatisticsMetaInfoV1\"G\n\034GetAllD"
-  "ailyStatisticsRequest\022\'\n\010UserInfo\030\001 \001(\0132"
-  "\025.proto.UserMetaInfoV1B/Z-DBMS/SwcDbmsCo"
-  "mmon/Generated/go/proto/requestP\000b\006proto"
-  "3"
+  " \001(\0132 .proto.DailyStatisticsMetaInfoV1\"\203"
+  "\001\n\031GetDailyStatisticsRequest\022\'\n\010UserInfo"
+  "\030\001 \001(\0132\025.proto.UserMetaInfoV1\022=\n\023DailySt"
+  "atisticsInfo\030\002 \001(\0132 .proto.DailyStatisti"
+  "csMetaInfoV1\"G\n\034GetAllDailyStatisticsReq"
+  "uest\022\'\n\010UserInfo\030\001 \001(\0132\025.proto.UserMetaI"
+  "nfoV1B/Z-DBMS/SwcDbmsCommon/Generated/go"
+  "/proto/requestP\000b\006proto3"
   ;
 static const ::_pbi::DescriptorTable* const descriptor_table_Message_2fRequest_2eproto_deps[2] = {
   &::descriptor_table_Message_2fMessage_2eproto,
@@ -1104,7 +1111,7 @@ static const ::_pbi::DescriptorTable* const descriptor_table_Message_2fRequest_2
 };
 static ::_pbi::once_flag descriptor_table_Message_2fRequest_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_Message_2fRequest_2eproto = {
-    false, false, 4201, descriptor_table_protodef_Message_2fRequest_2eproto,
+    false, false, 4504, descriptor_table_protodef_Message_2fRequest_2eproto,
     "Message/Request.proto",
     &descriptor_table_Message_2fRequest_2eproto_once, descriptor_table_Message_2fRequest_2eproto_deps, 2, 40,
     schemas, file_default_instances, TableStruct_Message_2fRequest_2eproto::offsets,
@@ -1322,12 +1329,23 @@ void CreateUserRequest::InternalSwap(CreateUserRequest* other) {
 
 class DeleteUserRequest::_Internal {
  public:
+  static const ::proto::UserVerifyInfoV1& userverifyinfo(const DeleteUserRequest* msg);
   static const ::proto::UserMetaInfoV1& userinfo(const DeleteUserRequest* msg);
 };
 
+const ::proto::UserVerifyInfoV1&
+DeleteUserRequest::_Internal::userverifyinfo(const DeleteUserRequest* msg) {
+  return *msg->_impl_.userverifyinfo_;
+}
 const ::proto::UserMetaInfoV1&
 DeleteUserRequest::_Internal::userinfo(const DeleteUserRequest* msg) {
   return *msg->_impl_.userinfo_;
+}
+void DeleteUserRequest::clear_userverifyinfo() {
+  if (GetArenaForAllocation() == nullptr && _impl_.userverifyinfo_ != nullptr) {
+    delete _impl_.userverifyinfo_;
+  }
+  _impl_.userverifyinfo_ = nullptr;
 }
 void DeleteUserRequest::clear_userinfo() {
   if (GetArenaForAllocation() == nullptr && _impl_.userinfo_ != nullptr) {
@@ -1345,18 +1363,13 @@ DeleteUserRequest::DeleteUserRequest(const DeleteUserRequest& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   DeleteUserRequest* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.usertoken_){}
+      decltype(_impl_.userverifyinfo_){nullptr}
     , decltype(_impl_.userinfo_){nullptr}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.usertoken_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.usertoken_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_usertoken().empty()) {
-    _this->_impl_.usertoken_.Set(from._internal_usertoken(), 
-      _this->GetArenaForAllocation());
+  if (from._internal_has_userverifyinfo()) {
+    _this->_impl_.userverifyinfo_ = new ::proto::UserVerifyInfoV1(*from._impl_.userverifyinfo_);
   }
   if (from._internal_has_userinfo()) {
     _this->_impl_.userinfo_ = new ::proto::UserMetaInfoV1(*from._impl_.userinfo_);
@@ -1369,14 +1382,10 @@ inline void DeleteUserRequest::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.usertoken_){}
+      decltype(_impl_.userverifyinfo_){nullptr}
     , decltype(_impl_.userinfo_){nullptr}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.usertoken_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.usertoken_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 DeleteUserRequest::~DeleteUserRequest() {
@@ -1390,7 +1399,7 @@ DeleteUserRequest::~DeleteUserRequest() {
 
 inline void DeleteUserRequest::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.usertoken_.Destroy();
+  if (this != internal_default_instance()) delete _impl_.userverifyinfo_;
   if (this != internal_default_instance()) delete _impl_.userinfo_;
 }
 
@@ -1404,7 +1413,10 @@ void DeleteUserRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.usertoken_.ClearToEmpty();
+  if (GetArenaForAllocation() == nullptr && _impl_.userverifyinfo_ != nullptr) {
+    delete _impl_.userverifyinfo_;
+  }
+  _impl_.userverifyinfo_ = nullptr;
   if (GetArenaForAllocation() == nullptr && _impl_.userinfo_ != nullptr) {
     delete _impl_.userinfo_;
   }
@@ -1418,13 +1430,11 @@ const char* DeleteUserRequest::_InternalParse(const char* ptr, ::_pbi::ParseCont
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string UserToken = 1;
+      // .proto.UserVerifyInfoV1 UserVerifyInfo = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_usertoken();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          ptr = ctx->ParseMessage(_internal_mutable_userverifyinfo(), ptr);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "proto.DeleteUserRequest.UserToken"));
         } else
           goto handle_unusual;
         continue;
@@ -1465,14 +1475,11 @@ uint8_t* DeleteUserRequest::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string UserToken = 1;
-  if (!this->_internal_usertoken().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_usertoken().data(), static_cast<int>(this->_internal_usertoken().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "proto.DeleteUserRequest.UserToken");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_usertoken(), target);
+  // .proto.UserVerifyInfoV1 UserVerifyInfo = 1;
+  if (this->_internal_has_userverifyinfo()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::userverifyinfo(this),
+        _Internal::userverifyinfo(this).GetCachedSize(), target, stream);
   }
 
   // .proto.UserMetaInfoV1 UserInfo = 2;
@@ -1498,11 +1505,11 @@ size_t DeleteUserRequest::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string UserToken = 1;
-  if (!this->_internal_usertoken().empty()) {
+  // .proto.UserVerifyInfoV1 UserVerifyInfo = 1;
+  if (this->_internal_has_userverifyinfo()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_usertoken());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.userverifyinfo_);
   }
 
   // .proto.UserMetaInfoV1 UserInfo = 2;
@@ -1530,8 +1537,9 @@ void DeleteUserRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, cons
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_usertoken().empty()) {
-    _this->_internal_set_usertoken(from._internal_usertoken());
+  if (from._internal_has_userverifyinfo()) {
+    _this->_internal_mutable_userverifyinfo()->::proto::UserVerifyInfoV1::MergeFrom(
+        from._internal_userverifyinfo());
   }
   if (from._internal_has_userinfo()) {
     _this->_internal_mutable_userinfo()->::proto::UserMetaInfoV1::MergeFrom(
@@ -1553,14 +1561,13 @@ bool DeleteUserRequest::IsInitialized() const {
 
 void DeleteUserRequest::InternalSwap(DeleteUserRequest* other) {
   using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.usertoken_, lhs_arena,
-      &other->_impl_.usertoken_, rhs_arena
-  );
-  swap(_impl_.userinfo_, other->_impl_.userinfo_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(DeleteUserRequest, _impl_.userinfo_)
+      + sizeof(DeleteUserRequest::_impl_.userinfo_)
+      - PROTOBUF_FIELD_OFFSET(DeleteUserRequest, _impl_.userverifyinfo_)>(
+          reinterpret_cast<char*>(&_impl_.userverifyinfo_),
+          reinterpret_cast<char*>(&other->_impl_.userverifyinfo_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata DeleteUserRequest::GetMetadata() const {
@@ -6205,8 +6212,19 @@ void GetAllSwcMetaInfoRequest::InternalSwap(GetAllSwcMetaInfoRequest* other) {
 
 class CreateSwcSnapshotRequest::_Internal {
  public:
+  static const ::proto::UserVerifyInfoV1& userverifyinfo(const CreateSwcSnapshotRequest* msg);
 };
 
+const ::proto::UserVerifyInfoV1&
+CreateSwcSnapshotRequest::_Internal::userverifyinfo(const CreateSwcSnapshotRequest* msg) {
+  return *msg->_impl_.userverifyinfo_;
+}
+void CreateSwcSnapshotRequest::clear_userverifyinfo() {
+  if (GetArenaForAllocation() == nullptr && _impl_.userverifyinfo_ != nullptr) {
+    delete _impl_.userverifyinfo_;
+  }
+  _impl_.userverifyinfo_ = nullptr;
+}
 CreateSwcSnapshotRequest::CreateSwcSnapshotRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
@@ -6217,19 +6235,11 @@ CreateSwcSnapshotRequest::CreateSwcSnapshotRequest(const CreateSwcSnapshotReques
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   CreateSwcSnapshotRequest* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.usertoken_){}
-    , decltype(_impl_.swcname_){}
+      decltype(_impl_.swcname_){}
+    , decltype(_impl_.userverifyinfo_){nullptr}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.usertoken_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.usertoken_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_usertoken().empty()) {
-    _this->_impl_.usertoken_.Set(from._internal_usertoken(), 
-      _this->GetArenaForAllocation());
-  }
   _impl_.swcname_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.swcname_.Set("", GetArenaForAllocation());
@@ -6237,6 +6247,9 @@ CreateSwcSnapshotRequest::CreateSwcSnapshotRequest(const CreateSwcSnapshotReques
   if (!from._internal_swcname().empty()) {
     _this->_impl_.swcname_.Set(from._internal_swcname(), 
       _this->GetArenaForAllocation());
+  }
+  if (from._internal_has_userverifyinfo()) {
+    _this->_impl_.userverifyinfo_ = new ::proto::UserVerifyInfoV1(*from._impl_.userverifyinfo_);
   }
   // @@protoc_insertion_point(copy_constructor:proto.CreateSwcSnapshotRequest)
 }
@@ -6246,14 +6259,10 @@ inline void CreateSwcSnapshotRequest::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.usertoken_){}
-    , decltype(_impl_.swcname_){}
+      decltype(_impl_.swcname_){}
+    , decltype(_impl_.userverifyinfo_){nullptr}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.usertoken_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.usertoken_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   _impl_.swcname_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.swcname_.Set("", GetArenaForAllocation());
@@ -6271,8 +6280,8 @@ CreateSwcSnapshotRequest::~CreateSwcSnapshotRequest() {
 
 inline void CreateSwcSnapshotRequest::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.usertoken_.Destroy();
   _impl_.swcname_.Destroy();
+  if (this != internal_default_instance()) delete _impl_.userverifyinfo_;
 }
 
 void CreateSwcSnapshotRequest::SetCachedSize(int size) const {
@@ -6285,8 +6294,11 @@ void CreateSwcSnapshotRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.usertoken_.ClearToEmpty();
   _impl_.swcname_.ClearToEmpty();
+  if (GetArenaForAllocation() == nullptr && _impl_.userverifyinfo_ != nullptr) {
+    delete _impl_.userverifyinfo_;
+  }
+  _impl_.userverifyinfo_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -6296,13 +6308,11 @@ const char* CreateSwcSnapshotRequest::_InternalParse(const char* ptr, ::_pbi::Pa
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string UserToken = 1;
+      // .proto.UserVerifyInfoV1 UserVerifyInfo = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_usertoken();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          ptr = ctx->ParseMessage(_internal_mutable_userverifyinfo(), ptr);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "proto.CreateSwcSnapshotRequest.UserToken"));
         } else
           goto handle_unusual;
         continue;
@@ -6345,14 +6355,11 @@ uint8_t* CreateSwcSnapshotRequest::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string UserToken = 1;
-  if (!this->_internal_usertoken().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_usertoken().data(), static_cast<int>(this->_internal_usertoken().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "proto.CreateSwcSnapshotRequest.UserToken");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_usertoken(), target);
+  // .proto.UserVerifyInfoV1 UserVerifyInfo = 1;
+  if (this->_internal_has_userverifyinfo()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::userverifyinfo(this),
+        _Internal::userverifyinfo(this).GetCachedSize(), target, stream);
   }
 
   // string SwcName = 2;
@@ -6381,18 +6388,18 @@ size_t CreateSwcSnapshotRequest::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string UserToken = 1;
-  if (!this->_internal_usertoken().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_usertoken());
-  }
-
   // string SwcName = 2;
   if (!this->_internal_swcname().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_swcname());
+  }
+
+  // .proto.UserVerifyInfoV1 UserVerifyInfo = 1;
+  if (this->_internal_has_userverifyinfo()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.userverifyinfo_);
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -6413,11 +6420,12 @@ void CreateSwcSnapshotRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_ms
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_usertoken().empty()) {
-    _this->_internal_set_usertoken(from._internal_usertoken());
-  }
   if (!from._internal_swcname().empty()) {
     _this->_internal_set_swcname(from._internal_swcname());
+  }
+  if (from._internal_has_userverifyinfo()) {
+    _this->_internal_mutable_userverifyinfo()->::proto::UserVerifyInfoV1::MergeFrom(
+        from._internal_userverifyinfo());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -6439,13 +6447,10 @@ void CreateSwcSnapshotRequest::InternalSwap(CreateSwcSnapshotRequest* other) {
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.usertoken_, lhs_arena,
-      &other->_impl_.usertoken_, rhs_arena
-  );
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.swcname_, lhs_arena,
       &other->_impl_.swcname_, rhs_arena
   );
+  swap(_impl_.userverifyinfo_, other->_impl_.userverifyinfo_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata CreateSwcSnapshotRequest::GetMetadata() const {
@@ -6458,8 +6463,19 @@ void CreateSwcSnapshotRequest::InternalSwap(CreateSwcSnapshotRequest* other) {
 
 class DeleteSwcSnapshotRequest::_Internal {
  public:
+  static const ::proto::UserVerifyInfoV1& userverifyinfo(const DeleteSwcSnapshotRequest* msg);
 };
 
+const ::proto::UserVerifyInfoV1&
+DeleteSwcSnapshotRequest::_Internal::userverifyinfo(const DeleteSwcSnapshotRequest* msg) {
+  return *msg->_impl_.userverifyinfo_;
+}
+void DeleteSwcSnapshotRequest::clear_userverifyinfo() {
+  if (GetArenaForAllocation() == nullptr && _impl_.userverifyinfo_ != nullptr) {
+    delete _impl_.userverifyinfo_;
+  }
+  _impl_.userverifyinfo_ = nullptr;
+}
 DeleteSwcSnapshotRequest::DeleteSwcSnapshotRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
@@ -6470,20 +6486,12 @@ DeleteSwcSnapshotRequest::DeleteSwcSnapshotRequest(const DeleteSwcSnapshotReques
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   DeleteSwcSnapshotRequest* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.usertoken_){}
-    , decltype(_impl_.swcname_){}
+      decltype(_impl_.swcname_){}
     , decltype(_impl_.swcsnapshotcollectionname_){}
+    , decltype(_impl_.userverifyinfo_){nullptr}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.usertoken_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.usertoken_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_usertoken().empty()) {
-    _this->_impl_.usertoken_.Set(from._internal_usertoken(), 
-      _this->GetArenaForAllocation());
-  }
   _impl_.swcname_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.swcname_.Set("", GetArenaForAllocation());
@@ -6500,6 +6508,9 @@ DeleteSwcSnapshotRequest::DeleteSwcSnapshotRequest(const DeleteSwcSnapshotReques
     _this->_impl_.swcsnapshotcollectionname_.Set(from._internal_swcsnapshotcollectionname(), 
       _this->GetArenaForAllocation());
   }
+  if (from._internal_has_userverifyinfo()) {
+    _this->_impl_.userverifyinfo_ = new ::proto::UserVerifyInfoV1(*from._impl_.userverifyinfo_);
+  }
   // @@protoc_insertion_point(copy_constructor:proto.DeleteSwcSnapshotRequest)
 }
 
@@ -6508,15 +6519,11 @@ inline void DeleteSwcSnapshotRequest::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.usertoken_){}
-    , decltype(_impl_.swcname_){}
+      decltype(_impl_.swcname_){}
     , decltype(_impl_.swcsnapshotcollectionname_){}
+    , decltype(_impl_.userverifyinfo_){nullptr}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.usertoken_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.usertoken_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   _impl_.swcname_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.swcname_.Set("", GetArenaForAllocation());
@@ -6538,9 +6545,9 @@ DeleteSwcSnapshotRequest::~DeleteSwcSnapshotRequest() {
 
 inline void DeleteSwcSnapshotRequest::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.usertoken_.Destroy();
   _impl_.swcname_.Destroy();
   _impl_.swcsnapshotcollectionname_.Destroy();
+  if (this != internal_default_instance()) delete _impl_.userverifyinfo_;
 }
 
 void DeleteSwcSnapshotRequest::SetCachedSize(int size) const {
@@ -6553,9 +6560,12 @@ void DeleteSwcSnapshotRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.usertoken_.ClearToEmpty();
   _impl_.swcname_.ClearToEmpty();
   _impl_.swcsnapshotcollectionname_.ClearToEmpty();
+  if (GetArenaForAllocation() == nullptr && _impl_.userverifyinfo_ != nullptr) {
+    delete _impl_.userverifyinfo_;
+  }
+  _impl_.userverifyinfo_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -6565,13 +6575,11 @@ const char* DeleteSwcSnapshotRequest::_InternalParse(const char* ptr, ::_pbi::Pa
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string UserToken = 1;
+      // .proto.UserVerifyInfoV1 UserVerifyInfo = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_usertoken();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          ptr = ctx->ParseMessage(_internal_mutable_userverifyinfo(), ptr);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "proto.DeleteSwcSnapshotRequest.UserToken"));
         } else
           goto handle_unusual;
         continue;
@@ -6624,14 +6632,11 @@ uint8_t* DeleteSwcSnapshotRequest::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string UserToken = 1;
-  if (!this->_internal_usertoken().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_usertoken().data(), static_cast<int>(this->_internal_usertoken().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "proto.DeleteSwcSnapshotRequest.UserToken");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_usertoken(), target);
+  // .proto.UserVerifyInfoV1 UserVerifyInfo = 1;
+  if (this->_internal_has_userverifyinfo()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::userverifyinfo(this),
+        _Internal::userverifyinfo(this).GetCachedSize(), target, stream);
   }
 
   // string SwcName = 2;
@@ -6670,13 +6675,6 @@ size_t DeleteSwcSnapshotRequest::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string UserToken = 1;
-  if (!this->_internal_usertoken().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_usertoken());
-  }
-
   // string SwcName = 2;
   if (!this->_internal_swcname().empty()) {
     total_size += 1 +
@@ -6689,6 +6687,13 @@ size_t DeleteSwcSnapshotRequest::ByteSizeLong() const {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_swcsnapshotcollectionname());
+  }
+
+  // .proto.UserVerifyInfoV1 UserVerifyInfo = 1;
+  if (this->_internal_has_userverifyinfo()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.userverifyinfo_);
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -6709,14 +6714,15 @@ void DeleteSwcSnapshotRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_ms
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_usertoken().empty()) {
-    _this->_internal_set_usertoken(from._internal_usertoken());
-  }
   if (!from._internal_swcname().empty()) {
     _this->_internal_set_swcname(from._internal_swcname());
   }
   if (!from._internal_swcsnapshotcollectionname().empty()) {
     _this->_internal_set_swcsnapshotcollectionname(from._internal_swcsnapshotcollectionname());
+  }
+  if (from._internal_has_userverifyinfo()) {
+    _this->_internal_mutable_userverifyinfo()->::proto::UserVerifyInfoV1::MergeFrom(
+        from._internal_userverifyinfo());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -6738,10 +6744,6 @@ void DeleteSwcSnapshotRequest::InternalSwap(DeleteSwcSnapshotRequest* other) {
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.usertoken_, lhs_arena,
-      &other->_impl_.usertoken_, rhs_arena
-  );
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.swcname_, lhs_arena,
       &other->_impl_.swcname_, rhs_arena
   );
@@ -6749,6 +6751,7 @@ void DeleteSwcSnapshotRequest::InternalSwap(DeleteSwcSnapshotRequest* other) {
       &_impl_.swcsnapshotcollectionname_, lhs_arena,
       &other->_impl_.swcsnapshotcollectionname_, rhs_arena
   );
+  swap(_impl_.userverifyinfo_, other->_impl_.userverifyinfo_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata DeleteSwcSnapshotRequest::GetMetadata() const {
@@ -6761,8 +6764,19 @@ void DeleteSwcSnapshotRequest::InternalSwap(DeleteSwcSnapshotRequest* other) {
 
 class GetAllSnapshotMetaInfoRequest::_Internal {
  public:
+  static const ::proto::UserVerifyInfoV1& userverifyinfo(const GetAllSnapshotMetaInfoRequest* msg);
 };
 
+const ::proto::UserVerifyInfoV1&
+GetAllSnapshotMetaInfoRequest::_Internal::userverifyinfo(const GetAllSnapshotMetaInfoRequest* msg) {
+  return *msg->_impl_.userverifyinfo_;
+}
+void GetAllSnapshotMetaInfoRequest::clear_userverifyinfo() {
+  if (GetArenaForAllocation() == nullptr && _impl_.userverifyinfo_ != nullptr) {
+    delete _impl_.userverifyinfo_;
+  }
+  _impl_.userverifyinfo_ = nullptr;
+}
 GetAllSnapshotMetaInfoRequest::GetAllSnapshotMetaInfoRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
@@ -6773,17 +6787,12 @@ GetAllSnapshotMetaInfoRequest::GetAllSnapshotMetaInfoRequest(const GetAllSnapsho
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   GetAllSnapshotMetaInfoRequest* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.usertoken_){}
+      decltype(_impl_.userverifyinfo_){nullptr}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.usertoken_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.usertoken_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_usertoken().empty()) {
-    _this->_impl_.usertoken_.Set(from._internal_usertoken(), 
-      _this->GetArenaForAllocation());
+  if (from._internal_has_userverifyinfo()) {
+    _this->_impl_.userverifyinfo_ = new ::proto::UserVerifyInfoV1(*from._impl_.userverifyinfo_);
   }
   // @@protoc_insertion_point(copy_constructor:proto.GetAllSnapshotMetaInfoRequest)
 }
@@ -6793,13 +6802,9 @@ inline void GetAllSnapshotMetaInfoRequest::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.usertoken_){}
+      decltype(_impl_.userverifyinfo_){nullptr}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.usertoken_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.usertoken_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 GetAllSnapshotMetaInfoRequest::~GetAllSnapshotMetaInfoRequest() {
@@ -6813,7 +6818,7 @@ GetAllSnapshotMetaInfoRequest::~GetAllSnapshotMetaInfoRequest() {
 
 inline void GetAllSnapshotMetaInfoRequest::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.usertoken_.Destroy();
+  if (this != internal_default_instance()) delete _impl_.userverifyinfo_;
 }
 
 void GetAllSnapshotMetaInfoRequest::SetCachedSize(int size) const {
@@ -6826,7 +6831,10 @@ void GetAllSnapshotMetaInfoRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.usertoken_.ClearToEmpty();
+  if (GetArenaForAllocation() == nullptr && _impl_.userverifyinfo_ != nullptr) {
+    delete _impl_.userverifyinfo_;
+  }
+  _impl_.userverifyinfo_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -6836,13 +6844,11 @@ const char* GetAllSnapshotMetaInfoRequest::_InternalParse(const char* ptr, ::_pb
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string UserToken = 1;
+      // .proto.UserVerifyInfoV1 UserVerifyInfo = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_usertoken();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          ptr = ctx->ParseMessage(_internal_mutable_userverifyinfo(), ptr);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "proto.GetAllSnapshotMetaInfoRequest.UserToken"));
         } else
           goto handle_unusual;
         continue;
@@ -6875,14 +6881,11 @@ uint8_t* GetAllSnapshotMetaInfoRequest::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string UserToken = 1;
-  if (!this->_internal_usertoken().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_usertoken().data(), static_cast<int>(this->_internal_usertoken().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "proto.GetAllSnapshotMetaInfoRequest.UserToken");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_usertoken(), target);
+  // .proto.UserVerifyInfoV1 UserVerifyInfo = 1;
+  if (this->_internal_has_userverifyinfo()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::userverifyinfo(this),
+        _Internal::userverifyinfo(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -6901,11 +6904,11 @@ size_t GetAllSnapshotMetaInfoRequest::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string UserToken = 1;
-  if (!this->_internal_usertoken().empty()) {
+  // .proto.UserVerifyInfoV1 UserVerifyInfo = 1;
+  if (this->_internal_has_userverifyinfo()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_usertoken());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.userverifyinfo_);
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -6926,8 +6929,9 @@ void GetAllSnapshotMetaInfoRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& 
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_usertoken().empty()) {
-    _this->_internal_set_usertoken(from._internal_usertoken());
+  if (from._internal_has_userverifyinfo()) {
+    _this->_internal_mutable_userverifyinfo()->::proto::UserVerifyInfoV1::MergeFrom(
+        from._internal_userverifyinfo());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -6945,13 +6949,8 @@ bool GetAllSnapshotMetaInfoRequest::IsInitialized() const {
 
 void GetAllSnapshotMetaInfoRequest::InternalSwap(GetAllSnapshotMetaInfoRequest* other) {
   using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.usertoken_, lhs_arena,
-      &other->_impl_.usertoken_, rhs_arena
-  );
+  swap(_impl_.userverifyinfo_, other->_impl_.userverifyinfo_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata GetAllSnapshotMetaInfoRequest::GetMetadata() const {
@@ -6964,8 +6963,19 @@ void GetAllSnapshotMetaInfoRequest::InternalSwap(GetAllSnapshotMetaInfoRequest* 
 
 class GetSnapshotRequest::_Internal {
  public:
+  static const ::proto::UserVerifyInfoV1& userverifyinfo(const GetSnapshotRequest* msg);
 };
 
+const ::proto::UserVerifyInfoV1&
+GetSnapshotRequest::_Internal::userverifyinfo(const GetSnapshotRequest* msg) {
+  return *msg->_impl_.userverifyinfo_;
+}
+void GetSnapshotRequest::clear_userverifyinfo() {
+  if (GetArenaForAllocation() == nullptr && _impl_.userverifyinfo_ != nullptr) {
+    delete _impl_.userverifyinfo_;
+  }
+  _impl_.userverifyinfo_ = nullptr;
+}
 GetSnapshotRequest::GetSnapshotRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
@@ -6976,19 +6986,11 @@ GetSnapshotRequest::GetSnapshotRequest(const GetSnapshotRequest& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   GetSnapshotRequest* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.usertoken_){}
-    , decltype(_impl_.swcsnapshotcollectionname_){}
+      decltype(_impl_.swcsnapshotcollectionname_){}
+    , decltype(_impl_.userverifyinfo_){nullptr}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.usertoken_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.usertoken_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_usertoken().empty()) {
-    _this->_impl_.usertoken_.Set(from._internal_usertoken(), 
-      _this->GetArenaForAllocation());
-  }
   _impl_.swcsnapshotcollectionname_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.swcsnapshotcollectionname_.Set("", GetArenaForAllocation());
@@ -6996,6 +6998,9 @@ GetSnapshotRequest::GetSnapshotRequest(const GetSnapshotRequest& from)
   if (!from._internal_swcsnapshotcollectionname().empty()) {
     _this->_impl_.swcsnapshotcollectionname_.Set(from._internal_swcsnapshotcollectionname(), 
       _this->GetArenaForAllocation());
+  }
+  if (from._internal_has_userverifyinfo()) {
+    _this->_impl_.userverifyinfo_ = new ::proto::UserVerifyInfoV1(*from._impl_.userverifyinfo_);
   }
   // @@protoc_insertion_point(copy_constructor:proto.GetSnapshotRequest)
 }
@@ -7005,14 +7010,10 @@ inline void GetSnapshotRequest::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.usertoken_){}
-    , decltype(_impl_.swcsnapshotcollectionname_){}
+      decltype(_impl_.swcsnapshotcollectionname_){}
+    , decltype(_impl_.userverifyinfo_){nullptr}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.usertoken_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.usertoken_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   _impl_.swcsnapshotcollectionname_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.swcsnapshotcollectionname_.Set("", GetArenaForAllocation());
@@ -7030,8 +7031,8 @@ GetSnapshotRequest::~GetSnapshotRequest() {
 
 inline void GetSnapshotRequest::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.usertoken_.Destroy();
   _impl_.swcsnapshotcollectionname_.Destroy();
+  if (this != internal_default_instance()) delete _impl_.userverifyinfo_;
 }
 
 void GetSnapshotRequest::SetCachedSize(int size) const {
@@ -7044,8 +7045,11 @@ void GetSnapshotRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.usertoken_.ClearToEmpty();
   _impl_.swcsnapshotcollectionname_.ClearToEmpty();
+  if (GetArenaForAllocation() == nullptr && _impl_.userverifyinfo_ != nullptr) {
+    delete _impl_.userverifyinfo_;
+  }
+  _impl_.userverifyinfo_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -7055,13 +7059,11 @@ const char* GetSnapshotRequest::_InternalParse(const char* ptr, ::_pbi::ParseCon
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string UserToken = 1;
+      // .proto.UserVerifyInfoV1 UserVerifyInfo = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_usertoken();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          ptr = ctx->ParseMessage(_internal_mutable_userverifyinfo(), ptr);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "proto.GetSnapshotRequest.UserToken"));
         } else
           goto handle_unusual;
         continue;
@@ -7104,14 +7106,11 @@ uint8_t* GetSnapshotRequest::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string UserToken = 1;
-  if (!this->_internal_usertoken().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_usertoken().data(), static_cast<int>(this->_internal_usertoken().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "proto.GetSnapshotRequest.UserToken");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_usertoken(), target);
+  // .proto.UserVerifyInfoV1 UserVerifyInfo = 1;
+  if (this->_internal_has_userverifyinfo()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::userverifyinfo(this),
+        _Internal::userverifyinfo(this).GetCachedSize(), target, stream);
   }
 
   // string SwcSnapshotCollectionName = 2;
@@ -7140,18 +7139,18 @@ size_t GetSnapshotRequest::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string UserToken = 1;
-  if (!this->_internal_usertoken().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_usertoken());
-  }
-
   // string SwcSnapshotCollectionName = 2;
   if (!this->_internal_swcsnapshotcollectionname().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_swcsnapshotcollectionname());
+  }
+
+  // .proto.UserVerifyInfoV1 UserVerifyInfo = 1;
+  if (this->_internal_has_userverifyinfo()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.userverifyinfo_);
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -7172,11 +7171,12 @@ void GetSnapshotRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, con
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_usertoken().empty()) {
-    _this->_internal_set_usertoken(from._internal_usertoken());
-  }
   if (!from._internal_swcsnapshotcollectionname().empty()) {
     _this->_internal_set_swcsnapshotcollectionname(from._internal_swcsnapshotcollectionname());
+  }
+  if (from._internal_has_userverifyinfo()) {
+    _this->_internal_mutable_userverifyinfo()->::proto::UserVerifyInfoV1::MergeFrom(
+        from._internal_userverifyinfo());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -7198,13 +7198,10 @@ void GetSnapshotRequest::InternalSwap(GetSnapshotRequest* other) {
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.usertoken_, lhs_arena,
-      &other->_impl_.usertoken_, rhs_arena
-  );
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.swcsnapshotcollectionname_, lhs_arena,
       &other->_impl_.swcsnapshotcollectionname_, rhs_arena
   );
+  swap(_impl_.userverifyinfo_, other->_impl_.userverifyinfo_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata GetSnapshotRequest::GetMetadata() const {
@@ -7217,8 +7214,19 @@ void GetSnapshotRequest::InternalSwap(GetSnapshotRequest* other) {
 
 class GetAllIncrementOperationMetaInfoRequest::_Internal {
  public:
+  static const ::proto::UserVerifyInfoV1& userverifyinfo(const GetAllIncrementOperationMetaInfoRequest* msg);
 };
 
+const ::proto::UserVerifyInfoV1&
+GetAllIncrementOperationMetaInfoRequest::_Internal::userverifyinfo(const GetAllIncrementOperationMetaInfoRequest* msg) {
+  return *msg->_impl_.userverifyinfo_;
+}
+void GetAllIncrementOperationMetaInfoRequest::clear_userverifyinfo() {
+  if (GetArenaForAllocation() == nullptr && _impl_.userverifyinfo_ != nullptr) {
+    delete _impl_.userverifyinfo_;
+  }
+  _impl_.userverifyinfo_ = nullptr;
+}
 GetAllIncrementOperationMetaInfoRequest::GetAllIncrementOperationMetaInfoRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
@@ -7229,17 +7237,12 @@ GetAllIncrementOperationMetaInfoRequest::GetAllIncrementOperationMetaInfoRequest
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   GetAllIncrementOperationMetaInfoRequest* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.usertoken_){}
+      decltype(_impl_.userverifyinfo_){nullptr}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.usertoken_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.usertoken_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_usertoken().empty()) {
-    _this->_impl_.usertoken_.Set(from._internal_usertoken(), 
-      _this->GetArenaForAllocation());
+  if (from._internal_has_userverifyinfo()) {
+    _this->_impl_.userverifyinfo_ = new ::proto::UserVerifyInfoV1(*from._impl_.userverifyinfo_);
   }
   // @@protoc_insertion_point(copy_constructor:proto.GetAllIncrementOperationMetaInfoRequest)
 }
@@ -7249,13 +7252,9 @@ inline void GetAllIncrementOperationMetaInfoRequest::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.usertoken_){}
+      decltype(_impl_.userverifyinfo_){nullptr}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.usertoken_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.usertoken_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 GetAllIncrementOperationMetaInfoRequest::~GetAllIncrementOperationMetaInfoRequest() {
@@ -7269,7 +7268,7 @@ GetAllIncrementOperationMetaInfoRequest::~GetAllIncrementOperationMetaInfoReques
 
 inline void GetAllIncrementOperationMetaInfoRequest::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.usertoken_.Destroy();
+  if (this != internal_default_instance()) delete _impl_.userverifyinfo_;
 }
 
 void GetAllIncrementOperationMetaInfoRequest::SetCachedSize(int size) const {
@@ -7282,7 +7281,10 @@ void GetAllIncrementOperationMetaInfoRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.usertoken_.ClearToEmpty();
+  if (GetArenaForAllocation() == nullptr && _impl_.userverifyinfo_ != nullptr) {
+    delete _impl_.userverifyinfo_;
+  }
+  _impl_.userverifyinfo_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -7292,13 +7294,11 @@ const char* GetAllIncrementOperationMetaInfoRequest::_InternalParse(const char* 
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string UserToken = 2;
+      // .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_usertoken();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          ptr = ctx->ParseMessage(_internal_mutable_userverifyinfo(), ptr);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "proto.GetAllIncrementOperationMetaInfoRequest.UserToken"));
         } else
           goto handle_unusual;
         continue;
@@ -7331,14 +7331,11 @@ uint8_t* GetAllIncrementOperationMetaInfoRequest::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string UserToken = 2;
-  if (!this->_internal_usertoken().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_usertoken().data(), static_cast<int>(this->_internal_usertoken().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "proto.GetAllIncrementOperationMetaInfoRequest.UserToken");
-    target = stream->WriteStringMaybeAliased(
-        2, this->_internal_usertoken(), target);
+  // .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
+  if (this->_internal_has_userverifyinfo()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(2, _Internal::userverifyinfo(this),
+        _Internal::userverifyinfo(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -7357,11 +7354,11 @@ size_t GetAllIncrementOperationMetaInfoRequest::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string UserToken = 2;
-  if (!this->_internal_usertoken().empty()) {
+  // .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
+  if (this->_internal_has_userverifyinfo()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_usertoken());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.userverifyinfo_);
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -7382,8 +7379,9 @@ void GetAllIncrementOperationMetaInfoRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID:
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_usertoken().empty()) {
-    _this->_internal_set_usertoken(from._internal_usertoken());
+  if (from._internal_has_userverifyinfo()) {
+    _this->_internal_mutable_userverifyinfo()->::proto::UserVerifyInfoV1::MergeFrom(
+        from._internal_userverifyinfo());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -7401,13 +7399,8 @@ bool GetAllIncrementOperationMetaInfoRequest::IsInitialized() const {
 
 void GetAllIncrementOperationMetaInfoRequest::InternalSwap(GetAllIncrementOperationMetaInfoRequest* other) {
   using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.usertoken_, lhs_arena,
-      &other->_impl_.usertoken_, rhs_arena
-  );
+  swap(_impl_.userverifyinfo_, other->_impl_.userverifyinfo_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata GetAllIncrementOperationMetaInfoRequest::GetMetadata() const {
@@ -7420,8 +7413,19 @@ void GetAllIncrementOperationMetaInfoRequest::InternalSwap(GetAllIncrementOperat
 
 class GetIncrementOperationRequest::_Internal {
  public:
+  static const ::proto::UserVerifyInfoV1& userverifyinfo(const GetIncrementOperationRequest* msg);
 };
 
+const ::proto::UserVerifyInfoV1&
+GetIncrementOperationRequest::_Internal::userverifyinfo(const GetIncrementOperationRequest* msg) {
+  return *msg->_impl_.userverifyinfo_;
+}
+void GetIncrementOperationRequest::clear_userverifyinfo() {
+  if (GetArenaForAllocation() == nullptr && _impl_.userverifyinfo_ != nullptr) {
+    delete _impl_.userverifyinfo_;
+  }
+  _impl_.userverifyinfo_ = nullptr;
+}
 GetIncrementOperationRequest::GetIncrementOperationRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
@@ -7432,19 +7436,11 @@ GetIncrementOperationRequest::GetIncrementOperationRequest(const GetIncrementOpe
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   GetIncrementOperationRequest* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.usertoken_){}
-    , decltype(_impl_.incrementoperationcollectionname_){}
+      decltype(_impl_.incrementoperationcollectionname_){}
+    , decltype(_impl_.userverifyinfo_){nullptr}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.usertoken_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.usertoken_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_usertoken().empty()) {
-    _this->_impl_.usertoken_.Set(from._internal_usertoken(), 
-      _this->GetArenaForAllocation());
-  }
   _impl_.incrementoperationcollectionname_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.incrementoperationcollectionname_.Set("", GetArenaForAllocation());
@@ -7452,6 +7448,9 @@ GetIncrementOperationRequest::GetIncrementOperationRequest(const GetIncrementOpe
   if (!from._internal_incrementoperationcollectionname().empty()) {
     _this->_impl_.incrementoperationcollectionname_.Set(from._internal_incrementoperationcollectionname(), 
       _this->GetArenaForAllocation());
+  }
+  if (from._internal_has_userverifyinfo()) {
+    _this->_impl_.userverifyinfo_ = new ::proto::UserVerifyInfoV1(*from._impl_.userverifyinfo_);
   }
   // @@protoc_insertion_point(copy_constructor:proto.GetIncrementOperationRequest)
 }
@@ -7461,14 +7460,10 @@ inline void GetIncrementOperationRequest::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.usertoken_){}
-    , decltype(_impl_.incrementoperationcollectionname_){}
+      decltype(_impl_.incrementoperationcollectionname_){}
+    , decltype(_impl_.userverifyinfo_){nullptr}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.usertoken_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.usertoken_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   _impl_.incrementoperationcollectionname_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.incrementoperationcollectionname_.Set("", GetArenaForAllocation());
@@ -7486,8 +7481,8 @@ GetIncrementOperationRequest::~GetIncrementOperationRequest() {
 
 inline void GetIncrementOperationRequest::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.usertoken_.Destroy();
   _impl_.incrementoperationcollectionname_.Destroy();
+  if (this != internal_default_instance()) delete _impl_.userverifyinfo_;
 }
 
 void GetIncrementOperationRequest::SetCachedSize(int size) const {
@@ -7500,8 +7495,11 @@ void GetIncrementOperationRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.usertoken_.ClearToEmpty();
   _impl_.incrementoperationcollectionname_.ClearToEmpty();
+  if (GetArenaForAllocation() == nullptr && _impl_.userverifyinfo_ != nullptr) {
+    delete _impl_.userverifyinfo_;
+  }
+  _impl_.userverifyinfo_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -7511,13 +7509,11 @@ const char* GetIncrementOperationRequest::_InternalParse(const char* ptr, ::_pbi
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string UserToken = 1;
+      // .proto.UserVerifyInfoV1 UserVerifyInfo = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_usertoken();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          ptr = ctx->ParseMessage(_internal_mutable_userverifyinfo(), ptr);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "proto.GetIncrementOperationRequest.UserToken"));
         } else
           goto handle_unusual;
         continue;
@@ -7560,14 +7556,11 @@ uint8_t* GetIncrementOperationRequest::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string UserToken = 1;
-  if (!this->_internal_usertoken().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_usertoken().data(), static_cast<int>(this->_internal_usertoken().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "proto.GetIncrementOperationRequest.UserToken");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_usertoken(), target);
+  // .proto.UserVerifyInfoV1 UserVerifyInfo = 1;
+  if (this->_internal_has_userverifyinfo()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::userverifyinfo(this),
+        _Internal::userverifyinfo(this).GetCachedSize(), target, stream);
   }
 
   // string IncrementOperationCollectionName = 2;
@@ -7596,18 +7589,18 @@ size_t GetIncrementOperationRequest::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string UserToken = 1;
-  if (!this->_internal_usertoken().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_usertoken());
-  }
-
   // string IncrementOperationCollectionName = 2;
   if (!this->_internal_incrementoperationcollectionname().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_incrementoperationcollectionname());
+  }
+
+  // .proto.UserVerifyInfoV1 UserVerifyInfo = 1;
+  if (this->_internal_has_userverifyinfo()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.userverifyinfo_);
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -7628,11 +7621,12 @@ void GetIncrementOperationRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& t
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_usertoken().empty()) {
-    _this->_internal_set_usertoken(from._internal_usertoken());
-  }
   if (!from._internal_incrementoperationcollectionname().empty()) {
     _this->_internal_set_incrementoperationcollectionname(from._internal_incrementoperationcollectionname());
+  }
+  if (from._internal_has_userverifyinfo()) {
+    _this->_internal_mutable_userverifyinfo()->::proto::UserVerifyInfoV1::MergeFrom(
+        from._internal_userverifyinfo());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -7654,13 +7648,10 @@ void GetIncrementOperationRequest::InternalSwap(GetIncrementOperationRequest* ot
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.usertoken_, lhs_arena,
-      &other->_impl_.usertoken_, rhs_arena
-  );
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.incrementoperationcollectionname_, lhs_arena,
       &other->_impl_.incrementoperationcollectionname_, rhs_arena
   );
+  swap(_impl_.userverifyinfo_, other->_impl_.userverifyinfo_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata GetIncrementOperationRequest::GetMetadata() const {
@@ -7673,10 +7664,15 @@ void GetIncrementOperationRequest::InternalSwap(GetIncrementOperationRequest* ot
 
 class CreateSwcNodeDataRequest::_Internal {
  public:
+  static const ::proto::UserVerifyInfoV1& userverifyinfo(const CreateSwcNodeDataRequest* msg);
   static const ::proto::SwcMetaInfoV1& swcinfo(const CreateSwcNodeDataRequest* msg);
   static const ::proto::SwcDataV1& swcdata(const CreateSwcNodeDataRequest* msg);
 };
 
+const ::proto::UserVerifyInfoV1&
+CreateSwcNodeDataRequest::_Internal::userverifyinfo(const CreateSwcNodeDataRequest* msg) {
+  return *msg->_impl_.userverifyinfo_;
+}
 const ::proto::SwcMetaInfoV1&
 CreateSwcNodeDataRequest::_Internal::swcinfo(const CreateSwcNodeDataRequest* msg) {
   return *msg->_impl_.swcinfo_;
@@ -7684,6 +7680,12 @@ CreateSwcNodeDataRequest::_Internal::swcinfo(const CreateSwcNodeDataRequest* msg
 const ::proto::SwcDataV1&
 CreateSwcNodeDataRequest::_Internal::swcdata(const CreateSwcNodeDataRequest* msg) {
   return *msg->_impl_.swcdata_;
+}
+void CreateSwcNodeDataRequest::clear_userverifyinfo() {
+  if (GetArenaForAllocation() == nullptr && _impl_.userverifyinfo_ != nullptr) {
+    delete _impl_.userverifyinfo_;
+  }
+  _impl_.userverifyinfo_ = nullptr;
 }
 void CreateSwcNodeDataRequest::clear_swcinfo() {
   if (GetArenaForAllocation() == nullptr && _impl_.swcinfo_ != nullptr) {
@@ -7707,19 +7709,14 @@ CreateSwcNodeDataRequest::CreateSwcNodeDataRequest(const CreateSwcNodeDataReques
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   CreateSwcNodeDataRequest* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.usertoken_){}
+      decltype(_impl_.userverifyinfo_){nullptr}
     , decltype(_impl_.swcinfo_){nullptr}
     , decltype(_impl_.swcdata_){nullptr}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.usertoken_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.usertoken_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_usertoken().empty()) {
-    _this->_impl_.usertoken_.Set(from._internal_usertoken(), 
-      _this->GetArenaForAllocation());
+  if (from._internal_has_userverifyinfo()) {
+    _this->_impl_.userverifyinfo_ = new ::proto::UserVerifyInfoV1(*from._impl_.userverifyinfo_);
   }
   if (from._internal_has_swcinfo()) {
     _this->_impl_.swcinfo_ = new ::proto::SwcMetaInfoV1(*from._impl_.swcinfo_);
@@ -7735,15 +7732,11 @@ inline void CreateSwcNodeDataRequest::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.usertoken_){}
+      decltype(_impl_.userverifyinfo_){nullptr}
     , decltype(_impl_.swcinfo_){nullptr}
     , decltype(_impl_.swcdata_){nullptr}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.usertoken_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.usertoken_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 CreateSwcNodeDataRequest::~CreateSwcNodeDataRequest() {
@@ -7757,7 +7750,7 @@ CreateSwcNodeDataRequest::~CreateSwcNodeDataRequest() {
 
 inline void CreateSwcNodeDataRequest::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.usertoken_.Destroy();
+  if (this != internal_default_instance()) delete _impl_.userverifyinfo_;
   if (this != internal_default_instance()) delete _impl_.swcinfo_;
   if (this != internal_default_instance()) delete _impl_.swcdata_;
 }
@@ -7772,7 +7765,10 @@ void CreateSwcNodeDataRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.usertoken_.ClearToEmpty();
+  if (GetArenaForAllocation() == nullptr && _impl_.userverifyinfo_ != nullptr) {
+    delete _impl_.userverifyinfo_;
+  }
+  _impl_.userverifyinfo_ = nullptr;
   if (GetArenaForAllocation() == nullptr && _impl_.swcinfo_ != nullptr) {
     delete _impl_.swcinfo_;
   }
@@ -7790,13 +7786,11 @@ const char* CreateSwcNodeDataRequest::_InternalParse(const char* ptr, ::_pbi::Pa
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string UserToken = 1;
+      // .proto.UserVerifyInfoV1 UserVerifyInfo = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_usertoken();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          ptr = ctx->ParseMessage(_internal_mutable_userverifyinfo(), ptr);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "proto.CreateSwcNodeDataRequest.UserToken"));
         } else
           goto handle_unusual;
         continue;
@@ -7845,14 +7839,11 @@ uint8_t* CreateSwcNodeDataRequest::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string UserToken = 1;
-  if (!this->_internal_usertoken().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_usertoken().data(), static_cast<int>(this->_internal_usertoken().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "proto.CreateSwcNodeDataRequest.UserToken");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_usertoken(), target);
+  // .proto.UserVerifyInfoV1 UserVerifyInfo = 1;
+  if (this->_internal_has_userverifyinfo()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::userverifyinfo(this),
+        _Internal::userverifyinfo(this).GetCachedSize(), target, stream);
   }
 
   // .proto.SwcMetaInfoV1 SwcInfo = 2;
@@ -7885,11 +7876,11 @@ size_t CreateSwcNodeDataRequest::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string UserToken = 1;
-  if (!this->_internal_usertoken().empty()) {
+  // .proto.UserVerifyInfoV1 UserVerifyInfo = 1;
+  if (this->_internal_has_userverifyinfo()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_usertoken());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.userverifyinfo_);
   }
 
   // .proto.SwcMetaInfoV1 SwcInfo = 2;
@@ -7924,8 +7915,9 @@ void CreateSwcNodeDataRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_ms
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_usertoken().empty()) {
-    _this->_internal_set_usertoken(from._internal_usertoken());
+  if (from._internal_has_userverifyinfo()) {
+    _this->_internal_mutable_userverifyinfo()->::proto::UserVerifyInfoV1::MergeFrom(
+        from._internal_userverifyinfo());
   }
   if (from._internal_has_swcinfo()) {
     _this->_internal_mutable_swcinfo()->::proto::SwcMetaInfoV1::MergeFrom(
@@ -7951,19 +7943,13 @@ bool CreateSwcNodeDataRequest::IsInitialized() const {
 
 void CreateSwcNodeDataRequest::InternalSwap(CreateSwcNodeDataRequest* other) {
   using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.usertoken_, lhs_arena,
-      &other->_impl_.usertoken_, rhs_arena
-  );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(CreateSwcNodeDataRequest, _impl_.swcdata_)
       + sizeof(CreateSwcNodeDataRequest::_impl_.swcdata_)
-      - PROTOBUF_FIELD_OFFSET(CreateSwcNodeDataRequest, _impl_.swcinfo_)>(
-          reinterpret_cast<char*>(&_impl_.swcinfo_),
-          reinterpret_cast<char*>(&other->_impl_.swcinfo_));
+      - PROTOBUF_FIELD_OFFSET(CreateSwcNodeDataRequest, _impl_.userverifyinfo_)>(
+          reinterpret_cast<char*>(&_impl_.userverifyinfo_),
+          reinterpret_cast<char*>(&other->_impl_.userverifyinfo_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata CreateSwcNodeDataRequest::GetMetadata() const {
@@ -7976,10 +7962,15 @@ void CreateSwcNodeDataRequest::InternalSwap(CreateSwcNodeDataRequest* other) {
 
 class DeleteSwcNodeDataRequest::_Internal {
  public:
+  static const ::proto::UserVerifyInfoV1& userverifyinfo(const DeleteSwcNodeDataRequest* msg);
   static const ::proto::SwcMetaInfoV1& swcinfo(const DeleteSwcNodeDataRequest* msg);
   static const ::proto::SwcDataV1& swcdata(const DeleteSwcNodeDataRequest* msg);
 };
 
+const ::proto::UserVerifyInfoV1&
+DeleteSwcNodeDataRequest::_Internal::userverifyinfo(const DeleteSwcNodeDataRequest* msg) {
+  return *msg->_impl_.userverifyinfo_;
+}
 const ::proto::SwcMetaInfoV1&
 DeleteSwcNodeDataRequest::_Internal::swcinfo(const DeleteSwcNodeDataRequest* msg) {
   return *msg->_impl_.swcinfo_;
@@ -7987,6 +7978,12 @@ DeleteSwcNodeDataRequest::_Internal::swcinfo(const DeleteSwcNodeDataRequest* msg
 const ::proto::SwcDataV1&
 DeleteSwcNodeDataRequest::_Internal::swcdata(const DeleteSwcNodeDataRequest* msg) {
   return *msg->_impl_.swcdata_;
+}
+void DeleteSwcNodeDataRequest::clear_userverifyinfo() {
+  if (GetArenaForAllocation() == nullptr && _impl_.userverifyinfo_ != nullptr) {
+    delete _impl_.userverifyinfo_;
+  }
+  _impl_.userverifyinfo_ = nullptr;
 }
 void DeleteSwcNodeDataRequest::clear_swcinfo() {
   if (GetArenaForAllocation() == nullptr && _impl_.swcinfo_ != nullptr) {
@@ -8010,19 +8007,14 @@ DeleteSwcNodeDataRequest::DeleteSwcNodeDataRequest(const DeleteSwcNodeDataReques
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   DeleteSwcNodeDataRequest* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.usertoken_){}
+      decltype(_impl_.userverifyinfo_){nullptr}
     , decltype(_impl_.swcinfo_){nullptr}
     , decltype(_impl_.swcdata_){nullptr}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.usertoken_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.usertoken_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_usertoken().empty()) {
-    _this->_impl_.usertoken_.Set(from._internal_usertoken(), 
-      _this->GetArenaForAllocation());
+  if (from._internal_has_userverifyinfo()) {
+    _this->_impl_.userverifyinfo_ = new ::proto::UserVerifyInfoV1(*from._impl_.userverifyinfo_);
   }
   if (from._internal_has_swcinfo()) {
     _this->_impl_.swcinfo_ = new ::proto::SwcMetaInfoV1(*from._impl_.swcinfo_);
@@ -8038,15 +8030,11 @@ inline void DeleteSwcNodeDataRequest::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.usertoken_){}
+      decltype(_impl_.userverifyinfo_){nullptr}
     , decltype(_impl_.swcinfo_){nullptr}
     , decltype(_impl_.swcdata_){nullptr}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.usertoken_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.usertoken_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 DeleteSwcNodeDataRequest::~DeleteSwcNodeDataRequest() {
@@ -8060,7 +8048,7 @@ DeleteSwcNodeDataRequest::~DeleteSwcNodeDataRequest() {
 
 inline void DeleteSwcNodeDataRequest::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.usertoken_.Destroy();
+  if (this != internal_default_instance()) delete _impl_.userverifyinfo_;
   if (this != internal_default_instance()) delete _impl_.swcinfo_;
   if (this != internal_default_instance()) delete _impl_.swcdata_;
 }
@@ -8075,7 +8063,10 @@ void DeleteSwcNodeDataRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.usertoken_.ClearToEmpty();
+  if (GetArenaForAllocation() == nullptr && _impl_.userverifyinfo_ != nullptr) {
+    delete _impl_.userverifyinfo_;
+  }
+  _impl_.userverifyinfo_ = nullptr;
   if (GetArenaForAllocation() == nullptr && _impl_.swcinfo_ != nullptr) {
     delete _impl_.swcinfo_;
   }
@@ -8093,13 +8084,11 @@ const char* DeleteSwcNodeDataRequest::_InternalParse(const char* ptr, ::_pbi::Pa
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string UserToken = 1;
+      // .proto.UserVerifyInfoV1 UserVerifyInfo = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_usertoken();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          ptr = ctx->ParseMessage(_internal_mutable_userverifyinfo(), ptr);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "proto.DeleteSwcNodeDataRequest.UserToken"));
         } else
           goto handle_unusual;
         continue;
@@ -8148,14 +8137,11 @@ uint8_t* DeleteSwcNodeDataRequest::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string UserToken = 1;
-  if (!this->_internal_usertoken().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_usertoken().data(), static_cast<int>(this->_internal_usertoken().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "proto.DeleteSwcNodeDataRequest.UserToken");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_usertoken(), target);
+  // .proto.UserVerifyInfoV1 UserVerifyInfo = 1;
+  if (this->_internal_has_userverifyinfo()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::userverifyinfo(this),
+        _Internal::userverifyinfo(this).GetCachedSize(), target, stream);
   }
 
   // .proto.SwcMetaInfoV1 SwcInfo = 2;
@@ -8188,11 +8174,11 @@ size_t DeleteSwcNodeDataRequest::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string UserToken = 1;
-  if (!this->_internal_usertoken().empty()) {
+  // .proto.UserVerifyInfoV1 UserVerifyInfo = 1;
+  if (this->_internal_has_userverifyinfo()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_usertoken());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.userverifyinfo_);
   }
 
   // .proto.SwcMetaInfoV1 SwcInfo = 2;
@@ -8227,8 +8213,9 @@ void DeleteSwcNodeDataRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_ms
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_usertoken().empty()) {
-    _this->_internal_set_usertoken(from._internal_usertoken());
+  if (from._internal_has_userverifyinfo()) {
+    _this->_internal_mutable_userverifyinfo()->::proto::UserVerifyInfoV1::MergeFrom(
+        from._internal_userverifyinfo());
   }
   if (from._internal_has_swcinfo()) {
     _this->_internal_mutable_swcinfo()->::proto::SwcMetaInfoV1::MergeFrom(
@@ -8254,19 +8241,13 @@ bool DeleteSwcNodeDataRequest::IsInitialized() const {
 
 void DeleteSwcNodeDataRequest::InternalSwap(DeleteSwcNodeDataRequest* other) {
   using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.usertoken_, lhs_arena,
-      &other->_impl_.usertoken_, rhs_arena
-  );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(DeleteSwcNodeDataRequest, _impl_.swcdata_)
       + sizeof(DeleteSwcNodeDataRequest::_impl_.swcdata_)
-      - PROTOBUF_FIELD_OFFSET(DeleteSwcNodeDataRequest, _impl_.swcinfo_)>(
-          reinterpret_cast<char*>(&_impl_.swcinfo_),
-          reinterpret_cast<char*>(&other->_impl_.swcinfo_));
+      - PROTOBUF_FIELD_OFFSET(DeleteSwcNodeDataRequest, _impl_.userverifyinfo_)>(
+          reinterpret_cast<char*>(&_impl_.userverifyinfo_),
+          reinterpret_cast<char*>(&other->_impl_.userverifyinfo_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata DeleteSwcNodeDataRequest::GetMetadata() const {
@@ -8279,10 +8260,15 @@ void DeleteSwcNodeDataRequest::InternalSwap(DeleteSwcNodeDataRequest* other) {
 
 class UpdateSwcNodeDataRequest::_Internal {
  public:
+  static const ::proto::UserVerifyInfoV1& userverifyinfo(const UpdateSwcNodeDataRequest* msg);
   static const ::proto::SwcMetaInfoV1& swcinfo(const UpdateSwcNodeDataRequest* msg);
   static const ::proto::SwcNodeDataV1& swcnodedata(const UpdateSwcNodeDataRequest* msg);
 };
 
+const ::proto::UserVerifyInfoV1&
+UpdateSwcNodeDataRequest::_Internal::userverifyinfo(const UpdateSwcNodeDataRequest* msg) {
+  return *msg->_impl_.userverifyinfo_;
+}
 const ::proto::SwcMetaInfoV1&
 UpdateSwcNodeDataRequest::_Internal::swcinfo(const UpdateSwcNodeDataRequest* msg) {
   return *msg->_impl_.swcinfo_;
@@ -8290,6 +8276,12 @@ UpdateSwcNodeDataRequest::_Internal::swcinfo(const UpdateSwcNodeDataRequest* msg
 const ::proto::SwcNodeDataV1&
 UpdateSwcNodeDataRequest::_Internal::swcnodedata(const UpdateSwcNodeDataRequest* msg) {
   return *msg->_impl_.swcnodedata_;
+}
+void UpdateSwcNodeDataRequest::clear_userverifyinfo() {
+  if (GetArenaForAllocation() == nullptr && _impl_.userverifyinfo_ != nullptr) {
+    delete _impl_.userverifyinfo_;
+  }
+  _impl_.userverifyinfo_ = nullptr;
 }
 void UpdateSwcNodeDataRequest::clear_swcinfo() {
   if (GetArenaForAllocation() == nullptr && _impl_.swcinfo_ != nullptr) {
@@ -8313,19 +8305,14 @@ UpdateSwcNodeDataRequest::UpdateSwcNodeDataRequest(const UpdateSwcNodeDataReques
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   UpdateSwcNodeDataRequest* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.usertoken_){}
+      decltype(_impl_.userverifyinfo_){nullptr}
     , decltype(_impl_.swcinfo_){nullptr}
     , decltype(_impl_.swcnodedata_){nullptr}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.usertoken_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.usertoken_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_usertoken().empty()) {
-    _this->_impl_.usertoken_.Set(from._internal_usertoken(), 
-      _this->GetArenaForAllocation());
+  if (from._internal_has_userverifyinfo()) {
+    _this->_impl_.userverifyinfo_ = new ::proto::UserVerifyInfoV1(*from._impl_.userverifyinfo_);
   }
   if (from._internal_has_swcinfo()) {
     _this->_impl_.swcinfo_ = new ::proto::SwcMetaInfoV1(*from._impl_.swcinfo_);
@@ -8341,15 +8328,11 @@ inline void UpdateSwcNodeDataRequest::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.usertoken_){}
+      decltype(_impl_.userverifyinfo_){nullptr}
     , decltype(_impl_.swcinfo_){nullptr}
     , decltype(_impl_.swcnodedata_){nullptr}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.usertoken_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.usertoken_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 UpdateSwcNodeDataRequest::~UpdateSwcNodeDataRequest() {
@@ -8363,7 +8346,7 @@ UpdateSwcNodeDataRequest::~UpdateSwcNodeDataRequest() {
 
 inline void UpdateSwcNodeDataRequest::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.usertoken_.Destroy();
+  if (this != internal_default_instance()) delete _impl_.userverifyinfo_;
   if (this != internal_default_instance()) delete _impl_.swcinfo_;
   if (this != internal_default_instance()) delete _impl_.swcnodedata_;
 }
@@ -8378,7 +8361,10 @@ void UpdateSwcNodeDataRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.usertoken_.ClearToEmpty();
+  if (GetArenaForAllocation() == nullptr && _impl_.userverifyinfo_ != nullptr) {
+    delete _impl_.userverifyinfo_;
+  }
+  _impl_.userverifyinfo_ = nullptr;
   if (GetArenaForAllocation() == nullptr && _impl_.swcinfo_ != nullptr) {
     delete _impl_.swcinfo_;
   }
@@ -8396,13 +8382,11 @@ const char* UpdateSwcNodeDataRequest::_InternalParse(const char* ptr, ::_pbi::Pa
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string UserToken = 1;
+      // .proto.UserVerifyInfoV1 UserVerifyInfo = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_usertoken();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          ptr = ctx->ParseMessage(_internal_mutable_userverifyinfo(), ptr);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "proto.UpdateSwcNodeDataRequest.UserToken"));
         } else
           goto handle_unusual;
         continue;
@@ -8451,14 +8435,11 @@ uint8_t* UpdateSwcNodeDataRequest::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string UserToken = 1;
-  if (!this->_internal_usertoken().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_usertoken().data(), static_cast<int>(this->_internal_usertoken().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "proto.UpdateSwcNodeDataRequest.UserToken");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_usertoken(), target);
+  // .proto.UserVerifyInfoV1 UserVerifyInfo = 1;
+  if (this->_internal_has_userverifyinfo()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::userverifyinfo(this),
+        _Internal::userverifyinfo(this).GetCachedSize(), target, stream);
   }
 
   // .proto.SwcMetaInfoV1 SwcInfo = 2;
@@ -8491,11 +8472,11 @@ size_t UpdateSwcNodeDataRequest::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string UserToken = 1;
-  if (!this->_internal_usertoken().empty()) {
+  // .proto.UserVerifyInfoV1 UserVerifyInfo = 1;
+  if (this->_internal_has_userverifyinfo()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_usertoken());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.userverifyinfo_);
   }
 
   // .proto.SwcMetaInfoV1 SwcInfo = 2;
@@ -8530,8 +8511,9 @@ void UpdateSwcNodeDataRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_ms
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_usertoken().empty()) {
-    _this->_internal_set_usertoken(from._internal_usertoken());
+  if (from._internal_has_userverifyinfo()) {
+    _this->_internal_mutable_userverifyinfo()->::proto::UserVerifyInfoV1::MergeFrom(
+        from._internal_userverifyinfo());
   }
   if (from._internal_has_swcinfo()) {
     _this->_internal_mutable_swcinfo()->::proto::SwcMetaInfoV1::MergeFrom(
@@ -8557,19 +8539,13 @@ bool UpdateSwcNodeDataRequest::IsInitialized() const {
 
 void UpdateSwcNodeDataRequest::InternalSwap(UpdateSwcNodeDataRequest* other) {
   using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.usertoken_, lhs_arena,
-      &other->_impl_.usertoken_, rhs_arena
-  );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(UpdateSwcNodeDataRequest, _impl_.swcnodedata_)
       + sizeof(UpdateSwcNodeDataRequest::_impl_.swcnodedata_)
-      - PROTOBUF_FIELD_OFFSET(UpdateSwcNodeDataRequest, _impl_.swcinfo_)>(
-          reinterpret_cast<char*>(&_impl_.swcinfo_),
-          reinterpret_cast<char*>(&other->_impl_.swcinfo_));
+      - PROTOBUF_FIELD_OFFSET(UpdateSwcNodeDataRequest, _impl_.userverifyinfo_)>(
+          reinterpret_cast<char*>(&_impl_.userverifyinfo_),
+          reinterpret_cast<char*>(&other->_impl_.userverifyinfo_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata UpdateSwcNodeDataRequest::GetMetadata() const {

@@ -148,3 +148,8 @@ message DailyStatisticsMetaInfoV1{
     int32 NodeQueryNumber = 16;
     int32 ActiveUserNumber = 17;
 }
+
+message UserVerifyInfoV1{
+    string UserName = 1;
+    string UserToken = 2;
+}

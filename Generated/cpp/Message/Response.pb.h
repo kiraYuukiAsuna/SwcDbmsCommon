@@ -1236,8 +1236,8 @@ class UserLoginResponse final :
 
   enum : int {
     kMessageFieldNumber = 2,
-    kUserTokenFieldNumber = 4,
     kUserInfoFieldNumber = 3,
+    kUserVerifyInfoFieldNumber = 4,
     kStatusFieldNumber = 1,
   };
   // string Message = 2;
@@ -1252,20 +1252,6 @@ class UserLoginResponse final :
   const std::string& _internal_message() const;
   inline PROTOBUF_ALWAYS_INLINE void _internal_set_message(const std::string& value);
   std::string* _internal_mutable_message();
-  public:
-
-  // string UserToken = 4;
-  void clear_usertoken();
-  const std::string& usertoken() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_usertoken(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_usertoken();
-  PROTOBUF_NODISCARD std::string* release_usertoken();
-  void set_allocated_usertoken(std::string* usertoken);
-  private:
-  const std::string& _internal_usertoken() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_usertoken(const std::string& value);
-  std::string* _internal_mutable_usertoken();
   public:
 
   // .proto.UserMetaInfoV1 UserInfo = 3;
@@ -1286,6 +1272,24 @@ class UserLoginResponse final :
       ::proto::UserMetaInfoV1* userinfo);
   ::proto::UserMetaInfoV1* unsafe_arena_release_userinfo();
 
+  // .proto.UserVerifyInfoV1 UserVerifyInfo = 4;
+  bool has_userverifyinfo() const;
+  private:
+  bool _internal_has_userverifyinfo() const;
+  public:
+  void clear_userverifyinfo();
+  const ::proto::UserVerifyInfoV1& userverifyinfo() const;
+  PROTOBUF_NODISCARD ::proto::UserVerifyInfoV1* release_userverifyinfo();
+  ::proto::UserVerifyInfoV1* mutable_userverifyinfo();
+  void set_allocated_userverifyinfo(::proto::UserVerifyInfoV1* userverifyinfo);
+  private:
+  const ::proto::UserVerifyInfoV1& _internal_userverifyinfo() const;
+  ::proto::UserVerifyInfoV1* _internal_mutable_userverifyinfo();
+  public:
+  void unsafe_arena_set_allocated_userverifyinfo(
+      ::proto::UserVerifyInfoV1* userverifyinfo);
+  ::proto::UserVerifyInfoV1* unsafe_arena_release_userverifyinfo();
+
   // bool status = 1;
   void clear_status();
   bool status() const;
@@ -1304,8 +1308,8 @@ class UserLoginResponse final :
   typedef void DestructorSkippable_;
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr message_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr usertoken_;
     ::proto::UserMetaInfoV1* userinfo_;
+    ::proto::UserVerifyInfoV1* userverifyinfo_;
     bool status_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
@@ -1600,7 +1604,7 @@ class UserOnlineHeartBeatResponse final :
 
   enum : int {
     kMessageFieldNumber = 2,
-    kUserTokenFieldNumber = 3,
+    kUserVerifyInfoFieldNumber = 3,
     kStatusFieldNumber = 1,
   };
   // string Message = 2;
@@ -1617,19 +1621,23 @@ class UserOnlineHeartBeatResponse final :
   std::string* _internal_mutable_message();
   public:
 
-  // string UserToken = 3;
-  void clear_usertoken();
-  const std::string& usertoken() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_usertoken(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_usertoken();
-  PROTOBUF_NODISCARD std::string* release_usertoken();
-  void set_allocated_usertoken(std::string* usertoken);
+  // .proto.UserVerifyInfoV1 UserVerifyInfo = 3;
+  bool has_userverifyinfo() const;
   private:
-  const std::string& _internal_usertoken() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_usertoken(const std::string& value);
-  std::string* _internal_mutable_usertoken();
+  bool _internal_has_userverifyinfo() const;
   public:
+  void clear_userverifyinfo();
+  const ::proto::UserVerifyInfoV1& userverifyinfo() const;
+  PROTOBUF_NODISCARD ::proto::UserVerifyInfoV1* release_userverifyinfo();
+  ::proto::UserVerifyInfoV1* mutable_userverifyinfo();
+  void set_allocated_userverifyinfo(::proto::UserVerifyInfoV1* userverifyinfo);
+  private:
+  const ::proto::UserVerifyInfoV1& _internal_userverifyinfo() const;
+  ::proto::UserVerifyInfoV1* _internal_mutable_userverifyinfo();
+  public:
+  void unsafe_arena_set_allocated_userverifyinfo(
+      ::proto::UserVerifyInfoV1* userverifyinfo);
+  ::proto::UserVerifyInfoV1* unsafe_arena_release_userverifyinfo();
 
   // bool status = 1;
   void clear_status();
@@ -1649,7 +1657,7 @@ class UserOnlineHeartBeatResponse final :
   typedef void DestructorSkippable_;
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr message_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr usertoken_;
+    ::proto::UserVerifyInfoV1* userverifyinfo_;
     bool status_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
@@ -8263,54 +8271,89 @@ inline void UserLoginResponse::set_allocated_userinfo(::proto::UserMetaInfoV1* u
   // @@protoc_insertion_point(field_set_allocated:proto.UserLoginResponse.UserInfo)
 }
 
-// string UserToken = 4;
-inline void UserLoginResponse::clear_usertoken() {
-  _impl_.usertoken_.ClearToEmpty();
+// .proto.UserVerifyInfoV1 UserVerifyInfo = 4;
+inline bool UserLoginResponse::_internal_has_userverifyinfo() const {
+  return this != internal_default_instance() && _impl_.userverifyinfo_ != nullptr;
 }
-inline const std::string& UserLoginResponse::usertoken() const {
-  // @@protoc_insertion_point(field_get:proto.UserLoginResponse.UserToken)
-  return _internal_usertoken();
+inline bool UserLoginResponse::has_userverifyinfo() const {
+  return _internal_has_userverifyinfo();
 }
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void UserLoginResponse::set_usertoken(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.usertoken_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:proto.UserLoginResponse.UserToken)
+inline const ::proto::UserVerifyInfoV1& UserLoginResponse::_internal_userverifyinfo() const {
+  const ::proto::UserVerifyInfoV1* p = _impl_.userverifyinfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::UserVerifyInfoV1&>(
+      ::proto::_UserVerifyInfoV1_default_instance_);
 }
-inline std::string* UserLoginResponse::mutable_usertoken() {
-  std::string* _s = _internal_mutable_usertoken();
-  // @@protoc_insertion_point(field_mutable:proto.UserLoginResponse.UserToken)
-  return _s;
+inline const ::proto::UserVerifyInfoV1& UserLoginResponse::userverifyinfo() const {
+  // @@protoc_insertion_point(field_get:proto.UserLoginResponse.UserVerifyInfo)
+  return _internal_userverifyinfo();
 }
-inline const std::string& UserLoginResponse::_internal_usertoken() const {
-  return _impl_.usertoken_.Get();
-}
-inline void UserLoginResponse::_internal_set_usertoken(const std::string& value) {
-  
-  _impl_.usertoken_.Set(value, GetArenaForAllocation());
-}
-inline std::string* UserLoginResponse::_internal_mutable_usertoken() {
-  
-  return _impl_.usertoken_.Mutable(GetArenaForAllocation());
-}
-inline std::string* UserLoginResponse::release_usertoken() {
-  // @@protoc_insertion_point(field_release:proto.UserLoginResponse.UserToken)
-  return _impl_.usertoken_.Release();
-}
-inline void UserLoginResponse::set_allocated_usertoken(std::string* usertoken) {
-  if (usertoken != nullptr) {
+inline void UserLoginResponse::unsafe_arena_set_allocated_userverifyinfo(
+    ::proto::UserVerifyInfoV1* userverifyinfo) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userverifyinfo_);
+  }
+  _impl_.userverifyinfo_ = userverifyinfo;
+  if (userverifyinfo) {
     
   } else {
     
   }
-  _impl_.usertoken_.SetAllocated(usertoken, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.usertoken_.IsDefault()) {
-    _impl_.usertoken_.Set("", GetArenaForAllocation());
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.UserLoginResponse.UserVerifyInfo)
+}
+inline ::proto::UserVerifyInfoV1* UserLoginResponse::release_userverifyinfo() {
+  
+  ::proto::UserVerifyInfoV1* temp = _impl_.userverifyinfo_;
+  _impl_.userverifyinfo_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
   }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:proto.UserLoginResponse.UserToken)
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::proto::UserVerifyInfoV1* UserLoginResponse::unsafe_arena_release_userverifyinfo() {
+  // @@protoc_insertion_point(field_release:proto.UserLoginResponse.UserVerifyInfo)
+  
+  ::proto::UserVerifyInfoV1* temp = _impl_.userverifyinfo_;
+  _impl_.userverifyinfo_ = nullptr;
+  return temp;
+}
+inline ::proto::UserVerifyInfoV1* UserLoginResponse::_internal_mutable_userverifyinfo() {
+  
+  if (_impl_.userverifyinfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::UserVerifyInfoV1>(GetArenaForAllocation());
+    _impl_.userverifyinfo_ = p;
+  }
+  return _impl_.userverifyinfo_;
+}
+inline ::proto::UserVerifyInfoV1* UserLoginResponse::mutable_userverifyinfo() {
+  ::proto::UserVerifyInfoV1* _msg = _internal_mutable_userverifyinfo();
+  // @@protoc_insertion_point(field_mutable:proto.UserLoginResponse.UserVerifyInfo)
+  return _msg;
+}
+inline void UserLoginResponse::set_allocated_userverifyinfo(::proto::UserVerifyInfoV1* userverifyinfo) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userverifyinfo_);
+  }
+  if (userverifyinfo) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(userverifyinfo));
+    if (message_arena != submessage_arena) {
+      userverifyinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, userverifyinfo, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  _impl_.userverifyinfo_ = userverifyinfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.UserLoginResponse.UserVerifyInfo)
 }
 
 // -------------------------------------------------------------------
@@ -8461,54 +8504,89 @@ inline void UserOnlineHeartBeatResponse::set_allocated_message(std::string* mess
   // @@protoc_insertion_point(field_set_allocated:proto.UserOnlineHeartBeatResponse.Message)
 }
 
-// string UserToken = 3;
-inline void UserOnlineHeartBeatResponse::clear_usertoken() {
-  _impl_.usertoken_.ClearToEmpty();
+// .proto.UserVerifyInfoV1 UserVerifyInfo = 3;
+inline bool UserOnlineHeartBeatResponse::_internal_has_userverifyinfo() const {
+  return this != internal_default_instance() && _impl_.userverifyinfo_ != nullptr;
 }
-inline const std::string& UserOnlineHeartBeatResponse::usertoken() const {
-  // @@protoc_insertion_point(field_get:proto.UserOnlineHeartBeatResponse.UserToken)
-  return _internal_usertoken();
+inline bool UserOnlineHeartBeatResponse::has_userverifyinfo() const {
+  return _internal_has_userverifyinfo();
 }
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void UserOnlineHeartBeatResponse::set_usertoken(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.usertoken_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:proto.UserOnlineHeartBeatResponse.UserToken)
+inline const ::proto::UserVerifyInfoV1& UserOnlineHeartBeatResponse::_internal_userverifyinfo() const {
+  const ::proto::UserVerifyInfoV1* p = _impl_.userverifyinfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::UserVerifyInfoV1&>(
+      ::proto::_UserVerifyInfoV1_default_instance_);
 }
-inline std::string* UserOnlineHeartBeatResponse::mutable_usertoken() {
-  std::string* _s = _internal_mutable_usertoken();
-  // @@protoc_insertion_point(field_mutable:proto.UserOnlineHeartBeatResponse.UserToken)
-  return _s;
+inline const ::proto::UserVerifyInfoV1& UserOnlineHeartBeatResponse::userverifyinfo() const {
+  // @@protoc_insertion_point(field_get:proto.UserOnlineHeartBeatResponse.UserVerifyInfo)
+  return _internal_userverifyinfo();
 }
-inline const std::string& UserOnlineHeartBeatResponse::_internal_usertoken() const {
-  return _impl_.usertoken_.Get();
-}
-inline void UserOnlineHeartBeatResponse::_internal_set_usertoken(const std::string& value) {
-  
-  _impl_.usertoken_.Set(value, GetArenaForAllocation());
-}
-inline std::string* UserOnlineHeartBeatResponse::_internal_mutable_usertoken() {
-  
-  return _impl_.usertoken_.Mutable(GetArenaForAllocation());
-}
-inline std::string* UserOnlineHeartBeatResponse::release_usertoken() {
-  // @@protoc_insertion_point(field_release:proto.UserOnlineHeartBeatResponse.UserToken)
-  return _impl_.usertoken_.Release();
-}
-inline void UserOnlineHeartBeatResponse::set_allocated_usertoken(std::string* usertoken) {
-  if (usertoken != nullptr) {
+inline void UserOnlineHeartBeatResponse::unsafe_arena_set_allocated_userverifyinfo(
+    ::proto::UserVerifyInfoV1* userverifyinfo) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userverifyinfo_);
+  }
+  _impl_.userverifyinfo_ = userverifyinfo;
+  if (userverifyinfo) {
     
   } else {
     
   }
-  _impl_.usertoken_.SetAllocated(usertoken, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.usertoken_.IsDefault()) {
-    _impl_.usertoken_.Set("", GetArenaForAllocation());
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.UserOnlineHeartBeatResponse.UserVerifyInfo)
+}
+inline ::proto::UserVerifyInfoV1* UserOnlineHeartBeatResponse::release_userverifyinfo() {
+  
+  ::proto::UserVerifyInfoV1* temp = _impl_.userverifyinfo_;
+  _impl_.userverifyinfo_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
   }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:proto.UserOnlineHeartBeatResponse.UserToken)
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::proto::UserVerifyInfoV1* UserOnlineHeartBeatResponse::unsafe_arena_release_userverifyinfo() {
+  // @@protoc_insertion_point(field_release:proto.UserOnlineHeartBeatResponse.UserVerifyInfo)
+  
+  ::proto::UserVerifyInfoV1* temp = _impl_.userverifyinfo_;
+  _impl_.userverifyinfo_ = nullptr;
+  return temp;
+}
+inline ::proto::UserVerifyInfoV1* UserOnlineHeartBeatResponse::_internal_mutable_userverifyinfo() {
+  
+  if (_impl_.userverifyinfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::UserVerifyInfoV1>(GetArenaForAllocation());
+    _impl_.userverifyinfo_ = p;
+  }
+  return _impl_.userverifyinfo_;
+}
+inline ::proto::UserVerifyInfoV1* UserOnlineHeartBeatResponse::mutable_userverifyinfo() {
+  ::proto::UserVerifyInfoV1* _msg = _internal_mutable_userverifyinfo();
+  // @@protoc_insertion_point(field_mutable:proto.UserOnlineHeartBeatResponse.UserVerifyInfo)
+  return _msg;
+}
+inline void UserOnlineHeartBeatResponse::set_allocated_userverifyinfo(::proto::UserVerifyInfoV1* userverifyinfo) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userverifyinfo_);
+  }
+  if (userverifyinfo) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(userverifyinfo));
+    if (message_arena != submessage_arena) {
+      userverifyinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, userverifyinfo, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  _impl_.userverifyinfo_ = userverifyinfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.UserOnlineHeartBeatResponse.UserVerifyInfo)
 }
 
 // -------------------------------------------------------------------
