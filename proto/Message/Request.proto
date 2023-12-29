@@ -34,7 +34,7 @@ message UserLoginRequest{
 }
 
 message UserLogoutRequest{
-    UserMetaInfoV1 UserInfo = 1;
+    UserVerifyInfoV1 UserVerifyInfo = 1;
 }
 
 message UserOnlineHeartBeatNotification{

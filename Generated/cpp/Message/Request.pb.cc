@@ -103,7 +103,7 @@ struct UserLoginRequestDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 UserLoginRequestDefaultTypeInternal _UserLoginRequest_default_instance_;
 PROTOBUF_CONSTEXPR UserLogoutRequest::UserLogoutRequest(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.userinfo_)*/nullptr
+    /*decltype(_impl_.userverifyinfo_)*/nullptr
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct UserLogoutRequestDefaultTypeInternal {
   PROTOBUF_CONSTEXPR UserLogoutRequestDefaultTypeInternal()
@@ -635,7 +635,7 @@ const uint32_t TableStruct_Message_2fRequest_2eproto::offsets[] PROTOBUF_SECTION
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::proto::UserLogoutRequest, _impl_.userinfo_),
+  PROTOBUF_FIELD_OFFSET(::proto::UserLogoutRequest, _impl_.userverifyinfo_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::proto::UserOnlineHeartBeatNotification, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -1003,107 +1003,107 @@ const char descriptor_table_protodef_Message_2fRequest_2eproto[] PROTOBUF_SECTIO
   "proto.UserMetaInfoV1\"<\n\021GetAllUserReques"
   "t\022\'\n\010UserInfo\030\001 \001(\0132\025.proto.UserMetaInfo"
   "V1\"6\n\020UserLoginRequest\022\020\n\010UserName\030\001 \001(\t"
-  "\022\020\n\010Password\030\002 \001(\t\"<\n\021UserLogoutRequest\022"
-  "\'\n\010UserInfo\030\001 \001(\0132\025.proto.UserMetaInfoV1"
-  "\"a\n\037UserOnlineHeartBeatNotification\022\'\n\010U"
-  "serInfo\030\001 \001(\0132\025.proto.UserMetaInfoV1\022\025\n\r"
-  "HeartBeatTime\030\002 \001(\003\"H\n\035GetUserPermission"
-  "GroupRequest\022\'\n\010UserInfo\030\001 \001(\0132\025.proto.U"
-  "serMetaInfoV1\"\177\n\031GetPermissionGroupReque"
-  "st\022\'\n\010UserInfo\030\001 \001(\0132\025.proto.UserMetaInf"
-  "oV1\0229\n\017PermissionGroup\030\002 \001(\0132 .proto.Per"
-  "missionGroupMetaInfoV1\"G\n\034GetAllPermissi"
-  "onGroupRequest\022\'\n\010UserInfo\030\001 \001(\0132\025.proto"
-  ".UserMetaInfoV1\"\265\001\n ChangeUserPermission"
-  "GroupRequest\022\'\n\010UserInfo\030\001 \001(\0132\025.proto.U"
-  "serMetaInfoV1\022-\n\016TargetUserInfo\030\002 \001(\0132\025."
-  "proto.UserMetaInfoV1\0229\n\017PermissionGroup\030"
-  "\003 \001(\0132 .proto.PermissionGroupMetaInfoV1\""
-  "n\n\024CreateProjectRequest\022\'\n\010UserInfo\030\001 \001("
+  "\022\020\n\010Password\030\002 \001(\t\"D\n\021UserLogoutRequest\022"
+  "/\n\016UserVerifyInfo\030\001 \001(\0132\027.proto.UserVeri"
+  "fyInfoV1\"a\n\037UserOnlineHeartBeatNotificat"
+  "ion\022\'\n\010UserInfo\030\001 \001(\0132\025.proto.UserMetaIn"
+  "foV1\022\025\n\rHeartBeatTime\030\002 \001(\003\"H\n\035GetUserPe"
+  "rmissionGroupRequest\022\'\n\010UserInfo\030\001 \001(\0132\025"
+  ".proto.UserMetaInfoV1\"\177\n\031GetPermissionGr"
+  "oupRequest\022\'\n\010UserInfo\030\001 \001(\0132\025.proto.Use"
+  "rMetaInfoV1\0229\n\017PermissionGroup\030\002 \001(\0132 .p"
+  "roto.PermissionGroupMetaInfoV1\"G\n\034GetAll"
+  "PermissionGroupRequest\022\'\n\010UserInfo\030\001 \001(\013"
+  "2\025.proto.UserMetaInfoV1\"\265\001\n ChangeUserPe"
+  "rmissionGroupRequest\022\'\n\010UserInfo\030\001 \001(\0132\025"
+  ".proto.UserMetaInfoV1\022-\n\016TargetUserInfo\030"
+  "\002 \001(\0132\025.proto.UserMetaInfoV1\0229\n\017Permissi"
+  "onGroup\030\003 \001(\0132 .proto.PermissionGroupMet"
+  "aInfoV1\"n\n\024CreateProjectRequest\022\'\n\010UserI"
+  "nfo\030\001 \001(\0132\025.proto.UserMetaInfoV1\022-\n\013Proj"
+  "ectInfo\030\002 \001(\0132\030.proto.ProjectMetaInfoV1\""
+  "n\n\024DeleteProjectRequest\022\'\n\010UserInfo\030\001 \001("
   "\0132\025.proto.UserMetaInfoV1\022-\n\013ProjectInfo\030"
-  "\002 \001(\0132\030.proto.ProjectMetaInfoV1\"n\n\024Delet"
+  "\002 \001(\0132\030.proto.ProjectMetaInfoV1\"n\n\024Updat"
   "eProjectRequest\022\'\n\010UserInfo\030\001 \001(\0132\025.prot"
   "o.UserMetaInfoV1\022-\n\013ProjectInfo\030\002 \001(\0132\030."
-  "proto.ProjectMetaInfoV1\"n\n\024UpdateProject"
-  "Request\022\'\n\010UserInfo\030\001 \001(\0132\025.proto.UserMe"
-  "taInfoV1\022-\n\013ProjectInfo\030\002 \001(\0132\030.proto.Pr"
-  "ojectMetaInfoV1\"k\n\021GetProjectRequest\022\'\n\010"
-  "UserInfo\030\001 \001(\0132\025.proto.UserMetaInfoV1\022-\n"
-  "\013ProjectInfo\030\002 \001(\0132\030.proto.ProjectMetaIn"
-  "foV1\"\?\n\024GetAllProjectRequest\022\'\n\010UserInfo"
-  "\030\001 \001(\0132\025.proto.UserMetaInfoV1\"b\n\020CreateS"
-  "wcRequest\022\'\n\010UserInfo\030\001 \001(\0132\025.proto.User"
-  "MetaInfoV1\022%\n\007SwcInfo\030\002 \001(\0132\024.proto.SwcM"
-  "etaInfoV1\"b\n\020DeleteSwcRequest\022\'\n\010UserInf"
-  "o\030\001 \001(\0132\025.proto.UserMetaInfoV1\022%\n\007SwcInf"
-  "o\030\002 \001(\0132\024.proto.SwcMetaInfoV1\"b\n\020UpdateS"
-  "wcRequest\022\'\n\010UserInfo\030\001 \001(\0132\025.proto.User"
-  "MetaInfoV1\022%\n\007SwcInfo\030\002 \001(\0132\024.proto.SwcM"
-  "etaInfoV1\"g\n\025GetSwcMetaInfoRequest\022\'\n\010Us"
-  "erInfo\030\001 \001(\0132\025.proto.UserMetaInfoV1\022%\n\007S"
-  "wcInfo\030\002 \001(\0132\024.proto.SwcMetaInfoV1\"C\n\030Ge"
-  "tAllSwcMetaInfoRequest\022\'\n\010UserInfo\030\001 \001(\013"
-  "2\025.proto.UserMetaInfoV1\"\\\n\030CreateSwcSnap"
-  "shotRequest\022/\n\016UserVerifyInfo\030\001 \001(\0132\027.pr"
-  "oto.UserVerifyInfoV1\022\017\n\007SwcName\030\002 \001(\t\"\177\n"
-  "\030DeleteSwcSnapshotRequest\022/\n\016UserVerifyI"
-  "nfo\030\001 \001(\0132\027.proto.UserVerifyInfoV1\022\017\n\007Sw"
-  "cName\030\002 \001(\t\022!\n\031SwcSnapshotCollectionName"
-  "\030\003 \001(\t\"P\n\035GetAllSnapshotMetaInfoRequest\022"
-  "/\n\016UserVerifyInfo\030\001 \001(\0132\027.proto.UserVeri"
-  "fyInfoV1\"h\n\022GetSnapshotRequest\022/\n\016UserVe"
-  "rifyInfo\030\001 \001(\0132\027.proto.UserVerifyInfoV1\022"
-  "!\n\031SwcSnapshotCollectionName\030\002 \001(\t\"Z\n\'Ge"
-  "tAllIncrementOperationMetaInfoRequest\022/\n"
-  "\016UserVerifyInfo\030\002 \001(\0132\027.proto.UserVerify"
-  "InfoV1\"y\n\034GetIncrementOperationRequest\022/"
+  "proto.ProjectMetaInfoV1\"k\n\021GetProjectReq"
+  "uest\022\'\n\010UserInfo\030\001 \001(\0132\025.proto.UserMetaI"
+  "nfoV1\022-\n\013ProjectInfo\030\002 \001(\0132\030.proto.Proje"
+  "ctMetaInfoV1\"\?\n\024GetAllProjectRequest\022\'\n\010"
+  "UserInfo\030\001 \001(\0132\025.proto.UserMetaInfoV1\"b\n"
+  "\020CreateSwcRequest\022\'\n\010UserInfo\030\001 \001(\0132\025.pr"
+  "oto.UserMetaInfoV1\022%\n\007SwcInfo\030\002 \001(\0132\024.pr"
+  "oto.SwcMetaInfoV1\"b\n\020DeleteSwcRequest\022\'\n"
+  "\010UserInfo\030\001 \001(\0132\025.proto.UserMetaInfoV1\022%"
+  "\n\007SwcInfo\030\002 \001(\0132\024.proto.SwcMetaInfoV1\"b\n"
+  "\020UpdateSwcRequest\022\'\n\010UserInfo\030\001 \001(\0132\025.pr"
+  "oto.UserMetaInfoV1\022%\n\007SwcInfo\030\002 \001(\0132\024.pr"
+  "oto.SwcMetaInfoV1\"g\n\025GetSwcMetaInfoReque"
+  "st\022\'\n\010UserInfo\030\001 \001(\0132\025.proto.UserMetaInf"
+  "oV1\022%\n\007SwcInfo\030\002 \001(\0132\024.proto.SwcMetaInfo"
+  "V1\"C\n\030GetAllSwcMetaInfoRequest\022\'\n\010UserIn"
+  "fo\030\001 \001(\0132\025.proto.UserMetaInfoV1\"\\\n\030Creat"
+  "eSwcSnapshotRequest\022/\n\016UserVerifyInfo\030\001 "
+  "\001(\0132\027.proto.UserVerifyInfoV1\022\017\n\007SwcName\030"
+  "\002 \001(\t\"\177\n\030DeleteSwcSnapshotRequest\022/\n\016Use"
+  "rVerifyInfo\030\001 \001(\0132\027.proto.UserVerifyInfo"
+  "V1\022\017\n\007SwcName\030\002 \001(\t\022!\n\031SwcSnapshotCollec"
+  "tionName\030\003 \001(\t\"P\n\035GetAllSnapshotMetaInfo"
+  "Request\022/\n\016UserVerifyInfo\030\001 \001(\0132\027.proto."
+  "UserVerifyInfoV1\"h\n\022GetSnapshotRequest\022/"
   "\n\016UserVerifyInfo\030\001 \001(\0132\027.proto.UserVerif"
-  "yInfoV1\022(\n IncrementOperationCollectionN"
-  "ame\030\002 \001(\t\"\225\001\n\030CreateSwcNodeDataRequest\022/"
+  "yInfoV1\022!\n\031SwcSnapshotCollectionName\030\002 \001"
+  "(\t\"Z\n\'GetAllIncrementOperationMetaInfoRe"
+  "quest\022/\n\016UserVerifyInfo\030\002 \001(\0132\027.proto.Us"
+  "erVerifyInfoV1\"y\n\034GetIncrementOperationR"
+  "equest\022/\n\016UserVerifyInfo\030\001 \001(\0132\027.proto.U"
+  "serVerifyInfoV1\022(\n IncrementOperationCol"
+  "lectionName\030\002 \001(\t\"\225\001\n\030CreateSwcNodeDataR"
+  "equest\022/\n\016UserVerifyInfo\030\001 \001(\0132\027.proto.U"
+  "serVerifyInfoV1\022%\n\007SwcInfo\030\002 \001(\0132\024.proto"
+  ".SwcMetaInfoV1\022!\n\007SwcData\030\003 \001(\0132\020.proto."
+  "SwcDataV1\"\225\001\n\030DeleteSwcNodeDataRequest\022/"
   "\n\016UserVerifyInfo\030\001 \001(\0132\027.proto.UserVerif"
   "yInfoV1\022%\n\007SwcInfo\030\002 \001(\0132\024.proto.SwcMeta"
   "InfoV1\022!\n\007SwcData\030\003 \001(\0132\020.proto.SwcDataV"
-  "1\"\225\001\n\030DeleteSwcNodeDataRequest\022/\n\016UserVe"
+  "1\"\235\001\n\030UpdateSwcNodeDataRequest\022/\n\016UserVe"
   "rifyInfo\030\001 \001(\0132\027.proto.UserVerifyInfoV1\022"
-  "%\n\007SwcInfo\030\002 \001(\0132\024.proto.SwcMetaInfoV1\022!"
-  "\n\007SwcData\030\003 \001(\0132\020.proto.SwcDataV1\"\235\001\n\030Up"
-  "dateSwcNodeDataRequest\022/\n\016UserVerifyInfo"
-  "\030\001 \001(\0132\027.proto.UserVerifyInfoV1\022%\n\007SwcIn"
-  "fo\030\002 \001(\0132\024.proto.SwcMetaInfoV1\022)\n\013SwcNod"
-  "eData\030\003 \001(\0132\024.proto.SwcNodeDataV1\"\216\001\n\025Ge"
-  "tSwcNodeDataRequest\022\'\n\010UserInfo\030\001 \001(\0132\025."
-  "proto.UserMetaInfoV1\022%\n\007SwcInfo\030\002 \001(\0132\024."
-  "proto.SwcMetaInfoV1\022%\n\013SwcNodeData\030\003 \001(\013"
-  "2\020.proto.SwcDataV1\"k\n\031GetSwcFullNodeData"
-  "Request\022\'\n\010UserInfo\030\001 \001(\0132\025.proto.UserMe"
-  "taInfoV1\022%\n\007SwcInfo\030\002 \001(\0132\024.proto.SwcMet"
-  "aInfoV1\"\346\001\n&GetSwcNodeDataListByTimeAndU"
-  "serRequest\022\'\n\010UserInfo\030\001 \001(\0132\025.proto.Use"
-  "rMetaInfoV1\022%\n\007SwcInfo\030\002 \001(\0132\024.proto.Swc"
-  "MetaInfoV1\022-\n\tStartTime\030\003 \001(\0132\032.google.p"
-  "rotobuf.Timestamp\022+\n\007EndTime\030\004 \001(\0132\032.goo"
-  "gle.protobuf.Timestamp\022\020\n\010UserName\030\005 \001(\t"
-  "\"\220\001\n\031BackupFullDatabaseRequest\022\'\n\010UserIn"
-  "fo\030\001 \001(\0132\025.proto.UserMetaInfoV1\022\025\n\rInsta"
-  "ntBackup\030\002 \001(\010\0223\n\017DelayBackupTime\030\003 \001(\0132"
-  "\032.google.protobuf.Timestamp\"\206\001\n\034CreateDa"
-  "ilyStatisticsRequest\022\'\n\010UserInfo\030\001 \001(\0132\025"
-  ".proto.UserMetaInfoV1\022=\n\023DailyStatistics"
-  "Info\030\002 \001(\0132 .proto.DailyStatisticsMetaIn"
-  "foV1\"\206\001\n\034DeleteDailyStatisticsRequest\022\'\n"
-  "\010UserInfo\030\001 \001(\0132\025.proto.UserMetaInfoV1\022="
-  "\n\023DailyStatisticsInfo\030\002 \001(\0132 .proto.Dail"
-  "yStatisticsMetaInfoV1\"\206\001\n\034UpdateDailySta"
-  "tisticsRequest\022\'\n\010UserInfo\030\001 \001(\0132\025.proto"
-  ".UserMetaInfoV1\022=\n\023DailyStatisticsInfo\030\002"
-  " \001(\0132 .proto.DailyStatisticsMetaInfoV1\"\203"
-  "\001\n\031GetDailyStatisticsRequest\022\'\n\010UserInfo"
+  "%\n\007SwcInfo\030\002 \001(\0132\024.proto.SwcMetaInfoV1\022)"
+  "\n\013SwcNodeData\030\003 \001(\0132\024.proto.SwcNodeDataV"
+  "1\"\216\001\n\025GetSwcNodeDataRequest\022\'\n\010UserInfo\030"
+  "\001 \001(\0132\025.proto.UserMetaInfoV1\022%\n\007SwcInfo\030"
+  "\002 \001(\0132\024.proto.SwcMetaInfoV1\022%\n\013SwcNodeDa"
+  "ta\030\003 \001(\0132\020.proto.SwcDataV1\"k\n\031GetSwcFull"
+  "NodeDataRequest\022\'\n\010UserInfo\030\001 \001(\0132\025.prot"
+  "o.UserMetaInfoV1\022%\n\007SwcInfo\030\002 \001(\0132\024.prot"
+  "o.SwcMetaInfoV1\"\346\001\n&GetSwcNodeDataListBy"
+  "TimeAndUserRequest\022\'\n\010UserInfo\030\001 \001(\0132\025.p"
+  "roto.UserMetaInfoV1\022%\n\007SwcInfo\030\002 \001(\0132\024.p"
+  "roto.SwcMetaInfoV1\022-\n\tStartTime\030\003 \001(\0132\032."
+  "google.protobuf.Timestamp\022+\n\007EndTime\030\004 \001"
+  "(\0132\032.google.protobuf.Timestamp\022\020\n\010UserNa"
+  "me\030\005 \001(\t\"\220\001\n\031BackupFullDatabaseRequest\022\'"
+  "\n\010UserInfo\030\001 \001(\0132\025.proto.UserMetaInfoV1\022"
+  "\025\n\rInstantBackup\030\002 \001(\010\0223\n\017DelayBackupTim"
+  "e\030\003 \001(\0132\032.google.protobuf.Timestamp\"\206\001\n\034"
+  "CreateDailyStatisticsRequest\022\'\n\010UserInfo"
   "\030\001 \001(\0132\025.proto.UserMetaInfoV1\022=\n\023DailySt"
   "atisticsInfo\030\002 \001(\0132 .proto.DailyStatisti"
-  "csMetaInfoV1\"G\n\034GetAllDailyStatisticsReq"
-  "uest\022\'\n\010UserInfo\030\001 \001(\0132\025.proto.UserMetaI"
-  "nfoV1B/Z-DBMS/SwcDbmsCommon/Generated/go"
-  "/proto/requestP\000b\006proto3"
+  "csMetaInfoV1\"\206\001\n\034DeleteDailyStatisticsRe"
+  "quest\022\'\n\010UserInfo\030\001 \001(\0132\025.proto.UserMeta"
+  "InfoV1\022=\n\023DailyStatisticsInfo\030\002 \001(\0132 .pr"
+  "oto.DailyStatisticsMetaInfoV1\"\206\001\n\034Update"
+  "DailyStatisticsRequest\022\'\n\010UserInfo\030\001 \001(\013"
+  "2\025.proto.UserMetaInfoV1\022=\n\023DailyStatisti"
+  "csInfo\030\002 \001(\0132 .proto.DailyStatisticsMeta"
+  "InfoV1\"\203\001\n\031GetDailyStatisticsRequest\022\'\n\010"
+  "UserInfo\030\001 \001(\0132\025.proto.UserMetaInfoV1\022=\n"
+  "\023DailyStatisticsInfo\030\002 \001(\0132 .proto.Daily"
+  "StatisticsMetaInfoV1\"G\n\034GetAllDailyStati"
+  "sticsRequest\022\'\n\010UserInfo\030\001 \001(\0132\025.proto.U"
+  "serMetaInfoV1B/Z-DBMS/SwcDbmsCommon/Gene"
+  "rated/go/proto/requestP\000b\006proto3"
   ;
 static const ::_pbi::DescriptorTable* const descriptor_table_Message_2fRequest_2eproto_deps[2] = {
   &::descriptor_table_Message_2fMessage_2eproto,
@@ -1111,7 +1111,7 @@ static const ::_pbi::DescriptorTable* const descriptor_table_Message_2fRequest_2
 };
 static ::_pbi::once_flag descriptor_table_Message_2fRequest_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_Message_2fRequest_2eproto = {
-    false, false, 4504, descriptor_table_protodef_Message_2fRequest_2eproto,
+    false, false, 4512, descriptor_table_protodef_Message_2fRequest_2eproto,
     "Message/Request.proto",
     &descriptor_table_Message_2fRequest_2eproto_once, descriptor_table_Message_2fRequest_2eproto_deps, 2, 40,
     schemas, file_default_instances, TableStruct_Message_2fRequest_2eproto::offsets,
@@ -2430,18 +2430,18 @@ void UserLoginRequest::InternalSwap(UserLoginRequest* other) {
 
 class UserLogoutRequest::_Internal {
  public:
-  static const ::proto::UserMetaInfoV1& userinfo(const UserLogoutRequest* msg);
+  static const ::proto::UserVerifyInfoV1& userverifyinfo(const UserLogoutRequest* msg);
 };
 
-const ::proto::UserMetaInfoV1&
-UserLogoutRequest::_Internal::userinfo(const UserLogoutRequest* msg) {
-  return *msg->_impl_.userinfo_;
+const ::proto::UserVerifyInfoV1&
+UserLogoutRequest::_Internal::userverifyinfo(const UserLogoutRequest* msg) {
+  return *msg->_impl_.userverifyinfo_;
 }
-void UserLogoutRequest::clear_userinfo() {
-  if (GetArenaForAllocation() == nullptr && _impl_.userinfo_ != nullptr) {
-    delete _impl_.userinfo_;
+void UserLogoutRequest::clear_userverifyinfo() {
+  if (GetArenaForAllocation() == nullptr && _impl_.userverifyinfo_ != nullptr) {
+    delete _impl_.userverifyinfo_;
   }
-  _impl_.userinfo_ = nullptr;
+  _impl_.userverifyinfo_ = nullptr;
 }
 UserLogoutRequest::UserLogoutRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
@@ -2453,12 +2453,12 @@ UserLogoutRequest::UserLogoutRequest(const UserLogoutRequest& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   UserLogoutRequest* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.userinfo_){nullptr}
+      decltype(_impl_.userverifyinfo_){nullptr}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  if (from._internal_has_userinfo()) {
-    _this->_impl_.userinfo_ = new ::proto::UserMetaInfoV1(*from._impl_.userinfo_);
+  if (from._internal_has_userverifyinfo()) {
+    _this->_impl_.userverifyinfo_ = new ::proto::UserVerifyInfoV1(*from._impl_.userverifyinfo_);
   }
   // @@protoc_insertion_point(copy_constructor:proto.UserLogoutRequest)
 }
@@ -2468,7 +2468,7 @@ inline void UserLogoutRequest::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.userinfo_){nullptr}
+      decltype(_impl_.userverifyinfo_){nullptr}
     , /*decltype(_impl_._cached_size_)*/{}
   };
 }
@@ -2484,7 +2484,7 @@ UserLogoutRequest::~UserLogoutRequest() {
 
 inline void UserLogoutRequest::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  if (this != internal_default_instance()) delete _impl_.userinfo_;
+  if (this != internal_default_instance()) delete _impl_.userverifyinfo_;
 }
 
 void UserLogoutRequest::SetCachedSize(int size) const {
@@ -2497,10 +2497,10 @@ void UserLogoutRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArenaForAllocation() == nullptr && _impl_.userinfo_ != nullptr) {
-    delete _impl_.userinfo_;
+  if (GetArenaForAllocation() == nullptr && _impl_.userverifyinfo_ != nullptr) {
+    delete _impl_.userverifyinfo_;
   }
-  _impl_.userinfo_ = nullptr;
+  _impl_.userverifyinfo_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -2510,10 +2510,10 @@ const char* UserLogoutRequest::_InternalParse(const char* ptr, ::_pbi::ParseCont
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .proto.UserMetaInfoV1 UserInfo = 1;
+      // .proto.UserVerifyInfoV1 UserVerifyInfo = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_userinfo(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_userverifyinfo(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -2547,11 +2547,11 @@ uint8_t* UserLogoutRequest::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .proto.UserMetaInfoV1 UserInfo = 1;
-  if (this->_internal_has_userinfo()) {
+  // .proto.UserVerifyInfoV1 UserVerifyInfo = 1;
+  if (this->_internal_has_userverifyinfo()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(1, _Internal::userinfo(this),
-        _Internal::userinfo(this).GetCachedSize(), target, stream);
+      InternalWriteMessage(1, _Internal::userverifyinfo(this),
+        _Internal::userverifyinfo(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -2570,11 +2570,11 @@ size_t UserLogoutRequest::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // .proto.UserMetaInfoV1 UserInfo = 1;
-  if (this->_internal_has_userinfo()) {
+  // .proto.UserVerifyInfoV1 UserVerifyInfo = 1;
+  if (this->_internal_has_userverifyinfo()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.userinfo_);
+        *_impl_.userverifyinfo_);
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -2595,9 +2595,9 @@ void UserLogoutRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, cons
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_userinfo()) {
-    _this->_internal_mutable_userinfo()->::proto::UserMetaInfoV1::MergeFrom(
-        from._internal_userinfo());
+  if (from._internal_has_userverifyinfo()) {
+    _this->_internal_mutable_userverifyinfo()->::proto::UserVerifyInfoV1::MergeFrom(
+        from._internal_userverifyinfo());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -2616,7 +2616,7 @@ bool UserLogoutRequest::IsInitialized() const {
 void UserLogoutRequest::InternalSwap(UserLogoutRequest* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_.userinfo_, other->_impl_.userinfo_);
+  swap(_impl_.userverifyinfo_, other->_impl_.userverifyinfo_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata UserLogoutRequest::GetMetadata() const {

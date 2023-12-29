@@ -2639,8 +2639,8 @@
     "protoUserLogoutRequest": {
       "type": "object",
       "properties": {
-        "UserInfo": {
-          "$ref": "#/definitions/protoUserMetaInfoV1"
+        "UserVerifyInfo": {
+          "$ref": "#/definitions/protoUserVerifyInfoV1"
         }
       }
     },

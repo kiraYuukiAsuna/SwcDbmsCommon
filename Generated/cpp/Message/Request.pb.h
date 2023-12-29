@@ -1309,25 +1309,25 @@ class UserLogoutRequest final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kUserInfoFieldNumber = 1,
+    kUserVerifyInfoFieldNumber = 1,
   };
-  // .proto.UserMetaInfoV1 UserInfo = 1;
-  bool has_userinfo() const;
+  // .proto.UserVerifyInfoV1 UserVerifyInfo = 1;
+  bool has_userverifyinfo() const;
   private:
-  bool _internal_has_userinfo() const;
+  bool _internal_has_userverifyinfo() const;
   public:
-  void clear_userinfo();
-  const ::proto::UserMetaInfoV1& userinfo() const;
-  PROTOBUF_NODISCARD ::proto::UserMetaInfoV1* release_userinfo();
-  ::proto::UserMetaInfoV1* mutable_userinfo();
-  void set_allocated_userinfo(::proto::UserMetaInfoV1* userinfo);
+  void clear_userverifyinfo();
+  const ::proto::UserVerifyInfoV1& userverifyinfo() const;
+  PROTOBUF_NODISCARD ::proto::UserVerifyInfoV1* release_userverifyinfo();
+  ::proto::UserVerifyInfoV1* mutable_userverifyinfo();
+  void set_allocated_userverifyinfo(::proto::UserVerifyInfoV1* userverifyinfo);
   private:
-  const ::proto::UserMetaInfoV1& _internal_userinfo() const;
-  ::proto::UserMetaInfoV1* _internal_mutable_userinfo();
+  const ::proto::UserVerifyInfoV1& _internal_userverifyinfo() const;
+  ::proto::UserVerifyInfoV1* _internal_mutable_userverifyinfo();
   public:
-  void unsafe_arena_set_allocated_userinfo(
-      ::proto::UserMetaInfoV1* userinfo);
-  ::proto::UserMetaInfoV1* unsafe_arena_release_userinfo();
+  void unsafe_arena_set_allocated_userverifyinfo(
+      ::proto::UserVerifyInfoV1* userverifyinfo);
+  ::proto::UserVerifyInfoV1* unsafe_arena_release_userverifyinfo();
 
   // @@protoc_insertion_point(class_scope:proto.UserLogoutRequest)
  private:
@@ -1337,7 +1337,7 @@ class UserLogoutRequest final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::proto::UserMetaInfoV1* userinfo_;
+    ::proto::UserVerifyInfoV1* userverifyinfo_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -7847,39 +7847,39 @@ inline void UserLoginRequest::set_allocated_password(std::string* password) {
 
 // UserLogoutRequest
 
-// .proto.UserMetaInfoV1 UserInfo = 1;
-inline bool UserLogoutRequest::_internal_has_userinfo() const {
-  return this != internal_default_instance() && _impl_.userinfo_ != nullptr;
+// .proto.UserVerifyInfoV1 UserVerifyInfo = 1;
+inline bool UserLogoutRequest::_internal_has_userverifyinfo() const {
+  return this != internal_default_instance() && _impl_.userverifyinfo_ != nullptr;
 }
-inline bool UserLogoutRequest::has_userinfo() const {
-  return _internal_has_userinfo();
+inline bool UserLogoutRequest::has_userverifyinfo() const {
+  return _internal_has_userverifyinfo();
 }
-inline const ::proto::UserMetaInfoV1& UserLogoutRequest::_internal_userinfo() const {
-  const ::proto::UserMetaInfoV1* p = _impl_.userinfo_;
-  return p != nullptr ? *p : reinterpret_cast<const ::proto::UserMetaInfoV1&>(
-      ::proto::_UserMetaInfoV1_default_instance_);
+inline const ::proto::UserVerifyInfoV1& UserLogoutRequest::_internal_userverifyinfo() const {
+  const ::proto::UserVerifyInfoV1* p = _impl_.userverifyinfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::UserVerifyInfoV1&>(
+      ::proto::_UserVerifyInfoV1_default_instance_);
 }
-inline const ::proto::UserMetaInfoV1& UserLogoutRequest::userinfo() const {
-  // @@protoc_insertion_point(field_get:proto.UserLogoutRequest.UserInfo)
-  return _internal_userinfo();
+inline const ::proto::UserVerifyInfoV1& UserLogoutRequest::userverifyinfo() const {
+  // @@protoc_insertion_point(field_get:proto.UserLogoutRequest.UserVerifyInfo)
+  return _internal_userverifyinfo();
 }
-inline void UserLogoutRequest::unsafe_arena_set_allocated_userinfo(
-    ::proto::UserMetaInfoV1* userinfo) {
+inline void UserLogoutRequest::unsafe_arena_set_allocated_userverifyinfo(
+    ::proto::UserVerifyInfoV1* userverifyinfo) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userinfo_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userverifyinfo_);
   }
-  _impl_.userinfo_ = userinfo;
-  if (userinfo) {
+  _impl_.userverifyinfo_ = userverifyinfo;
+  if (userverifyinfo) {
     
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.UserLogoutRequest.UserInfo)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.UserLogoutRequest.UserVerifyInfo)
 }
-inline ::proto::UserMetaInfoV1* UserLogoutRequest::release_userinfo() {
+inline ::proto::UserVerifyInfoV1* UserLogoutRequest::release_userverifyinfo() {
   
-  ::proto::UserMetaInfoV1* temp = _impl_.userinfo_;
-  _impl_.userinfo_ = nullptr;
+  ::proto::UserVerifyInfoV1* temp = _impl_.userverifyinfo_;
+  _impl_.userverifyinfo_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -7891,45 +7891,45 @@ inline ::proto::UserMetaInfoV1* UserLogoutRequest::release_userinfo() {
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::proto::UserMetaInfoV1* UserLogoutRequest::unsafe_arena_release_userinfo() {
-  // @@protoc_insertion_point(field_release:proto.UserLogoutRequest.UserInfo)
+inline ::proto::UserVerifyInfoV1* UserLogoutRequest::unsafe_arena_release_userverifyinfo() {
+  // @@protoc_insertion_point(field_release:proto.UserLogoutRequest.UserVerifyInfo)
   
-  ::proto::UserMetaInfoV1* temp = _impl_.userinfo_;
-  _impl_.userinfo_ = nullptr;
+  ::proto::UserVerifyInfoV1* temp = _impl_.userverifyinfo_;
+  _impl_.userverifyinfo_ = nullptr;
   return temp;
 }
-inline ::proto::UserMetaInfoV1* UserLogoutRequest::_internal_mutable_userinfo() {
+inline ::proto::UserVerifyInfoV1* UserLogoutRequest::_internal_mutable_userverifyinfo() {
   
-  if (_impl_.userinfo_ == nullptr) {
-    auto* p = CreateMaybeMessage<::proto::UserMetaInfoV1>(GetArenaForAllocation());
-    _impl_.userinfo_ = p;
+  if (_impl_.userverifyinfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::UserVerifyInfoV1>(GetArenaForAllocation());
+    _impl_.userverifyinfo_ = p;
   }
-  return _impl_.userinfo_;
+  return _impl_.userverifyinfo_;
 }
-inline ::proto::UserMetaInfoV1* UserLogoutRequest::mutable_userinfo() {
-  ::proto::UserMetaInfoV1* _msg = _internal_mutable_userinfo();
-  // @@protoc_insertion_point(field_mutable:proto.UserLogoutRequest.UserInfo)
+inline ::proto::UserVerifyInfoV1* UserLogoutRequest::mutable_userverifyinfo() {
+  ::proto::UserVerifyInfoV1* _msg = _internal_mutable_userverifyinfo();
+  // @@protoc_insertion_point(field_mutable:proto.UserLogoutRequest.UserVerifyInfo)
   return _msg;
 }
-inline void UserLogoutRequest::set_allocated_userinfo(::proto::UserMetaInfoV1* userinfo) {
+inline void UserLogoutRequest::set_allocated_userverifyinfo(::proto::UserVerifyInfoV1* userverifyinfo) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userinfo_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userverifyinfo_);
   }
-  if (userinfo) {
+  if (userverifyinfo) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(userinfo));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(userverifyinfo));
     if (message_arena != submessage_arena) {
-      userinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, userinfo, submessage_arena);
+      userverifyinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, userverifyinfo, submessage_arena);
     }
     
   } else {
     
   }
-  _impl_.userinfo_ = userinfo;
-  // @@protoc_insertion_point(field_set_allocated:proto.UserLogoutRequest.UserInfo)
+  _impl_.userverifyinfo_ = userverifyinfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.UserLogoutRequest.UserVerifyInfo)
 }
 
 // -------------------------------------------------------------------
