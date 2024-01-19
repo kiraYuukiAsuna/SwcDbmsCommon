@@ -1792,6 +1792,7 @@ class SwcSnapshotMetaInfoV1 final :
 
   enum : int {
     kSwcSnapshotCollectionNameFieldNumber = 2,
+    kCreatorFieldNumber = 4,
     kBaseFieldNumber = 1,
     kCreateTimeFieldNumber = 3,
   };
@@ -1807,6 +1808,20 @@ class SwcSnapshotMetaInfoV1 final :
   const std::string& _internal_swcsnapshotcollectionname() const;
   inline PROTOBUF_ALWAYS_INLINE void _internal_set_swcsnapshotcollectionname(const std::string& value);
   std::string* _internal_mutable_swcsnapshotcollectionname();
+  public:
+
+  // string creator = 4;
+  void clear_creator();
+  const std::string& creator() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_creator(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_creator();
+  PROTOBUF_NODISCARD std::string* release_creator();
+  void set_allocated_creator(std::string* creator);
+  private:
+  const std::string& _internal_creator() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_creator(const std::string& value);
+  std::string* _internal_mutable_creator();
   public:
 
   // .proto.MetaInfoBase Base = 1;
@@ -1854,6 +1869,7 @@ class SwcSnapshotMetaInfoV1 final :
   typedef void DestructorSkippable_;
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr swcsnapshotcollectionname_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr creator_;
     ::proto::MetaInfoBase* base_;
     ::PROTOBUF_NAMESPACE_ID::Timestamp* createtime_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
@@ -6339,6 +6355,56 @@ inline void SwcSnapshotMetaInfoV1::set_allocated_createtime(::PROTOBUF_NAMESPACE
   }
   _impl_.createtime_ = createtime;
   // @@protoc_insertion_point(field_set_allocated:proto.SwcSnapshotMetaInfoV1.CreateTime)
+}
+
+// string creator = 4;
+inline void SwcSnapshotMetaInfoV1::clear_creator() {
+  _impl_.creator_.ClearToEmpty();
+}
+inline const std::string& SwcSnapshotMetaInfoV1::creator() const {
+  // @@protoc_insertion_point(field_get:proto.SwcSnapshotMetaInfoV1.creator)
+  return _internal_creator();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void SwcSnapshotMetaInfoV1::set_creator(ArgT0&& arg0, ArgT... args) {
+ 
+ _impl_.creator_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:proto.SwcSnapshotMetaInfoV1.creator)
+}
+inline std::string* SwcSnapshotMetaInfoV1::mutable_creator() {
+  std::string* _s = _internal_mutable_creator();
+  // @@protoc_insertion_point(field_mutable:proto.SwcSnapshotMetaInfoV1.creator)
+  return _s;
+}
+inline const std::string& SwcSnapshotMetaInfoV1::_internal_creator() const {
+  return _impl_.creator_.Get();
+}
+inline void SwcSnapshotMetaInfoV1::_internal_set_creator(const std::string& value) {
+  
+  _impl_.creator_.Set(value, GetArenaForAllocation());
+}
+inline std::string* SwcSnapshotMetaInfoV1::_internal_mutable_creator() {
+  
+  return _impl_.creator_.Mutable(GetArenaForAllocation());
+}
+inline std::string* SwcSnapshotMetaInfoV1::release_creator() {
+  // @@protoc_insertion_point(field_release:proto.SwcSnapshotMetaInfoV1.creator)
+  return _impl_.creator_.Release();
+}
+inline void SwcSnapshotMetaInfoV1::set_allocated_creator(std::string* creator) {
+  if (creator != nullptr) {
+    
+  } else {
+    
+  }
+  _impl_.creator_.SetAllocated(creator, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.creator_.IsDefault()) {
+    _impl_.creator_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:proto.SwcSnapshotMetaInfoV1.creator)
 }
 
 // -------------------------------------------------------------------

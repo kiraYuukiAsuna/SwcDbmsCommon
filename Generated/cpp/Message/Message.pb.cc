@@ -142,6 +142,7 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORIT
 PROTOBUF_CONSTEXPR SwcSnapshotMetaInfoV1::SwcSnapshotMetaInfoV1(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_.swcsnapshotcollectionname_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.creator_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.base_)*/nullptr
   , /*decltype(_impl_.createtime_)*/nullptr
   , /*decltype(_impl_._cached_size_)*/{}} {}
@@ -437,6 +438,7 @@ const uint32_t TableStruct_Message_2fMessage_2eproto::offsets[] PROTOBUF_SECTION
   PROTOBUF_FIELD_OFFSET(::proto::SwcSnapshotMetaInfoV1, _impl_.base_),
   PROTOBUF_FIELD_OFFSET(::proto::SwcSnapshotMetaInfoV1, _impl_.swcsnapshotcollectionname_),
   PROTOBUF_FIELD_OFFSET(::proto::SwcSnapshotMetaInfoV1, _impl_.createtime_),
+  PROTOBUF_FIELD_OFFSET(::proto::SwcSnapshotMetaInfoV1, _impl_.creator_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::proto::SwcIncrementOperationMetaInfoV1, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -573,17 +575,17 @@ static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protode
   { 53, -1, -1, sizeof(::proto::UserPermissionOverrideMetaInfoV1)},
   { 61, -1, -1, sizeof(::proto::ProjectMetaInfoV1)},
   { 76, -1, -1, sizeof(::proto::SwcSnapshotMetaInfoV1)},
-  { 85, -1, -1, sizeof(::proto::SwcIncrementOperationMetaInfoV1)},
-  { 95, -1, -1, sizeof(::proto::SwcIncrementOperationV1)},
-  { 104, -1, -1, sizeof(::proto::SwcIncrementOperationListV1)},
-  { 111, -1, -1, sizeof(::proto::SwcMetaInfoV1)},
-  { 127, -1, -1, sizeof(::proto::SwcNodeInternalDataV1)},
-  { 145, -1, -1, sizeof(::proto::SwcNodeDataV1)},
-  { 157, -1, -1, sizeof(::proto::SwcDataV1)},
-  { 164, -1, -1, sizeof(::proto::DailyStatisticsMetaInfoV1)},
-  { 187, -1, -1, sizeof(::proto::UserVerifyInfoV1)},
-  { 195, -1, -1, sizeof(::proto::RequestMetaInfoV1)},
-  { 202, -1, -1, sizeof(::proto::ResponseMetaInfoV1)},
+  { 86, -1, -1, sizeof(::proto::SwcIncrementOperationMetaInfoV1)},
+  { 96, -1, -1, sizeof(::proto::SwcIncrementOperationV1)},
+  { 105, -1, -1, sizeof(::proto::SwcIncrementOperationListV1)},
+  { 112, -1, -1, sizeof(::proto::SwcMetaInfoV1)},
+  { 128, -1, -1, sizeof(::proto::SwcNodeInternalDataV1)},
+  { 146, -1, -1, sizeof(::proto::SwcNodeDataV1)},
+  { 158, -1, -1, sizeof(::proto::SwcDataV1)},
+  { 165, -1, -1, sizeof(::proto::DailyStatisticsMetaInfoV1)},
+  { 188, -1, -1, sizeof(::proto::UserVerifyInfoV1)},
+  { 196, -1, -1, sizeof(::proto::RequestMetaInfoV1)},
+  { 203, -1, -1, sizeof(::proto::ResponseMetaInfoV1)},
 };
 
 static const ::_pb::Message* const file_default_instances[] = {
@@ -642,71 +644,72 @@ const char descriptor_table_protodef_Message_2fMessage_2eproto[] PROTOBUF_SECTIO
   "dTime\030\006 \001(\0132\032.google.protobuf.Timestamp\022"
   "\017\n\007SwcList\030\007 \003(\t\022G\n\026UserPermissionOverri"
   "de\030\010 \003(\0132\'.proto.UserPermissionOverrideM"
-  "etaInfoV1\022\020\n\010WorkMode\030\t \001(\t\"\215\001\n\025SwcSnaps"
+  "etaInfoV1\022\020\n\010WorkMode\030\t \001(\t\"\236\001\n\025SwcSnaps"
   "hotMetaInfoV1\022!\n\004Base\030\001 \001(\0132\023.proto.Meta"
   "InfoBase\022!\n\031SwcSnapshotCollectionName\030\002 "
   "\001(\t\022.\n\nCreateTime\030\003 \001(\0132\032.google.protobu"
-  "f.Timestamp\"\265\001\n\037SwcIncrementOperationMet"
-  "aInfoV1\022!\n\004Base\030\001 \001(\0132\023.proto.MetaInfoBa"
-  "se\022(\n IncrementOperationCollectionName\030\002"
-  " \001(\t\022\025\n\rStartSnapshot\030\003 \001(\t\022.\n\nCreateTim"
-  "e\030\004 \001(\0132\032.google.protobuf.Timestamp\"\240\001\n\027"
-  "SwcIncrementOperationV1\022!\n\004Base\030\001 \001(\0132\023."
-  "proto.MetaInfoBase\0227\n\022IncrementOperation"
-  "\030\002 \001(\0162\033.proto.IncrementOperationV1\022)\n\013S"
-  "wcNodeData\030\003 \001(\0132\024.proto.SwcNodeDataV1\"`"
-  "\n\033SwcIncrementOperationListV1\022A\n\031SwcIncr"
-  "ementOperationList\030\001 \003(\0132\036.proto.SwcIncr"
-  "ementOperationV1\"\240\003\n\rSwcMetaInfoV1\022!\n\004Ba"
-  "se\030\001 \001(\0132\023.proto.MetaInfoBase\022\014\n\004Name\030\002 "
-  "\001(\t\022\023\n\013Description\030\003 \001(\t\022\017\n\007Creator\030\004 \001("
-  "\t\022\017\n\007SwcType\030\005 \001(\t\022.\n\nCreateTime\030\006 \001(\0132\032"
-  ".google.protobuf.Timestamp\0224\n\020LastModifi"
-  "edTime\030\007 \001(\0132\032.google.protobuf.Timestamp"
-  "\022=\n\027SwcSnapshotMetaInfoList\030\010 \003(\0132\034.prot"
-  "o.SwcSnapshotMetaInfoV1\022Q\n!SwcIncrementO"
-  "perationMetaInfoList\030\t \003(\0132&.proto.SwcIn"
-  "crementOperationMetaInfoV1\022/\n\'CurrentInc"
-  "rementOperationCollectionName\030\n \001(\t\"\310\001\n\025"
-  "SwcNodeInternalDataV1\022\t\n\001N\030\001 \001(\005\022\014\n\004Type"
-  "\030\002 \001(\005\022\t\n\001X\030\003 \001(\002\022\t\n\001Y\030\004 \001(\002\022\t\n\001Z\030\005 \001(\002\022"
-  "\016\n\006Radius\030\006 \001(\002\022\016\n\006Parent\030\007 \001(\005\022\016\n\006Seg_i"
-  "d\030\010 \001(\005\022\r\n\005Level\030\t \001(\005\022\014\n\004Mode\030\n \001(\005\022\021\n\t"
-  "Timestamp\030\013 \001(\005\022\025\n\rFeature_value\030\014 \001(\005\"\375"
-  "\001\n\rSwcNodeDataV1\022!\n\004Base\030\001 \001(\0132\023.proto.M"
-  "etaInfoBase\0229\n\023SwcNodeInternalData\030\002 \001(\013"
-  "2\034.proto.SwcNodeInternalDataV1\022\017\n\007Creato"
-  "r\030\003 \001(\t\022.\n\nCreateTime\030\004 \001(\0132\032.google.pro"
-  "tobuf.Timestamp\0224\n\020LastModifiedTime\030\005 \001("
-  "\0132\032.google.protobuf.Timestamp\022\027\n\017Checker"
-  "UserUuid\030\006 \001(\t\"2\n\tSwcDataV1\022%\n\007SwcData\030\001"
-  " \003(\0132\024.proto.SwcNodeDataV1\"\331\003\n\031DailyStat"
-  "isticsMetaInfoV1\022!\n\004Base\030\001 \001(\0132\023.proto.M"
-  "etaInfoBase\022\014\n\004Name\030\002 \001(\t\022\023\n\013Description"
-  "\030\003 \001(\t\022\013\n\003Day\030\004 \001(\t\022\034\n\024CreatedProjectNum"
-  "ber\030\005 \001(\005\022\030\n\020CreatedSwcNumber\030\006 \001(\005\022\033\n\023C"
-  "reateSwcNodeNumber\030\007 \001(\005\022\034\n\024DeletedProje"
-  "ctNumber\030\010 \001(\005\022\030\n\020DeletedSwcNumber\030\t \001(\005"
-  "\022\034\n\024DeletedSwcNodeNumber\030\n \001(\005\022\035\n\025Modifi"
-  "edProjectNumber\030\013 \001(\005\022\031\n\021ModifiedSwcNumb"
-  "er\030\014 \001(\005\022\035\n\025ModifiedSwcNodeNumber\030\r \001(\005\022"
-  "\032\n\022ProjectQueryNumber\030\016 \001(\005\022\026\n\016SwcQueryN"
-  "umber\030\017 \001(\005\022\027\n\017NodeQueryNumber\030\020 \001(\005\022\030\n\020"
-  "ActiveUserNumber\030\021 \001(\005\"7\n\020UserVerifyInfo"
-  "V1\022\020\n\010UserName\030\001 \001(\t\022\021\n\tUserToken\030\002 \001(\t\""
-  "\'\n\021RequestMetaInfoV1\022\022\n\nApiVersion\030\001 \001(\t"
-  "\"A\n\022ResponseMetaInfoV1\022\016\n\006Status\030\001 \001(\010\022\n"
-  "\n\002Id\030\002 \001(\t\022\017\n\007Message\030\003 \001(\t*G\n\024Increment"
-  "OperationV1\022\013\n\007Unknown\020\000\022\n\n\006Create\020\001\022\n\n\006"
-  "Delete\020\002\022\n\n\006Update\020\003B/Z-DBMS/SwcDbmsComm"
-  "on/Generated/go/proto/messageP\000b\006proto3"
+  "f.Timestamp\022\017\n\007creator\030\004 \001(\t\"\265\001\n\037SwcIncr"
+  "ementOperationMetaInfoV1\022!\n\004Base\030\001 \001(\0132\023"
+  ".proto.MetaInfoBase\022(\n IncrementOperatio"
+  "nCollectionName\030\002 \001(\t\022\025\n\rStartSnapshot\030\003"
+  " \001(\t\022.\n\nCreateTime\030\004 \001(\0132\032.google.protob"
+  "uf.Timestamp\"\240\001\n\027SwcIncrementOperationV1"
+  "\022!\n\004Base\030\001 \001(\0132\023.proto.MetaInfoBase\0227\n\022I"
+  "ncrementOperation\030\002 \001(\0162\033.proto.Incremen"
+  "tOperationV1\022)\n\013SwcNodeData\030\003 \001(\0132\024.prot"
+  "o.SwcNodeDataV1\"`\n\033SwcIncrementOperation"
+  "ListV1\022A\n\031SwcIncrementOperationList\030\001 \003("
+  "\0132\036.proto.SwcIncrementOperationV1\"\240\003\n\rSw"
+  "cMetaInfoV1\022!\n\004Base\030\001 \001(\0132\023.proto.MetaIn"
+  "foBase\022\014\n\004Name\030\002 \001(\t\022\023\n\013Description\030\003 \001("
+  "\t\022\017\n\007Creator\030\004 \001(\t\022\017\n\007SwcType\030\005 \001(\t\022.\n\nC"
+  "reateTime\030\006 \001(\0132\032.google.protobuf.Timest"
+  "amp\0224\n\020LastModifiedTime\030\007 \001(\0132\032.google.p"
+  "rotobuf.Timestamp\022=\n\027SwcSnapshotMetaInfo"
+  "List\030\010 \003(\0132\034.proto.SwcSnapshotMetaInfoV1"
+  "\022Q\n!SwcIncrementOperationMetaInfoList\030\t "
+  "\003(\0132&.proto.SwcIncrementOperationMetaInf"
+  "oV1\022/\n\'CurrentIncrementOperationCollecti"
+  "onName\030\n \001(\t\"\310\001\n\025SwcNodeInternalDataV1\022\t"
+  "\n\001N\030\001 \001(\005\022\014\n\004Type\030\002 \001(\005\022\t\n\001X\030\003 \001(\002\022\t\n\001Y\030"
+  "\004 \001(\002\022\t\n\001Z\030\005 \001(\002\022\016\n\006Radius\030\006 \001(\002\022\016\n\006Pare"
+  "nt\030\007 \001(\005\022\016\n\006Seg_id\030\010 \001(\005\022\r\n\005Level\030\t \001(\005\022"
+  "\014\n\004Mode\030\n \001(\005\022\021\n\tTimestamp\030\013 \001(\005\022\025\n\rFeat"
+  "ure_value\030\014 \001(\005\"\375\001\n\rSwcNodeDataV1\022!\n\004Bas"
+  "e\030\001 \001(\0132\023.proto.MetaInfoBase\0229\n\023SwcNodeI"
+  "nternalData\030\002 \001(\0132\034.proto.SwcNodeInterna"
+  "lDataV1\022\017\n\007Creator\030\003 \001(\t\022.\n\nCreateTime\030\004"
+  " \001(\0132\032.google.protobuf.Timestamp\0224\n\020Last"
+  "ModifiedTime\030\005 \001(\0132\032.google.protobuf.Tim"
+  "estamp\022\027\n\017CheckerUserUuid\030\006 \001(\t\"2\n\tSwcDa"
+  "taV1\022%\n\007SwcData\030\001 \003(\0132\024.proto.SwcNodeDat"
+  "aV1\"\331\003\n\031DailyStatisticsMetaInfoV1\022!\n\004Bas"
+  "e\030\001 \001(\0132\023.proto.MetaInfoBase\022\014\n\004Name\030\002 \001"
+  "(\t\022\023\n\013Description\030\003 \001(\t\022\013\n\003Day\030\004 \001(\t\022\034\n\024"
+  "CreatedProjectNumber\030\005 \001(\005\022\030\n\020CreatedSwc"
+  "Number\030\006 \001(\005\022\033\n\023CreateSwcNodeNumber\030\007 \001("
+  "\005\022\034\n\024DeletedProjectNumber\030\010 \001(\005\022\030\n\020Delet"
+  "edSwcNumber\030\t \001(\005\022\034\n\024DeletedSwcNodeNumbe"
+  "r\030\n \001(\005\022\035\n\025ModifiedProjectNumber\030\013 \001(\005\022\031"
+  "\n\021ModifiedSwcNumber\030\014 \001(\005\022\035\n\025ModifiedSwc"
+  "NodeNumber\030\r \001(\005\022\032\n\022ProjectQueryNumber\030\016"
+  " \001(\005\022\026\n\016SwcQueryNumber\030\017 \001(\005\022\027\n\017NodeQuer"
+  "yNumber\030\020 \001(\005\022\030\n\020ActiveUserNumber\030\021 \001(\005\""
+  "7\n\020UserVerifyInfoV1\022\020\n\010UserName\030\001 \001(\t\022\021\n"
+  "\tUserToken\030\002 \001(\t\"\'\n\021RequestMetaInfoV1\022\022\n"
+  "\nApiVersion\030\001 \001(\t\"A\n\022ResponseMetaInfoV1\022"
+  "\016\n\006Status\030\001 \001(\010\022\n\n\002Id\030\002 \001(\t\022\017\n\007Message\030\003"
+  " \001(\t*G\n\024IncrementOperationV1\022\013\n\007Unknown\020"
+  "\000\022\n\n\006Create\020\001\022\n\n\006Delete\020\002\022\n\n\006Update\020\003B/Z"
+  "-DBMS/SwcDbmsCommon/Generated/go/proto/m"
+  "essageP\000b\006proto3"
   ;
 static const ::_pbi::DescriptorTable* const descriptor_table_Message_2fMessage_2eproto_deps[1] = {
   &::descriptor_table_google_2fprotobuf_2ftimestamp_2eproto,
 };
 static ::_pbi::once_flag descriptor_table_Message_2fMessage_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_Message_2fMessage_2eproto = {
-    false, false, 3639, descriptor_table_protodef_Message_2fMessage_2eproto,
+    false, false, 3656, descriptor_table_protodef_Message_2fMessage_2eproto,
     "Message/Message.proto",
     &descriptor_table_Message_2fMessage_2eproto_once, descriptor_table_Message_2fMessage_2eproto_deps, 1, 19,
     schemas, file_default_instances, TableStruct_Message_2fMessage_2eproto::offsets,
@@ -3277,6 +3280,7 @@ SwcSnapshotMetaInfoV1::SwcSnapshotMetaInfoV1(const SwcSnapshotMetaInfoV1& from)
   SwcSnapshotMetaInfoV1* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.swcsnapshotcollectionname_){}
+    , decltype(_impl_.creator_){}
     , decltype(_impl_.base_){nullptr}
     , decltype(_impl_.createtime_){nullptr}
     , /*decltype(_impl_._cached_size_)*/{}};
@@ -3288,6 +3292,14 @@ SwcSnapshotMetaInfoV1::SwcSnapshotMetaInfoV1(const SwcSnapshotMetaInfoV1& from)
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (!from._internal_swcsnapshotcollectionname().empty()) {
     _this->_impl_.swcsnapshotcollectionname_.Set(from._internal_swcsnapshotcollectionname(), 
+      _this->GetArenaForAllocation());
+  }
+  _impl_.creator_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.creator_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (!from._internal_creator().empty()) {
+    _this->_impl_.creator_.Set(from._internal_creator(), 
       _this->GetArenaForAllocation());
   }
   if (from._internal_has_base()) {
@@ -3305,6 +3317,7 @@ inline void SwcSnapshotMetaInfoV1::SharedCtor(
   (void)is_message_owned;
   new (&_impl_) Impl_{
       decltype(_impl_.swcsnapshotcollectionname_){}
+    , decltype(_impl_.creator_){}
     , decltype(_impl_.base_){nullptr}
     , decltype(_impl_.createtime_){nullptr}
     , /*decltype(_impl_._cached_size_)*/{}
@@ -3312,6 +3325,10 @@ inline void SwcSnapshotMetaInfoV1::SharedCtor(
   _impl_.swcsnapshotcollectionname_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.swcsnapshotcollectionname_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  _impl_.creator_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.creator_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -3327,6 +3344,7 @@ SwcSnapshotMetaInfoV1::~SwcSnapshotMetaInfoV1() {
 inline void SwcSnapshotMetaInfoV1::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   _impl_.swcsnapshotcollectionname_.Destroy();
+  _impl_.creator_.Destroy();
   if (this != internal_default_instance()) delete _impl_.base_;
   if (this != internal_default_instance()) delete _impl_.createtime_;
 }
@@ -3342,6 +3360,7 @@ void SwcSnapshotMetaInfoV1::Clear() {
   (void) cached_has_bits;
 
   _impl_.swcsnapshotcollectionname_.ClearToEmpty();
+  _impl_.creator_.ClearToEmpty();
   if (GetArenaForAllocation() == nullptr && _impl_.base_ != nullptr) {
     delete _impl_.base_;
   }
@@ -3382,6 +3401,16 @@ const char* SwcSnapshotMetaInfoV1::_InternalParse(const char* ptr, ::_pbi::Parse
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_createtime(), ptr);
           CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // string creator = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
+          auto str = _internal_mutable_creator();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "proto.SwcSnapshotMetaInfoV1.creator"));
         } else
           goto handle_unusual;
         continue;
@@ -3438,6 +3467,16 @@ uint8_t* SwcSnapshotMetaInfoV1::_InternalSerialize(
         _Internal::createtime(this).GetCachedSize(), target, stream);
   }
 
+  // string creator = 4;
+  if (!this->_internal_creator().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_creator().data(), static_cast<int>(this->_internal_creator().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "proto.SwcSnapshotMetaInfoV1.creator");
+    target = stream->WriteStringMaybeAliased(
+        4, this->_internal_creator(), target);
+  }
+
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
@@ -3459,6 +3498,13 @@ size_t SwcSnapshotMetaInfoV1::ByteSizeLong() const {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_swcsnapshotcollectionname());
+  }
+
+  // string creator = 4;
+  if (!this->_internal_creator().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_creator());
   }
 
   // .proto.MetaInfoBase Base = 1;
@@ -3496,6 +3542,9 @@ void SwcSnapshotMetaInfoV1::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, 
   if (!from._internal_swcsnapshotcollectionname().empty()) {
     _this->_internal_set_swcsnapshotcollectionname(from._internal_swcsnapshotcollectionname());
   }
+  if (!from._internal_creator().empty()) {
+    _this->_internal_set_creator(from._internal_creator());
+  }
   if (from._internal_has_base()) {
     _this->_internal_mutable_base()->::proto::MetaInfoBase::MergeFrom(
         from._internal_base());
@@ -3526,6 +3575,10 @@ void SwcSnapshotMetaInfoV1::InternalSwap(SwcSnapshotMetaInfoV1* other) {
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.swcsnapshotcollectionname_, lhs_arena,
       &other->_impl_.swcsnapshotcollectionname_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.creator_, lhs_arena,
+      &other->_impl_.creator_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(SwcSnapshotMetaInfoV1, _impl_.createtime_)

@@ -66,6 +66,7 @@ message SwcSnapshotMetaInfoV1{
     MetaInfoBase Base = 1;
     string SwcSnapshotCollectionName = 2;
     google.protobuf.Timestamp CreateTime = 3;
+    string creator = 4;
 }
 
 message SwcIncrementOperationMetaInfoV1{
