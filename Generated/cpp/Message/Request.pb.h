@@ -335,9 +335,28 @@ class CreateUserRequest final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kUserInfoFieldNumber = 1,
+    kRequestMetaInfoFieldNumber = 1,
+    kUserInfoFieldNumber = 2,
   };
-  // .proto.UserMetaInfoV1 UserInfo = 1;
+  // .proto.RequestMetaInfoV1 RequestMetaInfo = 1;
+  bool has_requestmetainfo() const;
+  private:
+  bool _internal_has_requestmetainfo() const;
+  public:
+  void clear_requestmetainfo();
+  const ::proto::RequestMetaInfoV1& requestmetainfo() const;
+  PROTOBUF_NODISCARD ::proto::RequestMetaInfoV1* release_requestmetainfo();
+  ::proto::RequestMetaInfoV1* mutable_requestmetainfo();
+  void set_allocated_requestmetainfo(::proto::RequestMetaInfoV1* requestmetainfo);
+  private:
+  const ::proto::RequestMetaInfoV1& _internal_requestmetainfo() const;
+  ::proto::RequestMetaInfoV1* _internal_mutable_requestmetainfo();
+  public:
+  void unsafe_arena_set_allocated_requestmetainfo(
+      ::proto::RequestMetaInfoV1* requestmetainfo);
+  ::proto::RequestMetaInfoV1* unsafe_arena_release_requestmetainfo();
+
+  // .proto.UserMetaInfoV1 UserInfo = 2;
   bool has_userinfo() const;
   private:
   bool _internal_has_userinfo() const;
@@ -363,6 +382,7 @@ class CreateUserRequest final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::proto::RequestMetaInfoV1* requestmetainfo_;
     ::proto::UserMetaInfoV1* userinfo_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
@@ -492,10 +512,43 @@ class DeleteUserRequest final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kUserVerifyInfoFieldNumber = 1,
-    kUserInfoFieldNumber = 2,
+    kUserNameFieldNumber = 3,
+    kRequestMetaInfoFieldNumber = 1,
+    kUserVerifyInfoFieldNumber = 2,
   };
-  // .proto.UserVerifyInfoV1 UserVerifyInfo = 1;
+  // string UserName = 3;
+  void clear_username();
+  const std::string& username() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_username(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_username();
+  PROTOBUF_NODISCARD std::string* release_username();
+  void set_allocated_username(std::string* username);
+  private:
+  const std::string& _internal_username() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_username(const std::string& value);
+  std::string* _internal_mutable_username();
+  public:
+
+  // .proto.RequestMetaInfoV1 RequestMetaInfo = 1;
+  bool has_requestmetainfo() const;
+  private:
+  bool _internal_has_requestmetainfo() const;
+  public:
+  void clear_requestmetainfo();
+  const ::proto::RequestMetaInfoV1& requestmetainfo() const;
+  PROTOBUF_NODISCARD ::proto::RequestMetaInfoV1* release_requestmetainfo();
+  ::proto::RequestMetaInfoV1* mutable_requestmetainfo();
+  void set_allocated_requestmetainfo(::proto::RequestMetaInfoV1* requestmetainfo);
+  private:
+  const ::proto::RequestMetaInfoV1& _internal_requestmetainfo() const;
+  ::proto::RequestMetaInfoV1* _internal_mutable_requestmetainfo();
+  public:
+  void unsafe_arena_set_allocated_requestmetainfo(
+      ::proto::RequestMetaInfoV1* requestmetainfo);
+  ::proto::RequestMetaInfoV1* unsafe_arena_release_requestmetainfo();
+
+  // .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
   bool has_userverifyinfo() const;
   private:
   bool _internal_has_userverifyinfo() const;
@@ -513,24 +566,6 @@ class DeleteUserRequest final :
       ::proto::UserVerifyInfoV1* userverifyinfo);
   ::proto::UserVerifyInfoV1* unsafe_arena_release_userverifyinfo();
 
-  // .proto.UserMetaInfoV1 UserInfo = 2;
-  bool has_userinfo() const;
-  private:
-  bool _internal_has_userinfo() const;
-  public:
-  void clear_userinfo();
-  const ::proto::UserMetaInfoV1& userinfo() const;
-  PROTOBUF_NODISCARD ::proto::UserMetaInfoV1* release_userinfo();
-  ::proto::UserMetaInfoV1* mutable_userinfo();
-  void set_allocated_userinfo(::proto::UserMetaInfoV1* userinfo);
-  private:
-  const ::proto::UserMetaInfoV1& _internal_userinfo() const;
-  ::proto::UserMetaInfoV1* _internal_mutable_userinfo();
-  public:
-  void unsafe_arena_set_allocated_userinfo(
-      ::proto::UserMetaInfoV1* userinfo);
-  ::proto::UserMetaInfoV1* unsafe_arena_release_userinfo();
-
   // @@protoc_insertion_point(class_scope:proto.DeleteUserRequest)
  private:
   class _Internal;
@@ -539,8 +574,9 @@ class DeleteUserRequest final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr username_;
+    ::proto::RequestMetaInfoV1* requestmetainfo_;
     ::proto::UserVerifyInfoV1* userverifyinfo_;
-    ::proto::UserMetaInfoV1* userinfo_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -669,9 +705,47 @@ class UpdateUserRequest final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kUserInfoFieldNumber = 1,
+    kRequestMetaInfoFieldNumber = 1,
+    kUserVerifyInfoFieldNumber = 2,
+    kUserInfoFieldNumber = 3,
   };
-  // .proto.UserMetaInfoV1 UserInfo = 1;
+  // .proto.RequestMetaInfoV1 RequestMetaInfo = 1;
+  bool has_requestmetainfo() const;
+  private:
+  bool _internal_has_requestmetainfo() const;
+  public:
+  void clear_requestmetainfo();
+  const ::proto::RequestMetaInfoV1& requestmetainfo() const;
+  PROTOBUF_NODISCARD ::proto::RequestMetaInfoV1* release_requestmetainfo();
+  ::proto::RequestMetaInfoV1* mutable_requestmetainfo();
+  void set_allocated_requestmetainfo(::proto::RequestMetaInfoV1* requestmetainfo);
+  private:
+  const ::proto::RequestMetaInfoV1& _internal_requestmetainfo() const;
+  ::proto::RequestMetaInfoV1* _internal_mutable_requestmetainfo();
+  public:
+  void unsafe_arena_set_allocated_requestmetainfo(
+      ::proto::RequestMetaInfoV1* requestmetainfo);
+  ::proto::RequestMetaInfoV1* unsafe_arena_release_requestmetainfo();
+
+  // .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
+  bool has_userverifyinfo() const;
+  private:
+  bool _internal_has_userverifyinfo() const;
+  public:
+  void clear_userverifyinfo();
+  const ::proto::UserVerifyInfoV1& userverifyinfo() const;
+  PROTOBUF_NODISCARD ::proto::UserVerifyInfoV1* release_userverifyinfo();
+  ::proto::UserVerifyInfoV1* mutable_userverifyinfo();
+  void set_allocated_userverifyinfo(::proto::UserVerifyInfoV1* userverifyinfo);
+  private:
+  const ::proto::UserVerifyInfoV1& _internal_userverifyinfo() const;
+  ::proto::UserVerifyInfoV1* _internal_mutable_userverifyinfo();
+  public:
+  void unsafe_arena_set_allocated_userverifyinfo(
+      ::proto::UserVerifyInfoV1* userverifyinfo);
+  ::proto::UserVerifyInfoV1* unsafe_arena_release_userverifyinfo();
+
+  // .proto.UserMetaInfoV1 UserInfo = 3;
   bool has_userinfo() const;
   private:
   bool _internal_has_userinfo() const;
@@ -697,6 +771,8 @@ class UpdateUserRequest final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::proto::RequestMetaInfoV1* requestmetainfo_;
+    ::proto::UserVerifyInfoV1* userverifyinfo_;
     ::proto::UserMetaInfoV1* userinfo_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
@@ -826,25 +902,59 @@ class GetUserRequest final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kUserInfoFieldNumber = 1,
+    kUserNameFieldNumber = 3,
+    kRequestMetaInfoFieldNumber = 1,
+    kUserVerifyInfoFieldNumber = 2,
   };
-  // .proto.UserMetaInfoV1 UserInfo = 1;
-  bool has_userinfo() const;
+  // string UserName = 3;
+  void clear_username();
+  const std::string& username() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_username(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_username();
+  PROTOBUF_NODISCARD std::string* release_username();
+  void set_allocated_username(std::string* username);
   private:
-  bool _internal_has_userinfo() const;
+  const std::string& _internal_username() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_username(const std::string& value);
+  std::string* _internal_mutable_username();
   public:
-  void clear_userinfo();
-  const ::proto::UserMetaInfoV1& userinfo() const;
-  PROTOBUF_NODISCARD ::proto::UserMetaInfoV1* release_userinfo();
-  ::proto::UserMetaInfoV1* mutable_userinfo();
-  void set_allocated_userinfo(::proto::UserMetaInfoV1* userinfo);
+
+  // .proto.RequestMetaInfoV1 RequestMetaInfo = 1;
+  bool has_requestmetainfo() const;
   private:
-  const ::proto::UserMetaInfoV1& _internal_userinfo() const;
-  ::proto::UserMetaInfoV1* _internal_mutable_userinfo();
+  bool _internal_has_requestmetainfo() const;
   public:
-  void unsafe_arena_set_allocated_userinfo(
-      ::proto::UserMetaInfoV1* userinfo);
-  ::proto::UserMetaInfoV1* unsafe_arena_release_userinfo();
+  void clear_requestmetainfo();
+  const ::proto::RequestMetaInfoV1& requestmetainfo() const;
+  PROTOBUF_NODISCARD ::proto::RequestMetaInfoV1* release_requestmetainfo();
+  ::proto::RequestMetaInfoV1* mutable_requestmetainfo();
+  void set_allocated_requestmetainfo(::proto::RequestMetaInfoV1* requestmetainfo);
+  private:
+  const ::proto::RequestMetaInfoV1& _internal_requestmetainfo() const;
+  ::proto::RequestMetaInfoV1* _internal_mutable_requestmetainfo();
+  public:
+  void unsafe_arena_set_allocated_requestmetainfo(
+      ::proto::RequestMetaInfoV1* requestmetainfo);
+  ::proto::RequestMetaInfoV1* unsafe_arena_release_requestmetainfo();
+
+  // .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
+  bool has_userverifyinfo() const;
+  private:
+  bool _internal_has_userverifyinfo() const;
+  public:
+  void clear_userverifyinfo();
+  const ::proto::UserVerifyInfoV1& userverifyinfo() const;
+  PROTOBUF_NODISCARD ::proto::UserVerifyInfoV1* release_userverifyinfo();
+  ::proto::UserVerifyInfoV1* mutable_userverifyinfo();
+  void set_allocated_userverifyinfo(::proto::UserVerifyInfoV1* userverifyinfo);
+  private:
+  const ::proto::UserVerifyInfoV1& _internal_userverifyinfo() const;
+  ::proto::UserVerifyInfoV1* _internal_mutable_userverifyinfo();
+  public:
+  void unsafe_arena_set_allocated_userverifyinfo(
+      ::proto::UserVerifyInfoV1* userverifyinfo);
+  ::proto::UserVerifyInfoV1* unsafe_arena_release_userverifyinfo();
 
   // @@protoc_insertion_point(class_scope:proto.GetUserRequest)
  private:
@@ -854,7 +964,9 @@ class GetUserRequest final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::proto::UserMetaInfoV1* userinfo_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr username_;
+    ::proto::RequestMetaInfoV1* requestmetainfo_;
+    ::proto::UserVerifyInfoV1* userverifyinfo_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -983,25 +1095,44 @@ class GetAllUserRequest final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kUserInfoFieldNumber = 1,
+    kRequestMetaInfoFieldNumber = 1,
+    kUserVerifyInfoFieldNumber = 2,
   };
-  // .proto.UserMetaInfoV1 UserInfo = 1;
-  bool has_userinfo() const;
+  // .proto.RequestMetaInfoV1 RequestMetaInfo = 1;
+  bool has_requestmetainfo() const;
   private:
-  bool _internal_has_userinfo() const;
+  bool _internal_has_requestmetainfo() const;
   public:
-  void clear_userinfo();
-  const ::proto::UserMetaInfoV1& userinfo() const;
-  PROTOBUF_NODISCARD ::proto::UserMetaInfoV1* release_userinfo();
-  ::proto::UserMetaInfoV1* mutable_userinfo();
-  void set_allocated_userinfo(::proto::UserMetaInfoV1* userinfo);
+  void clear_requestmetainfo();
+  const ::proto::RequestMetaInfoV1& requestmetainfo() const;
+  PROTOBUF_NODISCARD ::proto::RequestMetaInfoV1* release_requestmetainfo();
+  ::proto::RequestMetaInfoV1* mutable_requestmetainfo();
+  void set_allocated_requestmetainfo(::proto::RequestMetaInfoV1* requestmetainfo);
   private:
-  const ::proto::UserMetaInfoV1& _internal_userinfo() const;
-  ::proto::UserMetaInfoV1* _internal_mutable_userinfo();
+  const ::proto::RequestMetaInfoV1& _internal_requestmetainfo() const;
+  ::proto::RequestMetaInfoV1* _internal_mutable_requestmetainfo();
   public:
-  void unsafe_arena_set_allocated_userinfo(
-      ::proto::UserMetaInfoV1* userinfo);
-  ::proto::UserMetaInfoV1* unsafe_arena_release_userinfo();
+  void unsafe_arena_set_allocated_requestmetainfo(
+      ::proto::RequestMetaInfoV1* requestmetainfo);
+  ::proto::RequestMetaInfoV1* unsafe_arena_release_requestmetainfo();
+
+  // .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
+  bool has_userverifyinfo() const;
+  private:
+  bool _internal_has_userverifyinfo() const;
+  public:
+  void clear_userverifyinfo();
+  const ::proto::UserVerifyInfoV1& userverifyinfo() const;
+  PROTOBUF_NODISCARD ::proto::UserVerifyInfoV1* release_userverifyinfo();
+  ::proto::UserVerifyInfoV1* mutable_userverifyinfo();
+  void set_allocated_userverifyinfo(::proto::UserVerifyInfoV1* userverifyinfo);
+  private:
+  const ::proto::UserVerifyInfoV1& _internal_userverifyinfo() const;
+  ::proto::UserVerifyInfoV1* _internal_mutable_userverifyinfo();
+  public:
+  void unsafe_arena_set_allocated_userverifyinfo(
+      ::proto::UserVerifyInfoV1* userverifyinfo);
+  ::proto::UserVerifyInfoV1* unsafe_arena_release_userverifyinfo();
 
   // @@protoc_insertion_point(class_scope:proto.GetAllUserRequest)
  private:
@@ -1011,7 +1142,8 @@ class GetAllUserRequest final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::proto::UserMetaInfoV1* userinfo_;
+    ::proto::RequestMetaInfoV1* requestmetainfo_;
+    ::proto::UserVerifyInfoV1* userverifyinfo_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -1140,10 +1272,11 @@ class UserLoginRequest final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kUserNameFieldNumber = 1,
-    kPasswordFieldNumber = 2,
+    kUserNameFieldNumber = 2,
+    kPasswordFieldNumber = 3,
+    kRequestMetaInfoFieldNumber = 1,
   };
-  // string UserName = 1;
+  // string UserName = 2;
   void clear_username();
   const std::string& username() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1157,7 +1290,7 @@ class UserLoginRequest final :
   std::string* _internal_mutable_username();
   public:
 
-  // string Password = 2;
+  // string Password = 3;
   void clear_password();
   const std::string& password() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1171,6 +1304,24 @@ class UserLoginRequest final :
   std::string* _internal_mutable_password();
   public:
 
+  // .proto.RequestMetaInfoV1 RequestMetaInfo = 1;
+  bool has_requestmetainfo() const;
+  private:
+  bool _internal_has_requestmetainfo() const;
+  public:
+  void clear_requestmetainfo();
+  const ::proto::RequestMetaInfoV1& requestmetainfo() const;
+  PROTOBUF_NODISCARD ::proto::RequestMetaInfoV1* release_requestmetainfo();
+  ::proto::RequestMetaInfoV1* mutable_requestmetainfo();
+  void set_allocated_requestmetainfo(::proto::RequestMetaInfoV1* requestmetainfo);
+  private:
+  const ::proto::RequestMetaInfoV1& _internal_requestmetainfo() const;
+  ::proto::RequestMetaInfoV1* _internal_mutable_requestmetainfo();
+  public:
+  void unsafe_arena_set_allocated_requestmetainfo(
+      ::proto::RequestMetaInfoV1* requestmetainfo);
+  ::proto::RequestMetaInfoV1* unsafe_arena_release_requestmetainfo();
+
   // @@protoc_insertion_point(class_scope:proto.UserLoginRequest)
  private:
   class _Internal;
@@ -1181,6 +1332,7 @@ class UserLoginRequest final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr username_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr password_;
+    ::proto::RequestMetaInfoV1* requestmetainfo_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -1309,9 +1461,28 @@ class UserLogoutRequest final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kUserVerifyInfoFieldNumber = 1,
+    kRequestMetaInfoFieldNumber = 1,
+    kUserVerifyInfoFieldNumber = 2,
   };
-  // .proto.UserVerifyInfoV1 UserVerifyInfo = 1;
+  // .proto.RequestMetaInfoV1 RequestMetaInfo = 1;
+  bool has_requestmetainfo() const;
+  private:
+  bool _internal_has_requestmetainfo() const;
+  public:
+  void clear_requestmetainfo();
+  const ::proto::RequestMetaInfoV1& requestmetainfo() const;
+  PROTOBUF_NODISCARD ::proto::RequestMetaInfoV1* release_requestmetainfo();
+  ::proto::RequestMetaInfoV1* mutable_requestmetainfo();
+  void set_allocated_requestmetainfo(::proto::RequestMetaInfoV1* requestmetainfo);
+  private:
+  const ::proto::RequestMetaInfoV1& _internal_requestmetainfo() const;
+  ::proto::RequestMetaInfoV1* _internal_mutable_requestmetainfo();
+  public:
+  void unsafe_arena_set_allocated_requestmetainfo(
+      ::proto::RequestMetaInfoV1* requestmetainfo);
+  ::proto::RequestMetaInfoV1* unsafe_arena_release_requestmetainfo();
+
+  // .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
   bool has_userverifyinfo() const;
   private:
   bool _internal_has_userverifyinfo() const;
@@ -1337,6 +1508,7 @@ class UserLogoutRequest final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::proto::RequestMetaInfoV1* requestmetainfo_;
     ::proto::UserVerifyInfoV1* userverifyinfo_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
@@ -1466,28 +1638,47 @@ class UserOnlineHeartBeatNotification final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kUserInfoFieldNumber = 1,
-    kHeartBeatTimeFieldNumber = 2,
+    kRequestMetaInfoFieldNumber = 1,
+    kUserVerifyInfoFieldNumber = 2,
+    kHeartBeatTimeFieldNumber = 3,
   };
-  // .proto.UserMetaInfoV1 UserInfo = 1;
-  bool has_userinfo() const;
+  // .proto.RequestMetaInfoV1 RequestMetaInfo = 1;
+  bool has_requestmetainfo() const;
   private:
-  bool _internal_has_userinfo() const;
+  bool _internal_has_requestmetainfo() const;
   public:
-  void clear_userinfo();
-  const ::proto::UserMetaInfoV1& userinfo() const;
-  PROTOBUF_NODISCARD ::proto::UserMetaInfoV1* release_userinfo();
-  ::proto::UserMetaInfoV1* mutable_userinfo();
-  void set_allocated_userinfo(::proto::UserMetaInfoV1* userinfo);
+  void clear_requestmetainfo();
+  const ::proto::RequestMetaInfoV1& requestmetainfo() const;
+  PROTOBUF_NODISCARD ::proto::RequestMetaInfoV1* release_requestmetainfo();
+  ::proto::RequestMetaInfoV1* mutable_requestmetainfo();
+  void set_allocated_requestmetainfo(::proto::RequestMetaInfoV1* requestmetainfo);
   private:
-  const ::proto::UserMetaInfoV1& _internal_userinfo() const;
-  ::proto::UserMetaInfoV1* _internal_mutable_userinfo();
+  const ::proto::RequestMetaInfoV1& _internal_requestmetainfo() const;
+  ::proto::RequestMetaInfoV1* _internal_mutable_requestmetainfo();
   public:
-  void unsafe_arena_set_allocated_userinfo(
-      ::proto::UserMetaInfoV1* userinfo);
-  ::proto::UserMetaInfoV1* unsafe_arena_release_userinfo();
+  void unsafe_arena_set_allocated_requestmetainfo(
+      ::proto::RequestMetaInfoV1* requestmetainfo);
+  ::proto::RequestMetaInfoV1* unsafe_arena_release_requestmetainfo();
 
-  // int64 HeartBeatTime = 2;
+  // .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
+  bool has_userverifyinfo() const;
+  private:
+  bool _internal_has_userverifyinfo() const;
+  public:
+  void clear_userverifyinfo();
+  const ::proto::UserVerifyInfoV1& userverifyinfo() const;
+  PROTOBUF_NODISCARD ::proto::UserVerifyInfoV1* release_userverifyinfo();
+  ::proto::UserVerifyInfoV1* mutable_userverifyinfo();
+  void set_allocated_userverifyinfo(::proto::UserVerifyInfoV1* userverifyinfo);
+  private:
+  const ::proto::UserVerifyInfoV1& _internal_userverifyinfo() const;
+  ::proto::UserVerifyInfoV1* _internal_mutable_userverifyinfo();
+  public:
+  void unsafe_arena_set_allocated_userverifyinfo(
+      ::proto::UserVerifyInfoV1* userverifyinfo);
+  ::proto::UserVerifyInfoV1* unsafe_arena_release_userverifyinfo();
+
+  // int64 HeartBeatTime = 3;
   void clear_heartbeattime();
   int64_t heartbeattime() const;
   void set_heartbeattime(int64_t value);
@@ -1504,7 +1695,8 @@ class UserOnlineHeartBeatNotification final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::proto::UserMetaInfoV1* userinfo_;
+    ::proto::RequestMetaInfoV1* requestmetainfo_;
+    ::proto::UserVerifyInfoV1* userverifyinfo_;
     int64_t heartbeattime_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
@@ -1634,25 +1826,44 @@ class GetUserPermissionGroupRequest final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kUserInfoFieldNumber = 1,
+    kRequestMetaInfoFieldNumber = 1,
+    kUserVerifyInfoFieldNumber = 2,
   };
-  // .proto.UserMetaInfoV1 UserInfo = 1;
-  bool has_userinfo() const;
+  // .proto.RequestMetaInfoV1 RequestMetaInfo = 1;
+  bool has_requestmetainfo() const;
   private:
-  bool _internal_has_userinfo() const;
+  bool _internal_has_requestmetainfo() const;
   public:
-  void clear_userinfo();
-  const ::proto::UserMetaInfoV1& userinfo() const;
-  PROTOBUF_NODISCARD ::proto::UserMetaInfoV1* release_userinfo();
-  ::proto::UserMetaInfoV1* mutable_userinfo();
-  void set_allocated_userinfo(::proto::UserMetaInfoV1* userinfo);
+  void clear_requestmetainfo();
+  const ::proto::RequestMetaInfoV1& requestmetainfo() const;
+  PROTOBUF_NODISCARD ::proto::RequestMetaInfoV1* release_requestmetainfo();
+  ::proto::RequestMetaInfoV1* mutable_requestmetainfo();
+  void set_allocated_requestmetainfo(::proto::RequestMetaInfoV1* requestmetainfo);
   private:
-  const ::proto::UserMetaInfoV1& _internal_userinfo() const;
-  ::proto::UserMetaInfoV1* _internal_mutable_userinfo();
+  const ::proto::RequestMetaInfoV1& _internal_requestmetainfo() const;
+  ::proto::RequestMetaInfoV1* _internal_mutable_requestmetainfo();
   public:
-  void unsafe_arena_set_allocated_userinfo(
-      ::proto::UserMetaInfoV1* userinfo);
-  ::proto::UserMetaInfoV1* unsafe_arena_release_userinfo();
+  void unsafe_arena_set_allocated_requestmetainfo(
+      ::proto::RequestMetaInfoV1* requestmetainfo);
+  ::proto::RequestMetaInfoV1* unsafe_arena_release_requestmetainfo();
+
+  // .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
+  bool has_userverifyinfo() const;
+  private:
+  bool _internal_has_userverifyinfo() const;
+  public:
+  void clear_userverifyinfo();
+  const ::proto::UserVerifyInfoV1& userverifyinfo() const;
+  PROTOBUF_NODISCARD ::proto::UserVerifyInfoV1* release_userverifyinfo();
+  ::proto::UserVerifyInfoV1* mutable_userverifyinfo();
+  void set_allocated_userverifyinfo(::proto::UserVerifyInfoV1* userverifyinfo);
+  private:
+  const ::proto::UserVerifyInfoV1& _internal_userverifyinfo() const;
+  ::proto::UserVerifyInfoV1* _internal_mutable_userverifyinfo();
+  public:
+  void unsafe_arena_set_allocated_userverifyinfo(
+      ::proto::UserVerifyInfoV1* userverifyinfo);
+  ::proto::UserVerifyInfoV1* unsafe_arena_release_userverifyinfo();
 
   // @@protoc_insertion_point(class_scope:proto.GetUserPermissionGroupRequest)
  private:
@@ -1662,7 +1873,8 @@ class GetUserPermissionGroupRequest final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::proto::UserMetaInfoV1* userinfo_;
+    ::proto::RequestMetaInfoV1* requestmetainfo_;
+    ::proto::UserVerifyInfoV1* userverifyinfo_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -1791,28 +2003,47 @@ class GetPermissionGroupRequest final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kUserInfoFieldNumber = 1,
-    kPermissionGroupFieldNumber = 2,
+    kRequestMetaInfoFieldNumber = 1,
+    kUserVerifyInfoFieldNumber = 2,
+    kPermissionGroupFieldNumber = 3,
   };
-  // .proto.UserMetaInfoV1 UserInfo = 1;
-  bool has_userinfo() const;
+  // .proto.RequestMetaInfoV1 RequestMetaInfo = 1;
+  bool has_requestmetainfo() const;
   private:
-  bool _internal_has_userinfo() const;
+  bool _internal_has_requestmetainfo() const;
   public:
-  void clear_userinfo();
-  const ::proto::UserMetaInfoV1& userinfo() const;
-  PROTOBUF_NODISCARD ::proto::UserMetaInfoV1* release_userinfo();
-  ::proto::UserMetaInfoV1* mutable_userinfo();
-  void set_allocated_userinfo(::proto::UserMetaInfoV1* userinfo);
+  void clear_requestmetainfo();
+  const ::proto::RequestMetaInfoV1& requestmetainfo() const;
+  PROTOBUF_NODISCARD ::proto::RequestMetaInfoV1* release_requestmetainfo();
+  ::proto::RequestMetaInfoV1* mutable_requestmetainfo();
+  void set_allocated_requestmetainfo(::proto::RequestMetaInfoV1* requestmetainfo);
   private:
-  const ::proto::UserMetaInfoV1& _internal_userinfo() const;
-  ::proto::UserMetaInfoV1* _internal_mutable_userinfo();
+  const ::proto::RequestMetaInfoV1& _internal_requestmetainfo() const;
+  ::proto::RequestMetaInfoV1* _internal_mutable_requestmetainfo();
   public:
-  void unsafe_arena_set_allocated_userinfo(
-      ::proto::UserMetaInfoV1* userinfo);
-  ::proto::UserMetaInfoV1* unsafe_arena_release_userinfo();
+  void unsafe_arena_set_allocated_requestmetainfo(
+      ::proto::RequestMetaInfoV1* requestmetainfo);
+  ::proto::RequestMetaInfoV1* unsafe_arena_release_requestmetainfo();
 
-  // .proto.PermissionGroupMetaInfoV1 PermissionGroup = 2;
+  // .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
+  bool has_userverifyinfo() const;
+  private:
+  bool _internal_has_userverifyinfo() const;
+  public:
+  void clear_userverifyinfo();
+  const ::proto::UserVerifyInfoV1& userverifyinfo() const;
+  PROTOBUF_NODISCARD ::proto::UserVerifyInfoV1* release_userverifyinfo();
+  ::proto::UserVerifyInfoV1* mutable_userverifyinfo();
+  void set_allocated_userverifyinfo(::proto::UserVerifyInfoV1* userverifyinfo);
+  private:
+  const ::proto::UserVerifyInfoV1& _internal_userverifyinfo() const;
+  ::proto::UserVerifyInfoV1* _internal_mutable_userverifyinfo();
+  public:
+  void unsafe_arena_set_allocated_userverifyinfo(
+      ::proto::UserVerifyInfoV1* userverifyinfo);
+  ::proto::UserVerifyInfoV1* unsafe_arena_release_userverifyinfo();
+
+  // .proto.PermissionGroupMetaInfoV1 PermissionGroup = 3;
   bool has_permissiongroup() const;
   private:
   bool _internal_has_permissiongroup() const;
@@ -1838,7 +2069,8 @@ class GetPermissionGroupRequest final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::proto::UserMetaInfoV1* userinfo_;
+    ::proto::RequestMetaInfoV1* requestmetainfo_;
+    ::proto::UserVerifyInfoV1* userverifyinfo_;
     ::proto::PermissionGroupMetaInfoV1* permissiongroup_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
@@ -1968,25 +2200,44 @@ class GetAllPermissionGroupRequest final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kUserInfoFieldNumber = 1,
+    kRequestMetaInfoFieldNumber = 1,
+    kUserVerifyInfoFieldNumber = 2,
   };
-  // .proto.UserMetaInfoV1 UserInfo = 1;
-  bool has_userinfo() const;
+  // .proto.RequestMetaInfoV1 RequestMetaInfo = 1;
+  bool has_requestmetainfo() const;
   private:
-  bool _internal_has_userinfo() const;
+  bool _internal_has_requestmetainfo() const;
   public:
-  void clear_userinfo();
-  const ::proto::UserMetaInfoV1& userinfo() const;
-  PROTOBUF_NODISCARD ::proto::UserMetaInfoV1* release_userinfo();
-  ::proto::UserMetaInfoV1* mutable_userinfo();
-  void set_allocated_userinfo(::proto::UserMetaInfoV1* userinfo);
+  void clear_requestmetainfo();
+  const ::proto::RequestMetaInfoV1& requestmetainfo() const;
+  PROTOBUF_NODISCARD ::proto::RequestMetaInfoV1* release_requestmetainfo();
+  ::proto::RequestMetaInfoV1* mutable_requestmetainfo();
+  void set_allocated_requestmetainfo(::proto::RequestMetaInfoV1* requestmetainfo);
   private:
-  const ::proto::UserMetaInfoV1& _internal_userinfo() const;
-  ::proto::UserMetaInfoV1* _internal_mutable_userinfo();
+  const ::proto::RequestMetaInfoV1& _internal_requestmetainfo() const;
+  ::proto::RequestMetaInfoV1* _internal_mutable_requestmetainfo();
   public:
-  void unsafe_arena_set_allocated_userinfo(
-      ::proto::UserMetaInfoV1* userinfo);
-  ::proto::UserMetaInfoV1* unsafe_arena_release_userinfo();
+  void unsafe_arena_set_allocated_requestmetainfo(
+      ::proto::RequestMetaInfoV1* requestmetainfo);
+  ::proto::RequestMetaInfoV1* unsafe_arena_release_requestmetainfo();
+
+  // .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
+  bool has_userverifyinfo() const;
+  private:
+  bool _internal_has_userverifyinfo() const;
+  public:
+  void clear_userverifyinfo();
+  const ::proto::UserVerifyInfoV1& userverifyinfo() const;
+  PROTOBUF_NODISCARD ::proto::UserVerifyInfoV1* release_userverifyinfo();
+  ::proto::UserVerifyInfoV1* mutable_userverifyinfo();
+  void set_allocated_userverifyinfo(::proto::UserVerifyInfoV1* userverifyinfo);
+  private:
+  const ::proto::UserVerifyInfoV1& _internal_userverifyinfo() const;
+  ::proto::UserVerifyInfoV1* _internal_mutable_userverifyinfo();
+  public:
+  void unsafe_arena_set_allocated_userverifyinfo(
+      ::proto::UserVerifyInfoV1* userverifyinfo);
+  ::proto::UserVerifyInfoV1* unsafe_arena_release_userverifyinfo();
 
   // @@protoc_insertion_point(class_scope:proto.GetAllPermissionGroupRequest)
  private:
@@ -1996,7 +2247,8 @@ class GetAllPermissionGroupRequest final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::proto::UserMetaInfoV1* userinfo_;
+    ::proto::RequestMetaInfoV1* requestmetainfo_;
+    ::proto::UserVerifyInfoV1* userverifyinfo_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -2125,63 +2377,74 @@ class ChangeUserPermissionGroupRequest final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kUserInfoFieldNumber = 1,
-    kTargetUserInfoFieldNumber = 2,
-    kPermissionGroupFieldNumber = 3,
+    kTargetUserNameFieldNumber = 3,
+    kPermissionGroupNameFieldNumber = 4,
+    kRequestMetaInfoFieldNumber = 1,
+    kUserVerifyInfoFieldNumber = 2,
   };
-  // .proto.UserMetaInfoV1 UserInfo = 1;
-  bool has_userinfo() const;
+  // string TargetUserName = 3;
+  void clear_targetusername();
+  const std::string& targetusername() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_targetusername(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_targetusername();
+  PROTOBUF_NODISCARD std::string* release_targetusername();
+  void set_allocated_targetusername(std::string* targetusername);
   private:
-  bool _internal_has_userinfo() const;
+  const std::string& _internal_targetusername() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_targetusername(const std::string& value);
+  std::string* _internal_mutable_targetusername();
   public:
-  void clear_userinfo();
-  const ::proto::UserMetaInfoV1& userinfo() const;
-  PROTOBUF_NODISCARD ::proto::UserMetaInfoV1* release_userinfo();
-  ::proto::UserMetaInfoV1* mutable_userinfo();
-  void set_allocated_userinfo(::proto::UserMetaInfoV1* userinfo);
-  private:
-  const ::proto::UserMetaInfoV1& _internal_userinfo() const;
-  ::proto::UserMetaInfoV1* _internal_mutable_userinfo();
-  public:
-  void unsafe_arena_set_allocated_userinfo(
-      ::proto::UserMetaInfoV1* userinfo);
-  ::proto::UserMetaInfoV1* unsafe_arena_release_userinfo();
 
-  // .proto.UserMetaInfoV1 TargetUserInfo = 2;
-  bool has_targetuserinfo() const;
+  // string PermissionGroupName = 4;
+  void clear_permissiongroupname();
+  const std::string& permissiongroupname() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_permissiongroupname(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_permissiongroupname();
+  PROTOBUF_NODISCARD std::string* release_permissiongroupname();
+  void set_allocated_permissiongroupname(std::string* permissiongroupname);
   private:
-  bool _internal_has_targetuserinfo() const;
+  const std::string& _internal_permissiongroupname() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_permissiongroupname(const std::string& value);
+  std::string* _internal_mutable_permissiongroupname();
   public:
-  void clear_targetuserinfo();
-  const ::proto::UserMetaInfoV1& targetuserinfo() const;
-  PROTOBUF_NODISCARD ::proto::UserMetaInfoV1* release_targetuserinfo();
-  ::proto::UserMetaInfoV1* mutable_targetuserinfo();
-  void set_allocated_targetuserinfo(::proto::UserMetaInfoV1* targetuserinfo);
-  private:
-  const ::proto::UserMetaInfoV1& _internal_targetuserinfo() const;
-  ::proto::UserMetaInfoV1* _internal_mutable_targetuserinfo();
-  public:
-  void unsafe_arena_set_allocated_targetuserinfo(
-      ::proto::UserMetaInfoV1* targetuserinfo);
-  ::proto::UserMetaInfoV1* unsafe_arena_release_targetuserinfo();
 
-  // .proto.PermissionGroupMetaInfoV1 PermissionGroup = 3;
-  bool has_permissiongroup() const;
+  // .proto.RequestMetaInfoV1 RequestMetaInfo = 1;
+  bool has_requestmetainfo() const;
   private:
-  bool _internal_has_permissiongroup() const;
+  bool _internal_has_requestmetainfo() const;
   public:
-  void clear_permissiongroup();
-  const ::proto::PermissionGroupMetaInfoV1& permissiongroup() const;
-  PROTOBUF_NODISCARD ::proto::PermissionGroupMetaInfoV1* release_permissiongroup();
-  ::proto::PermissionGroupMetaInfoV1* mutable_permissiongroup();
-  void set_allocated_permissiongroup(::proto::PermissionGroupMetaInfoV1* permissiongroup);
+  void clear_requestmetainfo();
+  const ::proto::RequestMetaInfoV1& requestmetainfo() const;
+  PROTOBUF_NODISCARD ::proto::RequestMetaInfoV1* release_requestmetainfo();
+  ::proto::RequestMetaInfoV1* mutable_requestmetainfo();
+  void set_allocated_requestmetainfo(::proto::RequestMetaInfoV1* requestmetainfo);
   private:
-  const ::proto::PermissionGroupMetaInfoV1& _internal_permissiongroup() const;
-  ::proto::PermissionGroupMetaInfoV1* _internal_mutable_permissiongroup();
+  const ::proto::RequestMetaInfoV1& _internal_requestmetainfo() const;
+  ::proto::RequestMetaInfoV1* _internal_mutable_requestmetainfo();
   public:
-  void unsafe_arena_set_allocated_permissiongroup(
-      ::proto::PermissionGroupMetaInfoV1* permissiongroup);
-  ::proto::PermissionGroupMetaInfoV1* unsafe_arena_release_permissiongroup();
+  void unsafe_arena_set_allocated_requestmetainfo(
+      ::proto::RequestMetaInfoV1* requestmetainfo);
+  ::proto::RequestMetaInfoV1* unsafe_arena_release_requestmetainfo();
+
+  // .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
+  bool has_userverifyinfo() const;
+  private:
+  bool _internal_has_userverifyinfo() const;
+  public:
+  void clear_userverifyinfo();
+  const ::proto::UserVerifyInfoV1& userverifyinfo() const;
+  PROTOBUF_NODISCARD ::proto::UserVerifyInfoV1* release_userverifyinfo();
+  ::proto::UserVerifyInfoV1* mutable_userverifyinfo();
+  void set_allocated_userverifyinfo(::proto::UserVerifyInfoV1* userverifyinfo);
+  private:
+  const ::proto::UserVerifyInfoV1& _internal_userverifyinfo() const;
+  ::proto::UserVerifyInfoV1* _internal_mutable_userverifyinfo();
+  public:
+  void unsafe_arena_set_allocated_userverifyinfo(
+      ::proto::UserVerifyInfoV1* userverifyinfo);
+  ::proto::UserVerifyInfoV1* unsafe_arena_release_userverifyinfo();
 
   // @@protoc_insertion_point(class_scope:proto.ChangeUserPermissionGroupRequest)
  private:
@@ -2191,9 +2454,10 @@ class ChangeUserPermissionGroupRequest final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::proto::UserMetaInfoV1* userinfo_;
-    ::proto::UserMetaInfoV1* targetuserinfo_;
-    ::proto::PermissionGroupMetaInfoV1* permissiongroup_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr targetusername_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr permissiongroupname_;
+    ::proto::RequestMetaInfoV1* requestmetainfo_;
+    ::proto::UserVerifyInfoV1* userverifyinfo_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -2322,28 +2586,47 @@ class CreateProjectRequest final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kUserInfoFieldNumber = 1,
-    kProjectInfoFieldNumber = 2,
+    kRequestMetaInfoFieldNumber = 1,
+    kUserVerifyInfoFieldNumber = 2,
+    kProjectInfoFieldNumber = 3,
   };
-  // .proto.UserMetaInfoV1 UserInfo = 1;
-  bool has_userinfo() const;
+  // .proto.RequestMetaInfoV1 RequestMetaInfo = 1;
+  bool has_requestmetainfo() const;
   private:
-  bool _internal_has_userinfo() const;
+  bool _internal_has_requestmetainfo() const;
   public:
-  void clear_userinfo();
-  const ::proto::UserMetaInfoV1& userinfo() const;
-  PROTOBUF_NODISCARD ::proto::UserMetaInfoV1* release_userinfo();
-  ::proto::UserMetaInfoV1* mutable_userinfo();
-  void set_allocated_userinfo(::proto::UserMetaInfoV1* userinfo);
+  void clear_requestmetainfo();
+  const ::proto::RequestMetaInfoV1& requestmetainfo() const;
+  PROTOBUF_NODISCARD ::proto::RequestMetaInfoV1* release_requestmetainfo();
+  ::proto::RequestMetaInfoV1* mutable_requestmetainfo();
+  void set_allocated_requestmetainfo(::proto::RequestMetaInfoV1* requestmetainfo);
   private:
-  const ::proto::UserMetaInfoV1& _internal_userinfo() const;
-  ::proto::UserMetaInfoV1* _internal_mutable_userinfo();
+  const ::proto::RequestMetaInfoV1& _internal_requestmetainfo() const;
+  ::proto::RequestMetaInfoV1* _internal_mutable_requestmetainfo();
   public:
-  void unsafe_arena_set_allocated_userinfo(
-      ::proto::UserMetaInfoV1* userinfo);
-  ::proto::UserMetaInfoV1* unsafe_arena_release_userinfo();
+  void unsafe_arena_set_allocated_requestmetainfo(
+      ::proto::RequestMetaInfoV1* requestmetainfo);
+  ::proto::RequestMetaInfoV1* unsafe_arena_release_requestmetainfo();
 
-  // .proto.ProjectMetaInfoV1 ProjectInfo = 2;
+  // .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
+  bool has_userverifyinfo() const;
+  private:
+  bool _internal_has_userverifyinfo() const;
+  public:
+  void clear_userverifyinfo();
+  const ::proto::UserVerifyInfoV1& userverifyinfo() const;
+  PROTOBUF_NODISCARD ::proto::UserVerifyInfoV1* release_userverifyinfo();
+  ::proto::UserVerifyInfoV1* mutable_userverifyinfo();
+  void set_allocated_userverifyinfo(::proto::UserVerifyInfoV1* userverifyinfo);
+  private:
+  const ::proto::UserVerifyInfoV1& _internal_userverifyinfo() const;
+  ::proto::UserVerifyInfoV1* _internal_mutable_userverifyinfo();
+  public:
+  void unsafe_arena_set_allocated_userverifyinfo(
+      ::proto::UserVerifyInfoV1* userverifyinfo);
+  ::proto::UserVerifyInfoV1* unsafe_arena_release_userverifyinfo();
+
+  // .proto.ProjectMetaInfoV1 ProjectInfo = 3;
   bool has_projectinfo() const;
   private:
   bool _internal_has_projectinfo() const;
@@ -2369,7 +2652,8 @@ class CreateProjectRequest final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::proto::UserMetaInfoV1* userinfo_;
+    ::proto::RequestMetaInfoV1* requestmetainfo_;
+    ::proto::UserVerifyInfoV1* userverifyinfo_;
     ::proto::ProjectMetaInfoV1* projectinfo_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
@@ -2499,44 +2783,59 @@ class DeleteProjectRequest final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kUserInfoFieldNumber = 1,
-    kProjectInfoFieldNumber = 2,
+    kProjectNameFieldNumber = 3,
+    kRequestMetaInfoFieldNumber = 1,
+    kUserVerifyInfoFieldNumber = 2,
   };
-  // .proto.UserMetaInfoV1 UserInfo = 1;
-  bool has_userinfo() const;
+  // string ProjectName = 3;
+  void clear_projectname();
+  const std::string& projectname() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_projectname(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_projectname();
+  PROTOBUF_NODISCARD std::string* release_projectname();
+  void set_allocated_projectname(std::string* projectname);
   private:
-  bool _internal_has_userinfo() const;
+  const std::string& _internal_projectname() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_projectname(const std::string& value);
+  std::string* _internal_mutable_projectname();
   public:
-  void clear_userinfo();
-  const ::proto::UserMetaInfoV1& userinfo() const;
-  PROTOBUF_NODISCARD ::proto::UserMetaInfoV1* release_userinfo();
-  ::proto::UserMetaInfoV1* mutable_userinfo();
-  void set_allocated_userinfo(::proto::UserMetaInfoV1* userinfo);
-  private:
-  const ::proto::UserMetaInfoV1& _internal_userinfo() const;
-  ::proto::UserMetaInfoV1* _internal_mutable_userinfo();
-  public:
-  void unsafe_arena_set_allocated_userinfo(
-      ::proto::UserMetaInfoV1* userinfo);
-  ::proto::UserMetaInfoV1* unsafe_arena_release_userinfo();
 
-  // .proto.ProjectMetaInfoV1 ProjectInfo = 2;
-  bool has_projectinfo() const;
+  // .proto.RequestMetaInfoV1 RequestMetaInfo = 1;
+  bool has_requestmetainfo() const;
   private:
-  bool _internal_has_projectinfo() const;
+  bool _internal_has_requestmetainfo() const;
   public:
-  void clear_projectinfo();
-  const ::proto::ProjectMetaInfoV1& projectinfo() const;
-  PROTOBUF_NODISCARD ::proto::ProjectMetaInfoV1* release_projectinfo();
-  ::proto::ProjectMetaInfoV1* mutable_projectinfo();
-  void set_allocated_projectinfo(::proto::ProjectMetaInfoV1* projectinfo);
+  void clear_requestmetainfo();
+  const ::proto::RequestMetaInfoV1& requestmetainfo() const;
+  PROTOBUF_NODISCARD ::proto::RequestMetaInfoV1* release_requestmetainfo();
+  ::proto::RequestMetaInfoV1* mutable_requestmetainfo();
+  void set_allocated_requestmetainfo(::proto::RequestMetaInfoV1* requestmetainfo);
   private:
-  const ::proto::ProjectMetaInfoV1& _internal_projectinfo() const;
-  ::proto::ProjectMetaInfoV1* _internal_mutable_projectinfo();
+  const ::proto::RequestMetaInfoV1& _internal_requestmetainfo() const;
+  ::proto::RequestMetaInfoV1* _internal_mutable_requestmetainfo();
   public:
-  void unsafe_arena_set_allocated_projectinfo(
-      ::proto::ProjectMetaInfoV1* projectinfo);
-  ::proto::ProjectMetaInfoV1* unsafe_arena_release_projectinfo();
+  void unsafe_arena_set_allocated_requestmetainfo(
+      ::proto::RequestMetaInfoV1* requestmetainfo);
+  ::proto::RequestMetaInfoV1* unsafe_arena_release_requestmetainfo();
+
+  // .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
+  bool has_userverifyinfo() const;
+  private:
+  bool _internal_has_userverifyinfo() const;
+  public:
+  void clear_userverifyinfo();
+  const ::proto::UserVerifyInfoV1& userverifyinfo() const;
+  PROTOBUF_NODISCARD ::proto::UserVerifyInfoV1* release_userverifyinfo();
+  ::proto::UserVerifyInfoV1* mutable_userverifyinfo();
+  void set_allocated_userverifyinfo(::proto::UserVerifyInfoV1* userverifyinfo);
+  private:
+  const ::proto::UserVerifyInfoV1& _internal_userverifyinfo() const;
+  ::proto::UserVerifyInfoV1* _internal_mutable_userverifyinfo();
+  public:
+  void unsafe_arena_set_allocated_userverifyinfo(
+      ::proto::UserVerifyInfoV1* userverifyinfo);
+  ::proto::UserVerifyInfoV1* unsafe_arena_release_userverifyinfo();
 
   // @@protoc_insertion_point(class_scope:proto.DeleteProjectRequest)
  private:
@@ -2546,8 +2845,9 @@ class DeleteProjectRequest final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::proto::UserMetaInfoV1* userinfo_;
-    ::proto::ProjectMetaInfoV1* projectinfo_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr projectname_;
+    ::proto::RequestMetaInfoV1* requestmetainfo_;
+    ::proto::UserVerifyInfoV1* userverifyinfo_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -2676,28 +2976,47 @@ class UpdateProjectRequest final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kUserInfoFieldNumber = 1,
-    kProjectInfoFieldNumber = 2,
+    kRequestMetaInfoFieldNumber = 1,
+    kUserVerifyInfoFieldNumber = 2,
+    kProjectInfoFieldNumber = 3,
   };
-  // .proto.UserMetaInfoV1 UserInfo = 1;
-  bool has_userinfo() const;
+  // .proto.RequestMetaInfoV1 RequestMetaInfo = 1;
+  bool has_requestmetainfo() const;
   private:
-  bool _internal_has_userinfo() const;
+  bool _internal_has_requestmetainfo() const;
   public:
-  void clear_userinfo();
-  const ::proto::UserMetaInfoV1& userinfo() const;
-  PROTOBUF_NODISCARD ::proto::UserMetaInfoV1* release_userinfo();
-  ::proto::UserMetaInfoV1* mutable_userinfo();
-  void set_allocated_userinfo(::proto::UserMetaInfoV1* userinfo);
+  void clear_requestmetainfo();
+  const ::proto::RequestMetaInfoV1& requestmetainfo() const;
+  PROTOBUF_NODISCARD ::proto::RequestMetaInfoV1* release_requestmetainfo();
+  ::proto::RequestMetaInfoV1* mutable_requestmetainfo();
+  void set_allocated_requestmetainfo(::proto::RequestMetaInfoV1* requestmetainfo);
   private:
-  const ::proto::UserMetaInfoV1& _internal_userinfo() const;
-  ::proto::UserMetaInfoV1* _internal_mutable_userinfo();
+  const ::proto::RequestMetaInfoV1& _internal_requestmetainfo() const;
+  ::proto::RequestMetaInfoV1* _internal_mutable_requestmetainfo();
   public:
-  void unsafe_arena_set_allocated_userinfo(
-      ::proto::UserMetaInfoV1* userinfo);
-  ::proto::UserMetaInfoV1* unsafe_arena_release_userinfo();
+  void unsafe_arena_set_allocated_requestmetainfo(
+      ::proto::RequestMetaInfoV1* requestmetainfo);
+  ::proto::RequestMetaInfoV1* unsafe_arena_release_requestmetainfo();
 
-  // .proto.ProjectMetaInfoV1 ProjectInfo = 2;
+  // .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
+  bool has_userverifyinfo() const;
+  private:
+  bool _internal_has_userverifyinfo() const;
+  public:
+  void clear_userverifyinfo();
+  const ::proto::UserVerifyInfoV1& userverifyinfo() const;
+  PROTOBUF_NODISCARD ::proto::UserVerifyInfoV1* release_userverifyinfo();
+  ::proto::UserVerifyInfoV1* mutable_userverifyinfo();
+  void set_allocated_userverifyinfo(::proto::UserVerifyInfoV1* userverifyinfo);
+  private:
+  const ::proto::UserVerifyInfoV1& _internal_userverifyinfo() const;
+  ::proto::UserVerifyInfoV1* _internal_mutable_userverifyinfo();
+  public:
+  void unsafe_arena_set_allocated_userverifyinfo(
+      ::proto::UserVerifyInfoV1* userverifyinfo);
+  ::proto::UserVerifyInfoV1* unsafe_arena_release_userverifyinfo();
+
+  // .proto.ProjectMetaInfoV1 ProjectInfo = 3;
   bool has_projectinfo() const;
   private:
   bool _internal_has_projectinfo() const;
@@ -2723,7 +3042,8 @@ class UpdateProjectRequest final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::proto::UserMetaInfoV1* userinfo_;
+    ::proto::RequestMetaInfoV1* requestmetainfo_;
+    ::proto::UserVerifyInfoV1* userverifyinfo_;
     ::proto::ProjectMetaInfoV1* projectinfo_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
@@ -2853,44 +3173,59 @@ class GetProjectRequest final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kUserInfoFieldNumber = 1,
-    kProjectInfoFieldNumber = 2,
+    kProjectNameFieldNumber = 3,
+    kRequestMetaInfoFieldNumber = 1,
+    kUserVerifyInfoFieldNumber = 2,
   };
-  // .proto.UserMetaInfoV1 UserInfo = 1;
-  bool has_userinfo() const;
+  // string ProjectName = 3;
+  void clear_projectname();
+  const std::string& projectname() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_projectname(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_projectname();
+  PROTOBUF_NODISCARD std::string* release_projectname();
+  void set_allocated_projectname(std::string* projectname);
   private:
-  bool _internal_has_userinfo() const;
+  const std::string& _internal_projectname() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_projectname(const std::string& value);
+  std::string* _internal_mutable_projectname();
   public:
-  void clear_userinfo();
-  const ::proto::UserMetaInfoV1& userinfo() const;
-  PROTOBUF_NODISCARD ::proto::UserMetaInfoV1* release_userinfo();
-  ::proto::UserMetaInfoV1* mutable_userinfo();
-  void set_allocated_userinfo(::proto::UserMetaInfoV1* userinfo);
-  private:
-  const ::proto::UserMetaInfoV1& _internal_userinfo() const;
-  ::proto::UserMetaInfoV1* _internal_mutable_userinfo();
-  public:
-  void unsafe_arena_set_allocated_userinfo(
-      ::proto::UserMetaInfoV1* userinfo);
-  ::proto::UserMetaInfoV1* unsafe_arena_release_userinfo();
 
-  // .proto.ProjectMetaInfoV1 ProjectInfo = 2;
-  bool has_projectinfo() const;
+  // .proto.RequestMetaInfoV1 RequestMetaInfo = 1;
+  bool has_requestmetainfo() const;
   private:
-  bool _internal_has_projectinfo() const;
+  bool _internal_has_requestmetainfo() const;
   public:
-  void clear_projectinfo();
-  const ::proto::ProjectMetaInfoV1& projectinfo() const;
-  PROTOBUF_NODISCARD ::proto::ProjectMetaInfoV1* release_projectinfo();
-  ::proto::ProjectMetaInfoV1* mutable_projectinfo();
-  void set_allocated_projectinfo(::proto::ProjectMetaInfoV1* projectinfo);
+  void clear_requestmetainfo();
+  const ::proto::RequestMetaInfoV1& requestmetainfo() const;
+  PROTOBUF_NODISCARD ::proto::RequestMetaInfoV1* release_requestmetainfo();
+  ::proto::RequestMetaInfoV1* mutable_requestmetainfo();
+  void set_allocated_requestmetainfo(::proto::RequestMetaInfoV1* requestmetainfo);
   private:
-  const ::proto::ProjectMetaInfoV1& _internal_projectinfo() const;
-  ::proto::ProjectMetaInfoV1* _internal_mutable_projectinfo();
+  const ::proto::RequestMetaInfoV1& _internal_requestmetainfo() const;
+  ::proto::RequestMetaInfoV1* _internal_mutable_requestmetainfo();
   public:
-  void unsafe_arena_set_allocated_projectinfo(
-      ::proto::ProjectMetaInfoV1* projectinfo);
-  ::proto::ProjectMetaInfoV1* unsafe_arena_release_projectinfo();
+  void unsafe_arena_set_allocated_requestmetainfo(
+      ::proto::RequestMetaInfoV1* requestmetainfo);
+  ::proto::RequestMetaInfoV1* unsafe_arena_release_requestmetainfo();
+
+  // .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
+  bool has_userverifyinfo() const;
+  private:
+  bool _internal_has_userverifyinfo() const;
+  public:
+  void clear_userverifyinfo();
+  const ::proto::UserVerifyInfoV1& userverifyinfo() const;
+  PROTOBUF_NODISCARD ::proto::UserVerifyInfoV1* release_userverifyinfo();
+  ::proto::UserVerifyInfoV1* mutable_userverifyinfo();
+  void set_allocated_userverifyinfo(::proto::UserVerifyInfoV1* userverifyinfo);
+  private:
+  const ::proto::UserVerifyInfoV1& _internal_userverifyinfo() const;
+  ::proto::UserVerifyInfoV1* _internal_mutable_userverifyinfo();
+  public:
+  void unsafe_arena_set_allocated_userverifyinfo(
+      ::proto::UserVerifyInfoV1* userverifyinfo);
+  ::proto::UserVerifyInfoV1* unsafe_arena_release_userverifyinfo();
 
   // @@protoc_insertion_point(class_scope:proto.GetProjectRequest)
  private:
@@ -2900,8 +3235,9 @@ class GetProjectRequest final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::proto::UserMetaInfoV1* userinfo_;
-    ::proto::ProjectMetaInfoV1* projectinfo_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr projectname_;
+    ::proto::RequestMetaInfoV1* requestmetainfo_;
+    ::proto::UserVerifyInfoV1* userverifyinfo_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -3030,25 +3366,44 @@ class GetAllProjectRequest final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kUserInfoFieldNumber = 1,
+    kRequestMetaInfoFieldNumber = 1,
+    kUserVerifyInfoFieldNumber = 2,
   };
-  // .proto.UserMetaInfoV1 UserInfo = 1;
-  bool has_userinfo() const;
+  // .proto.RequestMetaInfoV1 RequestMetaInfo = 1;
+  bool has_requestmetainfo() const;
   private:
-  bool _internal_has_userinfo() const;
+  bool _internal_has_requestmetainfo() const;
   public:
-  void clear_userinfo();
-  const ::proto::UserMetaInfoV1& userinfo() const;
-  PROTOBUF_NODISCARD ::proto::UserMetaInfoV1* release_userinfo();
-  ::proto::UserMetaInfoV1* mutable_userinfo();
-  void set_allocated_userinfo(::proto::UserMetaInfoV1* userinfo);
+  void clear_requestmetainfo();
+  const ::proto::RequestMetaInfoV1& requestmetainfo() const;
+  PROTOBUF_NODISCARD ::proto::RequestMetaInfoV1* release_requestmetainfo();
+  ::proto::RequestMetaInfoV1* mutable_requestmetainfo();
+  void set_allocated_requestmetainfo(::proto::RequestMetaInfoV1* requestmetainfo);
   private:
-  const ::proto::UserMetaInfoV1& _internal_userinfo() const;
-  ::proto::UserMetaInfoV1* _internal_mutable_userinfo();
+  const ::proto::RequestMetaInfoV1& _internal_requestmetainfo() const;
+  ::proto::RequestMetaInfoV1* _internal_mutable_requestmetainfo();
   public:
-  void unsafe_arena_set_allocated_userinfo(
-      ::proto::UserMetaInfoV1* userinfo);
-  ::proto::UserMetaInfoV1* unsafe_arena_release_userinfo();
+  void unsafe_arena_set_allocated_requestmetainfo(
+      ::proto::RequestMetaInfoV1* requestmetainfo);
+  ::proto::RequestMetaInfoV1* unsafe_arena_release_requestmetainfo();
+
+  // .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
+  bool has_userverifyinfo() const;
+  private:
+  bool _internal_has_userverifyinfo() const;
+  public:
+  void clear_userverifyinfo();
+  const ::proto::UserVerifyInfoV1& userverifyinfo() const;
+  PROTOBUF_NODISCARD ::proto::UserVerifyInfoV1* release_userverifyinfo();
+  ::proto::UserVerifyInfoV1* mutable_userverifyinfo();
+  void set_allocated_userverifyinfo(::proto::UserVerifyInfoV1* userverifyinfo);
+  private:
+  const ::proto::UserVerifyInfoV1& _internal_userverifyinfo() const;
+  ::proto::UserVerifyInfoV1* _internal_mutable_userverifyinfo();
+  public:
+  void unsafe_arena_set_allocated_userverifyinfo(
+      ::proto::UserVerifyInfoV1* userverifyinfo);
+  ::proto::UserVerifyInfoV1* unsafe_arena_release_userverifyinfo();
 
   // @@protoc_insertion_point(class_scope:proto.GetAllProjectRequest)
  private:
@@ -3058,7 +3413,8 @@ class GetAllProjectRequest final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::proto::UserMetaInfoV1* userinfo_;
+    ::proto::RequestMetaInfoV1* requestmetainfo_;
+    ::proto::UserVerifyInfoV1* userverifyinfo_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -3187,28 +3543,47 @@ class CreateSwcRequest final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kUserInfoFieldNumber = 1,
-    kSwcInfoFieldNumber = 2,
+    kRequestMetaInfoFieldNumber = 1,
+    kUserVerifyInfoFieldNumber = 2,
+    kSwcInfoFieldNumber = 3,
   };
-  // .proto.UserMetaInfoV1 UserInfo = 1;
-  bool has_userinfo() const;
+  // .proto.RequestMetaInfoV1 RequestMetaInfo = 1;
+  bool has_requestmetainfo() const;
   private:
-  bool _internal_has_userinfo() const;
+  bool _internal_has_requestmetainfo() const;
   public:
-  void clear_userinfo();
-  const ::proto::UserMetaInfoV1& userinfo() const;
-  PROTOBUF_NODISCARD ::proto::UserMetaInfoV1* release_userinfo();
-  ::proto::UserMetaInfoV1* mutable_userinfo();
-  void set_allocated_userinfo(::proto::UserMetaInfoV1* userinfo);
+  void clear_requestmetainfo();
+  const ::proto::RequestMetaInfoV1& requestmetainfo() const;
+  PROTOBUF_NODISCARD ::proto::RequestMetaInfoV1* release_requestmetainfo();
+  ::proto::RequestMetaInfoV1* mutable_requestmetainfo();
+  void set_allocated_requestmetainfo(::proto::RequestMetaInfoV1* requestmetainfo);
   private:
-  const ::proto::UserMetaInfoV1& _internal_userinfo() const;
-  ::proto::UserMetaInfoV1* _internal_mutable_userinfo();
+  const ::proto::RequestMetaInfoV1& _internal_requestmetainfo() const;
+  ::proto::RequestMetaInfoV1* _internal_mutable_requestmetainfo();
   public:
-  void unsafe_arena_set_allocated_userinfo(
-      ::proto::UserMetaInfoV1* userinfo);
-  ::proto::UserMetaInfoV1* unsafe_arena_release_userinfo();
+  void unsafe_arena_set_allocated_requestmetainfo(
+      ::proto::RequestMetaInfoV1* requestmetainfo);
+  ::proto::RequestMetaInfoV1* unsafe_arena_release_requestmetainfo();
 
-  // .proto.SwcMetaInfoV1 SwcInfo = 2;
+  // .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
+  bool has_userverifyinfo() const;
+  private:
+  bool _internal_has_userverifyinfo() const;
+  public:
+  void clear_userverifyinfo();
+  const ::proto::UserVerifyInfoV1& userverifyinfo() const;
+  PROTOBUF_NODISCARD ::proto::UserVerifyInfoV1* release_userverifyinfo();
+  ::proto::UserVerifyInfoV1* mutable_userverifyinfo();
+  void set_allocated_userverifyinfo(::proto::UserVerifyInfoV1* userverifyinfo);
+  private:
+  const ::proto::UserVerifyInfoV1& _internal_userverifyinfo() const;
+  ::proto::UserVerifyInfoV1* _internal_mutable_userverifyinfo();
+  public:
+  void unsafe_arena_set_allocated_userverifyinfo(
+      ::proto::UserVerifyInfoV1* userverifyinfo);
+  ::proto::UserVerifyInfoV1* unsafe_arena_release_userverifyinfo();
+
+  // .proto.SwcMetaInfoV1 SwcInfo = 3;
   bool has_swcinfo() const;
   private:
   bool _internal_has_swcinfo() const;
@@ -3234,7 +3609,8 @@ class CreateSwcRequest final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::proto::UserMetaInfoV1* userinfo_;
+    ::proto::RequestMetaInfoV1* requestmetainfo_;
+    ::proto::UserVerifyInfoV1* userverifyinfo_;
     ::proto::SwcMetaInfoV1* swcinfo_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
@@ -3364,44 +3740,59 @@ class DeleteSwcRequest final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kUserInfoFieldNumber = 1,
-    kSwcInfoFieldNumber = 2,
+    kSwcNameFieldNumber = 3,
+    kRequestMetaInfoFieldNumber = 1,
+    kUserVerifyInfoFieldNumber = 2,
   };
-  // .proto.UserMetaInfoV1 UserInfo = 1;
-  bool has_userinfo() const;
+  // string SwcName = 3;
+  void clear_swcname();
+  const std::string& swcname() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_swcname(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_swcname();
+  PROTOBUF_NODISCARD std::string* release_swcname();
+  void set_allocated_swcname(std::string* swcname);
   private:
-  bool _internal_has_userinfo() const;
+  const std::string& _internal_swcname() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_swcname(const std::string& value);
+  std::string* _internal_mutable_swcname();
   public:
-  void clear_userinfo();
-  const ::proto::UserMetaInfoV1& userinfo() const;
-  PROTOBUF_NODISCARD ::proto::UserMetaInfoV1* release_userinfo();
-  ::proto::UserMetaInfoV1* mutable_userinfo();
-  void set_allocated_userinfo(::proto::UserMetaInfoV1* userinfo);
-  private:
-  const ::proto::UserMetaInfoV1& _internal_userinfo() const;
-  ::proto::UserMetaInfoV1* _internal_mutable_userinfo();
-  public:
-  void unsafe_arena_set_allocated_userinfo(
-      ::proto::UserMetaInfoV1* userinfo);
-  ::proto::UserMetaInfoV1* unsafe_arena_release_userinfo();
 
-  // .proto.SwcMetaInfoV1 SwcInfo = 2;
-  bool has_swcinfo() const;
+  // .proto.RequestMetaInfoV1 RequestMetaInfo = 1;
+  bool has_requestmetainfo() const;
   private:
-  bool _internal_has_swcinfo() const;
+  bool _internal_has_requestmetainfo() const;
   public:
-  void clear_swcinfo();
-  const ::proto::SwcMetaInfoV1& swcinfo() const;
-  PROTOBUF_NODISCARD ::proto::SwcMetaInfoV1* release_swcinfo();
-  ::proto::SwcMetaInfoV1* mutable_swcinfo();
-  void set_allocated_swcinfo(::proto::SwcMetaInfoV1* swcinfo);
+  void clear_requestmetainfo();
+  const ::proto::RequestMetaInfoV1& requestmetainfo() const;
+  PROTOBUF_NODISCARD ::proto::RequestMetaInfoV1* release_requestmetainfo();
+  ::proto::RequestMetaInfoV1* mutable_requestmetainfo();
+  void set_allocated_requestmetainfo(::proto::RequestMetaInfoV1* requestmetainfo);
   private:
-  const ::proto::SwcMetaInfoV1& _internal_swcinfo() const;
-  ::proto::SwcMetaInfoV1* _internal_mutable_swcinfo();
+  const ::proto::RequestMetaInfoV1& _internal_requestmetainfo() const;
+  ::proto::RequestMetaInfoV1* _internal_mutable_requestmetainfo();
   public:
-  void unsafe_arena_set_allocated_swcinfo(
-      ::proto::SwcMetaInfoV1* swcinfo);
-  ::proto::SwcMetaInfoV1* unsafe_arena_release_swcinfo();
+  void unsafe_arena_set_allocated_requestmetainfo(
+      ::proto::RequestMetaInfoV1* requestmetainfo);
+  ::proto::RequestMetaInfoV1* unsafe_arena_release_requestmetainfo();
+
+  // .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
+  bool has_userverifyinfo() const;
+  private:
+  bool _internal_has_userverifyinfo() const;
+  public:
+  void clear_userverifyinfo();
+  const ::proto::UserVerifyInfoV1& userverifyinfo() const;
+  PROTOBUF_NODISCARD ::proto::UserVerifyInfoV1* release_userverifyinfo();
+  ::proto::UserVerifyInfoV1* mutable_userverifyinfo();
+  void set_allocated_userverifyinfo(::proto::UserVerifyInfoV1* userverifyinfo);
+  private:
+  const ::proto::UserVerifyInfoV1& _internal_userverifyinfo() const;
+  ::proto::UserVerifyInfoV1* _internal_mutable_userverifyinfo();
+  public:
+  void unsafe_arena_set_allocated_userverifyinfo(
+      ::proto::UserVerifyInfoV1* userverifyinfo);
+  ::proto::UserVerifyInfoV1* unsafe_arena_release_userverifyinfo();
 
   // @@protoc_insertion_point(class_scope:proto.DeleteSwcRequest)
  private:
@@ -3411,8 +3802,9 @@ class DeleteSwcRequest final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::proto::UserMetaInfoV1* userinfo_;
-    ::proto::SwcMetaInfoV1* swcinfo_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr swcname_;
+    ::proto::RequestMetaInfoV1* requestmetainfo_;
+    ::proto::UserVerifyInfoV1* userverifyinfo_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -3541,28 +3933,47 @@ class UpdateSwcRequest final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kUserInfoFieldNumber = 1,
-    kSwcInfoFieldNumber = 2,
+    kRequestMetaInfoFieldNumber = 1,
+    kUserVerifyInfoFieldNumber = 2,
+    kSwcInfoFieldNumber = 3,
   };
-  // .proto.UserMetaInfoV1 UserInfo = 1;
-  bool has_userinfo() const;
+  // .proto.RequestMetaInfoV1 RequestMetaInfo = 1;
+  bool has_requestmetainfo() const;
   private:
-  bool _internal_has_userinfo() const;
+  bool _internal_has_requestmetainfo() const;
   public:
-  void clear_userinfo();
-  const ::proto::UserMetaInfoV1& userinfo() const;
-  PROTOBUF_NODISCARD ::proto::UserMetaInfoV1* release_userinfo();
-  ::proto::UserMetaInfoV1* mutable_userinfo();
-  void set_allocated_userinfo(::proto::UserMetaInfoV1* userinfo);
+  void clear_requestmetainfo();
+  const ::proto::RequestMetaInfoV1& requestmetainfo() const;
+  PROTOBUF_NODISCARD ::proto::RequestMetaInfoV1* release_requestmetainfo();
+  ::proto::RequestMetaInfoV1* mutable_requestmetainfo();
+  void set_allocated_requestmetainfo(::proto::RequestMetaInfoV1* requestmetainfo);
   private:
-  const ::proto::UserMetaInfoV1& _internal_userinfo() const;
-  ::proto::UserMetaInfoV1* _internal_mutable_userinfo();
+  const ::proto::RequestMetaInfoV1& _internal_requestmetainfo() const;
+  ::proto::RequestMetaInfoV1* _internal_mutable_requestmetainfo();
   public:
-  void unsafe_arena_set_allocated_userinfo(
-      ::proto::UserMetaInfoV1* userinfo);
-  ::proto::UserMetaInfoV1* unsafe_arena_release_userinfo();
+  void unsafe_arena_set_allocated_requestmetainfo(
+      ::proto::RequestMetaInfoV1* requestmetainfo);
+  ::proto::RequestMetaInfoV1* unsafe_arena_release_requestmetainfo();
 
-  // .proto.SwcMetaInfoV1 SwcInfo = 2;
+  // .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
+  bool has_userverifyinfo() const;
+  private:
+  bool _internal_has_userverifyinfo() const;
+  public:
+  void clear_userverifyinfo();
+  const ::proto::UserVerifyInfoV1& userverifyinfo() const;
+  PROTOBUF_NODISCARD ::proto::UserVerifyInfoV1* release_userverifyinfo();
+  ::proto::UserVerifyInfoV1* mutable_userverifyinfo();
+  void set_allocated_userverifyinfo(::proto::UserVerifyInfoV1* userverifyinfo);
+  private:
+  const ::proto::UserVerifyInfoV1& _internal_userverifyinfo() const;
+  ::proto::UserVerifyInfoV1* _internal_mutable_userverifyinfo();
+  public:
+  void unsafe_arena_set_allocated_userverifyinfo(
+      ::proto::UserVerifyInfoV1* userverifyinfo);
+  ::proto::UserVerifyInfoV1* unsafe_arena_release_userverifyinfo();
+
+  // .proto.SwcMetaInfoV1 SwcInfo = 3;
   bool has_swcinfo() const;
   private:
   bool _internal_has_swcinfo() const;
@@ -3588,7 +3999,8 @@ class UpdateSwcRequest final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::proto::UserMetaInfoV1* userinfo_;
+    ::proto::RequestMetaInfoV1* requestmetainfo_;
+    ::proto::UserVerifyInfoV1* userverifyinfo_;
     ::proto::SwcMetaInfoV1* swcinfo_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
@@ -3718,44 +4130,59 @@ class GetSwcMetaInfoRequest final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kUserInfoFieldNumber = 1,
-    kSwcInfoFieldNumber = 2,
+    kSwcNameFieldNumber = 3,
+    kRequestMetaInfoFieldNumber = 1,
+    kUserVerifyInfoFieldNumber = 2,
   };
-  // .proto.UserMetaInfoV1 UserInfo = 1;
-  bool has_userinfo() const;
+  // string SwcName = 3;
+  void clear_swcname();
+  const std::string& swcname() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_swcname(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_swcname();
+  PROTOBUF_NODISCARD std::string* release_swcname();
+  void set_allocated_swcname(std::string* swcname);
   private:
-  bool _internal_has_userinfo() const;
+  const std::string& _internal_swcname() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_swcname(const std::string& value);
+  std::string* _internal_mutable_swcname();
   public:
-  void clear_userinfo();
-  const ::proto::UserMetaInfoV1& userinfo() const;
-  PROTOBUF_NODISCARD ::proto::UserMetaInfoV1* release_userinfo();
-  ::proto::UserMetaInfoV1* mutable_userinfo();
-  void set_allocated_userinfo(::proto::UserMetaInfoV1* userinfo);
-  private:
-  const ::proto::UserMetaInfoV1& _internal_userinfo() const;
-  ::proto::UserMetaInfoV1* _internal_mutable_userinfo();
-  public:
-  void unsafe_arena_set_allocated_userinfo(
-      ::proto::UserMetaInfoV1* userinfo);
-  ::proto::UserMetaInfoV1* unsafe_arena_release_userinfo();
 
-  // .proto.SwcMetaInfoV1 SwcInfo = 2;
-  bool has_swcinfo() const;
+  // .proto.RequestMetaInfoV1 RequestMetaInfo = 1;
+  bool has_requestmetainfo() const;
   private:
-  bool _internal_has_swcinfo() const;
+  bool _internal_has_requestmetainfo() const;
   public:
-  void clear_swcinfo();
-  const ::proto::SwcMetaInfoV1& swcinfo() const;
-  PROTOBUF_NODISCARD ::proto::SwcMetaInfoV1* release_swcinfo();
-  ::proto::SwcMetaInfoV1* mutable_swcinfo();
-  void set_allocated_swcinfo(::proto::SwcMetaInfoV1* swcinfo);
+  void clear_requestmetainfo();
+  const ::proto::RequestMetaInfoV1& requestmetainfo() const;
+  PROTOBUF_NODISCARD ::proto::RequestMetaInfoV1* release_requestmetainfo();
+  ::proto::RequestMetaInfoV1* mutable_requestmetainfo();
+  void set_allocated_requestmetainfo(::proto::RequestMetaInfoV1* requestmetainfo);
   private:
-  const ::proto::SwcMetaInfoV1& _internal_swcinfo() const;
-  ::proto::SwcMetaInfoV1* _internal_mutable_swcinfo();
+  const ::proto::RequestMetaInfoV1& _internal_requestmetainfo() const;
+  ::proto::RequestMetaInfoV1* _internal_mutable_requestmetainfo();
   public:
-  void unsafe_arena_set_allocated_swcinfo(
-      ::proto::SwcMetaInfoV1* swcinfo);
-  ::proto::SwcMetaInfoV1* unsafe_arena_release_swcinfo();
+  void unsafe_arena_set_allocated_requestmetainfo(
+      ::proto::RequestMetaInfoV1* requestmetainfo);
+  ::proto::RequestMetaInfoV1* unsafe_arena_release_requestmetainfo();
+
+  // .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
+  bool has_userverifyinfo() const;
+  private:
+  bool _internal_has_userverifyinfo() const;
+  public:
+  void clear_userverifyinfo();
+  const ::proto::UserVerifyInfoV1& userverifyinfo() const;
+  PROTOBUF_NODISCARD ::proto::UserVerifyInfoV1* release_userverifyinfo();
+  ::proto::UserVerifyInfoV1* mutable_userverifyinfo();
+  void set_allocated_userverifyinfo(::proto::UserVerifyInfoV1* userverifyinfo);
+  private:
+  const ::proto::UserVerifyInfoV1& _internal_userverifyinfo() const;
+  ::proto::UserVerifyInfoV1* _internal_mutable_userverifyinfo();
+  public:
+  void unsafe_arena_set_allocated_userverifyinfo(
+      ::proto::UserVerifyInfoV1* userverifyinfo);
+  ::proto::UserVerifyInfoV1* unsafe_arena_release_userverifyinfo();
 
   // @@protoc_insertion_point(class_scope:proto.GetSwcMetaInfoRequest)
  private:
@@ -3765,8 +4192,9 @@ class GetSwcMetaInfoRequest final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::proto::UserMetaInfoV1* userinfo_;
-    ::proto::SwcMetaInfoV1* swcinfo_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr swcname_;
+    ::proto::RequestMetaInfoV1* requestmetainfo_;
+    ::proto::UserVerifyInfoV1* userverifyinfo_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -3895,25 +4323,44 @@ class GetAllSwcMetaInfoRequest final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kUserInfoFieldNumber = 1,
+    kRequestMetaInfoFieldNumber = 1,
+    kUserVerifyInfoFieldNumber = 2,
   };
-  // .proto.UserMetaInfoV1 UserInfo = 1;
-  bool has_userinfo() const;
+  // .proto.RequestMetaInfoV1 RequestMetaInfo = 1;
+  bool has_requestmetainfo() const;
   private:
-  bool _internal_has_userinfo() const;
+  bool _internal_has_requestmetainfo() const;
   public:
-  void clear_userinfo();
-  const ::proto::UserMetaInfoV1& userinfo() const;
-  PROTOBUF_NODISCARD ::proto::UserMetaInfoV1* release_userinfo();
-  ::proto::UserMetaInfoV1* mutable_userinfo();
-  void set_allocated_userinfo(::proto::UserMetaInfoV1* userinfo);
+  void clear_requestmetainfo();
+  const ::proto::RequestMetaInfoV1& requestmetainfo() const;
+  PROTOBUF_NODISCARD ::proto::RequestMetaInfoV1* release_requestmetainfo();
+  ::proto::RequestMetaInfoV1* mutable_requestmetainfo();
+  void set_allocated_requestmetainfo(::proto::RequestMetaInfoV1* requestmetainfo);
   private:
-  const ::proto::UserMetaInfoV1& _internal_userinfo() const;
-  ::proto::UserMetaInfoV1* _internal_mutable_userinfo();
+  const ::proto::RequestMetaInfoV1& _internal_requestmetainfo() const;
+  ::proto::RequestMetaInfoV1* _internal_mutable_requestmetainfo();
   public:
-  void unsafe_arena_set_allocated_userinfo(
-      ::proto::UserMetaInfoV1* userinfo);
-  ::proto::UserMetaInfoV1* unsafe_arena_release_userinfo();
+  void unsafe_arena_set_allocated_requestmetainfo(
+      ::proto::RequestMetaInfoV1* requestmetainfo);
+  ::proto::RequestMetaInfoV1* unsafe_arena_release_requestmetainfo();
+
+  // .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
+  bool has_userverifyinfo() const;
+  private:
+  bool _internal_has_userverifyinfo() const;
+  public:
+  void clear_userverifyinfo();
+  const ::proto::UserVerifyInfoV1& userverifyinfo() const;
+  PROTOBUF_NODISCARD ::proto::UserVerifyInfoV1* release_userverifyinfo();
+  ::proto::UserVerifyInfoV1* mutable_userverifyinfo();
+  void set_allocated_userverifyinfo(::proto::UserVerifyInfoV1* userverifyinfo);
+  private:
+  const ::proto::UserVerifyInfoV1& _internal_userverifyinfo() const;
+  ::proto::UserVerifyInfoV1* _internal_mutable_userverifyinfo();
+  public:
+  void unsafe_arena_set_allocated_userverifyinfo(
+      ::proto::UserVerifyInfoV1* userverifyinfo);
+  ::proto::UserVerifyInfoV1* unsafe_arena_release_userverifyinfo();
 
   // @@protoc_insertion_point(class_scope:proto.GetAllSwcMetaInfoRequest)
  private:
@@ -3923,7 +4370,8 @@ class GetAllSwcMetaInfoRequest final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::proto::UserMetaInfoV1* userinfo_;
+    ::proto::RequestMetaInfoV1* requestmetainfo_;
+    ::proto::UserVerifyInfoV1* userverifyinfo_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -4052,10 +4500,11 @@ class CreateSwcSnapshotRequest final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kSwcNameFieldNumber = 2,
-    kUserVerifyInfoFieldNumber = 1,
+    kSwcNameFieldNumber = 3,
+    kRequestMetaInfoFieldNumber = 1,
+    kUserVerifyInfoFieldNumber = 2,
   };
-  // string SwcName = 2;
+  // string SwcName = 3;
   void clear_swcname();
   const std::string& swcname() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -4069,7 +4518,25 @@ class CreateSwcSnapshotRequest final :
   std::string* _internal_mutable_swcname();
   public:
 
-  // .proto.UserVerifyInfoV1 UserVerifyInfo = 1;
+  // .proto.RequestMetaInfoV1 RequestMetaInfo = 1;
+  bool has_requestmetainfo() const;
+  private:
+  bool _internal_has_requestmetainfo() const;
+  public:
+  void clear_requestmetainfo();
+  const ::proto::RequestMetaInfoV1& requestmetainfo() const;
+  PROTOBUF_NODISCARD ::proto::RequestMetaInfoV1* release_requestmetainfo();
+  ::proto::RequestMetaInfoV1* mutable_requestmetainfo();
+  void set_allocated_requestmetainfo(::proto::RequestMetaInfoV1* requestmetainfo);
+  private:
+  const ::proto::RequestMetaInfoV1& _internal_requestmetainfo() const;
+  ::proto::RequestMetaInfoV1* _internal_mutable_requestmetainfo();
+  public:
+  void unsafe_arena_set_allocated_requestmetainfo(
+      ::proto::RequestMetaInfoV1* requestmetainfo);
+  ::proto::RequestMetaInfoV1* unsafe_arena_release_requestmetainfo();
+
+  // .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
   bool has_userverifyinfo() const;
   private:
   bool _internal_has_userverifyinfo() const;
@@ -4096,6 +4563,7 @@ class CreateSwcSnapshotRequest final :
   typedef void DestructorSkippable_;
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr swcname_;
+    ::proto::RequestMetaInfoV1* requestmetainfo_;
     ::proto::UserVerifyInfoV1* userverifyinfo_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
@@ -4225,11 +4693,12 @@ class DeleteSwcSnapshotRequest final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kSwcNameFieldNumber = 2,
-    kSwcSnapshotCollectionNameFieldNumber = 3,
-    kUserVerifyInfoFieldNumber = 1,
+    kSwcNameFieldNumber = 3,
+    kSwcSnapshotCollectionNameFieldNumber = 4,
+    kRequestMetaInfoFieldNumber = 1,
+    kUserVerifyInfoFieldNumber = 2,
   };
-  // string SwcName = 2;
+  // string SwcName = 3;
   void clear_swcname();
   const std::string& swcname() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -4243,7 +4712,7 @@ class DeleteSwcSnapshotRequest final :
   std::string* _internal_mutable_swcname();
   public:
 
-  // string SwcSnapshotCollectionName = 3;
+  // string SwcSnapshotCollectionName = 4;
   void clear_swcsnapshotcollectionname();
   const std::string& swcsnapshotcollectionname() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -4257,7 +4726,25 @@ class DeleteSwcSnapshotRequest final :
   std::string* _internal_mutable_swcsnapshotcollectionname();
   public:
 
-  // .proto.UserVerifyInfoV1 UserVerifyInfo = 1;
+  // .proto.RequestMetaInfoV1 RequestMetaInfo = 1;
+  bool has_requestmetainfo() const;
+  private:
+  bool _internal_has_requestmetainfo() const;
+  public:
+  void clear_requestmetainfo();
+  const ::proto::RequestMetaInfoV1& requestmetainfo() const;
+  PROTOBUF_NODISCARD ::proto::RequestMetaInfoV1* release_requestmetainfo();
+  ::proto::RequestMetaInfoV1* mutable_requestmetainfo();
+  void set_allocated_requestmetainfo(::proto::RequestMetaInfoV1* requestmetainfo);
+  private:
+  const ::proto::RequestMetaInfoV1& _internal_requestmetainfo() const;
+  ::proto::RequestMetaInfoV1* _internal_mutable_requestmetainfo();
+  public:
+  void unsafe_arena_set_allocated_requestmetainfo(
+      ::proto::RequestMetaInfoV1* requestmetainfo);
+  ::proto::RequestMetaInfoV1* unsafe_arena_release_requestmetainfo();
+
+  // .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
   bool has_userverifyinfo() const;
   private:
   bool _internal_has_userverifyinfo() const;
@@ -4285,6 +4772,7 @@ class DeleteSwcSnapshotRequest final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr swcname_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr swcsnapshotcollectionname_;
+    ::proto::RequestMetaInfoV1* requestmetainfo_;
     ::proto::UserVerifyInfoV1* userverifyinfo_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
@@ -4414,9 +4902,28 @@ class GetAllSnapshotMetaInfoRequest final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kUserVerifyInfoFieldNumber = 1,
+    kRequestMetaInfoFieldNumber = 1,
+    kUserVerifyInfoFieldNumber = 2,
   };
-  // .proto.UserVerifyInfoV1 UserVerifyInfo = 1;
+  // .proto.RequestMetaInfoV1 RequestMetaInfo = 1;
+  bool has_requestmetainfo() const;
+  private:
+  bool _internal_has_requestmetainfo() const;
+  public:
+  void clear_requestmetainfo();
+  const ::proto::RequestMetaInfoV1& requestmetainfo() const;
+  PROTOBUF_NODISCARD ::proto::RequestMetaInfoV1* release_requestmetainfo();
+  ::proto::RequestMetaInfoV1* mutable_requestmetainfo();
+  void set_allocated_requestmetainfo(::proto::RequestMetaInfoV1* requestmetainfo);
+  private:
+  const ::proto::RequestMetaInfoV1& _internal_requestmetainfo() const;
+  ::proto::RequestMetaInfoV1* _internal_mutable_requestmetainfo();
+  public:
+  void unsafe_arena_set_allocated_requestmetainfo(
+      ::proto::RequestMetaInfoV1* requestmetainfo);
+  ::proto::RequestMetaInfoV1* unsafe_arena_release_requestmetainfo();
+
+  // .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
   bool has_userverifyinfo() const;
   private:
   bool _internal_has_userverifyinfo() const;
@@ -4442,6 +4949,7 @@ class GetAllSnapshotMetaInfoRequest final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::proto::RequestMetaInfoV1* requestmetainfo_;
     ::proto::UserVerifyInfoV1* userverifyinfo_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
@@ -4571,10 +5079,11 @@ class GetSnapshotRequest final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kSwcSnapshotCollectionNameFieldNumber = 2,
-    kUserVerifyInfoFieldNumber = 1,
+    kSwcSnapshotCollectionNameFieldNumber = 3,
+    kRequestMetaInfoFieldNumber = 1,
+    kUserVerifyInfoFieldNumber = 2,
   };
-  // string SwcSnapshotCollectionName = 2;
+  // string SwcSnapshotCollectionName = 3;
   void clear_swcsnapshotcollectionname();
   const std::string& swcsnapshotcollectionname() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -4588,7 +5097,25 @@ class GetSnapshotRequest final :
   std::string* _internal_mutable_swcsnapshotcollectionname();
   public:
 
-  // .proto.UserVerifyInfoV1 UserVerifyInfo = 1;
+  // .proto.RequestMetaInfoV1 RequestMetaInfo = 1;
+  bool has_requestmetainfo() const;
+  private:
+  bool _internal_has_requestmetainfo() const;
+  public:
+  void clear_requestmetainfo();
+  const ::proto::RequestMetaInfoV1& requestmetainfo() const;
+  PROTOBUF_NODISCARD ::proto::RequestMetaInfoV1* release_requestmetainfo();
+  ::proto::RequestMetaInfoV1* mutable_requestmetainfo();
+  void set_allocated_requestmetainfo(::proto::RequestMetaInfoV1* requestmetainfo);
+  private:
+  const ::proto::RequestMetaInfoV1& _internal_requestmetainfo() const;
+  ::proto::RequestMetaInfoV1* _internal_mutable_requestmetainfo();
+  public:
+  void unsafe_arena_set_allocated_requestmetainfo(
+      ::proto::RequestMetaInfoV1* requestmetainfo);
+  ::proto::RequestMetaInfoV1* unsafe_arena_release_requestmetainfo();
+
+  // .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
   bool has_userverifyinfo() const;
   private:
   bool _internal_has_userverifyinfo() const;
@@ -4615,6 +5142,7 @@ class GetSnapshotRequest final :
   typedef void DestructorSkippable_;
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr swcsnapshotcollectionname_;
+    ::proto::RequestMetaInfoV1* requestmetainfo_;
     ::proto::UserVerifyInfoV1* userverifyinfo_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
@@ -4744,8 +5272,27 @@ class GetAllIncrementOperationMetaInfoRequest final :
   // accessors -------------------------------------------------------
 
   enum : int {
+    kRequestMetaInfoFieldNumber = 1,
     kUserVerifyInfoFieldNumber = 2,
   };
+  // .proto.RequestMetaInfoV1 RequestMetaInfo = 1;
+  bool has_requestmetainfo() const;
+  private:
+  bool _internal_has_requestmetainfo() const;
+  public:
+  void clear_requestmetainfo();
+  const ::proto::RequestMetaInfoV1& requestmetainfo() const;
+  PROTOBUF_NODISCARD ::proto::RequestMetaInfoV1* release_requestmetainfo();
+  ::proto::RequestMetaInfoV1* mutable_requestmetainfo();
+  void set_allocated_requestmetainfo(::proto::RequestMetaInfoV1* requestmetainfo);
+  private:
+  const ::proto::RequestMetaInfoV1& _internal_requestmetainfo() const;
+  ::proto::RequestMetaInfoV1* _internal_mutable_requestmetainfo();
+  public:
+  void unsafe_arena_set_allocated_requestmetainfo(
+      ::proto::RequestMetaInfoV1* requestmetainfo);
+  ::proto::RequestMetaInfoV1* unsafe_arena_release_requestmetainfo();
+
   // .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
   bool has_userverifyinfo() const;
   private:
@@ -4772,6 +5319,7 @@ class GetAllIncrementOperationMetaInfoRequest final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::proto::RequestMetaInfoV1* requestmetainfo_;
     ::proto::UserVerifyInfoV1* userverifyinfo_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
@@ -4901,10 +5449,11 @@ class GetIncrementOperationRequest final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kIncrementOperationCollectionNameFieldNumber = 2,
-    kUserVerifyInfoFieldNumber = 1,
+    kIncrementOperationCollectionNameFieldNumber = 3,
+    kRequestMetaInfoFieldNumber = 1,
+    kUserVerifyInfoFieldNumber = 2,
   };
-  // string IncrementOperationCollectionName = 2;
+  // string IncrementOperationCollectionName = 3;
   void clear_incrementoperationcollectionname();
   const std::string& incrementoperationcollectionname() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -4918,7 +5467,25 @@ class GetIncrementOperationRequest final :
   std::string* _internal_mutable_incrementoperationcollectionname();
   public:
 
-  // .proto.UserVerifyInfoV1 UserVerifyInfo = 1;
+  // .proto.RequestMetaInfoV1 RequestMetaInfo = 1;
+  bool has_requestmetainfo() const;
+  private:
+  bool _internal_has_requestmetainfo() const;
+  public:
+  void clear_requestmetainfo();
+  const ::proto::RequestMetaInfoV1& requestmetainfo() const;
+  PROTOBUF_NODISCARD ::proto::RequestMetaInfoV1* release_requestmetainfo();
+  ::proto::RequestMetaInfoV1* mutable_requestmetainfo();
+  void set_allocated_requestmetainfo(::proto::RequestMetaInfoV1* requestmetainfo);
+  private:
+  const ::proto::RequestMetaInfoV1& _internal_requestmetainfo() const;
+  ::proto::RequestMetaInfoV1* _internal_mutable_requestmetainfo();
+  public:
+  void unsafe_arena_set_allocated_requestmetainfo(
+      ::proto::RequestMetaInfoV1* requestmetainfo);
+  ::proto::RequestMetaInfoV1* unsafe_arena_release_requestmetainfo();
+
+  // .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
   bool has_userverifyinfo() const;
   private:
   bool _internal_has_userverifyinfo() const;
@@ -4945,6 +5512,7 @@ class GetIncrementOperationRequest final :
   typedef void DestructorSkippable_;
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr incrementoperationcollectionname_;
+    ::proto::RequestMetaInfoV1* requestmetainfo_;
     ::proto::UserVerifyInfoV1* userverifyinfo_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
@@ -5074,11 +5642,44 @@ class CreateSwcNodeDataRequest final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kUserVerifyInfoFieldNumber = 1,
-    kSwcInfoFieldNumber = 2,
-    kSwcDataFieldNumber = 3,
+    kSwcNameFieldNumber = 3,
+    kRequestMetaInfoFieldNumber = 1,
+    kUserVerifyInfoFieldNumber = 2,
+    kSwcDataFieldNumber = 4,
   };
-  // .proto.UserVerifyInfoV1 UserVerifyInfo = 1;
+  // string SwcName = 3;
+  void clear_swcname();
+  const std::string& swcname() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_swcname(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_swcname();
+  PROTOBUF_NODISCARD std::string* release_swcname();
+  void set_allocated_swcname(std::string* swcname);
+  private:
+  const std::string& _internal_swcname() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_swcname(const std::string& value);
+  std::string* _internal_mutable_swcname();
+  public:
+
+  // .proto.RequestMetaInfoV1 RequestMetaInfo = 1;
+  bool has_requestmetainfo() const;
+  private:
+  bool _internal_has_requestmetainfo() const;
+  public:
+  void clear_requestmetainfo();
+  const ::proto::RequestMetaInfoV1& requestmetainfo() const;
+  PROTOBUF_NODISCARD ::proto::RequestMetaInfoV1* release_requestmetainfo();
+  ::proto::RequestMetaInfoV1* mutable_requestmetainfo();
+  void set_allocated_requestmetainfo(::proto::RequestMetaInfoV1* requestmetainfo);
+  private:
+  const ::proto::RequestMetaInfoV1& _internal_requestmetainfo() const;
+  ::proto::RequestMetaInfoV1* _internal_mutable_requestmetainfo();
+  public:
+  void unsafe_arena_set_allocated_requestmetainfo(
+      ::proto::RequestMetaInfoV1* requestmetainfo);
+  ::proto::RequestMetaInfoV1* unsafe_arena_release_requestmetainfo();
+
+  // .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
   bool has_userverifyinfo() const;
   private:
   bool _internal_has_userverifyinfo() const;
@@ -5096,25 +5697,7 @@ class CreateSwcNodeDataRequest final :
       ::proto::UserVerifyInfoV1* userverifyinfo);
   ::proto::UserVerifyInfoV1* unsafe_arena_release_userverifyinfo();
 
-  // .proto.SwcMetaInfoV1 SwcInfo = 2;
-  bool has_swcinfo() const;
-  private:
-  bool _internal_has_swcinfo() const;
-  public:
-  void clear_swcinfo();
-  const ::proto::SwcMetaInfoV1& swcinfo() const;
-  PROTOBUF_NODISCARD ::proto::SwcMetaInfoV1* release_swcinfo();
-  ::proto::SwcMetaInfoV1* mutable_swcinfo();
-  void set_allocated_swcinfo(::proto::SwcMetaInfoV1* swcinfo);
-  private:
-  const ::proto::SwcMetaInfoV1& _internal_swcinfo() const;
-  ::proto::SwcMetaInfoV1* _internal_mutable_swcinfo();
-  public:
-  void unsafe_arena_set_allocated_swcinfo(
-      ::proto::SwcMetaInfoV1* swcinfo);
-  ::proto::SwcMetaInfoV1* unsafe_arena_release_swcinfo();
-
-  // .proto.SwcDataV1 SwcData = 3;
+  // .proto.SwcDataV1 SwcData = 4;
   bool has_swcdata() const;
   private:
   bool _internal_has_swcdata() const;
@@ -5140,8 +5723,9 @@ class CreateSwcNodeDataRequest final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr swcname_;
+    ::proto::RequestMetaInfoV1* requestmetainfo_;
     ::proto::UserVerifyInfoV1* userverifyinfo_;
-    ::proto::SwcMetaInfoV1* swcinfo_;
     ::proto::SwcDataV1* swcdata_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
@@ -5271,11 +5855,44 @@ class DeleteSwcNodeDataRequest final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kUserVerifyInfoFieldNumber = 1,
-    kSwcInfoFieldNumber = 2,
-    kSwcDataFieldNumber = 3,
+    kSwcNameFieldNumber = 3,
+    kRequestMetaInfoFieldNumber = 1,
+    kUserVerifyInfoFieldNumber = 2,
+    kSwcDataFieldNumber = 4,
   };
-  // .proto.UserVerifyInfoV1 UserVerifyInfo = 1;
+  // string SwcName = 3;
+  void clear_swcname();
+  const std::string& swcname() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_swcname(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_swcname();
+  PROTOBUF_NODISCARD std::string* release_swcname();
+  void set_allocated_swcname(std::string* swcname);
+  private:
+  const std::string& _internal_swcname() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_swcname(const std::string& value);
+  std::string* _internal_mutable_swcname();
+  public:
+
+  // .proto.RequestMetaInfoV1 RequestMetaInfo = 1;
+  bool has_requestmetainfo() const;
+  private:
+  bool _internal_has_requestmetainfo() const;
+  public:
+  void clear_requestmetainfo();
+  const ::proto::RequestMetaInfoV1& requestmetainfo() const;
+  PROTOBUF_NODISCARD ::proto::RequestMetaInfoV1* release_requestmetainfo();
+  ::proto::RequestMetaInfoV1* mutable_requestmetainfo();
+  void set_allocated_requestmetainfo(::proto::RequestMetaInfoV1* requestmetainfo);
+  private:
+  const ::proto::RequestMetaInfoV1& _internal_requestmetainfo() const;
+  ::proto::RequestMetaInfoV1* _internal_mutable_requestmetainfo();
+  public:
+  void unsafe_arena_set_allocated_requestmetainfo(
+      ::proto::RequestMetaInfoV1* requestmetainfo);
+  ::proto::RequestMetaInfoV1* unsafe_arena_release_requestmetainfo();
+
+  // .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
   bool has_userverifyinfo() const;
   private:
   bool _internal_has_userverifyinfo() const;
@@ -5293,25 +5910,7 @@ class DeleteSwcNodeDataRequest final :
       ::proto::UserVerifyInfoV1* userverifyinfo);
   ::proto::UserVerifyInfoV1* unsafe_arena_release_userverifyinfo();
 
-  // .proto.SwcMetaInfoV1 SwcInfo = 2;
-  bool has_swcinfo() const;
-  private:
-  bool _internal_has_swcinfo() const;
-  public:
-  void clear_swcinfo();
-  const ::proto::SwcMetaInfoV1& swcinfo() const;
-  PROTOBUF_NODISCARD ::proto::SwcMetaInfoV1* release_swcinfo();
-  ::proto::SwcMetaInfoV1* mutable_swcinfo();
-  void set_allocated_swcinfo(::proto::SwcMetaInfoV1* swcinfo);
-  private:
-  const ::proto::SwcMetaInfoV1& _internal_swcinfo() const;
-  ::proto::SwcMetaInfoV1* _internal_mutable_swcinfo();
-  public:
-  void unsafe_arena_set_allocated_swcinfo(
-      ::proto::SwcMetaInfoV1* swcinfo);
-  ::proto::SwcMetaInfoV1* unsafe_arena_release_swcinfo();
-
-  // .proto.SwcDataV1 SwcData = 3;
+  // .proto.SwcDataV1 SwcData = 4;
   bool has_swcdata() const;
   private:
   bool _internal_has_swcdata() const;
@@ -5337,8 +5936,9 @@ class DeleteSwcNodeDataRequest final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr swcname_;
+    ::proto::RequestMetaInfoV1* requestmetainfo_;
     ::proto::UserVerifyInfoV1* userverifyinfo_;
-    ::proto::SwcMetaInfoV1* swcinfo_;
     ::proto::SwcDataV1* swcdata_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
@@ -5468,11 +6068,44 @@ class UpdateSwcNodeDataRequest final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kUserVerifyInfoFieldNumber = 1,
-    kSwcInfoFieldNumber = 2,
-    kSwcNodeDataFieldNumber = 3,
+    kSwcNameFieldNumber = 3,
+    kRequestMetaInfoFieldNumber = 1,
+    kUserVerifyInfoFieldNumber = 2,
+    kSwcNodeDataFieldNumber = 4,
   };
-  // .proto.UserVerifyInfoV1 UserVerifyInfo = 1;
+  // string SwcName = 3;
+  void clear_swcname();
+  const std::string& swcname() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_swcname(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_swcname();
+  PROTOBUF_NODISCARD std::string* release_swcname();
+  void set_allocated_swcname(std::string* swcname);
+  private:
+  const std::string& _internal_swcname() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_swcname(const std::string& value);
+  std::string* _internal_mutable_swcname();
+  public:
+
+  // .proto.RequestMetaInfoV1 RequestMetaInfo = 1;
+  bool has_requestmetainfo() const;
+  private:
+  bool _internal_has_requestmetainfo() const;
+  public:
+  void clear_requestmetainfo();
+  const ::proto::RequestMetaInfoV1& requestmetainfo() const;
+  PROTOBUF_NODISCARD ::proto::RequestMetaInfoV1* release_requestmetainfo();
+  ::proto::RequestMetaInfoV1* mutable_requestmetainfo();
+  void set_allocated_requestmetainfo(::proto::RequestMetaInfoV1* requestmetainfo);
+  private:
+  const ::proto::RequestMetaInfoV1& _internal_requestmetainfo() const;
+  ::proto::RequestMetaInfoV1* _internal_mutable_requestmetainfo();
+  public:
+  void unsafe_arena_set_allocated_requestmetainfo(
+      ::proto::RequestMetaInfoV1* requestmetainfo);
+  ::proto::RequestMetaInfoV1* unsafe_arena_release_requestmetainfo();
+
+  // .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
   bool has_userverifyinfo() const;
   private:
   bool _internal_has_userverifyinfo() const;
@@ -5490,25 +6123,7 @@ class UpdateSwcNodeDataRequest final :
       ::proto::UserVerifyInfoV1* userverifyinfo);
   ::proto::UserVerifyInfoV1* unsafe_arena_release_userverifyinfo();
 
-  // .proto.SwcMetaInfoV1 SwcInfo = 2;
-  bool has_swcinfo() const;
-  private:
-  bool _internal_has_swcinfo() const;
-  public:
-  void clear_swcinfo();
-  const ::proto::SwcMetaInfoV1& swcinfo() const;
-  PROTOBUF_NODISCARD ::proto::SwcMetaInfoV1* release_swcinfo();
-  ::proto::SwcMetaInfoV1* mutable_swcinfo();
-  void set_allocated_swcinfo(::proto::SwcMetaInfoV1* swcinfo);
-  private:
-  const ::proto::SwcMetaInfoV1& _internal_swcinfo() const;
-  ::proto::SwcMetaInfoV1* _internal_mutable_swcinfo();
-  public:
-  void unsafe_arena_set_allocated_swcinfo(
-      ::proto::SwcMetaInfoV1* swcinfo);
-  ::proto::SwcMetaInfoV1* unsafe_arena_release_swcinfo();
-
-  // .proto.SwcNodeDataV1 SwcNodeData = 3;
+  // .proto.SwcNodeDataV1 SwcNodeData = 4;
   bool has_swcnodedata() const;
   private:
   bool _internal_has_swcnodedata() const;
@@ -5534,8 +6149,9 @@ class UpdateSwcNodeDataRequest final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr swcname_;
+    ::proto::RequestMetaInfoV1* requestmetainfo_;
     ::proto::UserVerifyInfoV1* userverifyinfo_;
-    ::proto::SwcMetaInfoV1* swcinfo_;
     ::proto::SwcNodeDataV1* swcnodedata_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
@@ -5665,47 +6281,62 @@ class GetSwcNodeDataRequest final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kUserInfoFieldNumber = 1,
-    kSwcInfoFieldNumber = 2,
-    kSwcNodeDataFieldNumber = 3,
+    kSwcNameFieldNumber = 3,
+    kRequestMetaInfoFieldNumber = 1,
+    kUserVerifyInfoFieldNumber = 2,
+    kSwcNodeDataFieldNumber = 4,
   };
-  // .proto.UserMetaInfoV1 UserInfo = 1;
-  bool has_userinfo() const;
+  // string SwcName = 3;
+  void clear_swcname();
+  const std::string& swcname() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_swcname(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_swcname();
+  PROTOBUF_NODISCARD std::string* release_swcname();
+  void set_allocated_swcname(std::string* swcname);
   private:
-  bool _internal_has_userinfo() const;
+  const std::string& _internal_swcname() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_swcname(const std::string& value);
+  std::string* _internal_mutable_swcname();
   public:
-  void clear_userinfo();
-  const ::proto::UserMetaInfoV1& userinfo() const;
-  PROTOBUF_NODISCARD ::proto::UserMetaInfoV1* release_userinfo();
-  ::proto::UserMetaInfoV1* mutable_userinfo();
-  void set_allocated_userinfo(::proto::UserMetaInfoV1* userinfo);
-  private:
-  const ::proto::UserMetaInfoV1& _internal_userinfo() const;
-  ::proto::UserMetaInfoV1* _internal_mutable_userinfo();
-  public:
-  void unsafe_arena_set_allocated_userinfo(
-      ::proto::UserMetaInfoV1* userinfo);
-  ::proto::UserMetaInfoV1* unsafe_arena_release_userinfo();
 
-  // .proto.SwcMetaInfoV1 SwcInfo = 2;
-  bool has_swcinfo() const;
+  // .proto.RequestMetaInfoV1 RequestMetaInfo = 1;
+  bool has_requestmetainfo() const;
   private:
-  bool _internal_has_swcinfo() const;
+  bool _internal_has_requestmetainfo() const;
   public:
-  void clear_swcinfo();
-  const ::proto::SwcMetaInfoV1& swcinfo() const;
-  PROTOBUF_NODISCARD ::proto::SwcMetaInfoV1* release_swcinfo();
-  ::proto::SwcMetaInfoV1* mutable_swcinfo();
-  void set_allocated_swcinfo(::proto::SwcMetaInfoV1* swcinfo);
+  void clear_requestmetainfo();
+  const ::proto::RequestMetaInfoV1& requestmetainfo() const;
+  PROTOBUF_NODISCARD ::proto::RequestMetaInfoV1* release_requestmetainfo();
+  ::proto::RequestMetaInfoV1* mutable_requestmetainfo();
+  void set_allocated_requestmetainfo(::proto::RequestMetaInfoV1* requestmetainfo);
   private:
-  const ::proto::SwcMetaInfoV1& _internal_swcinfo() const;
-  ::proto::SwcMetaInfoV1* _internal_mutable_swcinfo();
+  const ::proto::RequestMetaInfoV1& _internal_requestmetainfo() const;
+  ::proto::RequestMetaInfoV1* _internal_mutable_requestmetainfo();
   public:
-  void unsafe_arena_set_allocated_swcinfo(
-      ::proto::SwcMetaInfoV1* swcinfo);
-  ::proto::SwcMetaInfoV1* unsafe_arena_release_swcinfo();
+  void unsafe_arena_set_allocated_requestmetainfo(
+      ::proto::RequestMetaInfoV1* requestmetainfo);
+  ::proto::RequestMetaInfoV1* unsafe_arena_release_requestmetainfo();
 
-  // .proto.SwcDataV1 SwcNodeData = 3;
+  // .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
+  bool has_userverifyinfo() const;
+  private:
+  bool _internal_has_userverifyinfo() const;
+  public:
+  void clear_userverifyinfo();
+  const ::proto::UserVerifyInfoV1& userverifyinfo() const;
+  PROTOBUF_NODISCARD ::proto::UserVerifyInfoV1* release_userverifyinfo();
+  ::proto::UserVerifyInfoV1* mutable_userverifyinfo();
+  void set_allocated_userverifyinfo(::proto::UserVerifyInfoV1* userverifyinfo);
+  private:
+  const ::proto::UserVerifyInfoV1& _internal_userverifyinfo() const;
+  ::proto::UserVerifyInfoV1* _internal_mutable_userverifyinfo();
+  public:
+  void unsafe_arena_set_allocated_userverifyinfo(
+      ::proto::UserVerifyInfoV1* userverifyinfo);
+  ::proto::UserVerifyInfoV1* unsafe_arena_release_userverifyinfo();
+
+  // .proto.SwcDataV1 SwcNodeData = 4;
   bool has_swcnodedata() const;
   private:
   bool _internal_has_swcnodedata() const;
@@ -5731,8 +6362,9 @@ class GetSwcNodeDataRequest final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::proto::UserMetaInfoV1* userinfo_;
-    ::proto::SwcMetaInfoV1* swcinfo_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr swcname_;
+    ::proto::RequestMetaInfoV1* requestmetainfo_;
+    ::proto::UserVerifyInfoV1* userverifyinfo_;
     ::proto::SwcDataV1* swcnodedata_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
@@ -5862,44 +6494,59 @@ class GetSwcFullNodeDataRequest final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kUserInfoFieldNumber = 1,
-    kSwcInfoFieldNumber = 2,
+    kSwcNameFieldNumber = 3,
+    kRequestMetaInfoFieldNumber = 1,
+    kUserVerifyInfoFieldNumber = 2,
   };
-  // .proto.UserMetaInfoV1 UserInfo = 1;
-  bool has_userinfo() const;
+  // string SwcName = 3;
+  void clear_swcname();
+  const std::string& swcname() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_swcname(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_swcname();
+  PROTOBUF_NODISCARD std::string* release_swcname();
+  void set_allocated_swcname(std::string* swcname);
   private:
-  bool _internal_has_userinfo() const;
+  const std::string& _internal_swcname() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_swcname(const std::string& value);
+  std::string* _internal_mutable_swcname();
   public:
-  void clear_userinfo();
-  const ::proto::UserMetaInfoV1& userinfo() const;
-  PROTOBUF_NODISCARD ::proto::UserMetaInfoV1* release_userinfo();
-  ::proto::UserMetaInfoV1* mutable_userinfo();
-  void set_allocated_userinfo(::proto::UserMetaInfoV1* userinfo);
-  private:
-  const ::proto::UserMetaInfoV1& _internal_userinfo() const;
-  ::proto::UserMetaInfoV1* _internal_mutable_userinfo();
-  public:
-  void unsafe_arena_set_allocated_userinfo(
-      ::proto::UserMetaInfoV1* userinfo);
-  ::proto::UserMetaInfoV1* unsafe_arena_release_userinfo();
 
-  // .proto.SwcMetaInfoV1 SwcInfo = 2;
-  bool has_swcinfo() const;
+  // .proto.RequestMetaInfoV1 RequestMetaInfo = 1;
+  bool has_requestmetainfo() const;
   private:
-  bool _internal_has_swcinfo() const;
+  bool _internal_has_requestmetainfo() const;
   public:
-  void clear_swcinfo();
-  const ::proto::SwcMetaInfoV1& swcinfo() const;
-  PROTOBUF_NODISCARD ::proto::SwcMetaInfoV1* release_swcinfo();
-  ::proto::SwcMetaInfoV1* mutable_swcinfo();
-  void set_allocated_swcinfo(::proto::SwcMetaInfoV1* swcinfo);
+  void clear_requestmetainfo();
+  const ::proto::RequestMetaInfoV1& requestmetainfo() const;
+  PROTOBUF_NODISCARD ::proto::RequestMetaInfoV1* release_requestmetainfo();
+  ::proto::RequestMetaInfoV1* mutable_requestmetainfo();
+  void set_allocated_requestmetainfo(::proto::RequestMetaInfoV1* requestmetainfo);
   private:
-  const ::proto::SwcMetaInfoV1& _internal_swcinfo() const;
-  ::proto::SwcMetaInfoV1* _internal_mutable_swcinfo();
+  const ::proto::RequestMetaInfoV1& _internal_requestmetainfo() const;
+  ::proto::RequestMetaInfoV1* _internal_mutable_requestmetainfo();
   public:
-  void unsafe_arena_set_allocated_swcinfo(
-      ::proto::SwcMetaInfoV1* swcinfo);
-  ::proto::SwcMetaInfoV1* unsafe_arena_release_swcinfo();
+  void unsafe_arena_set_allocated_requestmetainfo(
+      ::proto::RequestMetaInfoV1* requestmetainfo);
+  ::proto::RequestMetaInfoV1* unsafe_arena_release_requestmetainfo();
+
+  // .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
+  bool has_userverifyinfo() const;
+  private:
+  bool _internal_has_userverifyinfo() const;
+  public:
+  void clear_userverifyinfo();
+  const ::proto::UserVerifyInfoV1& userverifyinfo() const;
+  PROTOBUF_NODISCARD ::proto::UserVerifyInfoV1* release_userverifyinfo();
+  ::proto::UserVerifyInfoV1* mutable_userverifyinfo();
+  void set_allocated_userverifyinfo(::proto::UserVerifyInfoV1* userverifyinfo);
+  private:
+  const ::proto::UserVerifyInfoV1& _internal_userverifyinfo() const;
+  ::proto::UserVerifyInfoV1* _internal_mutable_userverifyinfo();
+  public:
+  void unsafe_arena_set_allocated_userverifyinfo(
+      ::proto::UserVerifyInfoV1* userverifyinfo);
+  ::proto::UserVerifyInfoV1* unsafe_arena_release_userverifyinfo();
 
   // @@protoc_insertion_point(class_scope:proto.GetSwcFullNodeDataRequest)
  private:
@@ -5909,8 +6556,9 @@ class GetSwcFullNodeDataRequest final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::proto::UserMetaInfoV1* userinfo_;
-    ::proto::SwcMetaInfoV1* swcinfo_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr swcname_;
+    ::proto::RequestMetaInfoV1* requestmetainfo_;
+    ::proto::UserVerifyInfoV1* userverifyinfo_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -6039,13 +6687,28 @@ class GetSwcNodeDataListByTimeAndUserRequest final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kUserNameFieldNumber = 5,
-    kUserInfoFieldNumber = 1,
-    kSwcInfoFieldNumber = 2,
-    kStartTimeFieldNumber = 3,
-    kEndTimeFieldNumber = 4,
+    kSwcNameFieldNumber = 3,
+    kUserNameFieldNumber = 6,
+    kRequestMetaInfoFieldNumber = 1,
+    kUserVerifyInfoFieldNumber = 2,
+    kStartTimeFieldNumber = 4,
+    kEndTimeFieldNumber = 5,
   };
-  // string UserName = 5;
+  // string SwcName = 3;
+  void clear_swcname();
+  const std::string& swcname() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_swcname(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_swcname();
+  PROTOBUF_NODISCARD std::string* release_swcname();
+  void set_allocated_swcname(std::string* swcname);
+  private:
+  const std::string& _internal_swcname() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_swcname(const std::string& value);
+  std::string* _internal_mutable_swcname();
+  public:
+
+  // string UserName = 6;
   void clear_username();
   const std::string& username() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -6059,43 +6722,43 @@ class GetSwcNodeDataListByTimeAndUserRequest final :
   std::string* _internal_mutable_username();
   public:
 
-  // .proto.UserMetaInfoV1 UserInfo = 1;
-  bool has_userinfo() const;
+  // .proto.RequestMetaInfoV1 RequestMetaInfo = 1;
+  bool has_requestmetainfo() const;
   private:
-  bool _internal_has_userinfo() const;
+  bool _internal_has_requestmetainfo() const;
   public:
-  void clear_userinfo();
-  const ::proto::UserMetaInfoV1& userinfo() const;
-  PROTOBUF_NODISCARD ::proto::UserMetaInfoV1* release_userinfo();
-  ::proto::UserMetaInfoV1* mutable_userinfo();
-  void set_allocated_userinfo(::proto::UserMetaInfoV1* userinfo);
+  void clear_requestmetainfo();
+  const ::proto::RequestMetaInfoV1& requestmetainfo() const;
+  PROTOBUF_NODISCARD ::proto::RequestMetaInfoV1* release_requestmetainfo();
+  ::proto::RequestMetaInfoV1* mutable_requestmetainfo();
+  void set_allocated_requestmetainfo(::proto::RequestMetaInfoV1* requestmetainfo);
   private:
-  const ::proto::UserMetaInfoV1& _internal_userinfo() const;
-  ::proto::UserMetaInfoV1* _internal_mutable_userinfo();
+  const ::proto::RequestMetaInfoV1& _internal_requestmetainfo() const;
+  ::proto::RequestMetaInfoV1* _internal_mutable_requestmetainfo();
   public:
-  void unsafe_arena_set_allocated_userinfo(
-      ::proto::UserMetaInfoV1* userinfo);
-  ::proto::UserMetaInfoV1* unsafe_arena_release_userinfo();
+  void unsafe_arena_set_allocated_requestmetainfo(
+      ::proto::RequestMetaInfoV1* requestmetainfo);
+  ::proto::RequestMetaInfoV1* unsafe_arena_release_requestmetainfo();
 
-  // .proto.SwcMetaInfoV1 SwcInfo = 2;
-  bool has_swcinfo() const;
+  // .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
+  bool has_userverifyinfo() const;
   private:
-  bool _internal_has_swcinfo() const;
+  bool _internal_has_userverifyinfo() const;
   public:
-  void clear_swcinfo();
-  const ::proto::SwcMetaInfoV1& swcinfo() const;
-  PROTOBUF_NODISCARD ::proto::SwcMetaInfoV1* release_swcinfo();
-  ::proto::SwcMetaInfoV1* mutable_swcinfo();
-  void set_allocated_swcinfo(::proto::SwcMetaInfoV1* swcinfo);
+  void clear_userverifyinfo();
+  const ::proto::UserVerifyInfoV1& userverifyinfo() const;
+  PROTOBUF_NODISCARD ::proto::UserVerifyInfoV1* release_userverifyinfo();
+  ::proto::UserVerifyInfoV1* mutable_userverifyinfo();
+  void set_allocated_userverifyinfo(::proto::UserVerifyInfoV1* userverifyinfo);
   private:
-  const ::proto::SwcMetaInfoV1& _internal_swcinfo() const;
-  ::proto::SwcMetaInfoV1* _internal_mutable_swcinfo();
+  const ::proto::UserVerifyInfoV1& _internal_userverifyinfo() const;
+  ::proto::UserVerifyInfoV1* _internal_mutable_userverifyinfo();
   public:
-  void unsafe_arena_set_allocated_swcinfo(
-      ::proto::SwcMetaInfoV1* swcinfo);
-  ::proto::SwcMetaInfoV1* unsafe_arena_release_swcinfo();
+  void unsafe_arena_set_allocated_userverifyinfo(
+      ::proto::UserVerifyInfoV1* userverifyinfo);
+  ::proto::UserVerifyInfoV1* unsafe_arena_release_userverifyinfo();
 
-  // .google.protobuf.Timestamp StartTime = 3;
+  // .google.protobuf.Timestamp StartTime = 4;
   bool has_starttime() const;
   private:
   bool _internal_has_starttime() const;
@@ -6113,7 +6776,7 @@ class GetSwcNodeDataListByTimeAndUserRequest final :
       ::PROTOBUF_NAMESPACE_ID::Timestamp* starttime);
   ::PROTOBUF_NAMESPACE_ID::Timestamp* unsafe_arena_release_starttime();
 
-  // .google.protobuf.Timestamp EndTime = 4;
+  // .google.protobuf.Timestamp EndTime = 5;
   bool has_endtime() const;
   private:
   bool _internal_has_endtime() const;
@@ -6139,9 +6802,10 @@ class GetSwcNodeDataListByTimeAndUserRequest final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr swcname_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr username_;
-    ::proto::UserMetaInfoV1* userinfo_;
-    ::proto::SwcMetaInfoV1* swcinfo_;
+    ::proto::RequestMetaInfoV1* requestmetainfo_;
+    ::proto::UserVerifyInfoV1* userverifyinfo_;
     ::PROTOBUF_NAMESPACE_ID::Timestamp* starttime_;
     ::PROTOBUF_NAMESPACE_ID::Timestamp* endtime_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
@@ -6272,29 +6936,48 @@ class BackupFullDatabaseRequest final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kUserInfoFieldNumber = 1,
-    kDelayBackupTimeFieldNumber = 3,
-    kInstantBackupFieldNumber = 2,
+    kRequestMetaInfoFieldNumber = 1,
+    kUserVerifyInfoFieldNumber = 2,
+    kDelayBackupTimeFieldNumber = 4,
+    kInstantBackupFieldNumber = 3,
   };
-  // .proto.UserMetaInfoV1 UserInfo = 1;
-  bool has_userinfo() const;
+  // .proto.RequestMetaInfoV1 RequestMetaInfo = 1;
+  bool has_requestmetainfo() const;
   private:
-  bool _internal_has_userinfo() const;
+  bool _internal_has_requestmetainfo() const;
   public:
-  void clear_userinfo();
-  const ::proto::UserMetaInfoV1& userinfo() const;
-  PROTOBUF_NODISCARD ::proto::UserMetaInfoV1* release_userinfo();
-  ::proto::UserMetaInfoV1* mutable_userinfo();
-  void set_allocated_userinfo(::proto::UserMetaInfoV1* userinfo);
+  void clear_requestmetainfo();
+  const ::proto::RequestMetaInfoV1& requestmetainfo() const;
+  PROTOBUF_NODISCARD ::proto::RequestMetaInfoV1* release_requestmetainfo();
+  ::proto::RequestMetaInfoV1* mutable_requestmetainfo();
+  void set_allocated_requestmetainfo(::proto::RequestMetaInfoV1* requestmetainfo);
   private:
-  const ::proto::UserMetaInfoV1& _internal_userinfo() const;
-  ::proto::UserMetaInfoV1* _internal_mutable_userinfo();
+  const ::proto::RequestMetaInfoV1& _internal_requestmetainfo() const;
+  ::proto::RequestMetaInfoV1* _internal_mutable_requestmetainfo();
   public:
-  void unsafe_arena_set_allocated_userinfo(
-      ::proto::UserMetaInfoV1* userinfo);
-  ::proto::UserMetaInfoV1* unsafe_arena_release_userinfo();
+  void unsafe_arena_set_allocated_requestmetainfo(
+      ::proto::RequestMetaInfoV1* requestmetainfo);
+  ::proto::RequestMetaInfoV1* unsafe_arena_release_requestmetainfo();
 
-  // .google.protobuf.Timestamp DelayBackupTime = 3;
+  // .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
+  bool has_userverifyinfo() const;
+  private:
+  bool _internal_has_userverifyinfo() const;
+  public:
+  void clear_userverifyinfo();
+  const ::proto::UserVerifyInfoV1& userverifyinfo() const;
+  PROTOBUF_NODISCARD ::proto::UserVerifyInfoV1* release_userverifyinfo();
+  ::proto::UserVerifyInfoV1* mutable_userverifyinfo();
+  void set_allocated_userverifyinfo(::proto::UserVerifyInfoV1* userverifyinfo);
+  private:
+  const ::proto::UserVerifyInfoV1& _internal_userverifyinfo() const;
+  ::proto::UserVerifyInfoV1* _internal_mutable_userverifyinfo();
+  public:
+  void unsafe_arena_set_allocated_userverifyinfo(
+      ::proto::UserVerifyInfoV1* userverifyinfo);
+  ::proto::UserVerifyInfoV1* unsafe_arena_release_userverifyinfo();
+
+  // .google.protobuf.Timestamp DelayBackupTime = 4;
   bool has_delaybackuptime() const;
   private:
   bool _internal_has_delaybackuptime() const;
@@ -6312,7 +6995,7 @@ class BackupFullDatabaseRequest final :
       ::PROTOBUF_NAMESPACE_ID::Timestamp* delaybackuptime);
   ::PROTOBUF_NAMESPACE_ID::Timestamp* unsafe_arena_release_delaybackuptime();
 
-  // bool InstantBackup = 2;
+  // bool InstantBackup = 3;
   void clear_instantbackup();
   bool instantbackup() const;
   void set_instantbackup(bool value);
@@ -6329,7 +7012,8 @@ class BackupFullDatabaseRequest final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::proto::UserMetaInfoV1* userinfo_;
+    ::proto::RequestMetaInfoV1* requestmetainfo_;
+    ::proto::UserVerifyInfoV1* userverifyinfo_;
     ::PROTOBUF_NAMESPACE_ID::Timestamp* delaybackuptime_;
     bool instantbackup_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
@@ -6460,28 +7144,47 @@ class CreateDailyStatisticsRequest final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kUserInfoFieldNumber = 1,
-    kDailyStatisticsInfoFieldNumber = 2,
+    kRequestMetaInfoFieldNumber = 1,
+    kUserVerifyInfoFieldNumber = 2,
+    kDailyStatisticsInfoFieldNumber = 3,
   };
-  // .proto.UserMetaInfoV1 UserInfo = 1;
-  bool has_userinfo() const;
+  // .proto.RequestMetaInfoV1 RequestMetaInfo = 1;
+  bool has_requestmetainfo() const;
   private:
-  bool _internal_has_userinfo() const;
+  bool _internal_has_requestmetainfo() const;
   public:
-  void clear_userinfo();
-  const ::proto::UserMetaInfoV1& userinfo() const;
-  PROTOBUF_NODISCARD ::proto::UserMetaInfoV1* release_userinfo();
-  ::proto::UserMetaInfoV1* mutable_userinfo();
-  void set_allocated_userinfo(::proto::UserMetaInfoV1* userinfo);
+  void clear_requestmetainfo();
+  const ::proto::RequestMetaInfoV1& requestmetainfo() const;
+  PROTOBUF_NODISCARD ::proto::RequestMetaInfoV1* release_requestmetainfo();
+  ::proto::RequestMetaInfoV1* mutable_requestmetainfo();
+  void set_allocated_requestmetainfo(::proto::RequestMetaInfoV1* requestmetainfo);
   private:
-  const ::proto::UserMetaInfoV1& _internal_userinfo() const;
-  ::proto::UserMetaInfoV1* _internal_mutable_userinfo();
+  const ::proto::RequestMetaInfoV1& _internal_requestmetainfo() const;
+  ::proto::RequestMetaInfoV1* _internal_mutable_requestmetainfo();
   public:
-  void unsafe_arena_set_allocated_userinfo(
-      ::proto::UserMetaInfoV1* userinfo);
-  ::proto::UserMetaInfoV1* unsafe_arena_release_userinfo();
+  void unsafe_arena_set_allocated_requestmetainfo(
+      ::proto::RequestMetaInfoV1* requestmetainfo);
+  ::proto::RequestMetaInfoV1* unsafe_arena_release_requestmetainfo();
 
-  // .proto.DailyStatisticsMetaInfoV1 DailyStatisticsInfo = 2;
+  // .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
+  bool has_userverifyinfo() const;
+  private:
+  bool _internal_has_userverifyinfo() const;
+  public:
+  void clear_userverifyinfo();
+  const ::proto::UserVerifyInfoV1& userverifyinfo() const;
+  PROTOBUF_NODISCARD ::proto::UserVerifyInfoV1* release_userverifyinfo();
+  ::proto::UserVerifyInfoV1* mutable_userverifyinfo();
+  void set_allocated_userverifyinfo(::proto::UserVerifyInfoV1* userverifyinfo);
+  private:
+  const ::proto::UserVerifyInfoV1& _internal_userverifyinfo() const;
+  ::proto::UserVerifyInfoV1* _internal_mutable_userverifyinfo();
+  public:
+  void unsafe_arena_set_allocated_userverifyinfo(
+      ::proto::UserVerifyInfoV1* userverifyinfo);
+  ::proto::UserVerifyInfoV1* unsafe_arena_release_userverifyinfo();
+
+  // .proto.DailyStatisticsMetaInfoV1 DailyStatisticsInfo = 3;
   bool has_dailystatisticsinfo() const;
   private:
   bool _internal_has_dailystatisticsinfo() const;
@@ -6507,7 +7210,8 @@ class CreateDailyStatisticsRequest final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::proto::UserMetaInfoV1* userinfo_;
+    ::proto::RequestMetaInfoV1* requestmetainfo_;
+    ::proto::UserVerifyInfoV1* userverifyinfo_;
     ::proto::DailyStatisticsMetaInfoV1* dailystatisticsinfo_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
@@ -6637,44 +7341,59 @@ class DeleteDailyStatisticsRequest final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kUserInfoFieldNumber = 1,
-    kDailyStatisticsInfoFieldNumber = 2,
+    kDailyStatisticsNameFieldNumber = 3,
+    kRequestMetaInfoFieldNumber = 1,
+    kUserVerifyInfoFieldNumber = 2,
   };
-  // .proto.UserMetaInfoV1 UserInfo = 1;
-  bool has_userinfo() const;
+  // string DailyStatisticsName = 3;
+  void clear_dailystatisticsname();
+  const std::string& dailystatisticsname() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_dailystatisticsname(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_dailystatisticsname();
+  PROTOBUF_NODISCARD std::string* release_dailystatisticsname();
+  void set_allocated_dailystatisticsname(std::string* dailystatisticsname);
   private:
-  bool _internal_has_userinfo() const;
+  const std::string& _internal_dailystatisticsname() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_dailystatisticsname(const std::string& value);
+  std::string* _internal_mutable_dailystatisticsname();
   public:
-  void clear_userinfo();
-  const ::proto::UserMetaInfoV1& userinfo() const;
-  PROTOBUF_NODISCARD ::proto::UserMetaInfoV1* release_userinfo();
-  ::proto::UserMetaInfoV1* mutable_userinfo();
-  void set_allocated_userinfo(::proto::UserMetaInfoV1* userinfo);
-  private:
-  const ::proto::UserMetaInfoV1& _internal_userinfo() const;
-  ::proto::UserMetaInfoV1* _internal_mutable_userinfo();
-  public:
-  void unsafe_arena_set_allocated_userinfo(
-      ::proto::UserMetaInfoV1* userinfo);
-  ::proto::UserMetaInfoV1* unsafe_arena_release_userinfo();
 
-  // .proto.DailyStatisticsMetaInfoV1 DailyStatisticsInfo = 2;
-  bool has_dailystatisticsinfo() const;
+  // .proto.RequestMetaInfoV1 RequestMetaInfo = 1;
+  bool has_requestmetainfo() const;
   private:
-  bool _internal_has_dailystatisticsinfo() const;
+  bool _internal_has_requestmetainfo() const;
   public:
-  void clear_dailystatisticsinfo();
-  const ::proto::DailyStatisticsMetaInfoV1& dailystatisticsinfo() const;
-  PROTOBUF_NODISCARD ::proto::DailyStatisticsMetaInfoV1* release_dailystatisticsinfo();
-  ::proto::DailyStatisticsMetaInfoV1* mutable_dailystatisticsinfo();
-  void set_allocated_dailystatisticsinfo(::proto::DailyStatisticsMetaInfoV1* dailystatisticsinfo);
+  void clear_requestmetainfo();
+  const ::proto::RequestMetaInfoV1& requestmetainfo() const;
+  PROTOBUF_NODISCARD ::proto::RequestMetaInfoV1* release_requestmetainfo();
+  ::proto::RequestMetaInfoV1* mutable_requestmetainfo();
+  void set_allocated_requestmetainfo(::proto::RequestMetaInfoV1* requestmetainfo);
   private:
-  const ::proto::DailyStatisticsMetaInfoV1& _internal_dailystatisticsinfo() const;
-  ::proto::DailyStatisticsMetaInfoV1* _internal_mutable_dailystatisticsinfo();
+  const ::proto::RequestMetaInfoV1& _internal_requestmetainfo() const;
+  ::proto::RequestMetaInfoV1* _internal_mutable_requestmetainfo();
   public:
-  void unsafe_arena_set_allocated_dailystatisticsinfo(
-      ::proto::DailyStatisticsMetaInfoV1* dailystatisticsinfo);
-  ::proto::DailyStatisticsMetaInfoV1* unsafe_arena_release_dailystatisticsinfo();
+  void unsafe_arena_set_allocated_requestmetainfo(
+      ::proto::RequestMetaInfoV1* requestmetainfo);
+  ::proto::RequestMetaInfoV1* unsafe_arena_release_requestmetainfo();
+
+  // .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
+  bool has_userverifyinfo() const;
+  private:
+  bool _internal_has_userverifyinfo() const;
+  public:
+  void clear_userverifyinfo();
+  const ::proto::UserVerifyInfoV1& userverifyinfo() const;
+  PROTOBUF_NODISCARD ::proto::UserVerifyInfoV1* release_userverifyinfo();
+  ::proto::UserVerifyInfoV1* mutable_userverifyinfo();
+  void set_allocated_userverifyinfo(::proto::UserVerifyInfoV1* userverifyinfo);
+  private:
+  const ::proto::UserVerifyInfoV1& _internal_userverifyinfo() const;
+  ::proto::UserVerifyInfoV1* _internal_mutable_userverifyinfo();
+  public:
+  void unsafe_arena_set_allocated_userverifyinfo(
+      ::proto::UserVerifyInfoV1* userverifyinfo);
+  ::proto::UserVerifyInfoV1* unsafe_arena_release_userverifyinfo();
 
   // @@protoc_insertion_point(class_scope:proto.DeleteDailyStatisticsRequest)
  private:
@@ -6684,8 +7403,9 @@ class DeleteDailyStatisticsRequest final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::proto::UserMetaInfoV1* userinfo_;
-    ::proto::DailyStatisticsMetaInfoV1* dailystatisticsinfo_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr dailystatisticsname_;
+    ::proto::RequestMetaInfoV1* requestmetainfo_;
+    ::proto::UserVerifyInfoV1* userverifyinfo_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -6814,28 +7534,47 @@ class UpdateDailyStatisticsRequest final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kUserInfoFieldNumber = 1,
-    kDailyStatisticsInfoFieldNumber = 2,
+    kRequestMetaInfoFieldNumber = 1,
+    kUserVerifyInfoFieldNumber = 2,
+    kDailyStatisticsInfoFieldNumber = 3,
   };
-  // .proto.UserMetaInfoV1 UserInfo = 1;
-  bool has_userinfo() const;
+  // .proto.RequestMetaInfoV1 RequestMetaInfo = 1;
+  bool has_requestmetainfo() const;
   private:
-  bool _internal_has_userinfo() const;
+  bool _internal_has_requestmetainfo() const;
   public:
-  void clear_userinfo();
-  const ::proto::UserMetaInfoV1& userinfo() const;
-  PROTOBUF_NODISCARD ::proto::UserMetaInfoV1* release_userinfo();
-  ::proto::UserMetaInfoV1* mutable_userinfo();
-  void set_allocated_userinfo(::proto::UserMetaInfoV1* userinfo);
+  void clear_requestmetainfo();
+  const ::proto::RequestMetaInfoV1& requestmetainfo() const;
+  PROTOBUF_NODISCARD ::proto::RequestMetaInfoV1* release_requestmetainfo();
+  ::proto::RequestMetaInfoV1* mutable_requestmetainfo();
+  void set_allocated_requestmetainfo(::proto::RequestMetaInfoV1* requestmetainfo);
   private:
-  const ::proto::UserMetaInfoV1& _internal_userinfo() const;
-  ::proto::UserMetaInfoV1* _internal_mutable_userinfo();
+  const ::proto::RequestMetaInfoV1& _internal_requestmetainfo() const;
+  ::proto::RequestMetaInfoV1* _internal_mutable_requestmetainfo();
   public:
-  void unsafe_arena_set_allocated_userinfo(
-      ::proto::UserMetaInfoV1* userinfo);
-  ::proto::UserMetaInfoV1* unsafe_arena_release_userinfo();
+  void unsafe_arena_set_allocated_requestmetainfo(
+      ::proto::RequestMetaInfoV1* requestmetainfo);
+  ::proto::RequestMetaInfoV1* unsafe_arena_release_requestmetainfo();
 
-  // .proto.DailyStatisticsMetaInfoV1 DailyStatisticsInfo = 2;
+  // .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
+  bool has_userverifyinfo() const;
+  private:
+  bool _internal_has_userverifyinfo() const;
+  public:
+  void clear_userverifyinfo();
+  const ::proto::UserVerifyInfoV1& userverifyinfo() const;
+  PROTOBUF_NODISCARD ::proto::UserVerifyInfoV1* release_userverifyinfo();
+  ::proto::UserVerifyInfoV1* mutable_userverifyinfo();
+  void set_allocated_userverifyinfo(::proto::UserVerifyInfoV1* userverifyinfo);
+  private:
+  const ::proto::UserVerifyInfoV1& _internal_userverifyinfo() const;
+  ::proto::UserVerifyInfoV1* _internal_mutable_userverifyinfo();
+  public:
+  void unsafe_arena_set_allocated_userverifyinfo(
+      ::proto::UserVerifyInfoV1* userverifyinfo);
+  ::proto::UserVerifyInfoV1* unsafe_arena_release_userverifyinfo();
+
+  // .proto.DailyStatisticsMetaInfoV1 DailyStatisticsInfo = 3;
   bool has_dailystatisticsinfo() const;
   private:
   bool _internal_has_dailystatisticsinfo() const;
@@ -6861,7 +7600,8 @@ class UpdateDailyStatisticsRequest final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::proto::UserMetaInfoV1* userinfo_;
+    ::proto::RequestMetaInfoV1* requestmetainfo_;
+    ::proto::UserVerifyInfoV1* userverifyinfo_;
     ::proto::DailyStatisticsMetaInfoV1* dailystatisticsinfo_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
@@ -6991,44 +7731,59 @@ class GetDailyStatisticsRequest final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kUserInfoFieldNumber = 1,
-    kDailyStatisticsInfoFieldNumber = 2,
+    kDailyStatisticsNameFieldNumber = 3,
+    kRequestMetaInfoFieldNumber = 1,
+    kUserVerifyInfoFieldNumber = 2,
   };
-  // .proto.UserMetaInfoV1 UserInfo = 1;
-  bool has_userinfo() const;
+  // string DailyStatisticsName = 3;
+  void clear_dailystatisticsname();
+  const std::string& dailystatisticsname() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_dailystatisticsname(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_dailystatisticsname();
+  PROTOBUF_NODISCARD std::string* release_dailystatisticsname();
+  void set_allocated_dailystatisticsname(std::string* dailystatisticsname);
   private:
-  bool _internal_has_userinfo() const;
+  const std::string& _internal_dailystatisticsname() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_dailystatisticsname(const std::string& value);
+  std::string* _internal_mutable_dailystatisticsname();
   public:
-  void clear_userinfo();
-  const ::proto::UserMetaInfoV1& userinfo() const;
-  PROTOBUF_NODISCARD ::proto::UserMetaInfoV1* release_userinfo();
-  ::proto::UserMetaInfoV1* mutable_userinfo();
-  void set_allocated_userinfo(::proto::UserMetaInfoV1* userinfo);
-  private:
-  const ::proto::UserMetaInfoV1& _internal_userinfo() const;
-  ::proto::UserMetaInfoV1* _internal_mutable_userinfo();
-  public:
-  void unsafe_arena_set_allocated_userinfo(
-      ::proto::UserMetaInfoV1* userinfo);
-  ::proto::UserMetaInfoV1* unsafe_arena_release_userinfo();
 
-  // .proto.DailyStatisticsMetaInfoV1 DailyStatisticsInfo = 2;
-  bool has_dailystatisticsinfo() const;
+  // .proto.RequestMetaInfoV1 RequestMetaInfo = 1;
+  bool has_requestmetainfo() const;
   private:
-  bool _internal_has_dailystatisticsinfo() const;
+  bool _internal_has_requestmetainfo() const;
   public:
-  void clear_dailystatisticsinfo();
-  const ::proto::DailyStatisticsMetaInfoV1& dailystatisticsinfo() const;
-  PROTOBUF_NODISCARD ::proto::DailyStatisticsMetaInfoV1* release_dailystatisticsinfo();
-  ::proto::DailyStatisticsMetaInfoV1* mutable_dailystatisticsinfo();
-  void set_allocated_dailystatisticsinfo(::proto::DailyStatisticsMetaInfoV1* dailystatisticsinfo);
+  void clear_requestmetainfo();
+  const ::proto::RequestMetaInfoV1& requestmetainfo() const;
+  PROTOBUF_NODISCARD ::proto::RequestMetaInfoV1* release_requestmetainfo();
+  ::proto::RequestMetaInfoV1* mutable_requestmetainfo();
+  void set_allocated_requestmetainfo(::proto::RequestMetaInfoV1* requestmetainfo);
   private:
-  const ::proto::DailyStatisticsMetaInfoV1& _internal_dailystatisticsinfo() const;
-  ::proto::DailyStatisticsMetaInfoV1* _internal_mutable_dailystatisticsinfo();
+  const ::proto::RequestMetaInfoV1& _internal_requestmetainfo() const;
+  ::proto::RequestMetaInfoV1* _internal_mutable_requestmetainfo();
   public:
-  void unsafe_arena_set_allocated_dailystatisticsinfo(
-      ::proto::DailyStatisticsMetaInfoV1* dailystatisticsinfo);
-  ::proto::DailyStatisticsMetaInfoV1* unsafe_arena_release_dailystatisticsinfo();
+  void unsafe_arena_set_allocated_requestmetainfo(
+      ::proto::RequestMetaInfoV1* requestmetainfo);
+  ::proto::RequestMetaInfoV1* unsafe_arena_release_requestmetainfo();
+
+  // .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
+  bool has_userverifyinfo() const;
+  private:
+  bool _internal_has_userverifyinfo() const;
+  public:
+  void clear_userverifyinfo();
+  const ::proto::UserVerifyInfoV1& userverifyinfo() const;
+  PROTOBUF_NODISCARD ::proto::UserVerifyInfoV1* release_userverifyinfo();
+  ::proto::UserVerifyInfoV1* mutable_userverifyinfo();
+  void set_allocated_userverifyinfo(::proto::UserVerifyInfoV1* userverifyinfo);
+  private:
+  const ::proto::UserVerifyInfoV1& _internal_userverifyinfo() const;
+  ::proto::UserVerifyInfoV1* _internal_mutable_userverifyinfo();
+  public:
+  void unsafe_arena_set_allocated_userverifyinfo(
+      ::proto::UserVerifyInfoV1* userverifyinfo);
+  ::proto::UserVerifyInfoV1* unsafe_arena_release_userverifyinfo();
 
   // @@protoc_insertion_point(class_scope:proto.GetDailyStatisticsRequest)
  private:
@@ -7038,8 +7793,9 @@ class GetDailyStatisticsRequest final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::proto::UserMetaInfoV1* userinfo_;
-    ::proto::DailyStatisticsMetaInfoV1* dailystatisticsinfo_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr dailystatisticsname_;
+    ::proto::RequestMetaInfoV1* requestmetainfo_;
+    ::proto::UserVerifyInfoV1* userverifyinfo_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -7168,25 +7924,44 @@ class GetAllDailyStatisticsRequest final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kUserInfoFieldNumber = 1,
+    kRequestMetaInfoFieldNumber = 1,
+    kUserVerifyInfoFieldNumber = 2,
   };
-  // .proto.UserMetaInfoV1 UserInfo = 1;
-  bool has_userinfo() const;
+  // .proto.RequestMetaInfoV1 RequestMetaInfo = 1;
+  bool has_requestmetainfo() const;
   private:
-  bool _internal_has_userinfo() const;
+  bool _internal_has_requestmetainfo() const;
   public:
-  void clear_userinfo();
-  const ::proto::UserMetaInfoV1& userinfo() const;
-  PROTOBUF_NODISCARD ::proto::UserMetaInfoV1* release_userinfo();
-  ::proto::UserMetaInfoV1* mutable_userinfo();
-  void set_allocated_userinfo(::proto::UserMetaInfoV1* userinfo);
+  void clear_requestmetainfo();
+  const ::proto::RequestMetaInfoV1& requestmetainfo() const;
+  PROTOBUF_NODISCARD ::proto::RequestMetaInfoV1* release_requestmetainfo();
+  ::proto::RequestMetaInfoV1* mutable_requestmetainfo();
+  void set_allocated_requestmetainfo(::proto::RequestMetaInfoV1* requestmetainfo);
   private:
-  const ::proto::UserMetaInfoV1& _internal_userinfo() const;
-  ::proto::UserMetaInfoV1* _internal_mutable_userinfo();
+  const ::proto::RequestMetaInfoV1& _internal_requestmetainfo() const;
+  ::proto::RequestMetaInfoV1* _internal_mutable_requestmetainfo();
   public:
-  void unsafe_arena_set_allocated_userinfo(
-      ::proto::UserMetaInfoV1* userinfo);
-  ::proto::UserMetaInfoV1* unsafe_arena_release_userinfo();
+  void unsafe_arena_set_allocated_requestmetainfo(
+      ::proto::RequestMetaInfoV1* requestmetainfo);
+  ::proto::RequestMetaInfoV1* unsafe_arena_release_requestmetainfo();
+
+  // .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
+  bool has_userverifyinfo() const;
+  private:
+  bool _internal_has_userverifyinfo() const;
+  public:
+  void clear_userverifyinfo();
+  const ::proto::UserVerifyInfoV1& userverifyinfo() const;
+  PROTOBUF_NODISCARD ::proto::UserVerifyInfoV1* release_userverifyinfo();
+  ::proto::UserVerifyInfoV1* mutable_userverifyinfo();
+  void set_allocated_userverifyinfo(::proto::UserVerifyInfoV1* userverifyinfo);
+  private:
+  const ::proto::UserVerifyInfoV1& _internal_userverifyinfo() const;
+  ::proto::UserVerifyInfoV1* _internal_mutable_userverifyinfo();
+  public:
+  void unsafe_arena_set_allocated_userverifyinfo(
+      ::proto::UserVerifyInfoV1* userverifyinfo);
+  ::proto::UserVerifyInfoV1* unsafe_arena_release_userverifyinfo();
 
   // @@protoc_insertion_point(class_scope:proto.GetAllDailyStatisticsRequest)
  private:
@@ -7196,7 +7971,8 @@ class GetAllDailyStatisticsRequest final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::proto::UserMetaInfoV1* userinfo_;
+    ::proto::RequestMetaInfoV1* requestmetainfo_;
+    ::proto::UserVerifyInfoV1* userverifyinfo_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -7213,7 +7989,92 @@ class GetAllDailyStatisticsRequest final :
 #endif  // __GNUC__
 // CreateUserRequest
 
-// .proto.UserMetaInfoV1 UserInfo = 1;
+// .proto.RequestMetaInfoV1 RequestMetaInfo = 1;
+inline bool CreateUserRequest::_internal_has_requestmetainfo() const {
+  return this != internal_default_instance() && _impl_.requestmetainfo_ != nullptr;
+}
+inline bool CreateUserRequest::has_requestmetainfo() const {
+  return _internal_has_requestmetainfo();
+}
+inline const ::proto::RequestMetaInfoV1& CreateUserRequest::_internal_requestmetainfo() const {
+  const ::proto::RequestMetaInfoV1* p = _impl_.requestmetainfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::RequestMetaInfoV1&>(
+      ::proto::_RequestMetaInfoV1_default_instance_);
+}
+inline const ::proto::RequestMetaInfoV1& CreateUserRequest::requestmetainfo() const {
+  // @@protoc_insertion_point(field_get:proto.CreateUserRequest.RequestMetaInfo)
+  return _internal_requestmetainfo();
+}
+inline void CreateUserRequest::unsafe_arena_set_allocated_requestmetainfo(
+    ::proto::RequestMetaInfoV1* requestmetainfo) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.requestmetainfo_);
+  }
+  _impl_.requestmetainfo_ = requestmetainfo;
+  if (requestmetainfo) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.CreateUserRequest.RequestMetaInfo)
+}
+inline ::proto::RequestMetaInfoV1* CreateUserRequest::release_requestmetainfo() {
+  
+  ::proto::RequestMetaInfoV1* temp = _impl_.requestmetainfo_;
+  _impl_.requestmetainfo_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::proto::RequestMetaInfoV1* CreateUserRequest::unsafe_arena_release_requestmetainfo() {
+  // @@protoc_insertion_point(field_release:proto.CreateUserRequest.RequestMetaInfo)
+  
+  ::proto::RequestMetaInfoV1* temp = _impl_.requestmetainfo_;
+  _impl_.requestmetainfo_ = nullptr;
+  return temp;
+}
+inline ::proto::RequestMetaInfoV1* CreateUserRequest::_internal_mutable_requestmetainfo() {
+  
+  if (_impl_.requestmetainfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::RequestMetaInfoV1>(GetArenaForAllocation());
+    _impl_.requestmetainfo_ = p;
+  }
+  return _impl_.requestmetainfo_;
+}
+inline ::proto::RequestMetaInfoV1* CreateUserRequest::mutable_requestmetainfo() {
+  ::proto::RequestMetaInfoV1* _msg = _internal_mutable_requestmetainfo();
+  // @@protoc_insertion_point(field_mutable:proto.CreateUserRequest.RequestMetaInfo)
+  return _msg;
+}
+inline void CreateUserRequest::set_allocated_requestmetainfo(::proto::RequestMetaInfoV1* requestmetainfo) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.requestmetainfo_);
+  }
+  if (requestmetainfo) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(requestmetainfo));
+    if (message_arena != submessage_arena) {
+      requestmetainfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, requestmetainfo, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  _impl_.requestmetainfo_ = requestmetainfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.CreateUserRequest.RequestMetaInfo)
+}
+
+// .proto.UserMetaInfoV1 UserInfo = 2;
 inline bool CreateUserRequest::_internal_has_userinfo() const {
   return this != internal_default_instance() && _impl_.userinfo_ != nullptr;
 }
@@ -7302,7 +8163,92 @@ inline void CreateUserRequest::set_allocated_userinfo(::proto::UserMetaInfoV1* u
 
 // DeleteUserRequest
 
-// .proto.UserVerifyInfoV1 UserVerifyInfo = 1;
+// .proto.RequestMetaInfoV1 RequestMetaInfo = 1;
+inline bool DeleteUserRequest::_internal_has_requestmetainfo() const {
+  return this != internal_default_instance() && _impl_.requestmetainfo_ != nullptr;
+}
+inline bool DeleteUserRequest::has_requestmetainfo() const {
+  return _internal_has_requestmetainfo();
+}
+inline const ::proto::RequestMetaInfoV1& DeleteUserRequest::_internal_requestmetainfo() const {
+  const ::proto::RequestMetaInfoV1* p = _impl_.requestmetainfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::RequestMetaInfoV1&>(
+      ::proto::_RequestMetaInfoV1_default_instance_);
+}
+inline const ::proto::RequestMetaInfoV1& DeleteUserRequest::requestmetainfo() const {
+  // @@protoc_insertion_point(field_get:proto.DeleteUserRequest.RequestMetaInfo)
+  return _internal_requestmetainfo();
+}
+inline void DeleteUserRequest::unsafe_arena_set_allocated_requestmetainfo(
+    ::proto::RequestMetaInfoV1* requestmetainfo) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.requestmetainfo_);
+  }
+  _impl_.requestmetainfo_ = requestmetainfo;
+  if (requestmetainfo) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.DeleteUserRequest.RequestMetaInfo)
+}
+inline ::proto::RequestMetaInfoV1* DeleteUserRequest::release_requestmetainfo() {
+  
+  ::proto::RequestMetaInfoV1* temp = _impl_.requestmetainfo_;
+  _impl_.requestmetainfo_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::proto::RequestMetaInfoV1* DeleteUserRequest::unsafe_arena_release_requestmetainfo() {
+  // @@protoc_insertion_point(field_release:proto.DeleteUserRequest.RequestMetaInfo)
+  
+  ::proto::RequestMetaInfoV1* temp = _impl_.requestmetainfo_;
+  _impl_.requestmetainfo_ = nullptr;
+  return temp;
+}
+inline ::proto::RequestMetaInfoV1* DeleteUserRequest::_internal_mutable_requestmetainfo() {
+  
+  if (_impl_.requestmetainfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::RequestMetaInfoV1>(GetArenaForAllocation());
+    _impl_.requestmetainfo_ = p;
+  }
+  return _impl_.requestmetainfo_;
+}
+inline ::proto::RequestMetaInfoV1* DeleteUserRequest::mutable_requestmetainfo() {
+  ::proto::RequestMetaInfoV1* _msg = _internal_mutable_requestmetainfo();
+  // @@protoc_insertion_point(field_mutable:proto.DeleteUserRequest.RequestMetaInfo)
+  return _msg;
+}
+inline void DeleteUserRequest::set_allocated_requestmetainfo(::proto::RequestMetaInfoV1* requestmetainfo) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.requestmetainfo_);
+  }
+  if (requestmetainfo) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(requestmetainfo));
+    if (message_arena != submessage_arena) {
+      requestmetainfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, requestmetainfo, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  _impl_.requestmetainfo_ = requestmetainfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.DeleteUserRequest.RequestMetaInfo)
+}
+
+// .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
 inline bool DeleteUserRequest::_internal_has_userverifyinfo() const {
   return this != internal_default_instance() && _impl_.userverifyinfo_ != nullptr;
 }
@@ -7387,39 +8333,93 @@ inline void DeleteUserRequest::set_allocated_userverifyinfo(::proto::UserVerifyI
   // @@protoc_insertion_point(field_set_allocated:proto.DeleteUserRequest.UserVerifyInfo)
 }
 
-// .proto.UserMetaInfoV1 UserInfo = 2;
-inline bool DeleteUserRequest::_internal_has_userinfo() const {
-  return this != internal_default_instance() && _impl_.userinfo_ != nullptr;
+// string UserName = 3;
+inline void DeleteUserRequest::clear_username() {
+  _impl_.username_.ClearToEmpty();
 }
-inline bool DeleteUserRequest::has_userinfo() const {
-  return _internal_has_userinfo();
+inline const std::string& DeleteUserRequest::username() const {
+  // @@protoc_insertion_point(field_get:proto.DeleteUserRequest.UserName)
+  return _internal_username();
 }
-inline const ::proto::UserMetaInfoV1& DeleteUserRequest::_internal_userinfo() const {
-  const ::proto::UserMetaInfoV1* p = _impl_.userinfo_;
-  return p != nullptr ? *p : reinterpret_cast<const ::proto::UserMetaInfoV1&>(
-      ::proto::_UserMetaInfoV1_default_instance_);
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void DeleteUserRequest::set_username(ArgT0&& arg0, ArgT... args) {
+ 
+ _impl_.username_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:proto.DeleteUserRequest.UserName)
 }
-inline const ::proto::UserMetaInfoV1& DeleteUserRequest::userinfo() const {
-  // @@protoc_insertion_point(field_get:proto.DeleteUserRequest.UserInfo)
-  return _internal_userinfo();
+inline std::string* DeleteUserRequest::mutable_username() {
+  std::string* _s = _internal_mutable_username();
+  // @@protoc_insertion_point(field_mutable:proto.DeleteUserRequest.UserName)
+  return _s;
 }
-inline void DeleteUserRequest::unsafe_arena_set_allocated_userinfo(
-    ::proto::UserMetaInfoV1* userinfo) {
-  if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userinfo_);
-  }
-  _impl_.userinfo_ = userinfo;
-  if (userinfo) {
+inline const std::string& DeleteUserRequest::_internal_username() const {
+  return _impl_.username_.Get();
+}
+inline void DeleteUserRequest::_internal_set_username(const std::string& value) {
+  
+  _impl_.username_.Set(value, GetArenaForAllocation());
+}
+inline std::string* DeleteUserRequest::_internal_mutable_username() {
+  
+  return _impl_.username_.Mutable(GetArenaForAllocation());
+}
+inline std::string* DeleteUserRequest::release_username() {
+  // @@protoc_insertion_point(field_release:proto.DeleteUserRequest.UserName)
+  return _impl_.username_.Release();
+}
+inline void DeleteUserRequest::set_allocated_username(std::string* username) {
+  if (username != nullptr) {
     
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.DeleteUserRequest.UserInfo)
+  _impl_.username_.SetAllocated(username, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.username_.IsDefault()) {
+    _impl_.username_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:proto.DeleteUserRequest.UserName)
 }
-inline ::proto::UserMetaInfoV1* DeleteUserRequest::release_userinfo() {
+
+// -------------------------------------------------------------------
+
+// UpdateUserRequest
+
+// .proto.RequestMetaInfoV1 RequestMetaInfo = 1;
+inline bool UpdateUserRequest::_internal_has_requestmetainfo() const {
+  return this != internal_default_instance() && _impl_.requestmetainfo_ != nullptr;
+}
+inline bool UpdateUserRequest::has_requestmetainfo() const {
+  return _internal_has_requestmetainfo();
+}
+inline const ::proto::RequestMetaInfoV1& UpdateUserRequest::_internal_requestmetainfo() const {
+  const ::proto::RequestMetaInfoV1* p = _impl_.requestmetainfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::RequestMetaInfoV1&>(
+      ::proto::_RequestMetaInfoV1_default_instance_);
+}
+inline const ::proto::RequestMetaInfoV1& UpdateUserRequest::requestmetainfo() const {
+  // @@protoc_insertion_point(field_get:proto.UpdateUserRequest.RequestMetaInfo)
+  return _internal_requestmetainfo();
+}
+inline void UpdateUserRequest::unsafe_arena_set_allocated_requestmetainfo(
+    ::proto::RequestMetaInfoV1* requestmetainfo) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.requestmetainfo_);
+  }
+  _impl_.requestmetainfo_ = requestmetainfo;
+  if (requestmetainfo) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.UpdateUserRequest.RequestMetaInfo)
+}
+inline ::proto::RequestMetaInfoV1* UpdateUserRequest::release_requestmetainfo() {
   
-  ::proto::UserMetaInfoV1* temp = _impl_.userinfo_;
-  _impl_.userinfo_ = nullptr;
+  ::proto::RequestMetaInfoV1* temp = _impl_.requestmetainfo_;
+  _impl_.requestmetainfo_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -7431,52 +8431,133 @@ inline ::proto::UserMetaInfoV1* DeleteUserRequest::release_userinfo() {
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::proto::UserMetaInfoV1* DeleteUserRequest::unsafe_arena_release_userinfo() {
-  // @@protoc_insertion_point(field_release:proto.DeleteUserRequest.UserInfo)
+inline ::proto::RequestMetaInfoV1* UpdateUserRequest::unsafe_arena_release_requestmetainfo() {
+  // @@protoc_insertion_point(field_release:proto.UpdateUserRequest.RequestMetaInfo)
   
-  ::proto::UserMetaInfoV1* temp = _impl_.userinfo_;
-  _impl_.userinfo_ = nullptr;
+  ::proto::RequestMetaInfoV1* temp = _impl_.requestmetainfo_;
+  _impl_.requestmetainfo_ = nullptr;
   return temp;
 }
-inline ::proto::UserMetaInfoV1* DeleteUserRequest::_internal_mutable_userinfo() {
+inline ::proto::RequestMetaInfoV1* UpdateUserRequest::_internal_mutable_requestmetainfo() {
   
-  if (_impl_.userinfo_ == nullptr) {
-    auto* p = CreateMaybeMessage<::proto::UserMetaInfoV1>(GetArenaForAllocation());
-    _impl_.userinfo_ = p;
+  if (_impl_.requestmetainfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::RequestMetaInfoV1>(GetArenaForAllocation());
+    _impl_.requestmetainfo_ = p;
   }
-  return _impl_.userinfo_;
+  return _impl_.requestmetainfo_;
 }
-inline ::proto::UserMetaInfoV1* DeleteUserRequest::mutable_userinfo() {
-  ::proto::UserMetaInfoV1* _msg = _internal_mutable_userinfo();
-  // @@protoc_insertion_point(field_mutable:proto.DeleteUserRequest.UserInfo)
+inline ::proto::RequestMetaInfoV1* UpdateUserRequest::mutable_requestmetainfo() {
+  ::proto::RequestMetaInfoV1* _msg = _internal_mutable_requestmetainfo();
+  // @@protoc_insertion_point(field_mutable:proto.UpdateUserRequest.RequestMetaInfo)
   return _msg;
 }
-inline void DeleteUserRequest::set_allocated_userinfo(::proto::UserMetaInfoV1* userinfo) {
+inline void UpdateUserRequest::set_allocated_requestmetainfo(::proto::RequestMetaInfoV1* requestmetainfo) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userinfo_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.requestmetainfo_);
   }
-  if (userinfo) {
+  if (requestmetainfo) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(userinfo));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(requestmetainfo));
     if (message_arena != submessage_arena) {
-      userinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, userinfo, submessage_arena);
+      requestmetainfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, requestmetainfo, submessage_arena);
     }
     
   } else {
     
   }
-  _impl_.userinfo_ = userinfo;
-  // @@protoc_insertion_point(field_set_allocated:proto.DeleteUserRequest.UserInfo)
+  _impl_.requestmetainfo_ = requestmetainfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.UpdateUserRequest.RequestMetaInfo)
 }
 
-// -------------------------------------------------------------------
+// .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
+inline bool UpdateUserRequest::_internal_has_userverifyinfo() const {
+  return this != internal_default_instance() && _impl_.userverifyinfo_ != nullptr;
+}
+inline bool UpdateUserRequest::has_userverifyinfo() const {
+  return _internal_has_userverifyinfo();
+}
+inline const ::proto::UserVerifyInfoV1& UpdateUserRequest::_internal_userverifyinfo() const {
+  const ::proto::UserVerifyInfoV1* p = _impl_.userverifyinfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::UserVerifyInfoV1&>(
+      ::proto::_UserVerifyInfoV1_default_instance_);
+}
+inline const ::proto::UserVerifyInfoV1& UpdateUserRequest::userverifyinfo() const {
+  // @@protoc_insertion_point(field_get:proto.UpdateUserRequest.UserVerifyInfo)
+  return _internal_userverifyinfo();
+}
+inline void UpdateUserRequest::unsafe_arena_set_allocated_userverifyinfo(
+    ::proto::UserVerifyInfoV1* userverifyinfo) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userverifyinfo_);
+  }
+  _impl_.userverifyinfo_ = userverifyinfo;
+  if (userverifyinfo) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.UpdateUserRequest.UserVerifyInfo)
+}
+inline ::proto::UserVerifyInfoV1* UpdateUserRequest::release_userverifyinfo() {
+  
+  ::proto::UserVerifyInfoV1* temp = _impl_.userverifyinfo_;
+  _impl_.userverifyinfo_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::proto::UserVerifyInfoV1* UpdateUserRequest::unsafe_arena_release_userverifyinfo() {
+  // @@protoc_insertion_point(field_release:proto.UpdateUserRequest.UserVerifyInfo)
+  
+  ::proto::UserVerifyInfoV1* temp = _impl_.userverifyinfo_;
+  _impl_.userverifyinfo_ = nullptr;
+  return temp;
+}
+inline ::proto::UserVerifyInfoV1* UpdateUserRequest::_internal_mutable_userverifyinfo() {
+  
+  if (_impl_.userverifyinfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::UserVerifyInfoV1>(GetArenaForAllocation());
+    _impl_.userverifyinfo_ = p;
+  }
+  return _impl_.userverifyinfo_;
+}
+inline ::proto::UserVerifyInfoV1* UpdateUserRequest::mutable_userverifyinfo() {
+  ::proto::UserVerifyInfoV1* _msg = _internal_mutable_userverifyinfo();
+  // @@protoc_insertion_point(field_mutable:proto.UpdateUserRequest.UserVerifyInfo)
+  return _msg;
+}
+inline void UpdateUserRequest::set_allocated_userverifyinfo(::proto::UserVerifyInfoV1* userverifyinfo) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userverifyinfo_);
+  }
+  if (userverifyinfo) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(userverifyinfo));
+    if (message_arena != submessage_arena) {
+      userverifyinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, userverifyinfo, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  _impl_.userverifyinfo_ = userverifyinfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.UpdateUserRequest.UserVerifyInfo)
+}
 
-// UpdateUserRequest
-
-// .proto.UserMetaInfoV1 UserInfo = 1;
+// .proto.UserMetaInfoV1 UserInfo = 3;
 inline bool UpdateUserRequest::_internal_has_userinfo() const {
   return this != internal_default_instance() && _impl_.userinfo_ != nullptr;
 }
@@ -7565,39 +8646,39 @@ inline void UpdateUserRequest::set_allocated_userinfo(::proto::UserMetaInfoV1* u
 
 // GetUserRequest
 
-// .proto.UserMetaInfoV1 UserInfo = 1;
-inline bool GetUserRequest::_internal_has_userinfo() const {
-  return this != internal_default_instance() && _impl_.userinfo_ != nullptr;
+// .proto.RequestMetaInfoV1 RequestMetaInfo = 1;
+inline bool GetUserRequest::_internal_has_requestmetainfo() const {
+  return this != internal_default_instance() && _impl_.requestmetainfo_ != nullptr;
 }
-inline bool GetUserRequest::has_userinfo() const {
-  return _internal_has_userinfo();
+inline bool GetUserRequest::has_requestmetainfo() const {
+  return _internal_has_requestmetainfo();
 }
-inline const ::proto::UserMetaInfoV1& GetUserRequest::_internal_userinfo() const {
-  const ::proto::UserMetaInfoV1* p = _impl_.userinfo_;
-  return p != nullptr ? *p : reinterpret_cast<const ::proto::UserMetaInfoV1&>(
-      ::proto::_UserMetaInfoV1_default_instance_);
+inline const ::proto::RequestMetaInfoV1& GetUserRequest::_internal_requestmetainfo() const {
+  const ::proto::RequestMetaInfoV1* p = _impl_.requestmetainfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::RequestMetaInfoV1&>(
+      ::proto::_RequestMetaInfoV1_default_instance_);
 }
-inline const ::proto::UserMetaInfoV1& GetUserRequest::userinfo() const {
-  // @@protoc_insertion_point(field_get:proto.GetUserRequest.UserInfo)
-  return _internal_userinfo();
+inline const ::proto::RequestMetaInfoV1& GetUserRequest::requestmetainfo() const {
+  // @@protoc_insertion_point(field_get:proto.GetUserRequest.RequestMetaInfo)
+  return _internal_requestmetainfo();
 }
-inline void GetUserRequest::unsafe_arena_set_allocated_userinfo(
-    ::proto::UserMetaInfoV1* userinfo) {
+inline void GetUserRequest::unsafe_arena_set_allocated_requestmetainfo(
+    ::proto::RequestMetaInfoV1* requestmetainfo) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userinfo_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.requestmetainfo_);
   }
-  _impl_.userinfo_ = userinfo;
-  if (userinfo) {
+  _impl_.requestmetainfo_ = requestmetainfo;
+  if (requestmetainfo) {
     
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.GetUserRequest.UserInfo)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.GetUserRequest.RequestMetaInfo)
 }
-inline ::proto::UserMetaInfoV1* GetUserRequest::release_userinfo() {
+inline ::proto::RequestMetaInfoV1* GetUserRequest::release_requestmetainfo() {
   
-  ::proto::UserMetaInfoV1* temp = _impl_.userinfo_;
-  _impl_.userinfo_ = nullptr;
+  ::proto::RequestMetaInfoV1* temp = _impl_.requestmetainfo_;
+  _impl_.requestmetainfo_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -7609,84 +8690,219 @@ inline ::proto::UserMetaInfoV1* GetUserRequest::release_userinfo() {
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::proto::UserMetaInfoV1* GetUserRequest::unsafe_arena_release_userinfo() {
-  // @@protoc_insertion_point(field_release:proto.GetUserRequest.UserInfo)
+inline ::proto::RequestMetaInfoV1* GetUserRequest::unsafe_arena_release_requestmetainfo() {
+  // @@protoc_insertion_point(field_release:proto.GetUserRequest.RequestMetaInfo)
   
-  ::proto::UserMetaInfoV1* temp = _impl_.userinfo_;
-  _impl_.userinfo_ = nullptr;
+  ::proto::RequestMetaInfoV1* temp = _impl_.requestmetainfo_;
+  _impl_.requestmetainfo_ = nullptr;
   return temp;
 }
-inline ::proto::UserMetaInfoV1* GetUserRequest::_internal_mutable_userinfo() {
+inline ::proto::RequestMetaInfoV1* GetUserRequest::_internal_mutable_requestmetainfo() {
   
-  if (_impl_.userinfo_ == nullptr) {
-    auto* p = CreateMaybeMessage<::proto::UserMetaInfoV1>(GetArenaForAllocation());
-    _impl_.userinfo_ = p;
+  if (_impl_.requestmetainfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::RequestMetaInfoV1>(GetArenaForAllocation());
+    _impl_.requestmetainfo_ = p;
   }
-  return _impl_.userinfo_;
+  return _impl_.requestmetainfo_;
 }
-inline ::proto::UserMetaInfoV1* GetUserRequest::mutable_userinfo() {
-  ::proto::UserMetaInfoV1* _msg = _internal_mutable_userinfo();
-  // @@protoc_insertion_point(field_mutable:proto.GetUserRequest.UserInfo)
+inline ::proto::RequestMetaInfoV1* GetUserRequest::mutable_requestmetainfo() {
+  ::proto::RequestMetaInfoV1* _msg = _internal_mutable_requestmetainfo();
+  // @@protoc_insertion_point(field_mutable:proto.GetUserRequest.RequestMetaInfo)
   return _msg;
 }
-inline void GetUserRequest::set_allocated_userinfo(::proto::UserMetaInfoV1* userinfo) {
+inline void GetUserRequest::set_allocated_requestmetainfo(::proto::RequestMetaInfoV1* requestmetainfo) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userinfo_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.requestmetainfo_);
   }
-  if (userinfo) {
+  if (requestmetainfo) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(userinfo));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(requestmetainfo));
     if (message_arena != submessage_arena) {
-      userinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, userinfo, submessage_arena);
+      requestmetainfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, requestmetainfo, submessage_arena);
     }
     
   } else {
     
   }
-  _impl_.userinfo_ = userinfo;
-  // @@protoc_insertion_point(field_set_allocated:proto.GetUserRequest.UserInfo)
+  _impl_.requestmetainfo_ = requestmetainfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.GetUserRequest.RequestMetaInfo)
+}
+
+// .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
+inline bool GetUserRequest::_internal_has_userverifyinfo() const {
+  return this != internal_default_instance() && _impl_.userverifyinfo_ != nullptr;
+}
+inline bool GetUserRequest::has_userverifyinfo() const {
+  return _internal_has_userverifyinfo();
+}
+inline const ::proto::UserVerifyInfoV1& GetUserRequest::_internal_userverifyinfo() const {
+  const ::proto::UserVerifyInfoV1* p = _impl_.userverifyinfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::UserVerifyInfoV1&>(
+      ::proto::_UserVerifyInfoV1_default_instance_);
+}
+inline const ::proto::UserVerifyInfoV1& GetUserRequest::userverifyinfo() const {
+  // @@protoc_insertion_point(field_get:proto.GetUserRequest.UserVerifyInfo)
+  return _internal_userverifyinfo();
+}
+inline void GetUserRequest::unsafe_arena_set_allocated_userverifyinfo(
+    ::proto::UserVerifyInfoV1* userverifyinfo) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userverifyinfo_);
+  }
+  _impl_.userverifyinfo_ = userverifyinfo;
+  if (userverifyinfo) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.GetUserRequest.UserVerifyInfo)
+}
+inline ::proto::UserVerifyInfoV1* GetUserRequest::release_userverifyinfo() {
+  
+  ::proto::UserVerifyInfoV1* temp = _impl_.userverifyinfo_;
+  _impl_.userverifyinfo_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::proto::UserVerifyInfoV1* GetUserRequest::unsafe_arena_release_userverifyinfo() {
+  // @@protoc_insertion_point(field_release:proto.GetUserRequest.UserVerifyInfo)
+  
+  ::proto::UserVerifyInfoV1* temp = _impl_.userverifyinfo_;
+  _impl_.userverifyinfo_ = nullptr;
+  return temp;
+}
+inline ::proto::UserVerifyInfoV1* GetUserRequest::_internal_mutable_userverifyinfo() {
+  
+  if (_impl_.userverifyinfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::UserVerifyInfoV1>(GetArenaForAllocation());
+    _impl_.userverifyinfo_ = p;
+  }
+  return _impl_.userverifyinfo_;
+}
+inline ::proto::UserVerifyInfoV1* GetUserRequest::mutable_userverifyinfo() {
+  ::proto::UserVerifyInfoV1* _msg = _internal_mutable_userverifyinfo();
+  // @@protoc_insertion_point(field_mutable:proto.GetUserRequest.UserVerifyInfo)
+  return _msg;
+}
+inline void GetUserRequest::set_allocated_userverifyinfo(::proto::UserVerifyInfoV1* userverifyinfo) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userverifyinfo_);
+  }
+  if (userverifyinfo) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(userverifyinfo));
+    if (message_arena != submessage_arena) {
+      userverifyinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, userverifyinfo, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  _impl_.userverifyinfo_ = userverifyinfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.GetUserRequest.UserVerifyInfo)
+}
+
+// string UserName = 3;
+inline void GetUserRequest::clear_username() {
+  _impl_.username_.ClearToEmpty();
+}
+inline const std::string& GetUserRequest::username() const {
+  // @@protoc_insertion_point(field_get:proto.GetUserRequest.UserName)
+  return _internal_username();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void GetUserRequest::set_username(ArgT0&& arg0, ArgT... args) {
+ 
+ _impl_.username_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:proto.GetUserRequest.UserName)
+}
+inline std::string* GetUserRequest::mutable_username() {
+  std::string* _s = _internal_mutable_username();
+  // @@protoc_insertion_point(field_mutable:proto.GetUserRequest.UserName)
+  return _s;
+}
+inline const std::string& GetUserRequest::_internal_username() const {
+  return _impl_.username_.Get();
+}
+inline void GetUserRequest::_internal_set_username(const std::string& value) {
+  
+  _impl_.username_.Set(value, GetArenaForAllocation());
+}
+inline std::string* GetUserRequest::_internal_mutable_username() {
+  
+  return _impl_.username_.Mutable(GetArenaForAllocation());
+}
+inline std::string* GetUserRequest::release_username() {
+  // @@protoc_insertion_point(field_release:proto.GetUserRequest.UserName)
+  return _impl_.username_.Release();
+}
+inline void GetUserRequest::set_allocated_username(std::string* username) {
+  if (username != nullptr) {
+    
+  } else {
+    
+  }
+  _impl_.username_.SetAllocated(username, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.username_.IsDefault()) {
+    _impl_.username_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:proto.GetUserRequest.UserName)
 }
 
 // -------------------------------------------------------------------
 
 // GetAllUserRequest
 
-// .proto.UserMetaInfoV1 UserInfo = 1;
-inline bool GetAllUserRequest::_internal_has_userinfo() const {
-  return this != internal_default_instance() && _impl_.userinfo_ != nullptr;
+// .proto.RequestMetaInfoV1 RequestMetaInfo = 1;
+inline bool GetAllUserRequest::_internal_has_requestmetainfo() const {
+  return this != internal_default_instance() && _impl_.requestmetainfo_ != nullptr;
 }
-inline bool GetAllUserRequest::has_userinfo() const {
-  return _internal_has_userinfo();
+inline bool GetAllUserRequest::has_requestmetainfo() const {
+  return _internal_has_requestmetainfo();
 }
-inline const ::proto::UserMetaInfoV1& GetAllUserRequest::_internal_userinfo() const {
-  const ::proto::UserMetaInfoV1* p = _impl_.userinfo_;
-  return p != nullptr ? *p : reinterpret_cast<const ::proto::UserMetaInfoV1&>(
-      ::proto::_UserMetaInfoV1_default_instance_);
+inline const ::proto::RequestMetaInfoV1& GetAllUserRequest::_internal_requestmetainfo() const {
+  const ::proto::RequestMetaInfoV1* p = _impl_.requestmetainfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::RequestMetaInfoV1&>(
+      ::proto::_RequestMetaInfoV1_default_instance_);
 }
-inline const ::proto::UserMetaInfoV1& GetAllUserRequest::userinfo() const {
-  // @@protoc_insertion_point(field_get:proto.GetAllUserRequest.UserInfo)
-  return _internal_userinfo();
+inline const ::proto::RequestMetaInfoV1& GetAllUserRequest::requestmetainfo() const {
+  // @@protoc_insertion_point(field_get:proto.GetAllUserRequest.RequestMetaInfo)
+  return _internal_requestmetainfo();
 }
-inline void GetAllUserRequest::unsafe_arena_set_allocated_userinfo(
-    ::proto::UserMetaInfoV1* userinfo) {
+inline void GetAllUserRequest::unsafe_arena_set_allocated_requestmetainfo(
+    ::proto::RequestMetaInfoV1* requestmetainfo) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userinfo_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.requestmetainfo_);
   }
-  _impl_.userinfo_ = userinfo;
-  if (userinfo) {
+  _impl_.requestmetainfo_ = requestmetainfo;
+  if (requestmetainfo) {
     
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.GetAllUserRequest.UserInfo)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.GetAllUserRequest.RequestMetaInfo)
 }
-inline ::proto::UserMetaInfoV1* GetAllUserRequest::release_userinfo() {
+inline ::proto::RequestMetaInfoV1* GetAllUserRequest::release_requestmetainfo() {
   
-  ::proto::UserMetaInfoV1* temp = _impl_.userinfo_;
-  _impl_.userinfo_ = nullptr;
+  ::proto::RequestMetaInfoV1* temp = _impl_.requestmetainfo_;
+  _impl_.requestmetainfo_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -7698,52 +8914,222 @@ inline ::proto::UserMetaInfoV1* GetAllUserRequest::release_userinfo() {
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::proto::UserMetaInfoV1* GetAllUserRequest::unsafe_arena_release_userinfo() {
-  // @@protoc_insertion_point(field_release:proto.GetAllUserRequest.UserInfo)
+inline ::proto::RequestMetaInfoV1* GetAllUserRequest::unsafe_arena_release_requestmetainfo() {
+  // @@protoc_insertion_point(field_release:proto.GetAllUserRequest.RequestMetaInfo)
   
-  ::proto::UserMetaInfoV1* temp = _impl_.userinfo_;
-  _impl_.userinfo_ = nullptr;
+  ::proto::RequestMetaInfoV1* temp = _impl_.requestmetainfo_;
+  _impl_.requestmetainfo_ = nullptr;
   return temp;
 }
-inline ::proto::UserMetaInfoV1* GetAllUserRequest::_internal_mutable_userinfo() {
+inline ::proto::RequestMetaInfoV1* GetAllUserRequest::_internal_mutable_requestmetainfo() {
   
-  if (_impl_.userinfo_ == nullptr) {
-    auto* p = CreateMaybeMessage<::proto::UserMetaInfoV1>(GetArenaForAllocation());
-    _impl_.userinfo_ = p;
+  if (_impl_.requestmetainfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::RequestMetaInfoV1>(GetArenaForAllocation());
+    _impl_.requestmetainfo_ = p;
   }
-  return _impl_.userinfo_;
+  return _impl_.requestmetainfo_;
 }
-inline ::proto::UserMetaInfoV1* GetAllUserRequest::mutable_userinfo() {
-  ::proto::UserMetaInfoV1* _msg = _internal_mutable_userinfo();
-  // @@protoc_insertion_point(field_mutable:proto.GetAllUserRequest.UserInfo)
+inline ::proto::RequestMetaInfoV1* GetAllUserRequest::mutable_requestmetainfo() {
+  ::proto::RequestMetaInfoV1* _msg = _internal_mutable_requestmetainfo();
+  // @@protoc_insertion_point(field_mutable:proto.GetAllUserRequest.RequestMetaInfo)
   return _msg;
 }
-inline void GetAllUserRequest::set_allocated_userinfo(::proto::UserMetaInfoV1* userinfo) {
+inline void GetAllUserRequest::set_allocated_requestmetainfo(::proto::RequestMetaInfoV1* requestmetainfo) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userinfo_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.requestmetainfo_);
   }
-  if (userinfo) {
+  if (requestmetainfo) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(userinfo));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(requestmetainfo));
     if (message_arena != submessage_arena) {
-      userinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, userinfo, submessage_arena);
+      requestmetainfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, requestmetainfo, submessage_arena);
     }
     
   } else {
     
   }
-  _impl_.userinfo_ = userinfo;
-  // @@protoc_insertion_point(field_set_allocated:proto.GetAllUserRequest.UserInfo)
+  _impl_.requestmetainfo_ = requestmetainfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.GetAllUserRequest.RequestMetaInfo)
+}
+
+// .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
+inline bool GetAllUserRequest::_internal_has_userverifyinfo() const {
+  return this != internal_default_instance() && _impl_.userverifyinfo_ != nullptr;
+}
+inline bool GetAllUserRequest::has_userverifyinfo() const {
+  return _internal_has_userverifyinfo();
+}
+inline const ::proto::UserVerifyInfoV1& GetAllUserRequest::_internal_userverifyinfo() const {
+  const ::proto::UserVerifyInfoV1* p = _impl_.userverifyinfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::UserVerifyInfoV1&>(
+      ::proto::_UserVerifyInfoV1_default_instance_);
+}
+inline const ::proto::UserVerifyInfoV1& GetAllUserRequest::userverifyinfo() const {
+  // @@protoc_insertion_point(field_get:proto.GetAllUserRequest.UserVerifyInfo)
+  return _internal_userverifyinfo();
+}
+inline void GetAllUserRequest::unsafe_arena_set_allocated_userverifyinfo(
+    ::proto::UserVerifyInfoV1* userverifyinfo) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userverifyinfo_);
+  }
+  _impl_.userverifyinfo_ = userverifyinfo;
+  if (userverifyinfo) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.GetAllUserRequest.UserVerifyInfo)
+}
+inline ::proto::UserVerifyInfoV1* GetAllUserRequest::release_userverifyinfo() {
+  
+  ::proto::UserVerifyInfoV1* temp = _impl_.userverifyinfo_;
+  _impl_.userverifyinfo_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::proto::UserVerifyInfoV1* GetAllUserRequest::unsafe_arena_release_userverifyinfo() {
+  // @@protoc_insertion_point(field_release:proto.GetAllUserRequest.UserVerifyInfo)
+  
+  ::proto::UserVerifyInfoV1* temp = _impl_.userverifyinfo_;
+  _impl_.userverifyinfo_ = nullptr;
+  return temp;
+}
+inline ::proto::UserVerifyInfoV1* GetAllUserRequest::_internal_mutable_userverifyinfo() {
+  
+  if (_impl_.userverifyinfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::UserVerifyInfoV1>(GetArenaForAllocation());
+    _impl_.userverifyinfo_ = p;
+  }
+  return _impl_.userverifyinfo_;
+}
+inline ::proto::UserVerifyInfoV1* GetAllUserRequest::mutable_userverifyinfo() {
+  ::proto::UserVerifyInfoV1* _msg = _internal_mutable_userverifyinfo();
+  // @@protoc_insertion_point(field_mutable:proto.GetAllUserRequest.UserVerifyInfo)
+  return _msg;
+}
+inline void GetAllUserRequest::set_allocated_userverifyinfo(::proto::UserVerifyInfoV1* userverifyinfo) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userverifyinfo_);
+  }
+  if (userverifyinfo) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(userverifyinfo));
+    if (message_arena != submessage_arena) {
+      userverifyinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, userverifyinfo, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  _impl_.userverifyinfo_ = userverifyinfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.GetAllUserRequest.UserVerifyInfo)
 }
 
 // -------------------------------------------------------------------
 
 // UserLoginRequest
 
-// string UserName = 1;
+// .proto.RequestMetaInfoV1 RequestMetaInfo = 1;
+inline bool UserLoginRequest::_internal_has_requestmetainfo() const {
+  return this != internal_default_instance() && _impl_.requestmetainfo_ != nullptr;
+}
+inline bool UserLoginRequest::has_requestmetainfo() const {
+  return _internal_has_requestmetainfo();
+}
+inline const ::proto::RequestMetaInfoV1& UserLoginRequest::_internal_requestmetainfo() const {
+  const ::proto::RequestMetaInfoV1* p = _impl_.requestmetainfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::RequestMetaInfoV1&>(
+      ::proto::_RequestMetaInfoV1_default_instance_);
+}
+inline const ::proto::RequestMetaInfoV1& UserLoginRequest::requestmetainfo() const {
+  // @@protoc_insertion_point(field_get:proto.UserLoginRequest.RequestMetaInfo)
+  return _internal_requestmetainfo();
+}
+inline void UserLoginRequest::unsafe_arena_set_allocated_requestmetainfo(
+    ::proto::RequestMetaInfoV1* requestmetainfo) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.requestmetainfo_);
+  }
+  _impl_.requestmetainfo_ = requestmetainfo;
+  if (requestmetainfo) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.UserLoginRequest.RequestMetaInfo)
+}
+inline ::proto::RequestMetaInfoV1* UserLoginRequest::release_requestmetainfo() {
+  
+  ::proto::RequestMetaInfoV1* temp = _impl_.requestmetainfo_;
+  _impl_.requestmetainfo_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::proto::RequestMetaInfoV1* UserLoginRequest::unsafe_arena_release_requestmetainfo() {
+  // @@protoc_insertion_point(field_release:proto.UserLoginRequest.RequestMetaInfo)
+  
+  ::proto::RequestMetaInfoV1* temp = _impl_.requestmetainfo_;
+  _impl_.requestmetainfo_ = nullptr;
+  return temp;
+}
+inline ::proto::RequestMetaInfoV1* UserLoginRequest::_internal_mutable_requestmetainfo() {
+  
+  if (_impl_.requestmetainfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::RequestMetaInfoV1>(GetArenaForAllocation());
+    _impl_.requestmetainfo_ = p;
+  }
+  return _impl_.requestmetainfo_;
+}
+inline ::proto::RequestMetaInfoV1* UserLoginRequest::mutable_requestmetainfo() {
+  ::proto::RequestMetaInfoV1* _msg = _internal_mutable_requestmetainfo();
+  // @@protoc_insertion_point(field_mutable:proto.UserLoginRequest.RequestMetaInfo)
+  return _msg;
+}
+inline void UserLoginRequest::set_allocated_requestmetainfo(::proto::RequestMetaInfoV1* requestmetainfo) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.requestmetainfo_);
+  }
+  if (requestmetainfo) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(requestmetainfo));
+    if (message_arena != submessage_arena) {
+      requestmetainfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, requestmetainfo, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  _impl_.requestmetainfo_ = requestmetainfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.UserLoginRequest.RequestMetaInfo)
+}
+
+// string UserName = 2;
 inline void UserLoginRequest::clear_username() {
   _impl_.username_.ClearToEmpty();
 }
@@ -7793,7 +9179,7 @@ inline void UserLoginRequest::set_allocated_username(std::string* username) {
   // @@protoc_insertion_point(field_set_allocated:proto.UserLoginRequest.UserName)
 }
 
-// string Password = 2;
+// string Password = 3;
 inline void UserLoginRequest::clear_password() {
   _impl_.password_.ClearToEmpty();
 }
@@ -7847,7 +9233,92 @@ inline void UserLoginRequest::set_allocated_password(std::string* password) {
 
 // UserLogoutRequest
 
-// .proto.UserVerifyInfoV1 UserVerifyInfo = 1;
+// .proto.RequestMetaInfoV1 RequestMetaInfo = 1;
+inline bool UserLogoutRequest::_internal_has_requestmetainfo() const {
+  return this != internal_default_instance() && _impl_.requestmetainfo_ != nullptr;
+}
+inline bool UserLogoutRequest::has_requestmetainfo() const {
+  return _internal_has_requestmetainfo();
+}
+inline const ::proto::RequestMetaInfoV1& UserLogoutRequest::_internal_requestmetainfo() const {
+  const ::proto::RequestMetaInfoV1* p = _impl_.requestmetainfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::RequestMetaInfoV1&>(
+      ::proto::_RequestMetaInfoV1_default_instance_);
+}
+inline const ::proto::RequestMetaInfoV1& UserLogoutRequest::requestmetainfo() const {
+  // @@protoc_insertion_point(field_get:proto.UserLogoutRequest.RequestMetaInfo)
+  return _internal_requestmetainfo();
+}
+inline void UserLogoutRequest::unsafe_arena_set_allocated_requestmetainfo(
+    ::proto::RequestMetaInfoV1* requestmetainfo) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.requestmetainfo_);
+  }
+  _impl_.requestmetainfo_ = requestmetainfo;
+  if (requestmetainfo) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.UserLogoutRequest.RequestMetaInfo)
+}
+inline ::proto::RequestMetaInfoV1* UserLogoutRequest::release_requestmetainfo() {
+  
+  ::proto::RequestMetaInfoV1* temp = _impl_.requestmetainfo_;
+  _impl_.requestmetainfo_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::proto::RequestMetaInfoV1* UserLogoutRequest::unsafe_arena_release_requestmetainfo() {
+  // @@protoc_insertion_point(field_release:proto.UserLogoutRequest.RequestMetaInfo)
+  
+  ::proto::RequestMetaInfoV1* temp = _impl_.requestmetainfo_;
+  _impl_.requestmetainfo_ = nullptr;
+  return temp;
+}
+inline ::proto::RequestMetaInfoV1* UserLogoutRequest::_internal_mutable_requestmetainfo() {
+  
+  if (_impl_.requestmetainfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::RequestMetaInfoV1>(GetArenaForAllocation());
+    _impl_.requestmetainfo_ = p;
+  }
+  return _impl_.requestmetainfo_;
+}
+inline ::proto::RequestMetaInfoV1* UserLogoutRequest::mutable_requestmetainfo() {
+  ::proto::RequestMetaInfoV1* _msg = _internal_mutable_requestmetainfo();
+  // @@protoc_insertion_point(field_mutable:proto.UserLogoutRequest.RequestMetaInfo)
+  return _msg;
+}
+inline void UserLogoutRequest::set_allocated_requestmetainfo(::proto::RequestMetaInfoV1* requestmetainfo) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.requestmetainfo_);
+  }
+  if (requestmetainfo) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(requestmetainfo));
+    if (message_arena != submessage_arena) {
+      requestmetainfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, requestmetainfo, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  _impl_.requestmetainfo_ = requestmetainfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.UserLogoutRequest.RequestMetaInfo)
+}
+
+// .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
 inline bool UserLogoutRequest::_internal_has_userverifyinfo() const {
   return this != internal_default_instance() && _impl_.userverifyinfo_ != nullptr;
 }
@@ -7936,39 +9407,39 @@ inline void UserLogoutRequest::set_allocated_userverifyinfo(::proto::UserVerifyI
 
 // UserOnlineHeartBeatNotification
 
-// .proto.UserMetaInfoV1 UserInfo = 1;
-inline bool UserOnlineHeartBeatNotification::_internal_has_userinfo() const {
-  return this != internal_default_instance() && _impl_.userinfo_ != nullptr;
+// .proto.RequestMetaInfoV1 RequestMetaInfo = 1;
+inline bool UserOnlineHeartBeatNotification::_internal_has_requestmetainfo() const {
+  return this != internal_default_instance() && _impl_.requestmetainfo_ != nullptr;
 }
-inline bool UserOnlineHeartBeatNotification::has_userinfo() const {
-  return _internal_has_userinfo();
+inline bool UserOnlineHeartBeatNotification::has_requestmetainfo() const {
+  return _internal_has_requestmetainfo();
 }
-inline const ::proto::UserMetaInfoV1& UserOnlineHeartBeatNotification::_internal_userinfo() const {
-  const ::proto::UserMetaInfoV1* p = _impl_.userinfo_;
-  return p != nullptr ? *p : reinterpret_cast<const ::proto::UserMetaInfoV1&>(
-      ::proto::_UserMetaInfoV1_default_instance_);
+inline const ::proto::RequestMetaInfoV1& UserOnlineHeartBeatNotification::_internal_requestmetainfo() const {
+  const ::proto::RequestMetaInfoV1* p = _impl_.requestmetainfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::RequestMetaInfoV1&>(
+      ::proto::_RequestMetaInfoV1_default_instance_);
 }
-inline const ::proto::UserMetaInfoV1& UserOnlineHeartBeatNotification::userinfo() const {
-  // @@protoc_insertion_point(field_get:proto.UserOnlineHeartBeatNotification.UserInfo)
-  return _internal_userinfo();
+inline const ::proto::RequestMetaInfoV1& UserOnlineHeartBeatNotification::requestmetainfo() const {
+  // @@protoc_insertion_point(field_get:proto.UserOnlineHeartBeatNotification.RequestMetaInfo)
+  return _internal_requestmetainfo();
 }
-inline void UserOnlineHeartBeatNotification::unsafe_arena_set_allocated_userinfo(
-    ::proto::UserMetaInfoV1* userinfo) {
+inline void UserOnlineHeartBeatNotification::unsafe_arena_set_allocated_requestmetainfo(
+    ::proto::RequestMetaInfoV1* requestmetainfo) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userinfo_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.requestmetainfo_);
   }
-  _impl_.userinfo_ = userinfo;
-  if (userinfo) {
+  _impl_.requestmetainfo_ = requestmetainfo;
+  if (requestmetainfo) {
     
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.UserOnlineHeartBeatNotification.UserInfo)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.UserOnlineHeartBeatNotification.RequestMetaInfo)
 }
-inline ::proto::UserMetaInfoV1* UserOnlineHeartBeatNotification::release_userinfo() {
+inline ::proto::RequestMetaInfoV1* UserOnlineHeartBeatNotification::release_requestmetainfo() {
   
-  ::proto::UserMetaInfoV1* temp = _impl_.userinfo_;
-  _impl_.userinfo_ = nullptr;
+  ::proto::RequestMetaInfoV1* temp = _impl_.requestmetainfo_;
+  _impl_.requestmetainfo_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -7980,48 +9451,133 @@ inline ::proto::UserMetaInfoV1* UserOnlineHeartBeatNotification::release_userinf
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::proto::UserMetaInfoV1* UserOnlineHeartBeatNotification::unsafe_arena_release_userinfo() {
-  // @@protoc_insertion_point(field_release:proto.UserOnlineHeartBeatNotification.UserInfo)
+inline ::proto::RequestMetaInfoV1* UserOnlineHeartBeatNotification::unsafe_arena_release_requestmetainfo() {
+  // @@protoc_insertion_point(field_release:proto.UserOnlineHeartBeatNotification.RequestMetaInfo)
   
-  ::proto::UserMetaInfoV1* temp = _impl_.userinfo_;
-  _impl_.userinfo_ = nullptr;
+  ::proto::RequestMetaInfoV1* temp = _impl_.requestmetainfo_;
+  _impl_.requestmetainfo_ = nullptr;
   return temp;
 }
-inline ::proto::UserMetaInfoV1* UserOnlineHeartBeatNotification::_internal_mutable_userinfo() {
+inline ::proto::RequestMetaInfoV1* UserOnlineHeartBeatNotification::_internal_mutable_requestmetainfo() {
   
-  if (_impl_.userinfo_ == nullptr) {
-    auto* p = CreateMaybeMessage<::proto::UserMetaInfoV1>(GetArenaForAllocation());
-    _impl_.userinfo_ = p;
+  if (_impl_.requestmetainfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::RequestMetaInfoV1>(GetArenaForAllocation());
+    _impl_.requestmetainfo_ = p;
   }
-  return _impl_.userinfo_;
+  return _impl_.requestmetainfo_;
 }
-inline ::proto::UserMetaInfoV1* UserOnlineHeartBeatNotification::mutable_userinfo() {
-  ::proto::UserMetaInfoV1* _msg = _internal_mutable_userinfo();
-  // @@protoc_insertion_point(field_mutable:proto.UserOnlineHeartBeatNotification.UserInfo)
+inline ::proto::RequestMetaInfoV1* UserOnlineHeartBeatNotification::mutable_requestmetainfo() {
+  ::proto::RequestMetaInfoV1* _msg = _internal_mutable_requestmetainfo();
+  // @@protoc_insertion_point(field_mutable:proto.UserOnlineHeartBeatNotification.RequestMetaInfo)
   return _msg;
 }
-inline void UserOnlineHeartBeatNotification::set_allocated_userinfo(::proto::UserMetaInfoV1* userinfo) {
+inline void UserOnlineHeartBeatNotification::set_allocated_requestmetainfo(::proto::RequestMetaInfoV1* requestmetainfo) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userinfo_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.requestmetainfo_);
   }
-  if (userinfo) {
+  if (requestmetainfo) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(userinfo));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(requestmetainfo));
     if (message_arena != submessage_arena) {
-      userinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, userinfo, submessage_arena);
+      requestmetainfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, requestmetainfo, submessage_arena);
     }
     
   } else {
     
   }
-  _impl_.userinfo_ = userinfo;
-  // @@protoc_insertion_point(field_set_allocated:proto.UserOnlineHeartBeatNotification.UserInfo)
+  _impl_.requestmetainfo_ = requestmetainfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.UserOnlineHeartBeatNotification.RequestMetaInfo)
 }
 
-// int64 HeartBeatTime = 2;
+// .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
+inline bool UserOnlineHeartBeatNotification::_internal_has_userverifyinfo() const {
+  return this != internal_default_instance() && _impl_.userverifyinfo_ != nullptr;
+}
+inline bool UserOnlineHeartBeatNotification::has_userverifyinfo() const {
+  return _internal_has_userverifyinfo();
+}
+inline const ::proto::UserVerifyInfoV1& UserOnlineHeartBeatNotification::_internal_userverifyinfo() const {
+  const ::proto::UserVerifyInfoV1* p = _impl_.userverifyinfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::UserVerifyInfoV1&>(
+      ::proto::_UserVerifyInfoV1_default_instance_);
+}
+inline const ::proto::UserVerifyInfoV1& UserOnlineHeartBeatNotification::userverifyinfo() const {
+  // @@protoc_insertion_point(field_get:proto.UserOnlineHeartBeatNotification.UserVerifyInfo)
+  return _internal_userverifyinfo();
+}
+inline void UserOnlineHeartBeatNotification::unsafe_arena_set_allocated_userverifyinfo(
+    ::proto::UserVerifyInfoV1* userverifyinfo) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userverifyinfo_);
+  }
+  _impl_.userverifyinfo_ = userverifyinfo;
+  if (userverifyinfo) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.UserOnlineHeartBeatNotification.UserVerifyInfo)
+}
+inline ::proto::UserVerifyInfoV1* UserOnlineHeartBeatNotification::release_userverifyinfo() {
+  
+  ::proto::UserVerifyInfoV1* temp = _impl_.userverifyinfo_;
+  _impl_.userverifyinfo_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::proto::UserVerifyInfoV1* UserOnlineHeartBeatNotification::unsafe_arena_release_userverifyinfo() {
+  // @@protoc_insertion_point(field_release:proto.UserOnlineHeartBeatNotification.UserVerifyInfo)
+  
+  ::proto::UserVerifyInfoV1* temp = _impl_.userverifyinfo_;
+  _impl_.userverifyinfo_ = nullptr;
+  return temp;
+}
+inline ::proto::UserVerifyInfoV1* UserOnlineHeartBeatNotification::_internal_mutable_userverifyinfo() {
+  
+  if (_impl_.userverifyinfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::UserVerifyInfoV1>(GetArenaForAllocation());
+    _impl_.userverifyinfo_ = p;
+  }
+  return _impl_.userverifyinfo_;
+}
+inline ::proto::UserVerifyInfoV1* UserOnlineHeartBeatNotification::mutable_userverifyinfo() {
+  ::proto::UserVerifyInfoV1* _msg = _internal_mutable_userverifyinfo();
+  // @@protoc_insertion_point(field_mutable:proto.UserOnlineHeartBeatNotification.UserVerifyInfo)
+  return _msg;
+}
+inline void UserOnlineHeartBeatNotification::set_allocated_userverifyinfo(::proto::UserVerifyInfoV1* userverifyinfo) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userverifyinfo_);
+  }
+  if (userverifyinfo) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(userverifyinfo));
+    if (message_arena != submessage_arena) {
+      userverifyinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, userverifyinfo, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  _impl_.userverifyinfo_ = userverifyinfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.UserOnlineHeartBeatNotification.UserVerifyInfo)
+}
+
+// int64 HeartBeatTime = 3;
 inline void UserOnlineHeartBeatNotification::clear_heartbeattime() {
   _impl_.heartbeattime_ = int64_t{0};
 }
@@ -8045,39 +9601,39 @@ inline void UserOnlineHeartBeatNotification::set_heartbeattime(int64_t value) {
 
 // GetUserPermissionGroupRequest
 
-// .proto.UserMetaInfoV1 UserInfo = 1;
-inline bool GetUserPermissionGroupRequest::_internal_has_userinfo() const {
-  return this != internal_default_instance() && _impl_.userinfo_ != nullptr;
+// .proto.RequestMetaInfoV1 RequestMetaInfo = 1;
+inline bool GetUserPermissionGroupRequest::_internal_has_requestmetainfo() const {
+  return this != internal_default_instance() && _impl_.requestmetainfo_ != nullptr;
 }
-inline bool GetUserPermissionGroupRequest::has_userinfo() const {
-  return _internal_has_userinfo();
+inline bool GetUserPermissionGroupRequest::has_requestmetainfo() const {
+  return _internal_has_requestmetainfo();
 }
-inline const ::proto::UserMetaInfoV1& GetUserPermissionGroupRequest::_internal_userinfo() const {
-  const ::proto::UserMetaInfoV1* p = _impl_.userinfo_;
-  return p != nullptr ? *p : reinterpret_cast<const ::proto::UserMetaInfoV1&>(
-      ::proto::_UserMetaInfoV1_default_instance_);
+inline const ::proto::RequestMetaInfoV1& GetUserPermissionGroupRequest::_internal_requestmetainfo() const {
+  const ::proto::RequestMetaInfoV1* p = _impl_.requestmetainfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::RequestMetaInfoV1&>(
+      ::proto::_RequestMetaInfoV1_default_instance_);
 }
-inline const ::proto::UserMetaInfoV1& GetUserPermissionGroupRequest::userinfo() const {
-  // @@protoc_insertion_point(field_get:proto.GetUserPermissionGroupRequest.UserInfo)
-  return _internal_userinfo();
+inline const ::proto::RequestMetaInfoV1& GetUserPermissionGroupRequest::requestmetainfo() const {
+  // @@protoc_insertion_point(field_get:proto.GetUserPermissionGroupRequest.RequestMetaInfo)
+  return _internal_requestmetainfo();
 }
-inline void GetUserPermissionGroupRequest::unsafe_arena_set_allocated_userinfo(
-    ::proto::UserMetaInfoV1* userinfo) {
+inline void GetUserPermissionGroupRequest::unsafe_arena_set_allocated_requestmetainfo(
+    ::proto::RequestMetaInfoV1* requestmetainfo) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userinfo_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.requestmetainfo_);
   }
-  _impl_.userinfo_ = userinfo;
-  if (userinfo) {
+  _impl_.requestmetainfo_ = requestmetainfo;
+  if (requestmetainfo) {
     
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.GetUserPermissionGroupRequest.UserInfo)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.GetUserPermissionGroupRequest.RequestMetaInfo)
 }
-inline ::proto::UserMetaInfoV1* GetUserPermissionGroupRequest::release_userinfo() {
+inline ::proto::RequestMetaInfoV1* GetUserPermissionGroupRequest::release_requestmetainfo() {
   
-  ::proto::UserMetaInfoV1* temp = _impl_.userinfo_;
-  _impl_.userinfo_ = nullptr;
+  ::proto::RequestMetaInfoV1* temp = _impl_.requestmetainfo_;
+  _impl_.requestmetainfo_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -8089,84 +9645,169 @@ inline ::proto::UserMetaInfoV1* GetUserPermissionGroupRequest::release_userinfo(
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::proto::UserMetaInfoV1* GetUserPermissionGroupRequest::unsafe_arena_release_userinfo() {
-  // @@protoc_insertion_point(field_release:proto.GetUserPermissionGroupRequest.UserInfo)
+inline ::proto::RequestMetaInfoV1* GetUserPermissionGroupRequest::unsafe_arena_release_requestmetainfo() {
+  // @@protoc_insertion_point(field_release:proto.GetUserPermissionGroupRequest.RequestMetaInfo)
   
-  ::proto::UserMetaInfoV1* temp = _impl_.userinfo_;
-  _impl_.userinfo_ = nullptr;
+  ::proto::RequestMetaInfoV1* temp = _impl_.requestmetainfo_;
+  _impl_.requestmetainfo_ = nullptr;
   return temp;
 }
-inline ::proto::UserMetaInfoV1* GetUserPermissionGroupRequest::_internal_mutable_userinfo() {
+inline ::proto::RequestMetaInfoV1* GetUserPermissionGroupRequest::_internal_mutable_requestmetainfo() {
   
-  if (_impl_.userinfo_ == nullptr) {
-    auto* p = CreateMaybeMessage<::proto::UserMetaInfoV1>(GetArenaForAllocation());
-    _impl_.userinfo_ = p;
+  if (_impl_.requestmetainfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::RequestMetaInfoV1>(GetArenaForAllocation());
+    _impl_.requestmetainfo_ = p;
   }
-  return _impl_.userinfo_;
+  return _impl_.requestmetainfo_;
 }
-inline ::proto::UserMetaInfoV1* GetUserPermissionGroupRequest::mutable_userinfo() {
-  ::proto::UserMetaInfoV1* _msg = _internal_mutable_userinfo();
-  // @@protoc_insertion_point(field_mutable:proto.GetUserPermissionGroupRequest.UserInfo)
+inline ::proto::RequestMetaInfoV1* GetUserPermissionGroupRequest::mutable_requestmetainfo() {
+  ::proto::RequestMetaInfoV1* _msg = _internal_mutable_requestmetainfo();
+  // @@protoc_insertion_point(field_mutable:proto.GetUserPermissionGroupRequest.RequestMetaInfo)
   return _msg;
 }
-inline void GetUserPermissionGroupRequest::set_allocated_userinfo(::proto::UserMetaInfoV1* userinfo) {
+inline void GetUserPermissionGroupRequest::set_allocated_requestmetainfo(::proto::RequestMetaInfoV1* requestmetainfo) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userinfo_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.requestmetainfo_);
   }
-  if (userinfo) {
+  if (requestmetainfo) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(userinfo));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(requestmetainfo));
     if (message_arena != submessage_arena) {
-      userinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, userinfo, submessage_arena);
+      requestmetainfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, requestmetainfo, submessage_arena);
     }
     
   } else {
     
   }
-  _impl_.userinfo_ = userinfo;
-  // @@protoc_insertion_point(field_set_allocated:proto.GetUserPermissionGroupRequest.UserInfo)
+  _impl_.requestmetainfo_ = requestmetainfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.GetUserPermissionGroupRequest.RequestMetaInfo)
+}
+
+// .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
+inline bool GetUserPermissionGroupRequest::_internal_has_userverifyinfo() const {
+  return this != internal_default_instance() && _impl_.userverifyinfo_ != nullptr;
+}
+inline bool GetUserPermissionGroupRequest::has_userverifyinfo() const {
+  return _internal_has_userverifyinfo();
+}
+inline const ::proto::UserVerifyInfoV1& GetUserPermissionGroupRequest::_internal_userverifyinfo() const {
+  const ::proto::UserVerifyInfoV1* p = _impl_.userverifyinfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::UserVerifyInfoV1&>(
+      ::proto::_UserVerifyInfoV1_default_instance_);
+}
+inline const ::proto::UserVerifyInfoV1& GetUserPermissionGroupRequest::userverifyinfo() const {
+  // @@protoc_insertion_point(field_get:proto.GetUserPermissionGroupRequest.UserVerifyInfo)
+  return _internal_userverifyinfo();
+}
+inline void GetUserPermissionGroupRequest::unsafe_arena_set_allocated_userverifyinfo(
+    ::proto::UserVerifyInfoV1* userverifyinfo) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userverifyinfo_);
+  }
+  _impl_.userverifyinfo_ = userverifyinfo;
+  if (userverifyinfo) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.GetUserPermissionGroupRequest.UserVerifyInfo)
+}
+inline ::proto::UserVerifyInfoV1* GetUserPermissionGroupRequest::release_userverifyinfo() {
+  
+  ::proto::UserVerifyInfoV1* temp = _impl_.userverifyinfo_;
+  _impl_.userverifyinfo_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::proto::UserVerifyInfoV1* GetUserPermissionGroupRequest::unsafe_arena_release_userverifyinfo() {
+  // @@protoc_insertion_point(field_release:proto.GetUserPermissionGroupRequest.UserVerifyInfo)
+  
+  ::proto::UserVerifyInfoV1* temp = _impl_.userverifyinfo_;
+  _impl_.userverifyinfo_ = nullptr;
+  return temp;
+}
+inline ::proto::UserVerifyInfoV1* GetUserPermissionGroupRequest::_internal_mutable_userverifyinfo() {
+  
+  if (_impl_.userverifyinfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::UserVerifyInfoV1>(GetArenaForAllocation());
+    _impl_.userverifyinfo_ = p;
+  }
+  return _impl_.userverifyinfo_;
+}
+inline ::proto::UserVerifyInfoV1* GetUserPermissionGroupRequest::mutable_userverifyinfo() {
+  ::proto::UserVerifyInfoV1* _msg = _internal_mutable_userverifyinfo();
+  // @@protoc_insertion_point(field_mutable:proto.GetUserPermissionGroupRequest.UserVerifyInfo)
+  return _msg;
+}
+inline void GetUserPermissionGroupRequest::set_allocated_userverifyinfo(::proto::UserVerifyInfoV1* userverifyinfo) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userverifyinfo_);
+  }
+  if (userverifyinfo) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(userverifyinfo));
+    if (message_arena != submessage_arena) {
+      userverifyinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, userverifyinfo, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  _impl_.userverifyinfo_ = userverifyinfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.GetUserPermissionGroupRequest.UserVerifyInfo)
 }
 
 // -------------------------------------------------------------------
 
 // GetPermissionGroupRequest
 
-// .proto.UserMetaInfoV1 UserInfo = 1;
-inline bool GetPermissionGroupRequest::_internal_has_userinfo() const {
-  return this != internal_default_instance() && _impl_.userinfo_ != nullptr;
+// .proto.RequestMetaInfoV1 RequestMetaInfo = 1;
+inline bool GetPermissionGroupRequest::_internal_has_requestmetainfo() const {
+  return this != internal_default_instance() && _impl_.requestmetainfo_ != nullptr;
 }
-inline bool GetPermissionGroupRequest::has_userinfo() const {
-  return _internal_has_userinfo();
+inline bool GetPermissionGroupRequest::has_requestmetainfo() const {
+  return _internal_has_requestmetainfo();
 }
-inline const ::proto::UserMetaInfoV1& GetPermissionGroupRequest::_internal_userinfo() const {
-  const ::proto::UserMetaInfoV1* p = _impl_.userinfo_;
-  return p != nullptr ? *p : reinterpret_cast<const ::proto::UserMetaInfoV1&>(
-      ::proto::_UserMetaInfoV1_default_instance_);
+inline const ::proto::RequestMetaInfoV1& GetPermissionGroupRequest::_internal_requestmetainfo() const {
+  const ::proto::RequestMetaInfoV1* p = _impl_.requestmetainfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::RequestMetaInfoV1&>(
+      ::proto::_RequestMetaInfoV1_default_instance_);
 }
-inline const ::proto::UserMetaInfoV1& GetPermissionGroupRequest::userinfo() const {
-  // @@protoc_insertion_point(field_get:proto.GetPermissionGroupRequest.UserInfo)
-  return _internal_userinfo();
+inline const ::proto::RequestMetaInfoV1& GetPermissionGroupRequest::requestmetainfo() const {
+  // @@protoc_insertion_point(field_get:proto.GetPermissionGroupRequest.RequestMetaInfo)
+  return _internal_requestmetainfo();
 }
-inline void GetPermissionGroupRequest::unsafe_arena_set_allocated_userinfo(
-    ::proto::UserMetaInfoV1* userinfo) {
+inline void GetPermissionGroupRequest::unsafe_arena_set_allocated_requestmetainfo(
+    ::proto::RequestMetaInfoV1* requestmetainfo) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userinfo_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.requestmetainfo_);
   }
-  _impl_.userinfo_ = userinfo;
-  if (userinfo) {
+  _impl_.requestmetainfo_ = requestmetainfo;
+  if (requestmetainfo) {
     
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.GetPermissionGroupRequest.UserInfo)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.GetPermissionGroupRequest.RequestMetaInfo)
 }
-inline ::proto::UserMetaInfoV1* GetPermissionGroupRequest::release_userinfo() {
+inline ::proto::RequestMetaInfoV1* GetPermissionGroupRequest::release_requestmetainfo() {
   
-  ::proto::UserMetaInfoV1* temp = _impl_.userinfo_;
-  _impl_.userinfo_ = nullptr;
+  ::proto::RequestMetaInfoV1* temp = _impl_.requestmetainfo_;
+  _impl_.requestmetainfo_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -8178,48 +9819,133 @@ inline ::proto::UserMetaInfoV1* GetPermissionGroupRequest::release_userinfo() {
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::proto::UserMetaInfoV1* GetPermissionGroupRequest::unsafe_arena_release_userinfo() {
-  // @@protoc_insertion_point(field_release:proto.GetPermissionGroupRequest.UserInfo)
+inline ::proto::RequestMetaInfoV1* GetPermissionGroupRequest::unsafe_arena_release_requestmetainfo() {
+  // @@protoc_insertion_point(field_release:proto.GetPermissionGroupRequest.RequestMetaInfo)
   
-  ::proto::UserMetaInfoV1* temp = _impl_.userinfo_;
-  _impl_.userinfo_ = nullptr;
+  ::proto::RequestMetaInfoV1* temp = _impl_.requestmetainfo_;
+  _impl_.requestmetainfo_ = nullptr;
   return temp;
 }
-inline ::proto::UserMetaInfoV1* GetPermissionGroupRequest::_internal_mutable_userinfo() {
+inline ::proto::RequestMetaInfoV1* GetPermissionGroupRequest::_internal_mutable_requestmetainfo() {
   
-  if (_impl_.userinfo_ == nullptr) {
-    auto* p = CreateMaybeMessage<::proto::UserMetaInfoV1>(GetArenaForAllocation());
-    _impl_.userinfo_ = p;
+  if (_impl_.requestmetainfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::RequestMetaInfoV1>(GetArenaForAllocation());
+    _impl_.requestmetainfo_ = p;
   }
-  return _impl_.userinfo_;
+  return _impl_.requestmetainfo_;
 }
-inline ::proto::UserMetaInfoV1* GetPermissionGroupRequest::mutable_userinfo() {
-  ::proto::UserMetaInfoV1* _msg = _internal_mutable_userinfo();
-  // @@protoc_insertion_point(field_mutable:proto.GetPermissionGroupRequest.UserInfo)
+inline ::proto::RequestMetaInfoV1* GetPermissionGroupRequest::mutable_requestmetainfo() {
+  ::proto::RequestMetaInfoV1* _msg = _internal_mutable_requestmetainfo();
+  // @@protoc_insertion_point(field_mutable:proto.GetPermissionGroupRequest.RequestMetaInfo)
   return _msg;
 }
-inline void GetPermissionGroupRequest::set_allocated_userinfo(::proto::UserMetaInfoV1* userinfo) {
+inline void GetPermissionGroupRequest::set_allocated_requestmetainfo(::proto::RequestMetaInfoV1* requestmetainfo) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userinfo_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.requestmetainfo_);
   }
-  if (userinfo) {
+  if (requestmetainfo) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(userinfo));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(requestmetainfo));
     if (message_arena != submessage_arena) {
-      userinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, userinfo, submessage_arena);
+      requestmetainfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, requestmetainfo, submessage_arena);
     }
     
   } else {
     
   }
-  _impl_.userinfo_ = userinfo;
-  // @@protoc_insertion_point(field_set_allocated:proto.GetPermissionGroupRequest.UserInfo)
+  _impl_.requestmetainfo_ = requestmetainfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.GetPermissionGroupRequest.RequestMetaInfo)
 }
 
-// .proto.PermissionGroupMetaInfoV1 PermissionGroup = 2;
+// .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
+inline bool GetPermissionGroupRequest::_internal_has_userverifyinfo() const {
+  return this != internal_default_instance() && _impl_.userverifyinfo_ != nullptr;
+}
+inline bool GetPermissionGroupRequest::has_userverifyinfo() const {
+  return _internal_has_userverifyinfo();
+}
+inline const ::proto::UserVerifyInfoV1& GetPermissionGroupRequest::_internal_userverifyinfo() const {
+  const ::proto::UserVerifyInfoV1* p = _impl_.userverifyinfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::UserVerifyInfoV1&>(
+      ::proto::_UserVerifyInfoV1_default_instance_);
+}
+inline const ::proto::UserVerifyInfoV1& GetPermissionGroupRequest::userverifyinfo() const {
+  // @@protoc_insertion_point(field_get:proto.GetPermissionGroupRequest.UserVerifyInfo)
+  return _internal_userverifyinfo();
+}
+inline void GetPermissionGroupRequest::unsafe_arena_set_allocated_userverifyinfo(
+    ::proto::UserVerifyInfoV1* userverifyinfo) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userverifyinfo_);
+  }
+  _impl_.userverifyinfo_ = userverifyinfo;
+  if (userverifyinfo) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.GetPermissionGroupRequest.UserVerifyInfo)
+}
+inline ::proto::UserVerifyInfoV1* GetPermissionGroupRequest::release_userverifyinfo() {
+  
+  ::proto::UserVerifyInfoV1* temp = _impl_.userverifyinfo_;
+  _impl_.userverifyinfo_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::proto::UserVerifyInfoV1* GetPermissionGroupRequest::unsafe_arena_release_userverifyinfo() {
+  // @@protoc_insertion_point(field_release:proto.GetPermissionGroupRequest.UserVerifyInfo)
+  
+  ::proto::UserVerifyInfoV1* temp = _impl_.userverifyinfo_;
+  _impl_.userverifyinfo_ = nullptr;
+  return temp;
+}
+inline ::proto::UserVerifyInfoV1* GetPermissionGroupRequest::_internal_mutable_userverifyinfo() {
+  
+  if (_impl_.userverifyinfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::UserVerifyInfoV1>(GetArenaForAllocation());
+    _impl_.userverifyinfo_ = p;
+  }
+  return _impl_.userverifyinfo_;
+}
+inline ::proto::UserVerifyInfoV1* GetPermissionGroupRequest::mutable_userverifyinfo() {
+  ::proto::UserVerifyInfoV1* _msg = _internal_mutable_userverifyinfo();
+  // @@protoc_insertion_point(field_mutable:proto.GetPermissionGroupRequest.UserVerifyInfo)
+  return _msg;
+}
+inline void GetPermissionGroupRequest::set_allocated_userverifyinfo(::proto::UserVerifyInfoV1* userverifyinfo) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userverifyinfo_);
+  }
+  if (userverifyinfo) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(userverifyinfo));
+    if (message_arena != submessage_arena) {
+      userverifyinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, userverifyinfo, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  _impl_.userverifyinfo_ = userverifyinfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.GetPermissionGroupRequest.UserVerifyInfo)
+}
+
+// .proto.PermissionGroupMetaInfoV1 PermissionGroup = 3;
 inline bool GetPermissionGroupRequest::_internal_has_permissiongroup() const {
   return this != internal_default_instance() && _impl_.permissiongroup_ != nullptr;
 }
@@ -8308,39 +10034,39 @@ inline void GetPermissionGroupRequest::set_allocated_permissiongroup(::proto::Pe
 
 // GetAllPermissionGroupRequest
 
-// .proto.UserMetaInfoV1 UserInfo = 1;
-inline bool GetAllPermissionGroupRequest::_internal_has_userinfo() const {
-  return this != internal_default_instance() && _impl_.userinfo_ != nullptr;
+// .proto.RequestMetaInfoV1 RequestMetaInfo = 1;
+inline bool GetAllPermissionGroupRequest::_internal_has_requestmetainfo() const {
+  return this != internal_default_instance() && _impl_.requestmetainfo_ != nullptr;
 }
-inline bool GetAllPermissionGroupRequest::has_userinfo() const {
-  return _internal_has_userinfo();
+inline bool GetAllPermissionGroupRequest::has_requestmetainfo() const {
+  return _internal_has_requestmetainfo();
 }
-inline const ::proto::UserMetaInfoV1& GetAllPermissionGroupRequest::_internal_userinfo() const {
-  const ::proto::UserMetaInfoV1* p = _impl_.userinfo_;
-  return p != nullptr ? *p : reinterpret_cast<const ::proto::UserMetaInfoV1&>(
-      ::proto::_UserMetaInfoV1_default_instance_);
+inline const ::proto::RequestMetaInfoV1& GetAllPermissionGroupRequest::_internal_requestmetainfo() const {
+  const ::proto::RequestMetaInfoV1* p = _impl_.requestmetainfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::RequestMetaInfoV1&>(
+      ::proto::_RequestMetaInfoV1_default_instance_);
 }
-inline const ::proto::UserMetaInfoV1& GetAllPermissionGroupRequest::userinfo() const {
-  // @@protoc_insertion_point(field_get:proto.GetAllPermissionGroupRequest.UserInfo)
-  return _internal_userinfo();
+inline const ::proto::RequestMetaInfoV1& GetAllPermissionGroupRequest::requestmetainfo() const {
+  // @@protoc_insertion_point(field_get:proto.GetAllPermissionGroupRequest.RequestMetaInfo)
+  return _internal_requestmetainfo();
 }
-inline void GetAllPermissionGroupRequest::unsafe_arena_set_allocated_userinfo(
-    ::proto::UserMetaInfoV1* userinfo) {
+inline void GetAllPermissionGroupRequest::unsafe_arena_set_allocated_requestmetainfo(
+    ::proto::RequestMetaInfoV1* requestmetainfo) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userinfo_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.requestmetainfo_);
   }
-  _impl_.userinfo_ = userinfo;
-  if (userinfo) {
+  _impl_.requestmetainfo_ = requestmetainfo;
+  if (requestmetainfo) {
     
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.GetAllPermissionGroupRequest.UserInfo)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.GetAllPermissionGroupRequest.RequestMetaInfo)
 }
-inline ::proto::UserMetaInfoV1* GetAllPermissionGroupRequest::release_userinfo() {
+inline ::proto::RequestMetaInfoV1* GetAllPermissionGroupRequest::release_requestmetainfo() {
   
-  ::proto::UserMetaInfoV1* temp = _impl_.userinfo_;
-  _impl_.userinfo_ = nullptr;
+  ::proto::RequestMetaInfoV1* temp = _impl_.requestmetainfo_;
+  _impl_.requestmetainfo_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -8352,84 +10078,169 @@ inline ::proto::UserMetaInfoV1* GetAllPermissionGroupRequest::release_userinfo()
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::proto::UserMetaInfoV1* GetAllPermissionGroupRequest::unsafe_arena_release_userinfo() {
-  // @@protoc_insertion_point(field_release:proto.GetAllPermissionGroupRequest.UserInfo)
+inline ::proto::RequestMetaInfoV1* GetAllPermissionGroupRequest::unsafe_arena_release_requestmetainfo() {
+  // @@protoc_insertion_point(field_release:proto.GetAllPermissionGroupRequest.RequestMetaInfo)
   
-  ::proto::UserMetaInfoV1* temp = _impl_.userinfo_;
-  _impl_.userinfo_ = nullptr;
+  ::proto::RequestMetaInfoV1* temp = _impl_.requestmetainfo_;
+  _impl_.requestmetainfo_ = nullptr;
   return temp;
 }
-inline ::proto::UserMetaInfoV1* GetAllPermissionGroupRequest::_internal_mutable_userinfo() {
+inline ::proto::RequestMetaInfoV1* GetAllPermissionGroupRequest::_internal_mutable_requestmetainfo() {
   
-  if (_impl_.userinfo_ == nullptr) {
-    auto* p = CreateMaybeMessage<::proto::UserMetaInfoV1>(GetArenaForAllocation());
-    _impl_.userinfo_ = p;
+  if (_impl_.requestmetainfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::RequestMetaInfoV1>(GetArenaForAllocation());
+    _impl_.requestmetainfo_ = p;
   }
-  return _impl_.userinfo_;
+  return _impl_.requestmetainfo_;
 }
-inline ::proto::UserMetaInfoV1* GetAllPermissionGroupRequest::mutable_userinfo() {
-  ::proto::UserMetaInfoV1* _msg = _internal_mutable_userinfo();
-  // @@protoc_insertion_point(field_mutable:proto.GetAllPermissionGroupRequest.UserInfo)
+inline ::proto::RequestMetaInfoV1* GetAllPermissionGroupRequest::mutable_requestmetainfo() {
+  ::proto::RequestMetaInfoV1* _msg = _internal_mutable_requestmetainfo();
+  // @@protoc_insertion_point(field_mutable:proto.GetAllPermissionGroupRequest.RequestMetaInfo)
   return _msg;
 }
-inline void GetAllPermissionGroupRequest::set_allocated_userinfo(::proto::UserMetaInfoV1* userinfo) {
+inline void GetAllPermissionGroupRequest::set_allocated_requestmetainfo(::proto::RequestMetaInfoV1* requestmetainfo) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userinfo_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.requestmetainfo_);
   }
-  if (userinfo) {
+  if (requestmetainfo) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(userinfo));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(requestmetainfo));
     if (message_arena != submessage_arena) {
-      userinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, userinfo, submessage_arena);
+      requestmetainfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, requestmetainfo, submessage_arena);
     }
     
   } else {
     
   }
-  _impl_.userinfo_ = userinfo;
-  // @@protoc_insertion_point(field_set_allocated:proto.GetAllPermissionGroupRequest.UserInfo)
+  _impl_.requestmetainfo_ = requestmetainfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.GetAllPermissionGroupRequest.RequestMetaInfo)
+}
+
+// .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
+inline bool GetAllPermissionGroupRequest::_internal_has_userverifyinfo() const {
+  return this != internal_default_instance() && _impl_.userverifyinfo_ != nullptr;
+}
+inline bool GetAllPermissionGroupRequest::has_userverifyinfo() const {
+  return _internal_has_userverifyinfo();
+}
+inline const ::proto::UserVerifyInfoV1& GetAllPermissionGroupRequest::_internal_userverifyinfo() const {
+  const ::proto::UserVerifyInfoV1* p = _impl_.userverifyinfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::UserVerifyInfoV1&>(
+      ::proto::_UserVerifyInfoV1_default_instance_);
+}
+inline const ::proto::UserVerifyInfoV1& GetAllPermissionGroupRequest::userverifyinfo() const {
+  // @@protoc_insertion_point(field_get:proto.GetAllPermissionGroupRequest.UserVerifyInfo)
+  return _internal_userverifyinfo();
+}
+inline void GetAllPermissionGroupRequest::unsafe_arena_set_allocated_userverifyinfo(
+    ::proto::UserVerifyInfoV1* userverifyinfo) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userverifyinfo_);
+  }
+  _impl_.userverifyinfo_ = userverifyinfo;
+  if (userverifyinfo) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.GetAllPermissionGroupRequest.UserVerifyInfo)
+}
+inline ::proto::UserVerifyInfoV1* GetAllPermissionGroupRequest::release_userverifyinfo() {
+  
+  ::proto::UserVerifyInfoV1* temp = _impl_.userverifyinfo_;
+  _impl_.userverifyinfo_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::proto::UserVerifyInfoV1* GetAllPermissionGroupRequest::unsafe_arena_release_userverifyinfo() {
+  // @@protoc_insertion_point(field_release:proto.GetAllPermissionGroupRequest.UserVerifyInfo)
+  
+  ::proto::UserVerifyInfoV1* temp = _impl_.userverifyinfo_;
+  _impl_.userverifyinfo_ = nullptr;
+  return temp;
+}
+inline ::proto::UserVerifyInfoV1* GetAllPermissionGroupRequest::_internal_mutable_userverifyinfo() {
+  
+  if (_impl_.userverifyinfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::UserVerifyInfoV1>(GetArenaForAllocation());
+    _impl_.userverifyinfo_ = p;
+  }
+  return _impl_.userverifyinfo_;
+}
+inline ::proto::UserVerifyInfoV1* GetAllPermissionGroupRequest::mutable_userverifyinfo() {
+  ::proto::UserVerifyInfoV1* _msg = _internal_mutable_userverifyinfo();
+  // @@protoc_insertion_point(field_mutable:proto.GetAllPermissionGroupRequest.UserVerifyInfo)
+  return _msg;
+}
+inline void GetAllPermissionGroupRequest::set_allocated_userverifyinfo(::proto::UserVerifyInfoV1* userverifyinfo) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userverifyinfo_);
+  }
+  if (userverifyinfo) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(userverifyinfo));
+    if (message_arena != submessage_arena) {
+      userverifyinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, userverifyinfo, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  _impl_.userverifyinfo_ = userverifyinfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.GetAllPermissionGroupRequest.UserVerifyInfo)
 }
 
 // -------------------------------------------------------------------
 
 // ChangeUserPermissionGroupRequest
 
-// .proto.UserMetaInfoV1 UserInfo = 1;
-inline bool ChangeUserPermissionGroupRequest::_internal_has_userinfo() const {
-  return this != internal_default_instance() && _impl_.userinfo_ != nullptr;
+// .proto.RequestMetaInfoV1 RequestMetaInfo = 1;
+inline bool ChangeUserPermissionGroupRequest::_internal_has_requestmetainfo() const {
+  return this != internal_default_instance() && _impl_.requestmetainfo_ != nullptr;
 }
-inline bool ChangeUserPermissionGroupRequest::has_userinfo() const {
-  return _internal_has_userinfo();
+inline bool ChangeUserPermissionGroupRequest::has_requestmetainfo() const {
+  return _internal_has_requestmetainfo();
 }
-inline const ::proto::UserMetaInfoV1& ChangeUserPermissionGroupRequest::_internal_userinfo() const {
-  const ::proto::UserMetaInfoV1* p = _impl_.userinfo_;
-  return p != nullptr ? *p : reinterpret_cast<const ::proto::UserMetaInfoV1&>(
-      ::proto::_UserMetaInfoV1_default_instance_);
+inline const ::proto::RequestMetaInfoV1& ChangeUserPermissionGroupRequest::_internal_requestmetainfo() const {
+  const ::proto::RequestMetaInfoV1* p = _impl_.requestmetainfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::RequestMetaInfoV1&>(
+      ::proto::_RequestMetaInfoV1_default_instance_);
 }
-inline const ::proto::UserMetaInfoV1& ChangeUserPermissionGroupRequest::userinfo() const {
-  // @@protoc_insertion_point(field_get:proto.ChangeUserPermissionGroupRequest.UserInfo)
-  return _internal_userinfo();
+inline const ::proto::RequestMetaInfoV1& ChangeUserPermissionGroupRequest::requestmetainfo() const {
+  // @@protoc_insertion_point(field_get:proto.ChangeUserPermissionGroupRequest.RequestMetaInfo)
+  return _internal_requestmetainfo();
 }
-inline void ChangeUserPermissionGroupRequest::unsafe_arena_set_allocated_userinfo(
-    ::proto::UserMetaInfoV1* userinfo) {
+inline void ChangeUserPermissionGroupRequest::unsafe_arena_set_allocated_requestmetainfo(
+    ::proto::RequestMetaInfoV1* requestmetainfo) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userinfo_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.requestmetainfo_);
   }
-  _impl_.userinfo_ = userinfo;
-  if (userinfo) {
+  _impl_.requestmetainfo_ = requestmetainfo;
+  if (requestmetainfo) {
     
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.ChangeUserPermissionGroupRequest.UserInfo)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.ChangeUserPermissionGroupRequest.RequestMetaInfo)
 }
-inline ::proto::UserMetaInfoV1* ChangeUserPermissionGroupRequest::release_userinfo() {
+inline ::proto::RequestMetaInfoV1* ChangeUserPermissionGroupRequest::release_requestmetainfo() {
   
-  ::proto::UserMetaInfoV1* temp = _impl_.userinfo_;
-  _impl_.userinfo_ = nullptr;
+  ::proto::RequestMetaInfoV1* temp = _impl_.requestmetainfo_;
+  _impl_.requestmetainfo_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -8441,80 +10252,80 @@ inline ::proto::UserMetaInfoV1* ChangeUserPermissionGroupRequest::release_userin
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::proto::UserMetaInfoV1* ChangeUserPermissionGroupRequest::unsafe_arena_release_userinfo() {
-  // @@protoc_insertion_point(field_release:proto.ChangeUserPermissionGroupRequest.UserInfo)
+inline ::proto::RequestMetaInfoV1* ChangeUserPermissionGroupRequest::unsafe_arena_release_requestmetainfo() {
+  // @@protoc_insertion_point(field_release:proto.ChangeUserPermissionGroupRequest.RequestMetaInfo)
   
-  ::proto::UserMetaInfoV1* temp = _impl_.userinfo_;
-  _impl_.userinfo_ = nullptr;
+  ::proto::RequestMetaInfoV1* temp = _impl_.requestmetainfo_;
+  _impl_.requestmetainfo_ = nullptr;
   return temp;
 }
-inline ::proto::UserMetaInfoV1* ChangeUserPermissionGroupRequest::_internal_mutable_userinfo() {
+inline ::proto::RequestMetaInfoV1* ChangeUserPermissionGroupRequest::_internal_mutable_requestmetainfo() {
   
-  if (_impl_.userinfo_ == nullptr) {
-    auto* p = CreateMaybeMessage<::proto::UserMetaInfoV1>(GetArenaForAllocation());
-    _impl_.userinfo_ = p;
+  if (_impl_.requestmetainfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::RequestMetaInfoV1>(GetArenaForAllocation());
+    _impl_.requestmetainfo_ = p;
   }
-  return _impl_.userinfo_;
+  return _impl_.requestmetainfo_;
 }
-inline ::proto::UserMetaInfoV1* ChangeUserPermissionGroupRequest::mutable_userinfo() {
-  ::proto::UserMetaInfoV1* _msg = _internal_mutable_userinfo();
-  // @@protoc_insertion_point(field_mutable:proto.ChangeUserPermissionGroupRequest.UserInfo)
+inline ::proto::RequestMetaInfoV1* ChangeUserPermissionGroupRequest::mutable_requestmetainfo() {
+  ::proto::RequestMetaInfoV1* _msg = _internal_mutable_requestmetainfo();
+  // @@protoc_insertion_point(field_mutable:proto.ChangeUserPermissionGroupRequest.RequestMetaInfo)
   return _msg;
 }
-inline void ChangeUserPermissionGroupRequest::set_allocated_userinfo(::proto::UserMetaInfoV1* userinfo) {
+inline void ChangeUserPermissionGroupRequest::set_allocated_requestmetainfo(::proto::RequestMetaInfoV1* requestmetainfo) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userinfo_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.requestmetainfo_);
   }
-  if (userinfo) {
+  if (requestmetainfo) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(userinfo));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(requestmetainfo));
     if (message_arena != submessage_arena) {
-      userinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, userinfo, submessage_arena);
+      requestmetainfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, requestmetainfo, submessage_arena);
     }
     
   } else {
     
   }
-  _impl_.userinfo_ = userinfo;
-  // @@protoc_insertion_point(field_set_allocated:proto.ChangeUserPermissionGroupRequest.UserInfo)
+  _impl_.requestmetainfo_ = requestmetainfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.ChangeUserPermissionGroupRequest.RequestMetaInfo)
 }
 
-// .proto.UserMetaInfoV1 TargetUserInfo = 2;
-inline bool ChangeUserPermissionGroupRequest::_internal_has_targetuserinfo() const {
-  return this != internal_default_instance() && _impl_.targetuserinfo_ != nullptr;
+// .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
+inline bool ChangeUserPermissionGroupRequest::_internal_has_userverifyinfo() const {
+  return this != internal_default_instance() && _impl_.userverifyinfo_ != nullptr;
 }
-inline bool ChangeUserPermissionGroupRequest::has_targetuserinfo() const {
-  return _internal_has_targetuserinfo();
+inline bool ChangeUserPermissionGroupRequest::has_userverifyinfo() const {
+  return _internal_has_userverifyinfo();
 }
-inline const ::proto::UserMetaInfoV1& ChangeUserPermissionGroupRequest::_internal_targetuserinfo() const {
-  const ::proto::UserMetaInfoV1* p = _impl_.targetuserinfo_;
-  return p != nullptr ? *p : reinterpret_cast<const ::proto::UserMetaInfoV1&>(
-      ::proto::_UserMetaInfoV1_default_instance_);
+inline const ::proto::UserVerifyInfoV1& ChangeUserPermissionGroupRequest::_internal_userverifyinfo() const {
+  const ::proto::UserVerifyInfoV1* p = _impl_.userverifyinfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::UserVerifyInfoV1&>(
+      ::proto::_UserVerifyInfoV1_default_instance_);
 }
-inline const ::proto::UserMetaInfoV1& ChangeUserPermissionGroupRequest::targetuserinfo() const {
-  // @@protoc_insertion_point(field_get:proto.ChangeUserPermissionGroupRequest.TargetUserInfo)
-  return _internal_targetuserinfo();
+inline const ::proto::UserVerifyInfoV1& ChangeUserPermissionGroupRequest::userverifyinfo() const {
+  // @@protoc_insertion_point(field_get:proto.ChangeUserPermissionGroupRequest.UserVerifyInfo)
+  return _internal_userverifyinfo();
 }
-inline void ChangeUserPermissionGroupRequest::unsafe_arena_set_allocated_targetuserinfo(
-    ::proto::UserMetaInfoV1* targetuserinfo) {
+inline void ChangeUserPermissionGroupRequest::unsafe_arena_set_allocated_userverifyinfo(
+    ::proto::UserVerifyInfoV1* userverifyinfo) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.targetuserinfo_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userverifyinfo_);
   }
-  _impl_.targetuserinfo_ = targetuserinfo;
-  if (targetuserinfo) {
+  _impl_.userverifyinfo_ = userverifyinfo;
+  if (userverifyinfo) {
     
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.ChangeUserPermissionGroupRequest.TargetUserInfo)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.ChangeUserPermissionGroupRequest.UserVerifyInfo)
 }
-inline ::proto::UserMetaInfoV1* ChangeUserPermissionGroupRequest::release_targetuserinfo() {
+inline ::proto::UserVerifyInfoV1* ChangeUserPermissionGroupRequest::release_userverifyinfo() {
   
-  ::proto::UserMetaInfoV1* temp = _impl_.targetuserinfo_;
-  _impl_.targetuserinfo_ = nullptr;
+  ::proto::UserVerifyInfoV1* temp = _impl_.userverifyinfo_;
+  _impl_.userverifyinfo_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -8526,169 +10337,184 @@ inline ::proto::UserMetaInfoV1* ChangeUserPermissionGroupRequest::release_target
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::proto::UserMetaInfoV1* ChangeUserPermissionGroupRequest::unsafe_arena_release_targetuserinfo() {
-  // @@protoc_insertion_point(field_release:proto.ChangeUserPermissionGroupRequest.TargetUserInfo)
+inline ::proto::UserVerifyInfoV1* ChangeUserPermissionGroupRequest::unsafe_arena_release_userverifyinfo() {
+  // @@protoc_insertion_point(field_release:proto.ChangeUserPermissionGroupRequest.UserVerifyInfo)
   
-  ::proto::UserMetaInfoV1* temp = _impl_.targetuserinfo_;
-  _impl_.targetuserinfo_ = nullptr;
+  ::proto::UserVerifyInfoV1* temp = _impl_.userverifyinfo_;
+  _impl_.userverifyinfo_ = nullptr;
   return temp;
 }
-inline ::proto::UserMetaInfoV1* ChangeUserPermissionGroupRequest::_internal_mutable_targetuserinfo() {
+inline ::proto::UserVerifyInfoV1* ChangeUserPermissionGroupRequest::_internal_mutable_userverifyinfo() {
   
-  if (_impl_.targetuserinfo_ == nullptr) {
-    auto* p = CreateMaybeMessage<::proto::UserMetaInfoV1>(GetArenaForAllocation());
-    _impl_.targetuserinfo_ = p;
+  if (_impl_.userverifyinfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::UserVerifyInfoV1>(GetArenaForAllocation());
+    _impl_.userverifyinfo_ = p;
   }
-  return _impl_.targetuserinfo_;
+  return _impl_.userverifyinfo_;
 }
-inline ::proto::UserMetaInfoV1* ChangeUserPermissionGroupRequest::mutable_targetuserinfo() {
-  ::proto::UserMetaInfoV1* _msg = _internal_mutable_targetuserinfo();
-  // @@protoc_insertion_point(field_mutable:proto.ChangeUserPermissionGroupRequest.TargetUserInfo)
+inline ::proto::UserVerifyInfoV1* ChangeUserPermissionGroupRequest::mutable_userverifyinfo() {
+  ::proto::UserVerifyInfoV1* _msg = _internal_mutable_userverifyinfo();
+  // @@protoc_insertion_point(field_mutable:proto.ChangeUserPermissionGroupRequest.UserVerifyInfo)
   return _msg;
 }
-inline void ChangeUserPermissionGroupRequest::set_allocated_targetuserinfo(::proto::UserMetaInfoV1* targetuserinfo) {
+inline void ChangeUserPermissionGroupRequest::set_allocated_userverifyinfo(::proto::UserVerifyInfoV1* userverifyinfo) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.targetuserinfo_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userverifyinfo_);
   }
-  if (targetuserinfo) {
+  if (userverifyinfo) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(targetuserinfo));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(userverifyinfo));
     if (message_arena != submessage_arena) {
-      targetuserinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, targetuserinfo, submessage_arena);
+      userverifyinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, userverifyinfo, submessage_arena);
     }
     
   } else {
     
   }
-  _impl_.targetuserinfo_ = targetuserinfo;
-  // @@protoc_insertion_point(field_set_allocated:proto.ChangeUserPermissionGroupRequest.TargetUserInfo)
+  _impl_.userverifyinfo_ = userverifyinfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.ChangeUserPermissionGroupRequest.UserVerifyInfo)
 }
 
-// .proto.PermissionGroupMetaInfoV1 PermissionGroup = 3;
-inline bool ChangeUserPermissionGroupRequest::_internal_has_permissiongroup() const {
-  return this != internal_default_instance() && _impl_.permissiongroup_ != nullptr;
+// string TargetUserName = 3;
+inline void ChangeUserPermissionGroupRequest::clear_targetusername() {
+  _impl_.targetusername_.ClearToEmpty();
 }
-inline bool ChangeUserPermissionGroupRequest::has_permissiongroup() const {
-  return _internal_has_permissiongroup();
+inline const std::string& ChangeUserPermissionGroupRequest::targetusername() const {
+  // @@protoc_insertion_point(field_get:proto.ChangeUserPermissionGroupRequest.TargetUserName)
+  return _internal_targetusername();
 }
-inline const ::proto::PermissionGroupMetaInfoV1& ChangeUserPermissionGroupRequest::_internal_permissiongroup() const {
-  const ::proto::PermissionGroupMetaInfoV1* p = _impl_.permissiongroup_;
-  return p != nullptr ? *p : reinterpret_cast<const ::proto::PermissionGroupMetaInfoV1&>(
-      ::proto::_PermissionGroupMetaInfoV1_default_instance_);
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void ChangeUserPermissionGroupRequest::set_targetusername(ArgT0&& arg0, ArgT... args) {
+ 
+ _impl_.targetusername_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:proto.ChangeUserPermissionGroupRequest.TargetUserName)
 }
-inline const ::proto::PermissionGroupMetaInfoV1& ChangeUserPermissionGroupRequest::permissiongroup() const {
-  // @@protoc_insertion_point(field_get:proto.ChangeUserPermissionGroupRequest.PermissionGroup)
-  return _internal_permissiongroup();
+inline std::string* ChangeUserPermissionGroupRequest::mutable_targetusername() {
+  std::string* _s = _internal_mutable_targetusername();
+  // @@protoc_insertion_point(field_mutable:proto.ChangeUserPermissionGroupRequest.TargetUserName)
+  return _s;
 }
-inline void ChangeUserPermissionGroupRequest::unsafe_arena_set_allocated_permissiongroup(
-    ::proto::PermissionGroupMetaInfoV1* permissiongroup) {
-  if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.permissiongroup_);
-  }
-  _impl_.permissiongroup_ = permissiongroup;
-  if (permissiongroup) {
+inline const std::string& ChangeUserPermissionGroupRequest::_internal_targetusername() const {
+  return _impl_.targetusername_.Get();
+}
+inline void ChangeUserPermissionGroupRequest::_internal_set_targetusername(const std::string& value) {
+  
+  _impl_.targetusername_.Set(value, GetArenaForAllocation());
+}
+inline std::string* ChangeUserPermissionGroupRequest::_internal_mutable_targetusername() {
+  
+  return _impl_.targetusername_.Mutable(GetArenaForAllocation());
+}
+inline std::string* ChangeUserPermissionGroupRequest::release_targetusername() {
+  // @@protoc_insertion_point(field_release:proto.ChangeUserPermissionGroupRequest.TargetUserName)
+  return _impl_.targetusername_.Release();
+}
+inline void ChangeUserPermissionGroupRequest::set_allocated_targetusername(std::string* targetusername) {
+  if (targetusername != nullptr) {
     
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.ChangeUserPermissionGroupRequest.PermissionGroup)
-}
-inline ::proto::PermissionGroupMetaInfoV1* ChangeUserPermissionGroupRequest::release_permissiongroup() {
-  
-  ::proto::PermissionGroupMetaInfoV1* temp = _impl_.permissiongroup_;
-  _impl_.permissiongroup_ = nullptr;
-#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
-  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
-  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
-  if (GetArenaForAllocation() == nullptr) { delete old; }
-#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
-  if (GetArenaForAllocation() != nullptr) {
-    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  _impl_.targetusername_.SetAllocated(targetusername, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.targetusername_.IsDefault()) {
+    _impl_.targetusername_.Set("", GetArenaForAllocation());
   }
-#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
-  return temp;
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:proto.ChangeUserPermissionGroupRequest.TargetUserName)
 }
-inline ::proto::PermissionGroupMetaInfoV1* ChangeUserPermissionGroupRequest::unsafe_arena_release_permissiongroup() {
-  // @@protoc_insertion_point(field_release:proto.ChangeUserPermissionGroupRequest.PermissionGroup)
+
+// string PermissionGroupName = 4;
+inline void ChangeUserPermissionGroupRequest::clear_permissiongroupname() {
+  _impl_.permissiongroupname_.ClearToEmpty();
+}
+inline const std::string& ChangeUserPermissionGroupRequest::permissiongroupname() const {
+  // @@protoc_insertion_point(field_get:proto.ChangeUserPermissionGroupRequest.PermissionGroupName)
+  return _internal_permissiongroupname();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void ChangeUserPermissionGroupRequest::set_permissiongroupname(ArgT0&& arg0, ArgT... args) {
+ 
+ _impl_.permissiongroupname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:proto.ChangeUserPermissionGroupRequest.PermissionGroupName)
+}
+inline std::string* ChangeUserPermissionGroupRequest::mutable_permissiongroupname() {
+  std::string* _s = _internal_mutable_permissiongroupname();
+  // @@protoc_insertion_point(field_mutable:proto.ChangeUserPermissionGroupRequest.PermissionGroupName)
+  return _s;
+}
+inline const std::string& ChangeUserPermissionGroupRequest::_internal_permissiongroupname() const {
+  return _impl_.permissiongroupname_.Get();
+}
+inline void ChangeUserPermissionGroupRequest::_internal_set_permissiongroupname(const std::string& value) {
   
-  ::proto::PermissionGroupMetaInfoV1* temp = _impl_.permissiongroup_;
-  _impl_.permissiongroup_ = nullptr;
-  return temp;
+  _impl_.permissiongroupname_.Set(value, GetArenaForAllocation());
 }
-inline ::proto::PermissionGroupMetaInfoV1* ChangeUserPermissionGroupRequest::_internal_mutable_permissiongroup() {
+inline std::string* ChangeUserPermissionGroupRequest::_internal_mutable_permissiongroupname() {
   
-  if (_impl_.permissiongroup_ == nullptr) {
-    auto* p = CreateMaybeMessage<::proto::PermissionGroupMetaInfoV1>(GetArenaForAllocation());
-    _impl_.permissiongroup_ = p;
-  }
-  return _impl_.permissiongroup_;
+  return _impl_.permissiongroupname_.Mutable(GetArenaForAllocation());
 }
-inline ::proto::PermissionGroupMetaInfoV1* ChangeUserPermissionGroupRequest::mutable_permissiongroup() {
-  ::proto::PermissionGroupMetaInfoV1* _msg = _internal_mutable_permissiongroup();
-  // @@protoc_insertion_point(field_mutable:proto.ChangeUserPermissionGroupRequest.PermissionGroup)
-  return _msg;
+inline std::string* ChangeUserPermissionGroupRequest::release_permissiongroupname() {
+  // @@protoc_insertion_point(field_release:proto.ChangeUserPermissionGroupRequest.PermissionGroupName)
+  return _impl_.permissiongroupname_.Release();
 }
-inline void ChangeUserPermissionGroupRequest::set_allocated_permissiongroup(::proto::PermissionGroupMetaInfoV1* permissiongroup) {
-  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
-  if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.permissiongroup_);
-  }
-  if (permissiongroup) {
-    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(permissiongroup));
-    if (message_arena != submessage_arena) {
-      permissiongroup = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, permissiongroup, submessage_arena);
-    }
+inline void ChangeUserPermissionGroupRequest::set_allocated_permissiongroupname(std::string* permissiongroupname) {
+  if (permissiongroupname != nullptr) {
     
   } else {
     
   }
-  _impl_.permissiongroup_ = permissiongroup;
-  // @@protoc_insertion_point(field_set_allocated:proto.ChangeUserPermissionGroupRequest.PermissionGroup)
+  _impl_.permissiongroupname_.SetAllocated(permissiongroupname, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.permissiongroupname_.IsDefault()) {
+    _impl_.permissiongroupname_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:proto.ChangeUserPermissionGroupRequest.PermissionGroupName)
 }
 
 // -------------------------------------------------------------------
 
 // CreateProjectRequest
 
-// .proto.UserMetaInfoV1 UserInfo = 1;
-inline bool CreateProjectRequest::_internal_has_userinfo() const {
-  return this != internal_default_instance() && _impl_.userinfo_ != nullptr;
+// .proto.RequestMetaInfoV1 RequestMetaInfo = 1;
+inline bool CreateProjectRequest::_internal_has_requestmetainfo() const {
+  return this != internal_default_instance() && _impl_.requestmetainfo_ != nullptr;
 }
-inline bool CreateProjectRequest::has_userinfo() const {
-  return _internal_has_userinfo();
+inline bool CreateProjectRequest::has_requestmetainfo() const {
+  return _internal_has_requestmetainfo();
 }
-inline const ::proto::UserMetaInfoV1& CreateProjectRequest::_internal_userinfo() const {
-  const ::proto::UserMetaInfoV1* p = _impl_.userinfo_;
-  return p != nullptr ? *p : reinterpret_cast<const ::proto::UserMetaInfoV1&>(
-      ::proto::_UserMetaInfoV1_default_instance_);
+inline const ::proto::RequestMetaInfoV1& CreateProjectRequest::_internal_requestmetainfo() const {
+  const ::proto::RequestMetaInfoV1* p = _impl_.requestmetainfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::RequestMetaInfoV1&>(
+      ::proto::_RequestMetaInfoV1_default_instance_);
 }
-inline const ::proto::UserMetaInfoV1& CreateProjectRequest::userinfo() const {
-  // @@protoc_insertion_point(field_get:proto.CreateProjectRequest.UserInfo)
-  return _internal_userinfo();
+inline const ::proto::RequestMetaInfoV1& CreateProjectRequest::requestmetainfo() const {
+  // @@protoc_insertion_point(field_get:proto.CreateProjectRequest.RequestMetaInfo)
+  return _internal_requestmetainfo();
 }
-inline void CreateProjectRequest::unsafe_arena_set_allocated_userinfo(
-    ::proto::UserMetaInfoV1* userinfo) {
+inline void CreateProjectRequest::unsafe_arena_set_allocated_requestmetainfo(
+    ::proto::RequestMetaInfoV1* requestmetainfo) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userinfo_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.requestmetainfo_);
   }
-  _impl_.userinfo_ = userinfo;
-  if (userinfo) {
+  _impl_.requestmetainfo_ = requestmetainfo;
+  if (requestmetainfo) {
     
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.CreateProjectRequest.UserInfo)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.CreateProjectRequest.RequestMetaInfo)
 }
-inline ::proto::UserMetaInfoV1* CreateProjectRequest::release_userinfo() {
+inline ::proto::RequestMetaInfoV1* CreateProjectRequest::release_requestmetainfo() {
   
-  ::proto::UserMetaInfoV1* temp = _impl_.userinfo_;
-  _impl_.userinfo_ = nullptr;
+  ::proto::RequestMetaInfoV1* temp = _impl_.requestmetainfo_;
+  _impl_.requestmetainfo_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -8700,48 +10526,133 @@ inline ::proto::UserMetaInfoV1* CreateProjectRequest::release_userinfo() {
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::proto::UserMetaInfoV1* CreateProjectRequest::unsafe_arena_release_userinfo() {
-  // @@protoc_insertion_point(field_release:proto.CreateProjectRequest.UserInfo)
+inline ::proto::RequestMetaInfoV1* CreateProjectRequest::unsafe_arena_release_requestmetainfo() {
+  // @@protoc_insertion_point(field_release:proto.CreateProjectRequest.RequestMetaInfo)
   
-  ::proto::UserMetaInfoV1* temp = _impl_.userinfo_;
-  _impl_.userinfo_ = nullptr;
+  ::proto::RequestMetaInfoV1* temp = _impl_.requestmetainfo_;
+  _impl_.requestmetainfo_ = nullptr;
   return temp;
 }
-inline ::proto::UserMetaInfoV1* CreateProjectRequest::_internal_mutable_userinfo() {
+inline ::proto::RequestMetaInfoV1* CreateProjectRequest::_internal_mutable_requestmetainfo() {
   
-  if (_impl_.userinfo_ == nullptr) {
-    auto* p = CreateMaybeMessage<::proto::UserMetaInfoV1>(GetArenaForAllocation());
-    _impl_.userinfo_ = p;
+  if (_impl_.requestmetainfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::RequestMetaInfoV1>(GetArenaForAllocation());
+    _impl_.requestmetainfo_ = p;
   }
-  return _impl_.userinfo_;
+  return _impl_.requestmetainfo_;
 }
-inline ::proto::UserMetaInfoV1* CreateProjectRequest::mutable_userinfo() {
-  ::proto::UserMetaInfoV1* _msg = _internal_mutable_userinfo();
-  // @@protoc_insertion_point(field_mutable:proto.CreateProjectRequest.UserInfo)
+inline ::proto::RequestMetaInfoV1* CreateProjectRequest::mutable_requestmetainfo() {
+  ::proto::RequestMetaInfoV1* _msg = _internal_mutable_requestmetainfo();
+  // @@protoc_insertion_point(field_mutable:proto.CreateProjectRequest.RequestMetaInfo)
   return _msg;
 }
-inline void CreateProjectRequest::set_allocated_userinfo(::proto::UserMetaInfoV1* userinfo) {
+inline void CreateProjectRequest::set_allocated_requestmetainfo(::proto::RequestMetaInfoV1* requestmetainfo) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userinfo_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.requestmetainfo_);
   }
-  if (userinfo) {
+  if (requestmetainfo) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(userinfo));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(requestmetainfo));
     if (message_arena != submessage_arena) {
-      userinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, userinfo, submessage_arena);
+      requestmetainfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, requestmetainfo, submessage_arena);
     }
     
   } else {
     
   }
-  _impl_.userinfo_ = userinfo;
-  // @@protoc_insertion_point(field_set_allocated:proto.CreateProjectRequest.UserInfo)
+  _impl_.requestmetainfo_ = requestmetainfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.CreateProjectRequest.RequestMetaInfo)
 }
 
-// .proto.ProjectMetaInfoV1 ProjectInfo = 2;
+// .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
+inline bool CreateProjectRequest::_internal_has_userverifyinfo() const {
+  return this != internal_default_instance() && _impl_.userverifyinfo_ != nullptr;
+}
+inline bool CreateProjectRequest::has_userverifyinfo() const {
+  return _internal_has_userverifyinfo();
+}
+inline const ::proto::UserVerifyInfoV1& CreateProjectRequest::_internal_userverifyinfo() const {
+  const ::proto::UserVerifyInfoV1* p = _impl_.userverifyinfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::UserVerifyInfoV1&>(
+      ::proto::_UserVerifyInfoV1_default_instance_);
+}
+inline const ::proto::UserVerifyInfoV1& CreateProjectRequest::userverifyinfo() const {
+  // @@protoc_insertion_point(field_get:proto.CreateProjectRequest.UserVerifyInfo)
+  return _internal_userverifyinfo();
+}
+inline void CreateProjectRequest::unsafe_arena_set_allocated_userverifyinfo(
+    ::proto::UserVerifyInfoV1* userverifyinfo) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userverifyinfo_);
+  }
+  _impl_.userverifyinfo_ = userverifyinfo;
+  if (userverifyinfo) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.CreateProjectRequest.UserVerifyInfo)
+}
+inline ::proto::UserVerifyInfoV1* CreateProjectRequest::release_userverifyinfo() {
+  
+  ::proto::UserVerifyInfoV1* temp = _impl_.userverifyinfo_;
+  _impl_.userverifyinfo_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::proto::UserVerifyInfoV1* CreateProjectRequest::unsafe_arena_release_userverifyinfo() {
+  // @@protoc_insertion_point(field_release:proto.CreateProjectRequest.UserVerifyInfo)
+  
+  ::proto::UserVerifyInfoV1* temp = _impl_.userverifyinfo_;
+  _impl_.userverifyinfo_ = nullptr;
+  return temp;
+}
+inline ::proto::UserVerifyInfoV1* CreateProjectRequest::_internal_mutable_userverifyinfo() {
+  
+  if (_impl_.userverifyinfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::UserVerifyInfoV1>(GetArenaForAllocation());
+    _impl_.userverifyinfo_ = p;
+  }
+  return _impl_.userverifyinfo_;
+}
+inline ::proto::UserVerifyInfoV1* CreateProjectRequest::mutable_userverifyinfo() {
+  ::proto::UserVerifyInfoV1* _msg = _internal_mutable_userverifyinfo();
+  // @@protoc_insertion_point(field_mutable:proto.CreateProjectRequest.UserVerifyInfo)
+  return _msg;
+}
+inline void CreateProjectRequest::set_allocated_userverifyinfo(::proto::UserVerifyInfoV1* userverifyinfo) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userverifyinfo_);
+  }
+  if (userverifyinfo) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(userverifyinfo));
+    if (message_arena != submessage_arena) {
+      userverifyinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, userverifyinfo, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  _impl_.userverifyinfo_ = userverifyinfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.CreateProjectRequest.UserVerifyInfo)
+}
+
+// .proto.ProjectMetaInfoV1 ProjectInfo = 3;
 inline bool CreateProjectRequest::_internal_has_projectinfo() const {
   return this != internal_default_instance() && _impl_.projectinfo_ != nullptr;
 }
@@ -8830,39 +10741,39 @@ inline void CreateProjectRequest::set_allocated_projectinfo(::proto::ProjectMeta
 
 // DeleteProjectRequest
 
-// .proto.UserMetaInfoV1 UserInfo = 1;
-inline bool DeleteProjectRequest::_internal_has_userinfo() const {
-  return this != internal_default_instance() && _impl_.userinfo_ != nullptr;
+// .proto.RequestMetaInfoV1 RequestMetaInfo = 1;
+inline bool DeleteProjectRequest::_internal_has_requestmetainfo() const {
+  return this != internal_default_instance() && _impl_.requestmetainfo_ != nullptr;
 }
-inline bool DeleteProjectRequest::has_userinfo() const {
-  return _internal_has_userinfo();
+inline bool DeleteProjectRequest::has_requestmetainfo() const {
+  return _internal_has_requestmetainfo();
 }
-inline const ::proto::UserMetaInfoV1& DeleteProjectRequest::_internal_userinfo() const {
-  const ::proto::UserMetaInfoV1* p = _impl_.userinfo_;
-  return p != nullptr ? *p : reinterpret_cast<const ::proto::UserMetaInfoV1&>(
-      ::proto::_UserMetaInfoV1_default_instance_);
+inline const ::proto::RequestMetaInfoV1& DeleteProjectRequest::_internal_requestmetainfo() const {
+  const ::proto::RequestMetaInfoV1* p = _impl_.requestmetainfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::RequestMetaInfoV1&>(
+      ::proto::_RequestMetaInfoV1_default_instance_);
 }
-inline const ::proto::UserMetaInfoV1& DeleteProjectRequest::userinfo() const {
-  // @@protoc_insertion_point(field_get:proto.DeleteProjectRequest.UserInfo)
-  return _internal_userinfo();
+inline const ::proto::RequestMetaInfoV1& DeleteProjectRequest::requestmetainfo() const {
+  // @@protoc_insertion_point(field_get:proto.DeleteProjectRequest.RequestMetaInfo)
+  return _internal_requestmetainfo();
 }
-inline void DeleteProjectRequest::unsafe_arena_set_allocated_userinfo(
-    ::proto::UserMetaInfoV1* userinfo) {
+inline void DeleteProjectRequest::unsafe_arena_set_allocated_requestmetainfo(
+    ::proto::RequestMetaInfoV1* requestmetainfo) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userinfo_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.requestmetainfo_);
   }
-  _impl_.userinfo_ = userinfo;
-  if (userinfo) {
+  _impl_.requestmetainfo_ = requestmetainfo;
+  if (requestmetainfo) {
     
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.DeleteProjectRequest.UserInfo)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.DeleteProjectRequest.RequestMetaInfo)
 }
-inline ::proto::UserMetaInfoV1* DeleteProjectRequest::release_userinfo() {
+inline ::proto::RequestMetaInfoV1* DeleteProjectRequest::release_requestmetainfo() {
   
-  ::proto::UserMetaInfoV1* temp = _impl_.userinfo_;
-  _impl_.userinfo_ = nullptr;
+  ::proto::RequestMetaInfoV1* temp = _impl_.requestmetainfo_;
+  _impl_.requestmetainfo_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -8874,80 +10785,80 @@ inline ::proto::UserMetaInfoV1* DeleteProjectRequest::release_userinfo() {
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::proto::UserMetaInfoV1* DeleteProjectRequest::unsafe_arena_release_userinfo() {
-  // @@protoc_insertion_point(field_release:proto.DeleteProjectRequest.UserInfo)
+inline ::proto::RequestMetaInfoV1* DeleteProjectRequest::unsafe_arena_release_requestmetainfo() {
+  // @@protoc_insertion_point(field_release:proto.DeleteProjectRequest.RequestMetaInfo)
   
-  ::proto::UserMetaInfoV1* temp = _impl_.userinfo_;
-  _impl_.userinfo_ = nullptr;
+  ::proto::RequestMetaInfoV1* temp = _impl_.requestmetainfo_;
+  _impl_.requestmetainfo_ = nullptr;
   return temp;
 }
-inline ::proto::UserMetaInfoV1* DeleteProjectRequest::_internal_mutable_userinfo() {
+inline ::proto::RequestMetaInfoV1* DeleteProjectRequest::_internal_mutable_requestmetainfo() {
   
-  if (_impl_.userinfo_ == nullptr) {
-    auto* p = CreateMaybeMessage<::proto::UserMetaInfoV1>(GetArenaForAllocation());
-    _impl_.userinfo_ = p;
+  if (_impl_.requestmetainfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::RequestMetaInfoV1>(GetArenaForAllocation());
+    _impl_.requestmetainfo_ = p;
   }
-  return _impl_.userinfo_;
+  return _impl_.requestmetainfo_;
 }
-inline ::proto::UserMetaInfoV1* DeleteProjectRequest::mutable_userinfo() {
-  ::proto::UserMetaInfoV1* _msg = _internal_mutable_userinfo();
-  // @@protoc_insertion_point(field_mutable:proto.DeleteProjectRequest.UserInfo)
+inline ::proto::RequestMetaInfoV1* DeleteProjectRequest::mutable_requestmetainfo() {
+  ::proto::RequestMetaInfoV1* _msg = _internal_mutable_requestmetainfo();
+  // @@protoc_insertion_point(field_mutable:proto.DeleteProjectRequest.RequestMetaInfo)
   return _msg;
 }
-inline void DeleteProjectRequest::set_allocated_userinfo(::proto::UserMetaInfoV1* userinfo) {
+inline void DeleteProjectRequest::set_allocated_requestmetainfo(::proto::RequestMetaInfoV1* requestmetainfo) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userinfo_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.requestmetainfo_);
   }
-  if (userinfo) {
+  if (requestmetainfo) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(userinfo));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(requestmetainfo));
     if (message_arena != submessage_arena) {
-      userinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, userinfo, submessage_arena);
+      requestmetainfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, requestmetainfo, submessage_arena);
     }
     
   } else {
     
   }
-  _impl_.userinfo_ = userinfo;
-  // @@protoc_insertion_point(field_set_allocated:proto.DeleteProjectRequest.UserInfo)
+  _impl_.requestmetainfo_ = requestmetainfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.DeleteProjectRequest.RequestMetaInfo)
 }
 
-// .proto.ProjectMetaInfoV1 ProjectInfo = 2;
-inline bool DeleteProjectRequest::_internal_has_projectinfo() const {
-  return this != internal_default_instance() && _impl_.projectinfo_ != nullptr;
+// .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
+inline bool DeleteProjectRequest::_internal_has_userverifyinfo() const {
+  return this != internal_default_instance() && _impl_.userverifyinfo_ != nullptr;
 }
-inline bool DeleteProjectRequest::has_projectinfo() const {
-  return _internal_has_projectinfo();
+inline bool DeleteProjectRequest::has_userverifyinfo() const {
+  return _internal_has_userverifyinfo();
 }
-inline const ::proto::ProjectMetaInfoV1& DeleteProjectRequest::_internal_projectinfo() const {
-  const ::proto::ProjectMetaInfoV1* p = _impl_.projectinfo_;
-  return p != nullptr ? *p : reinterpret_cast<const ::proto::ProjectMetaInfoV1&>(
-      ::proto::_ProjectMetaInfoV1_default_instance_);
+inline const ::proto::UserVerifyInfoV1& DeleteProjectRequest::_internal_userverifyinfo() const {
+  const ::proto::UserVerifyInfoV1* p = _impl_.userverifyinfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::UserVerifyInfoV1&>(
+      ::proto::_UserVerifyInfoV1_default_instance_);
 }
-inline const ::proto::ProjectMetaInfoV1& DeleteProjectRequest::projectinfo() const {
-  // @@protoc_insertion_point(field_get:proto.DeleteProjectRequest.ProjectInfo)
-  return _internal_projectinfo();
+inline const ::proto::UserVerifyInfoV1& DeleteProjectRequest::userverifyinfo() const {
+  // @@protoc_insertion_point(field_get:proto.DeleteProjectRequest.UserVerifyInfo)
+  return _internal_userverifyinfo();
 }
-inline void DeleteProjectRequest::unsafe_arena_set_allocated_projectinfo(
-    ::proto::ProjectMetaInfoV1* projectinfo) {
+inline void DeleteProjectRequest::unsafe_arena_set_allocated_userverifyinfo(
+    ::proto::UserVerifyInfoV1* userverifyinfo) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.projectinfo_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userverifyinfo_);
   }
-  _impl_.projectinfo_ = projectinfo;
-  if (projectinfo) {
+  _impl_.userverifyinfo_ = userverifyinfo;
+  if (userverifyinfo) {
     
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.DeleteProjectRequest.ProjectInfo)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.DeleteProjectRequest.UserVerifyInfo)
 }
-inline ::proto::ProjectMetaInfoV1* DeleteProjectRequest::release_projectinfo() {
+inline ::proto::UserVerifyInfoV1* DeleteProjectRequest::release_userverifyinfo() {
   
-  ::proto::ProjectMetaInfoV1* temp = _impl_.projectinfo_;
-  _impl_.projectinfo_ = nullptr;
+  ::proto::UserVerifyInfoV1* temp = _impl_.userverifyinfo_;
+  _impl_.userverifyinfo_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -8959,84 +10870,134 @@ inline ::proto::ProjectMetaInfoV1* DeleteProjectRequest::release_projectinfo() {
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::proto::ProjectMetaInfoV1* DeleteProjectRequest::unsafe_arena_release_projectinfo() {
-  // @@protoc_insertion_point(field_release:proto.DeleteProjectRequest.ProjectInfo)
+inline ::proto::UserVerifyInfoV1* DeleteProjectRequest::unsafe_arena_release_userverifyinfo() {
+  // @@protoc_insertion_point(field_release:proto.DeleteProjectRequest.UserVerifyInfo)
   
-  ::proto::ProjectMetaInfoV1* temp = _impl_.projectinfo_;
-  _impl_.projectinfo_ = nullptr;
+  ::proto::UserVerifyInfoV1* temp = _impl_.userverifyinfo_;
+  _impl_.userverifyinfo_ = nullptr;
   return temp;
 }
-inline ::proto::ProjectMetaInfoV1* DeleteProjectRequest::_internal_mutable_projectinfo() {
+inline ::proto::UserVerifyInfoV1* DeleteProjectRequest::_internal_mutable_userverifyinfo() {
   
-  if (_impl_.projectinfo_ == nullptr) {
-    auto* p = CreateMaybeMessage<::proto::ProjectMetaInfoV1>(GetArenaForAllocation());
-    _impl_.projectinfo_ = p;
+  if (_impl_.userverifyinfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::UserVerifyInfoV1>(GetArenaForAllocation());
+    _impl_.userverifyinfo_ = p;
   }
-  return _impl_.projectinfo_;
+  return _impl_.userverifyinfo_;
 }
-inline ::proto::ProjectMetaInfoV1* DeleteProjectRequest::mutable_projectinfo() {
-  ::proto::ProjectMetaInfoV1* _msg = _internal_mutable_projectinfo();
-  // @@protoc_insertion_point(field_mutable:proto.DeleteProjectRequest.ProjectInfo)
+inline ::proto::UserVerifyInfoV1* DeleteProjectRequest::mutable_userverifyinfo() {
+  ::proto::UserVerifyInfoV1* _msg = _internal_mutable_userverifyinfo();
+  // @@protoc_insertion_point(field_mutable:proto.DeleteProjectRequest.UserVerifyInfo)
   return _msg;
 }
-inline void DeleteProjectRequest::set_allocated_projectinfo(::proto::ProjectMetaInfoV1* projectinfo) {
+inline void DeleteProjectRequest::set_allocated_userverifyinfo(::proto::UserVerifyInfoV1* userverifyinfo) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.projectinfo_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userverifyinfo_);
   }
-  if (projectinfo) {
+  if (userverifyinfo) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(projectinfo));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(userverifyinfo));
     if (message_arena != submessage_arena) {
-      projectinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, projectinfo, submessage_arena);
+      userverifyinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, userverifyinfo, submessage_arena);
     }
     
   } else {
     
   }
-  _impl_.projectinfo_ = projectinfo;
-  // @@protoc_insertion_point(field_set_allocated:proto.DeleteProjectRequest.ProjectInfo)
+  _impl_.userverifyinfo_ = userverifyinfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.DeleteProjectRequest.UserVerifyInfo)
+}
+
+// string ProjectName = 3;
+inline void DeleteProjectRequest::clear_projectname() {
+  _impl_.projectname_.ClearToEmpty();
+}
+inline const std::string& DeleteProjectRequest::projectname() const {
+  // @@protoc_insertion_point(field_get:proto.DeleteProjectRequest.ProjectName)
+  return _internal_projectname();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void DeleteProjectRequest::set_projectname(ArgT0&& arg0, ArgT... args) {
+ 
+ _impl_.projectname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:proto.DeleteProjectRequest.ProjectName)
+}
+inline std::string* DeleteProjectRequest::mutable_projectname() {
+  std::string* _s = _internal_mutable_projectname();
+  // @@protoc_insertion_point(field_mutable:proto.DeleteProjectRequest.ProjectName)
+  return _s;
+}
+inline const std::string& DeleteProjectRequest::_internal_projectname() const {
+  return _impl_.projectname_.Get();
+}
+inline void DeleteProjectRequest::_internal_set_projectname(const std::string& value) {
+  
+  _impl_.projectname_.Set(value, GetArenaForAllocation());
+}
+inline std::string* DeleteProjectRequest::_internal_mutable_projectname() {
+  
+  return _impl_.projectname_.Mutable(GetArenaForAllocation());
+}
+inline std::string* DeleteProjectRequest::release_projectname() {
+  // @@protoc_insertion_point(field_release:proto.DeleteProjectRequest.ProjectName)
+  return _impl_.projectname_.Release();
+}
+inline void DeleteProjectRequest::set_allocated_projectname(std::string* projectname) {
+  if (projectname != nullptr) {
+    
+  } else {
+    
+  }
+  _impl_.projectname_.SetAllocated(projectname, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.projectname_.IsDefault()) {
+    _impl_.projectname_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:proto.DeleteProjectRequest.ProjectName)
 }
 
 // -------------------------------------------------------------------
 
 // UpdateProjectRequest
 
-// .proto.UserMetaInfoV1 UserInfo = 1;
-inline bool UpdateProjectRequest::_internal_has_userinfo() const {
-  return this != internal_default_instance() && _impl_.userinfo_ != nullptr;
+// .proto.RequestMetaInfoV1 RequestMetaInfo = 1;
+inline bool UpdateProjectRequest::_internal_has_requestmetainfo() const {
+  return this != internal_default_instance() && _impl_.requestmetainfo_ != nullptr;
 }
-inline bool UpdateProjectRequest::has_userinfo() const {
-  return _internal_has_userinfo();
+inline bool UpdateProjectRequest::has_requestmetainfo() const {
+  return _internal_has_requestmetainfo();
 }
-inline const ::proto::UserMetaInfoV1& UpdateProjectRequest::_internal_userinfo() const {
-  const ::proto::UserMetaInfoV1* p = _impl_.userinfo_;
-  return p != nullptr ? *p : reinterpret_cast<const ::proto::UserMetaInfoV1&>(
-      ::proto::_UserMetaInfoV1_default_instance_);
+inline const ::proto::RequestMetaInfoV1& UpdateProjectRequest::_internal_requestmetainfo() const {
+  const ::proto::RequestMetaInfoV1* p = _impl_.requestmetainfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::RequestMetaInfoV1&>(
+      ::proto::_RequestMetaInfoV1_default_instance_);
 }
-inline const ::proto::UserMetaInfoV1& UpdateProjectRequest::userinfo() const {
-  // @@protoc_insertion_point(field_get:proto.UpdateProjectRequest.UserInfo)
-  return _internal_userinfo();
+inline const ::proto::RequestMetaInfoV1& UpdateProjectRequest::requestmetainfo() const {
+  // @@protoc_insertion_point(field_get:proto.UpdateProjectRequest.RequestMetaInfo)
+  return _internal_requestmetainfo();
 }
-inline void UpdateProjectRequest::unsafe_arena_set_allocated_userinfo(
-    ::proto::UserMetaInfoV1* userinfo) {
+inline void UpdateProjectRequest::unsafe_arena_set_allocated_requestmetainfo(
+    ::proto::RequestMetaInfoV1* requestmetainfo) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userinfo_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.requestmetainfo_);
   }
-  _impl_.userinfo_ = userinfo;
-  if (userinfo) {
+  _impl_.requestmetainfo_ = requestmetainfo;
+  if (requestmetainfo) {
     
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.UpdateProjectRequest.UserInfo)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.UpdateProjectRequest.RequestMetaInfo)
 }
-inline ::proto::UserMetaInfoV1* UpdateProjectRequest::release_userinfo() {
+inline ::proto::RequestMetaInfoV1* UpdateProjectRequest::release_requestmetainfo() {
   
-  ::proto::UserMetaInfoV1* temp = _impl_.userinfo_;
-  _impl_.userinfo_ = nullptr;
+  ::proto::RequestMetaInfoV1* temp = _impl_.requestmetainfo_;
+  _impl_.requestmetainfo_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -9048,48 +11009,133 @@ inline ::proto::UserMetaInfoV1* UpdateProjectRequest::release_userinfo() {
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::proto::UserMetaInfoV1* UpdateProjectRequest::unsafe_arena_release_userinfo() {
-  // @@protoc_insertion_point(field_release:proto.UpdateProjectRequest.UserInfo)
+inline ::proto::RequestMetaInfoV1* UpdateProjectRequest::unsafe_arena_release_requestmetainfo() {
+  // @@protoc_insertion_point(field_release:proto.UpdateProjectRequest.RequestMetaInfo)
   
-  ::proto::UserMetaInfoV1* temp = _impl_.userinfo_;
-  _impl_.userinfo_ = nullptr;
+  ::proto::RequestMetaInfoV1* temp = _impl_.requestmetainfo_;
+  _impl_.requestmetainfo_ = nullptr;
   return temp;
 }
-inline ::proto::UserMetaInfoV1* UpdateProjectRequest::_internal_mutable_userinfo() {
+inline ::proto::RequestMetaInfoV1* UpdateProjectRequest::_internal_mutable_requestmetainfo() {
   
-  if (_impl_.userinfo_ == nullptr) {
-    auto* p = CreateMaybeMessage<::proto::UserMetaInfoV1>(GetArenaForAllocation());
-    _impl_.userinfo_ = p;
+  if (_impl_.requestmetainfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::RequestMetaInfoV1>(GetArenaForAllocation());
+    _impl_.requestmetainfo_ = p;
   }
-  return _impl_.userinfo_;
+  return _impl_.requestmetainfo_;
 }
-inline ::proto::UserMetaInfoV1* UpdateProjectRequest::mutable_userinfo() {
-  ::proto::UserMetaInfoV1* _msg = _internal_mutable_userinfo();
-  // @@protoc_insertion_point(field_mutable:proto.UpdateProjectRequest.UserInfo)
+inline ::proto::RequestMetaInfoV1* UpdateProjectRequest::mutable_requestmetainfo() {
+  ::proto::RequestMetaInfoV1* _msg = _internal_mutable_requestmetainfo();
+  // @@protoc_insertion_point(field_mutable:proto.UpdateProjectRequest.RequestMetaInfo)
   return _msg;
 }
-inline void UpdateProjectRequest::set_allocated_userinfo(::proto::UserMetaInfoV1* userinfo) {
+inline void UpdateProjectRequest::set_allocated_requestmetainfo(::proto::RequestMetaInfoV1* requestmetainfo) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userinfo_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.requestmetainfo_);
   }
-  if (userinfo) {
+  if (requestmetainfo) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(userinfo));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(requestmetainfo));
     if (message_arena != submessage_arena) {
-      userinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, userinfo, submessage_arena);
+      requestmetainfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, requestmetainfo, submessage_arena);
     }
     
   } else {
     
   }
-  _impl_.userinfo_ = userinfo;
-  // @@protoc_insertion_point(field_set_allocated:proto.UpdateProjectRequest.UserInfo)
+  _impl_.requestmetainfo_ = requestmetainfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.UpdateProjectRequest.RequestMetaInfo)
 }
 
-// .proto.ProjectMetaInfoV1 ProjectInfo = 2;
+// .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
+inline bool UpdateProjectRequest::_internal_has_userverifyinfo() const {
+  return this != internal_default_instance() && _impl_.userverifyinfo_ != nullptr;
+}
+inline bool UpdateProjectRequest::has_userverifyinfo() const {
+  return _internal_has_userverifyinfo();
+}
+inline const ::proto::UserVerifyInfoV1& UpdateProjectRequest::_internal_userverifyinfo() const {
+  const ::proto::UserVerifyInfoV1* p = _impl_.userverifyinfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::UserVerifyInfoV1&>(
+      ::proto::_UserVerifyInfoV1_default_instance_);
+}
+inline const ::proto::UserVerifyInfoV1& UpdateProjectRequest::userverifyinfo() const {
+  // @@protoc_insertion_point(field_get:proto.UpdateProjectRequest.UserVerifyInfo)
+  return _internal_userverifyinfo();
+}
+inline void UpdateProjectRequest::unsafe_arena_set_allocated_userverifyinfo(
+    ::proto::UserVerifyInfoV1* userverifyinfo) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userverifyinfo_);
+  }
+  _impl_.userverifyinfo_ = userverifyinfo;
+  if (userverifyinfo) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.UpdateProjectRequest.UserVerifyInfo)
+}
+inline ::proto::UserVerifyInfoV1* UpdateProjectRequest::release_userverifyinfo() {
+  
+  ::proto::UserVerifyInfoV1* temp = _impl_.userverifyinfo_;
+  _impl_.userverifyinfo_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::proto::UserVerifyInfoV1* UpdateProjectRequest::unsafe_arena_release_userverifyinfo() {
+  // @@protoc_insertion_point(field_release:proto.UpdateProjectRequest.UserVerifyInfo)
+  
+  ::proto::UserVerifyInfoV1* temp = _impl_.userverifyinfo_;
+  _impl_.userverifyinfo_ = nullptr;
+  return temp;
+}
+inline ::proto::UserVerifyInfoV1* UpdateProjectRequest::_internal_mutable_userverifyinfo() {
+  
+  if (_impl_.userverifyinfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::UserVerifyInfoV1>(GetArenaForAllocation());
+    _impl_.userverifyinfo_ = p;
+  }
+  return _impl_.userverifyinfo_;
+}
+inline ::proto::UserVerifyInfoV1* UpdateProjectRequest::mutable_userverifyinfo() {
+  ::proto::UserVerifyInfoV1* _msg = _internal_mutable_userverifyinfo();
+  // @@protoc_insertion_point(field_mutable:proto.UpdateProjectRequest.UserVerifyInfo)
+  return _msg;
+}
+inline void UpdateProjectRequest::set_allocated_userverifyinfo(::proto::UserVerifyInfoV1* userverifyinfo) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userverifyinfo_);
+  }
+  if (userverifyinfo) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(userverifyinfo));
+    if (message_arena != submessage_arena) {
+      userverifyinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, userverifyinfo, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  _impl_.userverifyinfo_ = userverifyinfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.UpdateProjectRequest.UserVerifyInfo)
+}
+
+// .proto.ProjectMetaInfoV1 ProjectInfo = 3;
 inline bool UpdateProjectRequest::_internal_has_projectinfo() const {
   return this != internal_default_instance() && _impl_.projectinfo_ != nullptr;
 }
@@ -9178,39 +11224,39 @@ inline void UpdateProjectRequest::set_allocated_projectinfo(::proto::ProjectMeta
 
 // GetProjectRequest
 
-// .proto.UserMetaInfoV1 UserInfo = 1;
-inline bool GetProjectRequest::_internal_has_userinfo() const {
-  return this != internal_default_instance() && _impl_.userinfo_ != nullptr;
+// .proto.RequestMetaInfoV1 RequestMetaInfo = 1;
+inline bool GetProjectRequest::_internal_has_requestmetainfo() const {
+  return this != internal_default_instance() && _impl_.requestmetainfo_ != nullptr;
 }
-inline bool GetProjectRequest::has_userinfo() const {
-  return _internal_has_userinfo();
+inline bool GetProjectRequest::has_requestmetainfo() const {
+  return _internal_has_requestmetainfo();
 }
-inline const ::proto::UserMetaInfoV1& GetProjectRequest::_internal_userinfo() const {
-  const ::proto::UserMetaInfoV1* p = _impl_.userinfo_;
-  return p != nullptr ? *p : reinterpret_cast<const ::proto::UserMetaInfoV1&>(
-      ::proto::_UserMetaInfoV1_default_instance_);
+inline const ::proto::RequestMetaInfoV1& GetProjectRequest::_internal_requestmetainfo() const {
+  const ::proto::RequestMetaInfoV1* p = _impl_.requestmetainfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::RequestMetaInfoV1&>(
+      ::proto::_RequestMetaInfoV1_default_instance_);
 }
-inline const ::proto::UserMetaInfoV1& GetProjectRequest::userinfo() const {
-  // @@protoc_insertion_point(field_get:proto.GetProjectRequest.UserInfo)
-  return _internal_userinfo();
+inline const ::proto::RequestMetaInfoV1& GetProjectRequest::requestmetainfo() const {
+  // @@protoc_insertion_point(field_get:proto.GetProjectRequest.RequestMetaInfo)
+  return _internal_requestmetainfo();
 }
-inline void GetProjectRequest::unsafe_arena_set_allocated_userinfo(
-    ::proto::UserMetaInfoV1* userinfo) {
+inline void GetProjectRequest::unsafe_arena_set_allocated_requestmetainfo(
+    ::proto::RequestMetaInfoV1* requestmetainfo) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userinfo_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.requestmetainfo_);
   }
-  _impl_.userinfo_ = userinfo;
-  if (userinfo) {
+  _impl_.requestmetainfo_ = requestmetainfo;
+  if (requestmetainfo) {
     
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.GetProjectRequest.UserInfo)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.GetProjectRequest.RequestMetaInfo)
 }
-inline ::proto::UserMetaInfoV1* GetProjectRequest::release_userinfo() {
+inline ::proto::RequestMetaInfoV1* GetProjectRequest::release_requestmetainfo() {
   
-  ::proto::UserMetaInfoV1* temp = _impl_.userinfo_;
-  _impl_.userinfo_ = nullptr;
+  ::proto::RequestMetaInfoV1* temp = _impl_.requestmetainfo_;
+  _impl_.requestmetainfo_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -9222,80 +11268,80 @@ inline ::proto::UserMetaInfoV1* GetProjectRequest::release_userinfo() {
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::proto::UserMetaInfoV1* GetProjectRequest::unsafe_arena_release_userinfo() {
-  // @@protoc_insertion_point(field_release:proto.GetProjectRequest.UserInfo)
+inline ::proto::RequestMetaInfoV1* GetProjectRequest::unsafe_arena_release_requestmetainfo() {
+  // @@protoc_insertion_point(field_release:proto.GetProjectRequest.RequestMetaInfo)
   
-  ::proto::UserMetaInfoV1* temp = _impl_.userinfo_;
-  _impl_.userinfo_ = nullptr;
+  ::proto::RequestMetaInfoV1* temp = _impl_.requestmetainfo_;
+  _impl_.requestmetainfo_ = nullptr;
   return temp;
 }
-inline ::proto::UserMetaInfoV1* GetProjectRequest::_internal_mutable_userinfo() {
+inline ::proto::RequestMetaInfoV1* GetProjectRequest::_internal_mutable_requestmetainfo() {
   
-  if (_impl_.userinfo_ == nullptr) {
-    auto* p = CreateMaybeMessage<::proto::UserMetaInfoV1>(GetArenaForAllocation());
-    _impl_.userinfo_ = p;
+  if (_impl_.requestmetainfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::RequestMetaInfoV1>(GetArenaForAllocation());
+    _impl_.requestmetainfo_ = p;
   }
-  return _impl_.userinfo_;
+  return _impl_.requestmetainfo_;
 }
-inline ::proto::UserMetaInfoV1* GetProjectRequest::mutable_userinfo() {
-  ::proto::UserMetaInfoV1* _msg = _internal_mutable_userinfo();
-  // @@protoc_insertion_point(field_mutable:proto.GetProjectRequest.UserInfo)
+inline ::proto::RequestMetaInfoV1* GetProjectRequest::mutable_requestmetainfo() {
+  ::proto::RequestMetaInfoV1* _msg = _internal_mutable_requestmetainfo();
+  // @@protoc_insertion_point(field_mutable:proto.GetProjectRequest.RequestMetaInfo)
   return _msg;
 }
-inline void GetProjectRequest::set_allocated_userinfo(::proto::UserMetaInfoV1* userinfo) {
+inline void GetProjectRequest::set_allocated_requestmetainfo(::proto::RequestMetaInfoV1* requestmetainfo) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userinfo_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.requestmetainfo_);
   }
-  if (userinfo) {
+  if (requestmetainfo) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(userinfo));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(requestmetainfo));
     if (message_arena != submessage_arena) {
-      userinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, userinfo, submessage_arena);
+      requestmetainfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, requestmetainfo, submessage_arena);
     }
     
   } else {
     
   }
-  _impl_.userinfo_ = userinfo;
-  // @@protoc_insertion_point(field_set_allocated:proto.GetProjectRequest.UserInfo)
+  _impl_.requestmetainfo_ = requestmetainfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.GetProjectRequest.RequestMetaInfo)
 }
 
-// .proto.ProjectMetaInfoV1 ProjectInfo = 2;
-inline bool GetProjectRequest::_internal_has_projectinfo() const {
-  return this != internal_default_instance() && _impl_.projectinfo_ != nullptr;
+// .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
+inline bool GetProjectRequest::_internal_has_userverifyinfo() const {
+  return this != internal_default_instance() && _impl_.userverifyinfo_ != nullptr;
 }
-inline bool GetProjectRequest::has_projectinfo() const {
-  return _internal_has_projectinfo();
+inline bool GetProjectRequest::has_userverifyinfo() const {
+  return _internal_has_userverifyinfo();
 }
-inline const ::proto::ProjectMetaInfoV1& GetProjectRequest::_internal_projectinfo() const {
-  const ::proto::ProjectMetaInfoV1* p = _impl_.projectinfo_;
-  return p != nullptr ? *p : reinterpret_cast<const ::proto::ProjectMetaInfoV1&>(
-      ::proto::_ProjectMetaInfoV1_default_instance_);
+inline const ::proto::UserVerifyInfoV1& GetProjectRequest::_internal_userverifyinfo() const {
+  const ::proto::UserVerifyInfoV1* p = _impl_.userverifyinfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::UserVerifyInfoV1&>(
+      ::proto::_UserVerifyInfoV1_default_instance_);
 }
-inline const ::proto::ProjectMetaInfoV1& GetProjectRequest::projectinfo() const {
-  // @@protoc_insertion_point(field_get:proto.GetProjectRequest.ProjectInfo)
-  return _internal_projectinfo();
+inline const ::proto::UserVerifyInfoV1& GetProjectRequest::userverifyinfo() const {
+  // @@protoc_insertion_point(field_get:proto.GetProjectRequest.UserVerifyInfo)
+  return _internal_userverifyinfo();
 }
-inline void GetProjectRequest::unsafe_arena_set_allocated_projectinfo(
-    ::proto::ProjectMetaInfoV1* projectinfo) {
+inline void GetProjectRequest::unsafe_arena_set_allocated_userverifyinfo(
+    ::proto::UserVerifyInfoV1* userverifyinfo) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.projectinfo_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userverifyinfo_);
   }
-  _impl_.projectinfo_ = projectinfo;
-  if (projectinfo) {
+  _impl_.userverifyinfo_ = userverifyinfo;
+  if (userverifyinfo) {
     
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.GetProjectRequest.ProjectInfo)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.GetProjectRequest.UserVerifyInfo)
 }
-inline ::proto::ProjectMetaInfoV1* GetProjectRequest::release_projectinfo() {
+inline ::proto::UserVerifyInfoV1* GetProjectRequest::release_userverifyinfo() {
   
-  ::proto::ProjectMetaInfoV1* temp = _impl_.projectinfo_;
-  _impl_.projectinfo_ = nullptr;
+  ::proto::UserVerifyInfoV1* temp = _impl_.userverifyinfo_;
+  _impl_.userverifyinfo_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -9307,84 +11353,134 @@ inline ::proto::ProjectMetaInfoV1* GetProjectRequest::release_projectinfo() {
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::proto::ProjectMetaInfoV1* GetProjectRequest::unsafe_arena_release_projectinfo() {
-  // @@protoc_insertion_point(field_release:proto.GetProjectRequest.ProjectInfo)
+inline ::proto::UserVerifyInfoV1* GetProjectRequest::unsafe_arena_release_userverifyinfo() {
+  // @@protoc_insertion_point(field_release:proto.GetProjectRequest.UserVerifyInfo)
   
-  ::proto::ProjectMetaInfoV1* temp = _impl_.projectinfo_;
-  _impl_.projectinfo_ = nullptr;
+  ::proto::UserVerifyInfoV1* temp = _impl_.userverifyinfo_;
+  _impl_.userverifyinfo_ = nullptr;
   return temp;
 }
-inline ::proto::ProjectMetaInfoV1* GetProjectRequest::_internal_mutable_projectinfo() {
+inline ::proto::UserVerifyInfoV1* GetProjectRequest::_internal_mutable_userverifyinfo() {
   
-  if (_impl_.projectinfo_ == nullptr) {
-    auto* p = CreateMaybeMessage<::proto::ProjectMetaInfoV1>(GetArenaForAllocation());
-    _impl_.projectinfo_ = p;
+  if (_impl_.userverifyinfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::UserVerifyInfoV1>(GetArenaForAllocation());
+    _impl_.userverifyinfo_ = p;
   }
-  return _impl_.projectinfo_;
+  return _impl_.userverifyinfo_;
 }
-inline ::proto::ProjectMetaInfoV1* GetProjectRequest::mutable_projectinfo() {
-  ::proto::ProjectMetaInfoV1* _msg = _internal_mutable_projectinfo();
-  // @@protoc_insertion_point(field_mutable:proto.GetProjectRequest.ProjectInfo)
+inline ::proto::UserVerifyInfoV1* GetProjectRequest::mutable_userverifyinfo() {
+  ::proto::UserVerifyInfoV1* _msg = _internal_mutable_userverifyinfo();
+  // @@protoc_insertion_point(field_mutable:proto.GetProjectRequest.UserVerifyInfo)
   return _msg;
 }
-inline void GetProjectRequest::set_allocated_projectinfo(::proto::ProjectMetaInfoV1* projectinfo) {
+inline void GetProjectRequest::set_allocated_userverifyinfo(::proto::UserVerifyInfoV1* userverifyinfo) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.projectinfo_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userverifyinfo_);
   }
-  if (projectinfo) {
+  if (userverifyinfo) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(projectinfo));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(userverifyinfo));
     if (message_arena != submessage_arena) {
-      projectinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, projectinfo, submessage_arena);
+      userverifyinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, userverifyinfo, submessage_arena);
     }
     
   } else {
     
   }
-  _impl_.projectinfo_ = projectinfo;
-  // @@protoc_insertion_point(field_set_allocated:proto.GetProjectRequest.ProjectInfo)
+  _impl_.userverifyinfo_ = userverifyinfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.GetProjectRequest.UserVerifyInfo)
+}
+
+// string ProjectName = 3;
+inline void GetProjectRequest::clear_projectname() {
+  _impl_.projectname_.ClearToEmpty();
+}
+inline const std::string& GetProjectRequest::projectname() const {
+  // @@protoc_insertion_point(field_get:proto.GetProjectRequest.ProjectName)
+  return _internal_projectname();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void GetProjectRequest::set_projectname(ArgT0&& arg0, ArgT... args) {
+ 
+ _impl_.projectname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:proto.GetProjectRequest.ProjectName)
+}
+inline std::string* GetProjectRequest::mutable_projectname() {
+  std::string* _s = _internal_mutable_projectname();
+  // @@protoc_insertion_point(field_mutable:proto.GetProjectRequest.ProjectName)
+  return _s;
+}
+inline const std::string& GetProjectRequest::_internal_projectname() const {
+  return _impl_.projectname_.Get();
+}
+inline void GetProjectRequest::_internal_set_projectname(const std::string& value) {
+  
+  _impl_.projectname_.Set(value, GetArenaForAllocation());
+}
+inline std::string* GetProjectRequest::_internal_mutable_projectname() {
+  
+  return _impl_.projectname_.Mutable(GetArenaForAllocation());
+}
+inline std::string* GetProjectRequest::release_projectname() {
+  // @@protoc_insertion_point(field_release:proto.GetProjectRequest.ProjectName)
+  return _impl_.projectname_.Release();
+}
+inline void GetProjectRequest::set_allocated_projectname(std::string* projectname) {
+  if (projectname != nullptr) {
+    
+  } else {
+    
+  }
+  _impl_.projectname_.SetAllocated(projectname, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.projectname_.IsDefault()) {
+    _impl_.projectname_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:proto.GetProjectRequest.ProjectName)
 }
 
 // -------------------------------------------------------------------
 
 // GetAllProjectRequest
 
-// .proto.UserMetaInfoV1 UserInfo = 1;
-inline bool GetAllProjectRequest::_internal_has_userinfo() const {
-  return this != internal_default_instance() && _impl_.userinfo_ != nullptr;
+// .proto.RequestMetaInfoV1 RequestMetaInfo = 1;
+inline bool GetAllProjectRequest::_internal_has_requestmetainfo() const {
+  return this != internal_default_instance() && _impl_.requestmetainfo_ != nullptr;
 }
-inline bool GetAllProjectRequest::has_userinfo() const {
-  return _internal_has_userinfo();
+inline bool GetAllProjectRequest::has_requestmetainfo() const {
+  return _internal_has_requestmetainfo();
 }
-inline const ::proto::UserMetaInfoV1& GetAllProjectRequest::_internal_userinfo() const {
-  const ::proto::UserMetaInfoV1* p = _impl_.userinfo_;
-  return p != nullptr ? *p : reinterpret_cast<const ::proto::UserMetaInfoV1&>(
-      ::proto::_UserMetaInfoV1_default_instance_);
+inline const ::proto::RequestMetaInfoV1& GetAllProjectRequest::_internal_requestmetainfo() const {
+  const ::proto::RequestMetaInfoV1* p = _impl_.requestmetainfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::RequestMetaInfoV1&>(
+      ::proto::_RequestMetaInfoV1_default_instance_);
 }
-inline const ::proto::UserMetaInfoV1& GetAllProjectRequest::userinfo() const {
-  // @@protoc_insertion_point(field_get:proto.GetAllProjectRequest.UserInfo)
-  return _internal_userinfo();
+inline const ::proto::RequestMetaInfoV1& GetAllProjectRequest::requestmetainfo() const {
+  // @@protoc_insertion_point(field_get:proto.GetAllProjectRequest.RequestMetaInfo)
+  return _internal_requestmetainfo();
 }
-inline void GetAllProjectRequest::unsafe_arena_set_allocated_userinfo(
-    ::proto::UserMetaInfoV1* userinfo) {
+inline void GetAllProjectRequest::unsafe_arena_set_allocated_requestmetainfo(
+    ::proto::RequestMetaInfoV1* requestmetainfo) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userinfo_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.requestmetainfo_);
   }
-  _impl_.userinfo_ = userinfo;
-  if (userinfo) {
+  _impl_.requestmetainfo_ = requestmetainfo;
+  if (requestmetainfo) {
     
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.GetAllProjectRequest.UserInfo)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.GetAllProjectRequest.RequestMetaInfo)
 }
-inline ::proto::UserMetaInfoV1* GetAllProjectRequest::release_userinfo() {
+inline ::proto::RequestMetaInfoV1* GetAllProjectRequest::release_requestmetainfo() {
   
-  ::proto::UserMetaInfoV1* temp = _impl_.userinfo_;
-  _impl_.userinfo_ = nullptr;
+  ::proto::RequestMetaInfoV1* temp = _impl_.requestmetainfo_;
+  _impl_.requestmetainfo_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -9396,84 +11492,169 @@ inline ::proto::UserMetaInfoV1* GetAllProjectRequest::release_userinfo() {
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::proto::UserMetaInfoV1* GetAllProjectRequest::unsafe_arena_release_userinfo() {
-  // @@protoc_insertion_point(field_release:proto.GetAllProjectRequest.UserInfo)
+inline ::proto::RequestMetaInfoV1* GetAllProjectRequest::unsafe_arena_release_requestmetainfo() {
+  // @@protoc_insertion_point(field_release:proto.GetAllProjectRequest.RequestMetaInfo)
   
-  ::proto::UserMetaInfoV1* temp = _impl_.userinfo_;
-  _impl_.userinfo_ = nullptr;
+  ::proto::RequestMetaInfoV1* temp = _impl_.requestmetainfo_;
+  _impl_.requestmetainfo_ = nullptr;
   return temp;
 }
-inline ::proto::UserMetaInfoV1* GetAllProjectRequest::_internal_mutable_userinfo() {
+inline ::proto::RequestMetaInfoV1* GetAllProjectRequest::_internal_mutable_requestmetainfo() {
   
-  if (_impl_.userinfo_ == nullptr) {
-    auto* p = CreateMaybeMessage<::proto::UserMetaInfoV1>(GetArenaForAllocation());
-    _impl_.userinfo_ = p;
+  if (_impl_.requestmetainfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::RequestMetaInfoV1>(GetArenaForAllocation());
+    _impl_.requestmetainfo_ = p;
   }
-  return _impl_.userinfo_;
+  return _impl_.requestmetainfo_;
 }
-inline ::proto::UserMetaInfoV1* GetAllProjectRequest::mutable_userinfo() {
-  ::proto::UserMetaInfoV1* _msg = _internal_mutable_userinfo();
-  // @@protoc_insertion_point(field_mutable:proto.GetAllProjectRequest.UserInfo)
+inline ::proto::RequestMetaInfoV1* GetAllProjectRequest::mutable_requestmetainfo() {
+  ::proto::RequestMetaInfoV1* _msg = _internal_mutable_requestmetainfo();
+  // @@protoc_insertion_point(field_mutable:proto.GetAllProjectRequest.RequestMetaInfo)
   return _msg;
 }
-inline void GetAllProjectRequest::set_allocated_userinfo(::proto::UserMetaInfoV1* userinfo) {
+inline void GetAllProjectRequest::set_allocated_requestmetainfo(::proto::RequestMetaInfoV1* requestmetainfo) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userinfo_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.requestmetainfo_);
   }
-  if (userinfo) {
+  if (requestmetainfo) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(userinfo));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(requestmetainfo));
     if (message_arena != submessage_arena) {
-      userinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, userinfo, submessage_arena);
+      requestmetainfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, requestmetainfo, submessage_arena);
     }
     
   } else {
     
   }
-  _impl_.userinfo_ = userinfo;
-  // @@protoc_insertion_point(field_set_allocated:proto.GetAllProjectRequest.UserInfo)
+  _impl_.requestmetainfo_ = requestmetainfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.GetAllProjectRequest.RequestMetaInfo)
+}
+
+// .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
+inline bool GetAllProjectRequest::_internal_has_userverifyinfo() const {
+  return this != internal_default_instance() && _impl_.userverifyinfo_ != nullptr;
+}
+inline bool GetAllProjectRequest::has_userverifyinfo() const {
+  return _internal_has_userverifyinfo();
+}
+inline const ::proto::UserVerifyInfoV1& GetAllProjectRequest::_internal_userverifyinfo() const {
+  const ::proto::UserVerifyInfoV1* p = _impl_.userverifyinfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::UserVerifyInfoV1&>(
+      ::proto::_UserVerifyInfoV1_default_instance_);
+}
+inline const ::proto::UserVerifyInfoV1& GetAllProjectRequest::userverifyinfo() const {
+  // @@protoc_insertion_point(field_get:proto.GetAllProjectRequest.UserVerifyInfo)
+  return _internal_userverifyinfo();
+}
+inline void GetAllProjectRequest::unsafe_arena_set_allocated_userverifyinfo(
+    ::proto::UserVerifyInfoV1* userverifyinfo) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userverifyinfo_);
+  }
+  _impl_.userverifyinfo_ = userverifyinfo;
+  if (userverifyinfo) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.GetAllProjectRequest.UserVerifyInfo)
+}
+inline ::proto::UserVerifyInfoV1* GetAllProjectRequest::release_userverifyinfo() {
+  
+  ::proto::UserVerifyInfoV1* temp = _impl_.userverifyinfo_;
+  _impl_.userverifyinfo_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::proto::UserVerifyInfoV1* GetAllProjectRequest::unsafe_arena_release_userverifyinfo() {
+  // @@protoc_insertion_point(field_release:proto.GetAllProjectRequest.UserVerifyInfo)
+  
+  ::proto::UserVerifyInfoV1* temp = _impl_.userverifyinfo_;
+  _impl_.userverifyinfo_ = nullptr;
+  return temp;
+}
+inline ::proto::UserVerifyInfoV1* GetAllProjectRequest::_internal_mutable_userverifyinfo() {
+  
+  if (_impl_.userverifyinfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::UserVerifyInfoV1>(GetArenaForAllocation());
+    _impl_.userverifyinfo_ = p;
+  }
+  return _impl_.userverifyinfo_;
+}
+inline ::proto::UserVerifyInfoV1* GetAllProjectRequest::mutable_userverifyinfo() {
+  ::proto::UserVerifyInfoV1* _msg = _internal_mutable_userverifyinfo();
+  // @@protoc_insertion_point(field_mutable:proto.GetAllProjectRequest.UserVerifyInfo)
+  return _msg;
+}
+inline void GetAllProjectRequest::set_allocated_userverifyinfo(::proto::UserVerifyInfoV1* userverifyinfo) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userverifyinfo_);
+  }
+  if (userverifyinfo) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(userverifyinfo));
+    if (message_arena != submessage_arena) {
+      userverifyinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, userverifyinfo, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  _impl_.userverifyinfo_ = userverifyinfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.GetAllProjectRequest.UserVerifyInfo)
 }
 
 // -------------------------------------------------------------------
 
 // CreateSwcRequest
 
-// .proto.UserMetaInfoV1 UserInfo = 1;
-inline bool CreateSwcRequest::_internal_has_userinfo() const {
-  return this != internal_default_instance() && _impl_.userinfo_ != nullptr;
+// .proto.RequestMetaInfoV1 RequestMetaInfo = 1;
+inline bool CreateSwcRequest::_internal_has_requestmetainfo() const {
+  return this != internal_default_instance() && _impl_.requestmetainfo_ != nullptr;
 }
-inline bool CreateSwcRequest::has_userinfo() const {
-  return _internal_has_userinfo();
+inline bool CreateSwcRequest::has_requestmetainfo() const {
+  return _internal_has_requestmetainfo();
 }
-inline const ::proto::UserMetaInfoV1& CreateSwcRequest::_internal_userinfo() const {
-  const ::proto::UserMetaInfoV1* p = _impl_.userinfo_;
-  return p != nullptr ? *p : reinterpret_cast<const ::proto::UserMetaInfoV1&>(
-      ::proto::_UserMetaInfoV1_default_instance_);
+inline const ::proto::RequestMetaInfoV1& CreateSwcRequest::_internal_requestmetainfo() const {
+  const ::proto::RequestMetaInfoV1* p = _impl_.requestmetainfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::RequestMetaInfoV1&>(
+      ::proto::_RequestMetaInfoV1_default_instance_);
 }
-inline const ::proto::UserMetaInfoV1& CreateSwcRequest::userinfo() const {
-  // @@protoc_insertion_point(field_get:proto.CreateSwcRequest.UserInfo)
-  return _internal_userinfo();
+inline const ::proto::RequestMetaInfoV1& CreateSwcRequest::requestmetainfo() const {
+  // @@protoc_insertion_point(field_get:proto.CreateSwcRequest.RequestMetaInfo)
+  return _internal_requestmetainfo();
 }
-inline void CreateSwcRequest::unsafe_arena_set_allocated_userinfo(
-    ::proto::UserMetaInfoV1* userinfo) {
+inline void CreateSwcRequest::unsafe_arena_set_allocated_requestmetainfo(
+    ::proto::RequestMetaInfoV1* requestmetainfo) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userinfo_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.requestmetainfo_);
   }
-  _impl_.userinfo_ = userinfo;
-  if (userinfo) {
+  _impl_.requestmetainfo_ = requestmetainfo;
+  if (requestmetainfo) {
     
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.CreateSwcRequest.UserInfo)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.CreateSwcRequest.RequestMetaInfo)
 }
-inline ::proto::UserMetaInfoV1* CreateSwcRequest::release_userinfo() {
+inline ::proto::RequestMetaInfoV1* CreateSwcRequest::release_requestmetainfo() {
   
-  ::proto::UserMetaInfoV1* temp = _impl_.userinfo_;
-  _impl_.userinfo_ = nullptr;
+  ::proto::RequestMetaInfoV1* temp = _impl_.requestmetainfo_;
+  _impl_.requestmetainfo_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -9485,48 +11666,133 @@ inline ::proto::UserMetaInfoV1* CreateSwcRequest::release_userinfo() {
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::proto::UserMetaInfoV1* CreateSwcRequest::unsafe_arena_release_userinfo() {
-  // @@protoc_insertion_point(field_release:proto.CreateSwcRequest.UserInfo)
+inline ::proto::RequestMetaInfoV1* CreateSwcRequest::unsafe_arena_release_requestmetainfo() {
+  // @@protoc_insertion_point(field_release:proto.CreateSwcRequest.RequestMetaInfo)
   
-  ::proto::UserMetaInfoV1* temp = _impl_.userinfo_;
-  _impl_.userinfo_ = nullptr;
+  ::proto::RequestMetaInfoV1* temp = _impl_.requestmetainfo_;
+  _impl_.requestmetainfo_ = nullptr;
   return temp;
 }
-inline ::proto::UserMetaInfoV1* CreateSwcRequest::_internal_mutable_userinfo() {
+inline ::proto::RequestMetaInfoV1* CreateSwcRequest::_internal_mutable_requestmetainfo() {
   
-  if (_impl_.userinfo_ == nullptr) {
-    auto* p = CreateMaybeMessage<::proto::UserMetaInfoV1>(GetArenaForAllocation());
-    _impl_.userinfo_ = p;
+  if (_impl_.requestmetainfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::RequestMetaInfoV1>(GetArenaForAllocation());
+    _impl_.requestmetainfo_ = p;
   }
-  return _impl_.userinfo_;
+  return _impl_.requestmetainfo_;
 }
-inline ::proto::UserMetaInfoV1* CreateSwcRequest::mutable_userinfo() {
-  ::proto::UserMetaInfoV1* _msg = _internal_mutable_userinfo();
-  // @@protoc_insertion_point(field_mutable:proto.CreateSwcRequest.UserInfo)
+inline ::proto::RequestMetaInfoV1* CreateSwcRequest::mutable_requestmetainfo() {
+  ::proto::RequestMetaInfoV1* _msg = _internal_mutable_requestmetainfo();
+  // @@protoc_insertion_point(field_mutable:proto.CreateSwcRequest.RequestMetaInfo)
   return _msg;
 }
-inline void CreateSwcRequest::set_allocated_userinfo(::proto::UserMetaInfoV1* userinfo) {
+inline void CreateSwcRequest::set_allocated_requestmetainfo(::proto::RequestMetaInfoV1* requestmetainfo) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userinfo_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.requestmetainfo_);
   }
-  if (userinfo) {
+  if (requestmetainfo) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(userinfo));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(requestmetainfo));
     if (message_arena != submessage_arena) {
-      userinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, userinfo, submessage_arena);
+      requestmetainfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, requestmetainfo, submessage_arena);
     }
     
   } else {
     
   }
-  _impl_.userinfo_ = userinfo;
-  // @@protoc_insertion_point(field_set_allocated:proto.CreateSwcRequest.UserInfo)
+  _impl_.requestmetainfo_ = requestmetainfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.CreateSwcRequest.RequestMetaInfo)
 }
 
-// .proto.SwcMetaInfoV1 SwcInfo = 2;
+// .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
+inline bool CreateSwcRequest::_internal_has_userverifyinfo() const {
+  return this != internal_default_instance() && _impl_.userverifyinfo_ != nullptr;
+}
+inline bool CreateSwcRequest::has_userverifyinfo() const {
+  return _internal_has_userverifyinfo();
+}
+inline const ::proto::UserVerifyInfoV1& CreateSwcRequest::_internal_userverifyinfo() const {
+  const ::proto::UserVerifyInfoV1* p = _impl_.userverifyinfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::UserVerifyInfoV1&>(
+      ::proto::_UserVerifyInfoV1_default_instance_);
+}
+inline const ::proto::UserVerifyInfoV1& CreateSwcRequest::userverifyinfo() const {
+  // @@protoc_insertion_point(field_get:proto.CreateSwcRequest.UserVerifyInfo)
+  return _internal_userverifyinfo();
+}
+inline void CreateSwcRequest::unsafe_arena_set_allocated_userverifyinfo(
+    ::proto::UserVerifyInfoV1* userverifyinfo) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userverifyinfo_);
+  }
+  _impl_.userverifyinfo_ = userverifyinfo;
+  if (userverifyinfo) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.CreateSwcRequest.UserVerifyInfo)
+}
+inline ::proto::UserVerifyInfoV1* CreateSwcRequest::release_userverifyinfo() {
+  
+  ::proto::UserVerifyInfoV1* temp = _impl_.userverifyinfo_;
+  _impl_.userverifyinfo_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::proto::UserVerifyInfoV1* CreateSwcRequest::unsafe_arena_release_userverifyinfo() {
+  // @@protoc_insertion_point(field_release:proto.CreateSwcRequest.UserVerifyInfo)
+  
+  ::proto::UserVerifyInfoV1* temp = _impl_.userverifyinfo_;
+  _impl_.userverifyinfo_ = nullptr;
+  return temp;
+}
+inline ::proto::UserVerifyInfoV1* CreateSwcRequest::_internal_mutable_userverifyinfo() {
+  
+  if (_impl_.userverifyinfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::UserVerifyInfoV1>(GetArenaForAllocation());
+    _impl_.userverifyinfo_ = p;
+  }
+  return _impl_.userverifyinfo_;
+}
+inline ::proto::UserVerifyInfoV1* CreateSwcRequest::mutable_userverifyinfo() {
+  ::proto::UserVerifyInfoV1* _msg = _internal_mutable_userverifyinfo();
+  // @@protoc_insertion_point(field_mutable:proto.CreateSwcRequest.UserVerifyInfo)
+  return _msg;
+}
+inline void CreateSwcRequest::set_allocated_userverifyinfo(::proto::UserVerifyInfoV1* userverifyinfo) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userverifyinfo_);
+  }
+  if (userverifyinfo) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(userverifyinfo));
+    if (message_arena != submessage_arena) {
+      userverifyinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, userverifyinfo, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  _impl_.userverifyinfo_ = userverifyinfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.CreateSwcRequest.UserVerifyInfo)
+}
+
+// .proto.SwcMetaInfoV1 SwcInfo = 3;
 inline bool CreateSwcRequest::_internal_has_swcinfo() const {
   return this != internal_default_instance() && _impl_.swcinfo_ != nullptr;
 }
@@ -9615,39 +11881,39 @@ inline void CreateSwcRequest::set_allocated_swcinfo(::proto::SwcMetaInfoV1* swci
 
 // DeleteSwcRequest
 
-// .proto.UserMetaInfoV1 UserInfo = 1;
-inline bool DeleteSwcRequest::_internal_has_userinfo() const {
-  return this != internal_default_instance() && _impl_.userinfo_ != nullptr;
+// .proto.RequestMetaInfoV1 RequestMetaInfo = 1;
+inline bool DeleteSwcRequest::_internal_has_requestmetainfo() const {
+  return this != internal_default_instance() && _impl_.requestmetainfo_ != nullptr;
 }
-inline bool DeleteSwcRequest::has_userinfo() const {
-  return _internal_has_userinfo();
+inline bool DeleteSwcRequest::has_requestmetainfo() const {
+  return _internal_has_requestmetainfo();
 }
-inline const ::proto::UserMetaInfoV1& DeleteSwcRequest::_internal_userinfo() const {
-  const ::proto::UserMetaInfoV1* p = _impl_.userinfo_;
-  return p != nullptr ? *p : reinterpret_cast<const ::proto::UserMetaInfoV1&>(
-      ::proto::_UserMetaInfoV1_default_instance_);
+inline const ::proto::RequestMetaInfoV1& DeleteSwcRequest::_internal_requestmetainfo() const {
+  const ::proto::RequestMetaInfoV1* p = _impl_.requestmetainfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::RequestMetaInfoV1&>(
+      ::proto::_RequestMetaInfoV1_default_instance_);
 }
-inline const ::proto::UserMetaInfoV1& DeleteSwcRequest::userinfo() const {
-  // @@protoc_insertion_point(field_get:proto.DeleteSwcRequest.UserInfo)
-  return _internal_userinfo();
+inline const ::proto::RequestMetaInfoV1& DeleteSwcRequest::requestmetainfo() const {
+  // @@protoc_insertion_point(field_get:proto.DeleteSwcRequest.RequestMetaInfo)
+  return _internal_requestmetainfo();
 }
-inline void DeleteSwcRequest::unsafe_arena_set_allocated_userinfo(
-    ::proto::UserMetaInfoV1* userinfo) {
+inline void DeleteSwcRequest::unsafe_arena_set_allocated_requestmetainfo(
+    ::proto::RequestMetaInfoV1* requestmetainfo) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userinfo_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.requestmetainfo_);
   }
-  _impl_.userinfo_ = userinfo;
-  if (userinfo) {
+  _impl_.requestmetainfo_ = requestmetainfo;
+  if (requestmetainfo) {
     
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.DeleteSwcRequest.UserInfo)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.DeleteSwcRequest.RequestMetaInfo)
 }
-inline ::proto::UserMetaInfoV1* DeleteSwcRequest::release_userinfo() {
+inline ::proto::RequestMetaInfoV1* DeleteSwcRequest::release_requestmetainfo() {
   
-  ::proto::UserMetaInfoV1* temp = _impl_.userinfo_;
-  _impl_.userinfo_ = nullptr;
+  ::proto::RequestMetaInfoV1* temp = _impl_.requestmetainfo_;
+  _impl_.requestmetainfo_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -9659,80 +11925,80 @@ inline ::proto::UserMetaInfoV1* DeleteSwcRequest::release_userinfo() {
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::proto::UserMetaInfoV1* DeleteSwcRequest::unsafe_arena_release_userinfo() {
-  // @@protoc_insertion_point(field_release:proto.DeleteSwcRequest.UserInfo)
+inline ::proto::RequestMetaInfoV1* DeleteSwcRequest::unsafe_arena_release_requestmetainfo() {
+  // @@protoc_insertion_point(field_release:proto.DeleteSwcRequest.RequestMetaInfo)
   
-  ::proto::UserMetaInfoV1* temp = _impl_.userinfo_;
-  _impl_.userinfo_ = nullptr;
+  ::proto::RequestMetaInfoV1* temp = _impl_.requestmetainfo_;
+  _impl_.requestmetainfo_ = nullptr;
   return temp;
 }
-inline ::proto::UserMetaInfoV1* DeleteSwcRequest::_internal_mutable_userinfo() {
+inline ::proto::RequestMetaInfoV1* DeleteSwcRequest::_internal_mutable_requestmetainfo() {
   
-  if (_impl_.userinfo_ == nullptr) {
-    auto* p = CreateMaybeMessage<::proto::UserMetaInfoV1>(GetArenaForAllocation());
-    _impl_.userinfo_ = p;
+  if (_impl_.requestmetainfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::RequestMetaInfoV1>(GetArenaForAllocation());
+    _impl_.requestmetainfo_ = p;
   }
-  return _impl_.userinfo_;
+  return _impl_.requestmetainfo_;
 }
-inline ::proto::UserMetaInfoV1* DeleteSwcRequest::mutable_userinfo() {
-  ::proto::UserMetaInfoV1* _msg = _internal_mutable_userinfo();
-  // @@protoc_insertion_point(field_mutable:proto.DeleteSwcRequest.UserInfo)
+inline ::proto::RequestMetaInfoV1* DeleteSwcRequest::mutable_requestmetainfo() {
+  ::proto::RequestMetaInfoV1* _msg = _internal_mutable_requestmetainfo();
+  // @@protoc_insertion_point(field_mutable:proto.DeleteSwcRequest.RequestMetaInfo)
   return _msg;
 }
-inline void DeleteSwcRequest::set_allocated_userinfo(::proto::UserMetaInfoV1* userinfo) {
+inline void DeleteSwcRequest::set_allocated_requestmetainfo(::proto::RequestMetaInfoV1* requestmetainfo) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userinfo_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.requestmetainfo_);
   }
-  if (userinfo) {
+  if (requestmetainfo) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(userinfo));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(requestmetainfo));
     if (message_arena != submessage_arena) {
-      userinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, userinfo, submessage_arena);
+      requestmetainfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, requestmetainfo, submessage_arena);
     }
     
   } else {
     
   }
-  _impl_.userinfo_ = userinfo;
-  // @@protoc_insertion_point(field_set_allocated:proto.DeleteSwcRequest.UserInfo)
+  _impl_.requestmetainfo_ = requestmetainfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.DeleteSwcRequest.RequestMetaInfo)
 }
 
-// .proto.SwcMetaInfoV1 SwcInfo = 2;
-inline bool DeleteSwcRequest::_internal_has_swcinfo() const {
-  return this != internal_default_instance() && _impl_.swcinfo_ != nullptr;
+// .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
+inline bool DeleteSwcRequest::_internal_has_userverifyinfo() const {
+  return this != internal_default_instance() && _impl_.userverifyinfo_ != nullptr;
 }
-inline bool DeleteSwcRequest::has_swcinfo() const {
-  return _internal_has_swcinfo();
+inline bool DeleteSwcRequest::has_userverifyinfo() const {
+  return _internal_has_userverifyinfo();
 }
-inline const ::proto::SwcMetaInfoV1& DeleteSwcRequest::_internal_swcinfo() const {
-  const ::proto::SwcMetaInfoV1* p = _impl_.swcinfo_;
-  return p != nullptr ? *p : reinterpret_cast<const ::proto::SwcMetaInfoV1&>(
-      ::proto::_SwcMetaInfoV1_default_instance_);
+inline const ::proto::UserVerifyInfoV1& DeleteSwcRequest::_internal_userverifyinfo() const {
+  const ::proto::UserVerifyInfoV1* p = _impl_.userverifyinfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::UserVerifyInfoV1&>(
+      ::proto::_UserVerifyInfoV1_default_instance_);
 }
-inline const ::proto::SwcMetaInfoV1& DeleteSwcRequest::swcinfo() const {
-  // @@protoc_insertion_point(field_get:proto.DeleteSwcRequest.SwcInfo)
-  return _internal_swcinfo();
+inline const ::proto::UserVerifyInfoV1& DeleteSwcRequest::userverifyinfo() const {
+  // @@protoc_insertion_point(field_get:proto.DeleteSwcRequest.UserVerifyInfo)
+  return _internal_userverifyinfo();
 }
-inline void DeleteSwcRequest::unsafe_arena_set_allocated_swcinfo(
-    ::proto::SwcMetaInfoV1* swcinfo) {
+inline void DeleteSwcRequest::unsafe_arena_set_allocated_userverifyinfo(
+    ::proto::UserVerifyInfoV1* userverifyinfo) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.swcinfo_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userverifyinfo_);
   }
-  _impl_.swcinfo_ = swcinfo;
-  if (swcinfo) {
+  _impl_.userverifyinfo_ = userverifyinfo;
+  if (userverifyinfo) {
     
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.DeleteSwcRequest.SwcInfo)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.DeleteSwcRequest.UserVerifyInfo)
 }
-inline ::proto::SwcMetaInfoV1* DeleteSwcRequest::release_swcinfo() {
+inline ::proto::UserVerifyInfoV1* DeleteSwcRequest::release_userverifyinfo() {
   
-  ::proto::SwcMetaInfoV1* temp = _impl_.swcinfo_;
-  _impl_.swcinfo_ = nullptr;
+  ::proto::UserVerifyInfoV1* temp = _impl_.userverifyinfo_;
+  _impl_.userverifyinfo_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -9744,84 +12010,134 @@ inline ::proto::SwcMetaInfoV1* DeleteSwcRequest::release_swcinfo() {
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::proto::SwcMetaInfoV1* DeleteSwcRequest::unsafe_arena_release_swcinfo() {
-  // @@protoc_insertion_point(field_release:proto.DeleteSwcRequest.SwcInfo)
+inline ::proto::UserVerifyInfoV1* DeleteSwcRequest::unsafe_arena_release_userverifyinfo() {
+  // @@protoc_insertion_point(field_release:proto.DeleteSwcRequest.UserVerifyInfo)
   
-  ::proto::SwcMetaInfoV1* temp = _impl_.swcinfo_;
-  _impl_.swcinfo_ = nullptr;
+  ::proto::UserVerifyInfoV1* temp = _impl_.userverifyinfo_;
+  _impl_.userverifyinfo_ = nullptr;
   return temp;
 }
-inline ::proto::SwcMetaInfoV1* DeleteSwcRequest::_internal_mutable_swcinfo() {
+inline ::proto::UserVerifyInfoV1* DeleteSwcRequest::_internal_mutable_userverifyinfo() {
   
-  if (_impl_.swcinfo_ == nullptr) {
-    auto* p = CreateMaybeMessage<::proto::SwcMetaInfoV1>(GetArenaForAllocation());
-    _impl_.swcinfo_ = p;
+  if (_impl_.userverifyinfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::UserVerifyInfoV1>(GetArenaForAllocation());
+    _impl_.userverifyinfo_ = p;
   }
-  return _impl_.swcinfo_;
+  return _impl_.userverifyinfo_;
 }
-inline ::proto::SwcMetaInfoV1* DeleteSwcRequest::mutable_swcinfo() {
-  ::proto::SwcMetaInfoV1* _msg = _internal_mutable_swcinfo();
-  // @@protoc_insertion_point(field_mutable:proto.DeleteSwcRequest.SwcInfo)
+inline ::proto::UserVerifyInfoV1* DeleteSwcRequest::mutable_userverifyinfo() {
+  ::proto::UserVerifyInfoV1* _msg = _internal_mutable_userverifyinfo();
+  // @@protoc_insertion_point(field_mutable:proto.DeleteSwcRequest.UserVerifyInfo)
   return _msg;
 }
-inline void DeleteSwcRequest::set_allocated_swcinfo(::proto::SwcMetaInfoV1* swcinfo) {
+inline void DeleteSwcRequest::set_allocated_userverifyinfo(::proto::UserVerifyInfoV1* userverifyinfo) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.swcinfo_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userverifyinfo_);
   }
-  if (swcinfo) {
+  if (userverifyinfo) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(swcinfo));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(userverifyinfo));
     if (message_arena != submessage_arena) {
-      swcinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, swcinfo, submessage_arena);
+      userverifyinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, userverifyinfo, submessage_arena);
     }
     
   } else {
     
   }
-  _impl_.swcinfo_ = swcinfo;
-  // @@protoc_insertion_point(field_set_allocated:proto.DeleteSwcRequest.SwcInfo)
+  _impl_.userverifyinfo_ = userverifyinfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.DeleteSwcRequest.UserVerifyInfo)
+}
+
+// string SwcName = 3;
+inline void DeleteSwcRequest::clear_swcname() {
+  _impl_.swcname_.ClearToEmpty();
+}
+inline const std::string& DeleteSwcRequest::swcname() const {
+  // @@protoc_insertion_point(field_get:proto.DeleteSwcRequest.SwcName)
+  return _internal_swcname();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void DeleteSwcRequest::set_swcname(ArgT0&& arg0, ArgT... args) {
+ 
+ _impl_.swcname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:proto.DeleteSwcRequest.SwcName)
+}
+inline std::string* DeleteSwcRequest::mutable_swcname() {
+  std::string* _s = _internal_mutable_swcname();
+  // @@protoc_insertion_point(field_mutable:proto.DeleteSwcRequest.SwcName)
+  return _s;
+}
+inline const std::string& DeleteSwcRequest::_internal_swcname() const {
+  return _impl_.swcname_.Get();
+}
+inline void DeleteSwcRequest::_internal_set_swcname(const std::string& value) {
+  
+  _impl_.swcname_.Set(value, GetArenaForAllocation());
+}
+inline std::string* DeleteSwcRequest::_internal_mutable_swcname() {
+  
+  return _impl_.swcname_.Mutable(GetArenaForAllocation());
+}
+inline std::string* DeleteSwcRequest::release_swcname() {
+  // @@protoc_insertion_point(field_release:proto.DeleteSwcRequest.SwcName)
+  return _impl_.swcname_.Release();
+}
+inline void DeleteSwcRequest::set_allocated_swcname(std::string* swcname) {
+  if (swcname != nullptr) {
+    
+  } else {
+    
+  }
+  _impl_.swcname_.SetAllocated(swcname, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.swcname_.IsDefault()) {
+    _impl_.swcname_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:proto.DeleteSwcRequest.SwcName)
 }
 
 // -------------------------------------------------------------------
 
 // UpdateSwcRequest
 
-// .proto.UserMetaInfoV1 UserInfo = 1;
-inline bool UpdateSwcRequest::_internal_has_userinfo() const {
-  return this != internal_default_instance() && _impl_.userinfo_ != nullptr;
+// .proto.RequestMetaInfoV1 RequestMetaInfo = 1;
+inline bool UpdateSwcRequest::_internal_has_requestmetainfo() const {
+  return this != internal_default_instance() && _impl_.requestmetainfo_ != nullptr;
 }
-inline bool UpdateSwcRequest::has_userinfo() const {
-  return _internal_has_userinfo();
+inline bool UpdateSwcRequest::has_requestmetainfo() const {
+  return _internal_has_requestmetainfo();
 }
-inline const ::proto::UserMetaInfoV1& UpdateSwcRequest::_internal_userinfo() const {
-  const ::proto::UserMetaInfoV1* p = _impl_.userinfo_;
-  return p != nullptr ? *p : reinterpret_cast<const ::proto::UserMetaInfoV1&>(
-      ::proto::_UserMetaInfoV1_default_instance_);
+inline const ::proto::RequestMetaInfoV1& UpdateSwcRequest::_internal_requestmetainfo() const {
+  const ::proto::RequestMetaInfoV1* p = _impl_.requestmetainfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::RequestMetaInfoV1&>(
+      ::proto::_RequestMetaInfoV1_default_instance_);
 }
-inline const ::proto::UserMetaInfoV1& UpdateSwcRequest::userinfo() const {
-  // @@protoc_insertion_point(field_get:proto.UpdateSwcRequest.UserInfo)
-  return _internal_userinfo();
+inline const ::proto::RequestMetaInfoV1& UpdateSwcRequest::requestmetainfo() const {
+  // @@protoc_insertion_point(field_get:proto.UpdateSwcRequest.RequestMetaInfo)
+  return _internal_requestmetainfo();
 }
-inline void UpdateSwcRequest::unsafe_arena_set_allocated_userinfo(
-    ::proto::UserMetaInfoV1* userinfo) {
+inline void UpdateSwcRequest::unsafe_arena_set_allocated_requestmetainfo(
+    ::proto::RequestMetaInfoV1* requestmetainfo) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userinfo_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.requestmetainfo_);
   }
-  _impl_.userinfo_ = userinfo;
-  if (userinfo) {
+  _impl_.requestmetainfo_ = requestmetainfo;
+  if (requestmetainfo) {
     
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.UpdateSwcRequest.UserInfo)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.UpdateSwcRequest.RequestMetaInfo)
 }
-inline ::proto::UserMetaInfoV1* UpdateSwcRequest::release_userinfo() {
+inline ::proto::RequestMetaInfoV1* UpdateSwcRequest::release_requestmetainfo() {
   
-  ::proto::UserMetaInfoV1* temp = _impl_.userinfo_;
-  _impl_.userinfo_ = nullptr;
+  ::proto::RequestMetaInfoV1* temp = _impl_.requestmetainfo_;
+  _impl_.requestmetainfo_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -9833,48 +12149,133 @@ inline ::proto::UserMetaInfoV1* UpdateSwcRequest::release_userinfo() {
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::proto::UserMetaInfoV1* UpdateSwcRequest::unsafe_arena_release_userinfo() {
-  // @@protoc_insertion_point(field_release:proto.UpdateSwcRequest.UserInfo)
+inline ::proto::RequestMetaInfoV1* UpdateSwcRequest::unsafe_arena_release_requestmetainfo() {
+  // @@protoc_insertion_point(field_release:proto.UpdateSwcRequest.RequestMetaInfo)
   
-  ::proto::UserMetaInfoV1* temp = _impl_.userinfo_;
-  _impl_.userinfo_ = nullptr;
+  ::proto::RequestMetaInfoV1* temp = _impl_.requestmetainfo_;
+  _impl_.requestmetainfo_ = nullptr;
   return temp;
 }
-inline ::proto::UserMetaInfoV1* UpdateSwcRequest::_internal_mutable_userinfo() {
+inline ::proto::RequestMetaInfoV1* UpdateSwcRequest::_internal_mutable_requestmetainfo() {
   
-  if (_impl_.userinfo_ == nullptr) {
-    auto* p = CreateMaybeMessage<::proto::UserMetaInfoV1>(GetArenaForAllocation());
-    _impl_.userinfo_ = p;
+  if (_impl_.requestmetainfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::RequestMetaInfoV1>(GetArenaForAllocation());
+    _impl_.requestmetainfo_ = p;
   }
-  return _impl_.userinfo_;
+  return _impl_.requestmetainfo_;
 }
-inline ::proto::UserMetaInfoV1* UpdateSwcRequest::mutable_userinfo() {
-  ::proto::UserMetaInfoV1* _msg = _internal_mutable_userinfo();
-  // @@protoc_insertion_point(field_mutable:proto.UpdateSwcRequest.UserInfo)
+inline ::proto::RequestMetaInfoV1* UpdateSwcRequest::mutable_requestmetainfo() {
+  ::proto::RequestMetaInfoV1* _msg = _internal_mutable_requestmetainfo();
+  // @@protoc_insertion_point(field_mutable:proto.UpdateSwcRequest.RequestMetaInfo)
   return _msg;
 }
-inline void UpdateSwcRequest::set_allocated_userinfo(::proto::UserMetaInfoV1* userinfo) {
+inline void UpdateSwcRequest::set_allocated_requestmetainfo(::proto::RequestMetaInfoV1* requestmetainfo) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userinfo_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.requestmetainfo_);
   }
-  if (userinfo) {
+  if (requestmetainfo) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(userinfo));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(requestmetainfo));
     if (message_arena != submessage_arena) {
-      userinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, userinfo, submessage_arena);
+      requestmetainfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, requestmetainfo, submessage_arena);
     }
     
   } else {
     
   }
-  _impl_.userinfo_ = userinfo;
-  // @@protoc_insertion_point(field_set_allocated:proto.UpdateSwcRequest.UserInfo)
+  _impl_.requestmetainfo_ = requestmetainfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.UpdateSwcRequest.RequestMetaInfo)
 }
 
-// .proto.SwcMetaInfoV1 SwcInfo = 2;
+// .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
+inline bool UpdateSwcRequest::_internal_has_userverifyinfo() const {
+  return this != internal_default_instance() && _impl_.userverifyinfo_ != nullptr;
+}
+inline bool UpdateSwcRequest::has_userverifyinfo() const {
+  return _internal_has_userverifyinfo();
+}
+inline const ::proto::UserVerifyInfoV1& UpdateSwcRequest::_internal_userverifyinfo() const {
+  const ::proto::UserVerifyInfoV1* p = _impl_.userverifyinfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::UserVerifyInfoV1&>(
+      ::proto::_UserVerifyInfoV1_default_instance_);
+}
+inline const ::proto::UserVerifyInfoV1& UpdateSwcRequest::userverifyinfo() const {
+  // @@protoc_insertion_point(field_get:proto.UpdateSwcRequest.UserVerifyInfo)
+  return _internal_userverifyinfo();
+}
+inline void UpdateSwcRequest::unsafe_arena_set_allocated_userverifyinfo(
+    ::proto::UserVerifyInfoV1* userverifyinfo) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userverifyinfo_);
+  }
+  _impl_.userverifyinfo_ = userverifyinfo;
+  if (userverifyinfo) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.UpdateSwcRequest.UserVerifyInfo)
+}
+inline ::proto::UserVerifyInfoV1* UpdateSwcRequest::release_userverifyinfo() {
+  
+  ::proto::UserVerifyInfoV1* temp = _impl_.userverifyinfo_;
+  _impl_.userverifyinfo_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::proto::UserVerifyInfoV1* UpdateSwcRequest::unsafe_arena_release_userverifyinfo() {
+  // @@protoc_insertion_point(field_release:proto.UpdateSwcRequest.UserVerifyInfo)
+  
+  ::proto::UserVerifyInfoV1* temp = _impl_.userverifyinfo_;
+  _impl_.userverifyinfo_ = nullptr;
+  return temp;
+}
+inline ::proto::UserVerifyInfoV1* UpdateSwcRequest::_internal_mutable_userverifyinfo() {
+  
+  if (_impl_.userverifyinfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::UserVerifyInfoV1>(GetArenaForAllocation());
+    _impl_.userverifyinfo_ = p;
+  }
+  return _impl_.userverifyinfo_;
+}
+inline ::proto::UserVerifyInfoV1* UpdateSwcRequest::mutable_userverifyinfo() {
+  ::proto::UserVerifyInfoV1* _msg = _internal_mutable_userverifyinfo();
+  // @@protoc_insertion_point(field_mutable:proto.UpdateSwcRequest.UserVerifyInfo)
+  return _msg;
+}
+inline void UpdateSwcRequest::set_allocated_userverifyinfo(::proto::UserVerifyInfoV1* userverifyinfo) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userverifyinfo_);
+  }
+  if (userverifyinfo) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(userverifyinfo));
+    if (message_arena != submessage_arena) {
+      userverifyinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, userverifyinfo, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  _impl_.userverifyinfo_ = userverifyinfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.UpdateSwcRequest.UserVerifyInfo)
+}
+
+// .proto.SwcMetaInfoV1 SwcInfo = 3;
 inline bool UpdateSwcRequest::_internal_has_swcinfo() const {
   return this != internal_default_instance() && _impl_.swcinfo_ != nullptr;
 }
@@ -9963,39 +12364,39 @@ inline void UpdateSwcRequest::set_allocated_swcinfo(::proto::SwcMetaInfoV1* swci
 
 // GetSwcMetaInfoRequest
 
-// .proto.UserMetaInfoV1 UserInfo = 1;
-inline bool GetSwcMetaInfoRequest::_internal_has_userinfo() const {
-  return this != internal_default_instance() && _impl_.userinfo_ != nullptr;
+// .proto.RequestMetaInfoV1 RequestMetaInfo = 1;
+inline bool GetSwcMetaInfoRequest::_internal_has_requestmetainfo() const {
+  return this != internal_default_instance() && _impl_.requestmetainfo_ != nullptr;
 }
-inline bool GetSwcMetaInfoRequest::has_userinfo() const {
-  return _internal_has_userinfo();
+inline bool GetSwcMetaInfoRequest::has_requestmetainfo() const {
+  return _internal_has_requestmetainfo();
 }
-inline const ::proto::UserMetaInfoV1& GetSwcMetaInfoRequest::_internal_userinfo() const {
-  const ::proto::UserMetaInfoV1* p = _impl_.userinfo_;
-  return p != nullptr ? *p : reinterpret_cast<const ::proto::UserMetaInfoV1&>(
-      ::proto::_UserMetaInfoV1_default_instance_);
+inline const ::proto::RequestMetaInfoV1& GetSwcMetaInfoRequest::_internal_requestmetainfo() const {
+  const ::proto::RequestMetaInfoV1* p = _impl_.requestmetainfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::RequestMetaInfoV1&>(
+      ::proto::_RequestMetaInfoV1_default_instance_);
 }
-inline const ::proto::UserMetaInfoV1& GetSwcMetaInfoRequest::userinfo() const {
-  // @@protoc_insertion_point(field_get:proto.GetSwcMetaInfoRequest.UserInfo)
-  return _internal_userinfo();
+inline const ::proto::RequestMetaInfoV1& GetSwcMetaInfoRequest::requestmetainfo() const {
+  // @@protoc_insertion_point(field_get:proto.GetSwcMetaInfoRequest.RequestMetaInfo)
+  return _internal_requestmetainfo();
 }
-inline void GetSwcMetaInfoRequest::unsafe_arena_set_allocated_userinfo(
-    ::proto::UserMetaInfoV1* userinfo) {
+inline void GetSwcMetaInfoRequest::unsafe_arena_set_allocated_requestmetainfo(
+    ::proto::RequestMetaInfoV1* requestmetainfo) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userinfo_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.requestmetainfo_);
   }
-  _impl_.userinfo_ = userinfo;
-  if (userinfo) {
+  _impl_.requestmetainfo_ = requestmetainfo;
+  if (requestmetainfo) {
     
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.GetSwcMetaInfoRequest.UserInfo)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.GetSwcMetaInfoRequest.RequestMetaInfo)
 }
-inline ::proto::UserMetaInfoV1* GetSwcMetaInfoRequest::release_userinfo() {
+inline ::proto::RequestMetaInfoV1* GetSwcMetaInfoRequest::release_requestmetainfo() {
   
-  ::proto::UserMetaInfoV1* temp = _impl_.userinfo_;
-  _impl_.userinfo_ = nullptr;
+  ::proto::RequestMetaInfoV1* temp = _impl_.requestmetainfo_;
+  _impl_.requestmetainfo_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -10007,80 +12408,80 @@ inline ::proto::UserMetaInfoV1* GetSwcMetaInfoRequest::release_userinfo() {
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::proto::UserMetaInfoV1* GetSwcMetaInfoRequest::unsafe_arena_release_userinfo() {
-  // @@protoc_insertion_point(field_release:proto.GetSwcMetaInfoRequest.UserInfo)
+inline ::proto::RequestMetaInfoV1* GetSwcMetaInfoRequest::unsafe_arena_release_requestmetainfo() {
+  // @@protoc_insertion_point(field_release:proto.GetSwcMetaInfoRequest.RequestMetaInfo)
   
-  ::proto::UserMetaInfoV1* temp = _impl_.userinfo_;
-  _impl_.userinfo_ = nullptr;
+  ::proto::RequestMetaInfoV1* temp = _impl_.requestmetainfo_;
+  _impl_.requestmetainfo_ = nullptr;
   return temp;
 }
-inline ::proto::UserMetaInfoV1* GetSwcMetaInfoRequest::_internal_mutable_userinfo() {
+inline ::proto::RequestMetaInfoV1* GetSwcMetaInfoRequest::_internal_mutable_requestmetainfo() {
   
-  if (_impl_.userinfo_ == nullptr) {
-    auto* p = CreateMaybeMessage<::proto::UserMetaInfoV1>(GetArenaForAllocation());
-    _impl_.userinfo_ = p;
+  if (_impl_.requestmetainfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::RequestMetaInfoV1>(GetArenaForAllocation());
+    _impl_.requestmetainfo_ = p;
   }
-  return _impl_.userinfo_;
+  return _impl_.requestmetainfo_;
 }
-inline ::proto::UserMetaInfoV1* GetSwcMetaInfoRequest::mutable_userinfo() {
-  ::proto::UserMetaInfoV1* _msg = _internal_mutable_userinfo();
-  // @@protoc_insertion_point(field_mutable:proto.GetSwcMetaInfoRequest.UserInfo)
+inline ::proto::RequestMetaInfoV1* GetSwcMetaInfoRequest::mutable_requestmetainfo() {
+  ::proto::RequestMetaInfoV1* _msg = _internal_mutable_requestmetainfo();
+  // @@protoc_insertion_point(field_mutable:proto.GetSwcMetaInfoRequest.RequestMetaInfo)
   return _msg;
 }
-inline void GetSwcMetaInfoRequest::set_allocated_userinfo(::proto::UserMetaInfoV1* userinfo) {
+inline void GetSwcMetaInfoRequest::set_allocated_requestmetainfo(::proto::RequestMetaInfoV1* requestmetainfo) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userinfo_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.requestmetainfo_);
   }
-  if (userinfo) {
+  if (requestmetainfo) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(userinfo));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(requestmetainfo));
     if (message_arena != submessage_arena) {
-      userinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, userinfo, submessage_arena);
+      requestmetainfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, requestmetainfo, submessage_arena);
     }
     
   } else {
     
   }
-  _impl_.userinfo_ = userinfo;
-  // @@protoc_insertion_point(field_set_allocated:proto.GetSwcMetaInfoRequest.UserInfo)
+  _impl_.requestmetainfo_ = requestmetainfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.GetSwcMetaInfoRequest.RequestMetaInfo)
 }
 
-// .proto.SwcMetaInfoV1 SwcInfo = 2;
-inline bool GetSwcMetaInfoRequest::_internal_has_swcinfo() const {
-  return this != internal_default_instance() && _impl_.swcinfo_ != nullptr;
+// .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
+inline bool GetSwcMetaInfoRequest::_internal_has_userverifyinfo() const {
+  return this != internal_default_instance() && _impl_.userverifyinfo_ != nullptr;
 }
-inline bool GetSwcMetaInfoRequest::has_swcinfo() const {
-  return _internal_has_swcinfo();
+inline bool GetSwcMetaInfoRequest::has_userverifyinfo() const {
+  return _internal_has_userverifyinfo();
 }
-inline const ::proto::SwcMetaInfoV1& GetSwcMetaInfoRequest::_internal_swcinfo() const {
-  const ::proto::SwcMetaInfoV1* p = _impl_.swcinfo_;
-  return p != nullptr ? *p : reinterpret_cast<const ::proto::SwcMetaInfoV1&>(
-      ::proto::_SwcMetaInfoV1_default_instance_);
+inline const ::proto::UserVerifyInfoV1& GetSwcMetaInfoRequest::_internal_userverifyinfo() const {
+  const ::proto::UserVerifyInfoV1* p = _impl_.userverifyinfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::UserVerifyInfoV1&>(
+      ::proto::_UserVerifyInfoV1_default_instance_);
 }
-inline const ::proto::SwcMetaInfoV1& GetSwcMetaInfoRequest::swcinfo() const {
-  // @@protoc_insertion_point(field_get:proto.GetSwcMetaInfoRequest.SwcInfo)
-  return _internal_swcinfo();
+inline const ::proto::UserVerifyInfoV1& GetSwcMetaInfoRequest::userverifyinfo() const {
+  // @@protoc_insertion_point(field_get:proto.GetSwcMetaInfoRequest.UserVerifyInfo)
+  return _internal_userverifyinfo();
 }
-inline void GetSwcMetaInfoRequest::unsafe_arena_set_allocated_swcinfo(
-    ::proto::SwcMetaInfoV1* swcinfo) {
+inline void GetSwcMetaInfoRequest::unsafe_arena_set_allocated_userverifyinfo(
+    ::proto::UserVerifyInfoV1* userverifyinfo) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.swcinfo_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userverifyinfo_);
   }
-  _impl_.swcinfo_ = swcinfo;
-  if (swcinfo) {
+  _impl_.userverifyinfo_ = userverifyinfo;
+  if (userverifyinfo) {
     
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.GetSwcMetaInfoRequest.SwcInfo)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.GetSwcMetaInfoRequest.UserVerifyInfo)
 }
-inline ::proto::SwcMetaInfoV1* GetSwcMetaInfoRequest::release_swcinfo() {
+inline ::proto::UserVerifyInfoV1* GetSwcMetaInfoRequest::release_userverifyinfo() {
   
-  ::proto::SwcMetaInfoV1* temp = _impl_.swcinfo_;
-  _impl_.swcinfo_ = nullptr;
+  ::proto::UserVerifyInfoV1* temp = _impl_.userverifyinfo_;
+  _impl_.userverifyinfo_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -10092,84 +12493,134 @@ inline ::proto::SwcMetaInfoV1* GetSwcMetaInfoRequest::release_swcinfo() {
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::proto::SwcMetaInfoV1* GetSwcMetaInfoRequest::unsafe_arena_release_swcinfo() {
-  // @@protoc_insertion_point(field_release:proto.GetSwcMetaInfoRequest.SwcInfo)
+inline ::proto::UserVerifyInfoV1* GetSwcMetaInfoRequest::unsafe_arena_release_userverifyinfo() {
+  // @@protoc_insertion_point(field_release:proto.GetSwcMetaInfoRequest.UserVerifyInfo)
   
-  ::proto::SwcMetaInfoV1* temp = _impl_.swcinfo_;
-  _impl_.swcinfo_ = nullptr;
+  ::proto::UserVerifyInfoV1* temp = _impl_.userverifyinfo_;
+  _impl_.userverifyinfo_ = nullptr;
   return temp;
 }
-inline ::proto::SwcMetaInfoV1* GetSwcMetaInfoRequest::_internal_mutable_swcinfo() {
+inline ::proto::UserVerifyInfoV1* GetSwcMetaInfoRequest::_internal_mutable_userverifyinfo() {
   
-  if (_impl_.swcinfo_ == nullptr) {
-    auto* p = CreateMaybeMessage<::proto::SwcMetaInfoV1>(GetArenaForAllocation());
-    _impl_.swcinfo_ = p;
+  if (_impl_.userverifyinfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::UserVerifyInfoV1>(GetArenaForAllocation());
+    _impl_.userverifyinfo_ = p;
   }
-  return _impl_.swcinfo_;
+  return _impl_.userverifyinfo_;
 }
-inline ::proto::SwcMetaInfoV1* GetSwcMetaInfoRequest::mutable_swcinfo() {
-  ::proto::SwcMetaInfoV1* _msg = _internal_mutable_swcinfo();
-  // @@protoc_insertion_point(field_mutable:proto.GetSwcMetaInfoRequest.SwcInfo)
+inline ::proto::UserVerifyInfoV1* GetSwcMetaInfoRequest::mutable_userverifyinfo() {
+  ::proto::UserVerifyInfoV1* _msg = _internal_mutable_userverifyinfo();
+  // @@protoc_insertion_point(field_mutable:proto.GetSwcMetaInfoRequest.UserVerifyInfo)
   return _msg;
 }
-inline void GetSwcMetaInfoRequest::set_allocated_swcinfo(::proto::SwcMetaInfoV1* swcinfo) {
+inline void GetSwcMetaInfoRequest::set_allocated_userverifyinfo(::proto::UserVerifyInfoV1* userverifyinfo) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.swcinfo_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userverifyinfo_);
   }
-  if (swcinfo) {
+  if (userverifyinfo) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(swcinfo));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(userverifyinfo));
     if (message_arena != submessage_arena) {
-      swcinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, swcinfo, submessage_arena);
+      userverifyinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, userverifyinfo, submessage_arena);
     }
     
   } else {
     
   }
-  _impl_.swcinfo_ = swcinfo;
-  // @@protoc_insertion_point(field_set_allocated:proto.GetSwcMetaInfoRequest.SwcInfo)
+  _impl_.userverifyinfo_ = userverifyinfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.GetSwcMetaInfoRequest.UserVerifyInfo)
+}
+
+// string SwcName = 3;
+inline void GetSwcMetaInfoRequest::clear_swcname() {
+  _impl_.swcname_.ClearToEmpty();
+}
+inline const std::string& GetSwcMetaInfoRequest::swcname() const {
+  // @@protoc_insertion_point(field_get:proto.GetSwcMetaInfoRequest.SwcName)
+  return _internal_swcname();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void GetSwcMetaInfoRequest::set_swcname(ArgT0&& arg0, ArgT... args) {
+ 
+ _impl_.swcname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:proto.GetSwcMetaInfoRequest.SwcName)
+}
+inline std::string* GetSwcMetaInfoRequest::mutable_swcname() {
+  std::string* _s = _internal_mutable_swcname();
+  // @@protoc_insertion_point(field_mutable:proto.GetSwcMetaInfoRequest.SwcName)
+  return _s;
+}
+inline const std::string& GetSwcMetaInfoRequest::_internal_swcname() const {
+  return _impl_.swcname_.Get();
+}
+inline void GetSwcMetaInfoRequest::_internal_set_swcname(const std::string& value) {
+  
+  _impl_.swcname_.Set(value, GetArenaForAllocation());
+}
+inline std::string* GetSwcMetaInfoRequest::_internal_mutable_swcname() {
+  
+  return _impl_.swcname_.Mutable(GetArenaForAllocation());
+}
+inline std::string* GetSwcMetaInfoRequest::release_swcname() {
+  // @@protoc_insertion_point(field_release:proto.GetSwcMetaInfoRequest.SwcName)
+  return _impl_.swcname_.Release();
+}
+inline void GetSwcMetaInfoRequest::set_allocated_swcname(std::string* swcname) {
+  if (swcname != nullptr) {
+    
+  } else {
+    
+  }
+  _impl_.swcname_.SetAllocated(swcname, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.swcname_.IsDefault()) {
+    _impl_.swcname_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:proto.GetSwcMetaInfoRequest.SwcName)
 }
 
 // -------------------------------------------------------------------
 
 // GetAllSwcMetaInfoRequest
 
-// .proto.UserMetaInfoV1 UserInfo = 1;
-inline bool GetAllSwcMetaInfoRequest::_internal_has_userinfo() const {
-  return this != internal_default_instance() && _impl_.userinfo_ != nullptr;
+// .proto.RequestMetaInfoV1 RequestMetaInfo = 1;
+inline bool GetAllSwcMetaInfoRequest::_internal_has_requestmetainfo() const {
+  return this != internal_default_instance() && _impl_.requestmetainfo_ != nullptr;
 }
-inline bool GetAllSwcMetaInfoRequest::has_userinfo() const {
-  return _internal_has_userinfo();
+inline bool GetAllSwcMetaInfoRequest::has_requestmetainfo() const {
+  return _internal_has_requestmetainfo();
 }
-inline const ::proto::UserMetaInfoV1& GetAllSwcMetaInfoRequest::_internal_userinfo() const {
-  const ::proto::UserMetaInfoV1* p = _impl_.userinfo_;
-  return p != nullptr ? *p : reinterpret_cast<const ::proto::UserMetaInfoV1&>(
-      ::proto::_UserMetaInfoV1_default_instance_);
+inline const ::proto::RequestMetaInfoV1& GetAllSwcMetaInfoRequest::_internal_requestmetainfo() const {
+  const ::proto::RequestMetaInfoV1* p = _impl_.requestmetainfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::RequestMetaInfoV1&>(
+      ::proto::_RequestMetaInfoV1_default_instance_);
 }
-inline const ::proto::UserMetaInfoV1& GetAllSwcMetaInfoRequest::userinfo() const {
-  // @@protoc_insertion_point(field_get:proto.GetAllSwcMetaInfoRequest.UserInfo)
-  return _internal_userinfo();
+inline const ::proto::RequestMetaInfoV1& GetAllSwcMetaInfoRequest::requestmetainfo() const {
+  // @@protoc_insertion_point(field_get:proto.GetAllSwcMetaInfoRequest.RequestMetaInfo)
+  return _internal_requestmetainfo();
 }
-inline void GetAllSwcMetaInfoRequest::unsafe_arena_set_allocated_userinfo(
-    ::proto::UserMetaInfoV1* userinfo) {
+inline void GetAllSwcMetaInfoRequest::unsafe_arena_set_allocated_requestmetainfo(
+    ::proto::RequestMetaInfoV1* requestmetainfo) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userinfo_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.requestmetainfo_);
   }
-  _impl_.userinfo_ = userinfo;
-  if (userinfo) {
+  _impl_.requestmetainfo_ = requestmetainfo;
+  if (requestmetainfo) {
     
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.GetAllSwcMetaInfoRequest.UserInfo)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.GetAllSwcMetaInfoRequest.RequestMetaInfo)
 }
-inline ::proto::UserMetaInfoV1* GetAllSwcMetaInfoRequest::release_userinfo() {
+inline ::proto::RequestMetaInfoV1* GetAllSwcMetaInfoRequest::release_requestmetainfo() {
   
-  ::proto::UserMetaInfoV1* temp = _impl_.userinfo_;
-  _impl_.userinfo_ = nullptr;
+  ::proto::RequestMetaInfoV1* temp = _impl_.requestmetainfo_;
+  _impl_.requestmetainfo_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -10181,52 +12632,222 @@ inline ::proto::UserMetaInfoV1* GetAllSwcMetaInfoRequest::release_userinfo() {
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::proto::UserMetaInfoV1* GetAllSwcMetaInfoRequest::unsafe_arena_release_userinfo() {
-  // @@protoc_insertion_point(field_release:proto.GetAllSwcMetaInfoRequest.UserInfo)
+inline ::proto::RequestMetaInfoV1* GetAllSwcMetaInfoRequest::unsafe_arena_release_requestmetainfo() {
+  // @@protoc_insertion_point(field_release:proto.GetAllSwcMetaInfoRequest.RequestMetaInfo)
   
-  ::proto::UserMetaInfoV1* temp = _impl_.userinfo_;
-  _impl_.userinfo_ = nullptr;
+  ::proto::RequestMetaInfoV1* temp = _impl_.requestmetainfo_;
+  _impl_.requestmetainfo_ = nullptr;
   return temp;
 }
-inline ::proto::UserMetaInfoV1* GetAllSwcMetaInfoRequest::_internal_mutable_userinfo() {
+inline ::proto::RequestMetaInfoV1* GetAllSwcMetaInfoRequest::_internal_mutable_requestmetainfo() {
   
-  if (_impl_.userinfo_ == nullptr) {
-    auto* p = CreateMaybeMessage<::proto::UserMetaInfoV1>(GetArenaForAllocation());
-    _impl_.userinfo_ = p;
+  if (_impl_.requestmetainfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::RequestMetaInfoV1>(GetArenaForAllocation());
+    _impl_.requestmetainfo_ = p;
   }
-  return _impl_.userinfo_;
+  return _impl_.requestmetainfo_;
 }
-inline ::proto::UserMetaInfoV1* GetAllSwcMetaInfoRequest::mutable_userinfo() {
-  ::proto::UserMetaInfoV1* _msg = _internal_mutable_userinfo();
-  // @@protoc_insertion_point(field_mutable:proto.GetAllSwcMetaInfoRequest.UserInfo)
+inline ::proto::RequestMetaInfoV1* GetAllSwcMetaInfoRequest::mutable_requestmetainfo() {
+  ::proto::RequestMetaInfoV1* _msg = _internal_mutable_requestmetainfo();
+  // @@protoc_insertion_point(field_mutable:proto.GetAllSwcMetaInfoRequest.RequestMetaInfo)
   return _msg;
 }
-inline void GetAllSwcMetaInfoRequest::set_allocated_userinfo(::proto::UserMetaInfoV1* userinfo) {
+inline void GetAllSwcMetaInfoRequest::set_allocated_requestmetainfo(::proto::RequestMetaInfoV1* requestmetainfo) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userinfo_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.requestmetainfo_);
   }
-  if (userinfo) {
+  if (requestmetainfo) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(userinfo));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(requestmetainfo));
     if (message_arena != submessage_arena) {
-      userinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, userinfo, submessage_arena);
+      requestmetainfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, requestmetainfo, submessage_arena);
     }
     
   } else {
     
   }
-  _impl_.userinfo_ = userinfo;
-  // @@protoc_insertion_point(field_set_allocated:proto.GetAllSwcMetaInfoRequest.UserInfo)
+  _impl_.requestmetainfo_ = requestmetainfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.GetAllSwcMetaInfoRequest.RequestMetaInfo)
+}
+
+// .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
+inline bool GetAllSwcMetaInfoRequest::_internal_has_userverifyinfo() const {
+  return this != internal_default_instance() && _impl_.userverifyinfo_ != nullptr;
+}
+inline bool GetAllSwcMetaInfoRequest::has_userverifyinfo() const {
+  return _internal_has_userverifyinfo();
+}
+inline const ::proto::UserVerifyInfoV1& GetAllSwcMetaInfoRequest::_internal_userverifyinfo() const {
+  const ::proto::UserVerifyInfoV1* p = _impl_.userverifyinfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::UserVerifyInfoV1&>(
+      ::proto::_UserVerifyInfoV1_default_instance_);
+}
+inline const ::proto::UserVerifyInfoV1& GetAllSwcMetaInfoRequest::userverifyinfo() const {
+  // @@protoc_insertion_point(field_get:proto.GetAllSwcMetaInfoRequest.UserVerifyInfo)
+  return _internal_userverifyinfo();
+}
+inline void GetAllSwcMetaInfoRequest::unsafe_arena_set_allocated_userverifyinfo(
+    ::proto::UserVerifyInfoV1* userverifyinfo) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userverifyinfo_);
+  }
+  _impl_.userverifyinfo_ = userverifyinfo;
+  if (userverifyinfo) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.GetAllSwcMetaInfoRequest.UserVerifyInfo)
+}
+inline ::proto::UserVerifyInfoV1* GetAllSwcMetaInfoRequest::release_userverifyinfo() {
+  
+  ::proto::UserVerifyInfoV1* temp = _impl_.userverifyinfo_;
+  _impl_.userverifyinfo_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::proto::UserVerifyInfoV1* GetAllSwcMetaInfoRequest::unsafe_arena_release_userverifyinfo() {
+  // @@protoc_insertion_point(field_release:proto.GetAllSwcMetaInfoRequest.UserVerifyInfo)
+  
+  ::proto::UserVerifyInfoV1* temp = _impl_.userverifyinfo_;
+  _impl_.userverifyinfo_ = nullptr;
+  return temp;
+}
+inline ::proto::UserVerifyInfoV1* GetAllSwcMetaInfoRequest::_internal_mutable_userverifyinfo() {
+  
+  if (_impl_.userverifyinfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::UserVerifyInfoV1>(GetArenaForAllocation());
+    _impl_.userverifyinfo_ = p;
+  }
+  return _impl_.userverifyinfo_;
+}
+inline ::proto::UserVerifyInfoV1* GetAllSwcMetaInfoRequest::mutable_userverifyinfo() {
+  ::proto::UserVerifyInfoV1* _msg = _internal_mutable_userverifyinfo();
+  // @@protoc_insertion_point(field_mutable:proto.GetAllSwcMetaInfoRequest.UserVerifyInfo)
+  return _msg;
+}
+inline void GetAllSwcMetaInfoRequest::set_allocated_userverifyinfo(::proto::UserVerifyInfoV1* userverifyinfo) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userverifyinfo_);
+  }
+  if (userverifyinfo) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(userverifyinfo));
+    if (message_arena != submessage_arena) {
+      userverifyinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, userverifyinfo, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  _impl_.userverifyinfo_ = userverifyinfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.GetAllSwcMetaInfoRequest.UserVerifyInfo)
 }
 
 // -------------------------------------------------------------------
 
 // CreateSwcSnapshotRequest
 
-// .proto.UserVerifyInfoV1 UserVerifyInfo = 1;
+// .proto.RequestMetaInfoV1 RequestMetaInfo = 1;
+inline bool CreateSwcSnapshotRequest::_internal_has_requestmetainfo() const {
+  return this != internal_default_instance() && _impl_.requestmetainfo_ != nullptr;
+}
+inline bool CreateSwcSnapshotRequest::has_requestmetainfo() const {
+  return _internal_has_requestmetainfo();
+}
+inline const ::proto::RequestMetaInfoV1& CreateSwcSnapshotRequest::_internal_requestmetainfo() const {
+  const ::proto::RequestMetaInfoV1* p = _impl_.requestmetainfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::RequestMetaInfoV1&>(
+      ::proto::_RequestMetaInfoV1_default_instance_);
+}
+inline const ::proto::RequestMetaInfoV1& CreateSwcSnapshotRequest::requestmetainfo() const {
+  // @@protoc_insertion_point(field_get:proto.CreateSwcSnapshotRequest.RequestMetaInfo)
+  return _internal_requestmetainfo();
+}
+inline void CreateSwcSnapshotRequest::unsafe_arena_set_allocated_requestmetainfo(
+    ::proto::RequestMetaInfoV1* requestmetainfo) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.requestmetainfo_);
+  }
+  _impl_.requestmetainfo_ = requestmetainfo;
+  if (requestmetainfo) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.CreateSwcSnapshotRequest.RequestMetaInfo)
+}
+inline ::proto::RequestMetaInfoV1* CreateSwcSnapshotRequest::release_requestmetainfo() {
+  
+  ::proto::RequestMetaInfoV1* temp = _impl_.requestmetainfo_;
+  _impl_.requestmetainfo_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::proto::RequestMetaInfoV1* CreateSwcSnapshotRequest::unsafe_arena_release_requestmetainfo() {
+  // @@protoc_insertion_point(field_release:proto.CreateSwcSnapshotRequest.RequestMetaInfo)
+  
+  ::proto::RequestMetaInfoV1* temp = _impl_.requestmetainfo_;
+  _impl_.requestmetainfo_ = nullptr;
+  return temp;
+}
+inline ::proto::RequestMetaInfoV1* CreateSwcSnapshotRequest::_internal_mutable_requestmetainfo() {
+  
+  if (_impl_.requestmetainfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::RequestMetaInfoV1>(GetArenaForAllocation());
+    _impl_.requestmetainfo_ = p;
+  }
+  return _impl_.requestmetainfo_;
+}
+inline ::proto::RequestMetaInfoV1* CreateSwcSnapshotRequest::mutable_requestmetainfo() {
+  ::proto::RequestMetaInfoV1* _msg = _internal_mutable_requestmetainfo();
+  // @@protoc_insertion_point(field_mutable:proto.CreateSwcSnapshotRequest.RequestMetaInfo)
+  return _msg;
+}
+inline void CreateSwcSnapshotRequest::set_allocated_requestmetainfo(::proto::RequestMetaInfoV1* requestmetainfo) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.requestmetainfo_);
+  }
+  if (requestmetainfo) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(requestmetainfo));
+    if (message_arena != submessage_arena) {
+      requestmetainfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, requestmetainfo, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  _impl_.requestmetainfo_ = requestmetainfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.CreateSwcSnapshotRequest.RequestMetaInfo)
+}
+
+// .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
 inline bool CreateSwcSnapshotRequest::_internal_has_userverifyinfo() const {
   return this != internal_default_instance() && _impl_.userverifyinfo_ != nullptr;
 }
@@ -10311,7 +12932,7 @@ inline void CreateSwcSnapshotRequest::set_allocated_userverifyinfo(::proto::User
   // @@protoc_insertion_point(field_set_allocated:proto.CreateSwcSnapshotRequest.UserVerifyInfo)
 }
 
-// string SwcName = 2;
+// string SwcName = 3;
 inline void CreateSwcSnapshotRequest::clear_swcname() {
   _impl_.swcname_.ClearToEmpty();
 }
@@ -10365,7 +12986,92 @@ inline void CreateSwcSnapshotRequest::set_allocated_swcname(std::string* swcname
 
 // DeleteSwcSnapshotRequest
 
-// .proto.UserVerifyInfoV1 UserVerifyInfo = 1;
+// .proto.RequestMetaInfoV1 RequestMetaInfo = 1;
+inline bool DeleteSwcSnapshotRequest::_internal_has_requestmetainfo() const {
+  return this != internal_default_instance() && _impl_.requestmetainfo_ != nullptr;
+}
+inline bool DeleteSwcSnapshotRequest::has_requestmetainfo() const {
+  return _internal_has_requestmetainfo();
+}
+inline const ::proto::RequestMetaInfoV1& DeleteSwcSnapshotRequest::_internal_requestmetainfo() const {
+  const ::proto::RequestMetaInfoV1* p = _impl_.requestmetainfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::RequestMetaInfoV1&>(
+      ::proto::_RequestMetaInfoV1_default_instance_);
+}
+inline const ::proto::RequestMetaInfoV1& DeleteSwcSnapshotRequest::requestmetainfo() const {
+  // @@protoc_insertion_point(field_get:proto.DeleteSwcSnapshotRequest.RequestMetaInfo)
+  return _internal_requestmetainfo();
+}
+inline void DeleteSwcSnapshotRequest::unsafe_arena_set_allocated_requestmetainfo(
+    ::proto::RequestMetaInfoV1* requestmetainfo) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.requestmetainfo_);
+  }
+  _impl_.requestmetainfo_ = requestmetainfo;
+  if (requestmetainfo) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.DeleteSwcSnapshotRequest.RequestMetaInfo)
+}
+inline ::proto::RequestMetaInfoV1* DeleteSwcSnapshotRequest::release_requestmetainfo() {
+  
+  ::proto::RequestMetaInfoV1* temp = _impl_.requestmetainfo_;
+  _impl_.requestmetainfo_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::proto::RequestMetaInfoV1* DeleteSwcSnapshotRequest::unsafe_arena_release_requestmetainfo() {
+  // @@protoc_insertion_point(field_release:proto.DeleteSwcSnapshotRequest.RequestMetaInfo)
+  
+  ::proto::RequestMetaInfoV1* temp = _impl_.requestmetainfo_;
+  _impl_.requestmetainfo_ = nullptr;
+  return temp;
+}
+inline ::proto::RequestMetaInfoV1* DeleteSwcSnapshotRequest::_internal_mutable_requestmetainfo() {
+  
+  if (_impl_.requestmetainfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::RequestMetaInfoV1>(GetArenaForAllocation());
+    _impl_.requestmetainfo_ = p;
+  }
+  return _impl_.requestmetainfo_;
+}
+inline ::proto::RequestMetaInfoV1* DeleteSwcSnapshotRequest::mutable_requestmetainfo() {
+  ::proto::RequestMetaInfoV1* _msg = _internal_mutable_requestmetainfo();
+  // @@protoc_insertion_point(field_mutable:proto.DeleteSwcSnapshotRequest.RequestMetaInfo)
+  return _msg;
+}
+inline void DeleteSwcSnapshotRequest::set_allocated_requestmetainfo(::proto::RequestMetaInfoV1* requestmetainfo) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.requestmetainfo_);
+  }
+  if (requestmetainfo) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(requestmetainfo));
+    if (message_arena != submessage_arena) {
+      requestmetainfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, requestmetainfo, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  _impl_.requestmetainfo_ = requestmetainfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.DeleteSwcSnapshotRequest.RequestMetaInfo)
+}
+
+// .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
 inline bool DeleteSwcSnapshotRequest::_internal_has_userverifyinfo() const {
   return this != internal_default_instance() && _impl_.userverifyinfo_ != nullptr;
 }
@@ -10450,7 +13156,7 @@ inline void DeleteSwcSnapshotRequest::set_allocated_userverifyinfo(::proto::User
   // @@protoc_insertion_point(field_set_allocated:proto.DeleteSwcSnapshotRequest.UserVerifyInfo)
 }
 
-// string SwcName = 2;
+// string SwcName = 3;
 inline void DeleteSwcSnapshotRequest::clear_swcname() {
   _impl_.swcname_.ClearToEmpty();
 }
@@ -10500,7 +13206,7 @@ inline void DeleteSwcSnapshotRequest::set_allocated_swcname(std::string* swcname
   // @@protoc_insertion_point(field_set_allocated:proto.DeleteSwcSnapshotRequest.SwcName)
 }
 
-// string SwcSnapshotCollectionName = 3;
+// string SwcSnapshotCollectionName = 4;
 inline void DeleteSwcSnapshotRequest::clear_swcsnapshotcollectionname() {
   _impl_.swcsnapshotcollectionname_.ClearToEmpty();
 }
@@ -10554,7 +13260,92 @@ inline void DeleteSwcSnapshotRequest::set_allocated_swcsnapshotcollectionname(st
 
 // GetAllSnapshotMetaInfoRequest
 
-// .proto.UserVerifyInfoV1 UserVerifyInfo = 1;
+// .proto.RequestMetaInfoV1 RequestMetaInfo = 1;
+inline bool GetAllSnapshotMetaInfoRequest::_internal_has_requestmetainfo() const {
+  return this != internal_default_instance() && _impl_.requestmetainfo_ != nullptr;
+}
+inline bool GetAllSnapshotMetaInfoRequest::has_requestmetainfo() const {
+  return _internal_has_requestmetainfo();
+}
+inline const ::proto::RequestMetaInfoV1& GetAllSnapshotMetaInfoRequest::_internal_requestmetainfo() const {
+  const ::proto::RequestMetaInfoV1* p = _impl_.requestmetainfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::RequestMetaInfoV1&>(
+      ::proto::_RequestMetaInfoV1_default_instance_);
+}
+inline const ::proto::RequestMetaInfoV1& GetAllSnapshotMetaInfoRequest::requestmetainfo() const {
+  // @@protoc_insertion_point(field_get:proto.GetAllSnapshotMetaInfoRequest.RequestMetaInfo)
+  return _internal_requestmetainfo();
+}
+inline void GetAllSnapshotMetaInfoRequest::unsafe_arena_set_allocated_requestmetainfo(
+    ::proto::RequestMetaInfoV1* requestmetainfo) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.requestmetainfo_);
+  }
+  _impl_.requestmetainfo_ = requestmetainfo;
+  if (requestmetainfo) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.GetAllSnapshotMetaInfoRequest.RequestMetaInfo)
+}
+inline ::proto::RequestMetaInfoV1* GetAllSnapshotMetaInfoRequest::release_requestmetainfo() {
+  
+  ::proto::RequestMetaInfoV1* temp = _impl_.requestmetainfo_;
+  _impl_.requestmetainfo_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::proto::RequestMetaInfoV1* GetAllSnapshotMetaInfoRequest::unsafe_arena_release_requestmetainfo() {
+  // @@protoc_insertion_point(field_release:proto.GetAllSnapshotMetaInfoRequest.RequestMetaInfo)
+  
+  ::proto::RequestMetaInfoV1* temp = _impl_.requestmetainfo_;
+  _impl_.requestmetainfo_ = nullptr;
+  return temp;
+}
+inline ::proto::RequestMetaInfoV1* GetAllSnapshotMetaInfoRequest::_internal_mutable_requestmetainfo() {
+  
+  if (_impl_.requestmetainfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::RequestMetaInfoV1>(GetArenaForAllocation());
+    _impl_.requestmetainfo_ = p;
+  }
+  return _impl_.requestmetainfo_;
+}
+inline ::proto::RequestMetaInfoV1* GetAllSnapshotMetaInfoRequest::mutable_requestmetainfo() {
+  ::proto::RequestMetaInfoV1* _msg = _internal_mutable_requestmetainfo();
+  // @@protoc_insertion_point(field_mutable:proto.GetAllSnapshotMetaInfoRequest.RequestMetaInfo)
+  return _msg;
+}
+inline void GetAllSnapshotMetaInfoRequest::set_allocated_requestmetainfo(::proto::RequestMetaInfoV1* requestmetainfo) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.requestmetainfo_);
+  }
+  if (requestmetainfo) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(requestmetainfo));
+    if (message_arena != submessage_arena) {
+      requestmetainfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, requestmetainfo, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  _impl_.requestmetainfo_ = requestmetainfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.GetAllSnapshotMetaInfoRequest.RequestMetaInfo)
+}
+
+// .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
 inline bool GetAllSnapshotMetaInfoRequest::_internal_has_userverifyinfo() const {
   return this != internal_default_instance() && _impl_.userverifyinfo_ != nullptr;
 }
@@ -10643,7 +13434,92 @@ inline void GetAllSnapshotMetaInfoRequest::set_allocated_userverifyinfo(::proto:
 
 // GetSnapshotRequest
 
-// .proto.UserVerifyInfoV1 UserVerifyInfo = 1;
+// .proto.RequestMetaInfoV1 RequestMetaInfo = 1;
+inline bool GetSnapshotRequest::_internal_has_requestmetainfo() const {
+  return this != internal_default_instance() && _impl_.requestmetainfo_ != nullptr;
+}
+inline bool GetSnapshotRequest::has_requestmetainfo() const {
+  return _internal_has_requestmetainfo();
+}
+inline const ::proto::RequestMetaInfoV1& GetSnapshotRequest::_internal_requestmetainfo() const {
+  const ::proto::RequestMetaInfoV1* p = _impl_.requestmetainfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::RequestMetaInfoV1&>(
+      ::proto::_RequestMetaInfoV1_default_instance_);
+}
+inline const ::proto::RequestMetaInfoV1& GetSnapshotRequest::requestmetainfo() const {
+  // @@protoc_insertion_point(field_get:proto.GetSnapshotRequest.RequestMetaInfo)
+  return _internal_requestmetainfo();
+}
+inline void GetSnapshotRequest::unsafe_arena_set_allocated_requestmetainfo(
+    ::proto::RequestMetaInfoV1* requestmetainfo) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.requestmetainfo_);
+  }
+  _impl_.requestmetainfo_ = requestmetainfo;
+  if (requestmetainfo) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.GetSnapshotRequest.RequestMetaInfo)
+}
+inline ::proto::RequestMetaInfoV1* GetSnapshotRequest::release_requestmetainfo() {
+  
+  ::proto::RequestMetaInfoV1* temp = _impl_.requestmetainfo_;
+  _impl_.requestmetainfo_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::proto::RequestMetaInfoV1* GetSnapshotRequest::unsafe_arena_release_requestmetainfo() {
+  // @@protoc_insertion_point(field_release:proto.GetSnapshotRequest.RequestMetaInfo)
+  
+  ::proto::RequestMetaInfoV1* temp = _impl_.requestmetainfo_;
+  _impl_.requestmetainfo_ = nullptr;
+  return temp;
+}
+inline ::proto::RequestMetaInfoV1* GetSnapshotRequest::_internal_mutable_requestmetainfo() {
+  
+  if (_impl_.requestmetainfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::RequestMetaInfoV1>(GetArenaForAllocation());
+    _impl_.requestmetainfo_ = p;
+  }
+  return _impl_.requestmetainfo_;
+}
+inline ::proto::RequestMetaInfoV1* GetSnapshotRequest::mutable_requestmetainfo() {
+  ::proto::RequestMetaInfoV1* _msg = _internal_mutable_requestmetainfo();
+  // @@protoc_insertion_point(field_mutable:proto.GetSnapshotRequest.RequestMetaInfo)
+  return _msg;
+}
+inline void GetSnapshotRequest::set_allocated_requestmetainfo(::proto::RequestMetaInfoV1* requestmetainfo) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.requestmetainfo_);
+  }
+  if (requestmetainfo) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(requestmetainfo));
+    if (message_arena != submessage_arena) {
+      requestmetainfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, requestmetainfo, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  _impl_.requestmetainfo_ = requestmetainfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.GetSnapshotRequest.RequestMetaInfo)
+}
+
+// .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
 inline bool GetSnapshotRequest::_internal_has_userverifyinfo() const {
   return this != internal_default_instance() && _impl_.userverifyinfo_ != nullptr;
 }
@@ -10728,7 +13604,7 @@ inline void GetSnapshotRequest::set_allocated_userverifyinfo(::proto::UserVerify
   // @@protoc_insertion_point(field_set_allocated:proto.GetSnapshotRequest.UserVerifyInfo)
 }
 
-// string SwcSnapshotCollectionName = 2;
+// string SwcSnapshotCollectionName = 3;
 inline void GetSnapshotRequest::clear_swcsnapshotcollectionname() {
   _impl_.swcsnapshotcollectionname_.ClearToEmpty();
 }
@@ -10781,6 +13657,91 @@ inline void GetSnapshotRequest::set_allocated_swcsnapshotcollectionname(std::str
 // -------------------------------------------------------------------
 
 // GetAllIncrementOperationMetaInfoRequest
+
+// .proto.RequestMetaInfoV1 RequestMetaInfo = 1;
+inline bool GetAllIncrementOperationMetaInfoRequest::_internal_has_requestmetainfo() const {
+  return this != internal_default_instance() && _impl_.requestmetainfo_ != nullptr;
+}
+inline bool GetAllIncrementOperationMetaInfoRequest::has_requestmetainfo() const {
+  return _internal_has_requestmetainfo();
+}
+inline const ::proto::RequestMetaInfoV1& GetAllIncrementOperationMetaInfoRequest::_internal_requestmetainfo() const {
+  const ::proto::RequestMetaInfoV1* p = _impl_.requestmetainfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::RequestMetaInfoV1&>(
+      ::proto::_RequestMetaInfoV1_default_instance_);
+}
+inline const ::proto::RequestMetaInfoV1& GetAllIncrementOperationMetaInfoRequest::requestmetainfo() const {
+  // @@protoc_insertion_point(field_get:proto.GetAllIncrementOperationMetaInfoRequest.RequestMetaInfo)
+  return _internal_requestmetainfo();
+}
+inline void GetAllIncrementOperationMetaInfoRequest::unsafe_arena_set_allocated_requestmetainfo(
+    ::proto::RequestMetaInfoV1* requestmetainfo) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.requestmetainfo_);
+  }
+  _impl_.requestmetainfo_ = requestmetainfo;
+  if (requestmetainfo) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.GetAllIncrementOperationMetaInfoRequest.RequestMetaInfo)
+}
+inline ::proto::RequestMetaInfoV1* GetAllIncrementOperationMetaInfoRequest::release_requestmetainfo() {
+  
+  ::proto::RequestMetaInfoV1* temp = _impl_.requestmetainfo_;
+  _impl_.requestmetainfo_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::proto::RequestMetaInfoV1* GetAllIncrementOperationMetaInfoRequest::unsafe_arena_release_requestmetainfo() {
+  // @@protoc_insertion_point(field_release:proto.GetAllIncrementOperationMetaInfoRequest.RequestMetaInfo)
+  
+  ::proto::RequestMetaInfoV1* temp = _impl_.requestmetainfo_;
+  _impl_.requestmetainfo_ = nullptr;
+  return temp;
+}
+inline ::proto::RequestMetaInfoV1* GetAllIncrementOperationMetaInfoRequest::_internal_mutable_requestmetainfo() {
+  
+  if (_impl_.requestmetainfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::RequestMetaInfoV1>(GetArenaForAllocation());
+    _impl_.requestmetainfo_ = p;
+  }
+  return _impl_.requestmetainfo_;
+}
+inline ::proto::RequestMetaInfoV1* GetAllIncrementOperationMetaInfoRequest::mutable_requestmetainfo() {
+  ::proto::RequestMetaInfoV1* _msg = _internal_mutable_requestmetainfo();
+  // @@protoc_insertion_point(field_mutable:proto.GetAllIncrementOperationMetaInfoRequest.RequestMetaInfo)
+  return _msg;
+}
+inline void GetAllIncrementOperationMetaInfoRequest::set_allocated_requestmetainfo(::proto::RequestMetaInfoV1* requestmetainfo) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.requestmetainfo_);
+  }
+  if (requestmetainfo) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(requestmetainfo));
+    if (message_arena != submessage_arena) {
+      requestmetainfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, requestmetainfo, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  _impl_.requestmetainfo_ = requestmetainfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.GetAllIncrementOperationMetaInfoRequest.RequestMetaInfo)
+}
 
 // .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
 inline bool GetAllIncrementOperationMetaInfoRequest::_internal_has_userverifyinfo() const {
@@ -10871,7 +13832,92 @@ inline void GetAllIncrementOperationMetaInfoRequest::set_allocated_userverifyinf
 
 // GetIncrementOperationRequest
 
-// .proto.UserVerifyInfoV1 UserVerifyInfo = 1;
+// .proto.RequestMetaInfoV1 RequestMetaInfo = 1;
+inline bool GetIncrementOperationRequest::_internal_has_requestmetainfo() const {
+  return this != internal_default_instance() && _impl_.requestmetainfo_ != nullptr;
+}
+inline bool GetIncrementOperationRequest::has_requestmetainfo() const {
+  return _internal_has_requestmetainfo();
+}
+inline const ::proto::RequestMetaInfoV1& GetIncrementOperationRequest::_internal_requestmetainfo() const {
+  const ::proto::RequestMetaInfoV1* p = _impl_.requestmetainfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::RequestMetaInfoV1&>(
+      ::proto::_RequestMetaInfoV1_default_instance_);
+}
+inline const ::proto::RequestMetaInfoV1& GetIncrementOperationRequest::requestmetainfo() const {
+  // @@protoc_insertion_point(field_get:proto.GetIncrementOperationRequest.RequestMetaInfo)
+  return _internal_requestmetainfo();
+}
+inline void GetIncrementOperationRequest::unsafe_arena_set_allocated_requestmetainfo(
+    ::proto::RequestMetaInfoV1* requestmetainfo) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.requestmetainfo_);
+  }
+  _impl_.requestmetainfo_ = requestmetainfo;
+  if (requestmetainfo) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.GetIncrementOperationRequest.RequestMetaInfo)
+}
+inline ::proto::RequestMetaInfoV1* GetIncrementOperationRequest::release_requestmetainfo() {
+  
+  ::proto::RequestMetaInfoV1* temp = _impl_.requestmetainfo_;
+  _impl_.requestmetainfo_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::proto::RequestMetaInfoV1* GetIncrementOperationRequest::unsafe_arena_release_requestmetainfo() {
+  // @@protoc_insertion_point(field_release:proto.GetIncrementOperationRequest.RequestMetaInfo)
+  
+  ::proto::RequestMetaInfoV1* temp = _impl_.requestmetainfo_;
+  _impl_.requestmetainfo_ = nullptr;
+  return temp;
+}
+inline ::proto::RequestMetaInfoV1* GetIncrementOperationRequest::_internal_mutable_requestmetainfo() {
+  
+  if (_impl_.requestmetainfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::RequestMetaInfoV1>(GetArenaForAllocation());
+    _impl_.requestmetainfo_ = p;
+  }
+  return _impl_.requestmetainfo_;
+}
+inline ::proto::RequestMetaInfoV1* GetIncrementOperationRequest::mutable_requestmetainfo() {
+  ::proto::RequestMetaInfoV1* _msg = _internal_mutable_requestmetainfo();
+  // @@protoc_insertion_point(field_mutable:proto.GetIncrementOperationRequest.RequestMetaInfo)
+  return _msg;
+}
+inline void GetIncrementOperationRequest::set_allocated_requestmetainfo(::proto::RequestMetaInfoV1* requestmetainfo) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.requestmetainfo_);
+  }
+  if (requestmetainfo) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(requestmetainfo));
+    if (message_arena != submessage_arena) {
+      requestmetainfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, requestmetainfo, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  _impl_.requestmetainfo_ = requestmetainfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.GetIncrementOperationRequest.RequestMetaInfo)
+}
+
+// .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
 inline bool GetIncrementOperationRequest::_internal_has_userverifyinfo() const {
   return this != internal_default_instance() && _impl_.userverifyinfo_ != nullptr;
 }
@@ -10956,7 +14002,7 @@ inline void GetIncrementOperationRequest::set_allocated_userverifyinfo(::proto::
   // @@protoc_insertion_point(field_set_allocated:proto.GetIncrementOperationRequest.UserVerifyInfo)
 }
 
-// string IncrementOperationCollectionName = 2;
+// string IncrementOperationCollectionName = 3;
 inline void GetIncrementOperationRequest::clear_incrementoperationcollectionname() {
   _impl_.incrementoperationcollectionname_.ClearToEmpty();
 }
@@ -11010,7 +14056,92 @@ inline void GetIncrementOperationRequest::set_allocated_incrementoperationcollec
 
 // CreateSwcNodeDataRequest
 
-// .proto.UserVerifyInfoV1 UserVerifyInfo = 1;
+// .proto.RequestMetaInfoV1 RequestMetaInfo = 1;
+inline bool CreateSwcNodeDataRequest::_internal_has_requestmetainfo() const {
+  return this != internal_default_instance() && _impl_.requestmetainfo_ != nullptr;
+}
+inline bool CreateSwcNodeDataRequest::has_requestmetainfo() const {
+  return _internal_has_requestmetainfo();
+}
+inline const ::proto::RequestMetaInfoV1& CreateSwcNodeDataRequest::_internal_requestmetainfo() const {
+  const ::proto::RequestMetaInfoV1* p = _impl_.requestmetainfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::RequestMetaInfoV1&>(
+      ::proto::_RequestMetaInfoV1_default_instance_);
+}
+inline const ::proto::RequestMetaInfoV1& CreateSwcNodeDataRequest::requestmetainfo() const {
+  // @@protoc_insertion_point(field_get:proto.CreateSwcNodeDataRequest.RequestMetaInfo)
+  return _internal_requestmetainfo();
+}
+inline void CreateSwcNodeDataRequest::unsafe_arena_set_allocated_requestmetainfo(
+    ::proto::RequestMetaInfoV1* requestmetainfo) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.requestmetainfo_);
+  }
+  _impl_.requestmetainfo_ = requestmetainfo;
+  if (requestmetainfo) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.CreateSwcNodeDataRequest.RequestMetaInfo)
+}
+inline ::proto::RequestMetaInfoV1* CreateSwcNodeDataRequest::release_requestmetainfo() {
+  
+  ::proto::RequestMetaInfoV1* temp = _impl_.requestmetainfo_;
+  _impl_.requestmetainfo_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::proto::RequestMetaInfoV1* CreateSwcNodeDataRequest::unsafe_arena_release_requestmetainfo() {
+  // @@protoc_insertion_point(field_release:proto.CreateSwcNodeDataRequest.RequestMetaInfo)
+  
+  ::proto::RequestMetaInfoV1* temp = _impl_.requestmetainfo_;
+  _impl_.requestmetainfo_ = nullptr;
+  return temp;
+}
+inline ::proto::RequestMetaInfoV1* CreateSwcNodeDataRequest::_internal_mutable_requestmetainfo() {
+  
+  if (_impl_.requestmetainfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::RequestMetaInfoV1>(GetArenaForAllocation());
+    _impl_.requestmetainfo_ = p;
+  }
+  return _impl_.requestmetainfo_;
+}
+inline ::proto::RequestMetaInfoV1* CreateSwcNodeDataRequest::mutable_requestmetainfo() {
+  ::proto::RequestMetaInfoV1* _msg = _internal_mutable_requestmetainfo();
+  // @@protoc_insertion_point(field_mutable:proto.CreateSwcNodeDataRequest.RequestMetaInfo)
+  return _msg;
+}
+inline void CreateSwcNodeDataRequest::set_allocated_requestmetainfo(::proto::RequestMetaInfoV1* requestmetainfo) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.requestmetainfo_);
+  }
+  if (requestmetainfo) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(requestmetainfo));
+    if (message_arena != submessage_arena) {
+      requestmetainfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, requestmetainfo, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  _impl_.requestmetainfo_ = requestmetainfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.CreateSwcNodeDataRequest.RequestMetaInfo)
+}
+
+// .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
 inline bool CreateSwcNodeDataRequest::_internal_has_userverifyinfo() const {
   return this != internal_default_instance() && _impl_.userverifyinfo_ != nullptr;
 }
@@ -11095,92 +14226,57 @@ inline void CreateSwcNodeDataRequest::set_allocated_userverifyinfo(::proto::User
   // @@protoc_insertion_point(field_set_allocated:proto.CreateSwcNodeDataRequest.UserVerifyInfo)
 }
 
-// .proto.SwcMetaInfoV1 SwcInfo = 2;
-inline bool CreateSwcNodeDataRequest::_internal_has_swcinfo() const {
-  return this != internal_default_instance() && _impl_.swcinfo_ != nullptr;
+// string SwcName = 3;
+inline void CreateSwcNodeDataRequest::clear_swcname() {
+  _impl_.swcname_.ClearToEmpty();
 }
-inline bool CreateSwcNodeDataRequest::has_swcinfo() const {
-  return _internal_has_swcinfo();
+inline const std::string& CreateSwcNodeDataRequest::swcname() const {
+  // @@protoc_insertion_point(field_get:proto.CreateSwcNodeDataRequest.SwcName)
+  return _internal_swcname();
 }
-inline const ::proto::SwcMetaInfoV1& CreateSwcNodeDataRequest::_internal_swcinfo() const {
-  const ::proto::SwcMetaInfoV1* p = _impl_.swcinfo_;
-  return p != nullptr ? *p : reinterpret_cast<const ::proto::SwcMetaInfoV1&>(
-      ::proto::_SwcMetaInfoV1_default_instance_);
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void CreateSwcNodeDataRequest::set_swcname(ArgT0&& arg0, ArgT... args) {
+ 
+ _impl_.swcname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:proto.CreateSwcNodeDataRequest.SwcName)
 }
-inline const ::proto::SwcMetaInfoV1& CreateSwcNodeDataRequest::swcinfo() const {
-  // @@protoc_insertion_point(field_get:proto.CreateSwcNodeDataRequest.SwcInfo)
-  return _internal_swcinfo();
+inline std::string* CreateSwcNodeDataRequest::mutable_swcname() {
+  std::string* _s = _internal_mutable_swcname();
+  // @@protoc_insertion_point(field_mutable:proto.CreateSwcNodeDataRequest.SwcName)
+  return _s;
 }
-inline void CreateSwcNodeDataRequest::unsafe_arena_set_allocated_swcinfo(
-    ::proto::SwcMetaInfoV1* swcinfo) {
-  if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.swcinfo_);
-  }
-  _impl_.swcinfo_ = swcinfo;
-  if (swcinfo) {
+inline const std::string& CreateSwcNodeDataRequest::_internal_swcname() const {
+  return _impl_.swcname_.Get();
+}
+inline void CreateSwcNodeDataRequest::_internal_set_swcname(const std::string& value) {
+  
+  _impl_.swcname_.Set(value, GetArenaForAllocation());
+}
+inline std::string* CreateSwcNodeDataRequest::_internal_mutable_swcname() {
+  
+  return _impl_.swcname_.Mutable(GetArenaForAllocation());
+}
+inline std::string* CreateSwcNodeDataRequest::release_swcname() {
+  // @@protoc_insertion_point(field_release:proto.CreateSwcNodeDataRequest.SwcName)
+  return _impl_.swcname_.Release();
+}
+inline void CreateSwcNodeDataRequest::set_allocated_swcname(std::string* swcname) {
+  if (swcname != nullptr) {
     
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.CreateSwcNodeDataRequest.SwcInfo)
-}
-inline ::proto::SwcMetaInfoV1* CreateSwcNodeDataRequest::release_swcinfo() {
-  
-  ::proto::SwcMetaInfoV1* temp = _impl_.swcinfo_;
-  _impl_.swcinfo_ = nullptr;
-#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
-  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
-  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
-  if (GetArenaForAllocation() == nullptr) { delete old; }
-#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
-  if (GetArenaForAllocation() != nullptr) {
-    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  _impl_.swcname_.SetAllocated(swcname, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.swcname_.IsDefault()) {
+    _impl_.swcname_.Set("", GetArenaForAllocation());
   }
-#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
-  return temp;
-}
-inline ::proto::SwcMetaInfoV1* CreateSwcNodeDataRequest::unsafe_arena_release_swcinfo() {
-  // @@protoc_insertion_point(field_release:proto.CreateSwcNodeDataRequest.SwcInfo)
-  
-  ::proto::SwcMetaInfoV1* temp = _impl_.swcinfo_;
-  _impl_.swcinfo_ = nullptr;
-  return temp;
-}
-inline ::proto::SwcMetaInfoV1* CreateSwcNodeDataRequest::_internal_mutable_swcinfo() {
-  
-  if (_impl_.swcinfo_ == nullptr) {
-    auto* p = CreateMaybeMessage<::proto::SwcMetaInfoV1>(GetArenaForAllocation());
-    _impl_.swcinfo_ = p;
-  }
-  return _impl_.swcinfo_;
-}
-inline ::proto::SwcMetaInfoV1* CreateSwcNodeDataRequest::mutable_swcinfo() {
-  ::proto::SwcMetaInfoV1* _msg = _internal_mutable_swcinfo();
-  // @@protoc_insertion_point(field_mutable:proto.CreateSwcNodeDataRequest.SwcInfo)
-  return _msg;
-}
-inline void CreateSwcNodeDataRequest::set_allocated_swcinfo(::proto::SwcMetaInfoV1* swcinfo) {
-  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
-  if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.swcinfo_);
-  }
-  if (swcinfo) {
-    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(swcinfo));
-    if (message_arena != submessage_arena) {
-      swcinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, swcinfo, submessage_arena);
-    }
-    
-  } else {
-    
-  }
-  _impl_.swcinfo_ = swcinfo;
-  // @@protoc_insertion_point(field_set_allocated:proto.CreateSwcNodeDataRequest.SwcInfo)
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:proto.CreateSwcNodeDataRequest.SwcName)
 }
 
-// .proto.SwcDataV1 SwcData = 3;
+// .proto.SwcDataV1 SwcData = 4;
 inline bool CreateSwcNodeDataRequest::_internal_has_swcdata() const {
   return this != internal_default_instance() && _impl_.swcdata_ != nullptr;
 }
@@ -11269,7 +14365,92 @@ inline void CreateSwcNodeDataRequest::set_allocated_swcdata(::proto::SwcDataV1* 
 
 // DeleteSwcNodeDataRequest
 
-// .proto.UserVerifyInfoV1 UserVerifyInfo = 1;
+// .proto.RequestMetaInfoV1 RequestMetaInfo = 1;
+inline bool DeleteSwcNodeDataRequest::_internal_has_requestmetainfo() const {
+  return this != internal_default_instance() && _impl_.requestmetainfo_ != nullptr;
+}
+inline bool DeleteSwcNodeDataRequest::has_requestmetainfo() const {
+  return _internal_has_requestmetainfo();
+}
+inline const ::proto::RequestMetaInfoV1& DeleteSwcNodeDataRequest::_internal_requestmetainfo() const {
+  const ::proto::RequestMetaInfoV1* p = _impl_.requestmetainfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::RequestMetaInfoV1&>(
+      ::proto::_RequestMetaInfoV1_default_instance_);
+}
+inline const ::proto::RequestMetaInfoV1& DeleteSwcNodeDataRequest::requestmetainfo() const {
+  // @@protoc_insertion_point(field_get:proto.DeleteSwcNodeDataRequest.RequestMetaInfo)
+  return _internal_requestmetainfo();
+}
+inline void DeleteSwcNodeDataRequest::unsafe_arena_set_allocated_requestmetainfo(
+    ::proto::RequestMetaInfoV1* requestmetainfo) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.requestmetainfo_);
+  }
+  _impl_.requestmetainfo_ = requestmetainfo;
+  if (requestmetainfo) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.DeleteSwcNodeDataRequest.RequestMetaInfo)
+}
+inline ::proto::RequestMetaInfoV1* DeleteSwcNodeDataRequest::release_requestmetainfo() {
+  
+  ::proto::RequestMetaInfoV1* temp = _impl_.requestmetainfo_;
+  _impl_.requestmetainfo_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::proto::RequestMetaInfoV1* DeleteSwcNodeDataRequest::unsafe_arena_release_requestmetainfo() {
+  // @@protoc_insertion_point(field_release:proto.DeleteSwcNodeDataRequest.RequestMetaInfo)
+  
+  ::proto::RequestMetaInfoV1* temp = _impl_.requestmetainfo_;
+  _impl_.requestmetainfo_ = nullptr;
+  return temp;
+}
+inline ::proto::RequestMetaInfoV1* DeleteSwcNodeDataRequest::_internal_mutable_requestmetainfo() {
+  
+  if (_impl_.requestmetainfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::RequestMetaInfoV1>(GetArenaForAllocation());
+    _impl_.requestmetainfo_ = p;
+  }
+  return _impl_.requestmetainfo_;
+}
+inline ::proto::RequestMetaInfoV1* DeleteSwcNodeDataRequest::mutable_requestmetainfo() {
+  ::proto::RequestMetaInfoV1* _msg = _internal_mutable_requestmetainfo();
+  // @@protoc_insertion_point(field_mutable:proto.DeleteSwcNodeDataRequest.RequestMetaInfo)
+  return _msg;
+}
+inline void DeleteSwcNodeDataRequest::set_allocated_requestmetainfo(::proto::RequestMetaInfoV1* requestmetainfo) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.requestmetainfo_);
+  }
+  if (requestmetainfo) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(requestmetainfo));
+    if (message_arena != submessage_arena) {
+      requestmetainfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, requestmetainfo, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  _impl_.requestmetainfo_ = requestmetainfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.DeleteSwcNodeDataRequest.RequestMetaInfo)
+}
+
+// .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
 inline bool DeleteSwcNodeDataRequest::_internal_has_userverifyinfo() const {
   return this != internal_default_instance() && _impl_.userverifyinfo_ != nullptr;
 }
@@ -11354,92 +14535,57 @@ inline void DeleteSwcNodeDataRequest::set_allocated_userverifyinfo(::proto::User
   // @@protoc_insertion_point(field_set_allocated:proto.DeleteSwcNodeDataRequest.UserVerifyInfo)
 }
 
-// .proto.SwcMetaInfoV1 SwcInfo = 2;
-inline bool DeleteSwcNodeDataRequest::_internal_has_swcinfo() const {
-  return this != internal_default_instance() && _impl_.swcinfo_ != nullptr;
+// string SwcName = 3;
+inline void DeleteSwcNodeDataRequest::clear_swcname() {
+  _impl_.swcname_.ClearToEmpty();
 }
-inline bool DeleteSwcNodeDataRequest::has_swcinfo() const {
-  return _internal_has_swcinfo();
+inline const std::string& DeleteSwcNodeDataRequest::swcname() const {
+  // @@protoc_insertion_point(field_get:proto.DeleteSwcNodeDataRequest.SwcName)
+  return _internal_swcname();
 }
-inline const ::proto::SwcMetaInfoV1& DeleteSwcNodeDataRequest::_internal_swcinfo() const {
-  const ::proto::SwcMetaInfoV1* p = _impl_.swcinfo_;
-  return p != nullptr ? *p : reinterpret_cast<const ::proto::SwcMetaInfoV1&>(
-      ::proto::_SwcMetaInfoV1_default_instance_);
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void DeleteSwcNodeDataRequest::set_swcname(ArgT0&& arg0, ArgT... args) {
+ 
+ _impl_.swcname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:proto.DeleteSwcNodeDataRequest.SwcName)
 }
-inline const ::proto::SwcMetaInfoV1& DeleteSwcNodeDataRequest::swcinfo() const {
-  // @@protoc_insertion_point(field_get:proto.DeleteSwcNodeDataRequest.SwcInfo)
-  return _internal_swcinfo();
+inline std::string* DeleteSwcNodeDataRequest::mutable_swcname() {
+  std::string* _s = _internal_mutable_swcname();
+  // @@protoc_insertion_point(field_mutable:proto.DeleteSwcNodeDataRequest.SwcName)
+  return _s;
 }
-inline void DeleteSwcNodeDataRequest::unsafe_arena_set_allocated_swcinfo(
-    ::proto::SwcMetaInfoV1* swcinfo) {
-  if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.swcinfo_);
-  }
-  _impl_.swcinfo_ = swcinfo;
-  if (swcinfo) {
+inline const std::string& DeleteSwcNodeDataRequest::_internal_swcname() const {
+  return _impl_.swcname_.Get();
+}
+inline void DeleteSwcNodeDataRequest::_internal_set_swcname(const std::string& value) {
+  
+  _impl_.swcname_.Set(value, GetArenaForAllocation());
+}
+inline std::string* DeleteSwcNodeDataRequest::_internal_mutable_swcname() {
+  
+  return _impl_.swcname_.Mutable(GetArenaForAllocation());
+}
+inline std::string* DeleteSwcNodeDataRequest::release_swcname() {
+  // @@protoc_insertion_point(field_release:proto.DeleteSwcNodeDataRequest.SwcName)
+  return _impl_.swcname_.Release();
+}
+inline void DeleteSwcNodeDataRequest::set_allocated_swcname(std::string* swcname) {
+  if (swcname != nullptr) {
     
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.DeleteSwcNodeDataRequest.SwcInfo)
-}
-inline ::proto::SwcMetaInfoV1* DeleteSwcNodeDataRequest::release_swcinfo() {
-  
-  ::proto::SwcMetaInfoV1* temp = _impl_.swcinfo_;
-  _impl_.swcinfo_ = nullptr;
-#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
-  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
-  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
-  if (GetArenaForAllocation() == nullptr) { delete old; }
-#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
-  if (GetArenaForAllocation() != nullptr) {
-    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  _impl_.swcname_.SetAllocated(swcname, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.swcname_.IsDefault()) {
+    _impl_.swcname_.Set("", GetArenaForAllocation());
   }
-#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
-  return temp;
-}
-inline ::proto::SwcMetaInfoV1* DeleteSwcNodeDataRequest::unsafe_arena_release_swcinfo() {
-  // @@protoc_insertion_point(field_release:proto.DeleteSwcNodeDataRequest.SwcInfo)
-  
-  ::proto::SwcMetaInfoV1* temp = _impl_.swcinfo_;
-  _impl_.swcinfo_ = nullptr;
-  return temp;
-}
-inline ::proto::SwcMetaInfoV1* DeleteSwcNodeDataRequest::_internal_mutable_swcinfo() {
-  
-  if (_impl_.swcinfo_ == nullptr) {
-    auto* p = CreateMaybeMessage<::proto::SwcMetaInfoV1>(GetArenaForAllocation());
-    _impl_.swcinfo_ = p;
-  }
-  return _impl_.swcinfo_;
-}
-inline ::proto::SwcMetaInfoV1* DeleteSwcNodeDataRequest::mutable_swcinfo() {
-  ::proto::SwcMetaInfoV1* _msg = _internal_mutable_swcinfo();
-  // @@protoc_insertion_point(field_mutable:proto.DeleteSwcNodeDataRequest.SwcInfo)
-  return _msg;
-}
-inline void DeleteSwcNodeDataRequest::set_allocated_swcinfo(::proto::SwcMetaInfoV1* swcinfo) {
-  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
-  if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.swcinfo_);
-  }
-  if (swcinfo) {
-    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(swcinfo));
-    if (message_arena != submessage_arena) {
-      swcinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, swcinfo, submessage_arena);
-    }
-    
-  } else {
-    
-  }
-  _impl_.swcinfo_ = swcinfo;
-  // @@protoc_insertion_point(field_set_allocated:proto.DeleteSwcNodeDataRequest.SwcInfo)
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:proto.DeleteSwcNodeDataRequest.SwcName)
 }
 
-// .proto.SwcDataV1 SwcData = 3;
+// .proto.SwcDataV1 SwcData = 4;
 inline bool DeleteSwcNodeDataRequest::_internal_has_swcdata() const {
   return this != internal_default_instance() && _impl_.swcdata_ != nullptr;
 }
@@ -11528,7 +14674,92 @@ inline void DeleteSwcNodeDataRequest::set_allocated_swcdata(::proto::SwcDataV1* 
 
 // UpdateSwcNodeDataRequest
 
-// .proto.UserVerifyInfoV1 UserVerifyInfo = 1;
+// .proto.RequestMetaInfoV1 RequestMetaInfo = 1;
+inline bool UpdateSwcNodeDataRequest::_internal_has_requestmetainfo() const {
+  return this != internal_default_instance() && _impl_.requestmetainfo_ != nullptr;
+}
+inline bool UpdateSwcNodeDataRequest::has_requestmetainfo() const {
+  return _internal_has_requestmetainfo();
+}
+inline const ::proto::RequestMetaInfoV1& UpdateSwcNodeDataRequest::_internal_requestmetainfo() const {
+  const ::proto::RequestMetaInfoV1* p = _impl_.requestmetainfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::RequestMetaInfoV1&>(
+      ::proto::_RequestMetaInfoV1_default_instance_);
+}
+inline const ::proto::RequestMetaInfoV1& UpdateSwcNodeDataRequest::requestmetainfo() const {
+  // @@protoc_insertion_point(field_get:proto.UpdateSwcNodeDataRequest.RequestMetaInfo)
+  return _internal_requestmetainfo();
+}
+inline void UpdateSwcNodeDataRequest::unsafe_arena_set_allocated_requestmetainfo(
+    ::proto::RequestMetaInfoV1* requestmetainfo) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.requestmetainfo_);
+  }
+  _impl_.requestmetainfo_ = requestmetainfo;
+  if (requestmetainfo) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.UpdateSwcNodeDataRequest.RequestMetaInfo)
+}
+inline ::proto::RequestMetaInfoV1* UpdateSwcNodeDataRequest::release_requestmetainfo() {
+  
+  ::proto::RequestMetaInfoV1* temp = _impl_.requestmetainfo_;
+  _impl_.requestmetainfo_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::proto::RequestMetaInfoV1* UpdateSwcNodeDataRequest::unsafe_arena_release_requestmetainfo() {
+  // @@protoc_insertion_point(field_release:proto.UpdateSwcNodeDataRequest.RequestMetaInfo)
+  
+  ::proto::RequestMetaInfoV1* temp = _impl_.requestmetainfo_;
+  _impl_.requestmetainfo_ = nullptr;
+  return temp;
+}
+inline ::proto::RequestMetaInfoV1* UpdateSwcNodeDataRequest::_internal_mutable_requestmetainfo() {
+  
+  if (_impl_.requestmetainfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::RequestMetaInfoV1>(GetArenaForAllocation());
+    _impl_.requestmetainfo_ = p;
+  }
+  return _impl_.requestmetainfo_;
+}
+inline ::proto::RequestMetaInfoV1* UpdateSwcNodeDataRequest::mutable_requestmetainfo() {
+  ::proto::RequestMetaInfoV1* _msg = _internal_mutable_requestmetainfo();
+  // @@protoc_insertion_point(field_mutable:proto.UpdateSwcNodeDataRequest.RequestMetaInfo)
+  return _msg;
+}
+inline void UpdateSwcNodeDataRequest::set_allocated_requestmetainfo(::proto::RequestMetaInfoV1* requestmetainfo) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.requestmetainfo_);
+  }
+  if (requestmetainfo) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(requestmetainfo));
+    if (message_arena != submessage_arena) {
+      requestmetainfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, requestmetainfo, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  _impl_.requestmetainfo_ = requestmetainfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.UpdateSwcNodeDataRequest.RequestMetaInfo)
+}
+
+// .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
 inline bool UpdateSwcNodeDataRequest::_internal_has_userverifyinfo() const {
   return this != internal_default_instance() && _impl_.userverifyinfo_ != nullptr;
 }
@@ -11613,92 +14844,57 @@ inline void UpdateSwcNodeDataRequest::set_allocated_userverifyinfo(::proto::User
   // @@protoc_insertion_point(field_set_allocated:proto.UpdateSwcNodeDataRequest.UserVerifyInfo)
 }
 
-// .proto.SwcMetaInfoV1 SwcInfo = 2;
-inline bool UpdateSwcNodeDataRequest::_internal_has_swcinfo() const {
-  return this != internal_default_instance() && _impl_.swcinfo_ != nullptr;
+// string SwcName = 3;
+inline void UpdateSwcNodeDataRequest::clear_swcname() {
+  _impl_.swcname_.ClearToEmpty();
 }
-inline bool UpdateSwcNodeDataRequest::has_swcinfo() const {
-  return _internal_has_swcinfo();
+inline const std::string& UpdateSwcNodeDataRequest::swcname() const {
+  // @@protoc_insertion_point(field_get:proto.UpdateSwcNodeDataRequest.SwcName)
+  return _internal_swcname();
 }
-inline const ::proto::SwcMetaInfoV1& UpdateSwcNodeDataRequest::_internal_swcinfo() const {
-  const ::proto::SwcMetaInfoV1* p = _impl_.swcinfo_;
-  return p != nullptr ? *p : reinterpret_cast<const ::proto::SwcMetaInfoV1&>(
-      ::proto::_SwcMetaInfoV1_default_instance_);
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void UpdateSwcNodeDataRequest::set_swcname(ArgT0&& arg0, ArgT... args) {
+ 
+ _impl_.swcname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:proto.UpdateSwcNodeDataRequest.SwcName)
 }
-inline const ::proto::SwcMetaInfoV1& UpdateSwcNodeDataRequest::swcinfo() const {
-  // @@protoc_insertion_point(field_get:proto.UpdateSwcNodeDataRequest.SwcInfo)
-  return _internal_swcinfo();
+inline std::string* UpdateSwcNodeDataRequest::mutable_swcname() {
+  std::string* _s = _internal_mutable_swcname();
+  // @@protoc_insertion_point(field_mutable:proto.UpdateSwcNodeDataRequest.SwcName)
+  return _s;
 }
-inline void UpdateSwcNodeDataRequest::unsafe_arena_set_allocated_swcinfo(
-    ::proto::SwcMetaInfoV1* swcinfo) {
-  if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.swcinfo_);
-  }
-  _impl_.swcinfo_ = swcinfo;
-  if (swcinfo) {
+inline const std::string& UpdateSwcNodeDataRequest::_internal_swcname() const {
+  return _impl_.swcname_.Get();
+}
+inline void UpdateSwcNodeDataRequest::_internal_set_swcname(const std::string& value) {
+  
+  _impl_.swcname_.Set(value, GetArenaForAllocation());
+}
+inline std::string* UpdateSwcNodeDataRequest::_internal_mutable_swcname() {
+  
+  return _impl_.swcname_.Mutable(GetArenaForAllocation());
+}
+inline std::string* UpdateSwcNodeDataRequest::release_swcname() {
+  // @@protoc_insertion_point(field_release:proto.UpdateSwcNodeDataRequest.SwcName)
+  return _impl_.swcname_.Release();
+}
+inline void UpdateSwcNodeDataRequest::set_allocated_swcname(std::string* swcname) {
+  if (swcname != nullptr) {
     
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.UpdateSwcNodeDataRequest.SwcInfo)
-}
-inline ::proto::SwcMetaInfoV1* UpdateSwcNodeDataRequest::release_swcinfo() {
-  
-  ::proto::SwcMetaInfoV1* temp = _impl_.swcinfo_;
-  _impl_.swcinfo_ = nullptr;
-#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
-  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
-  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
-  if (GetArenaForAllocation() == nullptr) { delete old; }
-#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
-  if (GetArenaForAllocation() != nullptr) {
-    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  _impl_.swcname_.SetAllocated(swcname, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.swcname_.IsDefault()) {
+    _impl_.swcname_.Set("", GetArenaForAllocation());
   }
-#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
-  return temp;
-}
-inline ::proto::SwcMetaInfoV1* UpdateSwcNodeDataRequest::unsafe_arena_release_swcinfo() {
-  // @@protoc_insertion_point(field_release:proto.UpdateSwcNodeDataRequest.SwcInfo)
-  
-  ::proto::SwcMetaInfoV1* temp = _impl_.swcinfo_;
-  _impl_.swcinfo_ = nullptr;
-  return temp;
-}
-inline ::proto::SwcMetaInfoV1* UpdateSwcNodeDataRequest::_internal_mutable_swcinfo() {
-  
-  if (_impl_.swcinfo_ == nullptr) {
-    auto* p = CreateMaybeMessage<::proto::SwcMetaInfoV1>(GetArenaForAllocation());
-    _impl_.swcinfo_ = p;
-  }
-  return _impl_.swcinfo_;
-}
-inline ::proto::SwcMetaInfoV1* UpdateSwcNodeDataRequest::mutable_swcinfo() {
-  ::proto::SwcMetaInfoV1* _msg = _internal_mutable_swcinfo();
-  // @@protoc_insertion_point(field_mutable:proto.UpdateSwcNodeDataRequest.SwcInfo)
-  return _msg;
-}
-inline void UpdateSwcNodeDataRequest::set_allocated_swcinfo(::proto::SwcMetaInfoV1* swcinfo) {
-  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
-  if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.swcinfo_);
-  }
-  if (swcinfo) {
-    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(swcinfo));
-    if (message_arena != submessage_arena) {
-      swcinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, swcinfo, submessage_arena);
-    }
-    
-  } else {
-    
-  }
-  _impl_.swcinfo_ = swcinfo;
-  // @@protoc_insertion_point(field_set_allocated:proto.UpdateSwcNodeDataRequest.SwcInfo)
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:proto.UpdateSwcNodeDataRequest.SwcName)
 }
 
-// .proto.SwcNodeDataV1 SwcNodeData = 3;
+// .proto.SwcNodeDataV1 SwcNodeData = 4;
 inline bool UpdateSwcNodeDataRequest::_internal_has_swcnodedata() const {
   return this != internal_default_instance() && _impl_.swcnodedata_ != nullptr;
 }
@@ -11787,39 +14983,39 @@ inline void UpdateSwcNodeDataRequest::set_allocated_swcnodedata(::proto::SwcNode
 
 // GetSwcNodeDataRequest
 
-// .proto.UserMetaInfoV1 UserInfo = 1;
-inline bool GetSwcNodeDataRequest::_internal_has_userinfo() const {
-  return this != internal_default_instance() && _impl_.userinfo_ != nullptr;
+// .proto.RequestMetaInfoV1 RequestMetaInfo = 1;
+inline bool GetSwcNodeDataRequest::_internal_has_requestmetainfo() const {
+  return this != internal_default_instance() && _impl_.requestmetainfo_ != nullptr;
 }
-inline bool GetSwcNodeDataRequest::has_userinfo() const {
-  return _internal_has_userinfo();
+inline bool GetSwcNodeDataRequest::has_requestmetainfo() const {
+  return _internal_has_requestmetainfo();
 }
-inline const ::proto::UserMetaInfoV1& GetSwcNodeDataRequest::_internal_userinfo() const {
-  const ::proto::UserMetaInfoV1* p = _impl_.userinfo_;
-  return p != nullptr ? *p : reinterpret_cast<const ::proto::UserMetaInfoV1&>(
-      ::proto::_UserMetaInfoV1_default_instance_);
+inline const ::proto::RequestMetaInfoV1& GetSwcNodeDataRequest::_internal_requestmetainfo() const {
+  const ::proto::RequestMetaInfoV1* p = _impl_.requestmetainfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::RequestMetaInfoV1&>(
+      ::proto::_RequestMetaInfoV1_default_instance_);
 }
-inline const ::proto::UserMetaInfoV1& GetSwcNodeDataRequest::userinfo() const {
-  // @@protoc_insertion_point(field_get:proto.GetSwcNodeDataRequest.UserInfo)
-  return _internal_userinfo();
+inline const ::proto::RequestMetaInfoV1& GetSwcNodeDataRequest::requestmetainfo() const {
+  // @@protoc_insertion_point(field_get:proto.GetSwcNodeDataRequest.RequestMetaInfo)
+  return _internal_requestmetainfo();
 }
-inline void GetSwcNodeDataRequest::unsafe_arena_set_allocated_userinfo(
-    ::proto::UserMetaInfoV1* userinfo) {
+inline void GetSwcNodeDataRequest::unsafe_arena_set_allocated_requestmetainfo(
+    ::proto::RequestMetaInfoV1* requestmetainfo) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userinfo_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.requestmetainfo_);
   }
-  _impl_.userinfo_ = userinfo;
-  if (userinfo) {
+  _impl_.requestmetainfo_ = requestmetainfo;
+  if (requestmetainfo) {
     
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.GetSwcNodeDataRequest.UserInfo)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.GetSwcNodeDataRequest.RequestMetaInfo)
 }
-inline ::proto::UserMetaInfoV1* GetSwcNodeDataRequest::release_userinfo() {
+inline ::proto::RequestMetaInfoV1* GetSwcNodeDataRequest::release_requestmetainfo() {
   
-  ::proto::UserMetaInfoV1* temp = _impl_.userinfo_;
-  _impl_.userinfo_ = nullptr;
+  ::proto::RequestMetaInfoV1* temp = _impl_.requestmetainfo_;
+  _impl_.requestmetainfo_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -11831,80 +15027,80 @@ inline ::proto::UserMetaInfoV1* GetSwcNodeDataRequest::release_userinfo() {
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::proto::UserMetaInfoV1* GetSwcNodeDataRequest::unsafe_arena_release_userinfo() {
-  // @@protoc_insertion_point(field_release:proto.GetSwcNodeDataRequest.UserInfo)
+inline ::proto::RequestMetaInfoV1* GetSwcNodeDataRequest::unsafe_arena_release_requestmetainfo() {
+  // @@protoc_insertion_point(field_release:proto.GetSwcNodeDataRequest.RequestMetaInfo)
   
-  ::proto::UserMetaInfoV1* temp = _impl_.userinfo_;
-  _impl_.userinfo_ = nullptr;
+  ::proto::RequestMetaInfoV1* temp = _impl_.requestmetainfo_;
+  _impl_.requestmetainfo_ = nullptr;
   return temp;
 }
-inline ::proto::UserMetaInfoV1* GetSwcNodeDataRequest::_internal_mutable_userinfo() {
+inline ::proto::RequestMetaInfoV1* GetSwcNodeDataRequest::_internal_mutable_requestmetainfo() {
   
-  if (_impl_.userinfo_ == nullptr) {
-    auto* p = CreateMaybeMessage<::proto::UserMetaInfoV1>(GetArenaForAllocation());
-    _impl_.userinfo_ = p;
+  if (_impl_.requestmetainfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::RequestMetaInfoV1>(GetArenaForAllocation());
+    _impl_.requestmetainfo_ = p;
   }
-  return _impl_.userinfo_;
+  return _impl_.requestmetainfo_;
 }
-inline ::proto::UserMetaInfoV1* GetSwcNodeDataRequest::mutable_userinfo() {
-  ::proto::UserMetaInfoV1* _msg = _internal_mutable_userinfo();
-  // @@protoc_insertion_point(field_mutable:proto.GetSwcNodeDataRequest.UserInfo)
+inline ::proto::RequestMetaInfoV1* GetSwcNodeDataRequest::mutable_requestmetainfo() {
+  ::proto::RequestMetaInfoV1* _msg = _internal_mutable_requestmetainfo();
+  // @@protoc_insertion_point(field_mutable:proto.GetSwcNodeDataRequest.RequestMetaInfo)
   return _msg;
 }
-inline void GetSwcNodeDataRequest::set_allocated_userinfo(::proto::UserMetaInfoV1* userinfo) {
+inline void GetSwcNodeDataRequest::set_allocated_requestmetainfo(::proto::RequestMetaInfoV1* requestmetainfo) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userinfo_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.requestmetainfo_);
   }
-  if (userinfo) {
+  if (requestmetainfo) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(userinfo));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(requestmetainfo));
     if (message_arena != submessage_arena) {
-      userinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, userinfo, submessage_arena);
+      requestmetainfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, requestmetainfo, submessage_arena);
     }
     
   } else {
     
   }
-  _impl_.userinfo_ = userinfo;
-  // @@protoc_insertion_point(field_set_allocated:proto.GetSwcNodeDataRequest.UserInfo)
+  _impl_.requestmetainfo_ = requestmetainfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.GetSwcNodeDataRequest.RequestMetaInfo)
 }
 
-// .proto.SwcMetaInfoV1 SwcInfo = 2;
-inline bool GetSwcNodeDataRequest::_internal_has_swcinfo() const {
-  return this != internal_default_instance() && _impl_.swcinfo_ != nullptr;
+// .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
+inline bool GetSwcNodeDataRequest::_internal_has_userverifyinfo() const {
+  return this != internal_default_instance() && _impl_.userverifyinfo_ != nullptr;
 }
-inline bool GetSwcNodeDataRequest::has_swcinfo() const {
-  return _internal_has_swcinfo();
+inline bool GetSwcNodeDataRequest::has_userverifyinfo() const {
+  return _internal_has_userverifyinfo();
 }
-inline const ::proto::SwcMetaInfoV1& GetSwcNodeDataRequest::_internal_swcinfo() const {
-  const ::proto::SwcMetaInfoV1* p = _impl_.swcinfo_;
-  return p != nullptr ? *p : reinterpret_cast<const ::proto::SwcMetaInfoV1&>(
-      ::proto::_SwcMetaInfoV1_default_instance_);
+inline const ::proto::UserVerifyInfoV1& GetSwcNodeDataRequest::_internal_userverifyinfo() const {
+  const ::proto::UserVerifyInfoV1* p = _impl_.userverifyinfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::UserVerifyInfoV1&>(
+      ::proto::_UserVerifyInfoV1_default_instance_);
 }
-inline const ::proto::SwcMetaInfoV1& GetSwcNodeDataRequest::swcinfo() const {
-  // @@protoc_insertion_point(field_get:proto.GetSwcNodeDataRequest.SwcInfo)
-  return _internal_swcinfo();
+inline const ::proto::UserVerifyInfoV1& GetSwcNodeDataRequest::userverifyinfo() const {
+  // @@protoc_insertion_point(field_get:proto.GetSwcNodeDataRequest.UserVerifyInfo)
+  return _internal_userverifyinfo();
 }
-inline void GetSwcNodeDataRequest::unsafe_arena_set_allocated_swcinfo(
-    ::proto::SwcMetaInfoV1* swcinfo) {
+inline void GetSwcNodeDataRequest::unsafe_arena_set_allocated_userverifyinfo(
+    ::proto::UserVerifyInfoV1* userverifyinfo) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.swcinfo_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userverifyinfo_);
   }
-  _impl_.swcinfo_ = swcinfo;
-  if (swcinfo) {
+  _impl_.userverifyinfo_ = userverifyinfo;
+  if (userverifyinfo) {
     
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.GetSwcNodeDataRequest.SwcInfo)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.GetSwcNodeDataRequest.UserVerifyInfo)
 }
-inline ::proto::SwcMetaInfoV1* GetSwcNodeDataRequest::release_swcinfo() {
+inline ::proto::UserVerifyInfoV1* GetSwcNodeDataRequest::release_userverifyinfo() {
   
-  ::proto::SwcMetaInfoV1* temp = _impl_.swcinfo_;
-  _impl_.swcinfo_ = nullptr;
+  ::proto::UserVerifyInfoV1* temp = _impl_.userverifyinfo_;
+  _impl_.userverifyinfo_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -11916,48 +15112,98 @@ inline ::proto::SwcMetaInfoV1* GetSwcNodeDataRequest::release_swcinfo() {
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::proto::SwcMetaInfoV1* GetSwcNodeDataRequest::unsafe_arena_release_swcinfo() {
-  // @@protoc_insertion_point(field_release:proto.GetSwcNodeDataRequest.SwcInfo)
+inline ::proto::UserVerifyInfoV1* GetSwcNodeDataRequest::unsafe_arena_release_userverifyinfo() {
+  // @@protoc_insertion_point(field_release:proto.GetSwcNodeDataRequest.UserVerifyInfo)
   
-  ::proto::SwcMetaInfoV1* temp = _impl_.swcinfo_;
-  _impl_.swcinfo_ = nullptr;
+  ::proto::UserVerifyInfoV1* temp = _impl_.userverifyinfo_;
+  _impl_.userverifyinfo_ = nullptr;
   return temp;
 }
-inline ::proto::SwcMetaInfoV1* GetSwcNodeDataRequest::_internal_mutable_swcinfo() {
+inline ::proto::UserVerifyInfoV1* GetSwcNodeDataRequest::_internal_mutable_userverifyinfo() {
   
-  if (_impl_.swcinfo_ == nullptr) {
-    auto* p = CreateMaybeMessage<::proto::SwcMetaInfoV1>(GetArenaForAllocation());
-    _impl_.swcinfo_ = p;
+  if (_impl_.userverifyinfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::UserVerifyInfoV1>(GetArenaForAllocation());
+    _impl_.userverifyinfo_ = p;
   }
-  return _impl_.swcinfo_;
+  return _impl_.userverifyinfo_;
 }
-inline ::proto::SwcMetaInfoV1* GetSwcNodeDataRequest::mutable_swcinfo() {
-  ::proto::SwcMetaInfoV1* _msg = _internal_mutable_swcinfo();
-  // @@protoc_insertion_point(field_mutable:proto.GetSwcNodeDataRequest.SwcInfo)
+inline ::proto::UserVerifyInfoV1* GetSwcNodeDataRequest::mutable_userverifyinfo() {
+  ::proto::UserVerifyInfoV1* _msg = _internal_mutable_userverifyinfo();
+  // @@protoc_insertion_point(field_mutable:proto.GetSwcNodeDataRequest.UserVerifyInfo)
   return _msg;
 }
-inline void GetSwcNodeDataRequest::set_allocated_swcinfo(::proto::SwcMetaInfoV1* swcinfo) {
+inline void GetSwcNodeDataRequest::set_allocated_userverifyinfo(::proto::UserVerifyInfoV1* userverifyinfo) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.swcinfo_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userverifyinfo_);
   }
-  if (swcinfo) {
+  if (userverifyinfo) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(swcinfo));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(userverifyinfo));
     if (message_arena != submessage_arena) {
-      swcinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, swcinfo, submessage_arena);
+      userverifyinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, userverifyinfo, submessage_arena);
     }
     
   } else {
     
   }
-  _impl_.swcinfo_ = swcinfo;
-  // @@protoc_insertion_point(field_set_allocated:proto.GetSwcNodeDataRequest.SwcInfo)
+  _impl_.userverifyinfo_ = userverifyinfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.GetSwcNodeDataRequest.UserVerifyInfo)
 }
 
-// .proto.SwcDataV1 SwcNodeData = 3;
+// string SwcName = 3;
+inline void GetSwcNodeDataRequest::clear_swcname() {
+  _impl_.swcname_.ClearToEmpty();
+}
+inline const std::string& GetSwcNodeDataRequest::swcname() const {
+  // @@protoc_insertion_point(field_get:proto.GetSwcNodeDataRequest.SwcName)
+  return _internal_swcname();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void GetSwcNodeDataRequest::set_swcname(ArgT0&& arg0, ArgT... args) {
+ 
+ _impl_.swcname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:proto.GetSwcNodeDataRequest.SwcName)
+}
+inline std::string* GetSwcNodeDataRequest::mutable_swcname() {
+  std::string* _s = _internal_mutable_swcname();
+  // @@protoc_insertion_point(field_mutable:proto.GetSwcNodeDataRequest.SwcName)
+  return _s;
+}
+inline const std::string& GetSwcNodeDataRequest::_internal_swcname() const {
+  return _impl_.swcname_.Get();
+}
+inline void GetSwcNodeDataRequest::_internal_set_swcname(const std::string& value) {
+  
+  _impl_.swcname_.Set(value, GetArenaForAllocation());
+}
+inline std::string* GetSwcNodeDataRequest::_internal_mutable_swcname() {
+  
+  return _impl_.swcname_.Mutable(GetArenaForAllocation());
+}
+inline std::string* GetSwcNodeDataRequest::release_swcname() {
+  // @@protoc_insertion_point(field_release:proto.GetSwcNodeDataRequest.SwcName)
+  return _impl_.swcname_.Release();
+}
+inline void GetSwcNodeDataRequest::set_allocated_swcname(std::string* swcname) {
+  if (swcname != nullptr) {
+    
+  } else {
+    
+  }
+  _impl_.swcname_.SetAllocated(swcname, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.swcname_.IsDefault()) {
+    _impl_.swcname_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:proto.GetSwcNodeDataRequest.SwcName)
+}
+
+// .proto.SwcDataV1 SwcNodeData = 4;
 inline bool GetSwcNodeDataRequest::_internal_has_swcnodedata() const {
   return this != internal_default_instance() && _impl_.swcnodedata_ != nullptr;
 }
@@ -12046,39 +15292,39 @@ inline void GetSwcNodeDataRequest::set_allocated_swcnodedata(::proto::SwcDataV1*
 
 // GetSwcFullNodeDataRequest
 
-// .proto.UserMetaInfoV1 UserInfo = 1;
-inline bool GetSwcFullNodeDataRequest::_internal_has_userinfo() const {
-  return this != internal_default_instance() && _impl_.userinfo_ != nullptr;
+// .proto.RequestMetaInfoV1 RequestMetaInfo = 1;
+inline bool GetSwcFullNodeDataRequest::_internal_has_requestmetainfo() const {
+  return this != internal_default_instance() && _impl_.requestmetainfo_ != nullptr;
 }
-inline bool GetSwcFullNodeDataRequest::has_userinfo() const {
-  return _internal_has_userinfo();
+inline bool GetSwcFullNodeDataRequest::has_requestmetainfo() const {
+  return _internal_has_requestmetainfo();
 }
-inline const ::proto::UserMetaInfoV1& GetSwcFullNodeDataRequest::_internal_userinfo() const {
-  const ::proto::UserMetaInfoV1* p = _impl_.userinfo_;
-  return p != nullptr ? *p : reinterpret_cast<const ::proto::UserMetaInfoV1&>(
-      ::proto::_UserMetaInfoV1_default_instance_);
+inline const ::proto::RequestMetaInfoV1& GetSwcFullNodeDataRequest::_internal_requestmetainfo() const {
+  const ::proto::RequestMetaInfoV1* p = _impl_.requestmetainfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::RequestMetaInfoV1&>(
+      ::proto::_RequestMetaInfoV1_default_instance_);
 }
-inline const ::proto::UserMetaInfoV1& GetSwcFullNodeDataRequest::userinfo() const {
-  // @@protoc_insertion_point(field_get:proto.GetSwcFullNodeDataRequest.UserInfo)
-  return _internal_userinfo();
+inline const ::proto::RequestMetaInfoV1& GetSwcFullNodeDataRequest::requestmetainfo() const {
+  // @@protoc_insertion_point(field_get:proto.GetSwcFullNodeDataRequest.RequestMetaInfo)
+  return _internal_requestmetainfo();
 }
-inline void GetSwcFullNodeDataRequest::unsafe_arena_set_allocated_userinfo(
-    ::proto::UserMetaInfoV1* userinfo) {
+inline void GetSwcFullNodeDataRequest::unsafe_arena_set_allocated_requestmetainfo(
+    ::proto::RequestMetaInfoV1* requestmetainfo) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userinfo_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.requestmetainfo_);
   }
-  _impl_.userinfo_ = userinfo;
-  if (userinfo) {
+  _impl_.requestmetainfo_ = requestmetainfo;
+  if (requestmetainfo) {
     
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.GetSwcFullNodeDataRequest.UserInfo)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.GetSwcFullNodeDataRequest.RequestMetaInfo)
 }
-inline ::proto::UserMetaInfoV1* GetSwcFullNodeDataRequest::release_userinfo() {
+inline ::proto::RequestMetaInfoV1* GetSwcFullNodeDataRequest::release_requestmetainfo() {
   
-  ::proto::UserMetaInfoV1* temp = _impl_.userinfo_;
-  _impl_.userinfo_ = nullptr;
+  ::proto::RequestMetaInfoV1* temp = _impl_.requestmetainfo_;
+  _impl_.requestmetainfo_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -12090,80 +15336,80 @@ inline ::proto::UserMetaInfoV1* GetSwcFullNodeDataRequest::release_userinfo() {
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::proto::UserMetaInfoV1* GetSwcFullNodeDataRequest::unsafe_arena_release_userinfo() {
-  // @@protoc_insertion_point(field_release:proto.GetSwcFullNodeDataRequest.UserInfo)
+inline ::proto::RequestMetaInfoV1* GetSwcFullNodeDataRequest::unsafe_arena_release_requestmetainfo() {
+  // @@protoc_insertion_point(field_release:proto.GetSwcFullNodeDataRequest.RequestMetaInfo)
   
-  ::proto::UserMetaInfoV1* temp = _impl_.userinfo_;
-  _impl_.userinfo_ = nullptr;
+  ::proto::RequestMetaInfoV1* temp = _impl_.requestmetainfo_;
+  _impl_.requestmetainfo_ = nullptr;
   return temp;
 }
-inline ::proto::UserMetaInfoV1* GetSwcFullNodeDataRequest::_internal_mutable_userinfo() {
+inline ::proto::RequestMetaInfoV1* GetSwcFullNodeDataRequest::_internal_mutable_requestmetainfo() {
   
-  if (_impl_.userinfo_ == nullptr) {
-    auto* p = CreateMaybeMessage<::proto::UserMetaInfoV1>(GetArenaForAllocation());
-    _impl_.userinfo_ = p;
+  if (_impl_.requestmetainfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::RequestMetaInfoV1>(GetArenaForAllocation());
+    _impl_.requestmetainfo_ = p;
   }
-  return _impl_.userinfo_;
+  return _impl_.requestmetainfo_;
 }
-inline ::proto::UserMetaInfoV1* GetSwcFullNodeDataRequest::mutable_userinfo() {
-  ::proto::UserMetaInfoV1* _msg = _internal_mutable_userinfo();
-  // @@protoc_insertion_point(field_mutable:proto.GetSwcFullNodeDataRequest.UserInfo)
+inline ::proto::RequestMetaInfoV1* GetSwcFullNodeDataRequest::mutable_requestmetainfo() {
+  ::proto::RequestMetaInfoV1* _msg = _internal_mutable_requestmetainfo();
+  // @@protoc_insertion_point(field_mutable:proto.GetSwcFullNodeDataRequest.RequestMetaInfo)
   return _msg;
 }
-inline void GetSwcFullNodeDataRequest::set_allocated_userinfo(::proto::UserMetaInfoV1* userinfo) {
+inline void GetSwcFullNodeDataRequest::set_allocated_requestmetainfo(::proto::RequestMetaInfoV1* requestmetainfo) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userinfo_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.requestmetainfo_);
   }
-  if (userinfo) {
+  if (requestmetainfo) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(userinfo));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(requestmetainfo));
     if (message_arena != submessage_arena) {
-      userinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, userinfo, submessage_arena);
+      requestmetainfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, requestmetainfo, submessage_arena);
     }
     
   } else {
     
   }
-  _impl_.userinfo_ = userinfo;
-  // @@protoc_insertion_point(field_set_allocated:proto.GetSwcFullNodeDataRequest.UserInfo)
+  _impl_.requestmetainfo_ = requestmetainfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.GetSwcFullNodeDataRequest.RequestMetaInfo)
 }
 
-// .proto.SwcMetaInfoV1 SwcInfo = 2;
-inline bool GetSwcFullNodeDataRequest::_internal_has_swcinfo() const {
-  return this != internal_default_instance() && _impl_.swcinfo_ != nullptr;
+// .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
+inline bool GetSwcFullNodeDataRequest::_internal_has_userverifyinfo() const {
+  return this != internal_default_instance() && _impl_.userverifyinfo_ != nullptr;
 }
-inline bool GetSwcFullNodeDataRequest::has_swcinfo() const {
-  return _internal_has_swcinfo();
+inline bool GetSwcFullNodeDataRequest::has_userverifyinfo() const {
+  return _internal_has_userverifyinfo();
 }
-inline const ::proto::SwcMetaInfoV1& GetSwcFullNodeDataRequest::_internal_swcinfo() const {
-  const ::proto::SwcMetaInfoV1* p = _impl_.swcinfo_;
-  return p != nullptr ? *p : reinterpret_cast<const ::proto::SwcMetaInfoV1&>(
-      ::proto::_SwcMetaInfoV1_default_instance_);
+inline const ::proto::UserVerifyInfoV1& GetSwcFullNodeDataRequest::_internal_userverifyinfo() const {
+  const ::proto::UserVerifyInfoV1* p = _impl_.userverifyinfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::UserVerifyInfoV1&>(
+      ::proto::_UserVerifyInfoV1_default_instance_);
 }
-inline const ::proto::SwcMetaInfoV1& GetSwcFullNodeDataRequest::swcinfo() const {
-  // @@protoc_insertion_point(field_get:proto.GetSwcFullNodeDataRequest.SwcInfo)
-  return _internal_swcinfo();
+inline const ::proto::UserVerifyInfoV1& GetSwcFullNodeDataRequest::userverifyinfo() const {
+  // @@protoc_insertion_point(field_get:proto.GetSwcFullNodeDataRequest.UserVerifyInfo)
+  return _internal_userverifyinfo();
 }
-inline void GetSwcFullNodeDataRequest::unsafe_arena_set_allocated_swcinfo(
-    ::proto::SwcMetaInfoV1* swcinfo) {
+inline void GetSwcFullNodeDataRequest::unsafe_arena_set_allocated_userverifyinfo(
+    ::proto::UserVerifyInfoV1* userverifyinfo) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.swcinfo_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userverifyinfo_);
   }
-  _impl_.swcinfo_ = swcinfo;
-  if (swcinfo) {
+  _impl_.userverifyinfo_ = userverifyinfo;
+  if (userverifyinfo) {
     
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.GetSwcFullNodeDataRequest.SwcInfo)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.GetSwcFullNodeDataRequest.UserVerifyInfo)
 }
-inline ::proto::SwcMetaInfoV1* GetSwcFullNodeDataRequest::release_swcinfo() {
+inline ::proto::UserVerifyInfoV1* GetSwcFullNodeDataRequest::release_userverifyinfo() {
   
-  ::proto::SwcMetaInfoV1* temp = _impl_.swcinfo_;
-  _impl_.swcinfo_ = nullptr;
+  ::proto::UserVerifyInfoV1* temp = _impl_.userverifyinfo_;
+  _impl_.userverifyinfo_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -12175,84 +15421,134 @@ inline ::proto::SwcMetaInfoV1* GetSwcFullNodeDataRequest::release_swcinfo() {
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::proto::SwcMetaInfoV1* GetSwcFullNodeDataRequest::unsafe_arena_release_swcinfo() {
-  // @@protoc_insertion_point(field_release:proto.GetSwcFullNodeDataRequest.SwcInfo)
+inline ::proto::UserVerifyInfoV1* GetSwcFullNodeDataRequest::unsafe_arena_release_userverifyinfo() {
+  // @@protoc_insertion_point(field_release:proto.GetSwcFullNodeDataRequest.UserVerifyInfo)
   
-  ::proto::SwcMetaInfoV1* temp = _impl_.swcinfo_;
-  _impl_.swcinfo_ = nullptr;
+  ::proto::UserVerifyInfoV1* temp = _impl_.userverifyinfo_;
+  _impl_.userverifyinfo_ = nullptr;
   return temp;
 }
-inline ::proto::SwcMetaInfoV1* GetSwcFullNodeDataRequest::_internal_mutable_swcinfo() {
+inline ::proto::UserVerifyInfoV1* GetSwcFullNodeDataRequest::_internal_mutable_userverifyinfo() {
   
-  if (_impl_.swcinfo_ == nullptr) {
-    auto* p = CreateMaybeMessage<::proto::SwcMetaInfoV1>(GetArenaForAllocation());
-    _impl_.swcinfo_ = p;
+  if (_impl_.userverifyinfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::UserVerifyInfoV1>(GetArenaForAllocation());
+    _impl_.userverifyinfo_ = p;
   }
-  return _impl_.swcinfo_;
+  return _impl_.userverifyinfo_;
 }
-inline ::proto::SwcMetaInfoV1* GetSwcFullNodeDataRequest::mutable_swcinfo() {
-  ::proto::SwcMetaInfoV1* _msg = _internal_mutable_swcinfo();
-  // @@protoc_insertion_point(field_mutable:proto.GetSwcFullNodeDataRequest.SwcInfo)
+inline ::proto::UserVerifyInfoV1* GetSwcFullNodeDataRequest::mutable_userverifyinfo() {
+  ::proto::UserVerifyInfoV1* _msg = _internal_mutable_userverifyinfo();
+  // @@protoc_insertion_point(field_mutable:proto.GetSwcFullNodeDataRequest.UserVerifyInfo)
   return _msg;
 }
-inline void GetSwcFullNodeDataRequest::set_allocated_swcinfo(::proto::SwcMetaInfoV1* swcinfo) {
+inline void GetSwcFullNodeDataRequest::set_allocated_userverifyinfo(::proto::UserVerifyInfoV1* userverifyinfo) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.swcinfo_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userverifyinfo_);
   }
-  if (swcinfo) {
+  if (userverifyinfo) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(swcinfo));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(userverifyinfo));
     if (message_arena != submessage_arena) {
-      swcinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, swcinfo, submessage_arena);
+      userverifyinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, userverifyinfo, submessage_arena);
     }
     
   } else {
     
   }
-  _impl_.swcinfo_ = swcinfo;
-  // @@protoc_insertion_point(field_set_allocated:proto.GetSwcFullNodeDataRequest.SwcInfo)
+  _impl_.userverifyinfo_ = userverifyinfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.GetSwcFullNodeDataRequest.UserVerifyInfo)
+}
+
+// string SwcName = 3;
+inline void GetSwcFullNodeDataRequest::clear_swcname() {
+  _impl_.swcname_.ClearToEmpty();
+}
+inline const std::string& GetSwcFullNodeDataRequest::swcname() const {
+  // @@protoc_insertion_point(field_get:proto.GetSwcFullNodeDataRequest.SwcName)
+  return _internal_swcname();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void GetSwcFullNodeDataRequest::set_swcname(ArgT0&& arg0, ArgT... args) {
+ 
+ _impl_.swcname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:proto.GetSwcFullNodeDataRequest.SwcName)
+}
+inline std::string* GetSwcFullNodeDataRequest::mutable_swcname() {
+  std::string* _s = _internal_mutable_swcname();
+  // @@protoc_insertion_point(field_mutable:proto.GetSwcFullNodeDataRequest.SwcName)
+  return _s;
+}
+inline const std::string& GetSwcFullNodeDataRequest::_internal_swcname() const {
+  return _impl_.swcname_.Get();
+}
+inline void GetSwcFullNodeDataRequest::_internal_set_swcname(const std::string& value) {
+  
+  _impl_.swcname_.Set(value, GetArenaForAllocation());
+}
+inline std::string* GetSwcFullNodeDataRequest::_internal_mutable_swcname() {
+  
+  return _impl_.swcname_.Mutable(GetArenaForAllocation());
+}
+inline std::string* GetSwcFullNodeDataRequest::release_swcname() {
+  // @@protoc_insertion_point(field_release:proto.GetSwcFullNodeDataRequest.SwcName)
+  return _impl_.swcname_.Release();
+}
+inline void GetSwcFullNodeDataRequest::set_allocated_swcname(std::string* swcname) {
+  if (swcname != nullptr) {
+    
+  } else {
+    
+  }
+  _impl_.swcname_.SetAllocated(swcname, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.swcname_.IsDefault()) {
+    _impl_.swcname_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:proto.GetSwcFullNodeDataRequest.SwcName)
 }
 
 // -------------------------------------------------------------------
 
 // GetSwcNodeDataListByTimeAndUserRequest
 
-// .proto.UserMetaInfoV1 UserInfo = 1;
-inline bool GetSwcNodeDataListByTimeAndUserRequest::_internal_has_userinfo() const {
-  return this != internal_default_instance() && _impl_.userinfo_ != nullptr;
+// .proto.RequestMetaInfoV1 RequestMetaInfo = 1;
+inline bool GetSwcNodeDataListByTimeAndUserRequest::_internal_has_requestmetainfo() const {
+  return this != internal_default_instance() && _impl_.requestmetainfo_ != nullptr;
 }
-inline bool GetSwcNodeDataListByTimeAndUserRequest::has_userinfo() const {
-  return _internal_has_userinfo();
+inline bool GetSwcNodeDataListByTimeAndUserRequest::has_requestmetainfo() const {
+  return _internal_has_requestmetainfo();
 }
-inline const ::proto::UserMetaInfoV1& GetSwcNodeDataListByTimeAndUserRequest::_internal_userinfo() const {
-  const ::proto::UserMetaInfoV1* p = _impl_.userinfo_;
-  return p != nullptr ? *p : reinterpret_cast<const ::proto::UserMetaInfoV1&>(
-      ::proto::_UserMetaInfoV1_default_instance_);
+inline const ::proto::RequestMetaInfoV1& GetSwcNodeDataListByTimeAndUserRequest::_internal_requestmetainfo() const {
+  const ::proto::RequestMetaInfoV1* p = _impl_.requestmetainfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::RequestMetaInfoV1&>(
+      ::proto::_RequestMetaInfoV1_default_instance_);
 }
-inline const ::proto::UserMetaInfoV1& GetSwcNodeDataListByTimeAndUserRequest::userinfo() const {
-  // @@protoc_insertion_point(field_get:proto.GetSwcNodeDataListByTimeAndUserRequest.UserInfo)
-  return _internal_userinfo();
+inline const ::proto::RequestMetaInfoV1& GetSwcNodeDataListByTimeAndUserRequest::requestmetainfo() const {
+  // @@protoc_insertion_point(field_get:proto.GetSwcNodeDataListByTimeAndUserRequest.RequestMetaInfo)
+  return _internal_requestmetainfo();
 }
-inline void GetSwcNodeDataListByTimeAndUserRequest::unsafe_arena_set_allocated_userinfo(
-    ::proto::UserMetaInfoV1* userinfo) {
+inline void GetSwcNodeDataListByTimeAndUserRequest::unsafe_arena_set_allocated_requestmetainfo(
+    ::proto::RequestMetaInfoV1* requestmetainfo) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userinfo_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.requestmetainfo_);
   }
-  _impl_.userinfo_ = userinfo;
-  if (userinfo) {
+  _impl_.requestmetainfo_ = requestmetainfo;
+  if (requestmetainfo) {
     
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.GetSwcNodeDataListByTimeAndUserRequest.UserInfo)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.GetSwcNodeDataListByTimeAndUserRequest.RequestMetaInfo)
 }
-inline ::proto::UserMetaInfoV1* GetSwcNodeDataListByTimeAndUserRequest::release_userinfo() {
+inline ::proto::RequestMetaInfoV1* GetSwcNodeDataListByTimeAndUserRequest::release_requestmetainfo() {
   
-  ::proto::UserMetaInfoV1* temp = _impl_.userinfo_;
-  _impl_.userinfo_ = nullptr;
+  ::proto::RequestMetaInfoV1* temp = _impl_.requestmetainfo_;
+  _impl_.requestmetainfo_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -12264,80 +15560,80 @@ inline ::proto::UserMetaInfoV1* GetSwcNodeDataListByTimeAndUserRequest::release_
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::proto::UserMetaInfoV1* GetSwcNodeDataListByTimeAndUserRequest::unsafe_arena_release_userinfo() {
-  // @@protoc_insertion_point(field_release:proto.GetSwcNodeDataListByTimeAndUserRequest.UserInfo)
+inline ::proto::RequestMetaInfoV1* GetSwcNodeDataListByTimeAndUserRequest::unsafe_arena_release_requestmetainfo() {
+  // @@protoc_insertion_point(field_release:proto.GetSwcNodeDataListByTimeAndUserRequest.RequestMetaInfo)
   
-  ::proto::UserMetaInfoV1* temp = _impl_.userinfo_;
-  _impl_.userinfo_ = nullptr;
+  ::proto::RequestMetaInfoV1* temp = _impl_.requestmetainfo_;
+  _impl_.requestmetainfo_ = nullptr;
   return temp;
 }
-inline ::proto::UserMetaInfoV1* GetSwcNodeDataListByTimeAndUserRequest::_internal_mutable_userinfo() {
+inline ::proto::RequestMetaInfoV1* GetSwcNodeDataListByTimeAndUserRequest::_internal_mutable_requestmetainfo() {
   
-  if (_impl_.userinfo_ == nullptr) {
-    auto* p = CreateMaybeMessage<::proto::UserMetaInfoV1>(GetArenaForAllocation());
-    _impl_.userinfo_ = p;
+  if (_impl_.requestmetainfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::RequestMetaInfoV1>(GetArenaForAllocation());
+    _impl_.requestmetainfo_ = p;
   }
-  return _impl_.userinfo_;
+  return _impl_.requestmetainfo_;
 }
-inline ::proto::UserMetaInfoV1* GetSwcNodeDataListByTimeAndUserRequest::mutable_userinfo() {
-  ::proto::UserMetaInfoV1* _msg = _internal_mutable_userinfo();
-  // @@protoc_insertion_point(field_mutable:proto.GetSwcNodeDataListByTimeAndUserRequest.UserInfo)
+inline ::proto::RequestMetaInfoV1* GetSwcNodeDataListByTimeAndUserRequest::mutable_requestmetainfo() {
+  ::proto::RequestMetaInfoV1* _msg = _internal_mutable_requestmetainfo();
+  // @@protoc_insertion_point(field_mutable:proto.GetSwcNodeDataListByTimeAndUserRequest.RequestMetaInfo)
   return _msg;
 }
-inline void GetSwcNodeDataListByTimeAndUserRequest::set_allocated_userinfo(::proto::UserMetaInfoV1* userinfo) {
+inline void GetSwcNodeDataListByTimeAndUserRequest::set_allocated_requestmetainfo(::proto::RequestMetaInfoV1* requestmetainfo) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userinfo_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.requestmetainfo_);
   }
-  if (userinfo) {
+  if (requestmetainfo) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(userinfo));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(requestmetainfo));
     if (message_arena != submessage_arena) {
-      userinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, userinfo, submessage_arena);
+      requestmetainfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, requestmetainfo, submessage_arena);
     }
     
   } else {
     
   }
-  _impl_.userinfo_ = userinfo;
-  // @@protoc_insertion_point(field_set_allocated:proto.GetSwcNodeDataListByTimeAndUserRequest.UserInfo)
+  _impl_.requestmetainfo_ = requestmetainfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.GetSwcNodeDataListByTimeAndUserRequest.RequestMetaInfo)
 }
 
-// .proto.SwcMetaInfoV1 SwcInfo = 2;
-inline bool GetSwcNodeDataListByTimeAndUserRequest::_internal_has_swcinfo() const {
-  return this != internal_default_instance() && _impl_.swcinfo_ != nullptr;
+// .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
+inline bool GetSwcNodeDataListByTimeAndUserRequest::_internal_has_userverifyinfo() const {
+  return this != internal_default_instance() && _impl_.userverifyinfo_ != nullptr;
 }
-inline bool GetSwcNodeDataListByTimeAndUserRequest::has_swcinfo() const {
-  return _internal_has_swcinfo();
+inline bool GetSwcNodeDataListByTimeAndUserRequest::has_userverifyinfo() const {
+  return _internal_has_userverifyinfo();
 }
-inline const ::proto::SwcMetaInfoV1& GetSwcNodeDataListByTimeAndUserRequest::_internal_swcinfo() const {
-  const ::proto::SwcMetaInfoV1* p = _impl_.swcinfo_;
-  return p != nullptr ? *p : reinterpret_cast<const ::proto::SwcMetaInfoV1&>(
-      ::proto::_SwcMetaInfoV1_default_instance_);
+inline const ::proto::UserVerifyInfoV1& GetSwcNodeDataListByTimeAndUserRequest::_internal_userverifyinfo() const {
+  const ::proto::UserVerifyInfoV1* p = _impl_.userverifyinfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::UserVerifyInfoV1&>(
+      ::proto::_UserVerifyInfoV1_default_instance_);
 }
-inline const ::proto::SwcMetaInfoV1& GetSwcNodeDataListByTimeAndUserRequest::swcinfo() const {
-  // @@protoc_insertion_point(field_get:proto.GetSwcNodeDataListByTimeAndUserRequest.SwcInfo)
-  return _internal_swcinfo();
+inline const ::proto::UserVerifyInfoV1& GetSwcNodeDataListByTimeAndUserRequest::userverifyinfo() const {
+  // @@protoc_insertion_point(field_get:proto.GetSwcNodeDataListByTimeAndUserRequest.UserVerifyInfo)
+  return _internal_userverifyinfo();
 }
-inline void GetSwcNodeDataListByTimeAndUserRequest::unsafe_arena_set_allocated_swcinfo(
-    ::proto::SwcMetaInfoV1* swcinfo) {
+inline void GetSwcNodeDataListByTimeAndUserRequest::unsafe_arena_set_allocated_userverifyinfo(
+    ::proto::UserVerifyInfoV1* userverifyinfo) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.swcinfo_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userverifyinfo_);
   }
-  _impl_.swcinfo_ = swcinfo;
-  if (swcinfo) {
+  _impl_.userverifyinfo_ = userverifyinfo;
+  if (userverifyinfo) {
     
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.GetSwcNodeDataListByTimeAndUserRequest.SwcInfo)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.GetSwcNodeDataListByTimeAndUserRequest.UserVerifyInfo)
 }
-inline ::proto::SwcMetaInfoV1* GetSwcNodeDataListByTimeAndUserRequest::release_swcinfo() {
+inline ::proto::UserVerifyInfoV1* GetSwcNodeDataListByTimeAndUserRequest::release_userverifyinfo() {
   
-  ::proto::SwcMetaInfoV1* temp = _impl_.swcinfo_;
-  _impl_.swcinfo_ = nullptr;
+  ::proto::UserVerifyInfoV1* temp = _impl_.userverifyinfo_;
+  _impl_.userverifyinfo_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -12349,48 +15645,98 @@ inline ::proto::SwcMetaInfoV1* GetSwcNodeDataListByTimeAndUserRequest::release_s
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::proto::SwcMetaInfoV1* GetSwcNodeDataListByTimeAndUserRequest::unsafe_arena_release_swcinfo() {
-  // @@protoc_insertion_point(field_release:proto.GetSwcNodeDataListByTimeAndUserRequest.SwcInfo)
+inline ::proto::UserVerifyInfoV1* GetSwcNodeDataListByTimeAndUserRequest::unsafe_arena_release_userverifyinfo() {
+  // @@protoc_insertion_point(field_release:proto.GetSwcNodeDataListByTimeAndUserRequest.UserVerifyInfo)
   
-  ::proto::SwcMetaInfoV1* temp = _impl_.swcinfo_;
-  _impl_.swcinfo_ = nullptr;
+  ::proto::UserVerifyInfoV1* temp = _impl_.userverifyinfo_;
+  _impl_.userverifyinfo_ = nullptr;
   return temp;
 }
-inline ::proto::SwcMetaInfoV1* GetSwcNodeDataListByTimeAndUserRequest::_internal_mutable_swcinfo() {
+inline ::proto::UserVerifyInfoV1* GetSwcNodeDataListByTimeAndUserRequest::_internal_mutable_userverifyinfo() {
   
-  if (_impl_.swcinfo_ == nullptr) {
-    auto* p = CreateMaybeMessage<::proto::SwcMetaInfoV1>(GetArenaForAllocation());
-    _impl_.swcinfo_ = p;
+  if (_impl_.userverifyinfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::UserVerifyInfoV1>(GetArenaForAllocation());
+    _impl_.userverifyinfo_ = p;
   }
-  return _impl_.swcinfo_;
+  return _impl_.userverifyinfo_;
 }
-inline ::proto::SwcMetaInfoV1* GetSwcNodeDataListByTimeAndUserRequest::mutable_swcinfo() {
-  ::proto::SwcMetaInfoV1* _msg = _internal_mutable_swcinfo();
-  // @@protoc_insertion_point(field_mutable:proto.GetSwcNodeDataListByTimeAndUserRequest.SwcInfo)
+inline ::proto::UserVerifyInfoV1* GetSwcNodeDataListByTimeAndUserRequest::mutable_userverifyinfo() {
+  ::proto::UserVerifyInfoV1* _msg = _internal_mutable_userverifyinfo();
+  // @@protoc_insertion_point(field_mutable:proto.GetSwcNodeDataListByTimeAndUserRequest.UserVerifyInfo)
   return _msg;
 }
-inline void GetSwcNodeDataListByTimeAndUserRequest::set_allocated_swcinfo(::proto::SwcMetaInfoV1* swcinfo) {
+inline void GetSwcNodeDataListByTimeAndUserRequest::set_allocated_userverifyinfo(::proto::UserVerifyInfoV1* userverifyinfo) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.swcinfo_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userverifyinfo_);
   }
-  if (swcinfo) {
+  if (userverifyinfo) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(swcinfo));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(userverifyinfo));
     if (message_arena != submessage_arena) {
-      swcinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, swcinfo, submessage_arena);
+      userverifyinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, userverifyinfo, submessage_arena);
     }
     
   } else {
     
   }
-  _impl_.swcinfo_ = swcinfo;
-  // @@protoc_insertion_point(field_set_allocated:proto.GetSwcNodeDataListByTimeAndUserRequest.SwcInfo)
+  _impl_.userverifyinfo_ = userverifyinfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.GetSwcNodeDataListByTimeAndUserRequest.UserVerifyInfo)
 }
 
-// .google.protobuf.Timestamp StartTime = 3;
+// string SwcName = 3;
+inline void GetSwcNodeDataListByTimeAndUserRequest::clear_swcname() {
+  _impl_.swcname_.ClearToEmpty();
+}
+inline const std::string& GetSwcNodeDataListByTimeAndUserRequest::swcname() const {
+  // @@protoc_insertion_point(field_get:proto.GetSwcNodeDataListByTimeAndUserRequest.SwcName)
+  return _internal_swcname();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void GetSwcNodeDataListByTimeAndUserRequest::set_swcname(ArgT0&& arg0, ArgT... args) {
+ 
+ _impl_.swcname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:proto.GetSwcNodeDataListByTimeAndUserRequest.SwcName)
+}
+inline std::string* GetSwcNodeDataListByTimeAndUserRequest::mutable_swcname() {
+  std::string* _s = _internal_mutable_swcname();
+  // @@protoc_insertion_point(field_mutable:proto.GetSwcNodeDataListByTimeAndUserRequest.SwcName)
+  return _s;
+}
+inline const std::string& GetSwcNodeDataListByTimeAndUserRequest::_internal_swcname() const {
+  return _impl_.swcname_.Get();
+}
+inline void GetSwcNodeDataListByTimeAndUserRequest::_internal_set_swcname(const std::string& value) {
+  
+  _impl_.swcname_.Set(value, GetArenaForAllocation());
+}
+inline std::string* GetSwcNodeDataListByTimeAndUserRequest::_internal_mutable_swcname() {
+  
+  return _impl_.swcname_.Mutable(GetArenaForAllocation());
+}
+inline std::string* GetSwcNodeDataListByTimeAndUserRequest::release_swcname() {
+  // @@protoc_insertion_point(field_release:proto.GetSwcNodeDataListByTimeAndUserRequest.SwcName)
+  return _impl_.swcname_.Release();
+}
+inline void GetSwcNodeDataListByTimeAndUserRequest::set_allocated_swcname(std::string* swcname) {
+  if (swcname != nullptr) {
+    
+  } else {
+    
+  }
+  _impl_.swcname_.SetAllocated(swcname, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.swcname_.IsDefault()) {
+    _impl_.swcname_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:proto.GetSwcNodeDataListByTimeAndUserRequest.SwcName)
+}
+
+// .google.protobuf.Timestamp StartTime = 4;
 inline bool GetSwcNodeDataListByTimeAndUserRequest::_internal_has_starttime() const {
   return this != internal_default_instance() && _impl_.starttime_ != nullptr;
 }
@@ -12475,7 +15821,7 @@ inline void GetSwcNodeDataListByTimeAndUserRequest::set_allocated_starttime(::PR
   // @@protoc_insertion_point(field_set_allocated:proto.GetSwcNodeDataListByTimeAndUserRequest.StartTime)
 }
 
-// .google.protobuf.Timestamp EndTime = 4;
+// .google.protobuf.Timestamp EndTime = 5;
 inline bool GetSwcNodeDataListByTimeAndUserRequest::_internal_has_endtime() const {
   return this != internal_default_instance() && _impl_.endtime_ != nullptr;
 }
@@ -12560,7 +15906,7 @@ inline void GetSwcNodeDataListByTimeAndUserRequest::set_allocated_endtime(::PROT
   // @@protoc_insertion_point(field_set_allocated:proto.GetSwcNodeDataListByTimeAndUserRequest.EndTime)
 }
 
-// string UserName = 5;
+// string UserName = 6;
 inline void GetSwcNodeDataListByTimeAndUserRequest::clear_username() {
   _impl_.username_.ClearToEmpty();
 }
@@ -12614,39 +15960,39 @@ inline void GetSwcNodeDataListByTimeAndUserRequest::set_allocated_username(std::
 
 // BackupFullDatabaseRequest
 
-// .proto.UserMetaInfoV1 UserInfo = 1;
-inline bool BackupFullDatabaseRequest::_internal_has_userinfo() const {
-  return this != internal_default_instance() && _impl_.userinfo_ != nullptr;
+// .proto.RequestMetaInfoV1 RequestMetaInfo = 1;
+inline bool BackupFullDatabaseRequest::_internal_has_requestmetainfo() const {
+  return this != internal_default_instance() && _impl_.requestmetainfo_ != nullptr;
 }
-inline bool BackupFullDatabaseRequest::has_userinfo() const {
-  return _internal_has_userinfo();
+inline bool BackupFullDatabaseRequest::has_requestmetainfo() const {
+  return _internal_has_requestmetainfo();
 }
-inline const ::proto::UserMetaInfoV1& BackupFullDatabaseRequest::_internal_userinfo() const {
-  const ::proto::UserMetaInfoV1* p = _impl_.userinfo_;
-  return p != nullptr ? *p : reinterpret_cast<const ::proto::UserMetaInfoV1&>(
-      ::proto::_UserMetaInfoV1_default_instance_);
+inline const ::proto::RequestMetaInfoV1& BackupFullDatabaseRequest::_internal_requestmetainfo() const {
+  const ::proto::RequestMetaInfoV1* p = _impl_.requestmetainfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::RequestMetaInfoV1&>(
+      ::proto::_RequestMetaInfoV1_default_instance_);
 }
-inline const ::proto::UserMetaInfoV1& BackupFullDatabaseRequest::userinfo() const {
-  // @@protoc_insertion_point(field_get:proto.BackupFullDatabaseRequest.UserInfo)
-  return _internal_userinfo();
+inline const ::proto::RequestMetaInfoV1& BackupFullDatabaseRequest::requestmetainfo() const {
+  // @@protoc_insertion_point(field_get:proto.BackupFullDatabaseRequest.RequestMetaInfo)
+  return _internal_requestmetainfo();
 }
-inline void BackupFullDatabaseRequest::unsafe_arena_set_allocated_userinfo(
-    ::proto::UserMetaInfoV1* userinfo) {
+inline void BackupFullDatabaseRequest::unsafe_arena_set_allocated_requestmetainfo(
+    ::proto::RequestMetaInfoV1* requestmetainfo) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userinfo_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.requestmetainfo_);
   }
-  _impl_.userinfo_ = userinfo;
-  if (userinfo) {
+  _impl_.requestmetainfo_ = requestmetainfo;
+  if (requestmetainfo) {
     
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.BackupFullDatabaseRequest.UserInfo)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.BackupFullDatabaseRequest.RequestMetaInfo)
 }
-inline ::proto::UserMetaInfoV1* BackupFullDatabaseRequest::release_userinfo() {
+inline ::proto::RequestMetaInfoV1* BackupFullDatabaseRequest::release_requestmetainfo() {
   
-  ::proto::UserMetaInfoV1* temp = _impl_.userinfo_;
-  _impl_.userinfo_ = nullptr;
+  ::proto::RequestMetaInfoV1* temp = _impl_.requestmetainfo_;
+  _impl_.requestmetainfo_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -12658,48 +16004,133 @@ inline ::proto::UserMetaInfoV1* BackupFullDatabaseRequest::release_userinfo() {
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::proto::UserMetaInfoV1* BackupFullDatabaseRequest::unsafe_arena_release_userinfo() {
-  // @@protoc_insertion_point(field_release:proto.BackupFullDatabaseRequest.UserInfo)
+inline ::proto::RequestMetaInfoV1* BackupFullDatabaseRequest::unsafe_arena_release_requestmetainfo() {
+  // @@protoc_insertion_point(field_release:proto.BackupFullDatabaseRequest.RequestMetaInfo)
   
-  ::proto::UserMetaInfoV1* temp = _impl_.userinfo_;
-  _impl_.userinfo_ = nullptr;
+  ::proto::RequestMetaInfoV1* temp = _impl_.requestmetainfo_;
+  _impl_.requestmetainfo_ = nullptr;
   return temp;
 }
-inline ::proto::UserMetaInfoV1* BackupFullDatabaseRequest::_internal_mutable_userinfo() {
+inline ::proto::RequestMetaInfoV1* BackupFullDatabaseRequest::_internal_mutable_requestmetainfo() {
   
-  if (_impl_.userinfo_ == nullptr) {
-    auto* p = CreateMaybeMessage<::proto::UserMetaInfoV1>(GetArenaForAllocation());
-    _impl_.userinfo_ = p;
+  if (_impl_.requestmetainfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::RequestMetaInfoV1>(GetArenaForAllocation());
+    _impl_.requestmetainfo_ = p;
   }
-  return _impl_.userinfo_;
+  return _impl_.requestmetainfo_;
 }
-inline ::proto::UserMetaInfoV1* BackupFullDatabaseRequest::mutable_userinfo() {
-  ::proto::UserMetaInfoV1* _msg = _internal_mutable_userinfo();
-  // @@protoc_insertion_point(field_mutable:proto.BackupFullDatabaseRequest.UserInfo)
+inline ::proto::RequestMetaInfoV1* BackupFullDatabaseRequest::mutable_requestmetainfo() {
+  ::proto::RequestMetaInfoV1* _msg = _internal_mutable_requestmetainfo();
+  // @@protoc_insertion_point(field_mutable:proto.BackupFullDatabaseRequest.RequestMetaInfo)
   return _msg;
 }
-inline void BackupFullDatabaseRequest::set_allocated_userinfo(::proto::UserMetaInfoV1* userinfo) {
+inline void BackupFullDatabaseRequest::set_allocated_requestmetainfo(::proto::RequestMetaInfoV1* requestmetainfo) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userinfo_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.requestmetainfo_);
   }
-  if (userinfo) {
+  if (requestmetainfo) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(userinfo));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(requestmetainfo));
     if (message_arena != submessage_arena) {
-      userinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, userinfo, submessage_arena);
+      requestmetainfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, requestmetainfo, submessage_arena);
     }
     
   } else {
     
   }
-  _impl_.userinfo_ = userinfo;
-  // @@protoc_insertion_point(field_set_allocated:proto.BackupFullDatabaseRequest.UserInfo)
+  _impl_.requestmetainfo_ = requestmetainfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.BackupFullDatabaseRequest.RequestMetaInfo)
 }
 
-// bool InstantBackup = 2;
+// .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
+inline bool BackupFullDatabaseRequest::_internal_has_userverifyinfo() const {
+  return this != internal_default_instance() && _impl_.userverifyinfo_ != nullptr;
+}
+inline bool BackupFullDatabaseRequest::has_userverifyinfo() const {
+  return _internal_has_userverifyinfo();
+}
+inline const ::proto::UserVerifyInfoV1& BackupFullDatabaseRequest::_internal_userverifyinfo() const {
+  const ::proto::UserVerifyInfoV1* p = _impl_.userverifyinfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::UserVerifyInfoV1&>(
+      ::proto::_UserVerifyInfoV1_default_instance_);
+}
+inline const ::proto::UserVerifyInfoV1& BackupFullDatabaseRequest::userverifyinfo() const {
+  // @@protoc_insertion_point(field_get:proto.BackupFullDatabaseRequest.UserVerifyInfo)
+  return _internal_userverifyinfo();
+}
+inline void BackupFullDatabaseRequest::unsafe_arena_set_allocated_userverifyinfo(
+    ::proto::UserVerifyInfoV1* userverifyinfo) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userverifyinfo_);
+  }
+  _impl_.userverifyinfo_ = userverifyinfo;
+  if (userverifyinfo) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.BackupFullDatabaseRequest.UserVerifyInfo)
+}
+inline ::proto::UserVerifyInfoV1* BackupFullDatabaseRequest::release_userverifyinfo() {
+  
+  ::proto::UserVerifyInfoV1* temp = _impl_.userverifyinfo_;
+  _impl_.userverifyinfo_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::proto::UserVerifyInfoV1* BackupFullDatabaseRequest::unsafe_arena_release_userverifyinfo() {
+  // @@protoc_insertion_point(field_release:proto.BackupFullDatabaseRequest.UserVerifyInfo)
+  
+  ::proto::UserVerifyInfoV1* temp = _impl_.userverifyinfo_;
+  _impl_.userverifyinfo_ = nullptr;
+  return temp;
+}
+inline ::proto::UserVerifyInfoV1* BackupFullDatabaseRequest::_internal_mutable_userverifyinfo() {
+  
+  if (_impl_.userverifyinfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::UserVerifyInfoV1>(GetArenaForAllocation());
+    _impl_.userverifyinfo_ = p;
+  }
+  return _impl_.userverifyinfo_;
+}
+inline ::proto::UserVerifyInfoV1* BackupFullDatabaseRequest::mutable_userverifyinfo() {
+  ::proto::UserVerifyInfoV1* _msg = _internal_mutable_userverifyinfo();
+  // @@protoc_insertion_point(field_mutable:proto.BackupFullDatabaseRequest.UserVerifyInfo)
+  return _msg;
+}
+inline void BackupFullDatabaseRequest::set_allocated_userverifyinfo(::proto::UserVerifyInfoV1* userverifyinfo) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userverifyinfo_);
+  }
+  if (userverifyinfo) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(userverifyinfo));
+    if (message_arena != submessage_arena) {
+      userverifyinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, userverifyinfo, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  _impl_.userverifyinfo_ = userverifyinfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.BackupFullDatabaseRequest.UserVerifyInfo)
+}
+
+// bool InstantBackup = 3;
 inline void BackupFullDatabaseRequest::clear_instantbackup() {
   _impl_.instantbackup_ = false;
 }
@@ -12719,7 +16150,7 @@ inline void BackupFullDatabaseRequest::set_instantbackup(bool value) {
   // @@protoc_insertion_point(field_set:proto.BackupFullDatabaseRequest.InstantBackup)
 }
 
-// .google.protobuf.Timestamp DelayBackupTime = 3;
+// .google.protobuf.Timestamp DelayBackupTime = 4;
 inline bool BackupFullDatabaseRequest::_internal_has_delaybackuptime() const {
   return this != internal_default_instance() && _impl_.delaybackuptime_ != nullptr;
 }
@@ -12808,39 +16239,39 @@ inline void BackupFullDatabaseRequest::set_allocated_delaybackuptime(::PROTOBUF_
 
 // CreateDailyStatisticsRequest
 
-// .proto.UserMetaInfoV1 UserInfo = 1;
-inline bool CreateDailyStatisticsRequest::_internal_has_userinfo() const {
-  return this != internal_default_instance() && _impl_.userinfo_ != nullptr;
+// .proto.RequestMetaInfoV1 RequestMetaInfo = 1;
+inline bool CreateDailyStatisticsRequest::_internal_has_requestmetainfo() const {
+  return this != internal_default_instance() && _impl_.requestmetainfo_ != nullptr;
 }
-inline bool CreateDailyStatisticsRequest::has_userinfo() const {
-  return _internal_has_userinfo();
+inline bool CreateDailyStatisticsRequest::has_requestmetainfo() const {
+  return _internal_has_requestmetainfo();
 }
-inline const ::proto::UserMetaInfoV1& CreateDailyStatisticsRequest::_internal_userinfo() const {
-  const ::proto::UserMetaInfoV1* p = _impl_.userinfo_;
-  return p != nullptr ? *p : reinterpret_cast<const ::proto::UserMetaInfoV1&>(
-      ::proto::_UserMetaInfoV1_default_instance_);
+inline const ::proto::RequestMetaInfoV1& CreateDailyStatisticsRequest::_internal_requestmetainfo() const {
+  const ::proto::RequestMetaInfoV1* p = _impl_.requestmetainfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::RequestMetaInfoV1&>(
+      ::proto::_RequestMetaInfoV1_default_instance_);
 }
-inline const ::proto::UserMetaInfoV1& CreateDailyStatisticsRequest::userinfo() const {
-  // @@protoc_insertion_point(field_get:proto.CreateDailyStatisticsRequest.UserInfo)
-  return _internal_userinfo();
+inline const ::proto::RequestMetaInfoV1& CreateDailyStatisticsRequest::requestmetainfo() const {
+  // @@protoc_insertion_point(field_get:proto.CreateDailyStatisticsRequest.RequestMetaInfo)
+  return _internal_requestmetainfo();
 }
-inline void CreateDailyStatisticsRequest::unsafe_arena_set_allocated_userinfo(
-    ::proto::UserMetaInfoV1* userinfo) {
+inline void CreateDailyStatisticsRequest::unsafe_arena_set_allocated_requestmetainfo(
+    ::proto::RequestMetaInfoV1* requestmetainfo) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userinfo_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.requestmetainfo_);
   }
-  _impl_.userinfo_ = userinfo;
-  if (userinfo) {
+  _impl_.requestmetainfo_ = requestmetainfo;
+  if (requestmetainfo) {
     
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.CreateDailyStatisticsRequest.UserInfo)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.CreateDailyStatisticsRequest.RequestMetaInfo)
 }
-inline ::proto::UserMetaInfoV1* CreateDailyStatisticsRequest::release_userinfo() {
+inline ::proto::RequestMetaInfoV1* CreateDailyStatisticsRequest::release_requestmetainfo() {
   
-  ::proto::UserMetaInfoV1* temp = _impl_.userinfo_;
-  _impl_.userinfo_ = nullptr;
+  ::proto::RequestMetaInfoV1* temp = _impl_.requestmetainfo_;
+  _impl_.requestmetainfo_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -12852,48 +16283,133 @@ inline ::proto::UserMetaInfoV1* CreateDailyStatisticsRequest::release_userinfo()
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::proto::UserMetaInfoV1* CreateDailyStatisticsRequest::unsafe_arena_release_userinfo() {
-  // @@protoc_insertion_point(field_release:proto.CreateDailyStatisticsRequest.UserInfo)
+inline ::proto::RequestMetaInfoV1* CreateDailyStatisticsRequest::unsafe_arena_release_requestmetainfo() {
+  // @@protoc_insertion_point(field_release:proto.CreateDailyStatisticsRequest.RequestMetaInfo)
   
-  ::proto::UserMetaInfoV1* temp = _impl_.userinfo_;
-  _impl_.userinfo_ = nullptr;
+  ::proto::RequestMetaInfoV1* temp = _impl_.requestmetainfo_;
+  _impl_.requestmetainfo_ = nullptr;
   return temp;
 }
-inline ::proto::UserMetaInfoV1* CreateDailyStatisticsRequest::_internal_mutable_userinfo() {
+inline ::proto::RequestMetaInfoV1* CreateDailyStatisticsRequest::_internal_mutable_requestmetainfo() {
   
-  if (_impl_.userinfo_ == nullptr) {
-    auto* p = CreateMaybeMessage<::proto::UserMetaInfoV1>(GetArenaForAllocation());
-    _impl_.userinfo_ = p;
+  if (_impl_.requestmetainfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::RequestMetaInfoV1>(GetArenaForAllocation());
+    _impl_.requestmetainfo_ = p;
   }
-  return _impl_.userinfo_;
+  return _impl_.requestmetainfo_;
 }
-inline ::proto::UserMetaInfoV1* CreateDailyStatisticsRequest::mutable_userinfo() {
-  ::proto::UserMetaInfoV1* _msg = _internal_mutable_userinfo();
-  // @@protoc_insertion_point(field_mutable:proto.CreateDailyStatisticsRequest.UserInfo)
+inline ::proto::RequestMetaInfoV1* CreateDailyStatisticsRequest::mutable_requestmetainfo() {
+  ::proto::RequestMetaInfoV1* _msg = _internal_mutable_requestmetainfo();
+  // @@protoc_insertion_point(field_mutable:proto.CreateDailyStatisticsRequest.RequestMetaInfo)
   return _msg;
 }
-inline void CreateDailyStatisticsRequest::set_allocated_userinfo(::proto::UserMetaInfoV1* userinfo) {
+inline void CreateDailyStatisticsRequest::set_allocated_requestmetainfo(::proto::RequestMetaInfoV1* requestmetainfo) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userinfo_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.requestmetainfo_);
   }
-  if (userinfo) {
+  if (requestmetainfo) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(userinfo));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(requestmetainfo));
     if (message_arena != submessage_arena) {
-      userinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, userinfo, submessage_arena);
+      requestmetainfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, requestmetainfo, submessage_arena);
     }
     
   } else {
     
   }
-  _impl_.userinfo_ = userinfo;
-  // @@protoc_insertion_point(field_set_allocated:proto.CreateDailyStatisticsRequest.UserInfo)
+  _impl_.requestmetainfo_ = requestmetainfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.CreateDailyStatisticsRequest.RequestMetaInfo)
 }
 
-// .proto.DailyStatisticsMetaInfoV1 DailyStatisticsInfo = 2;
+// .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
+inline bool CreateDailyStatisticsRequest::_internal_has_userverifyinfo() const {
+  return this != internal_default_instance() && _impl_.userverifyinfo_ != nullptr;
+}
+inline bool CreateDailyStatisticsRequest::has_userverifyinfo() const {
+  return _internal_has_userverifyinfo();
+}
+inline const ::proto::UserVerifyInfoV1& CreateDailyStatisticsRequest::_internal_userverifyinfo() const {
+  const ::proto::UserVerifyInfoV1* p = _impl_.userverifyinfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::UserVerifyInfoV1&>(
+      ::proto::_UserVerifyInfoV1_default_instance_);
+}
+inline const ::proto::UserVerifyInfoV1& CreateDailyStatisticsRequest::userverifyinfo() const {
+  // @@protoc_insertion_point(field_get:proto.CreateDailyStatisticsRequest.UserVerifyInfo)
+  return _internal_userverifyinfo();
+}
+inline void CreateDailyStatisticsRequest::unsafe_arena_set_allocated_userverifyinfo(
+    ::proto::UserVerifyInfoV1* userverifyinfo) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userverifyinfo_);
+  }
+  _impl_.userverifyinfo_ = userverifyinfo;
+  if (userverifyinfo) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.CreateDailyStatisticsRequest.UserVerifyInfo)
+}
+inline ::proto::UserVerifyInfoV1* CreateDailyStatisticsRequest::release_userverifyinfo() {
+  
+  ::proto::UserVerifyInfoV1* temp = _impl_.userverifyinfo_;
+  _impl_.userverifyinfo_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::proto::UserVerifyInfoV1* CreateDailyStatisticsRequest::unsafe_arena_release_userverifyinfo() {
+  // @@protoc_insertion_point(field_release:proto.CreateDailyStatisticsRequest.UserVerifyInfo)
+  
+  ::proto::UserVerifyInfoV1* temp = _impl_.userverifyinfo_;
+  _impl_.userverifyinfo_ = nullptr;
+  return temp;
+}
+inline ::proto::UserVerifyInfoV1* CreateDailyStatisticsRequest::_internal_mutable_userverifyinfo() {
+  
+  if (_impl_.userverifyinfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::UserVerifyInfoV1>(GetArenaForAllocation());
+    _impl_.userverifyinfo_ = p;
+  }
+  return _impl_.userverifyinfo_;
+}
+inline ::proto::UserVerifyInfoV1* CreateDailyStatisticsRequest::mutable_userverifyinfo() {
+  ::proto::UserVerifyInfoV1* _msg = _internal_mutable_userverifyinfo();
+  // @@protoc_insertion_point(field_mutable:proto.CreateDailyStatisticsRequest.UserVerifyInfo)
+  return _msg;
+}
+inline void CreateDailyStatisticsRequest::set_allocated_userverifyinfo(::proto::UserVerifyInfoV1* userverifyinfo) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userverifyinfo_);
+  }
+  if (userverifyinfo) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(userverifyinfo));
+    if (message_arena != submessage_arena) {
+      userverifyinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, userverifyinfo, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  _impl_.userverifyinfo_ = userverifyinfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.CreateDailyStatisticsRequest.UserVerifyInfo)
+}
+
+// .proto.DailyStatisticsMetaInfoV1 DailyStatisticsInfo = 3;
 inline bool CreateDailyStatisticsRequest::_internal_has_dailystatisticsinfo() const {
   return this != internal_default_instance() && _impl_.dailystatisticsinfo_ != nullptr;
 }
@@ -12982,39 +16498,39 @@ inline void CreateDailyStatisticsRequest::set_allocated_dailystatisticsinfo(::pr
 
 // DeleteDailyStatisticsRequest
 
-// .proto.UserMetaInfoV1 UserInfo = 1;
-inline bool DeleteDailyStatisticsRequest::_internal_has_userinfo() const {
-  return this != internal_default_instance() && _impl_.userinfo_ != nullptr;
+// .proto.RequestMetaInfoV1 RequestMetaInfo = 1;
+inline bool DeleteDailyStatisticsRequest::_internal_has_requestmetainfo() const {
+  return this != internal_default_instance() && _impl_.requestmetainfo_ != nullptr;
 }
-inline bool DeleteDailyStatisticsRequest::has_userinfo() const {
-  return _internal_has_userinfo();
+inline bool DeleteDailyStatisticsRequest::has_requestmetainfo() const {
+  return _internal_has_requestmetainfo();
 }
-inline const ::proto::UserMetaInfoV1& DeleteDailyStatisticsRequest::_internal_userinfo() const {
-  const ::proto::UserMetaInfoV1* p = _impl_.userinfo_;
-  return p != nullptr ? *p : reinterpret_cast<const ::proto::UserMetaInfoV1&>(
-      ::proto::_UserMetaInfoV1_default_instance_);
+inline const ::proto::RequestMetaInfoV1& DeleteDailyStatisticsRequest::_internal_requestmetainfo() const {
+  const ::proto::RequestMetaInfoV1* p = _impl_.requestmetainfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::RequestMetaInfoV1&>(
+      ::proto::_RequestMetaInfoV1_default_instance_);
 }
-inline const ::proto::UserMetaInfoV1& DeleteDailyStatisticsRequest::userinfo() const {
-  // @@protoc_insertion_point(field_get:proto.DeleteDailyStatisticsRequest.UserInfo)
-  return _internal_userinfo();
+inline const ::proto::RequestMetaInfoV1& DeleteDailyStatisticsRequest::requestmetainfo() const {
+  // @@protoc_insertion_point(field_get:proto.DeleteDailyStatisticsRequest.RequestMetaInfo)
+  return _internal_requestmetainfo();
 }
-inline void DeleteDailyStatisticsRequest::unsafe_arena_set_allocated_userinfo(
-    ::proto::UserMetaInfoV1* userinfo) {
+inline void DeleteDailyStatisticsRequest::unsafe_arena_set_allocated_requestmetainfo(
+    ::proto::RequestMetaInfoV1* requestmetainfo) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userinfo_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.requestmetainfo_);
   }
-  _impl_.userinfo_ = userinfo;
-  if (userinfo) {
+  _impl_.requestmetainfo_ = requestmetainfo;
+  if (requestmetainfo) {
     
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.DeleteDailyStatisticsRequest.UserInfo)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.DeleteDailyStatisticsRequest.RequestMetaInfo)
 }
-inline ::proto::UserMetaInfoV1* DeleteDailyStatisticsRequest::release_userinfo() {
+inline ::proto::RequestMetaInfoV1* DeleteDailyStatisticsRequest::release_requestmetainfo() {
   
-  ::proto::UserMetaInfoV1* temp = _impl_.userinfo_;
-  _impl_.userinfo_ = nullptr;
+  ::proto::RequestMetaInfoV1* temp = _impl_.requestmetainfo_;
+  _impl_.requestmetainfo_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -13026,80 +16542,80 @@ inline ::proto::UserMetaInfoV1* DeleteDailyStatisticsRequest::release_userinfo()
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::proto::UserMetaInfoV1* DeleteDailyStatisticsRequest::unsafe_arena_release_userinfo() {
-  // @@protoc_insertion_point(field_release:proto.DeleteDailyStatisticsRequest.UserInfo)
+inline ::proto::RequestMetaInfoV1* DeleteDailyStatisticsRequest::unsafe_arena_release_requestmetainfo() {
+  // @@protoc_insertion_point(field_release:proto.DeleteDailyStatisticsRequest.RequestMetaInfo)
   
-  ::proto::UserMetaInfoV1* temp = _impl_.userinfo_;
-  _impl_.userinfo_ = nullptr;
+  ::proto::RequestMetaInfoV1* temp = _impl_.requestmetainfo_;
+  _impl_.requestmetainfo_ = nullptr;
   return temp;
 }
-inline ::proto::UserMetaInfoV1* DeleteDailyStatisticsRequest::_internal_mutable_userinfo() {
+inline ::proto::RequestMetaInfoV1* DeleteDailyStatisticsRequest::_internal_mutable_requestmetainfo() {
   
-  if (_impl_.userinfo_ == nullptr) {
-    auto* p = CreateMaybeMessage<::proto::UserMetaInfoV1>(GetArenaForAllocation());
-    _impl_.userinfo_ = p;
+  if (_impl_.requestmetainfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::RequestMetaInfoV1>(GetArenaForAllocation());
+    _impl_.requestmetainfo_ = p;
   }
-  return _impl_.userinfo_;
+  return _impl_.requestmetainfo_;
 }
-inline ::proto::UserMetaInfoV1* DeleteDailyStatisticsRequest::mutable_userinfo() {
-  ::proto::UserMetaInfoV1* _msg = _internal_mutable_userinfo();
-  // @@protoc_insertion_point(field_mutable:proto.DeleteDailyStatisticsRequest.UserInfo)
+inline ::proto::RequestMetaInfoV1* DeleteDailyStatisticsRequest::mutable_requestmetainfo() {
+  ::proto::RequestMetaInfoV1* _msg = _internal_mutable_requestmetainfo();
+  // @@protoc_insertion_point(field_mutable:proto.DeleteDailyStatisticsRequest.RequestMetaInfo)
   return _msg;
 }
-inline void DeleteDailyStatisticsRequest::set_allocated_userinfo(::proto::UserMetaInfoV1* userinfo) {
+inline void DeleteDailyStatisticsRequest::set_allocated_requestmetainfo(::proto::RequestMetaInfoV1* requestmetainfo) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userinfo_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.requestmetainfo_);
   }
-  if (userinfo) {
+  if (requestmetainfo) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(userinfo));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(requestmetainfo));
     if (message_arena != submessage_arena) {
-      userinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, userinfo, submessage_arena);
+      requestmetainfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, requestmetainfo, submessage_arena);
     }
     
   } else {
     
   }
-  _impl_.userinfo_ = userinfo;
-  // @@protoc_insertion_point(field_set_allocated:proto.DeleteDailyStatisticsRequest.UserInfo)
+  _impl_.requestmetainfo_ = requestmetainfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.DeleteDailyStatisticsRequest.RequestMetaInfo)
 }
 
-// .proto.DailyStatisticsMetaInfoV1 DailyStatisticsInfo = 2;
-inline bool DeleteDailyStatisticsRequest::_internal_has_dailystatisticsinfo() const {
-  return this != internal_default_instance() && _impl_.dailystatisticsinfo_ != nullptr;
+// .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
+inline bool DeleteDailyStatisticsRequest::_internal_has_userverifyinfo() const {
+  return this != internal_default_instance() && _impl_.userverifyinfo_ != nullptr;
 }
-inline bool DeleteDailyStatisticsRequest::has_dailystatisticsinfo() const {
-  return _internal_has_dailystatisticsinfo();
+inline bool DeleteDailyStatisticsRequest::has_userverifyinfo() const {
+  return _internal_has_userverifyinfo();
 }
-inline const ::proto::DailyStatisticsMetaInfoV1& DeleteDailyStatisticsRequest::_internal_dailystatisticsinfo() const {
-  const ::proto::DailyStatisticsMetaInfoV1* p = _impl_.dailystatisticsinfo_;
-  return p != nullptr ? *p : reinterpret_cast<const ::proto::DailyStatisticsMetaInfoV1&>(
-      ::proto::_DailyStatisticsMetaInfoV1_default_instance_);
+inline const ::proto::UserVerifyInfoV1& DeleteDailyStatisticsRequest::_internal_userverifyinfo() const {
+  const ::proto::UserVerifyInfoV1* p = _impl_.userverifyinfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::UserVerifyInfoV1&>(
+      ::proto::_UserVerifyInfoV1_default_instance_);
 }
-inline const ::proto::DailyStatisticsMetaInfoV1& DeleteDailyStatisticsRequest::dailystatisticsinfo() const {
-  // @@protoc_insertion_point(field_get:proto.DeleteDailyStatisticsRequest.DailyStatisticsInfo)
-  return _internal_dailystatisticsinfo();
+inline const ::proto::UserVerifyInfoV1& DeleteDailyStatisticsRequest::userverifyinfo() const {
+  // @@protoc_insertion_point(field_get:proto.DeleteDailyStatisticsRequest.UserVerifyInfo)
+  return _internal_userverifyinfo();
 }
-inline void DeleteDailyStatisticsRequest::unsafe_arena_set_allocated_dailystatisticsinfo(
-    ::proto::DailyStatisticsMetaInfoV1* dailystatisticsinfo) {
+inline void DeleteDailyStatisticsRequest::unsafe_arena_set_allocated_userverifyinfo(
+    ::proto::UserVerifyInfoV1* userverifyinfo) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.dailystatisticsinfo_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userverifyinfo_);
   }
-  _impl_.dailystatisticsinfo_ = dailystatisticsinfo;
-  if (dailystatisticsinfo) {
+  _impl_.userverifyinfo_ = userverifyinfo;
+  if (userverifyinfo) {
     
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.DeleteDailyStatisticsRequest.DailyStatisticsInfo)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.DeleteDailyStatisticsRequest.UserVerifyInfo)
 }
-inline ::proto::DailyStatisticsMetaInfoV1* DeleteDailyStatisticsRequest::release_dailystatisticsinfo() {
+inline ::proto::UserVerifyInfoV1* DeleteDailyStatisticsRequest::release_userverifyinfo() {
   
-  ::proto::DailyStatisticsMetaInfoV1* temp = _impl_.dailystatisticsinfo_;
-  _impl_.dailystatisticsinfo_ = nullptr;
+  ::proto::UserVerifyInfoV1* temp = _impl_.userverifyinfo_;
+  _impl_.userverifyinfo_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -13111,84 +16627,134 @@ inline ::proto::DailyStatisticsMetaInfoV1* DeleteDailyStatisticsRequest::release
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::proto::DailyStatisticsMetaInfoV1* DeleteDailyStatisticsRequest::unsafe_arena_release_dailystatisticsinfo() {
-  // @@protoc_insertion_point(field_release:proto.DeleteDailyStatisticsRequest.DailyStatisticsInfo)
+inline ::proto::UserVerifyInfoV1* DeleteDailyStatisticsRequest::unsafe_arena_release_userverifyinfo() {
+  // @@protoc_insertion_point(field_release:proto.DeleteDailyStatisticsRequest.UserVerifyInfo)
   
-  ::proto::DailyStatisticsMetaInfoV1* temp = _impl_.dailystatisticsinfo_;
-  _impl_.dailystatisticsinfo_ = nullptr;
+  ::proto::UserVerifyInfoV1* temp = _impl_.userverifyinfo_;
+  _impl_.userverifyinfo_ = nullptr;
   return temp;
 }
-inline ::proto::DailyStatisticsMetaInfoV1* DeleteDailyStatisticsRequest::_internal_mutable_dailystatisticsinfo() {
+inline ::proto::UserVerifyInfoV1* DeleteDailyStatisticsRequest::_internal_mutable_userverifyinfo() {
   
-  if (_impl_.dailystatisticsinfo_ == nullptr) {
-    auto* p = CreateMaybeMessage<::proto::DailyStatisticsMetaInfoV1>(GetArenaForAllocation());
-    _impl_.dailystatisticsinfo_ = p;
+  if (_impl_.userverifyinfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::UserVerifyInfoV1>(GetArenaForAllocation());
+    _impl_.userverifyinfo_ = p;
   }
-  return _impl_.dailystatisticsinfo_;
+  return _impl_.userverifyinfo_;
 }
-inline ::proto::DailyStatisticsMetaInfoV1* DeleteDailyStatisticsRequest::mutable_dailystatisticsinfo() {
-  ::proto::DailyStatisticsMetaInfoV1* _msg = _internal_mutable_dailystatisticsinfo();
-  // @@protoc_insertion_point(field_mutable:proto.DeleteDailyStatisticsRequest.DailyStatisticsInfo)
+inline ::proto::UserVerifyInfoV1* DeleteDailyStatisticsRequest::mutable_userverifyinfo() {
+  ::proto::UserVerifyInfoV1* _msg = _internal_mutable_userverifyinfo();
+  // @@protoc_insertion_point(field_mutable:proto.DeleteDailyStatisticsRequest.UserVerifyInfo)
   return _msg;
 }
-inline void DeleteDailyStatisticsRequest::set_allocated_dailystatisticsinfo(::proto::DailyStatisticsMetaInfoV1* dailystatisticsinfo) {
+inline void DeleteDailyStatisticsRequest::set_allocated_userverifyinfo(::proto::UserVerifyInfoV1* userverifyinfo) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.dailystatisticsinfo_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userverifyinfo_);
   }
-  if (dailystatisticsinfo) {
+  if (userverifyinfo) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(dailystatisticsinfo));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(userverifyinfo));
     if (message_arena != submessage_arena) {
-      dailystatisticsinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, dailystatisticsinfo, submessage_arena);
+      userverifyinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, userverifyinfo, submessage_arena);
     }
     
   } else {
     
   }
-  _impl_.dailystatisticsinfo_ = dailystatisticsinfo;
-  // @@protoc_insertion_point(field_set_allocated:proto.DeleteDailyStatisticsRequest.DailyStatisticsInfo)
+  _impl_.userverifyinfo_ = userverifyinfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.DeleteDailyStatisticsRequest.UserVerifyInfo)
+}
+
+// string DailyStatisticsName = 3;
+inline void DeleteDailyStatisticsRequest::clear_dailystatisticsname() {
+  _impl_.dailystatisticsname_.ClearToEmpty();
+}
+inline const std::string& DeleteDailyStatisticsRequest::dailystatisticsname() const {
+  // @@protoc_insertion_point(field_get:proto.DeleteDailyStatisticsRequest.DailyStatisticsName)
+  return _internal_dailystatisticsname();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void DeleteDailyStatisticsRequest::set_dailystatisticsname(ArgT0&& arg0, ArgT... args) {
+ 
+ _impl_.dailystatisticsname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:proto.DeleteDailyStatisticsRequest.DailyStatisticsName)
+}
+inline std::string* DeleteDailyStatisticsRequest::mutable_dailystatisticsname() {
+  std::string* _s = _internal_mutable_dailystatisticsname();
+  // @@protoc_insertion_point(field_mutable:proto.DeleteDailyStatisticsRequest.DailyStatisticsName)
+  return _s;
+}
+inline const std::string& DeleteDailyStatisticsRequest::_internal_dailystatisticsname() const {
+  return _impl_.dailystatisticsname_.Get();
+}
+inline void DeleteDailyStatisticsRequest::_internal_set_dailystatisticsname(const std::string& value) {
+  
+  _impl_.dailystatisticsname_.Set(value, GetArenaForAllocation());
+}
+inline std::string* DeleteDailyStatisticsRequest::_internal_mutable_dailystatisticsname() {
+  
+  return _impl_.dailystatisticsname_.Mutable(GetArenaForAllocation());
+}
+inline std::string* DeleteDailyStatisticsRequest::release_dailystatisticsname() {
+  // @@protoc_insertion_point(field_release:proto.DeleteDailyStatisticsRequest.DailyStatisticsName)
+  return _impl_.dailystatisticsname_.Release();
+}
+inline void DeleteDailyStatisticsRequest::set_allocated_dailystatisticsname(std::string* dailystatisticsname) {
+  if (dailystatisticsname != nullptr) {
+    
+  } else {
+    
+  }
+  _impl_.dailystatisticsname_.SetAllocated(dailystatisticsname, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.dailystatisticsname_.IsDefault()) {
+    _impl_.dailystatisticsname_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:proto.DeleteDailyStatisticsRequest.DailyStatisticsName)
 }
 
 // -------------------------------------------------------------------
 
 // UpdateDailyStatisticsRequest
 
-// .proto.UserMetaInfoV1 UserInfo = 1;
-inline bool UpdateDailyStatisticsRequest::_internal_has_userinfo() const {
-  return this != internal_default_instance() && _impl_.userinfo_ != nullptr;
+// .proto.RequestMetaInfoV1 RequestMetaInfo = 1;
+inline bool UpdateDailyStatisticsRequest::_internal_has_requestmetainfo() const {
+  return this != internal_default_instance() && _impl_.requestmetainfo_ != nullptr;
 }
-inline bool UpdateDailyStatisticsRequest::has_userinfo() const {
-  return _internal_has_userinfo();
+inline bool UpdateDailyStatisticsRequest::has_requestmetainfo() const {
+  return _internal_has_requestmetainfo();
 }
-inline const ::proto::UserMetaInfoV1& UpdateDailyStatisticsRequest::_internal_userinfo() const {
-  const ::proto::UserMetaInfoV1* p = _impl_.userinfo_;
-  return p != nullptr ? *p : reinterpret_cast<const ::proto::UserMetaInfoV1&>(
-      ::proto::_UserMetaInfoV1_default_instance_);
+inline const ::proto::RequestMetaInfoV1& UpdateDailyStatisticsRequest::_internal_requestmetainfo() const {
+  const ::proto::RequestMetaInfoV1* p = _impl_.requestmetainfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::RequestMetaInfoV1&>(
+      ::proto::_RequestMetaInfoV1_default_instance_);
 }
-inline const ::proto::UserMetaInfoV1& UpdateDailyStatisticsRequest::userinfo() const {
-  // @@protoc_insertion_point(field_get:proto.UpdateDailyStatisticsRequest.UserInfo)
-  return _internal_userinfo();
+inline const ::proto::RequestMetaInfoV1& UpdateDailyStatisticsRequest::requestmetainfo() const {
+  // @@protoc_insertion_point(field_get:proto.UpdateDailyStatisticsRequest.RequestMetaInfo)
+  return _internal_requestmetainfo();
 }
-inline void UpdateDailyStatisticsRequest::unsafe_arena_set_allocated_userinfo(
-    ::proto::UserMetaInfoV1* userinfo) {
+inline void UpdateDailyStatisticsRequest::unsafe_arena_set_allocated_requestmetainfo(
+    ::proto::RequestMetaInfoV1* requestmetainfo) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userinfo_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.requestmetainfo_);
   }
-  _impl_.userinfo_ = userinfo;
-  if (userinfo) {
+  _impl_.requestmetainfo_ = requestmetainfo;
+  if (requestmetainfo) {
     
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.UpdateDailyStatisticsRequest.UserInfo)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.UpdateDailyStatisticsRequest.RequestMetaInfo)
 }
-inline ::proto::UserMetaInfoV1* UpdateDailyStatisticsRequest::release_userinfo() {
+inline ::proto::RequestMetaInfoV1* UpdateDailyStatisticsRequest::release_requestmetainfo() {
   
-  ::proto::UserMetaInfoV1* temp = _impl_.userinfo_;
-  _impl_.userinfo_ = nullptr;
+  ::proto::RequestMetaInfoV1* temp = _impl_.requestmetainfo_;
+  _impl_.requestmetainfo_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -13200,48 +16766,133 @@ inline ::proto::UserMetaInfoV1* UpdateDailyStatisticsRequest::release_userinfo()
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::proto::UserMetaInfoV1* UpdateDailyStatisticsRequest::unsafe_arena_release_userinfo() {
-  // @@protoc_insertion_point(field_release:proto.UpdateDailyStatisticsRequest.UserInfo)
+inline ::proto::RequestMetaInfoV1* UpdateDailyStatisticsRequest::unsafe_arena_release_requestmetainfo() {
+  // @@protoc_insertion_point(field_release:proto.UpdateDailyStatisticsRequest.RequestMetaInfo)
   
-  ::proto::UserMetaInfoV1* temp = _impl_.userinfo_;
-  _impl_.userinfo_ = nullptr;
+  ::proto::RequestMetaInfoV1* temp = _impl_.requestmetainfo_;
+  _impl_.requestmetainfo_ = nullptr;
   return temp;
 }
-inline ::proto::UserMetaInfoV1* UpdateDailyStatisticsRequest::_internal_mutable_userinfo() {
+inline ::proto::RequestMetaInfoV1* UpdateDailyStatisticsRequest::_internal_mutable_requestmetainfo() {
   
-  if (_impl_.userinfo_ == nullptr) {
-    auto* p = CreateMaybeMessage<::proto::UserMetaInfoV1>(GetArenaForAllocation());
-    _impl_.userinfo_ = p;
+  if (_impl_.requestmetainfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::RequestMetaInfoV1>(GetArenaForAllocation());
+    _impl_.requestmetainfo_ = p;
   }
-  return _impl_.userinfo_;
+  return _impl_.requestmetainfo_;
 }
-inline ::proto::UserMetaInfoV1* UpdateDailyStatisticsRequest::mutable_userinfo() {
-  ::proto::UserMetaInfoV1* _msg = _internal_mutable_userinfo();
-  // @@protoc_insertion_point(field_mutable:proto.UpdateDailyStatisticsRequest.UserInfo)
+inline ::proto::RequestMetaInfoV1* UpdateDailyStatisticsRequest::mutable_requestmetainfo() {
+  ::proto::RequestMetaInfoV1* _msg = _internal_mutable_requestmetainfo();
+  // @@protoc_insertion_point(field_mutable:proto.UpdateDailyStatisticsRequest.RequestMetaInfo)
   return _msg;
 }
-inline void UpdateDailyStatisticsRequest::set_allocated_userinfo(::proto::UserMetaInfoV1* userinfo) {
+inline void UpdateDailyStatisticsRequest::set_allocated_requestmetainfo(::proto::RequestMetaInfoV1* requestmetainfo) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userinfo_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.requestmetainfo_);
   }
-  if (userinfo) {
+  if (requestmetainfo) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(userinfo));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(requestmetainfo));
     if (message_arena != submessage_arena) {
-      userinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, userinfo, submessage_arena);
+      requestmetainfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, requestmetainfo, submessage_arena);
     }
     
   } else {
     
   }
-  _impl_.userinfo_ = userinfo;
-  // @@protoc_insertion_point(field_set_allocated:proto.UpdateDailyStatisticsRequest.UserInfo)
+  _impl_.requestmetainfo_ = requestmetainfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.UpdateDailyStatisticsRequest.RequestMetaInfo)
 }
 
-// .proto.DailyStatisticsMetaInfoV1 DailyStatisticsInfo = 2;
+// .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
+inline bool UpdateDailyStatisticsRequest::_internal_has_userverifyinfo() const {
+  return this != internal_default_instance() && _impl_.userverifyinfo_ != nullptr;
+}
+inline bool UpdateDailyStatisticsRequest::has_userverifyinfo() const {
+  return _internal_has_userverifyinfo();
+}
+inline const ::proto::UserVerifyInfoV1& UpdateDailyStatisticsRequest::_internal_userverifyinfo() const {
+  const ::proto::UserVerifyInfoV1* p = _impl_.userverifyinfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::UserVerifyInfoV1&>(
+      ::proto::_UserVerifyInfoV1_default_instance_);
+}
+inline const ::proto::UserVerifyInfoV1& UpdateDailyStatisticsRequest::userverifyinfo() const {
+  // @@protoc_insertion_point(field_get:proto.UpdateDailyStatisticsRequest.UserVerifyInfo)
+  return _internal_userverifyinfo();
+}
+inline void UpdateDailyStatisticsRequest::unsafe_arena_set_allocated_userverifyinfo(
+    ::proto::UserVerifyInfoV1* userverifyinfo) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userverifyinfo_);
+  }
+  _impl_.userverifyinfo_ = userverifyinfo;
+  if (userverifyinfo) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.UpdateDailyStatisticsRequest.UserVerifyInfo)
+}
+inline ::proto::UserVerifyInfoV1* UpdateDailyStatisticsRequest::release_userverifyinfo() {
+  
+  ::proto::UserVerifyInfoV1* temp = _impl_.userverifyinfo_;
+  _impl_.userverifyinfo_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::proto::UserVerifyInfoV1* UpdateDailyStatisticsRequest::unsafe_arena_release_userverifyinfo() {
+  // @@protoc_insertion_point(field_release:proto.UpdateDailyStatisticsRequest.UserVerifyInfo)
+  
+  ::proto::UserVerifyInfoV1* temp = _impl_.userverifyinfo_;
+  _impl_.userverifyinfo_ = nullptr;
+  return temp;
+}
+inline ::proto::UserVerifyInfoV1* UpdateDailyStatisticsRequest::_internal_mutable_userverifyinfo() {
+  
+  if (_impl_.userverifyinfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::UserVerifyInfoV1>(GetArenaForAllocation());
+    _impl_.userverifyinfo_ = p;
+  }
+  return _impl_.userverifyinfo_;
+}
+inline ::proto::UserVerifyInfoV1* UpdateDailyStatisticsRequest::mutable_userverifyinfo() {
+  ::proto::UserVerifyInfoV1* _msg = _internal_mutable_userverifyinfo();
+  // @@protoc_insertion_point(field_mutable:proto.UpdateDailyStatisticsRequest.UserVerifyInfo)
+  return _msg;
+}
+inline void UpdateDailyStatisticsRequest::set_allocated_userverifyinfo(::proto::UserVerifyInfoV1* userverifyinfo) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userverifyinfo_);
+  }
+  if (userverifyinfo) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(userverifyinfo));
+    if (message_arena != submessage_arena) {
+      userverifyinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, userverifyinfo, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  _impl_.userverifyinfo_ = userverifyinfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.UpdateDailyStatisticsRequest.UserVerifyInfo)
+}
+
+// .proto.DailyStatisticsMetaInfoV1 DailyStatisticsInfo = 3;
 inline bool UpdateDailyStatisticsRequest::_internal_has_dailystatisticsinfo() const {
   return this != internal_default_instance() && _impl_.dailystatisticsinfo_ != nullptr;
 }
@@ -13330,39 +16981,39 @@ inline void UpdateDailyStatisticsRequest::set_allocated_dailystatisticsinfo(::pr
 
 // GetDailyStatisticsRequest
 
-// .proto.UserMetaInfoV1 UserInfo = 1;
-inline bool GetDailyStatisticsRequest::_internal_has_userinfo() const {
-  return this != internal_default_instance() && _impl_.userinfo_ != nullptr;
+// .proto.RequestMetaInfoV1 RequestMetaInfo = 1;
+inline bool GetDailyStatisticsRequest::_internal_has_requestmetainfo() const {
+  return this != internal_default_instance() && _impl_.requestmetainfo_ != nullptr;
 }
-inline bool GetDailyStatisticsRequest::has_userinfo() const {
-  return _internal_has_userinfo();
+inline bool GetDailyStatisticsRequest::has_requestmetainfo() const {
+  return _internal_has_requestmetainfo();
 }
-inline const ::proto::UserMetaInfoV1& GetDailyStatisticsRequest::_internal_userinfo() const {
-  const ::proto::UserMetaInfoV1* p = _impl_.userinfo_;
-  return p != nullptr ? *p : reinterpret_cast<const ::proto::UserMetaInfoV1&>(
-      ::proto::_UserMetaInfoV1_default_instance_);
+inline const ::proto::RequestMetaInfoV1& GetDailyStatisticsRequest::_internal_requestmetainfo() const {
+  const ::proto::RequestMetaInfoV1* p = _impl_.requestmetainfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::RequestMetaInfoV1&>(
+      ::proto::_RequestMetaInfoV1_default_instance_);
 }
-inline const ::proto::UserMetaInfoV1& GetDailyStatisticsRequest::userinfo() const {
-  // @@protoc_insertion_point(field_get:proto.GetDailyStatisticsRequest.UserInfo)
-  return _internal_userinfo();
+inline const ::proto::RequestMetaInfoV1& GetDailyStatisticsRequest::requestmetainfo() const {
+  // @@protoc_insertion_point(field_get:proto.GetDailyStatisticsRequest.RequestMetaInfo)
+  return _internal_requestmetainfo();
 }
-inline void GetDailyStatisticsRequest::unsafe_arena_set_allocated_userinfo(
-    ::proto::UserMetaInfoV1* userinfo) {
+inline void GetDailyStatisticsRequest::unsafe_arena_set_allocated_requestmetainfo(
+    ::proto::RequestMetaInfoV1* requestmetainfo) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userinfo_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.requestmetainfo_);
   }
-  _impl_.userinfo_ = userinfo;
-  if (userinfo) {
+  _impl_.requestmetainfo_ = requestmetainfo;
+  if (requestmetainfo) {
     
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.GetDailyStatisticsRequest.UserInfo)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.GetDailyStatisticsRequest.RequestMetaInfo)
 }
-inline ::proto::UserMetaInfoV1* GetDailyStatisticsRequest::release_userinfo() {
+inline ::proto::RequestMetaInfoV1* GetDailyStatisticsRequest::release_requestmetainfo() {
   
-  ::proto::UserMetaInfoV1* temp = _impl_.userinfo_;
-  _impl_.userinfo_ = nullptr;
+  ::proto::RequestMetaInfoV1* temp = _impl_.requestmetainfo_;
+  _impl_.requestmetainfo_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -13374,80 +17025,80 @@ inline ::proto::UserMetaInfoV1* GetDailyStatisticsRequest::release_userinfo() {
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::proto::UserMetaInfoV1* GetDailyStatisticsRequest::unsafe_arena_release_userinfo() {
-  // @@protoc_insertion_point(field_release:proto.GetDailyStatisticsRequest.UserInfo)
+inline ::proto::RequestMetaInfoV1* GetDailyStatisticsRequest::unsafe_arena_release_requestmetainfo() {
+  // @@protoc_insertion_point(field_release:proto.GetDailyStatisticsRequest.RequestMetaInfo)
   
-  ::proto::UserMetaInfoV1* temp = _impl_.userinfo_;
-  _impl_.userinfo_ = nullptr;
+  ::proto::RequestMetaInfoV1* temp = _impl_.requestmetainfo_;
+  _impl_.requestmetainfo_ = nullptr;
   return temp;
 }
-inline ::proto::UserMetaInfoV1* GetDailyStatisticsRequest::_internal_mutable_userinfo() {
+inline ::proto::RequestMetaInfoV1* GetDailyStatisticsRequest::_internal_mutable_requestmetainfo() {
   
-  if (_impl_.userinfo_ == nullptr) {
-    auto* p = CreateMaybeMessage<::proto::UserMetaInfoV1>(GetArenaForAllocation());
-    _impl_.userinfo_ = p;
+  if (_impl_.requestmetainfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::RequestMetaInfoV1>(GetArenaForAllocation());
+    _impl_.requestmetainfo_ = p;
   }
-  return _impl_.userinfo_;
+  return _impl_.requestmetainfo_;
 }
-inline ::proto::UserMetaInfoV1* GetDailyStatisticsRequest::mutable_userinfo() {
-  ::proto::UserMetaInfoV1* _msg = _internal_mutable_userinfo();
-  // @@protoc_insertion_point(field_mutable:proto.GetDailyStatisticsRequest.UserInfo)
+inline ::proto::RequestMetaInfoV1* GetDailyStatisticsRequest::mutable_requestmetainfo() {
+  ::proto::RequestMetaInfoV1* _msg = _internal_mutable_requestmetainfo();
+  // @@protoc_insertion_point(field_mutable:proto.GetDailyStatisticsRequest.RequestMetaInfo)
   return _msg;
 }
-inline void GetDailyStatisticsRequest::set_allocated_userinfo(::proto::UserMetaInfoV1* userinfo) {
+inline void GetDailyStatisticsRequest::set_allocated_requestmetainfo(::proto::RequestMetaInfoV1* requestmetainfo) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userinfo_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.requestmetainfo_);
   }
-  if (userinfo) {
+  if (requestmetainfo) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(userinfo));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(requestmetainfo));
     if (message_arena != submessage_arena) {
-      userinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, userinfo, submessage_arena);
+      requestmetainfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, requestmetainfo, submessage_arena);
     }
     
   } else {
     
   }
-  _impl_.userinfo_ = userinfo;
-  // @@protoc_insertion_point(field_set_allocated:proto.GetDailyStatisticsRequest.UserInfo)
+  _impl_.requestmetainfo_ = requestmetainfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.GetDailyStatisticsRequest.RequestMetaInfo)
 }
 
-// .proto.DailyStatisticsMetaInfoV1 DailyStatisticsInfo = 2;
-inline bool GetDailyStatisticsRequest::_internal_has_dailystatisticsinfo() const {
-  return this != internal_default_instance() && _impl_.dailystatisticsinfo_ != nullptr;
+// .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
+inline bool GetDailyStatisticsRequest::_internal_has_userverifyinfo() const {
+  return this != internal_default_instance() && _impl_.userverifyinfo_ != nullptr;
 }
-inline bool GetDailyStatisticsRequest::has_dailystatisticsinfo() const {
-  return _internal_has_dailystatisticsinfo();
+inline bool GetDailyStatisticsRequest::has_userverifyinfo() const {
+  return _internal_has_userverifyinfo();
 }
-inline const ::proto::DailyStatisticsMetaInfoV1& GetDailyStatisticsRequest::_internal_dailystatisticsinfo() const {
-  const ::proto::DailyStatisticsMetaInfoV1* p = _impl_.dailystatisticsinfo_;
-  return p != nullptr ? *p : reinterpret_cast<const ::proto::DailyStatisticsMetaInfoV1&>(
-      ::proto::_DailyStatisticsMetaInfoV1_default_instance_);
+inline const ::proto::UserVerifyInfoV1& GetDailyStatisticsRequest::_internal_userverifyinfo() const {
+  const ::proto::UserVerifyInfoV1* p = _impl_.userverifyinfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::UserVerifyInfoV1&>(
+      ::proto::_UserVerifyInfoV1_default_instance_);
 }
-inline const ::proto::DailyStatisticsMetaInfoV1& GetDailyStatisticsRequest::dailystatisticsinfo() const {
-  // @@protoc_insertion_point(field_get:proto.GetDailyStatisticsRequest.DailyStatisticsInfo)
-  return _internal_dailystatisticsinfo();
+inline const ::proto::UserVerifyInfoV1& GetDailyStatisticsRequest::userverifyinfo() const {
+  // @@protoc_insertion_point(field_get:proto.GetDailyStatisticsRequest.UserVerifyInfo)
+  return _internal_userverifyinfo();
 }
-inline void GetDailyStatisticsRequest::unsafe_arena_set_allocated_dailystatisticsinfo(
-    ::proto::DailyStatisticsMetaInfoV1* dailystatisticsinfo) {
+inline void GetDailyStatisticsRequest::unsafe_arena_set_allocated_userverifyinfo(
+    ::proto::UserVerifyInfoV1* userverifyinfo) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.dailystatisticsinfo_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userverifyinfo_);
   }
-  _impl_.dailystatisticsinfo_ = dailystatisticsinfo;
-  if (dailystatisticsinfo) {
+  _impl_.userverifyinfo_ = userverifyinfo;
+  if (userverifyinfo) {
     
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.GetDailyStatisticsRequest.DailyStatisticsInfo)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.GetDailyStatisticsRequest.UserVerifyInfo)
 }
-inline ::proto::DailyStatisticsMetaInfoV1* GetDailyStatisticsRequest::release_dailystatisticsinfo() {
+inline ::proto::UserVerifyInfoV1* GetDailyStatisticsRequest::release_userverifyinfo() {
   
-  ::proto::DailyStatisticsMetaInfoV1* temp = _impl_.dailystatisticsinfo_;
-  _impl_.dailystatisticsinfo_ = nullptr;
+  ::proto::UserVerifyInfoV1* temp = _impl_.userverifyinfo_;
+  _impl_.userverifyinfo_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -13459,84 +17110,134 @@ inline ::proto::DailyStatisticsMetaInfoV1* GetDailyStatisticsRequest::release_da
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::proto::DailyStatisticsMetaInfoV1* GetDailyStatisticsRequest::unsafe_arena_release_dailystatisticsinfo() {
-  // @@protoc_insertion_point(field_release:proto.GetDailyStatisticsRequest.DailyStatisticsInfo)
+inline ::proto::UserVerifyInfoV1* GetDailyStatisticsRequest::unsafe_arena_release_userverifyinfo() {
+  // @@protoc_insertion_point(field_release:proto.GetDailyStatisticsRequest.UserVerifyInfo)
   
-  ::proto::DailyStatisticsMetaInfoV1* temp = _impl_.dailystatisticsinfo_;
-  _impl_.dailystatisticsinfo_ = nullptr;
+  ::proto::UserVerifyInfoV1* temp = _impl_.userverifyinfo_;
+  _impl_.userverifyinfo_ = nullptr;
   return temp;
 }
-inline ::proto::DailyStatisticsMetaInfoV1* GetDailyStatisticsRequest::_internal_mutable_dailystatisticsinfo() {
+inline ::proto::UserVerifyInfoV1* GetDailyStatisticsRequest::_internal_mutable_userverifyinfo() {
   
-  if (_impl_.dailystatisticsinfo_ == nullptr) {
-    auto* p = CreateMaybeMessage<::proto::DailyStatisticsMetaInfoV1>(GetArenaForAllocation());
-    _impl_.dailystatisticsinfo_ = p;
+  if (_impl_.userverifyinfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::UserVerifyInfoV1>(GetArenaForAllocation());
+    _impl_.userverifyinfo_ = p;
   }
-  return _impl_.dailystatisticsinfo_;
+  return _impl_.userverifyinfo_;
 }
-inline ::proto::DailyStatisticsMetaInfoV1* GetDailyStatisticsRequest::mutable_dailystatisticsinfo() {
-  ::proto::DailyStatisticsMetaInfoV1* _msg = _internal_mutable_dailystatisticsinfo();
-  // @@protoc_insertion_point(field_mutable:proto.GetDailyStatisticsRequest.DailyStatisticsInfo)
+inline ::proto::UserVerifyInfoV1* GetDailyStatisticsRequest::mutable_userverifyinfo() {
+  ::proto::UserVerifyInfoV1* _msg = _internal_mutable_userverifyinfo();
+  // @@protoc_insertion_point(field_mutable:proto.GetDailyStatisticsRequest.UserVerifyInfo)
   return _msg;
 }
-inline void GetDailyStatisticsRequest::set_allocated_dailystatisticsinfo(::proto::DailyStatisticsMetaInfoV1* dailystatisticsinfo) {
+inline void GetDailyStatisticsRequest::set_allocated_userverifyinfo(::proto::UserVerifyInfoV1* userverifyinfo) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.dailystatisticsinfo_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userverifyinfo_);
   }
-  if (dailystatisticsinfo) {
+  if (userverifyinfo) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(dailystatisticsinfo));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(userverifyinfo));
     if (message_arena != submessage_arena) {
-      dailystatisticsinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, dailystatisticsinfo, submessage_arena);
+      userverifyinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, userverifyinfo, submessage_arena);
     }
     
   } else {
     
   }
-  _impl_.dailystatisticsinfo_ = dailystatisticsinfo;
-  // @@protoc_insertion_point(field_set_allocated:proto.GetDailyStatisticsRequest.DailyStatisticsInfo)
+  _impl_.userverifyinfo_ = userverifyinfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.GetDailyStatisticsRequest.UserVerifyInfo)
+}
+
+// string DailyStatisticsName = 3;
+inline void GetDailyStatisticsRequest::clear_dailystatisticsname() {
+  _impl_.dailystatisticsname_.ClearToEmpty();
+}
+inline const std::string& GetDailyStatisticsRequest::dailystatisticsname() const {
+  // @@protoc_insertion_point(field_get:proto.GetDailyStatisticsRequest.DailyStatisticsName)
+  return _internal_dailystatisticsname();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void GetDailyStatisticsRequest::set_dailystatisticsname(ArgT0&& arg0, ArgT... args) {
+ 
+ _impl_.dailystatisticsname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:proto.GetDailyStatisticsRequest.DailyStatisticsName)
+}
+inline std::string* GetDailyStatisticsRequest::mutable_dailystatisticsname() {
+  std::string* _s = _internal_mutable_dailystatisticsname();
+  // @@protoc_insertion_point(field_mutable:proto.GetDailyStatisticsRequest.DailyStatisticsName)
+  return _s;
+}
+inline const std::string& GetDailyStatisticsRequest::_internal_dailystatisticsname() const {
+  return _impl_.dailystatisticsname_.Get();
+}
+inline void GetDailyStatisticsRequest::_internal_set_dailystatisticsname(const std::string& value) {
+  
+  _impl_.dailystatisticsname_.Set(value, GetArenaForAllocation());
+}
+inline std::string* GetDailyStatisticsRequest::_internal_mutable_dailystatisticsname() {
+  
+  return _impl_.dailystatisticsname_.Mutable(GetArenaForAllocation());
+}
+inline std::string* GetDailyStatisticsRequest::release_dailystatisticsname() {
+  // @@protoc_insertion_point(field_release:proto.GetDailyStatisticsRequest.DailyStatisticsName)
+  return _impl_.dailystatisticsname_.Release();
+}
+inline void GetDailyStatisticsRequest::set_allocated_dailystatisticsname(std::string* dailystatisticsname) {
+  if (dailystatisticsname != nullptr) {
+    
+  } else {
+    
+  }
+  _impl_.dailystatisticsname_.SetAllocated(dailystatisticsname, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.dailystatisticsname_.IsDefault()) {
+    _impl_.dailystatisticsname_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:proto.GetDailyStatisticsRequest.DailyStatisticsName)
 }
 
 // -------------------------------------------------------------------
 
 // GetAllDailyStatisticsRequest
 
-// .proto.UserMetaInfoV1 UserInfo = 1;
-inline bool GetAllDailyStatisticsRequest::_internal_has_userinfo() const {
-  return this != internal_default_instance() && _impl_.userinfo_ != nullptr;
+// .proto.RequestMetaInfoV1 RequestMetaInfo = 1;
+inline bool GetAllDailyStatisticsRequest::_internal_has_requestmetainfo() const {
+  return this != internal_default_instance() && _impl_.requestmetainfo_ != nullptr;
 }
-inline bool GetAllDailyStatisticsRequest::has_userinfo() const {
-  return _internal_has_userinfo();
+inline bool GetAllDailyStatisticsRequest::has_requestmetainfo() const {
+  return _internal_has_requestmetainfo();
 }
-inline const ::proto::UserMetaInfoV1& GetAllDailyStatisticsRequest::_internal_userinfo() const {
-  const ::proto::UserMetaInfoV1* p = _impl_.userinfo_;
-  return p != nullptr ? *p : reinterpret_cast<const ::proto::UserMetaInfoV1&>(
-      ::proto::_UserMetaInfoV1_default_instance_);
+inline const ::proto::RequestMetaInfoV1& GetAllDailyStatisticsRequest::_internal_requestmetainfo() const {
+  const ::proto::RequestMetaInfoV1* p = _impl_.requestmetainfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::RequestMetaInfoV1&>(
+      ::proto::_RequestMetaInfoV1_default_instance_);
 }
-inline const ::proto::UserMetaInfoV1& GetAllDailyStatisticsRequest::userinfo() const {
-  // @@protoc_insertion_point(field_get:proto.GetAllDailyStatisticsRequest.UserInfo)
-  return _internal_userinfo();
+inline const ::proto::RequestMetaInfoV1& GetAllDailyStatisticsRequest::requestmetainfo() const {
+  // @@protoc_insertion_point(field_get:proto.GetAllDailyStatisticsRequest.RequestMetaInfo)
+  return _internal_requestmetainfo();
 }
-inline void GetAllDailyStatisticsRequest::unsafe_arena_set_allocated_userinfo(
-    ::proto::UserMetaInfoV1* userinfo) {
+inline void GetAllDailyStatisticsRequest::unsafe_arena_set_allocated_requestmetainfo(
+    ::proto::RequestMetaInfoV1* requestmetainfo) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userinfo_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.requestmetainfo_);
   }
-  _impl_.userinfo_ = userinfo;
-  if (userinfo) {
+  _impl_.requestmetainfo_ = requestmetainfo;
+  if (requestmetainfo) {
     
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.GetAllDailyStatisticsRequest.UserInfo)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.GetAllDailyStatisticsRequest.RequestMetaInfo)
 }
-inline ::proto::UserMetaInfoV1* GetAllDailyStatisticsRequest::release_userinfo() {
+inline ::proto::RequestMetaInfoV1* GetAllDailyStatisticsRequest::release_requestmetainfo() {
   
-  ::proto::UserMetaInfoV1* temp = _impl_.userinfo_;
-  _impl_.userinfo_ = nullptr;
+  ::proto::RequestMetaInfoV1* temp = _impl_.requestmetainfo_;
+  _impl_.requestmetainfo_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -13548,45 +17249,130 @@ inline ::proto::UserMetaInfoV1* GetAllDailyStatisticsRequest::release_userinfo()
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::proto::UserMetaInfoV1* GetAllDailyStatisticsRequest::unsafe_arena_release_userinfo() {
-  // @@protoc_insertion_point(field_release:proto.GetAllDailyStatisticsRequest.UserInfo)
+inline ::proto::RequestMetaInfoV1* GetAllDailyStatisticsRequest::unsafe_arena_release_requestmetainfo() {
+  // @@protoc_insertion_point(field_release:proto.GetAllDailyStatisticsRequest.RequestMetaInfo)
   
-  ::proto::UserMetaInfoV1* temp = _impl_.userinfo_;
-  _impl_.userinfo_ = nullptr;
+  ::proto::RequestMetaInfoV1* temp = _impl_.requestmetainfo_;
+  _impl_.requestmetainfo_ = nullptr;
   return temp;
 }
-inline ::proto::UserMetaInfoV1* GetAllDailyStatisticsRequest::_internal_mutable_userinfo() {
+inline ::proto::RequestMetaInfoV1* GetAllDailyStatisticsRequest::_internal_mutable_requestmetainfo() {
   
-  if (_impl_.userinfo_ == nullptr) {
-    auto* p = CreateMaybeMessage<::proto::UserMetaInfoV1>(GetArenaForAllocation());
-    _impl_.userinfo_ = p;
+  if (_impl_.requestmetainfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::RequestMetaInfoV1>(GetArenaForAllocation());
+    _impl_.requestmetainfo_ = p;
   }
-  return _impl_.userinfo_;
+  return _impl_.requestmetainfo_;
 }
-inline ::proto::UserMetaInfoV1* GetAllDailyStatisticsRequest::mutable_userinfo() {
-  ::proto::UserMetaInfoV1* _msg = _internal_mutable_userinfo();
-  // @@protoc_insertion_point(field_mutable:proto.GetAllDailyStatisticsRequest.UserInfo)
+inline ::proto::RequestMetaInfoV1* GetAllDailyStatisticsRequest::mutable_requestmetainfo() {
+  ::proto::RequestMetaInfoV1* _msg = _internal_mutable_requestmetainfo();
+  // @@protoc_insertion_point(field_mutable:proto.GetAllDailyStatisticsRequest.RequestMetaInfo)
   return _msg;
 }
-inline void GetAllDailyStatisticsRequest::set_allocated_userinfo(::proto::UserMetaInfoV1* userinfo) {
+inline void GetAllDailyStatisticsRequest::set_allocated_requestmetainfo(::proto::RequestMetaInfoV1* requestmetainfo) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userinfo_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.requestmetainfo_);
   }
-  if (userinfo) {
+  if (requestmetainfo) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(userinfo));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(requestmetainfo));
     if (message_arena != submessage_arena) {
-      userinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, userinfo, submessage_arena);
+      requestmetainfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, requestmetainfo, submessage_arena);
     }
     
   } else {
     
   }
-  _impl_.userinfo_ = userinfo;
-  // @@protoc_insertion_point(field_set_allocated:proto.GetAllDailyStatisticsRequest.UserInfo)
+  _impl_.requestmetainfo_ = requestmetainfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.GetAllDailyStatisticsRequest.RequestMetaInfo)
+}
+
+// .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
+inline bool GetAllDailyStatisticsRequest::_internal_has_userverifyinfo() const {
+  return this != internal_default_instance() && _impl_.userverifyinfo_ != nullptr;
+}
+inline bool GetAllDailyStatisticsRequest::has_userverifyinfo() const {
+  return _internal_has_userverifyinfo();
+}
+inline const ::proto::UserVerifyInfoV1& GetAllDailyStatisticsRequest::_internal_userverifyinfo() const {
+  const ::proto::UserVerifyInfoV1* p = _impl_.userverifyinfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::UserVerifyInfoV1&>(
+      ::proto::_UserVerifyInfoV1_default_instance_);
+}
+inline const ::proto::UserVerifyInfoV1& GetAllDailyStatisticsRequest::userverifyinfo() const {
+  // @@protoc_insertion_point(field_get:proto.GetAllDailyStatisticsRequest.UserVerifyInfo)
+  return _internal_userverifyinfo();
+}
+inline void GetAllDailyStatisticsRequest::unsafe_arena_set_allocated_userverifyinfo(
+    ::proto::UserVerifyInfoV1* userverifyinfo) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userverifyinfo_);
+  }
+  _impl_.userverifyinfo_ = userverifyinfo;
+  if (userverifyinfo) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.GetAllDailyStatisticsRequest.UserVerifyInfo)
+}
+inline ::proto::UserVerifyInfoV1* GetAllDailyStatisticsRequest::release_userverifyinfo() {
+  
+  ::proto::UserVerifyInfoV1* temp = _impl_.userverifyinfo_;
+  _impl_.userverifyinfo_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::proto::UserVerifyInfoV1* GetAllDailyStatisticsRequest::unsafe_arena_release_userverifyinfo() {
+  // @@protoc_insertion_point(field_release:proto.GetAllDailyStatisticsRequest.UserVerifyInfo)
+  
+  ::proto::UserVerifyInfoV1* temp = _impl_.userverifyinfo_;
+  _impl_.userverifyinfo_ = nullptr;
+  return temp;
+}
+inline ::proto::UserVerifyInfoV1* GetAllDailyStatisticsRequest::_internal_mutable_userverifyinfo() {
+  
+  if (_impl_.userverifyinfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::UserVerifyInfoV1>(GetArenaForAllocation());
+    _impl_.userverifyinfo_ = p;
+  }
+  return _impl_.userverifyinfo_;
+}
+inline ::proto::UserVerifyInfoV1* GetAllDailyStatisticsRequest::mutable_userverifyinfo() {
+  ::proto::UserVerifyInfoV1* _msg = _internal_mutable_userverifyinfo();
+  // @@protoc_insertion_point(field_mutable:proto.GetAllDailyStatisticsRequest.UserVerifyInfo)
+  return _msg;
+}
+inline void GetAllDailyStatisticsRequest::set_allocated_userverifyinfo(::proto::UserVerifyInfoV1* userverifyinfo) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userverifyinfo_);
+  }
+  if (userverifyinfo) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(userverifyinfo));
+    if (message_arena != submessage_arena) {
+      userverifyinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, userverifyinfo, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  _impl_.userverifyinfo_ = userverifyinfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.GetAllDailyStatisticsRequest.UserVerifyInfo)
 }
 
 #ifdef __GNUC__

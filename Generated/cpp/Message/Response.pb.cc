@@ -23,9 +23,8 @@ namespace _pbi = _pb::internal;
 namespace proto {
 PROTOBUF_CONSTEXPR CreateUserResponse::CreateUserResponse(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.message_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.metainfo_)*/nullptr
   , /*decltype(_impl_.userinfo_)*/nullptr
-  , /*decltype(_impl_.status_)*/false
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct CreateUserResponseDefaultTypeInternal {
   PROTOBUF_CONSTEXPR CreateUserResponseDefaultTypeInternal()
@@ -38,8 +37,7 @@ struct CreateUserResponseDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CreateUserResponseDefaultTypeInternal _CreateUserResponse_default_instance_;
 PROTOBUF_CONSTEXPR DeleteUserResponse::DeleteUserResponse(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.message_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.status_)*/false
+    /*decltype(_impl_.metainfo_)*/nullptr
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct DeleteUserResponseDefaultTypeInternal {
   PROTOBUF_CONSTEXPR DeleteUserResponseDefaultTypeInternal()
@@ -52,9 +50,8 @@ struct DeleteUserResponseDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 DeleteUserResponseDefaultTypeInternal _DeleteUserResponse_default_instance_;
 PROTOBUF_CONSTEXPR UpdateUserResponse::UpdateUserResponse(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.message_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.metainfo_)*/nullptr
   , /*decltype(_impl_.userinfo_)*/nullptr
-  , /*decltype(_impl_.status_)*/false
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct UpdateUserResponseDefaultTypeInternal {
   PROTOBUF_CONSTEXPR UpdateUserResponseDefaultTypeInternal()
@@ -67,9 +64,8 @@ struct UpdateUserResponseDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 UpdateUserResponseDefaultTypeInternal _UpdateUserResponse_default_instance_;
 PROTOBUF_CONSTEXPR GetUserResponse::GetUserResponse(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.message_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.metainfo_)*/nullptr
   , /*decltype(_impl_.userinfo_)*/nullptr
-  , /*decltype(_impl_.status_)*/false
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct GetUserResponseDefaultTypeInternal {
   PROTOBUF_CONSTEXPR GetUserResponseDefaultTypeInternal()
@@ -83,8 +79,7 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORIT
 PROTOBUF_CONSTEXPR GetAllUserResponse::GetAllUserResponse(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_.userinfo_)*/{}
-  , /*decltype(_impl_.message_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.status_)*/false
+  , /*decltype(_impl_.metainfo_)*/nullptr
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct GetAllUserResponseDefaultTypeInternal {
   PROTOBUF_CONSTEXPR GetAllUserResponseDefaultTypeInternal()
@@ -97,10 +92,9 @@ struct GetAllUserResponseDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetAllUserResponseDefaultTypeInternal _GetAllUserResponse_default_instance_;
 PROTOBUF_CONSTEXPR UserLoginResponse::UserLoginResponse(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.message_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.metainfo_)*/nullptr
   , /*decltype(_impl_.userinfo_)*/nullptr
   , /*decltype(_impl_.userverifyinfo_)*/nullptr
-  , /*decltype(_impl_.status_)*/false
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct UserLoginResponseDefaultTypeInternal {
   PROTOBUF_CONSTEXPR UserLoginResponseDefaultTypeInternal()
@@ -113,8 +107,7 @@ struct UserLoginResponseDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 UserLoginResponseDefaultTypeInternal _UserLoginResponse_default_instance_;
 PROTOBUF_CONSTEXPR UserLogoutResponse::UserLogoutResponse(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.message_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.status_)*/false
+    /*decltype(_impl_.metainfo_)*/nullptr
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct UserLogoutResponseDefaultTypeInternal {
   PROTOBUF_CONSTEXPR UserLogoutResponseDefaultTypeInternal()
@@ -127,9 +120,8 @@ struct UserLogoutResponseDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 UserLogoutResponseDefaultTypeInternal _UserLogoutResponse_default_instance_;
 PROTOBUF_CONSTEXPR UserOnlineHeartBeatResponse::UserOnlineHeartBeatResponse(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.message_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.metainfo_)*/nullptr
   , /*decltype(_impl_.userverifyinfo_)*/nullptr
-  , /*decltype(_impl_.status_)*/false
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct UserOnlineHeartBeatResponseDefaultTypeInternal {
   PROTOBUF_CONSTEXPR UserOnlineHeartBeatResponseDefaultTypeInternal()
@@ -142,9 +134,8 @@ struct UserOnlineHeartBeatResponseDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 UserOnlineHeartBeatResponseDefaultTypeInternal _UserOnlineHeartBeatResponse_default_instance_;
 PROTOBUF_CONSTEXPR GetUserPermissionGroupResponse::GetUserPermissionGroupResponse(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.message_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.metainfo_)*/nullptr
   , /*decltype(_impl_.permissiongroup_)*/nullptr
-  , /*decltype(_impl_.status_)*/false
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct GetUserPermissionGroupResponseDefaultTypeInternal {
   PROTOBUF_CONSTEXPR GetUserPermissionGroupResponseDefaultTypeInternal()
@@ -157,9 +148,8 @@ struct GetUserPermissionGroupResponseDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetUserPermissionGroupResponseDefaultTypeInternal _GetUserPermissionGroupResponse_default_instance_;
 PROTOBUF_CONSTEXPR GetPermissionGroupResponse::GetPermissionGroupResponse(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.message_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.metainfo_)*/nullptr
   , /*decltype(_impl_.permissiongroup_)*/nullptr
-  , /*decltype(_impl_.status_)*/false
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct GetPermissionGroupResponseDefaultTypeInternal {
   PROTOBUF_CONSTEXPR GetPermissionGroupResponseDefaultTypeInternal()
@@ -173,8 +163,7 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORIT
 PROTOBUF_CONSTEXPR GetAllPermissionGroupResponse::GetAllPermissionGroupResponse(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_.permissiongrouplist_)*/{}
-  , /*decltype(_impl_.message_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.status_)*/false
+  , /*decltype(_impl_.metainfo_)*/nullptr
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct GetAllPermissionGroupResponseDefaultTypeInternal {
   PROTOBUF_CONSTEXPR GetAllPermissionGroupResponseDefaultTypeInternal()
@@ -187,8 +176,7 @@ struct GetAllPermissionGroupResponseDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetAllPermissionGroupResponseDefaultTypeInternal _GetAllPermissionGroupResponse_default_instance_;
 PROTOBUF_CONSTEXPR ChangeUserPermissionGroupResponse::ChangeUserPermissionGroupResponse(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.message_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.status_)*/false
+    /*decltype(_impl_.metainfo_)*/nullptr
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct ChangeUserPermissionGroupResponseDefaultTypeInternal {
   PROTOBUF_CONSTEXPR ChangeUserPermissionGroupResponseDefaultTypeInternal()
@@ -201,9 +189,8 @@ struct ChangeUserPermissionGroupResponseDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ChangeUserPermissionGroupResponseDefaultTypeInternal _ChangeUserPermissionGroupResponse_default_instance_;
 PROTOBUF_CONSTEXPR CreateProjectResponse::CreateProjectResponse(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.message_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.metainfo_)*/nullptr
   , /*decltype(_impl_.projectinfo_)*/nullptr
-  , /*decltype(_impl_.status_)*/false
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct CreateProjectResponseDefaultTypeInternal {
   PROTOBUF_CONSTEXPR CreateProjectResponseDefaultTypeInternal()
@@ -216,9 +203,8 @@ struct CreateProjectResponseDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CreateProjectResponseDefaultTypeInternal _CreateProjectResponse_default_instance_;
 PROTOBUF_CONSTEXPR DeleteProjectResponse::DeleteProjectResponse(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.message_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.metainfo_)*/nullptr
   , /*decltype(_impl_.projectinfo_)*/nullptr
-  , /*decltype(_impl_.status_)*/false
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct DeleteProjectResponseDefaultTypeInternal {
   PROTOBUF_CONSTEXPR DeleteProjectResponseDefaultTypeInternal()
@@ -231,9 +217,8 @@ struct DeleteProjectResponseDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 DeleteProjectResponseDefaultTypeInternal _DeleteProjectResponse_default_instance_;
 PROTOBUF_CONSTEXPR UpdateProjectResponse::UpdateProjectResponse(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.message_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.metainfo_)*/nullptr
   , /*decltype(_impl_.projectinfo_)*/nullptr
-  , /*decltype(_impl_.status_)*/false
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct UpdateProjectResponseDefaultTypeInternal {
   PROTOBUF_CONSTEXPR UpdateProjectResponseDefaultTypeInternal()
@@ -246,9 +231,8 @@ struct UpdateProjectResponseDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 UpdateProjectResponseDefaultTypeInternal _UpdateProjectResponse_default_instance_;
 PROTOBUF_CONSTEXPR GetProjectResponse::GetProjectResponse(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.message_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.metainfo_)*/nullptr
   , /*decltype(_impl_.projectinfo_)*/nullptr
-  , /*decltype(_impl_.status_)*/false
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct GetProjectResponseDefaultTypeInternal {
   PROTOBUF_CONSTEXPR GetProjectResponseDefaultTypeInternal()
@@ -262,8 +246,7 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORIT
 PROTOBUF_CONSTEXPR GetAllProjectResponse::GetAllProjectResponse(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_.projectinfo_)*/{}
-  , /*decltype(_impl_.message_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.status_)*/false
+  , /*decltype(_impl_.metainfo_)*/nullptr
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct GetAllProjectResponseDefaultTypeInternal {
   PROTOBUF_CONSTEXPR GetAllProjectResponseDefaultTypeInternal()
@@ -276,9 +259,8 @@ struct GetAllProjectResponseDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetAllProjectResponseDefaultTypeInternal _GetAllProjectResponse_default_instance_;
 PROTOBUF_CONSTEXPR CreateSwcResponse::CreateSwcResponse(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.message_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.metainfo_)*/nullptr
   , /*decltype(_impl_.swcinfo_)*/nullptr
-  , /*decltype(_impl_.status_)*/false
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct CreateSwcResponseDefaultTypeInternal {
   PROTOBUF_CONSTEXPR CreateSwcResponseDefaultTypeInternal()
@@ -291,9 +273,8 @@ struct CreateSwcResponseDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CreateSwcResponseDefaultTypeInternal _CreateSwcResponse_default_instance_;
 PROTOBUF_CONSTEXPR DeleteSwcResponse::DeleteSwcResponse(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.message_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.metainfo_)*/nullptr
   , /*decltype(_impl_.swcinfo_)*/nullptr
-  , /*decltype(_impl_.status_)*/false
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct DeleteSwcResponseDefaultTypeInternal {
   PROTOBUF_CONSTEXPR DeleteSwcResponseDefaultTypeInternal()
@@ -306,9 +287,8 @@ struct DeleteSwcResponseDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 DeleteSwcResponseDefaultTypeInternal _DeleteSwcResponse_default_instance_;
 PROTOBUF_CONSTEXPR UpdateSwcResponse::UpdateSwcResponse(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.message_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.metainfo_)*/nullptr
   , /*decltype(_impl_.swcinfo_)*/nullptr
-  , /*decltype(_impl_.status_)*/false
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct UpdateSwcResponseDefaultTypeInternal {
   PROTOBUF_CONSTEXPR UpdateSwcResponseDefaultTypeInternal()
@@ -321,9 +301,8 @@ struct UpdateSwcResponseDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 UpdateSwcResponseDefaultTypeInternal _UpdateSwcResponse_default_instance_;
 PROTOBUF_CONSTEXPR GetSwcMetaInfoResponse::GetSwcMetaInfoResponse(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.message_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.metainfo_)*/nullptr
   , /*decltype(_impl_.swcinfo_)*/nullptr
-  , /*decltype(_impl_.status_)*/false
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct GetSwcMetaInfoResponseDefaultTypeInternal {
   PROTOBUF_CONSTEXPR GetSwcMetaInfoResponseDefaultTypeInternal()
@@ -337,8 +316,7 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORIT
 PROTOBUF_CONSTEXPR GetAllSwcMetaInfoResponse::GetAllSwcMetaInfoResponse(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_.swcinfo_)*/{}
-  , /*decltype(_impl_.message_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.status_)*/false
+  , /*decltype(_impl_.metainfo_)*/nullptr
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct GetAllSwcMetaInfoResponseDefaultTypeInternal {
   PROTOBUF_CONSTEXPR GetAllSwcMetaInfoResponseDefaultTypeInternal()
@@ -351,8 +329,7 @@ struct GetAllSwcMetaInfoResponseDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetAllSwcMetaInfoResponseDefaultTypeInternal _GetAllSwcMetaInfoResponse_default_instance_;
 PROTOBUF_CONSTEXPR CreateSwcSnapshotResponse::CreateSwcSnapshotResponse(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.message_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.status_)*/false
+    /*decltype(_impl_.metainfo_)*/nullptr
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct CreateSwcSnapshotResponseDefaultTypeInternal {
   PROTOBUF_CONSTEXPR CreateSwcSnapshotResponseDefaultTypeInternal()
@@ -365,8 +342,7 @@ struct CreateSwcSnapshotResponseDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CreateSwcSnapshotResponseDefaultTypeInternal _CreateSwcSnapshotResponse_default_instance_;
 PROTOBUF_CONSTEXPR DeleteSwcSnapshotResponse::DeleteSwcSnapshotResponse(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.message_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.status_)*/false
+    /*decltype(_impl_.metainfo_)*/nullptr
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct DeleteSwcSnapshotResponseDefaultTypeInternal {
   PROTOBUF_CONSTEXPR DeleteSwcSnapshotResponseDefaultTypeInternal()
@@ -380,8 +356,7 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORIT
 PROTOBUF_CONSTEXPR GetAllSnapshotMetaInfoResponse::GetAllSnapshotMetaInfoResponse(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_.swcsnapshotlist_)*/{}
-  , /*decltype(_impl_.message_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.status_)*/false
+  , /*decltype(_impl_.metainfo_)*/nullptr
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct GetAllSnapshotMetaInfoResponseDefaultTypeInternal {
   PROTOBUF_CONSTEXPR GetAllSnapshotMetaInfoResponseDefaultTypeInternal()
@@ -394,9 +369,8 @@ struct GetAllSnapshotMetaInfoResponseDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetAllSnapshotMetaInfoResponseDefaultTypeInternal _GetAllSnapshotMetaInfoResponse_default_instance_;
 PROTOBUF_CONSTEXPR GetSnapshotResponse::GetSnapshotResponse(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.message_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.metainfo_)*/nullptr
   , /*decltype(_impl_.swcnodedata_)*/nullptr
-  , /*decltype(_impl_.status_)*/false
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct GetSnapshotResponseDefaultTypeInternal {
   PROTOBUF_CONSTEXPR GetSnapshotResponseDefaultTypeInternal()
@@ -410,8 +384,7 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORIT
 PROTOBUF_CONSTEXPR GetAllIncrementOperationMetaInfoResponse::GetAllIncrementOperationMetaInfoResponse(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_.swcincrementoperationlist_)*/{}
-  , /*decltype(_impl_.message_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.status_)*/false
+  , /*decltype(_impl_.metainfo_)*/nullptr
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct GetAllIncrementOperationMetaInfoResponseDefaultTypeInternal {
   PROTOBUF_CONSTEXPR GetAllIncrementOperationMetaInfoResponseDefaultTypeInternal()
@@ -425,8 +398,7 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORIT
 PROTOBUF_CONSTEXPR GetIncrementOperationResponse::GetIncrementOperationResponse(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_.swcincrementoperationlist_)*/{}
-  , /*decltype(_impl_.message_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.status_)*/false
+  , /*decltype(_impl_.metainfo_)*/nullptr
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct GetIncrementOperationResponseDefaultTypeInternal {
   PROTOBUF_CONSTEXPR GetIncrementOperationResponseDefaultTypeInternal()
@@ -439,8 +411,7 @@ struct GetIncrementOperationResponseDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetIncrementOperationResponseDefaultTypeInternal _GetIncrementOperationResponse_default_instance_;
 PROTOBUF_CONSTEXPR CreateSwcNodeDataResponse::CreateSwcNodeDataResponse(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.message_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.status_)*/false
+    /*decltype(_impl_.metainfo_)*/nullptr
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct CreateSwcNodeDataResponseDefaultTypeInternal {
   PROTOBUF_CONSTEXPR CreateSwcNodeDataResponseDefaultTypeInternal()
@@ -453,8 +424,7 @@ struct CreateSwcNodeDataResponseDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CreateSwcNodeDataResponseDefaultTypeInternal _CreateSwcNodeDataResponse_default_instance_;
 PROTOBUF_CONSTEXPR DeleteSwcNodeDataResponse::DeleteSwcNodeDataResponse(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.message_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.status_)*/false
+    /*decltype(_impl_.metainfo_)*/nullptr
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct DeleteSwcNodeDataResponseDefaultTypeInternal {
   PROTOBUF_CONSTEXPR DeleteSwcNodeDataResponseDefaultTypeInternal()
@@ -467,8 +437,7 @@ struct DeleteSwcNodeDataResponseDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 DeleteSwcNodeDataResponseDefaultTypeInternal _DeleteSwcNodeDataResponse_default_instance_;
 PROTOBUF_CONSTEXPR UpdateSwcNodeDataResponse::UpdateSwcNodeDataResponse(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.message_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.status_)*/false
+    /*decltype(_impl_.metainfo_)*/nullptr
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct UpdateSwcNodeDataResponseDefaultTypeInternal {
   PROTOBUF_CONSTEXPR UpdateSwcNodeDataResponseDefaultTypeInternal()
@@ -481,9 +450,8 @@ struct UpdateSwcNodeDataResponseDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 UpdateSwcNodeDataResponseDefaultTypeInternal _UpdateSwcNodeDataResponse_default_instance_;
 PROTOBUF_CONSTEXPR GetSwcNodeDataResponse::GetSwcNodeDataResponse(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.message_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.metainfo_)*/nullptr
   , /*decltype(_impl_.swcnodedata_)*/nullptr
-  , /*decltype(_impl_.status_)*/false
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct GetSwcNodeDataResponseDefaultTypeInternal {
   PROTOBUF_CONSTEXPR GetSwcNodeDataResponseDefaultTypeInternal()
@@ -496,9 +464,8 @@ struct GetSwcNodeDataResponseDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetSwcNodeDataResponseDefaultTypeInternal _GetSwcNodeDataResponse_default_instance_;
 PROTOBUF_CONSTEXPR GetSwcFullNodeDataResponse::GetSwcFullNodeDataResponse(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.message_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.metainfo_)*/nullptr
   , /*decltype(_impl_.swcnodedata_)*/nullptr
-  , /*decltype(_impl_.status_)*/false
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct GetSwcFullNodeDataResponseDefaultTypeInternal {
   PROTOBUF_CONSTEXPR GetSwcFullNodeDataResponseDefaultTypeInternal()
@@ -511,9 +478,8 @@ struct GetSwcFullNodeDataResponseDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetSwcFullNodeDataResponseDefaultTypeInternal _GetSwcFullNodeDataResponse_default_instance_;
 PROTOBUF_CONSTEXPR GetSwcNodeDataListByTimeAndUserResponse::GetSwcNodeDataListByTimeAndUserResponse(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.message_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.metainfo_)*/nullptr
   , /*decltype(_impl_.swcnodedata_)*/nullptr
-  , /*decltype(_impl_.status_)*/false
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct GetSwcNodeDataListByTimeAndUserResponseDefaultTypeInternal {
   PROTOBUF_CONSTEXPR GetSwcNodeDataListByTimeAndUserResponseDefaultTypeInternal()
@@ -526,9 +492,8 @@ struct GetSwcNodeDataListByTimeAndUserResponseDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetSwcNodeDataListByTimeAndUserResponseDefaultTypeInternal _GetSwcNodeDataListByTimeAndUserResponse_default_instance_;
 PROTOBUF_CONSTEXPR BackupFullDatabaseResponse::BackupFullDatabaseResponse(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.message_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.metainfo_)*/nullptr
   , /*decltype(_impl_.delaybackuptime_)*/nullptr
-  , /*decltype(_impl_.status_)*/false
   , /*decltype(_impl_.instantbackup_)*/false
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct BackupFullDatabaseResponseDefaultTypeInternal {
@@ -542,9 +507,8 @@ struct BackupFullDatabaseResponseDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 BackupFullDatabaseResponseDefaultTypeInternal _BackupFullDatabaseResponse_default_instance_;
 PROTOBUF_CONSTEXPR CreateDailyStatisticsResponse::CreateDailyStatisticsResponse(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.message_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.metainfo_)*/nullptr
   , /*decltype(_impl_.dailystatisticsinfo_)*/nullptr
-  , /*decltype(_impl_.status_)*/false
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct CreateDailyStatisticsResponseDefaultTypeInternal {
   PROTOBUF_CONSTEXPR CreateDailyStatisticsResponseDefaultTypeInternal()
@@ -557,9 +521,8 @@ struct CreateDailyStatisticsResponseDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CreateDailyStatisticsResponseDefaultTypeInternal _CreateDailyStatisticsResponse_default_instance_;
 PROTOBUF_CONSTEXPR DeleteDailyStatisticsResponse::DeleteDailyStatisticsResponse(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.message_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.metainfo_)*/nullptr
   , /*decltype(_impl_.dailystatisticsinfo_)*/nullptr
-  , /*decltype(_impl_.status_)*/false
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct DeleteDailyStatisticsResponseDefaultTypeInternal {
   PROTOBUF_CONSTEXPR DeleteDailyStatisticsResponseDefaultTypeInternal()
@@ -572,9 +535,8 @@ struct DeleteDailyStatisticsResponseDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 DeleteDailyStatisticsResponseDefaultTypeInternal _DeleteDailyStatisticsResponse_default_instance_;
 PROTOBUF_CONSTEXPR UpdateDailyStatisticsResponse::UpdateDailyStatisticsResponse(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.message_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.metainfo_)*/nullptr
   , /*decltype(_impl_.dailystatisticsinfo_)*/nullptr
-  , /*decltype(_impl_.status_)*/false
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct UpdateDailyStatisticsResponseDefaultTypeInternal {
   PROTOBUF_CONSTEXPR UpdateDailyStatisticsResponseDefaultTypeInternal()
@@ -587,9 +549,8 @@ struct UpdateDailyStatisticsResponseDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 UpdateDailyStatisticsResponseDefaultTypeInternal _UpdateDailyStatisticsResponse_default_instance_;
 PROTOBUF_CONSTEXPR GetDailyStatisticsResponse::GetDailyStatisticsResponse(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.message_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.metainfo_)*/nullptr
   , /*decltype(_impl_.dailystatisticsinfo_)*/nullptr
-  , /*decltype(_impl_.status_)*/false
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct GetDailyStatisticsResponseDefaultTypeInternal {
   PROTOBUF_CONSTEXPR GetDailyStatisticsResponseDefaultTypeInternal()
@@ -603,8 +564,7 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORIT
 PROTOBUF_CONSTEXPR GetAllDailyStatisticsResponse::GetAllDailyStatisticsResponse(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_.dailystatisticsinfo_)*/{}
-  , /*decltype(_impl_.message_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.status_)*/false
+  , /*decltype(_impl_.metainfo_)*/nullptr
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct GetAllDailyStatisticsResponseDefaultTypeInternal {
   PROTOBUF_CONSTEXPR GetAllDailyStatisticsResponseDefaultTypeInternal()
@@ -627,8 +587,7 @@ const uint32_t TableStruct_Message_2fResponse_2eproto::offsets[] PROTOBUF_SECTIO
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::proto::CreateUserResponse, _impl_.status_),
-  PROTOBUF_FIELD_OFFSET(::proto::CreateUserResponse, _impl_.message_),
+  PROTOBUF_FIELD_OFFSET(::proto::CreateUserResponse, _impl_.metainfo_),
   PROTOBUF_FIELD_OFFSET(::proto::CreateUserResponse, _impl_.userinfo_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::proto::DeleteUserResponse, _internal_metadata_),
@@ -636,16 +595,14 @@ const uint32_t TableStruct_Message_2fResponse_2eproto::offsets[] PROTOBUF_SECTIO
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::proto::DeleteUserResponse, _impl_.status_),
-  PROTOBUF_FIELD_OFFSET(::proto::DeleteUserResponse, _impl_.message_),
+  PROTOBUF_FIELD_OFFSET(::proto::DeleteUserResponse, _impl_.metainfo_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::proto::UpdateUserResponse, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::proto::UpdateUserResponse, _impl_.status_),
-  PROTOBUF_FIELD_OFFSET(::proto::UpdateUserResponse, _impl_.message_),
+  PROTOBUF_FIELD_OFFSET(::proto::UpdateUserResponse, _impl_.metainfo_),
   PROTOBUF_FIELD_OFFSET(::proto::UpdateUserResponse, _impl_.userinfo_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::proto::GetUserResponse, _internal_metadata_),
@@ -653,8 +610,7 @@ const uint32_t TableStruct_Message_2fResponse_2eproto::offsets[] PROTOBUF_SECTIO
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::proto::GetUserResponse, _impl_.status_),
-  PROTOBUF_FIELD_OFFSET(::proto::GetUserResponse, _impl_.message_),
+  PROTOBUF_FIELD_OFFSET(::proto::GetUserResponse, _impl_.metainfo_),
   PROTOBUF_FIELD_OFFSET(::proto::GetUserResponse, _impl_.userinfo_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::proto::GetAllUserResponse, _internal_metadata_),
@@ -662,8 +618,7 @@ const uint32_t TableStruct_Message_2fResponse_2eproto::offsets[] PROTOBUF_SECTIO
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::proto::GetAllUserResponse, _impl_.status_),
-  PROTOBUF_FIELD_OFFSET(::proto::GetAllUserResponse, _impl_.message_),
+  PROTOBUF_FIELD_OFFSET(::proto::GetAllUserResponse, _impl_.metainfo_),
   PROTOBUF_FIELD_OFFSET(::proto::GetAllUserResponse, _impl_.userinfo_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::proto::UserLoginResponse, _internal_metadata_),
@@ -671,8 +626,7 @@ const uint32_t TableStruct_Message_2fResponse_2eproto::offsets[] PROTOBUF_SECTIO
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::proto::UserLoginResponse, _impl_.status_),
-  PROTOBUF_FIELD_OFFSET(::proto::UserLoginResponse, _impl_.message_),
+  PROTOBUF_FIELD_OFFSET(::proto::UserLoginResponse, _impl_.metainfo_),
   PROTOBUF_FIELD_OFFSET(::proto::UserLoginResponse, _impl_.userinfo_),
   PROTOBUF_FIELD_OFFSET(::proto::UserLoginResponse, _impl_.userverifyinfo_),
   ~0u,  // no _has_bits_
@@ -681,16 +635,14 @@ const uint32_t TableStruct_Message_2fResponse_2eproto::offsets[] PROTOBUF_SECTIO
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::proto::UserLogoutResponse, _impl_.status_),
-  PROTOBUF_FIELD_OFFSET(::proto::UserLogoutResponse, _impl_.message_),
+  PROTOBUF_FIELD_OFFSET(::proto::UserLogoutResponse, _impl_.metainfo_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::proto::UserOnlineHeartBeatResponse, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::proto::UserOnlineHeartBeatResponse, _impl_.status_),
-  PROTOBUF_FIELD_OFFSET(::proto::UserOnlineHeartBeatResponse, _impl_.message_),
+  PROTOBUF_FIELD_OFFSET(::proto::UserOnlineHeartBeatResponse, _impl_.metainfo_),
   PROTOBUF_FIELD_OFFSET(::proto::UserOnlineHeartBeatResponse, _impl_.userverifyinfo_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::proto::GetUserPermissionGroupResponse, _internal_metadata_),
@@ -698,8 +650,7 @@ const uint32_t TableStruct_Message_2fResponse_2eproto::offsets[] PROTOBUF_SECTIO
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::proto::GetUserPermissionGroupResponse, _impl_.status_),
-  PROTOBUF_FIELD_OFFSET(::proto::GetUserPermissionGroupResponse, _impl_.message_),
+  PROTOBUF_FIELD_OFFSET(::proto::GetUserPermissionGroupResponse, _impl_.metainfo_),
   PROTOBUF_FIELD_OFFSET(::proto::GetUserPermissionGroupResponse, _impl_.permissiongroup_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::proto::GetPermissionGroupResponse, _internal_metadata_),
@@ -707,8 +658,7 @@ const uint32_t TableStruct_Message_2fResponse_2eproto::offsets[] PROTOBUF_SECTIO
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::proto::GetPermissionGroupResponse, _impl_.status_),
-  PROTOBUF_FIELD_OFFSET(::proto::GetPermissionGroupResponse, _impl_.message_),
+  PROTOBUF_FIELD_OFFSET(::proto::GetPermissionGroupResponse, _impl_.metainfo_),
   PROTOBUF_FIELD_OFFSET(::proto::GetPermissionGroupResponse, _impl_.permissiongroup_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::proto::GetAllPermissionGroupResponse, _internal_metadata_),
@@ -716,8 +666,7 @@ const uint32_t TableStruct_Message_2fResponse_2eproto::offsets[] PROTOBUF_SECTIO
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::proto::GetAllPermissionGroupResponse, _impl_.status_),
-  PROTOBUF_FIELD_OFFSET(::proto::GetAllPermissionGroupResponse, _impl_.message_),
+  PROTOBUF_FIELD_OFFSET(::proto::GetAllPermissionGroupResponse, _impl_.metainfo_),
   PROTOBUF_FIELD_OFFSET(::proto::GetAllPermissionGroupResponse, _impl_.permissiongrouplist_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::proto::ChangeUserPermissionGroupResponse, _internal_metadata_),
@@ -725,16 +674,14 @@ const uint32_t TableStruct_Message_2fResponse_2eproto::offsets[] PROTOBUF_SECTIO
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::proto::ChangeUserPermissionGroupResponse, _impl_.status_),
-  PROTOBUF_FIELD_OFFSET(::proto::ChangeUserPermissionGroupResponse, _impl_.message_),
+  PROTOBUF_FIELD_OFFSET(::proto::ChangeUserPermissionGroupResponse, _impl_.metainfo_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::proto::CreateProjectResponse, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::proto::CreateProjectResponse, _impl_.status_),
-  PROTOBUF_FIELD_OFFSET(::proto::CreateProjectResponse, _impl_.message_),
+  PROTOBUF_FIELD_OFFSET(::proto::CreateProjectResponse, _impl_.metainfo_),
   PROTOBUF_FIELD_OFFSET(::proto::CreateProjectResponse, _impl_.projectinfo_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::proto::DeleteProjectResponse, _internal_metadata_),
@@ -742,8 +689,7 @@ const uint32_t TableStruct_Message_2fResponse_2eproto::offsets[] PROTOBUF_SECTIO
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::proto::DeleteProjectResponse, _impl_.status_),
-  PROTOBUF_FIELD_OFFSET(::proto::DeleteProjectResponse, _impl_.message_),
+  PROTOBUF_FIELD_OFFSET(::proto::DeleteProjectResponse, _impl_.metainfo_),
   PROTOBUF_FIELD_OFFSET(::proto::DeleteProjectResponse, _impl_.projectinfo_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::proto::UpdateProjectResponse, _internal_metadata_),
@@ -751,8 +697,7 @@ const uint32_t TableStruct_Message_2fResponse_2eproto::offsets[] PROTOBUF_SECTIO
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::proto::UpdateProjectResponse, _impl_.status_),
-  PROTOBUF_FIELD_OFFSET(::proto::UpdateProjectResponse, _impl_.message_),
+  PROTOBUF_FIELD_OFFSET(::proto::UpdateProjectResponse, _impl_.metainfo_),
   PROTOBUF_FIELD_OFFSET(::proto::UpdateProjectResponse, _impl_.projectinfo_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::proto::GetProjectResponse, _internal_metadata_),
@@ -760,8 +705,7 @@ const uint32_t TableStruct_Message_2fResponse_2eproto::offsets[] PROTOBUF_SECTIO
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::proto::GetProjectResponse, _impl_.status_),
-  PROTOBUF_FIELD_OFFSET(::proto::GetProjectResponse, _impl_.message_),
+  PROTOBUF_FIELD_OFFSET(::proto::GetProjectResponse, _impl_.metainfo_),
   PROTOBUF_FIELD_OFFSET(::proto::GetProjectResponse, _impl_.projectinfo_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::proto::GetAllProjectResponse, _internal_metadata_),
@@ -769,8 +713,7 @@ const uint32_t TableStruct_Message_2fResponse_2eproto::offsets[] PROTOBUF_SECTIO
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::proto::GetAllProjectResponse, _impl_.status_),
-  PROTOBUF_FIELD_OFFSET(::proto::GetAllProjectResponse, _impl_.message_),
+  PROTOBUF_FIELD_OFFSET(::proto::GetAllProjectResponse, _impl_.metainfo_),
   PROTOBUF_FIELD_OFFSET(::proto::GetAllProjectResponse, _impl_.projectinfo_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::proto::CreateSwcResponse, _internal_metadata_),
@@ -778,8 +721,7 @@ const uint32_t TableStruct_Message_2fResponse_2eproto::offsets[] PROTOBUF_SECTIO
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::proto::CreateSwcResponse, _impl_.status_),
-  PROTOBUF_FIELD_OFFSET(::proto::CreateSwcResponse, _impl_.message_),
+  PROTOBUF_FIELD_OFFSET(::proto::CreateSwcResponse, _impl_.metainfo_),
   PROTOBUF_FIELD_OFFSET(::proto::CreateSwcResponse, _impl_.swcinfo_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::proto::DeleteSwcResponse, _internal_metadata_),
@@ -787,8 +729,7 @@ const uint32_t TableStruct_Message_2fResponse_2eproto::offsets[] PROTOBUF_SECTIO
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::proto::DeleteSwcResponse, _impl_.status_),
-  PROTOBUF_FIELD_OFFSET(::proto::DeleteSwcResponse, _impl_.message_),
+  PROTOBUF_FIELD_OFFSET(::proto::DeleteSwcResponse, _impl_.metainfo_),
   PROTOBUF_FIELD_OFFSET(::proto::DeleteSwcResponse, _impl_.swcinfo_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::proto::UpdateSwcResponse, _internal_metadata_),
@@ -796,8 +737,7 @@ const uint32_t TableStruct_Message_2fResponse_2eproto::offsets[] PROTOBUF_SECTIO
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::proto::UpdateSwcResponse, _impl_.status_),
-  PROTOBUF_FIELD_OFFSET(::proto::UpdateSwcResponse, _impl_.message_),
+  PROTOBUF_FIELD_OFFSET(::proto::UpdateSwcResponse, _impl_.metainfo_),
   PROTOBUF_FIELD_OFFSET(::proto::UpdateSwcResponse, _impl_.swcinfo_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::proto::GetSwcMetaInfoResponse, _internal_metadata_),
@@ -805,8 +745,7 @@ const uint32_t TableStruct_Message_2fResponse_2eproto::offsets[] PROTOBUF_SECTIO
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::proto::GetSwcMetaInfoResponse, _impl_.status_),
-  PROTOBUF_FIELD_OFFSET(::proto::GetSwcMetaInfoResponse, _impl_.message_),
+  PROTOBUF_FIELD_OFFSET(::proto::GetSwcMetaInfoResponse, _impl_.metainfo_),
   PROTOBUF_FIELD_OFFSET(::proto::GetSwcMetaInfoResponse, _impl_.swcinfo_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::proto::GetAllSwcMetaInfoResponse, _internal_metadata_),
@@ -814,8 +753,7 @@ const uint32_t TableStruct_Message_2fResponse_2eproto::offsets[] PROTOBUF_SECTIO
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::proto::GetAllSwcMetaInfoResponse, _impl_.status_),
-  PROTOBUF_FIELD_OFFSET(::proto::GetAllSwcMetaInfoResponse, _impl_.message_),
+  PROTOBUF_FIELD_OFFSET(::proto::GetAllSwcMetaInfoResponse, _impl_.metainfo_),
   PROTOBUF_FIELD_OFFSET(::proto::GetAllSwcMetaInfoResponse, _impl_.swcinfo_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::proto::CreateSwcSnapshotResponse, _internal_metadata_),
@@ -823,24 +761,21 @@ const uint32_t TableStruct_Message_2fResponse_2eproto::offsets[] PROTOBUF_SECTIO
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::proto::CreateSwcSnapshotResponse, _impl_.status_),
-  PROTOBUF_FIELD_OFFSET(::proto::CreateSwcSnapshotResponse, _impl_.message_),
+  PROTOBUF_FIELD_OFFSET(::proto::CreateSwcSnapshotResponse, _impl_.metainfo_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::proto::DeleteSwcSnapshotResponse, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::proto::DeleteSwcSnapshotResponse, _impl_.status_),
-  PROTOBUF_FIELD_OFFSET(::proto::DeleteSwcSnapshotResponse, _impl_.message_),
+  PROTOBUF_FIELD_OFFSET(::proto::DeleteSwcSnapshotResponse, _impl_.metainfo_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::proto::GetAllSnapshotMetaInfoResponse, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::proto::GetAllSnapshotMetaInfoResponse, _impl_.status_),
-  PROTOBUF_FIELD_OFFSET(::proto::GetAllSnapshotMetaInfoResponse, _impl_.message_),
+  PROTOBUF_FIELD_OFFSET(::proto::GetAllSnapshotMetaInfoResponse, _impl_.metainfo_),
   PROTOBUF_FIELD_OFFSET(::proto::GetAllSnapshotMetaInfoResponse, _impl_.swcsnapshotlist_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::proto::GetSnapshotResponse, _internal_metadata_),
@@ -848,8 +783,7 @@ const uint32_t TableStruct_Message_2fResponse_2eproto::offsets[] PROTOBUF_SECTIO
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::proto::GetSnapshotResponse, _impl_.status_),
-  PROTOBUF_FIELD_OFFSET(::proto::GetSnapshotResponse, _impl_.message_),
+  PROTOBUF_FIELD_OFFSET(::proto::GetSnapshotResponse, _impl_.metainfo_),
   PROTOBUF_FIELD_OFFSET(::proto::GetSnapshotResponse, _impl_.swcnodedata_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::proto::GetAllIncrementOperationMetaInfoResponse, _internal_metadata_),
@@ -857,8 +791,7 @@ const uint32_t TableStruct_Message_2fResponse_2eproto::offsets[] PROTOBUF_SECTIO
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::proto::GetAllIncrementOperationMetaInfoResponse, _impl_.status_),
-  PROTOBUF_FIELD_OFFSET(::proto::GetAllIncrementOperationMetaInfoResponse, _impl_.message_),
+  PROTOBUF_FIELD_OFFSET(::proto::GetAllIncrementOperationMetaInfoResponse, _impl_.metainfo_),
   PROTOBUF_FIELD_OFFSET(::proto::GetAllIncrementOperationMetaInfoResponse, _impl_.swcincrementoperationlist_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::proto::GetIncrementOperationResponse, _internal_metadata_),
@@ -866,8 +799,7 @@ const uint32_t TableStruct_Message_2fResponse_2eproto::offsets[] PROTOBUF_SECTIO
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::proto::GetIncrementOperationResponse, _impl_.status_),
-  PROTOBUF_FIELD_OFFSET(::proto::GetIncrementOperationResponse, _impl_.message_),
+  PROTOBUF_FIELD_OFFSET(::proto::GetIncrementOperationResponse, _impl_.metainfo_),
   PROTOBUF_FIELD_OFFSET(::proto::GetIncrementOperationResponse, _impl_.swcincrementoperationlist_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::proto::CreateSwcNodeDataResponse, _internal_metadata_),
@@ -875,32 +807,28 @@ const uint32_t TableStruct_Message_2fResponse_2eproto::offsets[] PROTOBUF_SECTIO
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::proto::CreateSwcNodeDataResponse, _impl_.status_),
-  PROTOBUF_FIELD_OFFSET(::proto::CreateSwcNodeDataResponse, _impl_.message_),
+  PROTOBUF_FIELD_OFFSET(::proto::CreateSwcNodeDataResponse, _impl_.metainfo_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::proto::DeleteSwcNodeDataResponse, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::proto::DeleteSwcNodeDataResponse, _impl_.status_),
-  PROTOBUF_FIELD_OFFSET(::proto::DeleteSwcNodeDataResponse, _impl_.message_),
+  PROTOBUF_FIELD_OFFSET(::proto::DeleteSwcNodeDataResponse, _impl_.metainfo_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::proto::UpdateSwcNodeDataResponse, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::proto::UpdateSwcNodeDataResponse, _impl_.status_),
-  PROTOBUF_FIELD_OFFSET(::proto::UpdateSwcNodeDataResponse, _impl_.message_),
+  PROTOBUF_FIELD_OFFSET(::proto::UpdateSwcNodeDataResponse, _impl_.metainfo_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::proto::GetSwcNodeDataResponse, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::proto::GetSwcNodeDataResponse, _impl_.status_),
-  PROTOBUF_FIELD_OFFSET(::proto::GetSwcNodeDataResponse, _impl_.message_),
+  PROTOBUF_FIELD_OFFSET(::proto::GetSwcNodeDataResponse, _impl_.metainfo_),
   PROTOBUF_FIELD_OFFSET(::proto::GetSwcNodeDataResponse, _impl_.swcnodedata_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::proto::GetSwcFullNodeDataResponse, _internal_metadata_),
@@ -908,8 +836,7 @@ const uint32_t TableStruct_Message_2fResponse_2eproto::offsets[] PROTOBUF_SECTIO
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::proto::GetSwcFullNodeDataResponse, _impl_.status_),
-  PROTOBUF_FIELD_OFFSET(::proto::GetSwcFullNodeDataResponse, _impl_.message_),
+  PROTOBUF_FIELD_OFFSET(::proto::GetSwcFullNodeDataResponse, _impl_.metainfo_),
   PROTOBUF_FIELD_OFFSET(::proto::GetSwcFullNodeDataResponse, _impl_.swcnodedata_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::proto::GetSwcNodeDataListByTimeAndUserResponse, _internal_metadata_),
@@ -917,8 +844,7 @@ const uint32_t TableStruct_Message_2fResponse_2eproto::offsets[] PROTOBUF_SECTIO
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::proto::GetSwcNodeDataListByTimeAndUserResponse, _impl_.status_),
-  PROTOBUF_FIELD_OFFSET(::proto::GetSwcNodeDataListByTimeAndUserResponse, _impl_.message_),
+  PROTOBUF_FIELD_OFFSET(::proto::GetSwcNodeDataListByTimeAndUserResponse, _impl_.metainfo_),
   PROTOBUF_FIELD_OFFSET(::proto::GetSwcNodeDataListByTimeAndUserResponse, _impl_.swcnodedata_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::proto::BackupFullDatabaseResponse, _internal_metadata_),
@@ -926,8 +852,7 @@ const uint32_t TableStruct_Message_2fResponse_2eproto::offsets[] PROTOBUF_SECTIO
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::proto::BackupFullDatabaseResponse, _impl_.status_),
-  PROTOBUF_FIELD_OFFSET(::proto::BackupFullDatabaseResponse, _impl_.message_),
+  PROTOBUF_FIELD_OFFSET(::proto::BackupFullDatabaseResponse, _impl_.metainfo_),
   PROTOBUF_FIELD_OFFSET(::proto::BackupFullDatabaseResponse, _impl_.instantbackup_),
   PROTOBUF_FIELD_OFFSET(::proto::BackupFullDatabaseResponse, _impl_.delaybackuptime_),
   ~0u,  // no _has_bits_
@@ -936,8 +861,7 @@ const uint32_t TableStruct_Message_2fResponse_2eproto::offsets[] PROTOBUF_SECTIO
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::proto::CreateDailyStatisticsResponse, _impl_.status_),
-  PROTOBUF_FIELD_OFFSET(::proto::CreateDailyStatisticsResponse, _impl_.message_),
+  PROTOBUF_FIELD_OFFSET(::proto::CreateDailyStatisticsResponse, _impl_.metainfo_),
   PROTOBUF_FIELD_OFFSET(::proto::CreateDailyStatisticsResponse, _impl_.dailystatisticsinfo_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::proto::DeleteDailyStatisticsResponse, _internal_metadata_),
@@ -945,8 +869,7 @@ const uint32_t TableStruct_Message_2fResponse_2eproto::offsets[] PROTOBUF_SECTIO
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::proto::DeleteDailyStatisticsResponse, _impl_.status_),
-  PROTOBUF_FIELD_OFFSET(::proto::DeleteDailyStatisticsResponse, _impl_.message_),
+  PROTOBUF_FIELD_OFFSET(::proto::DeleteDailyStatisticsResponse, _impl_.metainfo_),
   PROTOBUF_FIELD_OFFSET(::proto::DeleteDailyStatisticsResponse, _impl_.dailystatisticsinfo_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::proto::UpdateDailyStatisticsResponse, _internal_metadata_),
@@ -954,8 +877,7 @@ const uint32_t TableStruct_Message_2fResponse_2eproto::offsets[] PROTOBUF_SECTIO
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::proto::UpdateDailyStatisticsResponse, _impl_.status_),
-  PROTOBUF_FIELD_OFFSET(::proto::UpdateDailyStatisticsResponse, _impl_.message_),
+  PROTOBUF_FIELD_OFFSET(::proto::UpdateDailyStatisticsResponse, _impl_.metainfo_),
   PROTOBUF_FIELD_OFFSET(::proto::UpdateDailyStatisticsResponse, _impl_.dailystatisticsinfo_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::proto::GetDailyStatisticsResponse, _internal_metadata_),
@@ -963,8 +885,7 @@ const uint32_t TableStruct_Message_2fResponse_2eproto::offsets[] PROTOBUF_SECTIO
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::proto::GetDailyStatisticsResponse, _impl_.status_),
-  PROTOBUF_FIELD_OFFSET(::proto::GetDailyStatisticsResponse, _impl_.message_),
+  PROTOBUF_FIELD_OFFSET(::proto::GetDailyStatisticsResponse, _impl_.metainfo_),
   PROTOBUF_FIELD_OFFSET(::proto::GetDailyStatisticsResponse, _impl_.dailystatisticsinfo_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::proto::GetAllDailyStatisticsResponse, _internal_metadata_),
@@ -972,51 +893,50 @@ const uint32_t TableStruct_Message_2fResponse_2eproto::offsets[] PROTOBUF_SECTIO
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::proto::GetAllDailyStatisticsResponse, _impl_.status_),
-  PROTOBUF_FIELD_OFFSET(::proto::GetAllDailyStatisticsResponse, _impl_.message_),
+  PROTOBUF_FIELD_OFFSET(::proto::GetAllDailyStatisticsResponse, _impl_.metainfo_),
   PROTOBUF_FIELD_OFFSET(::proto::GetAllDailyStatisticsResponse, _impl_.dailystatisticsinfo_),
 };
 static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, -1, sizeof(::proto::CreateUserResponse)},
-  { 9, -1, -1, sizeof(::proto::DeleteUserResponse)},
-  { 17, -1, -1, sizeof(::proto::UpdateUserResponse)},
-  { 26, -1, -1, sizeof(::proto::GetUserResponse)},
-  { 35, -1, -1, sizeof(::proto::GetAllUserResponse)},
-  { 44, -1, -1, sizeof(::proto::UserLoginResponse)},
-  { 54, -1, -1, sizeof(::proto::UserLogoutResponse)},
-  { 62, -1, -1, sizeof(::proto::UserOnlineHeartBeatResponse)},
-  { 71, -1, -1, sizeof(::proto::GetUserPermissionGroupResponse)},
-  { 80, -1, -1, sizeof(::proto::GetPermissionGroupResponse)},
-  { 89, -1, -1, sizeof(::proto::GetAllPermissionGroupResponse)},
-  { 98, -1, -1, sizeof(::proto::ChangeUserPermissionGroupResponse)},
-  { 106, -1, -1, sizeof(::proto::CreateProjectResponse)},
-  { 115, -1, -1, sizeof(::proto::DeleteProjectResponse)},
-  { 124, -1, -1, sizeof(::proto::UpdateProjectResponse)},
-  { 133, -1, -1, sizeof(::proto::GetProjectResponse)},
-  { 142, -1, -1, sizeof(::proto::GetAllProjectResponse)},
-  { 151, -1, -1, sizeof(::proto::CreateSwcResponse)},
-  { 160, -1, -1, sizeof(::proto::DeleteSwcResponse)},
-  { 169, -1, -1, sizeof(::proto::UpdateSwcResponse)},
-  { 178, -1, -1, sizeof(::proto::GetSwcMetaInfoResponse)},
-  { 187, -1, -1, sizeof(::proto::GetAllSwcMetaInfoResponse)},
-  { 196, -1, -1, sizeof(::proto::CreateSwcSnapshotResponse)},
-  { 204, -1, -1, sizeof(::proto::DeleteSwcSnapshotResponse)},
-  { 212, -1, -1, sizeof(::proto::GetAllSnapshotMetaInfoResponse)},
-  { 221, -1, -1, sizeof(::proto::GetSnapshotResponse)},
-  { 230, -1, -1, sizeof(::proto::GetAllIncrementOperationMetaInfoResponse)},
-  { 239, -1, -1, sizeof(::proto::GetIncrementOperationResponse)},
-  { 248, -1, -1, sizeof(::proto::CreateSwcNodeDataResponse)},
-  { 256, -1, -1, sizeof(::proto::DeleteSwcNodeDataResponse)},
-  { 264, -1, -1, sizeof(::proto::UpdateSwcNodeDataResponse)},
-  { 272, -1, -1, sizeof(::proto::GetSwcNodeDataResponse)},
-  { 281, -1, -1, sizeof(::proto::GetSwcFullNodeDataResponse)},
-  { 290, -1, -1, sizeof(::proto::GetSwcNodeDataListByTimeAndUserResponse)},
-  { 299, -1, -1, sizeof(::proto::BackupFullDatabaseResponse)},
-  { 309, -1, -1, sizeof(::proto::CreateDailyStatisticsResponse)},
-  { 318, -1, -1, sizeof(::proto::DeleteDailyStatisticsResponse)},
-  { 327, -1, -1, sizeof(::proto::UpdateDailyStatisticsResponse)},
-  { 336, -1, -1, sizeof(::proto::GetDailyStatisticsResponse)},
-  { 345, -1, -1, sizeof(::proto::GetAllDailyStatisticsResponse)},
+  { 8, -1, -1, sizeof(::proto::DeleteUserResponse)},
+  { 15, -1, -1, sizeof(::proto::UpdateUserResponse)},
+  { 23, -1, -1, sizeof(::proto::GetUserResponse)},
+  { 31, -1, -1, sizeof(::proto::GetAllUserResponse)},
+  { 39, -1, -1, sizeof(::proto::UserLoginResponse)},
+  { 48, -1, -1, sizeof(::proto::UserLogoutResponse)},
+  { 55, -1, -1, sizeof(::proto::UserOnlineHeartBeatResponse)},
+  { 63, -1, -1, sizeof(::proto::GetUserPermissionGroupResponse)},
+  { 71, -1, -1, sizeof(::proto::GetPermissionGroupResponse)},
+  { 79, -1, -1, sizeof(::proto::GetAllPermissionGroupResponse)},
+  { 87, -1, -1, sizeof(::proto::ChangeUserPermissionGroupResponse)},
+  { 94, -1, -1, sizeof(::proto::CreateProjectResponse)},
+  { 102, -1, -1, sizeof(::proto::DeleteProjectResponse)},
+  { 110, -1, -1, sizeof(::proto::UpdateProjectResponse)},
+  { 118, -1, -1, sizeof(::proto::GetProjectResponse)},
+  { 126, -1, -1, sizeof(::proto::GetAllProjectResponse)},
+  { 134, -1, -1, sizeof(::proto::CreateSwcResponse)},
+  { 142, -1, -1, sizeof(::proto::DeleteSwcResponse)},
+  { 150, -1, -1, sizeof(::proto::UpdateSwcResponse)},
+  { 158, -1, -1, sizeof(::proto::GetSwcMetaInfoResponse)},
+  { 166, -1, -1, sizeof(::proto::GetAllSwcMetaInfoResponse)},
+  { 174, -1, -1, sizeof(::proto::CreateSwcSnapshotResponse)},
+  { 181, -1, -1, sizeof(::proto::DeleteSwcSnapshotResponse)},
+  { 188, -1, -1, sizeof(::proto::GetAllSnapshotMetaInfoResponse)},
+  { 196, -1, -1, sizeof(::proto::GetSnapshotResponse)},
+  { 204, -1, -1, sizeof(::proto::GetAllIncrementOperationMetaInfoResponse)},
+  { 212, -1, -1, sizeof(::proto::GetIncrementOperationResponse)},
+  { 220, -1, -1, sizeof(::proto::CreateSwcNodeDataResponse)},
+  { 227, -1, -1, sizeof(::proto::DeleteSwcNodeDataResponse)},
+  { 234, -1, -1, sizeof(::proto::UpdateSwcNodeDataResponse)},
+  { 241, -1, -1, sizeof(::proto::GetSwcNodeDataResponse)},
+  { 249, -1, -1, sizeof(::proto::GetSwcFullNodeDataResponse)},
+  { 257, -1, -1, sizeof(::proto::GetSwcNodeDataListByTimeAndUserResponse)},
+  { 265, -1, -1, sizeof(::proto::BackupFullDatabaseResponse)},
+  { 274, -1, -1, sizeof(::proto::CreateDailyStatisticsResponse)},
+  { 282, -1, -1, sizeof(::proto::DeleteDailyStatisticsResponse)},
+  { 290, -1, -1, sizeof(::proto::UpdateDailyStatisticsResponse)},
+  { 298, -1, -1, sizeof(::proto::GetDailyStatisticsResponse)},
+  { 306, -1, -1, sizeof(::proto::GetAllDailyStatisticsResponse)},
 };
 
 static const ::_pb::Message* const file_default_instances[] = {
@@ -1065,111 +985,123 @@ static const ::_pb::Message* const file_default_instances[] = {
 const char descriptor_table_protodef_Message_2fResponse_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
   "\n\026Message/Response.proto\022\005proto\032\037google/"
   "protobuf/timestamp.proto\032\025Message/Messag"
-  "e.proto\"^\n\022CreateUserResponse\022\016\n\006status\030"
-  "\001 \001(\010\022\017\n\007Message\030\002 \001(\t\022\'\n\010UserInfo\030\003 \001(\013"
-  "2\025.proto.UserMetaInfoV1\"5\n\022DeleteUserRes"
-  "ponse\022\016\n\006status\030\001 \001(\010\022\017\n\007Message\030\002 \001(\t\"^"
-  "\n\022UpdateUserResponse\022\016\n\006status\030\001 \001(\010\022\017\n\007"
-  "Message\030\002 \001(\t\022\'\n\010UserInfo\030\003 \001(\0132\025.proto."
-  "UserMetaInfoV1\"[\n\017GetUserResponse\022\016\n\006sta"
-  "tus\030\001 \001(\010\022\017\n\007Message\030\002 \001(\t\022\'\n\010UserInfo\030\003"
-  " \001(\0132\025.proto.UserMetaInfoV1\"^\n\022GetAllUse"
-  "rResponse\022\016\n\006status\030\001 \001(\010\022\017\n\007Message\030\002 \001"
-  "(\t\022\'\n\010UserInfo\030\003 \003(\0132\025.proto.UserMetaInf"
-  "oV1\"\216\001\n\021UserLoginResponse\022\016\n\006status\030\001 \001("
-  "\010\022\017\n\007Message\030\002 \001(\t\022\'\n\010UserInfo\030\003 \001(\0132\025.p"
-  "roto.UserMetaInfoV1\022/\n\016UserVerifyInfo\030\004 "
-  "\001(\0132\027.proto.UserVerifyInfoV1\"5\n\022UserLogo"
-  "utResponse\022\016\n\006status\030\001 \001(\010\022\017\n\007Message\030\002 "
-  "\001(\t\"o\n\033UserOnlineHeartBeatResponse\022\016\n\006st"
-  "atus\030\001 \001(\010\022\017\n\007Message\030\002 \001(\t\022/\n\016UserVerif"
-  "yInfo\030\003 \001(\0132\027.proto.UserVerifyInfoV1\"|\n\036"
-  "GetUserPermissionGroupResponse\022\016\n\006status"
-  "\030\001 \001(\010\022\017\n\007Message\030\002 \001(\t\0229\n\017PermissionGro"
-  "up\030\003 \001(\0132 .proto.PermissionGroupMetaInfo"
-  "V1\"x\n\032GetPermissionGroupResponse\022\016\n\006stat"
-  "us\030\001 \001(\010\022\017\n\007Message\030\002 \001(\t\0229\n\017PermissionG"
-  "roup\030\003 \001(\0132 .proto.PermissionGroupMetaIn"
-  "foV1\"\177\n\035GetAllPermissionGroupResponse\022\016\n"
-  "\006status\030\001 \001(\010\022\017\n\007Message\030\002 \001(\t\022=\n\023Permis"
-  "sionGroupList\030\003 \003(\0132 .proto.PermissionGr"
-  "oupMetaInfoV1\"D\n!ChangeUserPermissionGro"
-  "upResponse\022\016\n\006status\030\001 \001(\010\022\017\n\007Message\030\002 "
-  "\001(\t\"g\n\025CreateProjectResponse\022\016\n\006status\030\001"
-  " \001(\010\022\017\n\007Message\030\002 \001(\t\022-\n\013ProjectInfo\030\003 \001"
-  "(\0132\030.proto.ProjectMetaInfoV1\"g\n\025DeletePr"
-  "ojectResponse\022\016\n\006status\030\001 \001(\010\022\017\n\007Message"
-  "\030\002 \001(\t\022-\n\013ProjectInfo\030\003 \001(\0132\030.proto.Proj"
-  "ectMetaInfoV1\"g\n\025UpdateProjectResponse\022\016"
-  "\n\006status\030\001 \001(\010\022\017\n\007Message\030\002 \001(\t\022-\n\013Proje"
-  "ctInfo\030\003 \001(\0132\030.proto.ProjectMetaInfoV1\"d"
-  "\n\022GetProjectResponse\022\016\n\006status\030\001 \001(\010\022\017\n\007"
-  "Message\030\002 \001(\t\022-\n\013ProjectInfo\030\003 \001(\0132\030.pro"
-  "to.ProjectMetaInfoV1\"g\n\025GetAllProjectRes"
-  "ponse\022\016\n\006status\030\001 \001(\010\022\017\n\007Message\030\002 \001(\t\022-"
-  "\n\013ProjectInfo\030\003 \003(\0132\030.proto.ProjectMetaI"
-  "nfoV1\"[\n\021CreateSwcResponse\022\016\n\006status\030\001 \001"
-  "(\010\022\017\n\007Message\030\002 \001(\t\022%\n\007SwcInfo\030\003 \001(\0132\024.p"
-  "roto.SwcMetaInfoV1\"[\n\021DeleteSwcResponse\022"
-  "\016\n\006status\030\001 \001(\010\022\017\n\007Message\030\002 \001(\t\022%\n\007SwcI"
-  "nfo\030\003 \001(\0132\024.proto.SwcMetaInfoV1\"[\n\021Updat"
-  "eSwcResponse\022\016\n\006status\030\001 \001(\010\022\017\n\007Message\030"
-  "\002 \001(\t\022%\n\007SwcInfo\030\003 \001(\0132\024.proto.SwcMetaIn"
-  "foV1\"`\n\026GetSwcMetaInfoResponse\022\016\n\006status"
-  "\030\001 \001(\010\022\017\n\007Message\030\002 \001(\t\022%\n\007SwcInfo\030\003 \001(\013"
-  "2\024.proto.SwcMetaInfoV1\"c\n\031GetAllSwcMetaI"
-  "nfoResponse\022\016\n\006status\030\001 \001(\010\022\017\n\007Message\030\002"
-  " \001(\t\022%\n\007SwcInfo\030\003 \003(\0132\024.proto.SwcMetaInf"
-  "oV1\"<\n\031CreateSwcSnapshotResponse\022\016\n\006stat"
-  "us\030\001 \001(\010\022\017\n\007Message\030\002 \001(\t\"<\n\031DeleteSwcSn"
-  "apshotResponse\022\016\n\006status\030\001 \001(\010\022\017\n\007Messag"
-  "e\030\002 \001(\t\"x\n\036GetAllSnapshotMetaInfoRespons"
-  "e\022\016\n\006status\030\001 \001(\010\022\017\n\007Message\030\002 \001(\t\0225\n\017Sw"
-  "cSnapshotList\030\003 \003(\0132\034.proto.SwcSnapshotM"
-  "etaInfoV1\"]\n\023GetSnapshotResponse\022\016\n\006stat"
-  "us\030\001 \001(\010\022\017\n\007Message\030\002 \001(\t\022%\n\013SwcNodeData"
-  "\030\003 \001(\0132\020.proto.SwcDataV1\"\226\001\n(GetAllIncre"
-  "mentOperationMetaInfoResponse\022\016\n\006status\030"
-  "\001 \001(\010\022\017\n\007Message\030\002 \001(\t\022I\n\031SwcIncrementOp"
-  "erationList\030\003 \003(\0132&.proto.SwcIncrementOp"
-  "erationMetaInfoV1\"\203\001\n\035GetIncrementOperat"
-  "ionResponse\022\016\n\006status\030\001 \001(\010\022\017\n\007Message\030\002"
-  " \001(\t\022A\n\031SwcIncrementOperationList\030\003 \003(\0132"
-  "\036.proto.SwcIncrementOperationV1\"<\n\031Creat"
-  "eSwcNodeDataResponse\022\016\n\006status\030\001 \001(\010\022\017\n\007"
-  "Message\030\002 \001(\t\"<\n\031DeleteSwcNodeDataRespon"
-  "se\022\016\n\006status\030\001 \001(\010\022\017\n\007Message\030\002 \001(\t\"<\n\031U"
-  "pdateSwcNodeDataResponse\022\016\n\006status\030\001 \001(\010"
-  "\022\017\n\007Message\030\002 \001(\t\"`\n\026GetSwcNodeDataRespo"
-  "nse\022\016\n\006status\030\001 \001(\010\022\017\n\007Message\030\002 \001(\t\022%\n\013"
-  "SwcNodeData\030\003 \001(\0132\020.proto.SwcDataV1\"d\n\032G"
-  "etSwcFullNodeDataResponse\022\016\n\006status\030\001 \001("
-  "\010\022\017\n\007Message\030\002 \001(\t\022%\n\013SwcNodeData\030\003 \001(\0132"
-  "\020.proto.SwcDataV1\"q\n\'GetSwcNodeDataListB"
-  "yTimeAndUserResponse\022\016\n\006status\030\001 \001(\010\022\017\n\007"
-  "Message\030\002 \001(\t\022%\n\013SwcNodeData\030\003 \001(\0132\020.pro"
-  "to.SwcDataV1\"\211\001\n\032BackupFullDatabaseRespo"
-  "nse\022\016\n\006status\030\001 \001(\010\022\017\n\007Message\030\002 \001(\t\022\025\n\r"
-  "InstantBackup\030\003 \001(\010\0223\n\017DelayBackupTime\030\004"
-  " \001(\0132\032.google.protobuf.Timestamp\"\177\n\035Crea"
-  "teDailyStatisticsResponse\022\016\n\006status\030\001 \001("
-  "\010\022\017\n\007Message\030\002 \001(\t\022=\n\023DailyStatisticsInf"
-  "o\030\003 \001(\0132 .proto.DailyStatisticsMetaInfoV"
-  "1\"\177\n\035DeleteDailyStatisticsResponse\022\016\n\006st"
-  "atus\030\001 \001(\010\022\017\n\007Message\030\002 \001(\t\022=\n\023DailyStat"
-  "isticsInfo\030\003 \001(\0132 .proto.DailyStatistics"
-  "MetaInfoV1\"\177\n\035UpdateDailyStatisticsRespo"
-  "nse\022\016\n\006status\030\001 \001(\010\022\017\n\007Message\030\002 \001(\t\022=\n\023"
-  "DailyStatisticsInfo\030\003 \001(\0132 .proto.DailyS"
-  "tatisticsMetaInfoV1\"|\n\032GetDailyStatistic"
-  "sResponse\022\016\n\006status\030\001 \001(\010\022\017\n\007Message\030\002 \001"
-  "(\t\022=\n\023DailyStatisticsInfo\030\003 \001(\0132 .proto."
-  "DailyStatisticsMetaInfoV1\"\177\n\035GetAllDaily"
-  "StatisticsResponse\022\016\n\006status\030\001 \001(\010\022\017\n\007Me"
-  "ssage\030\002 \001(\t\022=\n\023DailyStatisticsInfo\030\003 \003(\013"
-  "2 .proto.DailyStatisticsMetaInfoV1B0Z.DB"
-  "MS/SwcDbmsCommon/Generated/go/proto/resp"
-  "onseP\000b\006proto3"
+  "e.proto\"j\n\022CreateUserResponse\022+\n\010metaInf"
+  "o\030\001 \001(\0132\031.proto.ResponseMetaInfoV1\022\'\n\010Us"
+  "erInfo\030\002 \001(\0132\025.proto.UserMetaInfoV1\"A\n\022D"
+  "eleteUserResponse\022+\n\010metaInfo\030\001 \001(\0132\031.pr"
+  "oto.ResponseMetaInfoV1\"j\n\022UpdateUserResp"
+  "onse\022+\n\010metaInfo\030\001 \001(\0132\031.proto.ResponseM"
+  "etaInfoV1\022\'\n\010UserInfo\030\002 \001(\0132\025.proto.User"
+  "MetaInfoV1\"g\n\017GetUserResponse\022+\n\010metaInf"
+  "o\030\001 \001(\0132\031.proto.ResponseMetaInfoV1\022\'\n\010Us"
+  "erInfo\030\002 \001(\0132\025.proto.UserMetaInfoV1\"j\n\022G"
+  "etAllUserResponse\022+\n\010metaInfo\030\001 \001(\0132\031.pr"
+  "oto.ResponseMetaInfoV1\022\'\n\010UserInfo\030\002 \003(\013"
+  "2\025.proto.UserMetaInfoV1\"\232\001\n\021UserLoginRes"
+  "ponse\022+\n\010metaInfo\030\001 \001(\0132\031.proto.Response"
+  "MetaInfoV1\022\'\n\010UserInfo\030\002 \001(\0132\025.proto.Use"
+  "rMetaInfoV1\022/\n\016UserVerifyInfo\030\003 \001(\0132\027.pr"
+  "oto.UserVerifyInfoV1\"A\n\022UserLogoutRespon"
+  "se\022+\n\010metaInfo\030\001 \001(\0132\031.proto.ResponseMet"
+  "aInfoV1\"{\n\033UserOnlineHeartBeatResponse\022+"
+  "\n\010metaInfo\030\001 \001(\0132\031.proto.ResponseMetaInf"
+  "oV1\022/\n\016UserVerifyInfo\030\002 \001(\0132\027.proto.User"
+  "VerifyInfoV1\"\210\001\n\036GetUserPermissionGroupR"
+  "esponse\022+\n\010metaInfo\030\001 \001(\0132\031.proto.Respon"
+  "seMetaInfoV1\0229\n\017PermissionGroup\030\002 \001(\0132 ."
+  "proto.PermissionGroupMetaInfoV1\"\204\001\n\032GetP"
+  "ermissionGroupResponse\022+\n\010metaInfo\030\001 \001(\013"
+  "2\031.proto.ResponseMetaInfoV1\0229\n\017Permissio"
+  "nGroup\030\002 \001(\0132 .proto.PermissionGroupMeta"
+  "InfoV1\"\213\001\n\035GetAllPermissionGroupResponse"
+  "\022+\n\010metaInfo\030\001 \001(\0132\031.proto.ResponseMetaI"
+  "nfoV1\022=\n\023PermissionGroupList\030\002 \003(\0132 .pro"
+  "to.PermissionGroupMetaInfoV1\"P\n!ChangeUs"
+  "erPermissionGroupResponse\022+\n\010metaInfo\030\001 "
+  "\001(\0132\031.proto.ResponseMetaInfoV1\"s\n\025Create"
+  "ProjectResponse\022+\n\010metaInfo\030\001 \001(\0132\031.prot"
+  "o.ResponseMetaInfoV1\022-\n\013ProjectInfo\030\002 \001("
+  "\0132\030.proto.ProjectMetaInfoV1\"s\n\025DeletePro"
+  "jectResponse\022+\n\010metaInfo\030\001 \001(\0132\031.proto.R"
+  "esponseMetaInfoV1\022-\n\013ProjectInfo\030\002 \001(\0132\030"
+  ".proto.ProjectMetaInfoV1\"s\n\025UpdateProjec"
+  "tResponse\022+\n\010metaInfo\030\001 \001(\0132\031.proto.Resp"
+  "onseMetaInfoV1\022-\n\013ProjectInfo\030\002 \001(\0132\030.pr"
+  "oto.ProjectMetaInfoV1\"p\n\022GetProjectRespo"
+  "nse\022+\n\010metaInfo\030\001 \001(\0132\031.proto.ResponseMe"
+  "taInfoV1\022-\n\013ProjectInfo\030\002 \001(\0132\030.proto.Pr"
+  "ojectMetaInfoV1\"s\n\025GetAllProjectResponse"
+  "\022+\n\010metaInfo\030\001 \001(\0132\031.proto.ResponseMetaI"
+  "nfoV1\022-\n\013ProjectInfo\030\002 \003(\0132\030.proto.Proje"
+  "ctMetaInfoV1\"g\n\021CreateSwcResponse\022+\n\010met"
+  "aInfo\030\001 \001(\0132\031.proto.ResponseMetaInfoV1\022%"
+  "\n\007SwcInfo\030\002 \001(\0132\024.proto.SwcMetaInfoV1\"g\n"
+  "\021DeleteSwcResponse\022+\n\010metaInfo\030\001 \001(\0132\031.p"
+  "roto.ResponseMetaInfoV1\022%\n\007SwcInfo\030\002 \001(\013"
+  "2\024.proto.SwcMetaInfoV1\"g\n\021UpdateSwcRespo"
+  "nse\022+\n\010metaInfo\030\001 \001(\0132\031.proto.ResponseMe"
+  "taInfoV1\022%\n\007SwcInfo\030\002 \001(\0132\024.proto.SwcMet"
+  "aInfoV1\"l\n\026GetSwcMetaInfoResponse\022+\n\010met"
+  "aInfo\030\001 \001(\0132\031.proto.ResponseMetaInfoV1\022%"
+  "\n\007SwcInfo\030\002 \001(\0132\024.proto.SwcMetaInfoV1\"o\n"
+  "\031GetAllSwcMetaInfoResponse\022+\n\010metaInfo\030\001"
+  " \001(\0132\031.proto.ResponseMetaInfoV1\022%\n\007SwcIn"
+  "fo\030\002 \003(\0132\024.proto.SwcMetaInfoV1\"H\n\031Create"
+  "SwcSnapshotResponse\022+\n\010metaInfo\030\001 \001(\0132\031."
+  "proto.ResponseMetaInfoV1\"H\n\031DeleteSwcSna"
+  "pshotResponse\022+\n\010metaInfo\030\001 \001(\0132\031.proto."
+  "ResponseMetaInfoV1\"\204\001\n\036GetAllSnapshotMet"
+  "aInfoResponse\022+\n\010metaInfo\030\001 \001(\0132\031.proto."
+  "ResponseMetaInfoV1\0225\n\017SwcSnapshotList\030\002 "
+  "\003(\0132\034.proto.SwcSnapshotMetaInfoV1\"i\n\023Get"
+  "SnapshotResponse\022+\n\010metaInfo\030\002 \001(\0132\031.pro"
+  "to.ResponseMetaInfoV1\022%\n\013SwcNodeData\030\003 \001"
+  "(\0132\020.proto.SwcDataV1\"\242\001\n(GetAllIncrement"
+  "OperationMetaInfoResponse\022+\n\010metaInfo\030\001 "
+  "\001(\0132\031.proto.ResponseMetaInfoV1\022I\n\031SwcInc"
+  "rementOperationList\030\002 \003(\0132&.proto.SwcInc"
+  "rementOperationMetaInfoV1\"\217\001\n\035GetIncreme"
+  "ntOperationResponse\022+\n\010metaInfo\030\001 \001(\0132\031."
+  "proto.ResponseMetaInfoV1\022A\n\031SwcIncrement"
+  "OperationList\030\002 \003(\0132\036.proto.SwcIncrement"
+  "OperationV1\"H\n\031CreateSwcNodeDataResponse"
+  "\022+\n\010metaInfo\030\001 \001(\0132\031.proto.ResponseMetaI"
+  "nfoV1\"H\n\031DeleteSwcNodeDataResponse\022+\n\010me"
+  "taInfo\030\001 \001(\0132\031.proto.ResponseMetaInfoV1\""
+  "H\n\031UpdateSwcNodeDataResponse\022+\n\010metaInfo"
+  "\030\001 \001(\0132\031.proto.ResponseMetaInfoV1\"l\n\026Get"
+  "SwcNodeDataResponse\022+\n\010metaInfo\030\001 \001(\0132\031."
+  "proto.ResponseMetaInfoV1\022%\n\013SwcNodeData\030"
+  "\002 \001(\0132\020.proto.SwcDataV1\"p\n\032GetSwcFullNod"
+  "eDataResponse\022+\n\010metaInfo\030\001 \001(\0132\031.proto."
+  "ResponseMetaInfoV1\022%\n\013SwcNodeData\030\002 \001(\0132"
+  "\020.proto.SwcDataV1\"}\n\'GetSwcNodeDataListB"
+  "yTimeAndUserResponse\022+\n\010metaInfo\030\001 \001(\0132\031"
+  ".proto.ResponseMetaInfoV1\022%\n\013SwcNodeData"
+  "\030\002 \001(\0132\020.proto.SwcDataV1\"\225\001\n\032BackupFullD"
+  "atabaseResponse\022+\n\010metaInfo\030\001 \001(\0132\031.prot"
+  "o.ResponseMetaInfoV1\022\025\n\rInstantBackup\030\002 "
+  "\001(\010\0223\n\017DelayBackupTime\030\003 \001(\0132\032.google.pr"
+  "otobuf.Timestamp\"\213\001\n\035CreateDailyStatisti"
+  "csResponse\022+\n\010metaInfo\030\001 \001(\0132\031.proto.Res"
+  "ponseMetaInfoV1\022=\n\023DailyStatisticsInfo\030\002"
+  " \001(\0132 .proto.DailyStatisticsMetaInfoV1\"\213"
+  "\001\n\035DeleteDailyStatisticsResponse\022+\n\010meta"
+  "Info\030\001 \001(\0132\031.proto.ResponseMetaInfoV1\022=\n"
+  "\023DailyStatisticsInfo\030\002 \001(\0132 .proto.Daily"
+  "StatisticsMetaInfoV1\"\213\001\n\035UpdateDailyStat"
+  "isticsResponse\022+\n\010metaInfo\030\001 \001(\0132\031.proto"
+  ".ResponseMetaInfoV1\022=\n\023DailyStatisticsIn"
+  "fo\030\002 \001(\0132 .proto.DailyStatisticsMetaInfo"
+  "V1\"\210\001\n\032GetDailyStatisticsResponse\022+\n\010met"
+  "aInfo\030\001 \001(\0132\031.proto.ResponseMetaInfoV1\022="
+  "\n\023DailyStatisticsInfo\030\002 \001(\0132 .proto.Dail"
+  "yStatisticsMetaInfoV1\"\213\001\n\035GetAllDailySta"
+  "tisticsResponse\022+\n\010metaInfo\030\001 \001(\0132\031.prot"
+  "o.ResponseMetaInfoV1\022=\n\023DailyStatisticsI"
+  "nfo\030\002 \003(\0132 .proto.DailyStatisticsMetaInf"
+  "oV1B0Z.DBMS/SwcDbmsCommon/Generated/go/p"
+  "roto/responseP\000b\006proto3"
   ;
 static const ::_pbi::DescriptorTable* const descriptor_table_Message_2fResponse_2eproto_deps[2] = {
   &::descriptor_table_Message_2fMessage_2eproto,
@@ -1177,7 +1109,7 @@ static const ::_pbi::DescriptorTable* const descriptor_table_Message_2fResponse_
 };
 static ::_pbi::once_flag descriptor_table_Message_2fResponse_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_Message_2fResponse_2eproto = {
-    false, false, 4254, descriptor_table_protodef_Message_2fResponse_2eproto,
+    false, false, 4743, descriptor_table_protodef_Message_2fResponse_2eproto,
     "Message/Response.proto",
     &descriptor_table_Message_2fResponse_2eproto_once, descriptor_table_Message_2fResponse_2eproto_deps, 2, 40,
     schemas, file_default_instances, TableStruct_Message_2fResponse_2eproto::offsets,
@@ -1196,12 +1128,23 @@ namespace proto {
 
 class CreateUserResponse::_Internal {
  public:
+  static const ::proto::ResponseMetaInfoV1& metainfo(const CreateUserResponse* msg);
   static const ::proto::UserMetaInfoV1& userinfo(const CreateUserResponse* msg);
 };
 
+const ::proto::ResponseMetaInfoV1&
+CreateUserResponse::_Internal::metainfo(const CreateUserResponse* msg) {
+  return *msg->_impl_.metainfo_;
+}
 const ::proto::UserMetaInfoV1&
 CreateUserResponse::_Internal::userinfo(const CreateUserResponse* msg) {
   return *msg->_impl_.userinfo_;
+}
+void CreateUserResponse::clear_metainfo() {
+  if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
+    delete _impl_.metainfo_;
+  }
+  _impl_.metainfo_ = nullptr;
 }
 void CreateUserResponse::clear_userinfo() {
   if (GetArenaForAllocation() == nullptr && _impl_.userinfo_ != nullptr) {
@@ -1219,24 +1162,17 @@ CreateUserResponse::CreateUserResponse(const CreateUserResponse& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   CreateUserResponse* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.message_){}
+      decltype(_impl_.metainfo_){nullptr}
     , decltype(_impl_.userinfo_){nullptr}
-    , decltype(_impl_.status_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.message_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.message_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_message().empty()) {
-    _this->_impl_.message_.Set(from._internal_message(), 
-      _this->GetArenaForAllocation());
+  if (from._internal_has_metainfo()) {
+    _this->_impl_.metainfo_ = new ::proto::ResponseMetaInfoV1(*from._impl_.metainfo_);
   }
   if (from._internal_has_userinfo()) {
     _this->_impl_.userinfo_ = new ::proto::UserMetaInfoV1(*from._impl_.userinfo_);
   }
-  _this->_impl_.status_ = from._impl_.status_;
   // @@protoc_insertion_point(copy_constructor:proto.CreateUserResponse)
 }
 
@@ -1245,15 +1181,10 @@ inline void CreateUserResponse::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.message_){}
+      decltype(_impl_.metainfo_){nullptr}
     , decltype(_impl_.userinfo_){nullptr}
-    , decltype(_impl_.status_){false}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.message_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.message_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 CreateUserResponse::~CreateUserResponse() {
@@ -1267,7 +1198,7 @@ CreateUserResponse::~CreateUserResponse() {
 
 inline void CreateUserResponse::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.message_.Destroy();
+  if (this != internal_default_instance()) delete _impl_.metainfo_;
   if (this != internal_default_instance()) delete _impl_.userinfo_;
 }
 
@@ -1281,12 +1212,14 @@ void CreateUserResponse::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.message_.ClearToEmpty();
+  if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
+    delete _impl_.metainfo_;
+  }
+  _impl_.metainfo_ = nullptr;
   if (GetArenaForAllocation() == nullptr && _impl_.userinfo_ != nullptr) {
     delete _impl_.userinfo_;
   }
   _impl_.userinfo_ = nullptr;
-  _impl_.status_ = false;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -1296,27 +1229,17 @@ const char* CreateUserResponse::_InternalParse(const char* ptr, ::_pbi::ParseCon
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bool status = 1;
+      // .proto.ResponseMetaInfoV1 metaInfo = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _impl_.status_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_metainfo(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // string Message = 2;
+      // .proto.UserMetaInfoV1 UserInfo = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_message();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "proto.CreateUserResponse.Message"));
-        } else
-          goto handle_unusual;
-        continue;
-      // .proto.UserMetaInfoV1 UserInfo = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_userinfo(), ptr);
           CHK_(ptr);
         } else
@@ -1351,26 +1274,17 @@ uint8_t* CreateUserResponse::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bool status = 1;
-  if (this->_internal_status() != 0) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_status(), target);
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  if (this->_internal_has_metainfo()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::metainfo(this),
+        _Internal::metainfo(this).GetCachedSize(), target, stream);
   }
 
-  // string Message = 2;
-  if (!this->_internal_message().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_message().data(), static_cast<int>(this->_internal_message().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "proto.CreateUserResponse.Message");
-    target = stream->WriteStringMaybeAliased(
-        2, this->_internal_message(), target);
-  }
-
-  // .proto.UserMetaInfoV1 UserInfo = 3;
+  // .proto.UserMetaInfoV1 UserInfo = 2;
   if (this->_internal_has_userinfo()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(3, _Internal::userinfo(this),
+      InternalWriteMessage(2, _Internal::userinfo(this),
         _Internal::userinfo(this).GetCachedSize(), target, stream);
   }
 
@@ -1390,23 +1304,18 @@ size_t CreateUserResponse::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string Message = 2;
-  if (!this->_internal_message().empty()) {
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  if (this->_internal_has_metainfo()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_message());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.metainfo_);
   }
 
-  // .proto.UserMetaInfoV1 UserInfo = 3;
+  // .proto.UserMetaInfoV1 UserInfo = 2;
   if (this->_internal_has_userinfo()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.userinfo_);
-  }
-
-  // bool status = 1;
-  if (this->_internal_status() != 0) {
-    total_size += 1 + 1;
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -1427,15 +1336,13 @@ void CreateUserResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, con
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_message().empty()) {
-    _this->_internal_set_message(from._internal_message());
+  if (from._internal_has_metainfo()) {
+    _this->_internal_mutable_metainfo()->::proto::ResponseMetaInfoV1::MergeFrom(
+        from._internal_metainfo());
   }
   if (from._internal_has_userinfo()) {
     _this->_internal_mutable_userinfo()->::proto::UserMetaInfoV1::MergeFrom(
         from._internal_userinfo());
-  }
-  if (from._internal_status() != 0) {
-    _this->_internal_set_status(from._internal_status());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -1453,19 +1360,13 @@ bool CreateUserResponse::IsInitialized() const {
 
 void CreateUserResponse::InternalSwap(CreateUserResponse* other) {
   using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.message_, lhs_arena,
-      &other->_impl_.message_, rhs_arena
-  );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(CreateUserResponse, _impl_.status_)
-      + sizeof(CreateUserResponse::_impl_.status_)
-      - PROTOBUF_FIELD_OFFSET(CreateUserResponse, _impl_.userinfo_)>(
-          reinterpret_cast<char*>(&_impl_.userinfo_),
-          reinterpret_cast<char*>(&other->_impl_.userinfo_));
+      PROTOBUF_FIELD_OFFSET(CreateUserResponse, _impl_.userinfo_)
+      + sizeof(CreateUserResponse::_impl_.userinfo_)
+      - PROTOBUF_FIELD_OFFSET(CreateUserResponse, _impl_.metainfo_)>(
+          reinterpret_cast<char*>(&_impl_.metainfo_),
+          reinterpret_cast<char*>(&other->_impl_.metainfo_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata CreateUserResponse::GetMetadata() const {
@@ -1478,8 +1379,19 @@ void CreateUserResponse::InternalSwap(CreateUserResponse* other) {
 
 class DeleteUserResponse::_Internal {
  public:
+  static const ::proto::ResponseMetaInfoV1& metainfo(const DeleteUserResponse* msg);
 };
 
+const ::proto::ResponseMetaInfoV1&
+DeleteUserResponse::_Internal::metainfo(const DeleteUserResponse* msg) {
+  return *msg->_impl_.metainfo_;
+}
+void DeleteUserResponse::clear_metainfo() {
+  if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
+    delete _impl_.metainfo_;
+  }
+  _impl_.metainfo_ = nullptr;
+}
 DeleteUserResponse::DeleteUserResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
@@ -1490,20 +1402,13 @@ DeleteUserResponse::DeleteUserResponse(const DeleteUserResponse& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   DeleteUserResponse* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.message_){}
-    , decltype(_impl_.status_){}
+      decltype(_impl_.metainfo_){nullptr}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.message_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.message_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_message().empty()) {
-    _this->_impl_.message_.Set(from._internal_message(), 
-      _this->GetArenaForAllocation());
+  if (from._internal_has_metainfo()) {
+    _this->_impl_.metainfo_ = new ::proto::ResponseMetaInfoV1(*from._impl_.metainfo_);
   }
-  _this->_impl_.status_ = from._impl_.status_;
   // @@protoc_insertion_point(copy_constructor:proto.DeleteUserResponse)
 }
 
@@ -1512,14 +1417,9 @@ inline void DeleteUserResponse::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.message_){}
-    , decltype(_impl_.status_){false}
+      decltype(_impl_.metainfo_){nullptr}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.message_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.message_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 DeleteUserResponse::~DeleteUserResponse() {
@@ -1533,7 +1433,7 @@ DeleteUserResponse::~DeleteUserResponse() {
 
 inline void DeleteUserResponse::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.message_.Destroy();
+  if (this != internal_default_instance()) delete _impl_.metainfo_;
 }
 
 void DeleteUserResponse::SetCachedSize(int size) const {
@@ -1546,8 +1446,10 @@ void DeleteUserResponse::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.message_.ClearToEmpty();
-  _impl_.status_ = false;
+  if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
+    delete _impl_.metainfo_;
+  }
+  _impl_.metainfo_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -1557,21 +1459,11 @@ const char* DeleteUserResponse::_InternalParse(const char* ptr, ::_pbi::ParseCon
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bool status = 1;
+      // .proto.ResponseMetaInfoV1 metaInfo = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _impl_.status_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_metainfo(), ptr);
           CHK_(ptr);
-        } else
-          goto handle_unusual;
-        continue;
-      // string Message = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_message();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "proto.DeleteUserResponse.Message"));
         } else
           goto handle_unusual;
         continue;
@@ -1604,20 +1496,11 @@ uint8_t* DeleteUserResponse::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bool status = 1;
-  if (this->_internal_status() != 0) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_status(), target);
-  }
-
-  // string Message = 2;
-  if (!this->_internal_message().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_message().data(), static_cast<int>(this->_internal_message().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "proto.DeleteUserResponse.Message");
-    target = stream->WriteStringMaybeAliased(
-        2, this->_internal_message(), target);
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  if (this->_internal_has_metainfo()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::metainfo(this),
+        _Internal::metainfo(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1636,16 +1519,11 @@ size_t DeleteUserResponse::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string Message = 2;
-  if (!this->_internal_message().empty()) {
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  if (this->_internal_has_metainfo()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_message());
-  }
-
-  // bool status = 1;
-  if (this->_internal_status() != 0) {
-    total_size += 1 + 1;
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.metainfo_);
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -1666,11 +1544,9 @@ void DeleteUserResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, con
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_message().empty()) {
-    _this->_internal_set_message(from._internal_message());
-  }
-  if (from._internal_status() != 0) {
-    _this->_internal_set_status(from._internal_status());
+  if (from._internal_has_metainfo()) {
+    _this->_internal_mutable_metainfo()->::proto::ResponseMetaInfoV1::MergeFrom(
+        from._internal_metainfo());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -1688,14 +1564,8 @@ bool DeleteUserResponse::IsInitialized() const {
 
 void DeleteUserResponse::InternalSwap(DeleteUserResponse* other) {
   using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.message_, lhs_arena,
-      &other->_impl_.message_, rhs_arena
-  );
-  swap(_impl_.status_, other->_impl_.status_);
+  swap(_impl_.metainfo_, other->_impl_.metainfo_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata DeleteUserResponse::GetMetadata() const {
@@ -1708,12 +1578,23 @@ void DeleteUserResponse::InternalSwap(DeleteUserResponse* other) {
 
 class UpdateUserResponse::_Internal {
  public:
+  static const ::proto::ResponseMetaInfoV1& metainfo(const UpdateUserResponse* msg);
   static const ::proto::UserMetaInfoV1& userinfo(const UpdateUserResponse* msg);
 };
 
+const ::proto::ResponseMetaInfoV1&
+UpdateUserResponse::_Internal::metainfo(const UpdateUserResponse* msg) {
+  return *msg->_impl_.metainfo_;
+}
 const ::proto::UserMetaInfoV1&
 UpdateUserResponse::_Internal::userinfo(const UpdateUserResponse* msg) {
   return *msg->_impl_.userinfo_;
+}
+void UpdateUserResponse::clear_metainfo() {
+  if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
+    delete _impl_.metainfo_;
+  }
+  _impl_.metainfo_ = nullptr;
 }
 void UpdateUserResponse::clear_userinfo() {
   if (GetArenaForAllocation() == nullptr && _impl_.userinfo_ != nullptr) {
@@ -1731,24 +1612,17 @@ UpdateUserResponse::UpdateUserResponse(const UpdateUserResponse& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   UpdateUserResponse* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.message_){}
+      decltype(_impl_.metainfo_){nullptr}
     , decltype(_impl_.userinfo_){nullptr}
-    , decltype(_impl_.status_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.message_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.message_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_message().empty()) {
-    _this->_impl_.message_.Set(from._internal_message(), 
-      _this->GetArenaForAllocation());
+  if (from._internal_has_metainfo()) {
+    _this->_impl_.metainfo_ = new ::proto::ResponseMetaInfoV1(*from._impl_.metainfo_);
   }
   if (from._internal_has_userinfo()) {
     _this->_impl_.userinfo_ = new ::proto::UserMetaInfoV1(*from._impl_.userinfo_);
   }
-  _this->_impl_.status_ = from._impl_.status_;
   // @@protoc_insertion_point(copy_constructor:proto.UpdateUserResponse)
 }
 
@@ -1757,15 +1631,10 @@ inline void UpdateUserResponse::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.message_){}
+      decltype(_impl_.metainfo_){nullptr}
     , decltype(_impl_.userinfo_){nullptr}
-    , decltype(_impl_.status_){false}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.message_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.message_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 UpdateUserResponse::~UpdateUserResponse() {
@@ -1779,7 +1648,7 @@ UpdateUserResponse::~UpdateUserResponse() {
 
 inline void UpdateUserResponse::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.message_.Destroy();
+  if (this != internal_default_instance()) delete _impl_.metainfo_;
   if (this != internal_default_instance()) delete _impl_.userinfo_;
 }
 
@@ -1793,12 +1662,14 @@ void UpdateUserResponse::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.message_.ClearToEmpty();
+  if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
+    delete _impl_.metainfo_;
+  }
+  _impl_.metainfo_ = nullptr;
   if (GetArenaForAllocation() == nullptr && _impl_.userinfo_ != nullptr) {
     delete _impl_.userinfo_;
   }
   _impl_.userinfo_ = nullptr;
-  _impl_.status_ = false;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -1808,27 +1679,17 @@ const char* UpdateUserResponse::_InternalParse(const char* ptr, ::_pbi::ParseCon
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bool status = 1;
+      // .proto.ResponseMetaInfoV1 metaInfo = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _impl_.status_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_metainfo(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // string Message = 2;
+      // .proto.UserMetaInfoV1 UserInfo = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_message();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "proto.UpdateUserResponse.Message"));
-        } else
-          goto handle_unusual;
-        continue;
-      // .proto.UserMetaInfoV1 UserInfo = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_userinfo(), ptr);
           CHK_(ptr);
         } else
@@ -1863,26 +1724,17 @@ uint8_t* UpdateUserResponse::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bool status = 1;
-  if (this->_internal_status() != 0) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_status(), target);
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  if (this->_internal_has_metainfo()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::metainfo(this),
+        _Internal::metainfo(this).GetCachedSize(), target, stream);
   }
 
-  // string Message = 2;
-  if (!this->_internal_message().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_message().data(), static_cast<int>(this->_internal_message().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "proto.UpdateUserResponse.Message");
-    target = stream->WriteStringMaybeAliased(
-        2, this->_internal_message(), target);
-  }
-
-  // .proto.UserMetaInfoV1 UserInfo = 3;
+  // .proto.UserMetaInfoV1 UserInfo = 2;
   if (this->_internal_has_userinfo()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(3, _Internal::userinfo(this),
+      InternalWriteMessage(2, _Internal::userinfo(this),
         _Internal::userinfo(this).GetCachedSize(), target, stream);
   }
 
@@ -1902,23 +1754,18 @@ size_t UpdateUserResponse::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string Message = 2;
-  if (!this->_internal_message().empty()) {
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  if (this->_internal_has_metainfo()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_message());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.metainfo_);
   }
 
-  // .proto.UserMetaInfoV1 UserInfo = 3;
+  // .proto.UserMetaInfoV1 UserInfo = 2;
   if (this->_internal_has_userinfo()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.userinfo_);
-  }
-
-  // bool status = 1;
-  if (this->_internal_status() != 0) {
-    total_size += 1 + 1;
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -1939,15 +1786,13 @@ void UpdateUserResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, con
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_message().empty()) {
-    _this->_internal_set_message(from._internal_message());
+  if (from._internal_has_metainfo()) {
+    _this->_internal_mutable_metainfo()->::proto::ResponseMetaInfoV1::MergeFrom(
+        from._internal_metainfo());
   }
   if (from._internal_has_userinfo()) {
     _this->_internal_mutable_userinfo()->::proto::UserMetaInfoV1::MergeFrom(
         from._internal_userinfo());
-  }
-  if (from._internal_status() != 0) {
-    _this->_internal_set_status(from._internal_status());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -1965,19 +1810,13 @@ bool UpdateUserResponse::IsInitialized() const {
 
 void UpdateUserResponse::InternalSwap(UpdateUserResponse* other) {
   using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.message_, lhs_arena,
-      &other->_impl_.message_, rhs_arena
-  );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(UpdateUserResponse, _impl_.status_)
-      + sizeof(UpdateUserResponse::_impl_.status_)
-      - PROTOBUF_FIELD_OFFSET(UpdateUserResponse, _impl_.userinfo_)>(
-          reinterpret_cast<char*>(&_impl_.userinfo_),
-          reinterpret_cast<char*>(&other->_impl_.userinfo_));
+      PROTOBUF_FIELD_OFFSET(UpdateUserResponse, _impl_.userinfo_)
+      + sizeof(UpdateUserResponse::_impl_.userinfo_)
+      - PROTOBUF_FIELD_OFFSET(UpdateUserResponse, _impl_.metainfo_)>(
+          reinterpret_cast<char*>(&_impl_.metainfo_),
+          reinterpret_cast<char*>(&other->_impl_.metainfo_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata UpdateUserResponse::GetMetadata() const {
@@ -1990,12 +1829,23 @@ void UpdateUserResponse::InternalSwap(UpdateUserResponse* other) {
 
 class GetUserResponse::_Internal {
  public:
+  static const ::proto::ResponseMetaInfoV1& metainfo(const GetUserResponse* msg);
   static const ::proto::UserMetaInfoV1& userinfo(const GetUserResponse* msg);
 };
 
+const ::proto::ResponseMetaInfoV1&
+GetUserResponse::_Internal::metainfo(const GetUserResponse* msg) {
+  return *msg->_impl_.metainfo_;
+}
 const ::proto::UserMetaInfoV1&
 GetUserResponse::_Internal::userinfo(const GetUserResponse* msg) {
   return *msg->_impl_.userinfo_;
+}
+void GetUserResponse::clear_metainfo() {
+  if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
+    delete _impl_.metainfo_;
+  }
+  _impl_.metainfo_ = nullptr;
 }
 void GetUserResponse::clear_userinfo() {
   if (GetArenaForAllocation() == nullptr && _impl_.userinfo_ != nullptr) {
@@ -2013,24 +1863,17 @@ GetUserResponse::GetUserResponse(const GetUserResponse& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   GetUserResponse* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.message_){}
+      decltype(_impl_.metainfo_){nullptr}
     , decltype(_impl_.userinfo_){nullptr}
-    , decltype(_impl_.status_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.message_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.message_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_message().empty()) {
-    _this->_impl_.message_.Set(from._internal_message(), 
-      _this->GetArenaForAllocation());
+  if (from._internal_has_metainfo()) {
+    _this->_impl_.metainfo_ = new ::proto::ResponseMetaInfoV1(*from._impl_.metainfo_);
   }
   if (from._internal_has_userinfo()) {
     _this->_impl_.userinfo_ = new ::proto::UserMetaInfoV1(*from._impl_.userinfo_);
   }
-  _this->_impl_.status_ = from._impl_.status_;
   // @@protoc_insertion_point(copy_constructor:proto.GetUserResponse)
 }
 
@@ -2039,15 +1882,10 @@ inline void GetUserResponse::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.message_){}
+      decltype(_impl_.metainfo_){nullptr}
     , decltype(_impl_.userinfo_){nullptr}
-    , decltype(_impl_.status_){false}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.message_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.message_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 GetUserResponse::~GetUserResponse() {
@@ -2061,7 +1899,7 @@ GetUserResponse::~GetUserResponse() {
 
 inline void GetUserResponse::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.message_.Destroy();
+  if (this != internal_default_instance()) delete _impl_.metainfo_;
   if (this != internal_default_instance()) delete _impl_.userinfo_;
 }
 
@@ -2075,12 +1913,14 @@ void GetUserResponse::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.message_.ClearToEmpty();
+  if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
+    delete _impl_.metainfo_;
+  }
+  _impl_.metainfo_ = nullptr;
   if (GetArenaForAllocation() == nullptr && _impl_.userinfo_ != nullptr) {
     delete _impl_.userinfo_;
   }
   _impl_.userinfo_ = nullptr;
-  _impl_.status_ = false;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -2090,27 +1930,17 @@ const char* GetUserResponse::_InternalParse(const char* ptr, ::_pbi::ParseContex
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bool status = 1;
+      // .proto.ResponseMetaInfoV1 metaInfo = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _impl_.status_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_metainfo(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // string Message = 2;
+      // .proto.UserMetaInfoV1 UserInfo = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_message();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "proto.GetUserResponse.Message"));
-        } else
-          goto handle_unusual;
-        continue;
-      // .proto.UserMetaInfoV1 UserInfo = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_userinfo(), ptr);
           CHK_(ptr);
         } else
@@ -2145,26 +1975,17 @@ uint8_t* GetUserResponse::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bool status = 1;
-  if (this->_internal_status() != 0) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_status(), target);
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  if (this->_internal_has_metainfo()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::metainfo(this),
+        _Internal::metainfo(this).GetCachedSize(), target, stream);
   }
 
-  // string Message = 2;
-  if (!this->_internal_message().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_message().data(), static_cast<int>(this->_internal_message().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "proto.GetUserResponse.Message");
-    target = stream->WriteStringMaybeAliased(
-        2, this->_internal_message(), target);
-  }
-
-  // .proto.UserMetaInfoV1 UserInfo = 3;
+  // .proto.UserMetaInfoV1 UserInfo = 2;
   if (this->_internal_has_userinfo()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(3, _Internal::userinfo(this),
+      InternalWriteMessage(2, _Internal::userinfo(this),
         _Internal::userinfo(this).GetCachedSize(), target, stream);
   }
 
@@ -2184,23 +2005,18 @@ size_t GetUserResponse::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string Message = 2;
-  if (!this->_internal_message().empty()) {
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  if (this->_internal_has_metainfo()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_message());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.metainfo_);
   }
 
-  // .proto.UserMetaInfoV1 UserInfo = 3;
+  // .proto.UserMetaInfoV1 UserInfo = 2;
   if (this->_internal_has_userinfo()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.userinfo_);
-  }
-
-  // bool status = 1;
-  if (this->_internal_status() != 0) {
-    total_size += 1 + 1;
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -2221,15 +2037,13 @@ void GetUserResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const 
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_message().empty()) {
-    _this->_internal_set_message(from._internal_message());
+  if (from._internal_has_metainfo()) {
+    _this->_internal_mutable_metainfo()->::proto::ResponseMetaInfoV1::MergeFrom(
+        from._internal_metainfo());
   }
   if (from._internal_has_userinfo()) {
     _this->_internal_mutable_userinfo()->::proto::UserMetaInfoV1::MergeFrom(
         from._internal_userinfo());
-  }
-  if (from._internal_status() != 0) {
-    _this->_internal_set_status(from._internal_status());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -2247,19 +2061,13 @@ bool GetUserResponse::IsInitialized() const {
 
 void GetUserResponse::InternalSwap(GetUserResponse* other) {
   using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.message_, lhs_arena,
-      &other->_impl_.message_, rhs_arena
-  );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(GetUserResponse, _impl_.status_)
-      + sizeof(GetUserResponse::_impl_.status_)
-      - PROTOBUF_FIELD_OFFSET(GetUserResponse, _impl_.userinfo_)>(
-          reinterpret_cast<char*>(&_impl_.userinfo_),
-          reinterpret_cast<char*>(&other->_impl_.userinfo_));
+      PROTOBUF_FIELD_OFFSET(GetUserResponse, _impl_.userinfo_)
+      + sizeof(GetUserResponse::_impl_.userinfo_)
+      - PROTOBUF_FIELD_OFFSET(GetUserResponse, _impl_.metainfo_)>(
+          reinterpret_cast<char*>(&_impl_.metainfo_),
+          reinterpret_cast<char*>(&other->_impl_.metainfo_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata GetUserResponse::GetMetadata() const {
@@ -2272,8 +2080,19 @@ void GetUserResponse::InternalSwap(GetUserResponse* other) {
 
 class GetAllUserResponse::_Internal {
  public:
+  static const ::proto::ResponseMetaInfoV1& metainfo(const GetAllUserResponse* msg);
 };
 
+const ::proto::ResponseMetaInfoV1&
+GetAllUserResponse::_Internal::metainfo(const GetAllUserResponse* msg) {
+  return *msg->_impl_.metainfo_;
+}
+void GetAllUserResponse::clear_metainfo() {
+  if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
+    delete _impl_.metainfo_;
+  }
+  _impl_.metainfo_ = nullptr;
+}
 void GetAllUserResponse::clear_userinfo() {
   _impl_.userinfo_.Clear();
 }
@@ -2288,20 +2107,13 @@ GetAllUserResponse::GetAllUserResponse(const GetAllUserResponse& from)
   GetAllUserResponse* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.userinfo_){from._impl_.userinfo_}
-    , decltype(_impl_.message_){}
-    , decltype(_impl_.status_){}
+    , decltype(_impl_.metainfo_){nullptr}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.message_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.message_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_message().empty()) {
-    _this->_impl_.message_.Set(from._internal_message(), 
-      _this->GetArenaForAllocation());
+  if (from._internal_has_metainfo()) {
+    _this->_impl_.metainfo_ = new ::proto::ResponseMetaInfoV1(*from._impl_.metainfo_);
   }
-  _this->_impl_.status_ = from._impl_.status_;
   // @@protoc_insertion_point(copy_constructor:proto.GetAllUserResponse)
 }
 
@@ -2311,14 +2123,9 @@ inline void GetAllUserResponse::SharedCtor(
   (void)is_message_owned;
   new (&_impl_) Impl_{
       decltype(_impl_.userinfo_){arena}
-    , decltype(_impl_.message_){}
-    , decltype(_impl_.status_){false}
+    , decltype(_impl_.metainfo_){nullptr}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.message_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.message_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 GetAllUserResponse::~GetAllUserResponse() {
@@ -2333,7 +2140,7 @@ GetAllUserResponse::~GetAllUserResponse() {
 inline void GetAllUserResponse::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   _impl_.userinfo_.~RepeatedPtrField();
-  _impl_.message_.Destroy();
+  if (this != internal_default_instance()) delete _impl_.metainfo_;
 }
 
 void GetAllUserResponse::SetCachedSize(int size) const {
@@ -2347,8 +2154,10 @@ void GetAllUserResponse::Clear() {
   (void) cached_has_bits;
 
   _impl_.userinfo_.Clear();
-  _impl_.message_.ClearToEmpty();
-  _impl_.status_ = false;
+  if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
+    delete _impl_.metainfo_;
+  }
+  _impl_.metainfo_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -2358,34 +2167,24 @@ const char* GetAllUserResponse::_InternalParse(const char* ptr, ::_pbi::ParseCon
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bool status = 1;
+      // .proto.ResponseMetaInfoV1 metaInfo = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _impl_.status_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_metainfo(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // string Message = 2;
+      // repeated .proto.UserMetaInfoV1 UserInfo = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_message();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "proto.GetAllUserResponse.Message"));
-        } else
-          goto handle_unusual;
-        continue;
-      // repeated .proto.UserMetaInfoV1 UserInfo = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           ptr -= 1;
           do {
             ptr += 1;
             ptr = ctx->ParseMessage(_internal_add_userinfo(), ptr);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<26>(ptr));
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<18>(ptr));
         } else
           goto handle_unusual;
         continue;
@@ -2418,28 +2217,19 @@ uint8_t* GetAllUserResponse::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bool status = 1;
-  if (this->_internal_status() != 0) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_status(), target);
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  if (this->_internal_has_metainfo()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::metainfo(this),
+        _Internal::metainfo(this).GetCachedSize(), target, stream);
   }
 
-  // string Message = 2;
-  if (!this->_internal_message().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_message().data(), static_cast<int>(this->_internal_message().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "proto.GetAllUserResponse.Message");
-    target = stream->WriteStringMaybeAliased(
-        2, this->_internal_message(), target);
-  }
-
-  // repeated .proto.UserMetaInfoV1 UserInfo = 3;
+  // repeated .proto.UserMetaInfoV1 UserInfo = 2;
   for (unsigned i = 0,
       n = static_cast<unsigned>(this->_internal_userinfo_size()); i < n; i++) {
     const auto& repfield = this->_internal_userinfo(i);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(3, repfield, repfield.GetCachedSize(), target, stream);
+        InternalWriteMessage(2, repfield, repfield.GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -2458,23 +2248,18 @@ size_t GetAllUserResponse::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated .proto.UserMetaInfoV1 UserInfo = 3;
+  // repeated .proto.UserMetaInfoV1 UserInfo = 2;
   total_size += 1UL * this->_internal_userinfo_size();
   for (const auto& msg : this->_impl_.userinfo_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
-  // string Message = 2;
-  if (!this->_internal_message().empty()) {
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  if (this->_internal_has_metainfo()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_message());
-  }
-
-  // bool status = 1;
-  if (this->_internal_status() != 0) {
-    total_size += 1 + 1;
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.metainfo_);
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -2496,11 +2281,9 @@ void GetAllUserResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, con
   (void) cached_has_bits;
 
   _this->_impl_.userinfo_.MergeFrom(from._impl_.userinfo_);
-  if (!from._internal_message().empty()) {
-    _this->_internal_set_message(from._internal_message());
-  }
-  if (from._internal_status() != 0) {
-    _this->_internal_set_status(from._internal_status());
+  if (from._internal_has_metainfo()) {
+    _this->_internal_mutable_metainfo()->::proto::ResponseMetaInfoV1::MergeFrom(
+        from._internal_metainfo());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -2518,15 +2301,9 @@ bool GetAllUserResponse::IsInitialized() const {
 
 void GetAllUserResponse::InternalSwap(GetAllUserResponse* other) {
   using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   _impl_.userinfo_.InternalSwap(&other->_impl_.userinfo_);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.message_, lhs_arena,
-      &other->_impl_.message_, rhs_arena
-  );
-  swap(_impl_.status_, other->_impl_.status_);
+  swap(_impl_.metainfo_, other->_impl_.metainfo_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata GetAllUserResponse::GetMetadata() const {
@@ -2539,10 +2316,15 @@ void GetAllUserResponse::InternalSwap(GetAllUserResponse* other) {
 
 class UserLoginResponse::_Internal {
  public:
+  static const ::proto::ResponseMetaInfoV1& metainfo(const UserLoginResponse* msg);
   static const ::proto::UserMetaInfoV1& userinfo(const UserLoginResponse* msg);
   static const ::proto::UserVerifyInfoV1& userverifyinfo(const UserLoginResponse* msg);
 };
 
+const ::proto::ResponseMetaInfoV1&
+UserLoginResponse::_Internal::metainfo(const UserLoginResponse* msg) {
+  return *msg->_impl_.metainfo_;
+}
 const ::proto::UserMetaInfoV1&
 UserLoginResponse::_Internal::userinfo(const UserLoginResponse* msg) {
   return *msg->_impl_.userinfo_;
@@ -2550,6 +2332,12 @@ UserLoginResponse::_Internal::userinfo(const UserLoginResponse* msg) {
 const ::proto::UserVerifyInfoV1&
 UserLoginResponse::_Internal::userverifyinfo(const UserLoginResponse* msg) {
   return *msg->_impl_.userverifyinfo_;
+}
+void UserLoginResponse::clear_metainfo() {
+  if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
+    delete _impl_.metainfo_;
+  }
+  _impl_.metainfo_ = nullptr;
 }
 void UserLoginResponse::clear_userinfo() {
   if (GetArenaForAllocation() == nullptr && _impl_.userinfo_ != nullptr) {
@@ -2573,20 +2361,14 @@ UserLoginResponse::UserLoginResponse(const UserLoginResponse& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   UserLoginResponse* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.message_){}
+      decltype(_impl_.metainfo_){nullptr}
     , decltype(_impl_.userinfo_){nullptr}
     , decltype(_impl_.userverifyinfo_){nullptr}
-    , decltype(_impl_.status_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.message_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.message_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_message().empty()) {
-    _this->_impl_.message_.Set(from._internal_message(), 
-      _this->GetArenaForAllocation());
+  if (from._internal_has_metainfo()) {
+    _this->_impl_.metainfo_ = new ::proto::ResponseMetaInfoV1(*from._impl_.metainfo_);
   }
   if (from._internal_has_userinfo()) {
     _this->_impl_.userinfo_ = new ::proto::UserMetaInfoV1(*from._impl_.userinfo_);
@@ -2594,7 +2376,6 @@ UserLoginResponse::UserLoginResponse(const UserLoginResponse& from)
   if (from._internal_has_userverifyinfo()) {
     _this->_impl_.userverifyinfo_ = new ::proto::UserVerifyInfoV1(*from._impl_.userverifyinfo_);
   }
-  _this->_impl_.status_ = from._impl_.status_;
   // @@protoc_insertion_point(copy_constructor:proto.UserLoginResponse)
 }
 
@@ -2603,16 +2384,11 @@ inline void UserLoginResponse::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.message_){}
+      decltype(_impl_.metainfo_){nullptr}
     , decltype(_impl_.userinfo_){nullptr}
     , decltype(_impl_.userverifyinfo_){nullptr}
-    , decltype(_impl_.status_){false}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.message_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.message_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 UserLoginResponse::~UserLoginResponse() {
@@ -2626,7 +2402,7 @@ UserLoginResponse::~UserLoginResponse() {
 
 inline void UserLoginResponse::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.message_.Destroy();
+  if (this != internal_default_instance()) delete _impl_.metainfo_;
   if (this != internal_default_instance()) delete _impl_.userinfo_;
   if (this != internal_default_instance()) delete _impl_.userverifyinfo_;
 }
@@ -2641,7 +2417,10 @@ void UserLoginResponse::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.message_.ClearToEmpty();
+  if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
+    delete _impl_.metainfo_;
+  }
+  _impl_.metainfo_ = nullptr;
   if (GetArenaForAllocation() == nullptr && _impl_.userinfo_ != nullptr) {
     delete _impl_.userinfo_;
   }
@@ -2650,7 +2429,6 @@ void UserLoginResponse::Clear() {
     delete _impl_.userverifyinfo_;
   }
   _impl_.userverifyinfo_ = nullptr;
-  _impl_.status_ = false;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -2660,559 +2438,19 @@ const char* UserLoginResponse::_InternalParse(const char* ptr, ::_pbi::ParseCont
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bool status = 1;
+      // .proto.ResponseMetaInfoV1 metaInfo = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _impl_.status_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_metainfo(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // string Message = 2;
+      // .proto.UserMetaInfoV1 UserInfo = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_message();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "proto.UserLoginResponse.Message"));
-        } else
-          goto handle_unusual;
-        continue;
-      // .proto.UserMetaInfoV1 UserInfo = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_userinfo(), ptr);
           CHK_(ptr);
-        } else
-          goto handle_unusual;
-        continue;
-      // .proto.UserVerifyInfoV1 UserVerifyInfo = 4;
-      case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
-          ptr = ctx->ParseMessage(_internal_mutable_userverifyinfo(), ptr);
-          CHK_(ptr);
-        } else
-          goto handle_unusual;
-        continue;
-      default:
-        goto handle_unusual;
-    }  // switch
-  handle_unusual:
-    if ((tag == 0) || ((tag & 7) == 4)) {
-      CHK_(ptr);
-      ctx->SetLastTag(tag);
-      goto message_done;
-    }
-    ptr = UnknownFieldParse(
-        tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-        ptr, ctx);
-    CHK_(ptr != nullptr);
-  }  // while
-message_done:
-  return ptr;
-failure:
-  ptr = nullptr;
-  goto message_done;
-#undef CHK_
-}
-
-uint8_t* UserLoginResponse::_InternalSerialize(
-    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:proto.UserLoginResponse)
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // bool status = 1;
-  if (this->_internal_status() != 0) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_status(), target);
-  }
-
-  // string Message = 2;
-  if (!this->_internal_message().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_message().data(), static_cast<int>(this->_internal_message().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "proto.UserLoginResponse.Message");
-    target = stream->WriteStringMaybeAliased(
-        2, this->_internal_message(), target);
-  }
-
-  // .proto.UserMetaInfoV1 UserInfo = 3;
-  if (this->_internal_has_userinfo()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(3, _Internal::userinfo(this),
-        _Internal::userinfo(this).GetCachedSize(), target, stream);
-  }
-
-  // .proto.UserVerifyInfoV1 UserVerifyInfo = 4;
-  if (this->_internal_has_userverifyinfo()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(4, _Internal::userverifyinfo(this),
-        _Internal::userverifyinfo(this).GetCachedSize(), target, stream);
-  }
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:proto.UserLoginResponse)
-  return target;
-}
-
-size_t UserLoginResponse::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:proto.UserLoginResponse)
-  size_t total_size = 0;
-
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // string Message = 2;
-  if (!this->_internal_message().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_message());
-  }
-
-  // .proto.UserMetaInfoV1 UserInfo = 3;
-  if (this->_internal_has_userinfo()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.userinfo_);
-  }
-
-  // .proto.UserVerifyInfoV1 UserVerifyInfo = 4;
-  if (this->_internal_has_userverifyinfo()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.userverifyinfo_);
-  }
-
-  // bool status = 1;
-  if (this->_internal_status() != 0) {
-    total_size += 1 + 1;
-  }
-
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
-}
-
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData UserLoginResponse::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    UserLoginResponse::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*UserLoginResponse::GetClassData() const { return &_class_data_; }
-
-
-void UserLoginResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<UserLoginResponse*>(&to_msg);
-  auto& from = static_cast<const UserLoginResponse&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:proto.UserLoginResponse)
-  GOOGLE_DCHECK_NE(&from, _this);
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  if (!from._internal_message().empty()) {
-    _this->_internal_set_message(from._internal_message());
-  }
-  if (from._internal_has_userinfo()) {
-    _this->_internal_mutable_userinfo()->::proto::UserMetaInfoV1::MergeFrom(
-        from._internal_userinfo());
-  }
-  if (from._internal_has_userverifyinfo()) {
-    _this->_internal_mutable_userverifyinfo()->::proto::UserVerifyInfoV1::MergeFrom(
-        from._internal_userverifyinfo());
-  }
-  if (from._internal_status() != 0) {
-    _this->_internal_set_status(from._internal_status());
-  }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-}
-
-void UserLoginResponse::CopyFrom(const UserLoginResponse& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:proto.UserLoginResponse)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool UserLoginResponse::IsInitialized() const {
-  return true;
-}
-
-void UserLoginResponse::InternalSwap(UserLoginResponse* other) {
-  using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
-  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.message_, lhs_arena,
-      &other->_impl_.message_, rhs_arena
-  );
-  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(UserLoginResponse, _impl_.status_)
-      + sizeof(UserLoginResponse::_impl_.status_)
-      - PROTOBUF_FIELD_OFFSET(UserLoginResponse, _impl_.userinfo_)>(
-          reinterpret_cast<char*>(&_impl_.userinfo_),
-          reinterpret_cast<char*>(&other->_impl_.userinfo_));
-}
-
-::PROTOBUF_NAMESPACE_ID::Metadata UserLoginResponse::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_Message_2fResponse_2eproto_getter, &descriptor_table_Message_2fResponse_2eproto_once,
-      file_level_metadata_Message_2fResponse_2eproto[5]);
-}
-
-// ===================================================================
-
-class UserLogoutResponse::_Internal {
- public:
-};
-
-UserLogoutResponse::UserLogoutResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
-                         bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
-  SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:proto.UserLogoutResponse)
-}
-UserLogoutResponse::UserLogoutResponse(const UserLogoutResponse& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
-  UserLogoutResponse* const _this = this; (void)_this;
-  new (&_impl_) Impl_{
-      decltype(_impl_.message_){}
-    , decltype(_impl_.status_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
-
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.message_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.message_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_message().empty()) {
-    _this->_impl_.message_.Set(from._internal_message(), 
-      _this->GetArenaForAllocation());
-  }
-  _this->_impl_.status_ = from._impl_.status_;
-  // @@protoc_insertion_point(copy_constructor:proto.UserLogoutResponse)
-}
-
-inline void UserLogoutResponse::SharedCtor(
-    ::_pb::Arena* arena, bool is_message_owned) {
-  (void)arena;
-  (void)is_message_owned;
-  new (&_impl_) Impl_{
-      decltype(_impl_.message_){}
-    , decltype(_impl_.status_){false}
-    , /*decltype(_impl_._cached_size_)*/{}
-  };
-  _impl_.message_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.message_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-}
-
-UserLogoutResponse::~UserLogoutResponse() {
-  // @@protoc_insertion_point(destructor:proto.UserLogoutResponse)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
-  (void)arena;
-    return;
-  }
-  SharedDtor();
-}
-
-inline void UserLogoutResponse::SharedDtor() {
-  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.message_.Destroy();
-}
-
-void UserLogoutResponse::SetCachedSize(int size) const {
-  _impl_._cached_size_.Set(size);
-}
-
-void UserLogoutResponse::Clear() {
-// @@protoc_insertion_point(message_clear_start:proto.UserLogoutResponse)
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  _impl_.message_.ClearToEmpty();
-  _impl_.status_ = false;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
-}
-
-const char* UserLogoutResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    uint32_t tag;
-    ptr = ::_pbi::ReadTag(ptr, &tag);
-    switch (tag >> 3) {
-      // bool status = 1;
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _impl_.status_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
-          CHK_(ptr);
-        } else
-          goto handle_unusual;
-        continue;
-      // string Message = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_message();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "proto.UserLogoutResponse.Message"));
-        } else
-          goto handle_unusual;
-        continue;
-      default:
-        goto handle_unusual;
-    }  // switch
-  handle_unusual:
-    if ((tag == 0) || ((tag & 7) == 4)) {
-      CHK_(ptr);
-      ctx->SetLastTag(tag);
-      goto message_done;
-    }
-    ptr = UnknownFieldParse(
-        tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-        ptr, ctx);
-    CHK_(ptr != nullptr);
-  }  // while
-message_done:
-  return ptr;
-failure:
-  ptr = nullptr;
-  goto message_done;
-#undef CHK_
-}
-
-uint8_t* UserLogoutResponse::_InternalSerialize(
-    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:proto.UserLogoutResponse)
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // bool status = 1;
-  if (this->_internal_status() != 0) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_status(), target);
-  }
-
-  // string Message = 2;
-  if (!this->_internal_message().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_message().data(), static_cast<int>(this->_internal_message().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "proto.UserLogoutResponse.Message");
-    target = stream->WriteStringMaybeAliased(
-        2, this->_internal_message(), target);
-  }
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:proto.UserLogoutResponse)
-  return target;
-}
-
-size_t UserLogoutResponse::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:proto.UserLogoutResponse)
-  size_t total_size = 0;
-
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // string Message = 2;
-  if (!this->_internal_message().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_message());
-  }
-
-  // bool status = 1;
-  if (this->_internal_status() != 0) {
-    total_size += 1 + 1;
-  }
-
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
-}
-
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData UserLogoutResponse::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    UserLogoutResponse::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*UserLogoutResponse::GetClassData() const { return &_class_data_; }
-
-
-void UserLogoutResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<UserLogoutResponse*>(&to_msg);
-  auto& from = static_cast<const UserLogoutResponse&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:proto.UserLogoutResponse)
-  GOOGLE_DCHECK_NE(&from, _this);
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  if (!from._internal_message().empty()) {
-    _this->_internal_set_message(from._internal_message());
-  }
-  if (from._internal_status() != 0) {
-    _this->_internal_set_status(from._internal_status());
-  }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-}
-
-void UserLogoutResponse::CopyFrom(const UserLogoutResponse& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:proto.UserLogoutResponse)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool UserLogoutResponse::IsInitialized() const {
-  return true;
-}
-
-void UserLogoutResponse::InternalSwap(UserLogoutResponse* other) {
-  using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
-  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.message_, lhs_arena,
-      &other->_impl_.message_, rhs_arena
-  );
-  swap(_impl_.status_, other->_impl_.status_);
-}
-
-::PROTOBUF_NAMESPACE_ID::Metadata UserLogoutResponse::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_Message_2fResponse_2eproto_getter, &descriptor_table_Message_2fResponse_2eproto_once,
-      file_level_metadata_Message_2fResponse_2eproto[6]);
-}
-
-// ===================================================================
-
-class UserOnlineHeartBeatResponse::_Internal {
- public:
-  static const ::proto::UserVerifyInfoV1& userverifyinfo(const UserOnlineHeartBeatResponse* msg);
-};
-
-const ::proto::UserVerifyInfoV1&
-UserOnlineHeartBeatResponse::_Internal::userverifyinfo(const UserOnlineHeartBeatResponse* msg) {
-  return *msg->_impl_.userverifyinfo_;
-}
-void UserOnlineHeartBeatResponse::clear_userverifyinfo() {
-  if (GetArenaForAllocation() == nullptr && _impl_.userverifyinfo_ != nullptr) {
-    delete _impl_.userverifyinfo_;
-  }
-  _impl_.userverifyinfo_ = nullptr;
-}
-UserOnlineHeartBeatResponse::UserOnlineHeartBeatResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
-                         bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
-  SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:proto.UserOnlineHeartBeatResponse)
-}
-UserOnlineHeartBeatResponse::UserOnlineHeartBeatResponse(const UserOnlineHeartBeatResponse& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
-  UserOnlineHeartBeatResponse* const _this = this; (void)_this;
-  new (&_impl_) Impl_{
-      decltype(_impl_.message_){}
-    , decltype(_impl_.userverifyinfo_){nullptr}
-    , decltype(_impl_.status_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
-
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.message_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.message_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_message().empty()) {
-    _this->_impl_.message_.Set(from._internal_message(), 
-      _this->GetArenaForAllocation());
-  }
-  if (from._internal_has_userverifyinfo()) {
-    _this->_impl_.userverifyinfo_ = new ::proto::UserVerifyInfoV1(*from._impl_.userverifyinfo_);
-  }
-  _this->_impl_.status_ = from._impl_.status_;
-  // @@protoc_insertion_point(copy_constructor:proto.UserOnlineHeartBeatResponse)
-}
-
-inline void UserOnlineHeartBeatResponse::SharedCtor(
-    ::_pb::Arena* arena, bool is_message_owned) {
-  (void)arena;
-  (void)is_message_owned;
-  new (&_impl_) Impl_{
-      decltype(_impl_.message_){}
-    , decltype(_impl_.userverifyinfo_){nullptr}
-    , decltype(_impl_.status_){false}
-    , /*decltype(_impl_._cached_size_)*/{}
-  };
-  _impl_.message_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.message_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-}
-
-UserOnlineHeartBeatResponse::~UserOnlineHeartBeatResponse() {
-  // @@protoc_insertion_point(destructor:proto.UserOnlineHeartBeatResponse)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
-  (void)arena;
-    return;
-  }
-  SharedDtor();
-}
-
-inline void UserOnlineHeartBeatResponse::SharedDtor() {
-  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.message_.Destroy();
-  if (this != internal_default_instance()) delete _impl_.userverifyinfo_;
-}
-
-void UserOnlineHeartBeatResponse::SetCachedSize(int size) const {
-  _impl_._cached_size_.Set(size);
-}
-
-void UserOnlineHeartBeatResponse::Clear() {
-// @@protoc_insertion_point(message_clear_start:proto.UserOnlineHeartBeatResponse)
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  _impl_.message_.ClearToEmpty();
-  if (GetArenaForAllocation() == nullptr && _impl_.userverifyinfo_ != nullptr) {
-    delete _impl_.userverifyinfo_;
-  }
-  _impl_.userverifyinfo_ = nullptr;
-  _impl_.status_ = false;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
-}
-
-const char* UserOnlineHeartBeatResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    uint32_t tag;
-    ptr = ::_pbi::ReadTag(ptr, &tag);
-    switch (tag >> 3) {
-      // bool status = 1;
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _impl_.status_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
-          CHK_(ptr);
-        } else
-          goto handle_unusual;
-        continue;
-      // string Message = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_message();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "proto.UserOnlineHeartBeatResponse.Message"));
         } else
           goto handle_unusual;
         continue;
@@ -3247,32 +2485,491 @@ failure:
 #undef CHK_
 }
 
-uint8_t* UserOnlineHeartBeatResponse::_InternalSerialize(
+uint8_t* UserLoginResponse::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:proto.UserOnlineHeartBeatResponse)
+  // @@protoc_insertion_point(serialize_to_array_start:proto.UserLoginResponse)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bool status = 1;
-  if (this->_internal_status() != 0) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_status(), target);
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  if (this->_internal_has_metainfo()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::metainfo(this),
+        _Internal::metainfo(this).GetCachedSize(), target, stream);
   }
 
-  // string Message = 2;
-  if (!this->_internal_message().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_message().data(), static_cast<int>(this->_internal_message().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "proto.UserOnlineHeartBeatResponse.Message");
-    target = stream->WriteStringMaybeAliased(
-        2, this->_internal_message(), target);
+  // .proto.UserMetaInfoV1 UserInfo = 2;
+  if (this->_internal_has_userinfo()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(2, _Internal::userinfo(this),
+        _Internal::userinfo(this).GetCachedSize(), target, stream);
   }
 
   // .proto.UserVerifyInfoV1 UserVerifyInfo = 3;
   if (this->_internal_has_userverifyinfo()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(3, _Internal::userverifyinfo(this),
+        _Internal::userverifyinfo(this).GetCachedSize(), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:proto.UserLoginResponse)
+  return target;
+}
+
+size_t UserLoginResponse::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:proto.UserLoginResponse)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  if (this->_internal_has_metainfo()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.metainfo_);
+  }
+
+  // .proto.UserMetaInfoV1 UserInfo = 2;
+  if (this->_internal_has_userinfo()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.userinfo_);
+  }
+
+  // .proto.UserVerifyInfoV1 UserVerifyInfo = 3;
+  if (this->_internal_has_userverifyinfo()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.userverifyinfo_);
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData UserLoginResponse::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    UserLoginResponse::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*UserLoginResponse::GetClassData() const { return &_class_data_; }
+
+
+void UserLoginResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<UserLoginResponse*>(&to_msg);
+  auto& from = static_cast<const UserLoginResponse&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:proto.UserLoginResponse)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from._internal_has_metainfo()) {
+    _this->_internal_mutable_metainfo()->::proto::ResponseMetaInfoV1::MergeFrom(
+        from._internal_metainfo());
+  }
+  if (from._internal_has_userinfo()) {
+    _this->_internal_mutable_userinfo()->::proto::UserMetaInfoV1::MergeFrom(
+        from._internal_userinfo());
+  }
+  if (from._internal_has_userverifyinfo()) {
+    _this->_internal_mutable_userverifyinfo()->::proto::UserVerifyInfoV1::MergeFrom(
+        from._internal_userverifyinfo());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void UserLoginResponse::CopyFrom(const UserLoginResponse& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:proto.UserLoginResponse)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool UserLoginResponse::IsInitialized() const {
+  return true;
+}
+
+void UserLoginResponse::InternalSwap(UserLoginResponse* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(UserLoginResponse, _impl_.userverifyinfo_)
+      + sizeof(UserLoginResponse::_impl_.userverifyinfo_)
+      - PROTOBUF_FIELD_OFFSET(UserLoginResponse, _impl_.metainfo_)>(
+          reinterpret_cast<char*>(&_impl_.metainfo_),
+          reinterpret_cast<char*>(&other->_impl_.metainfo_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata UserLoginResponse::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_Message_2fResponse_2eproto_getter, &descriptor_table_Message_2fResponse_2eproto_once,
+      file_level_metadata_Message_2fResponse_2eproto[5]);
+}
+
+// ===================================================================
+
+class UserLogoutResponse::_Internal {
+ public:
+  static const ::proto::ResponseMetaInfoV1& metainfo(const UserLogoutResponse* msg);
+};
+
+const ::proto::ResponseMetaInfoV1&
+UserLogoutResponse::_Internal::metainfo(const UserLogoutResponse* msg) {
+  return *msg->_impl_.metainfo_;
+}
+void UserLogoutResponse::clear_metainfo() {
+  if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
+    delete _impl_.metainfo_;
+  }
+  _impl_.metainfo_ = nullptr;
+}
+UserLogoutResponse::UserLogoutResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:proto.UserLogoutResponse)
+}
+UserLogoutResponse::UserLogoutResponse(const UserLogoutResponse& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  UserLogoutResponse* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.metainfo_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_metainfo()) {
+    _this->_impl_.metainfo_ = new ::proto::ResponseMetaInfoV1(*from._impl_.metainfo_);
+  }
+  // @@protoc_insertion_point(copy_constructor:proto.UserLogoutResponse)
+}
+
+inline void UserLogoutResponse::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.metainfo_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+}
+
+UserLogoutResponse::~UserLogoutResponse() {
+  // @@protoc_insertion_point(destructor:proto.UserLogoutResponse)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void UserLogoutResponse::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.metainfo_;
+}
+
+void UserLogoutResponse::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void UserLogoutResponse::Clear() {
+// @@protoc_insertion_point(message_clear_start:proto.UserLogoutResponse)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
+    delete _impl_.metainfo_;
+  }
+  _impl_.metainfo_ = nullptr;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* UserLogoutResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // .proto.ResponseMetaInfoV1 metaInfo = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_metainfo(), ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* UserLogoutResponse::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:proto.UserLogoutResponse)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  if (this->_internal_has_metainfo()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::metainfo(this),
+        _Internal::metainfo(this).GetCachedSize(), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:proto.UserLogoutResponse)
+  return target;
+}
+
+size_t UserLogoutResponse::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:proto.UserLogoutResponse)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  if (this->_internal_has_metainfo()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.metainfo_);
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData UserLogoutResponse::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    UserLogoutResponse::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*UserLogoutResponse::GetClassData() const { return &_class_data_; }
+
+
+void UserLogoutResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<UserLogoutResponse*>(&to_msg);
+  auto& from = static_cast<const UserLogoutResponse&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:proto.UserLogoutResponse)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from._internal_has_metainfo()) {
+    _this->_internal_mutable_metainfo()->::proto::ResponseMetaInfoV1::MergeFrom(
+        from._internal_metainfo());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void UserLogoutResponse::CopyFrom(const UserLogoutResponse& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:proto.UserLogoutResponse)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool UserLogoutResponse::IsInitialized() const {
+  return true;
+}
+
+void UserLogoutResponse::InternalSwap(UserLogoutResponse* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_.metainfo_, other->_impl_.metainfo_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata UserLogoutResponse::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_Message_2fResponse_2eproto_getter, &descriptor_table_Message_2fResponse_2eproto_once,
+      file_level_metadata_Message_2fResponse_2eproto[6]);
+}
+
+// ===================================================================
+
+class UserOnlineHeartBeatResponse::_Internal {
+ public:
+  static const ::proto::ResponseMetaInfoV1& metainfo(const UserOnlineHeartBeatResponse* msg);
+  static const ::proto::UserVerifyInfoV1& userverifyinfo(const UserOnlineHeartBeatResponse* msg);
+};
+
+const ::proto::ResponseMetaInfoV1&
+UserOnlineHeartBeatResponse::_Internal::metainfo(const UserOnlineHeartBeatResponse* msg) {
+  return *msg->_impl_.metainfo_;
+}
+const ::proto::UserVerifyInfoV1&
+UserOnlineHeartBeatResponse::_Internal::userverifyinfo(const UserOnlineHeartBeatResponse* msg) {
+  return *msg->_impl_.userverifyinfo_;
+}
+void UserOnlineHeartBeatResponse::clear_metainfo() {
+  if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
+    delete _impl_.metainfo_;
+  }
+  _impl_.metainfo_ = nullptr;
+}
+void UserOnlineHeartBeatResponse::clear_userverifyinfo() {
+  if (GetArenaForAllocation() == nullptr && _impl_.userverifyinfo_ != nullptr) {
+    delete _impl_.userverifyinfo_;
+  }
+  _impl_.userverifyinfo_ = nullptr;
+}
+UserOnlineHeartBeatResponse::UserOnlineHeartBeatResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:proto.UserOnlineHeartBeatResponse)
+}
+UserOnlineHeartBeatResponse::UserOnlineHeartBeatResponse(const UserOnlineHeartBeatResponse& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  UserOnlineHeartBeatResponse* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.metainfo_){nullptr}
+    , decltype(_impl_.userverifyinfo_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_metainfo()) {
+    _this->_impl_.metainfo_ = new ::proto::ResponseMetaInfoV1(*from._impl_.metainfo_);
+  }
+  if (from._internal_has_userverifyinfo()) {
+    _this->_impl_.userverifyinfo_ = new ::proto::UserVerifyInfoV1(*from._impl_.userverifyinfo_);
+  }
+  // @@protoc_insertion_point(copy_constructor:proto.UserOnlineHeartBeatResponse)
+}
+
+inline void UserOnlineHeartBeatResponse::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.metainfo_){nullptr}
+    , decltype(_impl_.userverifyinfo_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+}
+
+UserOnlineHeartBeatResponse::~UserOnlineHeartBeatResponse() {
+  // @@protoc_insertion_point(destructor:proto.UserOnlineHeartBeatResponse)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void UserOnlineHeartBeatResponse::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.metainfo_;
+  if (this != internal_default_instance()) delete _impl_.userverifyinfo_;
+}
+
+void UserOnlineHeartBeatResponse::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void UserOnlineHeartBeatResponse::Clear() {
+// @@protoc_insertion_point(message_clear_start:proto.UserOnlineHeartBeatResponse)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
+    delete _impl_.metainfo_;
+  }
+  _impl_.metainfo_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.userverifyinfo_ != nullptr) {
+    delete _impl_.userverifyinfo_;
+  }
+  _impl_.userverifyinfo_ = nullptr;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* UserOnlineHeartBeatResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // .proto.ResponseMetaInfoV1 metaInfo = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_metainfo(), ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_userverifyinfo(), ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* UserOnlineHeartBeatResponse::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:proto.UserOnlineHeartBeatResponse)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  if (this->_internal_has_metainfo()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::metainfo(this),
+        _Internal::metainfo(this).GetCachedSize(), target, stream);
+  }
+
+  // .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
+  if (this->_internal_has_userverifyinfo()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(2, _Internal::userverifyinfo(this),
         _Internal::userverifyinfo(this).GetCachedSize(), target, stream);
   }
 
@@ -3292,23 +2989,18 @@ size_t UserOnlineHeartBeatResponse::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string Message = 2;
-  if (!this->_internal_message().empty()) {
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  if (this->_internal_has_metainfo()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_message());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.metainfo_);
   }
 
-  // .proto.UserVerifyInfoV1 UserVerifyInfo = 3;
+  // .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
   if (this->_internal_has_userverifyinfo()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.userverifyinfo_);
-  }
-
-  // bool status = 1;
-  if (this->_internal_status() != 0) {
-    total_size += 1 + 1;
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -3329,15 +3021,13 @@ void UserOnlineHeartBeatResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_message().empty()) {
-    _this->_internal_set_message(from._internal_message());
+  if (from._internal_has_metainfo()) {
+    _this->_internal_mutable_metainfo()->::proto::ResponseMetaInfoV1::MergeFrom(
+        from._internal_metainfo());
   }
   if (from._internal_has_userverifyinfo()) {
     _this->_internal_mutable_userverifyinfo()->::proto::UserVerifyInfoV1::MergeFrom(
         from._internal_userverifyinfo());
-  }
-  if (from._internal_status() != 0) {
-    _this->_internal_set_status(from._internal_status());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -3355,19 +3045,13 @@ bool UserOnlineHeartBeatResponse::IsInitialized() const {
 
 void UserOnlineHeartBeatResponse::InternalSwap(UserOnlineHeartBeatResponse* other) {
   using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.message_, lhs_arena,
-      &other->_impl_.message_, rhs_arena
-  );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(UserOnlineHeartBeatResponse, _impl_.status_)
-      + sizeof(UserOnlineHeartBeatResponse::_impl_.status_)
-      - PROTOBUF_FIELD_OFFSET(UserOnlineHeartBeatResponse, _impl_.userverifyinfo_)>(
-          reinterpret_cast<char*>(&_impl_.userverifyinfo_),
-          reinterpret_cast<char*>(&other->_impl_.userverifyinfo_));
+      PROTOBUF_FIELD_OFFSET(UserOnlineHeartBeatResponse, _impl_.userverifyinfo_)
+      + sizeof(UserOnlineHeartBeatResponse::_impl_.userverifyinfo_)
+      - PROTOBUF_FIELD_OFFSET(UserOnlineHeartBeatResponse, _impl_.metainfo_)>(
+          reinterpret_cast<char*>(&_impl_.metainfo_),
+          reinterpret_cast<char*>(&other->_impl_.metainfo_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata UserOnlineHeartBeatResponse::GetMetadata() const {
@@ -3380,12 +3064,23 @@ void UserOnlineHeartBeatResponse::InternalSwap(UserOnlineHeartBeatResponse* othe
 
 class GetUserPermissionGroupResponse::_Internal {
  public:
+  static const ::proto::ResponseMetaInfoV1& metainfo(const GetUserPermissionGroupResponse* msg);
   static const ::proto::PermissionGroupMetaInfoV1& permissiongroup(const GetUserPermissionGroupResponse* msg);
 };
 
+const ::proto::ResponseMetaInfoV1&
+GetUserPermissionGroupResponse::_Internal::metainfo(const GetUserPermissionGroupResponse* msg) {
+  return *msg->_impl_.metainfo_;
+}
 const ::proto::PermissionGroupMetaInfoV1&
 GetUserPermissionGroupResponse::_Internal::permissiongroup(const GetUserPermissionGroupResponse* msg) {
   return *msg->_impl_.permissiongroup_;
+}
+void GetUserPermissionGroupResponse::clear_metainfo() {
+  if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
+    delete _impl_.metainfo_;
+  }
+  _impl_.metainfo_ = nullptr;
 }
 void GetUserPermissionGroupResponse::clear_permissiongroup() {
   if (GetArenaForAllocation() == nullptr && _impl_.permissiongroup_ != nullptr) {
@@ -3403,24 +3098,17 @@ GetUserPermissionGroupResponse::GetUserPermissionGroupResponse(const GetUserPerm
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   GetUserPermissionGroupResponse* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.message_){}
+      decltype(_impl_.metainfo_){nullptr}
     , decltype(_impl_.permissiongroup_){nullptr}
-    , decltype(_impl_.status_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.message_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.message_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_message().empty()) {
-    _this->_impl_.message_.Set(from._internal_message(), 
-      _this->GetArenaForAllocation());
+  if (from._internal_has_metainfo()) {
+    _this->_impl_.metainfo_ = new ::proto::ResponseMetaInfoV1(*from._impl_.metainfo_);
   }
   if (from._internal_has_permissiongroup()) {
     _this->_impl_.permissiongroup_ = new ::proto::PermissionGroupMetaInfoV1(*from._impl_.permissiongroup_);
   }
-  _this->_impl_.status_ = from._impl_.status_;
   // @@protoc_insertion_point(copy_constructor:proto.GetUserPermissionGroupResponse)
 }
 
@@ -3429,15 +3117,10 @@ inline void GetUserPermissionGroupResponse::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.message_){}
+      decltype(_impl_.metainfo_){nullptr}
     , decltype(_impl_.permissiongroup_){nullptr}
-    , decltype(_impl_.status_){false}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.message_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.message_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 GetUserPermissionGroupResponse::~GetUserPermissionGroupResponse() {
@@ -3451,7 +3134,7 @@ GetUserPermissionGroupResponse::~GetUserPermissionGroupResponse() {
 
 inline void GetUserPermissionGroupResponse::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.message_.Destroy();
+  if (this != internal_default_instance()) delete _impl_.metainfo_;
   if (this != internal_default_instance()) delete _impl_.permissiongroup_;
 }
 
@@ -3465,12 +3148,14 @@ void GetUserPermissionGroupResponse::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.message_.ClearToEmpty();
+  if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
+    delete _impl_.metainfo_;
+  }
+  _impl_.metainfo_ = nullptr;
   if (GetArenaForAllocation() == nullptr && _impl_.permissiongroup_ != nullptr) {
     delete _impl_.permissiongroup_;
   }
   _impl_.permissiongroup_ = nullptr;
-  _impl_.status_ = false;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -3480,27 +3165,17 @@ const char* GetUserPermissionGroupResponse::_InternalParse(const char* ptr, ::_p
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bool status = 1;
+      // .proto.ResponseMetaInfoV1 metaInfo = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _impl_.status_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_metainfo(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // string Message = 2;
+      // .proto.PermissionGroupMetaInfoV1 PermissionGroup = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_message();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "proto.GetUserPermissionGroupResponse.Message"));
-        } else
-          goto handle_unusual;
-        continue;
-      // .proto.PermissionGroupMetaInfoV1 PermissionGroup = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_permissiongroup(), ptr);
           CHK_(ptr);
         } else
@@ -3535,26 +3210,17 @@ uint8_t* GetUserPermissionGroupResponse::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bool status = 1;
-  if (this->_internal_status() != 0) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_status(), target);
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  if (this->_internal_has_metainfo()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::metainfo(this),
+        _Internal::metainfo(this).GetCachedSize(), target, stream);
   }
 
-  // string Message = 2;
-  if (!this->_internal_message().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_message().data(), static_cast<int>(this->_internal_message().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "proto.GetUserPermissionGroupResponse.Message");
-    target = stream->WriteStringMaybeAliased(
-        2, this->_internal_message(), target);
-  }
-
-  // .proto.PermissionGroupMetaInfoV1 PermissionGroup = 3;
+  // .proto.PermissionGroupMetaInfoV1 PermissionGroup = 2;
   if (this->_internal_has_permissiongroup()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(3, _Internal::permissiongroup(this),
+      InternalWriteMessage(2, _Internal::permissiongroup(this),
         _Internal::permissiongroup(this).GetCachedSize(), target, stream);
   }
 
@@ -3574,23 +3240,18 @@ size_t GetUserPermissionGroupResponse::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string Message = 2;
-  if (!this->_internal_message().empty()) {
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  if (this->_internal_has_metainfo()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_message());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.metainfo_);
   }
 
-  // .proto.PermissionGroupMetaInfoV1 PermissionGroup = 3;
+  // .proto.PermissionGroupMetaInfoV1 PermissionGroup = 2;
   if (this->_internal_has_permissiongroup()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.permissiongroup_);
-  }
-
-  // bool status = 1;
-  if (this->_internal_status() != 0) {
-    total_size += 1 + 1;
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -3611,15 +3272,13 @@ void GetUserPermissionGroupResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message&
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_message().empty()) {
-    _this->_internal_set_message(from._internal_message());
+  if (from._internal_has_metainfo()) {
+    _this->_internal_mutable_metainfo()->::proto::ResponseMetaInfoV1::MergeFrom(
+        from._internal_metainfo());
   }
   if (from._internal_has_permissiongroup()) {
     _this->_internal_mutable_permissiongroup()->::proto::PermissionGroupMetaInfoV1::MergeFrom(
         from._internal_permissiongroup());
-  }
-  if (from._internal_status() != 0) {
-    _this->_internal_set_status(from._internal_status());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -3637,19 +3296,13 @@ bool GetUserPermissionGroupResponse::IsInitialized() const {
 
 void GetUserPermissionGroupResponse::InternalSwap(GetUserPermissionGroupResponse* other) {
   using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.message_, lhs_arena,
-      &other->_impl_.message_, rhs_arena
-  );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(GetUserPermissionGroupResponse, _impl_.status_)
-      + sizeof(GetUserPermissionGroupResponse::_impl_.status_)
-      - PROTOBUF_FIELD_OFFSET(GetUserPermissionGroupResponse, _impl_.permissiongroup_)>(
-          reinterpret_cast<char*>(&_impl_.permissiongroup_),
-          reinterpret_cast<char*>(&other->_impl_.permissiongroup_));
+      PROTOBUF_FIELD_OFFSET(GetUserPermissionGroupResponse, _impl_.permissiongroup_)
+      + sizeof(GetUserPermissionGroupResponse::_impl_.permissiongroup_)
+      - PROTOBUF_FIELD_OFFSET(GetUserPermissionGroupResponse, _impl_.metainfo_)>(
+          reinterpret_cast<char*>(&_impl_.metainfo_),
+          reinterpret_cast<char*>(&other->_impl_.metainfo_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata GetUserPermissionGroupResponse::GetMetadata() const {
@@ -3662,12 +3315,23 @@ void GetUserPermissionGroupResponse::InternalSwap(GetUserPermissionGroupResponse
 
 class GetPermissionGroupResponse::_Internal {
  public:
+  static const ::proto::ResponseMetaInfoV1& metainfo(const GetPermissionGroupResponse* msg);
   static const ::proto::PermissionGroupMetaInfoV1& permissiongroup(const GetPermissionGroupResponse* msg);
 };
 
+const ::proto::ResponseMetaInfoV1&
+GetPermissionGroupResponse::_Internal::metainfo(const GetPermissionGroupResponse* msg) {
+  return *msg->_impl_.metainfo_;
+}
 const ::proto::PermissionGroupMetaInfoV1&
 GetPermissionGroupResponse::_Internal::permissiongroup(const GetPermissionGroupResponse* msg) {
   return *msg->_impl_.permissiongroup_;
+}
+void GetPermissionGroupResponse::clear_metainfo() {
+  if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
+    delete _impl_.metainfo_;
+  }
+  _impl_.metainfo_ = nullptr;
 }
 void GetPermissionGroupResponse::clear_permissiongroup() {
   if (GetArenaForAllocation() == nullptr && _impl_.permissiongroup_ != nullptr) {
@@ -3685,24 +3349,17 @@ GetPermissionGroupResponse::GetPermissionGroupResponse(const GetPermissionGroupR
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   GetPermissionGroupResponse* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.message_){}
+      decltype(_impl_.metainfo_){nullptr}
     , decltype(_impl_.permissiongroup_){nullptr}
-    , decltype(_impl_.status_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.message_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.message_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_message().empty()) {
-    _this->_impl_.message_.Set(from._internal_message(), 
-      _this->GetArenaForAllocation());
+  if (from._internal_has_metainfo()) {
+    _this->_impl_.metainfo_ = new ::proto::ResponseMetaInfoV1(*from._impl_.metainfo_);
   }
   if (from._internal_has_permissiongroup()) {
     _this->_impl_.permissiongroup_ = new ::proto::PermissionGroupMetaInfoV1(*from._impl_.permissiongroup_);
   }
-  _this->_impl_.status_ = from._impl_.status_;
   // @@protoc_insertion_point(copy_constructor:proto.GetPermissionGroupResponse)
 }
 
@@ -3711,15 +3368,10 @@ inline void GetPermissionGroupResponse::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.message_){}
+      decltype(_impl_.metainfo_){nullptr}
     , decltype(_impl_.permissiongroup_){nullptr}
-    , decltype(_impl_.status_){false}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.message_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.message_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 GetPermissionGroupResponse::~GetPermissionGroupResponse() {
@@ -3733,7 +3385,7 @@ GetPermissionGroupResponse::~GetPermissionGroupResponse() {
 
 inline void GetPermissionGroupResponse::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.message_.Destroy();
+  if (this != internal_default_instance()) delete _impl_.metainfo_;
   if (this != internal_default_instance()) delete _impl_.permissiongroup_;
 }
 
@@ -3747,12 +3399,14 @@ void GetPermissionGroupResponse::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.message_.ClearToEmpty();
+  if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
+    delete _impl_.metainfo_;
+  }
+  _impl_.metainfo_ = nullptr;
   if (GetArenaForAllocation() == nullptr && _impl_.permissiongroup_ != nullptr) {
     delete _impl_.permissiongroup_;
   }
   _impl_.permissiongroup_ = nullptr;
-  _impl_.status_ = false;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -3762,27 +3416,17 @@ const char* GetPermissionGroupResponse::_InternalParse(const char* ptr, ::_pbi::
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bool status = 1;
+      // .proto.ResponseMetaInfoV1 metaInfo = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _impl_.status_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_metainfo(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // string Message = 2;
+      // .proto.PermissionGroupMetaInfoV1 PermissionGroup = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_message();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "proto.GetPermissionGroupResponse.Message"));
-        } else
-          goto handle_unusual;
-        continue;
-      // .proto.PermissionGroupMetaInfoV1 PermissionGroup = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_permissiongroup(), ptr);
           CHK_(ptr);
         } else
@@ -3817,26 +3461,17 @@ uint8_t* GetPermissionGroupResponse::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bool status = 1;
-  if (this->_internal_status() != 0) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_status(), target);
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  if (this->_internal_has_metainfo()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::metainfo(this),
+        _Internal::metainfo(this).GetCachedSize(), target, stream);
   }
 
-  // string Message = 2;
-  if (!this->_internal_message().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_message().data(), static_cast<int>(this->_internal_message().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "proto.GetPermissionGroupResponse.Message");
-    target = stream->WriteStringMaybeAliased(
-        2, this->_internal_message(), target);
-  }
-
-  // .proto.PermissionGroupMetaInfoV1 PermissionGroup = 3;
+  // .proto.PermissionGroupMetaInfoV1 PermissionGroup = 2;
   if (this->_internal_has_permissiongroup()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(3, _Internal::permissiongroup(this),
+      InternalWriteMessage(2, _Internal::permissiongroup(this),
         _Internal::permissiongroup(this).GetCachedSize(), target, stream);
   }
 
@@ -3856,23 +3491,18 @@ size_t GetPermissionGroupResponse::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string Message = 2;
-  if (!this->_internal_message().empty()) {
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  if (this->_internal_has_metainfo()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_message());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.metainfo_);
   }
 
-  // .proto.PermissionGroupMetaInfoV1 PermissionGroup = 3;
+  // .proto.PermissionGroupMetaInfoV1 PermissionGroup = 2;
   if (this->_internal_has_permissiongroup()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.permissiongroup_);
-  }
-
-  // bool status = 1;
-  if (this->_internal_status() != 0) {
-    total_size += 1 + 1;
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -3893,15 +3523,13 @@ void GetPermissionGroupResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_message().empty()) {
-    _this->_internal_set_message(from._internal_message());
+  if (from._internal_has_metainfo()) {
+    _this->_internal_mutable_metainfo()->::proto::ResponseMetaInfoV1::MergeFrom(
+        from._internal_metainfo());
   }
   if (from._internal_has_permissiongroup()) {
     _this->_internal_mutable_permissiongroup()->::proto::PermissionGroupMetaInfoV1::MergeFrom(
         from._internal_permissiongroup());
-  }
-  if (from._internal_status() != 0) {
-    _this->_internal_set_status(from._internal_status());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -3919,19 +3547,13 @@ bool GetPermissionGroupResponse::IsInitialized() const {
 
 void GetPermissionGroupResponse::InternalSwap(GetPermissionGroupResponse* other) {
   using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.message_, lhs_arena,
-      &other->_impl_.message_, rhs_arena
-  );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(GetPermissionGroupResponse, _impl_.status_)
-      + sizeof(GetPermissionGroupResponse::_impl_.status_)
-      - PROTOBUF_FIELD_OFFSET(GetPermissionGroupResponse, _impl_.permissiongroup_)>(
-          reinterpret_cast<char*>(&_impl_.permissiongroup_),
-          reinterpret_cast<char*>(&other->_impl_.permissiongroup_));
+      PROTOBUF_FIELD_OFFSET(GetPermissionGroupResponse, _impl_.permissiongroup_)
+      + sizeof(GetPermissionGroupResponse::_impl_.permissiongroup_)
+      - PROTOBUF_FIELD_OFFSET(GetPermissionGroupResponse, _impl_.metainfo_)>(
+          reinterpret_cast<char*>(&_impl_.metainfo_),
+          reinterpret_cast<char*>(&other->_impl_.metainfo_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata GetPermissionGroupResponse::GetMetadata() const {
@@ -3944,8 +3566,19 @@ void GetPermissionGroupResponse::InternalSwap(GetPermissionGroupResponse* other)
 
 class GetAllPermissionGroupResponse::_Internal {
  public:
+  static const ::proto::ResponseMetaInfoV1& metainfo(const GetAllPermissionGroupResponse* msg);
 };
 
+const ::proto::ResponseMetaInfoV1&
+GetAllPermissionGroupResponse::_Internal::metainfo(const GetAllPermissionGroupResponse* msg) {
+  return *msg->_impl_.metainfo_;
+}
+void GetAllPermissionGroupResponse::clear_metainfo() {
+  if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
+    delete _impl_.metainfo_;
+  }
+  _impl_.metainfo_ = nullptr;
+}
 void GetAllPermissionGroupResponse::clear_permissiongrouplist() {
   _impl_.permissiongrouplist_.Clear();
 }
@@ -3960,20 +3593,13 @@ GetAllPermissionGroupResponse::GetAllPermissionGroupResponse(const GetAllPermiss
   GetAllPermissionGroupResponse* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.permissiongrouplist_){from._impl_.permissiongrouplist_}
-    , decltype(_impl_.message_){}
-    , decltype(_impl_.status_){}
+    , decltype(_impl_.metainfo_){nullptr}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.message_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.message_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_message().empty()) {
-    _this->_impl_.message_.Set(from._internal_message(), 
-      _this->GetArenaForAllocation());
+  if (from._internal_has_metainfo()) {
+    _this->_impl_.metainfo_ = new ::proto::ResponseMetaInfoV1(*from._impl_.metainfo_);
   }
-  _this->_impl_.status_ = from._impl_.status_;
   // @@protoc_insertion_point(copy_constructor:proto.GetAllPermissionGroupResponse)
 }
 
@@ -3983,14 +3609,9 @@ inline void GetAllPermissionGroupResponse::SharedCtor(
   (void)is_message_owned;
   new (&_impl_) Impl_{
       decltype(_impl_.permissiongrouplist_){arena}
-    , decltype(_impl_.message_){}
-    , decltype(_impl_.status_){false}
+    , decltype(_impl_.metainfo_){nullptr}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.message_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.message_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 GetAllPermissionGroupResponse::~GetAllPermissionGroupResponse() {
@@ -4005,7 +3626,7 @@ GetAllPermissionGroupResponse::~GetAllPermissionGroupResponse() {
 inline void GetAllPermissionGroupResponse::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   _impl_.permissiongrouplist_.~RepeatedPtrField();
-  _impl_.message_.Destroy();
+  if (this != internal_default_instance()) delete _impl_.metainfo_;
 }
 
 void GetAllPermissionGroupResponse::SetCachedSize(int size) const {
@@ -4019,8 +3640,10 @@ void GetAllPermissionGroupResponse::Clear() {
   (void) cached_has_bits;
 
   _impl_.permissiongrouplist_.Clear();
-  _impl_.message_.ClearToEmpty();
-  _impl_.status_ = false;
+  if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
+    delete _impl_.metainfo_;
+  }
+  _impl_.metainfo_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -4030,34 +3653,24 @@ const char* GetAllPermissionGroupResponse::_InternalParse(const char* ptr, ::_pb
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bool status = 1;
+      // .proto.ResponseMetaInfoV1 metaInfo = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _impl_.status_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_metainfo(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // string Message = 2;
+      // repeated .proto.PermissionGroupMetaInfoV1 PermissionGroupList = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_message();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "proto.GetAllPermissionGroupResponse.Message"));
-        } else
-          goto handle_unusual;
-        continue;
-      // repeated .proto.PermissionGroupMetaInfoV1 PermissionGroupList = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           ptr -= 1;
           do {
             ptr += 1;
             ptr = ctx->ParseMessage(_internal_add_permissiongrouplist(), ptr);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<26>(ptr));
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<18>(ptr));
         } else
           goto handle_unusual;
         continue;
@@ -4090,28 +3703,19 @@ uint8_t* GetAllPermissionGroupResponse::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bool status = 1;
-  if (this->_internal_status() != 0) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_status(), target);
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  if (this->_internal_has_metainfo()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::metainfo(this),
+        _Internal::metainfo(this).GetCachedSize(), target, stream);
   }
 
-  // string Message = 2;
-  if (!this->_internal_message().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_message().data(), static_cast<int>(this->_internal_message().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "proto.GetAllPermissionGroupResponse.Message");
-    target = stream->WriteStringMaybeAliased(
-        2, this->_internal_message(), target);
-  }
-
-  // repeated .proto.PermissionGroupMetaInfoV1 PermissionGroupList = 3;
+  // repeated .proto.PermissionGroupMetaInfoV1 PermissionGroupList = 2;
   for (unsigned i = 0,
       n = static_cast<unsigned>(this->_internal_permissiongrouplist_size()); i < n; i++) {
     const auto& repfield = this->_internal_permissiongrouplist(i);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(3, repfield, repfield.GetCachedSize(), target, stream);
+        InternalWriteMessage(2, repfield, repfield.GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -4130,23 +3734,18 @@ size_t GetAllPermissionGroupResponse::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated .proto.PermissionGroupMetaInfoV1 PermissionGroupList = 3;
+  // repeated .proto.PermissionGroupMetaInfoV1 PermissionGroupList = 2;
   total_size += 1UL * this->_internal_permissiongrouplist_size();
   for (const auto& msg : this->_impl_.permissiongrouplist_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
-  // string Message = 2;
-  if (!this->_internal_message().empty()) {
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  if (this->_internal_has_metainfo()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_message());
-  }
-
-  // bool status = 1;
-  if (this->_internal_status() != 0) {
-    total_size += 1 + 1;
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.metainfo_);
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -4168,11 +3767,9 @@ void GetAllPermissionGroupResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& 
   (void) cached_has_bits;
 
   _this->_impl_.permissiongrouplist_.MergeFrom(from._impl_.permissiongrouplist_);
-  if (!from._internal_message().empty()) {
-    _this->_internal_set_message(from._internal_message());
-  }
-  if (from._internal_status() != 0) {
-    _this->_internal_set_status(from._internal_status());
+  if (from._internal_has_metainfo()) {
+    _this->_internal_mutable_metainfo()->::proto::ResponseMetaInfoV1::MergeFrom(
+        from._internal_metainfo());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -4190,15 +3787,9 @@ bool GetAllPermissionGroupResponse::IsInitialized() const {
 
 void GetAllPermissionGroupResponse::InternalSwap(GetAllPermissionGroupResponse* other) {
   using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   _impl_.permissiongrouplist_.InternalSwap(&other->_impl_.permissiongrouplist_);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.message_, lhs_arena,
-      &other->_impl_.message_, rhs_arena
-  );
-  swap(_impl_.status_, other->_impl_.status_);
+  swap(_impl_.metainfo_, other->_impl_.metainfo_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata GetAllPermissionGroupResponse::GetMetadata() const {
@@ -4211,8 +3802,19 @@ void GetAllPermissionGroupResponse::InternalSwap(GetAllPermissionGroupResponse* 
 
 class ChangeUserPermissionGroupResponse::_Internal {
  public:
+  static const ::proto::ResponseMetaInfoV1& metainfo(const ChangeUserPermissionGroupResponse* msg);
 };
 
+const ::proto::ResponseMetaInfoV1&
+ChangeUserPermissionGroupResponse::_Internal::metainfo(const ChangeUserPermissionGroupResponse* msg) {
+  return *msg->_impl_.metainfo_;
+}
+void ChangeUserPermissionGroupResponse::clear_metainfo() {
+  if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
+    delete _impl_.metainfo_;
+  }
+  _impl_.metainfo_ = nullptr;
+}
 ChangeUserPermissionGroupResponse::ChangeUserPermissionGroupResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
@@ -4223,20 +3825,13 @@ ChangeUserPermissionGroupResponse::ChangeUserPermissionGroupResponse(const Chang
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   ChangeUserPermissionGroupResponse* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.message_){}
-    , decltype(_impl_.status_){}
+      decltype(_impl_.metainfo_){nullptr}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.message_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.message_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_message().empty()) {
-    _this->_impl_.message_.Set(from._internal_message(), 
-      _this->GetArenaForAllocation());
+  if (from._internal_has_metainfo()) {
+    _this->_impl_.metainfo_ = new ::proto::ResponseMetaInfoV1(*from._impl_.metainfo_);
   }
-  _this->_impl_.status_ = from._impl_.status_;
   // @@protoc_insertion_point(copy_constructor:proto.ChangeUserPermissionGroupResponse)
 }
 
@@ -4245,14 +3840,9 @@ inline void ChangeUserPermissionGroupResponse::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.message_){}
-    , decltype(_impl_.status_){false}
+      decltype(_impl_.metainfo_){nullptr}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.message_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.message_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 ChangeUserPermissionGroupResponse::~ChangeUserPermissionGroupResponse() {
@@ -4266,7 +3856,7 @@ ChangeUserPermissionGroupResponse::~ChangeUserPermissionGroupResponse() {
 
 inline void ChangeUserPermissionGroupResponse::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.message_.Destroy();
+  if (this != internal_default_instance()) delete _impl_.metainfo_;
 }
 
 void ChangeUserPermissionGroupResponse::SetCachedSize(int size) const {
@@ -4279,8 +3869,10 @@ void ChangeUserPermissionGroupResponse::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.message_.ClearToEmpty();
-  _impl_.status_ = false;
+  if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
+    delete _impl_.metainfo_;
+  }
+  _impl_.metainfo_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -4290,21 +3882,11 @@ const char* ChangeUserPermissionGroupResponse::_InternalParse(const char* ptr, :
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bool status = 1;
+      // .proto.ResponseMetaInfoV1 metaInfo = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _impl_.status_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_metainfo(), ptr);
           CHK_(ptr);
-        } else
-          goto handle_unusual;
-        continue;
-      // string Message = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_message();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "proto.ChangeUserPermissionGroupResponse.Message"));
         } else
           goto handle_unusual;
         continue;
@@ -4337,20 +3919,11 @@ uint8_t* ChangeUserPermissionGroupResponse::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bool status = 1;
-  if (this->_internal_status() != 0) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_status(), target);
-  }
-
-  // string Message = 2;
-  if (!this->_internal_message().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_message().data(), static_cast<int>(this->_internal_message().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "proto.ChangeUserPermissionGroupResponse.Message");
-    target = stream->WriteStringMaybeAliased(
-        2, this->_internal_message(), target);
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  if (this->_internal_has_metainfo()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::metainfo(this),
+        _Internal::metainfo(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -4369,16 +3942,11 @@ size_t ChangeUserPermissionGroupResponse::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string Message = 2;
-  if (!this->_internal_message().empty()) {
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  if (this->_internal_has_metainfo()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_message());
-  }
-
-  // bool status = 1;
-  if (this->_internal_status() != 0) {
-    total_size += 1 + 1;
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.metainfo_);
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -4399,11 +3967,9 @@ void ChangeUserPermissionGroupResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Messa
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_message().empty()) {
-    _this->_internal_set_message(from._internal_message());
-  }
-  if (from._internal_status() != 0) {
-    _this->_internal_set_status(from._internal_status());
+  if (from._internal_has_metainfo()) {
+    _this->_internal_mutable_metainfo()->::proto::ResponseMetaInfoV1::MergeFrom(
+        from._internal_metainfo());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -4421,14 +3987,8 @@ bool ChangeUserPermissionGroupResponse::IsInitialized() const {
 
 void ChangeUserPermissionGroupResponse::InternalSwap(ChangeUserPermissionGroupResponse* other) {
   using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.message_, lhs_arena,
-      &other->_impl_.message_, rhs_arena
-  );
-  swap(_impl_.status_, other->_impl_.status_);
+  swap(_impl_.metainfo_, other->_impl_.metainfo_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata ChangeUserPermissionGroupResponse::GetMetadata() const {
@@ -4441,12 +4001,23 @@ void ChangeUserPermissionGroupResponse::InternalSwap(ChangeUserPermissionGroupRe
 
 class CreateProjectResponse::_Internal {
  public:
+  static const ::proto::ResponseMetaInfoV1& metainfo(const CreateProjectResponse* msg);
   static const ::proto::ProjectMetaInfoV1& projectinfo(const CreateProjectResponse* msg);
 };
 
+const ::proto::ResponseMetaInfoV1&
+CreateProjectResponse::_Internal::metainfo(const CreateProjectResponse* msg) {
+  return *msg->_impl_.metainfo_;
+}
 const ::proto::ProjectMetaInfoV1&
 CreateProjectResponse::_Internal::projectinfo(const CreateProjectResponse* msg) {
   return *msg->_impl_.projectinfo_;
+}
+void CreateProjectResponse::clear_metainfo() {
+  if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
+    delete _impl_.metainfo_;
+  }
+  _impl_.metainfo_ = nullptr;
 }
 void CreateProjectResponse::clear_projectinfo() {
   if (GetArenaForAllocation() == nullptr && _impl_.projectinfo_ != nullptr) {
@@ -4464,24 +4035,17 @@ CreateProjectResponse::CreateProjectResponse(const CreateProjectResponse& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   CreateProjectResponse* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.message_){}
+      decltype(_impl_.metainfo_){nullptr}
     , decltype(_impl_.projectinfo_){nullptr}
-    , decltype(_impl_.status_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.message_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.message_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_message().empty()) {
-    _this->_impl_.message_.Set(from._internal_message(), 
-      _this->GetArenaForAllocation());
+  if (from._internal_has_metainfo()) {
+    _this->_impl_.metainfo_ = new ::proto::ResponseMetaInfoV1(*from._impl_.metainfo_);
   }
   if (from._internal_has_projectinfo()) {
     _this->_impl_.projectinfo_ = new ::proto::ProjectMetaInfoV1(*from._impl_.projectinfo_);
   }
-  _this->_impl_.status_ = from._impl_.status_;
   // @@protoc_insertion_point(copy_constructor:proto.CreateProjectResponse)
 }
 
@@ -4490,15 +4054,10 @@ inline void CreateProjectResponse::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.message_){}
+      decltype(_impl_.metainfo_){nullptr}
     , decltype(_impl_.projectinfo_){nullptr}
-    , decltype(_impl_.status_){false}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.message_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.message_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 CreateProjectResponse::~CreateProjectResponse() {
@@ -4512,7 +4071,7 @@ CreateProjectResponse::~CreateProjectResponse() {
 
 inline void CreateProjectResponse::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.message_.Destroy();
+  if (this != internal_default_instance()) delete _impl_.metainfo_;
   if (this != internal_default_instance()) delete _impl_.projectinfo_;
 }
 
@@ -4526,12 +4085,14 @@ void CreateProjectResponse::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.message_.ClearToEmpty();
+  if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
+    delete _impl_.metainfo_;
+  }
+  _impl_.metainfo_ = nullptr;
   if (GetArenaForAllocation() == nullptr && _impl_.projectinfo_ != nullptr) {
     delete _impl_.projectinfo_;
   }
   _impl_.projectinfo_ = nullptr;
-  _impl_.status_ = false;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -4541,27 +4102,17 @@ const char* CreateProjectResponse::_InternalParse(const char* ptr, ::_pbi::Parse
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bool status = 1;
+      // .proto.ResponseMetaInfoV1 metaInfo = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _impl_.status_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_metainfo(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // string Message = 2;
+      // .proto.ProjectMetaInfoV1 ProjectInfo = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_message();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "proto.CreateProjectResponse.Message"));
-        } else
-          goto handle_unusual;
-        continue;
-      // .proto.ProjectMetaInfoV1 ProjectInfo = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_projectinfo(), ptr);
           CHK_(ptr);
         } else
@@ -4596,26 +4147,17 @@ uint8_t* CreateProjectResponse::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bool status = 1;
-  if (this->_internal_status() != 0) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_status(), target);
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  if (this->_internal_has_metainfo()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::metainfo(this),
+        _Internal::metainfo(this).GetCachedSize(), target, stream);
   }
 
-  // string Message = 2;
-  if (!this->_internal_message().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_message().data(), static_cast<int>(this->_internal_message().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "proto.CreateProjectResponse.Message");
-    target = stream->WriteStringMaybeAliased(
-        2, this->_internal_message(), target);
-  }
-
-  // .proto.ProjectMetaInfoV1 ProjectInfo = 3;
+  // .proto.ProjectMetaInfoV1 ProjectInfo = 2;
   if (this->_internal_has_projectinfo()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(3, _Internal::projectinfo(this),
+      InternalWriteMessage(2, _Internal::projectinfo(this),
         _Internal::projectinfo(this).GetCachedSize(), target, stream);
   }
 
@@ -4635,23 +4177,18 @@ size_t CreateProjectResponse::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string Message = 2;
-  if (!this->_internal_message().empty()) {
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  if (this->_internal_has_metainfo()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_message());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.metainfo_);
   }
 
-  // .proto.ProjectMetaInfoV1 ProjectInfo = 3;
+  // .proto.ProjectMetaInfoV1 ProjectInfo = 2;
   if (this->_internal_has_projectinfo()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.projectinfo_);
-  }
-
-  // bool status = 1;
-  if (this->_internal_status() != 0) {
-    total_size += 1 + 1;
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -4672,15 +4209,13 @@ void CreateProjectResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, 
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_message().empty()) {
-    _this->_internal_set_message(from._internal_message());
+  if (from._internal_has_metainfo()) {
+    _this->_internal_mutable_metainfo()->::proto::ResponseMetaInfoV1::MergeFrom(
+        from._internal_metainfo());
   }
   if (from._internal_has_projectinfo()) {
     _this->_internal_mutable_projectinfo()->::proto::ProjectMetaInfoV1::MergeFrom(
         from._internal_projectinfo());
-  }
-  if (from._internal_status() != 0) {
-    _this->_internal_set_status(from._internal_status());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -4698,19 +4233,13 @@ bool CreateProjectResponse::IsInitialized() const {
 
 void CreateProjectResponse::InternalSwap(CreateProjectResponse* other) {
   using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.message_, lhs_arena,
-      &other->_impl_.message_, rhs_arena
-  );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(CreateProjectResponse, _impl_.status_)
-      + sizeof(CreateProjectResponse::_impl_.status_)
-      - PROTOBUF_FIELD_OFFSET(CreateProjectResponse, _impl_.projectinfo_)>(
-          reinterpret_cast<char*>(&_impl_.projectinfo_),
-          reinterpret_cast<char*>(&other->_impl_.projectinfo_));
+      PROTOBUF_FIELD_OFFSET(CreateProjectResponse, _impl_.projectinfo_)
+      + sizeof(CreateProjectResponse::_impl_.projectinfo_)
+      - PROTOBUF_FIELD_OFFSET(CreateProjectResponse, _impl_.metainfo_)>(
+          reinterpret_cast<char*>(&_impl_.metainfo_),
+          reinterpret_cast<char*>(&other->_impl_.metainfo_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata CreateProjectResponse::GetMetadata() const {
@@ -4723,12 +4252,23 @@ void CreateProjectResponse::InternalSwap(CreateProjectResponse* other) {
 
 class DeleteProjectResponse::_Internal {
  public:
+  static const ::proto::ResponseMetaInfoV1& metainfo(const DeleteProjectResponse* msg);
   static const ::proto::ProjectMetaInfoV1& projectinfo(const DeleteProjectResponse* msg);
 };
 
+const ::proto::ResponseMetaInfoV1&
+DeleteProjectResponse::_Internal::metainfo(const DeleteProjectResponse* msg) {
+  return *msg->_impl_.metainfo_;
+}
 const ::proto::ProjectMetaInfoV1&
 DeleteProjectResponse::_Internal::projectinfo(const DeleteProjectResponse* msg) {
   return *msg->_impl_.projectinfo_;
+}
+void DeleteProjectResponse::clear_metainfo() {
+  if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
+    delete _impl_.metainfo_;
+  }
+  _impl_.metainfo_ = nullptr;
 }
 void DeleteProjectResponse::clear_projectinfo() {
   if (GetArenaForAllocation() == nullptr && _impl_.projectinfo_ != nullptr) {
@@ -4746,24 +4286,17 @@ DeleteProjectResponse::DeleteProjectResponse(const DeleteProjectResponse& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   DeleteProjectResponse* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.message_){}
+      decltype(_impl_.metainfo_){nullptr}
     , decltype(_impl_.projectinfo_){nullptr}
-    , decltype(_impl_.status_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.message_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.message_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_message().empty()) {
-    _this->_impl_.message_.Set(from._internal_message(), 
-      _this->GetArenaForAllocation());
+  if (from._internal_has_metainfo()) {
+    _this->_impl_.metainfo_ = new ::proto::ResponseMetaInfoV1(*from._impl_.metainfo_);
   }
   if (from._internal_has_projectinfo()) {
     _this->_impl_.projectinfo_ = new ::proto::ProjectMetaInfoV1(*from._impl_.projectinfo_);
   }
-  _this->_impl_.status_ = from._impl_.status_;
   // @@protoc_insertion_point(copy_constructor:proto.DeleteProjectResponse)
 }
 
@@ -4772,15 +4305,10 @@ inline void DeleteProjectResponse::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.message_){}
+      decltype(_impl_.metainfo_){nullptr}
     , decltype(_impl_.projectinfo_){nullptr}
-    , decltype(_impl_.status_){false}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.message_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.message_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 DeleteProjectResponse::~DeleteProjectResponse() {
@@ -4794,7 +4322,7 @@ DeleteProjectResponse::~DeleteProjectResponse() {
 
 inline void DeleteProjectResponse::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.message_.Destroy();
+  if (this != internal_default_instance()) delete _impl_.metainfo_;
   if (this != internal_default_instance()) delete _impl_.projectinfo_;
 }
 
@@ -4808,12 +4336,14 @@ void DeleteProjectResponse::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.message_.ClearToEmpty();
+  if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
+    delete _impl_.metainfo_;
+  }
+  _impl_.metainfo_ = nullptr;
   if (GetArenaForAllocation() == nullptr && _impl_.projectinfo_ != nullptr) {
     delete _impl_.projectinfo_;
   }
   _impl_.projectinfo_ = nullptr;
-  _impl_.status_ = false;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -4823,27 +4353,17 @@ const char* DeleteProjectResponse::_InternalParse(const char* ptr, ::_pbi::Parse
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bool status = 1;
+      // .proto.ResponseMetaInfoV1 metaInfo = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _impl_.status_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_metainfo(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // string Message = 2;
+      // .proto.ProjectMetaInfoV1 ProjectInfo = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_message();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "proto.DeleteProjectResponse.Message"));
-        } else
-          goto handle_unusual;
-        continue;
-      // .proto.ProjectMetaInfoV1 ProjectInfo = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_projectinfo(), ptr);
           CHK_(ptr);
         } else
@@ -4878,26 +4398,17 @@ uint8_t* DeleteProjectResponse::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bool status = 1;
-  if (this->_internal_status() != 0) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_status(), target);
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  if (this->_internal_has_metainfo()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::metainfo(this),
+        _Internal::metainfo(this).GetCachedSize(), target, stream);
   }
 
-  // string Message = 2;
-  if (!this->_internal_message().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_message().data(), static_cast<int>(this->_internal_message().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "proto.DeleteProjectResponse.Message");
-    target = stream->WriteStringMaybeAliased(
-        2, this->_internal_message(), target);
-  }
-
-  // .proto.ProjectMetaInfoV1 ProjectInfo = 3;
+  // .proto.ProjectMetaInfoV1 ProjectInfo = 2;
   if (this->_internal_has_projectinfo()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(3, _Internal::projectinfo(this),
+      InternalWriteMessage(2, _Internal::projectinfo(this),
         _Internal::projectinfo(this).GetCachedSize(), target, stream);
   }
 
@@ -4917,23 +4428,18 @@ size_t DeleteProjectResponse::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string Message = 2;
-  if (!this->_internal_message().empty()) {
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  if (this->_internal_has_metainfo()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_message());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.metainfo_);
   }
 
-  // .proto.ProjectMetaInfoV1 ProjectInfo = 3;
+  // .proto.ProjectMetaInfoV1 ProjectInfo = 2;
   if (this->_internal_has_projectinfo()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.projectinfo_);
-  }
-
-  // bool status = 1;
-  if (this->_internal_status() != 0) {
-    total_size += 1 + 1;
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -4954,15 +4460,13 @@ void DeleteProjectResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, 
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_message().empty()) {
-    _this->_internal_set_message(from._internal_message());
+  if (from._internal_has_metainfo()) {
+    _this->_internal_mutable_metainfo()->::proto::ResponseMetaInfoV1::MergeFrom(
+        from._internal_metainfo());
   }
   if (from._internal_has_projectinfo()) {
     _this->_internal_mutable_projectinfo()->::proto::ProjectMetaInfoV1::MergeFrom(
         from._internal_projectinfo());
-  }
-  if (from._internal_status() != 0) {
-    _this->_internal_set_status(from._internal_status());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -4980,19 +4484,13 @@ bool DeleteProjectResponse::IsInitialized() const {
 
 void DeleteProjectResponse::InternalSwap(DeleteProjectResponse* other) {
   using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.message_, lhs_arena,
-      &other->_impl_.message_, rhs_arena
-  );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(DeleteProjectResponse, _impl_.status_)
-      + sizeof(DeleteProjectResponse::_impl_.status_)
-      - PROTOBUF_FIELD_OFFSET(DeleteProjectResponse, _impl_.projectinfo_)>(
-          reinterpret_cast<char*>(&_impl_.projectinfo_),
-          reinterpret_cast<char*>(&other->_impl_.projectinfo_));
+      PROTOBUF_FIELD_OFFSET(DeleteProjectResponse, _impl_.projectinfo_)
+      + sizeof(DeleteProjectResponse::_impl_.projectinfo_)
+      - PROTOBUF_FIELD_OFFSET(DeleteProjectResponse, _impl_.metainfo_)>(
+          reinterpret_cast<char*>(&_impl_.metainfo_),
+          reinterpret_cast<char*>(&other->_impl_.metainfo_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata DeleteProjectResponse::GetMetadata() const {
@@ -5005,12 +4503,23 @@ void DeleteProjectResponse::InternalSwap(DeleteProjectResponse* other) {
 
 class UpdateProjectResponse::_Internal {
  public:
+  static const ::proto::ResponseMetaInfoV1& metainfo(const UpdateProjectResponse* msg);
   static const ::proto::ProjectMetaInfoV1& projectinfo(const UpdateProjectResponse* msg);
 };
 
+const ::proto::ResponseMetaInfoV1&
+UpdateProjectResponse::_Internal::metainfo(const UpdateProjectResponse* msg) {
+  return *msg->_impl_.metainfo_;
+}
 const ::proto::ProjectMetaInfoV1&
 UpdateProjectResponse::_Internal::projectinfo(const UpdateProjectResponse* msg) {
   return *msg->_impl_.projectinfo_;
+}
+void UpdateProjectResponse::clear_metainfo() {
+  if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
+    delete _impl_.metainfo_;
+  }
+  _impl_.metainfo_ = nullptr;
 }
 void UpdateProjectResponse::clear_projectinfo() {
   if (GetArenaForAllocation() == nullptr && _impl_.projectinfo_ != nullptr) {
@@ -5028,24 +4537,17 @@ UpdateProjectResponse::UpdateProjectResponse(const UpdateProjectResponse& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   UpdateProjectResponse* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.message_){}
+      decltype(_impl_.metainfo_){nullptr}
     , decltype(_impl_.projectinfo_){nullptr}
-    , decltype(_impl_.status_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.message_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.message_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_message().empty()) {
-    _this->_impl_.message_.Set(from._internal_message(), 
-      _this->GetArenaForAllocation());
+  if (from._internal_has_metainfo()) {
+    _this->_impl_.metainfo_ = new ::proto::ResponseMetaInfoV1(*from._impl_.metainfo_);
   }
   if (from._internal_has_projectinfo()) {
     _this->_impl_.projectinfo_ = new ::proto::ProjectMetaInfoV1(*from._impl_.projectinfo_);
   }
-  _this->_impl_.status_ = from._impl_.status_;
   // @@protoc_insertion_point(copy_constructor:proto.UpdateProjectResponse)
 }
 
@@ -5054,15 +4556,10 @@ inline void UpdateProjectResponse::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.message_){}
+      decltype(_impl_.metainfo_){nullptr}
     , decltype(_impl_.projectinfo_){nullptr}
-    , decltype(_impl_.status_){false}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.message_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.message_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 UpdateProjectResponse::~UpdateProjectResponse() {
@@ -5076,7 +4573,7 @@ UpdateProjectResponse::~UpdateProjectResponse() {
 
 inline void UpdateProjectResponse::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.message_.Destroy();
+  if (this != internal_default_instance()) delete _impl_.metainfo_;
   if (this != internal_default_instance()) delete _impl_.projectinfo_;
 }
 
@@ -5090,12 +4587,14 @@ void UpdateProjectResponse::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.message_.ClearToEmpty();
+  if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
+    delete _impl_.metainfo_;
+  }
+  _impl_.metainfo_ = nullptr;
   if (GetArenaForAllocation() == nullptr && _impl_.projectinfo_ != nullptr) {
     delete _impl_.projectinfo_;
   }
   _impl_.projectinfo_ = nullptr;
-  _impl_.status_ = false;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -5105,27 +4604,17 @@ const char* UpdateProjectResponse::_InternalParse(const char* ptr, ::_pbi::Parse
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bool status = 1;
+      // .proto.ResponseMetaInfoV1 metaInfo = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _impl_.status_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_metainfo(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // string Message = 2;
+      // .proto.ProjectMetaInfoV1 ProjectInfo = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_message();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "proto.UpdateProjectResponse.Message"));
-        } else
-          goto handle_unusual;
-        continue;
-      // .proto.ProjectMetaInfoV1 ProjectInfo = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_projectinfo(), ptr);
           CHK_(ptr);
         } else
@@ -5160,26 +4649,17 @@ uint8_t* UpdateProjectResponse::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bool status = 1;
-  if (this->_internal_status() != 0) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_status(), target);
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  if (this->_internal_has_metainfo()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::metainfo(this),
+        _Internal::metainfo(this).GetCachedSize(), target, stream);
   }
 
-  // string Message = 2;
-  if (!this->_internal_message().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_message().data(), static_cast<int>(this->_internal_message().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "proto.UpdateProjectResponse.Message");
-    target = stream->WriteStringMaybeAliased(
-        2, this->_internal_message(), target);
-  }
-
-  // .proto.ProjectMetaInfoV1 ProjectInfo = 3;
+  // .proto.ProjectMetaInfoV1 ProjectInfo = 2;
   if (this->_internal_has_projectinfo()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(3, _Internal::projectinfo(this),
+      InternalWriteMessage(2, _Internal::projectinfo(this),
         _Internal::projectinfo(this).GetCachedSize(), target, stream);
   }
 
@@ -5199,23 +4679,18 @@ size_t UpdateProjectResponse::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string Message = 2;
-  if (!this->_internal_message().empty()) {
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  if (this->_internal_has_metainfo()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_message());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.metainfo_);
   }
 
-  // .proto.ProjectMetaInfoV1 ProjectInfo = 3;
+  // .proto.ProjectMetaInfoV1 ProjectInfo = 2;
   if (this->_internal_has_projectinfo()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.projectinfo_);
-  }
-
-  // bool status = 1;
-  if (this->_internal_status() != 0) {
-    total_size += 1 + 1;
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -5236,15 +4711,13 @@ void UpdateProjectResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, 
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_message().empty()) {
-    _this->_internal_set_message(from._internal_message());
+  if (from._internal_has_metainfo()) {
+    _this->_internal_mutable_metainfo()->::proto::ResponseMetaInfoV1::MergeFrom(
+        from._internal_metainfo());
   }
   if (from._internal_has_projectinfo()) {
     _this->_internal_mutable_projectinfo()->::proto::ProjectMetaInfoV1::MergeFrom(
         from._internal_projectinfo());
-  }
-  if (from._internal_status() != 0) {
-    _this->_internal_set_status(from._internal_status());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -5262,19 +4735,13 @@ bool UpdateProjectResponse::IsInitialized() const {
 
 void UpdateProjectResponse::InternalSwap(UpdateProjectResponse* other) {
   using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.message_, lhs_arena,
-      &other->_impl_.message_, rhs_arena
-  );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(UpdateProjectResponse, _impl_.status_)
-      + sizeof(UpdateProjectResponse::_impl_.status_)
-      - PROTOBUF_FIELD_OFFSET(UpdateProjectResponse, _impl_.projectinfo_)>(
-          reinterpret_cast<char*>(&_impl_.projectinfo_),
-          reinterpret_cast<char*>(&other->_impl_.projectinfo_));
+      PROTOBUF_FIELD_OFFSET(UpdateProjectResponse, _impl_.projectinfo_)
+      + sizeof(UpdateProjectResponse::_impl_.projectinfo_)
+      - PROTOBUF_FIELD_OFFSET(UpdateProjectResponse, _impl_.metainfo_)>(
+          reinterpret_cast<char*>(&_impl_.metainfo_),
+          reinterpret_cast<char*>(&other->_impl_.metainfo_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata UpdateProjectResponse::GetMetadata() const {
@@ -5287,12 +4754,23 @@ void UpdateProjectResponse::InternalSwap(UpdateProjectResponse* other) {
 
 class GetProjectResponse::_Internal {
  public:
+  static const ::proto::ResponseMetaInfoV1& metainfo(const GetProjectResponse* msg);
   static const ::proto::ProjectMetaInfoV1& projectinfo(const GetProjectResponse* msg);
 };
 
+const ::proto::ResponseMetaInfoV1&
+GetProjectResponse::_Internal::metainfo(const GetProjectResponse* msg) {
+  return *msg->_impl_.metainfo_;
+}
 const ::proto::ProjectMetaInfoV1&
 GetProjectResponse::_Internal::projectinfo(const GetProjectResponse* msg) {
   return *msg->_impl_.projectinfo_;
+}
+void GetProjectResponse::clear_metainfo() {
+  if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
+    delete _impl_.metainfo_;
+  }
+  _impl_.metainfo_ = nullptr;
 }
 void GetProjectResponse::clear_projectinfo() {
   if (GetArenaForAllocation() == nullptr && _impl_.projectinfo_ != nullptr) {
@@ -5310,24 +4788,17 @@ GetProjectResponse::GetProjectResponse(const GetProjectResponse& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   GetProjectResponse* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.message_){}
+      decltype(_impl_.metainfo_){nullptr}
     , decltype(_impl_.projectinfo_){nullptr}
-    , decltype(_impl_.status_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.message_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.message_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_message().empty()) {
-    _this->_impl_.message_.Set(from._internal_message(), 
-      _this->GetArenaForAllocation());
+  if (from._internal_has_metainfo()) {
+    _this->_impl_.metainfo_ = new ::proto::ResponseMetaInfoV1(*from._impl_.metainfo_);
   }
   if (from._internal_has_projectinfo()) {
     _this->_impl_.projectinfo_ = new ::proto::ProjectMetaInfoV1(*from._impl_.projectinfo_);
   }
-  _this->_impl_.status_ = from._impl_.status_;
   // @@protoc_insertion_point(copy_constructor:proto.GetProjectResponse)
 }
 
@@ -5336,15 +4807,10 @@ inline void GetProjectResponse::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.message_){}
+      decltype(_impl_.metainfo_){nullptr}
     , decltype(_impl_.projectinfo_){nullptr}
-    , decltype(_impl_.status_){false}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.message_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.message_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 GetProjectResponse::~GetProjectResponse() {
@@ -5358,7 +4824,7 @@ GetProjectResponse::~GetProjectResponse() {
 
 inline void GetProjectResponse::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.message_.Destroy();
+  if (this != internal_default_instance()) delete _impl_.metainfo_;
   if (this != internal_default_instance()) delete _impl_.projectinfo_;
 }
 
@@ -5372,12 +4838,14 @@ void GetProjectResponse::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.message_.ClearToEmpty();
+  if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
+    delete _impl_.metainfo_;
+  }
+  _impl_.metainfo_ = nullptr;
   if (GetArenaForAllocation() == nullptr && _impl_.projectinfo_ != nullptr) {
     delete _impl_.projectinfo_;
   }
   _impl_.projectinfo_ = nullptr;
-  _impl_.status_ = false;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -5387,27 +4855,17 @@ const char* GetProjectResponse::_InternalParse(const char* ptr, ::_pbi::ParseCon
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bool status = 1;
+      // .proto.ResponseMetaInfoV1 metaInfo = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _impl_.status_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_metainfo(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // string Message = 2;
+      // .proto.ProjectMetaInfoV1 ProjectInfo = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_message();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "proto.GetProjectResponse.Message"));
-        } else
-          goto handle_unusual;
-        continue;
-      // .proto.ProjectMetaInfoV1 ProjectInfo = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_projectinfo(), ptr);
           CHK_(ptr);
         } else
@@ -5442,26 +4900,17 @@ uint8_t* GetProjectResponse::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bool status = 1;
-  if (this->_internal_status() != 0) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_status(), target);
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  if (this->_internal_has_metainfo()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::metainfo(this),
+        _Internal::metainfo(this).GetCachedSize(), target, stream);
   }
 
-  // string Message = 2;
-  if (!this->_internal_message().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_message().data(), static_cast<int>(this->_internal_message().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "proto.GetProjectResponse.Message");
-    target = stream->WriteStringMaybeAliased(
-        2, this->_internal_message(), target);
-  }
-
-  // .proto.ProjectMetaInfoV1 ProjectInfo = 3;
+  // .proto.ProjectMetaInfoV1 ProjectInfo = 2;
   if (this->_internal_has_projectinfo()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(3, _Internal::projectinfo(this),
+      InternalWriteMessage(2, _Internal::projectinfo(this),
         _Internal::projectinfo(this).GetCachedSize(), target, stream);
   }
 
@@ -5481,23 +4930,18 @@ size_t GetProjectResponse::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string Message = 2;
-  if (!this->_internal_message().empty()) {
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  if (this->_internal_has_metainfo()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_message());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.metainfo_);
   }
 
-  // .proto.ProjectMetaInfoV1 ProjectInfo = 3;
+  // .proto.ProjectMetaInfoV1 ProjectInfo = 2;
   if (this->_internal_has_projectinfo()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.projectinfo_);
-  }
-
-  // bool status = 1;
-  if (this->_internal_status() != 0) {
-    total_size += 1 + 1;
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -5518,15 +4962,13 @@ void GetProjectResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, con
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_message().empty()) {
-    _this->_internal_set_message(from._internal_message());
+  if (from._internal_has_metainfo()) {
+    _this->_internal_mutable_metainfo()->::proto::ResponseMetaInfoV1::MergeFrom(
+        from._internal_metainfo());
   }
   if (from._internal_has_projectinfo()) {
     _this->_internal_mutable_projectinfo()->::proto::ProjectMetaInfoV1::MergeFrom(
         from._internal_projectinfo());
-  }
-  if (from._internal_status() != 0) {
-    _this->_internal_set_status(from._internal_status());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -5544,19 +4986,13 @@ bool GetProjectResponse::IsInitialized() const {
 
 void GetProjectResponse::InternalSwap(GetProjectResponse* other) {
   using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.message_, lhs_arena,
-      &other->_impl_.message_, rhs_arena
-  );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(GetProjectResponse, _impl_.status_)
-      + sizeof(GetProjectResponse::_impl_.status_)
-      - PROTOBUF_FIELD_OFFSET(GetProjectResponse, _impl_.projectinfo_)>(
-          reinterpret_cast<char*>(&_impl_.projectinfo_),
-          reinterpret_cast<char*>(&other->_impl_.projectinfo_));
+      PROTOBUF_FIELD_OFFSET(GetProjectResponse, _impl_.projectinfo_)
+      + sizeof(GetProjectResponse::_impl_.projectinfo_)
+      - PROTOBUF_FIELD_OFFSET(GetProjectResponse, _impl_.metainfo_)>(
+          reinterpret_cast<char*>(&_impl_.metainfo_),
+          reinterpret_cast<char*>(&other->_impl_.metainfo_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata GetProjectResponse::GetMetadata() const {
@@ -5569,8 +5005,19 @@ void GetProjectResponse::InternalSwap(GetProjectResponse* other) {
 
 class GetAllProjectResponse::_Internal {
  public:
+  static const ::proto::ResponseMetaInfoV1& metainfo(const GetAllProjectResponse* msg);
 };
 
+const ::proto::ResponseMetaInfoV1&
+GetAllProjectResponse::_Internal::metainfo(const GetAllProjectResponse* msg) {
+  return *msg->_impl_.metainfo_;
+}
+void GetAllProjectResponse::clear_metainfo() {
+  if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
+    delete _impl_.metainfo_;
+  }
+  _impl_.metainfo_ = nullptr;
+}
 void GetAllProjectResponse::clear_projectinfo() {
   _impl_.projectinfo_.Clear();
 }
@@ -5585,20 +5032,13 @@ GetAllProjectResponse::GetAllProjectResponse(const GetAllProjectResponse& from)
   GetAllProjectResponse* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.projectinfo_){from._impl_.projectinfo_}
-    , decltype(_impl_.message_){}
-    , decltype(_impl_.status_){}
+    , decltype(_impl_.metainfo_){nullptr}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.message_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.message_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_message().empty()) {
-    _this->_impl_.message_.Set(from._internal_message(), 
-      _this->GetArenaForAllocation());
+  if (from._internal_has_metainfo()) {
+    _this->_impl_.metainfo_ = new ::proto::ResponseMetaInfoV1(*from._impl_.metainfo_);
   }
-  _this->_impl_.status_ = from._impl_.status_;
   // @@protoc_insertion_point(copy_constructor:proto.GetAllProjectResponse)
 }
 
@@ -5608,14 +5048,9 @@ inline void GetAllProjectResponse::SharedCtor(
   (void)is_message_owned;
   new (&_impl_) Impl_{
       decltype(_impl_.projectinfo_){arena}
-    , decltype(_impl_.message_){}
-    , decltype(_impl_.status_){false}
+    , decltype(_impl_.metainfo_){nullptr}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.message_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.message_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 GetAllProjectResponse::~GetAllProjectResponse() {
@@ -5630,7 +5065,7 @@ GetAllProjectResponse::~GetAllProjectResponse() {
 inline void GetAllProjectResponse::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   _impl_.projectinfo_.~RepeatedPtrField();
-  _impl_.message_.Destroy();
+  if (this != internal_default_instance()) delete _impl_.metainfo_;
 }
 
 void GetAllProjectResponse::SetCachedSize(int size) const {
@@ -5644,8 +5079,10 @@ void GetAllProjectResponse::Clear() {
   (void) cached_has_bits;
 
   _impl_.projectinfo_.Clear();
-  _impl_.message_.ClearToEmpty();
-  _impl_.status_ = false;
+  if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
+    delete _impl_.metainfo_;
+  }
+  _impl_.metainfo_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -5655,34 +5092,24 @@ const char* GetAllProjectResponse::_InternalParse(const char* ptr, ::_pbi::Parse
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bool status = 1;
+      // .proto.ResponseMetaInfoV1 metaInfo = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _impl_.status_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_metainfo(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // string Message = 2;
+      // repeated .proto.ProjectMetaInfoV1 ProjectInfo = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_message();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "proto.GetAllProjectResponse.Message"));
-        } else
-          goto handle_unusual;
-        continue;
-      // repeated .proto.ProjectMetaInfoV1 ProjectInfo = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           ptr -= 1;
           do {
             ptr += 1;
             ptr = ctx->ParseMessage(_internal_add_projectinfo(), ptr);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<26>(ptr));
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<18>(ptr));
         } else
           goto handle_unusual;
         continue;
@@ -5715,28 +5142,19 @@ uint8_t* GetAllProjectResponse::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bool status = 1;
-  if (this->_internal_status() != 0) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_status(), target);
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  if (this->_internal_has_metainfo()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::metainfo(this),
+        _Internal::metainfo(this).GetCachedSize(), target, stream);
   }
 
-  // string Message = 2;
-  if (!this->_internal_message().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_message().data(), static_cast<int>(this->_internal_message().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "proto.GetAllProjectResponse.Message");
-    target = stream->WriteStringMaybeAliased(
-        2, this->_internal_message(), target);
-  }
-
-  // repeated .proto.ProjectMetaInfoV1 ProjectInfo = 3;
+  // repeated .proto.ProjectMetaInfoV1 ProjectInfo = 2;
   for (unsigned i = 0,
       n = static_cast<unsigned>(this->_internal_projectinfo_size()); i < n; i++) {
     const auto& repfield = this->_internal_projectinfo(i);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(3, repfield, repfield.GetCachedSize(), target, stream);
+        InternalWriteMessage(2, repfield, repfield.GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -5755,23 +5173,18 @@ size_t GetAllProjectResponse::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated .proto.ProjectMetaInfoV1 ProjectInfo = 3;
+  // repeated .proto.ProjectMetaInfoV1 ProjectInfo = 2;
   total_size += 1UL * this->_internal_projectinfo_size();
   for (const auto& msg : this->_impl_.projectinfo_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
-  // string Message = 2;
-  if (!this->_internal_message().empty()) {
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  if (this->_internal_has_metainfo()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_message());
-  }
-
-  // bool status = 1;
-  if (this->_internal_status() != 0) {
-    total_size += 1 + 1;
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.metainfo_);
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -5793,11 +5206,9 @@ void GetAllProjectResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, 
   (void) cached_has_bits;
 
   _this->_impl_.projectinfo_.MergeFrom(from._impl_.projectinfo_);
-  if (!from._internal_message().empty()) {
-    _this->_internal_set_message(from._internal_message());
-  }
-  if (from._internal_status() != 0) {
-    _this->_internal_set_status(from._internal_status());
+  if (from._internal_has_metainfo()) {
+    _this->_internal_mutable_metainfo()->::proto::ResponseMetaInfoV1::MergeFrom(
+        from._internal_metainfo());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -5815,15 +5226,9 @@ bool GetAllProjectResponse::IsInitialized() const {
 
 void GetAllProjectResponse::InternalSwap(GetAllProjectResponse* other) {
   using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   _impl_.projectinfo_.InternalSwap(&other->_impl_.projectinfo_);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.message_, lhs_arena,
-      &other->_impl_.message_, rhs_arena
-  );
-  swap(_impl_.status_, other->_impl_.status_);
+  swap(_impl_.metainfo_, other->_impl_.metainfo_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata GetAllProjectResponse::GetMetadata() const {
@@ -5836,12 +5241,23 @@ void GetAllProjectResponse::InternalSwap(GetAllProjectResponse* other) {
 
 class CreateSwcResponse::_Internal {
  public:
+  static const ::proto::ResponseMetaInfoV1& metainfo(const CreateSwcResponse* msg);
   static const ::proto::SwcMetaInfoV1& swcinfo(const CreateSwcResponse* msg);
 };
 
+const ::proto::ResponseMetaInfoV1&
+CreateSwcResponse::_Internal::metainfo(const CreateSwcResponse* msg) {
+  return *msg->_impl_.metainfo_;
+}
 const ::proto::SwcMetaInfoV1&
 CreateSwcResponse::_Internal::swcinfo(const CreateSwcResponse* msg) {
   return *msg->_impl_.swcinfo_;
+}
+void CreateSwcResponse::clear_metainfo() {
+  if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
+    delete _impl_.metainfo_;
+  }
+  _impl_.metainfo_ = nullptr;
 }
 void CreateSwcResponse::clear_swcinfo() {
   if (GetArenaForAllocation() == nullptr && _impl_.swcinfo_ != nullptr) {
@@ -5859,24 +5275,17 @@ CreateSwcResponse::CreateSwcResponse(const CreateSwcResponse& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   CreateSwcResponse* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.message_){}
+      decltype(_impl_.metainfo_){nullptr}
     , decltype(_impl_.swcinfo_){nullptr}
-    , decltype(_impl_.status_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.message_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.message_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_message().empty()) {
-    _this->_impl_.message_.Set(from._internal_message(), 
-      _this->GetArenaForAllocation());
+  if (from._internal_has_metainfo()) {
+    _this->_impl_.metainfo_ = new ::proto::ResponseMetaInfoV1(*from._impl_.metainfo_);
   }
   if (from._internal_has_swcinfo()) {
     _this->_impl_.swcinfo_ = new ::proto::SwcMetaInfoV1(*from._impl_.swcinfo_);
   }
-  _this->_impl_.status_ = from._impl_.status_;
   // @@protoc_insertion_point(copy_constructor:proto.CreateSwcResponse)
 }
 
@@ -5885,15 +5294,10 @@ inline void CreateSwcResponse::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.message_){}
+      decltype(_impl_.metainfo_){nullptr}
     , decltype(_impl_.swcinfo_){nullptr}
-    , decltype(_impl_.status_){false}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.message_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.message_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 CreateSwcResponse::~CreateSwcResponse() {
@@ -5907,7 +5311,7 @@ CreateSwcResponse::~CreateSwcResponse() {
 
 inline void CreateSwcResponse::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.message_.Destroy();
+  if (this != internal_default_instance()) delete _impl_.metainfo_;
   if (this != internal_default_instance()) delete _impl_.swcinfo_;
 }
 
@@ -5921,12 +5325,14 @@ void CreateSwcResponse::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.message_.ClearToEmpty();
+  if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
+    delete _impl_.metainfo_;
+  }
+  _impl_.metainfo_ = nullptr;
   if (GetArenaForAllocation() == nullptr && _impl_.swcinfo_ != nullptr) {
     delete _impl_.swcinfo_;
   }
   _impl_.swcinfo_ = nullptr;
-  _impl_.status_ = false;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -5936,27 +5342,17 @@ const char* CreateSwcResponse::_InternalParse(const char* ptr, ::_pbi::ParseCont
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bool status = 1;
+      // .proto.ResponseMetaInfoV1 metaInfo = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _impl_.status_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_metainfo(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // string Message = 2;
+      // .proto.SwcMetaInfoV1 SwcInfo = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_message();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "proto.CreateSwcResponse.Message"));
-        } else
-          goto handle_unusual;
-        continue;
-      // .proto.SwcMetaInfoV1 SwcInfo = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_swcinfo(), ptr);
           CHK_(ptr);
         } else
@@ -5991,26 +5387,17 @@ uint8_t* CreateSwcResponse::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bool status = 1;
-  if (this->_internal_status() != 0) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_status(), target);
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  if (this->_internal_has_metainfo()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::metainfo(this),
+        _Internal::metainfo(this).GetCachedSize(), target, stream);
   }
 
-  // string Message = 2;
-  if (!this->_internal_message().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_message().data(), static_cast<int>(this->_internal_message().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "proto.CreateSwcResponse.Message");
-    target = stream->WriteStringMaybeAliased(
-        2, this->_internal_message(), target);
-  }
-
-  // .proto.SwcMetaInfoV1 SwcInfo = 3;
+  // .proto.SwcMetaInfoV1 SwcInfo = 2;
   if (this->_internal_has_swcinfo()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(3, _Internal::swcinfo(this),
+      InternalWriteMessage(2, _Internal::swcinfo(this),
         _Internal::swcinfo(this).GetCachedSize(), target, stream);
   }
 
@@ -6030,23 +5417,18 @@ size_t CreateSwcResponse::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string Message = 2;
-  if (!this->_internal_message().empty()) {
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  if (this->_internal_has_metainfo()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_message());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.metainfo_);
   }
 
-  // .proto.SwcMetaInfoV1 SwcInfo = 3;
+  // .proto.SwcMetaInfoV1 SwcInfo = 2;
   if (this->_internal_has_swcinfo()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.swcinfo_);
-  }
-
-  // bool status = 1;
-  if (this->_internal_status() != 0) {
-    total_size += 1 + 1;
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -6067,15 +5449,13 @@ void CreateSwcResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, cons
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_message().empty()) {
-    _this->_internal_set_message(from._internal_message());
+  if (from._internal_has_metainfo()) {
+    _this->_internal_mutable_metainfo()->::proto::ResponseMetaInfoV1::MergeFrom(
+        from._internal_metainfo());
   }
   if (from._internal_has_swcinfo()) {
     _this->_internal_mutable_swcinfo()->::proto::SwcMetaInfoV1::MergeFrom(
         from._internal_swcinfo());
-  }
-  if (from._internal_status() != 0) {
-    _this->_internal_set_status(from._internal_status());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -6093,19 +5473,13 @@ bool CreateSwcResponse::IsInitialized() const {
 
 void CreateSwcResponse::InternalSwap(CreateSwcResponse* other) {
   using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.message_, lhs_arena,
-      &other->_impl_.message_, rhs_arena
-  );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(CreateSwcResponse, _impl_.status_)
-      + sizeof(CreateSwcResponse::_impl_.status_)
-      - PROTOBUF_FIELD_OFFSET(CreateSwcResponse, _impl_.swcinfo_)>(
-          reinterpret_cast<char*>(&_impl_.swcinfo_),
-          reinterpret_cast<char*>(&other->_impl_.swcinfo_));
+      PROTOBUF_FIELD_OFFSET(CreateSwcResponse, _impl_.swcinfo_)
+      + sizeof(CreateSwcResponse::_impl_.swcinfo_)
+      - PROTOBUF_FIELD_OFFSET(CreateSwcResponse, _impl_.metainfo_)>(
+          reinterpret_cast<char*>(&_impl_.metainfo_),
+          reinterpret_cast<char*>(&other->_impl_.metainfo_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata CreateSwcResponse::GetMetadata() const {
@@ -6118,12 +5492,23 @@ void CreateSwcResponse::InternalSwap(CreateSwcResponse* other) {
 
 class DeleteSwcResponse::_Internal {
  public:
+  static const ::proto::ResponseMetaInfoV1& metainfo(const DeleteSwcResponse* msg);
   static const ::proto::SwcMetaInfoV1& swcinfo(const DeleteSwcResponse* msg);
 };
 
+const ::proto::ResponseMetaInfoV1&
+DeleteSwcResponse::_Internal::metainfo(const DeleteSwcResponse* msg) {
+  return *msg->_impl_.metainfo_;
+}
 const ::proto::SwcMetaInfoV1&
 DeleteSwcResponse::_Internal::swcinfo(const DeleteSwcResponse* msg) {
   return *msg->_impl_.swcinfo_;
+}
+void DeleteSwcResponse::clear_metainfo() {
+  if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
+    delete _impl_.metainfo_;
+  }
+  _impl_.metainfo_ = nullptr;
 }
 void DeleteSwcResponse::clear_swcinfo() {
   if (GetArenaForAllocation() == nullptr && _impl_.swcinfo_ != nullptr) {
@@ -6141,24 +5526,17 @@ DeleteSwcResponse::DeleteSwcResponse(const DeleteSwcResponse& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   DeleteSwcResponse* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.message_){}
+      decltype(_impl_.metainfo_){nullptr}
     , decltype(_impl_.swcinfo_){nullptr}
-    , decltype(_impl_.status_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.message_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.message_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_message().empty()) {
-    _this->_impl_.message_.Set(from._internal_message(), 
-      _this->GetArenaForAllocation());
+  if (from._internal_has_metainfo()) {
+    _this->_impl_.metainfo_ = new ::proto::ResponseMetaInfoV1(*from._impl_.metainfo_);
   }
   if (from._internal_has_swcinfo()) {
     _this->_impl_.swcinfo_ = new ::proto::SwcMetaInfoV1(*from._impl_.swcinfo_);
   }
-  _this->_impl_.status_ = from._impl_.status_;
   // @@protoc_insertion_point(copy_constructor:proto.DeleteSwcResponse)
 }
 
@@ -6167,15 +5545,10 @@ inline void DeleteSwcResponse::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.message_){}
+      decltype(_impl_.metainfo_){nullptr}
     , decltype(_impl_.swcinfo_){nullptr}
-    , decltype(_impl_.status_){false}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.message_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.message_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 DeleteSwcResponse::~DeleteSwcResponse() {
@@ -6189,7 +5562,7 @@ DeleteSwcResponse::~DeleteSwcResponse() {
 
 inline void DeleteSwcResponse::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.message_.Destroy();
+  if (this != internal_default_instance()) delete _impl_.metainfo_;
   if (this != internal_default_instance()) delete _impl_.swcinfo_;
 }
 
@@ -6203,12 +5576,14 @@ void DeleteSwcResponse::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.message_.ClearToEmpty();
+  if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
+    delete _impl_.metainfo_;
+  }
+  _impl_.metainfo_ = nullptr;
   if (GetArenaForAllocation() == nullptr && _impl_.swcinfo_ != nullptr) {
     delete _impl_.swcinfo_;
   }
   _impl_.swcinfo_ = nullptr;
-  _impl_.status_ = false;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -6218,27 +5593,17 @@ const char* DeleteSwcResponse::_InternalParse(const char* ptr, ::_pbi::ParseCont
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bool status = 1;
+      // .proto.ResponseMetaInfoV1 metaInfo = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _impl_.status_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_metainfo(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // string Message = 2;
+      // .proto.SwcMetaInfoV1 SwcInfo = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_message();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "proto.DeleteSwcResponse.Message"));
-        } else
-          goto handle_unusual;
-        continue;
-      // .proto.SwcMetaInfoV1 SwcInfo = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_swcinfo(), ptr);
           CHK_(ptr);
         } else
@@ -6273,26 +5638,17 @@ uint8_t* DeleteSwcResponse::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bool status = 1;
-  if (this->_internal_status() != 0) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_status(), target);
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  if (this->_internal_has_metainfo()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::metainfo(this),
+        _Internal::metainfo(this).GetCachedSize(), target, stream);
   }
 
-  // string Message = 2;
-  if (!this->_internal_message().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_message().data(), static_cast<int>(this->_internal_message().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "proto.DeleteSwcResponse.Message");
-    target = stream->WriteStringMaybeAliased(
-        2, this->_internal_message(), target);
-  }
-
-  // .proto.SwcMetaInfoV1 SwcInfo = 3;
+  // .proto.SwcMetaInfoV1 SwcInfo = 2;
   if (this->_internal_has_swcinfo()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(3, _Internal::swcinfo(this),
+      InternalWriteMessage(2, _Internal::swcinfo(this),
         _Internal::swcinfo(this).GetCachedSize(), target, stream);
   }
 
@@ -6312,23 +5668,18 @@ size_t DeleteSwcResponse::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string Message = 2;
-  if (!this->_internal_message().empty()) {
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  if (this->_internal_has_metainfo()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_message());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.metainfo_);
   }
 
-  // .proto.SwcMetaInfoV1 SwcInfo = 3;
+  // .proto.SwcMetaInfoV1 SwcInfo = 2;
   if (this->_internal_has_swcinfo()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.swcinfo_);
-  }
-
-  // bool status = 1;
-  if (this->_internal_status() != 0) {
-    total_size += 1 + 1;
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -6349,15 +5700,13 @@ void DeleteSwcResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, cons
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_message().empty()) {
-    _this->_internal_set_message(from._internal_message());
+  if (from._internal_has_metainfo()) {
+    _this->_internal_mutable_metainfo()->::proto::ResponseMetaInfoV1::MergeFrom(
+        from._internal_metainfo());
   }
   if (from._internal_has_swcinfo()) {
     _this->_internal_mutable_swcinfo()->::proto::SwcMetaInfoV1::MergeFrom(
         from._internal_swcinfo());
-  }
-  if (from._internal_status() != 0) {
-    _this->_internal_set_status(from._internal_status());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -6375,19 +5724,13 @@ bool DeleteSwcResponse::IsInitialized() const {
 
 void DeleteSwcResponse::InternalSwap(DeleteSwcResponse* other) {
   using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.message_, lhs_arena,
-      &other->_impl_.message_, rhs_arena
-  );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(DeleteSwcResponse, _impl_.status_)
-      + sizeof(DeleteSwcResponse::_impl_.status_)
-      - PROTOBUF_FIELD_OFFSET(DeleteSwcResponse, _impl_.swcinfo_)>(
-          reinterpret_cast<char*>(&_impl_.swcinfo_),
-          reinterpret_cast<char*>(&other->_impl_.swcinfo_));
+      PROTOBUF_FIELD_OFFSET(DeleteSwcResponse, _impl_.swcinfo_)
+      + sizeof(DeleteSwcResponse::_impl_.swcinfo_)
+      - PROTOBUF_FIELD_OFFSET(DeleteSwcResponse, _impl_.metainfo_)>(
+          reinterpret_cast<char*>(&_impl_.metainfo_),
+          reinterpret_cast<char*>(&other->_impl_.metainfo_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata DeleteSwcResponse::GetMetadata() const {
@@ -6400,12 +5743,23 @@ void DeleteSwcResponse::InternalSwap(DeleteSwcResponse* other) {
 
 class UpdateSwcResponse::_Internal {
  public:
+  static const ::proto::ResponseMetaInfoV1& metainfo(const UpdateSwcResponse* msg);
   static const ::proto::SwcMetaInfoV1& swcinfo(const UpdateSwcResponse* msg);
 };
 
+const ::proto::ResponseMetaInfoV1&
+UpdateSwcResponse::_Internal::metainfo(const UpdateSwcResponse* msg) {
+  return *msg->_impl_.metainfo_;
+}
 const ::proto::SwcMetaInfoV1&
 UpdateSwcResponse::_Internal::swcinfo(const UpdateSwcResponse* msg) {
   return *msg->_impl_.swcinfo_;
+}
+void UpdateSwcResponse::clear_metainfo() {
+  if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
+    delete _impl_.metainfo_;
+  }
+  _impl_.metainfo_ = nullptr;
 }
 void UpdateSwcResponse::clear_swcinfo() {
   if (GetArenaForAllocation() == nullptr && _impl_.swcinfo_ != nullptr) {
@@ -6423,24 +5777,17 @@ UpdateSwcResponse::UpdateSwcResponse(const UpdateSwcResponse& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   UpdateSwcResponse* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.message_){}
+      decltype(_impl_.metainfo_){nullptr}
     , decltype(_impl_.swcinfo_){nullptr}
-    , decltype(_impl_.status_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.message_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.message_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_message().empty()) {
-    _this->_impl_.message_.Set(from._internal_message(), 
-      _this->GetArenaForAllocation());
+  if (from._internal_has_metainfo()) {
+    _this->_impl_.metainfo_ = new ::proto::ResponseMetaInfoV1(*from._impl_.metainfo_);
   }
   if (from._internal_has_swcinfo()) {
     _this->_impl_.swcinfo_ = new ::proto::SwcMetaInfoV1(*from._impl_.swcinfo_);
   }
-  _this->_impl_.status_ = from._impl_.status_;
   // @@protoc_insertion_point(copy_constructor:proto.UpdateSwcResponse)
 }
 
@@ -6449,15 +5796,10 @@ inline void UpdateSwcResponse::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.message_){}
+      decltype(_impl_.metainfo_){nullptr}
     , decltype(_impl_.swcinfo_){nullptr}
-    , decltype(_impl_.status_){false}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.message_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.message_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 UpdateSwcResponse::~UpdateSwcResponse() {
@@ -6471,7 +5813,7 @@ UpdateSwcResponse::~UpdateSwcResponse() {
 
 inline void UpdateSwcResponse::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.message_.Destroy();
+  if (this != internal_default_instance()) delete _impl_.metainfo_;
   if (this != internal_default_instance()) delete _impl_.swcinfo_;
 }
 
@@ -6485,12 +5827,14 @@ void UpdateSwcResponse::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.message_.ClearToEmpty();
+  if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
+    delete _impl_.metainfo_;
+  }
+  _impl_.metainfo_ = nullptr;
   if (GetArenaForAllocation() == nullptr && _impl_.swcinfo_ != nullptr) {
     delete _impl_.swcinfo_;
   }
   _impl_.swcinfo_ = nullptr;
-  _impl_.status_ = false;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -6500,27 +5844,17 @@ const char* UpdateSwcResponse::_InternalParse(const char* ptr, ::_pbi::ParseCont
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bool status = 1;
+      // .proto.ResponseMetaInfoV1 metaInfo = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _impl_.status_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_metainfo(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // string Message = 2;
+      // .proto.SwcMetaInfoV1 SwcInfo = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_message();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "proto.UpdateSwcResponse.Message"));
-        } else
-          goto handle_unusual;
-        continue;
-      // .proto.SwcMetaInfoV1 SwcInfo = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_swcinfo(), ptr);
           CHK_(ptr);
         } else
@@ -6555,26 +5889,17 @@ uint8_t* UpdateSwcResponse::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bool status = 1;
-  if (this->_internal_status() != 0) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_status(), target);
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  if (this->_internal_has_metainfo()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::metainfo(this),
+        _Internal::metainfo(this).GetCachedSize(), target, stream);
   }
 
-  // string Message = 2;
-  if (!this->_internal_message().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_message().data(), static_cast<int>(this->_internal_message().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "proto.UpdateSwcResponse.Message");
-    target = stream->WriteStringMaybeAliased(
-        2, this->_internal_message(), target);
-  }
-
-  // .proto.SwcMetaInfoV1 SwcInfo = 3;
+  // .proto.SwcMetaInfoV1 SwcInfo = 2;
   if (this->_internal_has_swcinfo()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(3, _Internal::swcinfo(this),
+      InternalWriteMessage(2, _Internal::swcinfo(this),
         _Internal::swcinfo(this).GetCachedSize(), target, stream);
   }
 
@@ -6594,23 +5919,18 @@ size_t UpdateSwcResponse::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string Message = 2;
-  if (!this->_internal_message().empty()) {
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  if (this->_internal_has_metainfo()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_message());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.metainfo_);
   }
 
-  // .proto.SwcMetaInfoV1 SwcInfo = 3;
+  // .proto.SwcMetaInfoV1 SwcInfo = 2;
   if (this->_internal_has_swcinfo()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.swcinfo_);
-  }
-
-  // bool status = 1;
-  if (this->_internal_status() != 0) {
-    total_size += 1 + 1;
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -6631,15 +5951,13 @@ void UpdateSwcResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, cons
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_message().empty()) {
-    _this->_internal_set_message(from._internal_message());
+  if (from._internal_has_metainfo()) {
+    _this->_internal_mutable_metainfo()->::proto::ResponseMetaInfoV1::MergeFrom(
+        from._internal_metainfo());
   }
   if (from._internal_has_swcinfo()) {
     _this->_internal_mutable_swcinfo()->::proto::SwcMetaInfoV1::MergeFrom(
         from._internal_swcinfo());
-  }
-  if (from._internal_status() != 0) {
-    _this->_internal_set_status(from._internal_status());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -6657,19 +5975,13 @@ bool UpdateSwcResponse::IsInitialized() const {
 
 void UpdateSwcResponse::InternalSwap(UpdateSwcResponse* other) {
   using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.message_, lhs_arena,
-      &other->_impl_.message_, rhs_arena
-  );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(UpdateSwcResponse, _impl_.status_)
-      + sizeof(UpdateSwcResponse::_impl_.status_)
-      - PROTOBUF_FIELD_OFFSET(UpdateSwcResponse, _impl_.swcinfo_)>(
-          reinterpret_cast<char*>(&_impl_.swcinfo_),
-          reinterpret_cast<char*>(&other->_impl_.swcinfo_));
+      PROTOBUF_FIELD_OFFSET(UpdateSwcResponse, _impl_.swcinfo_)
+      + sizeof(UpdateSwcResponse::_impl_.swcinfo_)
+      - PROTOBUF_FIELD_OFFSET(UpdateSwcResponse, _impl_.metainfo_)>(
+          reinterpret_cast<char*>(&_impl_.metainfo_),
+          reinterpret_cast<char*>(&other->_impl_.metainfo_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata UpdateSwcResponse::GetMetadata() const {
@@ -6682,12 +5994,23 @@ void UpdateSwcResponse::InternalSwap(UpdateSwcResponse* other) {
 
 class GetSwcMetaInfoResponse::_Internal {
  public:
+  static const ::proto::ResponseMetaInfoV1& metainfo(const GetSwcMetaInfoResponse* msg);
   static const ::proto::SwcMetaInfoV1& swcinfo(const GetSwcMetaInfoResponse* msg);
 };
 
+const ::proto::ResponseMetaInfoV1&
+GetSwcMetaInfoResponse::_Internal::metainfo(const GetSwcMetaInfoResponse* msg) {
+  return *msg->_impl_.metainfo_;
+}
 const ::proto::SwcMetaInfoV1&
 GetSwcMetaInfoResponse::_Internal::swcinfo(const GetSwcMetaInfoResponse* msg) {
   return *msg->_impl_.swcinfo_;
+}
+void GetSwcMetaInfoResponse::clear_metainfo() {
+  if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
+    delete _impl_.metainfo_;
+  }
+  _impl_.metainfo_ = nullptr;
 }
 void GetSwcMetaInfoResponse::clear_swcinfo() {
   if (GetArenaForAllocation() == nullptr && _impl_.swcinfo_ != nullptr) {
@@ -6705,24 +6028,17 @@ GetSwcMetaInfoResponse::GetSwcMetaInfoResponse(const GetSwcMetaInfoResponse& fro
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   GetSwcMetaInfoResponse* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.message_){}
+      decltype(_impl_.metainfo_){nullptr}
     , decltype(_impl_.swcinfo_){nullptr}
-    , decltype(_impl_.status_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.message_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.message_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_message().empty()) {
-    _this->_impl_.message_.Set(from._internal_message(), 
-      _this->GetArenaForAllocation());
+  if (from._internal_has_metainfo()) {
+    _this->_impl_.metainfo_ = new ::proto::ResponseMetaInfoV1(*from._impl_.metainfo_);
   }
   if (from._internal_has_swcinfo()) {
     _this->_impl_.swcinfo_ = new ::proto::SwcMetaInfoV1(*from._impl_.swcinfo_);
   }
-  _this->_impl_.status_ = from._impl_.status_;
   // @@protoc_insertion_point(copy_constructor:proto.GetSwcMetaInfoResponse)
 }
 
@@ -6731,15 +6047,10 @@ inline void GetSwcMetaInfoResponse::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.message_){}
+      decltype(_impl_.metainfo_){nullptr}
     , decltype(_impl_.swcinfo_){nullptr}
-    , decltype(_impl_.status_){false}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.message_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.message_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 GetSwcMetaInfoResponse::~GetSwcMetaInfoResponse() {
@@ -6753,7 +6064,7 @@ GetSwcMetaInfoResponse::~GetSwcMetaInfoResponse() {
 
 inline void GetSwcMetaInfoResponse::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.message_.Destroy();
+  if (this != internal_default_instance()) delete _impl_.metainfo_;
   if (this != internal_default_instance()) delete _impl_.swcinfo_;
 }
 
@@ -6767,12 +6078,14 @@ void GetSwcMetaInfoResponse::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.message_.ClearToEmpty();
+  if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
+    delete _impl_.metainfo_;
+  }
+  _impl_.metainfo_ = nullptr;
   if (GetArenaForAllocation() == nullptr && _impl_.swcinfo_ != nullptr) {
     delete _impl_.swcinfo_;
   }
   _impl_.swcinfo_ = nullptr;
-  _impl_.status_ = false;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -6782,27 +6095,17 @@ const char* GetSwcMetaInfoResponse::_InternalParse(const char* ptr, ::_pbi::Pars
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bool status = 1;
+      // .proto.ResponseMetaInfoV1 metaInfo = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _impl_.status_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_metainfo(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // string Message = 2;
+      // .proto.SwcMetaInfoV1 SwcInfo = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_message();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "proto.GetSwcMetaInfoResponse.Message"));
-        } else
-          goto handle_unusual;
-        continue;
-      // .proto.SwcMetaInfoV1 SwcInfo = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_swcinfo(), ptr);
           CHK_(ptr);
         } else
@@ -6837,26 +6140,17 @@ uint8_t* GetSwcMetaInfoResponse::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bool status = 1;
-  if (this->_internal_status() != 0) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_status(), target);
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  if (this->_internal_has_metainfo()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::metainfo(this),
+        _Internal::metainfo(this).GetCachedSize(), target, stream);
   }
 
-  // string Message = 2;
-  if (!this->_internal_message().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_message().data(), static_cast<int>(this->_internal_message().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "proto.GetSwcMetaInfoResponse.Message");
-    target = stream->WriteStringMaybeAliased(
-        2, this->_internal_message(), target);
-  }
-
-  // .proto.SwcMetaInfoV1 SwcInfo = 3;
+  // .proto.SwcMetaInfoV1 SwcInfo = 2;
   if (this->_internal_has_swcinfo()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(3, _Internal::swcinfo(this),
+      InternalWriteMessage(2, _Internal::swcinfo(this),
         _Internal::swcinfo(this).GetCachedSize(), target, stream);
   }
 
@@ -6876,23 +6170,18 @@ size_t GetSwcMetaInfoResponse::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string Message = 2;
-  if (!this->_internal_message().empty()) {
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  if (this->_internal_has_metainfo()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_message());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.metainfo_);
   }
 
-  // .proto.SwcMetaInfoV1 SwcInfo = 3;
+  // .proto.SwcMetaInfoV1 SwcInfo = 2;
   if (this->_internal_has_swcinfo()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.swcinfo_);
-  }
-
-  // bool status = 1;
-  if (this->_internal_status() != 0) {
-    total_size += 1 + 1;
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -6913,15 +6202,13 @@ void GetSwcMetaInfoResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg,
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_message().empty()) {
-    _this->_internal_set_message(from._internal_message());
+  if (from._internal_has_metainfo()) {
+    _this->_internal_mutable_metainfo()->::proto::ResponseMetaInfoV1::MergeFrom(
+        from._internal_metainfo());
   }
   if (from._internal_has_swcinfo()) {
     _this->_internal_mutable_swcinfo()->::proto::SwcMetaInfoV1::MergeFrom(
         from._internal_swcinfo());
-  }
-  if (from._internal_status() != 0) {
-    _this->_internal_set_status(from._internal_status());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -6939,19 +6226,13 @@ bool GetSwcMetaInfoResponse::IsInitialized() const {
 
 void GetSwcMetaInfoResponse::InternalSwap(GetSwcMetaInfoResponse* other) {
   using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.message_, lhs_arena,
-      &other->_impl_.message_, rhs_arena
-  );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(GetSwcMetaInfoResponse, _impl_.status_)
-      + sizeof(GetSwcMetaInfoResponse::_impl_.status_)
-      - PROTOBUF_FIELD_OFFSET(GetSwcMetaInfoResponse, _impl_.swcinfo_)>(
-          reinterpret_cast<char*>(&_impl_.swcinfo_),
-          reinterpret_cast<char*>(&other->_impl_.swcinfo_));
+      PROTOBUF_FIELD_OFFSET(GetSwcMetaInfoResponse, _impl_.swcinfo_)
+      + sizeof(GetSwcMetaInfoResponse::_impl_.swcinfo_)
+      - PROTOBUF_FIELD_OFFSET(GetSwcMetaInfoResponse, _impl_.metainfo_)>(
+          reinterpret_cast<char*>(&_impl_.metainfo_),
+          reinterpret_cast<char*>(&other->_impl_.metainfo_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata GetSwcMetaInfoResponse::GetMetadata() const {
@@ -6964,8 +6245,19 @@ void GetSwcMetaInfoResponse::InternalSwap(GetSwcMetaInfoResponse* other) {
 
 class GetAllSwcMetaInfoResponse::_Internal {
  public:
+  static const ::proto::ResponseMetaInfoV1& metainfo(const GetAllSwcMetaInfoResponse* msg);
 };
 
+const ::proto::ResponseMetaInfoV1&
+GetAllSwcMetaInfoResponse::_Internal::metainfo(const GetAllSwcMetaInfoResponse* msg) {
+  return *msg->_impl_.metainfo_;
+}
+void GetAllSwcMetaInfoResponse::clear_metainfo() {
+  if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
+    delete _impl_.metainfo_;
+  }
+  _impl_.metainfo_ = nullptr;
+}
 void GetAllSwcMetaInfoResponse::clear_swcinfo() {
   _impl_.swcinfo_.Clear();
 }
@@ -6980,20 +6272,13 @@ GetAllSwcMetaInfoResponse::GetAllSwcMetaInfoResponse(const GetAllSwcMetaInfoResp
   GetAllSwcMetaInfoResponse* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.swcinfo_){from._impl_.swcinfo_}
-    , decltype(_impl_.message_){}
-    , decltype(_impl_.status_){}
+    , decltype(_impl_.metainfo_){nullptr}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.message_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.message_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_message().empty()) {
-    _this->_impl_.message_.Set(from._internal_message(), 
-      _this->GetArenaForAllocation());
+  if (from._internal_has_metainfo()) {
+    _this->_impl_.metainfo_ = new ::proto::ResponseMetaInfoV1(*from._impl_.metainfo_);
   }
-  _this->_impl_.status_ = from._impl_.status_;
   // @@protoc_insertion_point(copy_constructor:proto.GetAllSwcMetaInfoResponse)
 }
 
@@ -7003,14 +6288,9 @@ inline void GetAllSwcMetaInfoResponse::SharedCtor(
   (void)is_message_owned;
   new (&_impl_) Impl_{
       decltype(_impl_.swcinfo_){arena}
-    , decltype(_impl_.message_){}
-    , decltype(_impl_.status_){false}
+    , decltype(_impl_.metainfo_){nullptr}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.message_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.message_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 GetAllSwcMetaInfoResponse::~GetAllSwcMetaInfoResponse() {
@@ -7025,7 +6305,7 @@ GetAllSwcMetaInfoResponse::~GetAllSwcMetaInfoResponse() {
 inline void GetAllSwcMetaInfoResponse::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   _impl_.swcinfo_.~RepeatedPtrField();
-  _impl_.message_.Destroy();
+  if (this != internal_default_instance()) delete _impl_.metainfo_;
 }
 
 void GetAllSwcMetaInfoResponse::SetCachedSize(int size) const {
@@ -7039,8 +6319,10 @@ void GetAllSwcMetaInfoResponse::Clear() {
   (void) cached_has_bits;
 
   _impl_.swcinfo_.Clear();
-  _impl_.message_.ClearToEmpty();
-  _impl_.status_ = false;
+  if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
+    delete _impl_.metainfo_;
+  }
+  _impl_.metainfo_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -7050,34 +6332,24 @@ const char* GetAllSwcMetaInfoResponse::_InternalParse(const char* ptr, ::_pbi::P
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bool status = 1;
+      // .proto.ResponseMetaInfoV1 metaInfo = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _impl_.status_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_metainfo(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // string Message = 2;
+      // repeated .proto.SwcMetaInfoV1 SwcInfo = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_message();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "proto.GetAllSwcMetaInfoResponse.Message"));
-        } else
-          goto handle_unusual;
-        continue;
-      // repeated .proto.SwcMetaInfoV1 SwcInfo = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           ptr -= 1;
           do {
             ptr += 1;
             ptr = ctx->ParseMessage(_internal_add_swcinfo(), ptr);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<26>(ptr));
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<18>(ptr));
         } else
           goto handle_unusual;
         continue;
@@ -7110,28 +6382,19 @@ uint8_t* GetAllSwcMetaInfoResponse::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bool status = 1;
-  if (this->_internal_status() != 0) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_status(), target);
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  if (this->_internal_has_metainfo()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::metainfo(this),
+        _Internal::metainfo(this).GetCachedSize(), target, stream);
   }
 
-  // string Message = 2;
-  if (!this->_internal_message().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_message().data(), static_cast<int>(this->_internal_message().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "proto.GetAllSwcMetaInfoResponse.Message");
-    target = stream->WriteStringMaybeAliased(
-        2, this->_internal_message(), target);
-  }
-
-  // repeated .proto.SwcMetaInfoV1 SwcInfo = 3;
+  // repeated .proto.SwcMetaInfoV1 SwcInfo = 2;
   for (unsigned i = 0,
       n = static_cast<unsigned>(this->_internal_swcinfo_size()); i < n; i++) {
     const auto& repfield = this->_internal_swcinfo(i);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(3, repfield, repfield.GetCachedSize(), target, stream);
+        InternalWriteMessage(2, repfield, repfield.GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -7150,23 +6413,18 @@ size_t GetAllSwcMetaInfoResponse::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated .proto.SwcMetaInfoV1 SwcInfo = 3;
+  // repeated .proto.SwcMetaInfoV1 SwcInfo = 2;
   total_size += 1UL * this->_internal_swcinfo_size();
   for (const auto& msg : this->_impl_.swcinfo_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
-  // string Message = 2;
-  if (!this->_internal_message().empty()) {
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  if (this->_internal_has_metainfo()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_message());
-  }
-
-  // bool status = 1;
-  if (this->_internal_status() != 0) {
-    total_size += 1 + 1;
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.metainfo_);
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -7188,11 +6446,9 @@ void GetAllSwcMetaInfoResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_m
   (void) cached_has_bits;
 
   _this->_impl_.swcinfo_.MergeFrom(from._impl_.swcinfo_);
-  if (!from._internal_message().empty()) {
-    _this->_internal_set_message(from._internal_message());
-  }
-  if (from._internal_status() != 0) {
-    _this->_internal_set_status(from._internal_status());
+  if (from._internal_has_metainfo()) {
+    _this->_internal_mutable_metainfo()->::proto::ResponseMetaInfoV1::MergeFrom(
+        from._internal_metainfo());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -7210,15 +6466,9 @@ bool GetAllSwcMetaInfoResponse::IsInitialized() const {
 
 void GetAllSwcMetaInfoResponse::InternalSwap(GetAllSwcMetaInfoResponse* other) {
   using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   _impl_.swcinfo_.InternalSwap(&other->_impl_.swcinfo_);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.message_, lhs_arena,
-      &other->_impl_.message_, rhs_arena
-  );
-  swap(_impl_.status_, other->_impl_.status_);
+  swap(_impl_.metainfo_, other->_impl_.metainfo_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata GetAllSwcMetaInfoResponse::GetMetadata() const {
@@ -7231,8 +6481,19 @@ void GetAllSwcMetaInfoResponse::InternalSwap(GetAllSwcMetaInfoResponse* other) {
 
 class CreateSwcSnapshotResponse::_Internal {
  public:
+  static const ::proto::ResponseMetaInfoV1& metainfo(const CreateSwcSnapshotResponse* msg);
 };
 
+const ::proto::ResponseMetaInfoV1&
+CreateSwcSnapshotResponse::_Internal::metainfo(const CreateSwcSnapshotResponse* msg) {
+  return *msg->_impl_.metainfo_;
+}
+void CreateSwcSnapshotResponse::clear_metainfo() {
+  if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
+    delete _impl_.metainfo_;
+  }
+  _impl_.metainfo_ = nullptr;
+}
 CreateSwcSnapshotResponse::CreateSwcSnapshotResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
@@ -7243,20 +6504,13 @@ CreateSwcSnapshotResponse::CreateSwcSnapshotResponse(const CreateSwcSnapshotResp
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   CreateSwcSnapshotResponse* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.message_){}
-    , decltype(_impl_.status_){}
+      decltype(_impl_.metainfo_){nullptr}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.message_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.message_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_message().empty()) {
-    _this->_impl_.message_.Set(from._internal_message(), 
-      _this->GetArenaForAllocation());
+  if (from._internal_has_metainfo()) {
+    _this->_impl_.metainfo_ = new ::proto::ResponseMetaInfoV1(*from._impl_.metainfo_);
   }
-  _this->_impl_.status_ = from._impl_.status_;
   // @@protoc_insertion_point(copy_constructor:proto.CreateSwcSnapshotResponse)
 }
 
@@ -7265,14 +6519,9 @@ inline void CreateSwcSnapshotResponse::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.message_){}
-    , decltype(_impl_.status_){false}
+      decltype(_impl_.metainfo_){nullptr}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.message_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.message_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 CreateSwcSnapshotResponse::~CreateSwcSnapshotResponse() {
@@ -7286,7 +6535,7 @@ CreateSwcSnapshotResponse::~CreateSwcSnapshotResponse() {
 
 inline void CreateSwcSnapshotResponse::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.message_.Destroy();
+  if (this != internal_default_instance()) delete _impl_.metainfo_;
 }
 
 void CreateSwcSnapshotResponse::SetCachedSize(int size) const {
@@ -7299,8 +6548,10 @@ void CreateSwcSnapshotResponse::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.message_.ClearToEmpty();
-  _impl_.status_ = false;
+  if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
+    delete _impl_.metainfo_;
+  }
+  _impl_.metainfo_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -7310,21 +6561,11 @@ const char* CreateSwcSnapshotResponse::_InternalParse(const char* ptr, ::_pbi::P
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bool status = 1;
+      // .proto.ResponseMetaInfoV1 metaInfo = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _impl_.status_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_metainfo(), ptr);
           CHK_(ptr);
-        } else
-          goto handle_unusual;
-        continue;
-      // string Message = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_message();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "proto.CreateSwcSnapshotResponse.Message"));
         } else
           goto handle_unusual;
         continue;
@@ -7357,20 +6598,11 @@ uint8_t* CreateSwcSnapshotResponse::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bool status = 1;
-  if (this->_internal_status() != 0) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_status(), target);
-  }
-
-  // string Message = 2;
-  if (!this->_internal_message().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_message().data(), static_cast<int>(this->_internal_message().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "proto.CreateSwcSnapshotResponse.Message");
-    target = stream->WriteStringMaybeAliased(
-        2, this->_internal_message(), target);
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  if (this->_internal_has_metainfo()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::metainfo(this),
+        _Internal::metainfo(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -7389,16 +6621,11 @@ size_t CreateSwcSnapshotResponse::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string Message = 2;
-  if (!this->_internal_message().empty()) {
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  if (this->_internal_has_metainfo()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_message());
-  }
-
-  // bool status = 1;
-  if (this->_internal_status() != 0) {
-    total_size += 1 + 1;
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.metainfo_);
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -7419,11 +6646,9 @@ void CreateSwcSnapshotResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_m
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_message().empty()) {
-    _this->_internal_set_message(from._internal_message());
-  }
-  if (from._internal_status() != 0) {
-    _this->_internal_set_status(from._internal_status());
+  if (from._internal_has_metainfo()) {
+    _this->_internal_mutable_metainfo()->::proto::ResponseMetaInfoV1::MergeFrom(
+        from._internal_metainfo());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -7441,14 +6666,8 @@ bool CreateSwcSnapshotResponse::IsInitialized() const {
 
 void CreateSwcSnapshotResponse::InternalSwap(CreateSwcSnapshotResponse* other) {
   using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.message_, lhs_arena,
-      &other->_impl_.message_, rhs_arena
-  );
-  swap(_impl_.status_, other->_impl_.status_);
+  swap(_impl_.metainfo_, other->_impl_.metainfo_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata CreateSwcSnapshotResponse::GetMetadata() const {
@@ -7461,8 +6680,19 @@ void CreateSwcSnapshotResponse::InternalSwap(CreateSwcSnapshotResponse* other) {
 
 class DeleteSwcSnapshotResponse::_Internal {
  public:
+  static const ::proto::ResponseMetaInfoV1& metainfo(const DeleteSwcSnapshotResponse* msg);
 };
 
+const ::proto::ResponseMetaInfoV1&
+DeleteSwcSnapshotResponse::_Internal::metainfo(const DeleteSwcSnapshotResponse* msg) {
+  return *msg->_impl_.metainfo_;
+}
+void DeleteSwcSnapshotResponse::clear_metainfo() {
+  if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
+    delete _impl_.metainfo_;
+  }
+  _impl_.metainfo_ = nullptr;
+}
 DeleteSwcSnapshotResponse::DeleteSwcSnapshotResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
@@ -7473,20 +6703,13 @@ DeleteSwcSnapshotResponse::DeleteSwcSnapshotResponse(const DeleteSwcSnapshotResp
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   DeleteSwcSnapshotResponse* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.message_){}
-    , decltype(_impl_.status_){}
+      decltype(_impl_.metainfo_){nullptr}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.message_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.message_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_message().empty()) {
-    _this->_impl_.message_.Set(from._internal_message(), 
-      _this->GetArenaForAllocation());
+  if (from._internal_has_metainfo()) {
+    _this->_impl_.metainfo_ = new ::proto::ResponseMetaInfoV1(*from._impl_.metainfo_);
   }
-  _this->_impl_.status_ = from._impl_.status_;
   // @@protoc_insertion_point(copy_constructor:proto.DeleteSwcSnapshotResponse)
 }
 
@@ -7495,14 +6718,9 @@ inline void DeleteSwcSnapshotResponse::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.message_){}
-    , decltype(_impl_.status_){false}
+      decltype(_impl_.metainfo_){nullptr}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.message_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.message_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 DeleteSwcSnapshotResponse::~DeleteSwcSnapshotResponse() {
@@ -7516,7 +6734,7 @@ DeleteSwcSnapshotResponse::~DeleteSwcSnapshotResponse() {
 
 inline void DeleteSwcSnapshotResponse::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.message_.Destroy();
+  if (this != internal_default_instance()) delete _impl_.metainfo_;
 }
 
 void DeleteSwcSnapshotResponse::SetCachedSize(int size) const {
@@ -7529,8 +6747,10 @@ void DeleteSwcSnapshotResponse::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.message_.ClearToEmpty();
-  _impl_.status_ = false;
+  if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
+    delete _impl_.metainfo_;
+  }
+  _impl_.metainfo_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -7540,21 +6760,11 @@ const char* DeleteSwcSnapshotResponse::_InternalParse(const char* ptr, ::_pbi::P
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bool status = 1;
+      // .proto.ResponseMetaInfoV1 metaInfo = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _impl_.status_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_metainfo(), ptr);
           CHK_(ptr);
-        } else
-          goto handle_unusual;
-        continue;
-      // string Message = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_message();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "proto.DeleteSwcSnapshotResponse.Message"));
         } else
           goto handle_unusual;
         continue;
@@ -7587,20 +6797,11 @@ uint8_t* DeleteSwcSnapshotResponse::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bool status = 1;
-  if (this->_internal_status() != 0) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_status(), target);
-  }
-
-  // string Message = 2;
-  if (!this->_internal_message().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_message().data(), static_cast<int>(this->_internal_message().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "proto.DeleteSwcSnapshotResponse.Message");
-    target = stream->WriteStringMaybeAliased(
-        2, this->_internal_message(), target);
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  if (this->_internal_has_metainfo()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::metainfo(this),
+        _Internal::metainfo(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -7619,16 +6820,11 @@ size_t DeleteSwcSnapshotResponse::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string Message = 2;
-  if (!this->_internal_message().empty()) {
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  if (this->_internal_has_metainfo()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_message());
-  }
-
-  // bool status = 1;
-  if (this->_internal_status() != 0) {
-    total_size += 1 + 1;
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.metainfo_);
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -7649,11 +6845,9 @@ void DeleteSwcSnapshotResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_m
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_message().empty()) {
-    _this->_internal_set_message(from._internal_message());
-  }
-  if (from._internal_status() != 0) {
-    _this->_internal_set_status(from._internal_status());
+  if (from._internal_has_metainfo()) {
+    _this->_internal_mutable_metainfo()->::proto::ResponseMetaInfoV1::MergeFrom(
+        from._internal_metainfo());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -7671,14 +6865,8 @@ bool DeleteSwcSnapshotResponse::IsInitialized() const {
 
 void DeleteSwcSnapshotResponse::InternalSwap(DeleteSwcSnapshotResponse* other) {
   using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.message_, lhs_arena,
-      &other->_impl_.message_, rhs_arena
-  );
-  swap(_impl_.status_, other->_impl_.status_);
+  swap(_impl_.metainfo_, other->_impl_.metainfo_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata DeleteSwcSnapshotResponse::GetMetadata() const {
@@ -7691,8 +6879,19 @@ void DeleteSwcSnapshotResponse::InternalSwap(DeleteSwcSnapshotResponse* other) {
 
 class GetAllSnapshotMetaInfoResponse::_Internal {
  public:
+  static const ::proto::ResponseMetaInfoV1& metainfo(const GetAllSnapshotMetaInfoResponse* msg);
 };
 
+const ::proto::ResponseMetaInfoV1&
+GetAllSnapshotMetaInfoResponse::_Internal::metainfo(const GetAllSnapshotMetaInfoResponse* msg) {
+  return *msg->_impl_.metainfo_;
+}
+void GetAllSnapshotMetaInfoResponse::clear_metainfo() {
+  if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
+    delete _impl_.metainfo_;
+  }
+  _impl_.metainfo_ = nullptr;
+}
 void GetAllSnapshotMetaInfoResponse::clear_swcsnapshotlist() {
   _impl_.swcsnapshotlist_.Clear();
 }
@@ -7707,20 +6906,13 @@ GetAllSnapshotMetaInfoResponse::GetAllSnapshotMetaInfoResponse(const GetAllSnaps
   GetAllSnapshotMetaInfoResponse* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.swcsnapshotlist_){from._impl_.swcsnapshotlist_}
-    , decltype(_impl_.message_){}
-    , decltype(_impl_.status_){}
+    , decltype(_impl_.metainfo_){nullptr}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.message_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.message_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_message().empty()) {
-    _this->_impl_.message_.Set(from._internal_message(), 
-      _this->GetArenaForAllocation());
+  if (from._internal_has_metainfo()) {
+    _this->_impl_.metainfo_ = new ::proto::ResponseMetaInfoV1(*from._impl_.metainfo_);
   }
-  _this->_impl_.status_ = from._impl_.status_;
   // @@protoc_insertion_point(copy_constructor:proto.GetAllSnapshotMetaInfoResponse)
 }
 
@@ -7730,14 +6922,9 @@ inline void GetAllSnapshotMetaInfoResponse::SharedCtor(
   (void)is_message_owned;
   new (&_impl_) Impl_{
       decltype(_impl_.swcsnapshotlist_){arena}
-    , decltype(_impl_.message_){}
-    , decltype(_impl_.status_){false}
+    , decltype(_impl_.metainfo_){nullptr}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.message_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.message_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 GetAllSnapshotMetaInfoResponse::~GetAllSnapshotMetaInfoResponse() {
@@ -7752,7 +6939,7 @@ GetAllSnapshotMetaInfoResponse::~GetAllSnapshotMetaInfoResponse() {
 inline void GetAllSnapshotMetaInfoResponse::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   _impl_.swcsnapshotlist_.~RepeatedPtrField();
-  _impl_.message_.Destroy();
+  if (this != internal_default_instance()) delete _impl_.metainfo_;
 }
 
 void GetAllSnapshotMetaInfoResponse::SetCachedSize(int size) const {
@@ -7766,8 +6953,10 @@ void GetAllSnapshotMetaInfoResponse::Clear() {
   (void) cached_has_bits;
 
   _impl_.swcsnapshotlist_.Clear();
-  _impl_.message_.ClearToEmpty();
-  _impl_.status_ = false;
+  if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
+    delete _impl_.metainfo_;
+  }
+  _impl_.metainfo_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -7777,34 +6966,24 @@ const char* GetAllSnapshotMetaInfoResponse::_InternalParse(const char* ptr, ::_p
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bool status = 1;
+      // .proto.ResponseMetaInfoV1 metaInfo = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _impl_.status_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_metainfo(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // string Message = 2;
+      // repeated .proto.SwcSnapshotMetaInfoV1 SwcSnapshotList = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_message();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "proto.GetAllSnapshotMetaInfoResponse.Message"));
-        } else
-          goto handle_unusual;
-        continue;
-      // repeated .proto.SwcSnapshotMetaInfoV1 SwcSnapshotList = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           ptr -= 1;
           do {
             ptr += 1;
             ptr = ctx->ParseMessage(_internal_add_swcsnapshotlist(), ptr);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<26>(ptr));
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<18>(ptr));
         } else
           goto handle_unusual;
         continue;
@@ -7837,28 +7016,19 @@ uint8_t* GetAllSnapshotMetaInfoResponse::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bool status = 1;
-  if (this->_internal_status() != 0) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_status(), target);
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  if (this->_internal_has_metainfo()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::metainfo(this),
+        _Internal::metainfo(this).GetCachedSize(), target, stream);
   }
 
-  // string Message = 2;
-  if (!this->_internal_message().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_message().data(), static_cast<int>(this->_internal_message().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "proto.GetAllSnapshotMetaInfoResponse.Message");
-    target = stream->WriteStringMaybeAliased(
-        2, this->_internal_message(), target);
-  }
-
-  // repeated .proto.SwcSnapshotMetaInfoV1 SwcSnapshotList = 3;
+  // repeated .proto.SwcSnapshotMetaInfoV1 SwcSnapshotList = 2;
   for (unsigned i = 0,
       n = static_cast<unsigned>(this->_internal_swcsnapshotlist_size()); i < n; i++) {
     const auto& repfield = this->_internal_swcsnapshotlist(i);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(3, repfield, repfield.GetCachedSize(), target, stream);
+        InternalWriteMessage(2, repfield, repfield.GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -7877,23 +7047,18 @@ size_t GetAllSnapshotMetaInfoResponse::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated .proto.SwcSnapshotMetaInfoV1 SwcSnapshotList = 3;
+  // repeated .proto.SwcSnapshotMetaInfoV1 SwcSnapshotList = 2;
   total_size += 1UL * this->_internal_swcsnapshotlist_size();
   for (const auto& msg : this->_impl_.swcsnapshotlist_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
-  // string Message = 2;
-  if (!this->_internal_message().empty()) {
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  if (this->_internal_has_metainfo()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_message());
-  }
-
-  // bool status = 1;
-  if (this->_internal_status() != 0) {
-    total_size += 1 + 1;
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.metainfo_);
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -7915,11 +7080,9 @@ void GetAllSnapshotMetaInfoResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message&
   (void) cached_has_bits;
 
   _this->_impl_.swcsnapshotlist_.MergeFrom(from._impl_.swcsnapshotlist_);
-  if (!from._internal_message().empty()) {
-    _this->_internal_set_message(from._internal_message());
-  }
-  if (from._internal_status() != 0) {
-    _this->_internal_set_status(from._internal_status());
+  if (from._internal_has_metainfo()) {
+    _this->_internal_mutable_metainfo()->::proto::ResponseMetaInfoV1::MergeFrom(
+        from._internal_metainfo());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -7937,15 +7100,9 @@ bool GetAllSnapshotMetaInfoResponse::IsInitialized() const {
 
 void GetAllSnapshotMetaInfoResponse::InternalSwap(GetAllSnapshotMetaInfoResponse* other) {
   using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   _impl_.swcsnapshotlist_.InternalSwap(&other->_impl_.swcsnapshotlist_);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.message_, lhs_arena,
-      &other->_impl_.message_, rhs_arena
-  );
-  swap(_impl_.status_, other->_impl_.status_);
+  swap(_impl_.metainfo_, other->_impl_.metainfo_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata GetAllSnapshotMetaInfoResponse::GetMetadata() const {
@@ -7958,12 +7115,23 @@ void GetAllSnapshotMetaInfoResponse::InternalSwap(GetAllSnapshotMetaInfoResponse
 
 class GetSnapshotResponse::_Internal {
  public:
+  static const ::proto::ResponseMetaInfoV1& metainfo(const GetSnapshotResponse* msg);
   static const ::proto::SwcDataV1& swcnodedata(const GetSnapshotResponse* msg);
 };
 
+const ::proto::ResponseMetaInfoV1&
+GetSnapshotResponse::_Internal::metainfo(const GetSnapshotResponse* msg) {
+  return *msg->_impl_.metainfo_;
+}
 const ::proto::SwcDataV1&
 GetSnapshotResponse::_Internal::swcnodedata(const GetSnapshotResponse* msg) {
   return *msg->_impl_.swcnodedata_;
+}
+void GetSnapshotResponse::clear_metainfo() {
+  if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
+    delete _impl_.metainfo_;
+  }
+  _impl_.metainfo_ = nullptr;
 }
 void GetSnapshotResponse::clear_swcnodedata() {
   if (GetArenaForAllocation() == nullptr && _impl_.swcnodedata_ != nullptr) {
@@ -7981,24 +7149,17 @@ GetSnapshotResponse::GetSnapshotResponse(const GetSnapshotResponse& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   GetSnapshotResponse* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.message_){}
+      decltype(_impl_.metainfo_){nullptr}
     , decltype(_impl_.swcnodedata_){nullptr}
-    , decltype(_impl_.status_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.message_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.message_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_message().empty()) {
-    _this->_impl_.message_.Set(from._internal_message(), 
-      _this->GetArenaForAllocation());
+  if (from._internal_has_metainfo()) {
+    _this->_impl_.metainfo_ = new ::proto::ResponseMetaInfoV1(*from._impl_.metainfo_);
   }
   if (from._internal_has_swcnodedata()) {
     _this->_impl_.swcnodedata_ = new ::proto::SwcDataV1(*from._impl_.swcnodedata_);
   }
-  _this->_impl_.status_ = from._impl_.status_;
   // @@protoc_insertion_point(copy_constructor:proto.GetSnapshotResponse)
 }
 
@@ -8007,15 +7168,10 @@ inline void GetSnapshotResponse::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.message_){}
+      decltype(_impl_.metainfo_){nullptr}
     , decltype(_impl_.swcnodedata_){nullptr}
-    , decltype(_impl_.status_){false}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.message_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.message_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 GetSnapshotResponse::~GetSnapshotResponse() {
@@ -8029,7 +7185,7 @@ GetSnapshotResponse::~GetSnapshotResponse() {
 
 inline void GetSnapshotResponse::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.message_.Destroy();
+  if (this != internal_default_instance()) delete _impl_.metainfo_;
   if (this != internal_default_instance()) delete _impl_.swcnodedata_;
 }
 
@@ -8043,12 +7199,14 @@ void GetSnapshotResponse::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.message_.ClearToEmpty();
+  if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
+    delete _impl_.metainfo_;
+  }
+  _impl_.metainfo_ = nullptr;
   if (GetArenaForAllocation() == nullptr && _impl_.swcnodedata_ != nullptr) {
     delete _impl_.swcnodedata_;
   }
   _impl_.swcnodedata_ = nullptr;
-  _impl_.status_ = false;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -8058,21 +7216,11 @@ const char* GetSnapshotResponse::_InternalParse(const char* ptr, ::_pbi::ParseCo
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bool status = 1;
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _impl_.status_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
-          CHK_(ptr);
-        } else
-          goto handle_unusual;
-        continue;
-      // string Message = 2;
+      // .proto.ResponseMetaInfoV1 metaInfo = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_message();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          ptr = ctx->ParseMessage(_internal_mutable_metainfo(), ptr);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "proto.GetSnapshotResponse.Message"));
         } else
           goto handle_unusual;
         continue;
@@ -8113,20 +7261,11 @@ uint8_t* GetSnapshotResponse::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bool status = 1;
-  if (this->_internal_status() != 0) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_status(), target);
-  }
-
-  // string Message = 2;
-  if (!this->_internal_message().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_message().data(), static_cast<int>(this->_internal_message().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "proto.GetSnapshotResponse.Message");
-    target = stream->WriteStringMaybeAliased(
-        2, this->_internal_message(), target);
+  // .proto.ResponseMetaInfoV1 metaInfo = 2;
+  if (this->_internal_has_metainfo()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(2, _Internal::metainfo(this),
+        _Internal::metainfo(this).GetCachedSize(), target, stream);
   }
 
   // .proto.SwcDataV1 SwcNodeData = 3;
@@ -8152,11 +7291,11 @@ size_t GetSnapshotResponse::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string Message = 2;
-  if (!this->_internal_message().empty()) {
+  // .proto.ResponseMetaInfoV1 metaInfo = 2;
+  if (this->_internal_has_metainfo()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_message());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.metainfo_);
   }
 
   // .proto.SwcDataV1 SwcNodeData = 3;
@@ -8164,11 +7303,6 @@ size_t GetSnapshotResponse::ByteSizeLong() const {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.swcnodedata_);
-  }
-
-  // bool status = 1;
-  if (this->_internal_status() != 0) {
-    total_size += 1 + 1;
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -8189,15 +7323,13 @@ void GetSnapshotResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, co
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_message().empty()) {
-    _this->_internal_set_message(from._internal_message());
+  if (from._internal_has_metainfo()) {
+    _this->_internal_mutable_metainfo()->::proto::ResponseMetaInfoV1::MergeFrom(
+        from._internal_metainfo());
   }
   if (from._internal_has_swcnodedata()) {
     _this->_internal_mutable_swcnodedata()->::proto::SwcDataV1::MergeFrom(
         from._internal_swcnodedata());
-  }
-  if (from._internal_status() != 0) {
-    _this->_internal_set_status(from._internal_status());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -8215,19 +7347,13 @@ bool GetSnapshotResponse::IsInitialized() const {
 
 void GetSnapshotResponse::InternalSwap(GetSnapshotResponse* other) {
   using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.message_, lhs_arena,
-      &other->_impl_.message_, rhs_arena
-  );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(GetSnapshotResponse, _impl_.status_)
-      + sizeof(GetSnapshotResponse::_impl_.status_)
-      - PROTOBUF_FIELD_OFFSET(GetSnapshotResponse, _impl_.swcnodedata_)>(
-          reinterpret_cast<char*>(&_impl_.swcnodedata_),
-          reinterpret_cast<char*>(&other->_impl_.swcnodedata_));
+      PROTOBUF_FIELD_OFFSET(GetSnapshotResponse, _impl_.swcnodedata_)
+      + sizeof(GetSnapshotResponse::_impl_.swcnodedata_)
+      - PROTOBUF_FIELD_OFFSET(GetSnapshotResponse, _impl_.metainfo_)>(
+          reinterpret_cast<char*>(&_impl_.metainfo_),
+          reinterpret_cast<char*>(&other->_impl_.metainfo_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata GetSnapshotResponse::GetMetadata() const {
@@ -8240,8 +7366,19 @@ void GetSnapshotResponse::InternalSwap(GetSnapshotResponse* other) {
 
 class GetAllIncrementOperationMetaInfoResponse::_Internal {
  public:
+  static const ::proto::ResponseMetaInfoV1& metainfo(const GetAllIncrementOperationMetaInfoResponse* msg);
 };
 
+const ::proto::ResponseMetaInfoV1&
+GetAllIncrementOperationMetaInfoResponse::_Internal::metainfo(const GetAllIncrementOperationMetaInfoResponse* msg) {
+  return *msg->_impl_.metainfo_;
+}
+void GetAllIncrementOperationMetaInfoResponse::clear_metainfo() {
+  if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
+    delete _impl_.metainfo_;
+  }
+  _impl_.metainfo_ = nullptr;
+}
 void GetAllIncrementOperationMetaInfoResponse::clear_swcincrementoperationlist() {
   _impl_.swcincrementoperationlist_.Clear();
 }
@@ -8256,20 +7393,13 @@ GetAllIncrementOperationMetaInfoResponse::GetAllIncrementOperationMetaInfoRespon
   GetAllIncrementOperationMetaInfoResponse* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.swcincrementoperationlist_){from._impl_.swcincrementoperationlist_}
-    , decltype(_impl_.message_){}
-    , decltype(_impl_.status_){}
+    , decltype(_impl_.metainfo_){nullptr}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.message_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.message_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_message().empty()) {
-    _this->_impl_.message_.Set(from._internal_message(), 
-      _this->GetArenaForAllocation());
+  if (from._internal_has_metainfo()) {
+    _this->_impl_.metainfo_ = new ::proto::ResponseMetaInfoV1(*from._impl_.metainfo_);
   }
-  _this->_impl_.status_ = from._impl_.status_;
   // @@protoc_insertion_point(copy_constructor:proto.GetAllIncrementOperationMetaInfoResponse)
 }
 
@@ -8279,14 +7409,9 @@ inline void GetAllIncrementOperationMetaInfoResponse::SharedCtor(
   (void)is_message_owned;
   new (&_impl_) Impl_{
       decltype(_impl_.swcincrementoperationlist_){arena}
-    , decltype(_impl_.message_){}
-    , decltype(_impl_.status_){false}
+    , decltype(_impl_.metainfo_){nullptr}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.message_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.message_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 GetAllIncrementOperationMetaInfoResponse::~GetAllIncrementOperationMetaInfoResponse() {
@@ -8301,7 +7426,7 @@ GetAllIncrementOperationMetaInfoResponse::~GetAllIncrementOperationMetaInfoRespo
 inline void GetAllIncrementOperationMetaInfoResponse::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   _impl_.swcincrementoperationlist_.~RepeatedPtrField();
-  _impl_.message_.Destroy();
+  if (this != internal_default_instance()) delete _impl_.metainfo_;
 }
 
 void GetAllIncrementOperationMetaInfoResponse::SetCachedSize(int size) const {
@@ -8315,8 +7440,10 @@ void GetAllIncrementOperationMetaInfoResponse::Clear() {
   (void) cached_has_bits;
 
   _impl_.swcincrementoperationlist_.Clear();
-  _impl_.message_.ClearToEmpty();
-  _impl_.status_ = false;
+  if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
+    delete _impl_.metainfo_;
+  }
+  _impl_.metainfo_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -8326,34 +7453,24 @@ const char* GetAllIncrementOperationMetaInfoResponse::_InternalParse(const char*
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bool status = 1;
+      // .proto.ResponseMetaInfoV1 metaInfo = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _impl_.status_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_metainfo(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // string Message = 2;
+      // repeated .proto.SwcIncrementOperationMetaInfoV1 SwcIncrementOperationList = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_message();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "proto.GetAllIncrementOperationMetaInfoResponse.Message"));
-        } else
-          goto handle_unusual;
-        continue;
-      // repeated .proto.SwcIncrementOperationMetaInfoV1 SwcIncrementOperationList = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           ptr -= 1;
           do {
             ptr += 1;
             ptr = ctx->ParseMessage(_internal_add_swcincrementoperationlist(), ptr);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<26>(ptr));
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<18>(ptr));
         } else
           goto handle_unusual;
         continue;
@@ -8386,28 +7503,19 @@ uint8_t* GetAllIncrementOperationMetaInfoResponse::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bool status = 1;
-  if (this->_internal_status() != 0) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_status(), target);
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  if (this->_internal_has_metainfo()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::metainfo(this),
+        _Internal::metainfo(this).GetCachedSize(), target, stream);
   }
 
-  // string Message = 2;
-  if (!this->_internal_message().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_message().data(), static_cast<int>(this->_internal_message().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "proto.GetAllIncrementOperationMetaInfoResponse.Message");
-    target = stream->WriteStringMaybeAliased(
-        2, this->_internal_message(), target);
-  }
-
-  // repeated .proto.SwcIncrementOperationMetaInfoV1 SwcIncrementOperationList = 3;
+  // repeated .proto.SwcIncrementOperationMetaInfoV1 SwcIncrementOperationList = 2;
   for (unsigned i = 0,
       n = static_cast<unsigned>(this->_internal_swcincrementoperationlist_size()); i < n; i++) {
     const auto& repfield = this->_internal_swcincrementoperationlist(i);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(3, repfield, repfield.GetCachedSize(), target, stream);
+        InternalWriteMessage(2, repfield, repfield.GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -8426,23 +7534,18 @@ size_t GetAllIncrementOperationMetaInfoResponse::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated .proto.SwcIncrementOperationMetaInfoV1 SwcIncrementOperationList = 3;
+  // repeated .proto.SwcIncrementOperationMetaInfoV1 SwcIncrementOperationList = 2;
   total_size += 1UL * this->_internal_swcincrementoperationlist_size();
   for (const auto& msg : this->_impl_.swcincrementoperationlist_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
-  // string Message = 2;
-  if (!this->_internal_message().empty()) {
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  if (this->_internal_has_metainfo()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_message());
-  }
-
-  // bool status = 1;
-  if (this->_internal_status() != 0) {
-    total_size += 1 + 1;
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.metainfo_);
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -8464,11 +7567,9 @@ void GetAllIncrementOperationMetaInfoResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID
   (void) cached_has_bits;
 
   _this->_impl_.swcincrementoperationlist_.MergeFrom(from._impl_.swcincrementoperationlist_);
-  if (!from._internal_message().empty()) {
-    _this->_internal_set_message(from._internal_message());
-  }
-  if (from._internal_status() != 0) {
-    _this->_internal_set_status(from._internal_status());
+  if (from._internal_has_metainfo()) {
+    _this->_internal_mutable_metainfo()->::proto::ResponseMetaInfoV1::MergeFrom(
+        from._internal_metainfo());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -8486,15 +7587,9 @@ bool GetAllIncrementOperationMetaInfoResponse::IsInitialized() const {
 
 void GetAllIncrementOperationMetaInfoResponse::InternalSwap(GetAllIncrementOperationMetaInfoResponse* other) {
   using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   _impl_.swcincrementoperationlist_.InternalSwap(&other->_impl_.swcincrementoperationlist_);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.message_, lhs_arena,
-      &other->_impl_.message_, rhs_arena
-  );
-  swap(_impl_.status_, other->_impl_.status_);
+  swap(_impl_.metainfo_, other->_impl_.metainfo_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata GetAllIncrementOperationMetaInfoResponse::GetMetadata() const {
@@ -8507,8 +7602,19 @@ void GetAllIncrementOperationMetaInfoResponse::InternalSwap(GetAllIncrementOpera
 
 class GetIncrementOperationResponse::_Internal {
  public:
+  static const ::proto::ResponseMetaInfoV1& metainfo(const GetIncrementOperationResponse* msg);
 };
 
+const ::proto::ResponseMetaInfoV1&
+GetIncrementOperationResponse::_Internal::metainfo(const GetIncrementOperationResponse* msg) {
+  return *msg->_impl_.metainfo_;
+}
+void GetIncrementOperationResponse::clear_metainfo() {
+  if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
+    delete _impl_.metainfo_;
+  }
+  _impl_.metainfo_ = nullptr;
+}
 void GetIncrementOperationResponse::clear_swcincrementoperationlist() {
   _impl_.swcincrementoperationlist_.Clear();
 }
@@ -8523,20 +7629,13 @@ GetIncrementOperationResponse::GetIncrementOperationResponse(const GetIncrementO
   GetIncrementOperationResponse* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.swcincrementoperationlist_){from._impl_.swcincrementoperationlist_}
-    , decltype(_impl_.message_){}
-    , decltype(_impl_.status_){}
+    , decltype(_impl_.metainfo_){nullptr}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.message_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.message_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_message().empty()) {
-    _this->_impl_.message_.Set(from._internal_message(), 
-      _this->GetArenaForAllocation());
+  if (from._internal_has_metainfo()) {
+    _this->_impl_.metainfo_ = new ::proto::ResponseMetaInfoV1(*from._impl_.metainfo_);
   }
-  _this->_impl_.status_ = from._impl_.status_;
   // @@protoc_insertion_point(copy_constructor:proto.GetIncrementOperationResponse)
 }
 
@@ -8546,14 +7645,9 @@ inline void GetIncrementOperationResponse::SharedCtor(
   (void)is_message_owned;
   new (&_impl_) Impl_{
       decltype(_impl_.swcincrementoperationlist_){arena}
-    , decltype(_impl_.message_){}
-    , decltype(_impl_.status_){false}
+    , decltype(_impl_.metainfo_){nullptr}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.message_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.message_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 GetIncrementOperationResponse::~GetIncrementOperationResponse() {
@@ -8568,7 +7662,7 @@ GetIncrementOperationResponse::~GetIncrementOperationResponse() {
 inline void GetIncrementOperationResponse::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   _impl_.swcincrementoperationlist_.~RepeatedPtrField();
-  _impl_.message_.Destroy();
+  if (this != internal_default_instance()) delete _impl_.metainfo_;
 }
 
 void GetIncrementOperationResponse::SetCachedSize(int size) const {
@@ -8582,8 +7676,10 @@ void GetIncrementOperationResponse::Clear() {
   (void) cached_has_bits;
 
   _impl_.swcincrementoperationlist_.Clear();
-  _impl_.message_.ClearToEmpty();
-  _impl_.status_ = false;
+  if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
+    delete _impl_.metainfo_;
+  }
+  _impl_.metainfo_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -8593,34 +7689,24 @@ const char* GetIncrementOperationResponse::_InternalParse(const char* ptr, ::_pb
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bool status = 1;
+      // .proto.ResponseMetaInfoV1 metaInfo = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _impl_.status_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_metainfo(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // string Message = 2;
+      // repeated .proto.SwcIncrementOperationV1 SwcIncrementOperationList = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_message();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "proto.GetIncrementOperationResponse.Message"));
-        } else
-          goto handle_unusual;
-        continue;
-      // repeated .proto.SwcIncrementOperationV1 SwcIncrementOperationList = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           ptr -= 1;
           do {
             ptr += 1;
             ptr = ctx->ParseMessage(_internal_add_swcincrementoperationlist(), ptr);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<26>(ptr));
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<18>(ptr));
         } else
           goto handle_unusual;
         continue;
@@ -8653,28 +7739,19 @@ uint8_t* GetIncrementOperationResponse::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bool status = 1;
-  if (this->_internal_status() != 0) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_status(), target);
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  if (this->_internal_has_metainfo()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::metainfo(this),
+        _Internal::metainfo(this).GetCachedSize(), target, stream);
   }
 
-  // string Message = 2;
-  if (!this->_internal_message().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_message().data(), static_cast<int>(this->_internal_message().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "proto.GetIncrementOperationResponse.Message");
-    target = stream->WriteStringMaybeAliased(
-        2, this->_internal_message(), target);
-  }
-
-  // repeated .proto.SwcIncrementOperationV1 SwcIncrementOperationList = 3;
+  // repeated .proto.SwcIncrementOperationV1 SwcIncrementOperationList = 2;
   for (unsigned i = 0,
       n = static_cast<unsigned>(this->_internal_swcincrementoperationlist_size()); i < n; i++) {
     const auto& repfield = this->_internal_swcincrementoperationlist(i);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(3, repfield, repfield.GetCachedSize(), target, stream);
+        InternalWriteMessage(2, repfield, repfield.GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -8693,23 +7770,18 @@ size_t GetIncrementOperationResponse::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated .proto.SwcIncrementOperationV1 SwcIncrementOperationList = 3;
+  // repeated .proto.SwcIncrementOperationV1 SwcIncrementOperationList = 2;
   total_size += 1UL * this->_internal_swcincrementoperationlist_size();
   for (const auto& msg : this->_impl_.swcincrementoperationlist_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
-  // string Message = 2;
-  if (!this->_internal_message().empty()) {
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  if (this->_internal_has_metainfo()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_message());
-  }
-
-  // bool status = 1;
-  if (this->_internal_status() != 0) {
-    total_size += 1 + 1;
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.metainfo_);
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -8731,11 +7803,9 @@ void GetIncrementOperationResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& 
   (void) cached_has_bits;
 
   _this->_impl_.swcincrementoperationlist_.MergeFrom(from._impl_.swcincrementoperationlist_);
-  if (!from._internal_message().empty()) {
-    _this->_internal_set_message(from._internal_message());
-  }
-  if (from._internal_status() != 0) {
-    _this->_internal_set_status(from._internal_status());
+  if (from._internal_has_metainfo()) {
+    _this->_internal_mutable_metainfo()->::proto::ResponseMetaInfoV1::MergeFrom(
+        from._internal_metainfo());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -8753,15 +7823,9 @@ bool GetIncrementOperationResponse::IsInitialized() const {
 
 void GetIncrementOperationResponse::InternalSwap(GetIncrementOperationResponse* other) {
   using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   _impl_.swcincrementoperationlist_.InternalSwap(&other->_impl_.swcincrementoperationlist_);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.message_, lhs_arena,
-      &other->_impl_.message_, rhs_arena
-  );
-  swap(_impl_.status_, other->_impl_.status_);
+  swap(_impl_.metainfo_, other->_impl_.metainfo_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata GetIncrementOperationResponse::GetMetadata() const {
@@ -8774,8 +7838,19 @@ void GetIncrementOperationResponse::InternalSwap(GetIncrementOperationResponse* 
 
 class CreateSwcNodeDataResponse::_Internal {
  public:
+  static const ::proto::ResponseMetaInfoV1& metainfo(const CreateSwcNodeDataResponse* msg);
 };
 
+const ::proto::ResponseMetaInfoV1&
+CreateSwcNodeDataResponse::_Internal::metainfo(const CreateSwcNodeDataResponse* msg) {
+  return *msg->_impl_.metainfo_;
+}
+void CreateSwcNodeDataResponse::clear_metainfo() {
+  if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
+    delete _impl_.metainfo_;
+  }
+  _impl_.metainfo_ = nullptr;
+}
 CreateSwcNodeDataResponse::CreateSwcNodeDataResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
@@ -8786,20 +7861,13 @@ CreateSwcNodeDataResponse::CreateSwcNodeDataResponse(const CreateSwcNodeDataResp
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   CreateSwcNodeDataResponse* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.message_){}
-    , decltype(_impl_.status_){}
+      decltype(_impl_.metainfo_){nullptr}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.message_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.message_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_message().empty()) {
-    _this->_impl_.message_.Set(from._internal_message(), 
-      _this->GetArenaForAllocation());
+  if (from._internal_has_metainfo()) {
+    _this->_impl_.metainfo_ = new ::proto::ResponseMetaInfoV1(*from._impl_.metainfo_);
   }
-  _this->_impl_.status_ = from._impl_.status_;
   // @@protoc_insertion_point(copy_constructor:proto.CreateSwcNodeDataResponse)
 }
 
@@ -8808,14 +7876,9 @@ inline void CreateSwcNodeDataResponse::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.message_){}
-    , decltype(_impl_.status_){false}
+      decltype(_impl_.metainfo_){nullptr}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.message_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.message_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 CreateSwcNodeDataResponse::~CreateSwcNodeDataResponse() {
@@ -8829,7 +7892,7 @@ CreateSwcNodeDataResponse::~CreateSwcNodeDataResponse() {
 
 inline void CreateSwcNodeDataResponse::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.message_.Destroy();
+  if (this != internal_default_instance()) delete _impl_.metainfo_;
 }
 
 void CreateSwcNodeDataResponse::SetCachedSize(int size) const {
@@ -8842,8 +7905,10 @@ void CreateSwcNodeDataResponse::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.message_.ClearToEmpty();
-  _impl_.status_ = false;
+  if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
+    delete _impl_.metainfo_;
+  }
+  _impl_.metainfo_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -8853,21 +7918,11 @@ const char* CreateSwcNodeDataResponse::_InternalParse(const char* ptr, ::_pbi::P
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bool status = 1;
+      // .proto.ResponseMetaInfoV1 metaInfo = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _impl_.status_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_metainfo(), ptr);
           CHK_(ptr);
-        } else
-          goto handle_unusual;
-        continue;
-      // string Message = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_message();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "proto.CreateSwcNodeDataResponse.Message"));
         } else
           goto handle_unusual;
         continue;
@@ -8900,20 +7955,11 @@ uint8_t* CreateSwcNodeDataResponse::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bool status = 1;
-  if (this->_internal_status() != 0) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_status(), target);
-  }
-
-  // string Message = 2;
-  if (!this->_internal_message().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_message().data(), static_cast<int>(this->_internal_message().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "proto.CreateSwcNodeDataResponse.Message");
-    target = stream->WriteStringMaybeAliased(
-        2, this->_internal_message(), target);
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  if (this->_internal_has_metainfo()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::metainfo(this),
+        _Internal::metainfo(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -8932,16 +7978,11 @@ size_t CreateSwcNodeDataResponse::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string Message = 2;
-  if (!this->_internal_message().empty()) {
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  if (this->_internal_has_metainfo()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_message());
-  }
-
-  // bool status = 1;
-  if (this->_internal_status() != 0) {
-    total_size += 1 + 1;
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.metainfo_);
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -8962,11 +8003,9 @@ void CreateSwcNodeDataResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_m
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_message().empty()) {
-    _this->_internal_set_message(from._internal_message());
-  }
-  if (from._internal_status() != 0) {
-    _this->_internal_set_status(from._internal_status());
+  if (from._internal_has_metainfo()) {
+    _this->_internal_mutable_metainfo()->::proto::ResponseMetaInfoV1::MergeFrom(
+        from._internal_metainfo());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -8984,14 +8023,8 @@ bool CreateSwcNodeDataResponse::IsInitialized() const {
 
 void CreateSwcNodeDataResponse::InternalSwap(CreateSwcNodeDataResponse* other) {
   using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.message_, lhs_arena,
-      &other->_impl_.message_, rhs_arena
-  );
-  swap(_impl_.status_, other->_impl_.status_);
+  swap(_impl_.metainfo_, other->_impl_.metainfo_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata CreateSwcNodeDataResponse::GetMetadata() const {
@@ -9004,8 +8037,19 @@ void CreateSwcNodeDataResponse::InternalSwap(CreateSwcNodeDataResponse* other) {
 
 class DeleteSwcNodeDataResponse::_Internal {
  public:
+  static const ::proto::ResponseMetaInfoV1& metainfo(const DeleteSwcNodeDataResponse* msg);
 };
 
+const ::proto::ResponseMetaInfoV1&
+DeleteSwcNodeDataResponse::_Internal::metainfo(const DeleteSwcNodeDataResponse* msg) {
+  return *msg->_impl_.metainfo_;
+}
+void DeleteSwcNodeDataResponse::clear_metainfo() {
+  if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
+    delete _impl_.metainfo_;
+  }
+  _impl_.metainfo_ = nullptr;
+}
 DeleteSwcNodeDataResponse::DeleteSwcNodeDataResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
@@ -9016,20 +8060,13 @@ DeleteSwcNodeDataResponse::DeleteSwcNodeDataResponse(const DeleteSwcNodeDataResp
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   DeleteSwcNodeDataResponse* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.message_){}
-    , decltype(_impl_.status_){}
+      decltype(_impl_.metainfo_){nullptr}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.message_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.message_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_message().empty()) {
-    _this->_impl_.message_.Set(from._internal_message(), 
-      _this->GetArenaForAllocation());
+  if (from._internal_has_metainfo()) {
+    _this->_impl_.metainfo_ = new ::proto::ResponseMetaInfoV1(*from._impl_.metainfo_);
   }
-  _this->_impl_.status_ = from._impl_.status_;
   // @@protoc_insertion_point(copy_constructor:proto.DeleteSwcNodeDataResponse)
 }
 
@@ -9038,14 +8075,9 @@ inline void DeleteSwcNodeDataResponse::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.message_){}
-    , decltype(_impl_.status_){false}
+      decltype(_impl_.metainfo_){nullptr}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.message_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.message_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 DeleteSwcNodeDataResponse::~DeleteSwcNodeDataResponse() {
@@ -9059,7 +8091,7 @@ DeleteSwcNodeDataResponse::~DeleteSwcNodeDataResponse() {
 
 inline void DeleteSwcNodeDataResponse::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.message_.Destroy();
+  if (this != internal_default_instance()) delete _impl_.metainfo_;
 }
 
 void DeleteSwcNodeDataResponse::SetCachedSize(int size) const {
@@ -9072,8 +8104,10 @@ void DeleteSwcNodeDataResponse::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.message_.ClearToEmpty();
-  _impl_.status_ = false;
+  if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
+    delete _impl_.metainfo_;
+  }
+  _impl_.metainfo_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -9083,21 +8117,11 @@ const char* DeleteSwcNodeDataResponse::_InternalParse(const char* ptr, ::_pbi::P
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bool status = 1;
+      // .proto.ResponseMetaInfoV1 metaInfo = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _impl_.status_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_metainfo(), ptr);
           CHK_(ptr);
-        } else
-          goto handle_unusual;
-        continue;
-      // string Message = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_message();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "proto.DeleteSwcNodeDataResponse.Message"));
         } else
           goto handle_unusual;
         continue;
@@ -9130,20 +8154,11 @@ uint8_t* DeleteSwcNodeDataResponse::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bool status = 1;
-  if (this->_internal_status() != 0) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_status(), target);
-  }
-
-  // string Message = 2;
-  if (!this->_internal_message().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_message().data(), static_cast<int>(this->_internal_message().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "proto.DeleteSwcNodeDataResponse.Message");
-    target = stream->WriteStringMaybeAliased(
-        2, this->_internal_message(), target);
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  if (this->_internal_has_metainfo()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::metainfo(this),
+        _Internal::metainfo(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -9162,16 +8177,11 @@ size_t DeleteSwcNodeDataResponse::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string Message = 2;
-  if (!this->_internal_message().empty()) {
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  if (this->_internal_has_metainfo()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_message());
-  }
-
-  // bool status = 1;
-  if (this->_internal_status() != 0) {
-    total_size += 1 + 1;
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.metainfo_);
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -9192,11 +8202,9 @@ void DeleteSwcNodeDataResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_m
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_message().empty()) {
-    _this->_internal_set_message(from._internal_message());
-  }
-  if (from._internal_status() != 0) {
-    _this->_internal_set_status(from._internal_status());
+  if (from._internal_has_metainfo()) {
+    _this->_internal_mutable_metainfo()->::proto::ResponseMetaInfoV1::MergeFrom(
+        from._internal_metainfo());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -9214,14 +8222,8 @@ bool DeleteSwcNodeDataResponse::IsInitialized() const {
 
 void DeleteSwcNodeDataResponse::InternalSwap(DeleteSwcNodeDataResponse* other) {
   using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.message_, lhs_arena,
-      &other->_impl_.message_, rhs_arena
-  );
-  swap(_impl_.status_, other->_impl_.status_);
+  swap(_impl_.metainfo_, other->_impl_.metainfo_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata DeleteSwcNodeDataResponse::GetMetadata() const {
@@ -9234,8 +8236,19 @@ void DeleteSwcNodeDataResponse::InternalSwap(DeleteSwcNodeDataResponse* other) {
 
 class UpdateSwcNodeDataResponse::_Internal {
  public:
+  static const ::proto::ResponseMetaInfoV1& metainfo(const UpdateSwcNodeDataResponse* msg);
 };
 
+const ::proto::ResponseMetaInfoV1&
+UpdateSwcNodeDataResponse::_Internal::metainfo(const UpdateSwcNodeDataResponse* msg) {
+  return *msg->_impl_.metainfo_;
+}
+void UpdateSwcNodeDataResponse::clear_metainfo() {
+  if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
+    delete _impl_.metainfo_;
+  }
+  _impl_.metainfo_ = nullptr;
+}
 UpdateSwcNodeDataResponse::UpdateSwcNodeDataResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
@@ -9246,20 +8259,13 @@ UpdateSwcNodeDataResponse::UpdateSwcNodeDataResponse(const UpdateSwcNodeDataResp
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   UpdateSwcNodeDataResponse* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.message_){}
-    , decltype(_impl_.status_){}
+      decltype(_impl_.metainfo_){nullptr}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.message_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.message_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_message().empty()) {
-    _this->_impl_.message_.Set(from._internal_message(), 
-      _this->GetArenaForAllocation());
+  if (from._internal_has_metainfo()) {
+    _this->_impl_.metainfo_ = new ::proto::ResponseMetaInfoV1(*from._impl_.metainfo_);
   }
-  _this->_impl_.status_ = from._impl_.status_;
   // @@protoc_insertion_point(copy_constructor:proto.UpdateSwcNodeDataResponse)
 }
 
@@ -9268,14 +8274,9 @@ inline void UpdateSwcNodeDataResponse::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.message_){}
-    , decltype(_impl_.status_){false}
+      decltype(_impl_.metainfo_){nullptr}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.message_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.message_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 UpdateSwcNodeDataResponse::~UpdateSwcNodeDataResponse() {
@@ -9289,7 +8290,7 @@ UpdateSwcNodeDataResponse::~UpdateSwcNodeDataResponse() {
 
 inline void UpdateSwcNodeDataResponse::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.message_.Destroy();
+  if (this != internal_default_instance()) delete _impl_.metainfo_;
 }
 
 void UpdateSwcNodeDataResponse::SetCachedSize(int size) const {
@@ -9302,8 +8303,10 @@ void UpdateSwcNodeDataResponse::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.message_.ClearToEmpty();
-  _impl_.status_ = false;
+  if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
+    delete _impl_.metainfo_;
+  }
+  _impl_.metainfo_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -9313,21 +8316,11 @@ const char* UpdateSwcNodeDataResponse::_InternalParse(const char* ptr, ::_pbi::P
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bool status = 1;
+      // .proto.ResponseMetaInfoV1 metaInfo = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _impl_.status_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_metainfo(), ptr);
           CHK_(ptr);
-        } else
-          goto handle_unusual;
-        continue;
-      // string Message = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_message();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "proto.UpdateSwcNodeDataResponse.Message"));
         } else
           goto handle_unusual;
         continue;
@@ -9360,20 +8353,11 @@ uint8_t* UpdateSwcNodeDataResponse::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bool status = 1;
-  if (this->_internal_status() != 0) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_status(), target);
-  }
-
-  // string Message = 2;
-  if (!this->_internal_message().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_message().data(), static_cast<int>(this->_internal_message().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "proto.UpdateSwcNodeDataResponse.Message");
-    target = stream->WriteStringMaybeAliased(
-        2, this->_internal_message(), target);
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  if (this->_internal_has_metainfo()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::metainfo(this),
+        _Internal::metainfo(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -9392,16 +8376,11 @@ size_t UpdateSwcNodeDataResponse::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string Message = 2;
-  if (!this->_internal_message().empty()) {
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  if (this->_internal_has_metainfo()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_message());
-  }
-
-  // bool status = 1;
-  if (this->_internal_status() != 0) {
-    total_size += 1 + 1;
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.metainfo_);
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -9422,11 +8401,9 @@ void UpdateSwcNodeDataResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_m
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_message().empty()) {
-    _this->_internal_set_message(from._internal_message());
-  }
-  if (from._internal_status() != 0) {
-    _this->_internal_set_status(from._internal_status());
+  if (from._internal_has_metainfo()) {
+    _this->_internal_mutable_metainfo()->::proto::ResponseMetaInfoV1::MergeFrom(
+        from._internal_metainfo());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -9444,14 +8421,8 @@ bool UpdateSwcNodeDataResponse::IsInitialized() const {
 
 void UpdateSwcNodeDataResponse::InternalSwap(UpdateSwcNodeDataResponse* other) {
   using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.message_, lhs_arena,
-      &other->_impl_.message_, rhs_arena
-  );
-  swap(_impl_.status_, other->_impl_.status_);
+  swap(_impl_.metainfo_, other->_impl_.metainfo_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata UpdateSwcNodeDataResponse::GetMetadata() const {
@@ -9464,12 +8435,23 @@ void UpdateSwcNodeDataResponse::InternalSwap(UpdateSwcNodeDataResponse* other) {
 
 class GetSwcNodeDataResponse::_Internal {
  public:
+  static const ::proto::ResponseMetaInfoV1& metainfo(const GetSwcNodeDataResponse* msg);
   static const ::proto::SwcDataV1& swcnodedata(const GetSwcNodeDataResponse* msg);
 };
 
+const ::proto::ResponseMetaInfoV1&
+GetSwcNodeDataResponse::_Internal::metainfo(const GetSwcNodeDataResponse* msg) {
+  return *msg->_impl_.metainfo_;
+}
 const ::proto::SwcDataV1&
 GetSwcNodeDataResponse::_Internal::swcnodedata(const GetSwcNodeDataResponse* msg) {
   return *msg->_impl_.swcnodedata_;
+}
+void GetSwcNodeDataResponse::clear_metainfo() {
+  if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
+    delete _impl_.metainfo_;
+  }
+  _impl_.metainfo_ = nullptr;
 }
 void GetSwcNodeDataResponse::clear_swcnodedata() {
   if (GetArenaForAllocation() == nullptr && _impl_.swcnodedata_ != nullptr) {
@@ -9487,24 +8469,17 @@ GetSwcNodeDataResponse::GetSwcNodeDataResponse(const GetSwcNodeDataResponse& fro
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   GetSwcNodeDataResponse* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.message_){}
+      decltype(_impl_.metainfo_){nullptr}
     , decltype(_impl_.swcnodedata_){nullptr}
-    , decltype(_impl_.status_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.message_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.message_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_message().empty()) {
-    _this->_impl_.message_.Set(from._internal_message(), 
-      _this->GetArenaForAllocation());
+  if (from._internal_has_metainfo()) {
+    _this->_impl_.metainfo_ = new ::proto::ResponseMetaInfoV1(*from._impl_.metainfo_);
   }
   if (from._internal_has_swcnodedata()) {
     _this->_impl_.swcnodedata_ = new ::proto::SwcDataV1(*from._impl_.swcnodedata_);
   }
-  _this->_impl_.status_ = from._impl_.status_;
   // @@protoc_insertion_point(copy_constructor:proto.GetSwcNodeDataResponse)
 }
 
@@ -9513,15 +8488,10 @@ inline void GetSwcNodeDataResponse::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.message_){}
+      decltype(_impl_.metainfo_){nullptr}
     , decltype(_impl_.swcnodedata_){nullptr}
-    , decltype(_impl_.status_){false}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.message_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.message_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 GetSwcNodeDataResponse::~GetSwcNodeDataResponse() {
@@ -9535,7 +8505,7 @@ GetSwcNodeDataResponse::~GetSwcNodeDataResponse() {
 
 inline void GetSwcNodeDataResponse::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.message_.Destroy();
+  if (this != internal_default_instance()) delete _impl_.metainfo_;
   if (this != internal_default_instance()) delete _impl_.swcnodedata_;
 }
 
@@ -9549,12 +8519,14 @@ void GetSwcNodeDataResponse::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.message_.ClearToEmpty();
+  if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
+    delete _impl_.metainfo_;
+  }
+  _impl_.metainfo_ = nullptr;
   if (GetArenaForAllocation() == nullptr && _impl_.swcnodedata_ != nullptr) {
     delete _impl_.swcnodedata_;
   }
   _impl_.swcnodedata_ = nullptr;
-  _impl_.status_ = false;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -9564,27 +8536,17 @@ const char* GetSwcNodeDataResponse::_InternalParse(const char* ptr, ::_pbi::Pars
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bool status = 1;
+      // .proto.ResponseMetaInfoV1 metaInfo = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _impl_.status_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_metainfo(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // string Message = 2;
+      // .proto.SwcDataV1 SwcNodeData = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_message();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "proto.GetSwcNodeDataResponse.Message"));
-        } else
-          goto handle_unusual;
-        continue;
-      // .proto.SwcDataV1 SwcNodeData = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_swcnodedata(), ptr);
           CHK_(ptr);
         } else
@@ -9619,26 +8581,17 @@ uint8_t* GetSwcNodeDataResponse::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bool status = 1;
-  if (this->_internal_status() != 0) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_status(), target);
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  if (this->_internal_has_metainfo()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::metainfo(this),
+        _Internal::metainfo(this).GetCachedSize(), target, stream);
   }
 
-  // string Message = 2;
-  if (!this->_internal_message().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_message().data(), static_cast<int>(this->_internal_message().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "proto.GetSwcNodeDataResponse.Message");
-    target = stream->WriteStringMaybeAliased(
-        2, this->_internal_message(), target);
-  }
-
-  // .proto.SwcDataV1 SwcNodeData = 3;
+  // .proto.SwcDataV1 SwcNodeData = 2;
   if (this->_internal_has_swcnodedata()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(3, _Internal::swcnodedata(this),
+      InternalWriteMessage(2, _Internal::swcnodedata(this),
         _Internal::swcnodedata(this).GetCachedSize(), target, stream);
   }
 
@@ -9658,23 +8611,18 @@ size_t GetSwcNodeDataResponse::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string Message = 2;
-  if (!this->_internal_message().empty()) {
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  if (this->_internal_has_metainfo()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_message());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.metainfo_);
   }
 
-  // .proto.SwcDataV1 SwcNodeData = 3;
+  // .proto.SwcDataV1 SwcNodeData = 2;
   if (this->_internal_has_swcnodedata()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.swcnodedata_);
-  }
-
-  // bool status = 1;
-  if (this->_internal_status() != 0) {
-    total_size += 1 + 1;
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -9695,15 +8643,13 @@ void GetSwcNodeDataResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg,
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_message().empty()) {
-    _this->_internal_set_message(from._internal_message());
+  if (from._internal_has_metainfo()) {
+    _this->_internal_mutable_metainfo()->::proto::ResponseMetaInfoV1::MergeFrom(
+        from._internal_metainfo());
   }
   if (from._internal_has_swcnodedata()) {
     _this->_internal_mutable_swcnodedata()->::proto::SwcDataV1::MergeFrom(
         from._internal_swcnodedata());
-  }
-  if (from._internal_status() != 0) {
-    _this->_internal_set_status(from._internal_status());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -9721,19 +8667,13 @@ bool GetSwcNodeDataResponse::IsInitialized() const {
 
 void GetSwcNodeDataResponse::InternalSwap(GetSwcNodeDataResponse* other) {
   using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.message_, lhs_arena,
-      &other->_impl_.message_, rhs_arena
-  );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(GetSwcNodeDataResponse, _impl_.status_)
-      + sizeof(GetSwcNodeDataResponse::_impl_.status_)
-      - PROTOBUF_FIELD_OFFSET(GetSwcNodeDataResponse, _impl_.swcnodedata_)>(
-          reinterpret_cast<char*>(&_impl_.swcnodedata_),
-          reinterpret_cast<char*>(&other->_impl_.swcnodedata_));
+      PROTOBUF_FIELD_OFFSET(GetSwcNodeDataResponse, _impl_.swcnodedata_)
+      + sizeof(GetSwcNodeDataResponse::_impl_.swcnodedata_)
+      - PROTOBUF_FIELD_OFFSET(GetSwcNodeDataResponse, _impl_.metainfo_)>(
+          reinterpret_cast<char*>(&_impl_.metainfo_),
+          reinterpret_cast<char*>(&other->_impl_.metainfo_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata GetSwcNodeDataResponse::GetMetadata() const {
@@ -9746,12 +8686,23 @@ void GetSwcNodeDataResponse::InternalSwap(GetSwcNodeDataResponse* other) {
 
 class GetSwcFullNodeDataResponse::_Internal {
  public:
+  static const ::proto::ResponseMetaInfoV1& metainfo(const GetSwcFullNodeDataResponse* msg);
   static const ::proto::SwcDataV1& swcnodedata(const GetSwcFullNodeDataResponse* msg);
 };
 
+const ::proto::ResponseMetaInfoV1&
+GetSwcFullNodeDataResponse::_Internal::metainfo(const GetSwcFullNodeDataResponse* msg) {
+  return *msg->_impl_.metainfo_;
+}
 const ::proto::SwcDataV1&
 GetSwcFullNodeDataResponse::_Internal::swcnodedata(const GetSwcFullNodeDataResponse* msg) {
   return *msg->_impl_.swcnodedata_;
+}
+void GetSwcFullNodeDataResponse::clear_metainfo() {
+  if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
+    delete _impl_.metainfo_;
+  }
+  _impl_.metainfo_ = nullptr;
 }
 void GetSwcFullNodeDataResponse::clear_swcnodedata() {
   if (GetArenaForAllocation() == nullptr && _impl_.swcnodedata_ != nullptr) {
@@ -9769,24 +8720,17 @@ GetSwcFullNodeDataResponse::GetSwcFullNodeDataResponse(const GetSwcFullNodeDataR
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   GetSwcFullNodeDataResponse* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.message_){}
+      decltype(_impl_.metainfo_){nullptr}
     , decltype(_impl_.swcnodedata_){nullptr}
-    , decltype(_impl_.status_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.message_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.message_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_message().empty()) {
-    _this->_impl_.message_.Set(from._internal_message(), 
-      _this->GetArenaForAllocation());
+  if (from._internal_has_metainfo()) {
+    _this->_impl_.metainfo_ = new ::proto::ResponseMetaInfoV1(*from._impl_.metainfo_);
   }
   if (from._internal_has_swcnodedata()) {
     _this->_impl_.swcnodedata_ = new ::proto::SwcDataV1(*from._impl_.swcnodedata_);
   }
-  _this->_impl_.status_ = from._impl_.status_;
   // @@protoc_insertion_point(copy_constructor:proto.GetSwcFullNodeDataResponse)
 }
 
@@ -9795,15 +8739,10 @@ inline void GetSwcFullNodeDataResponse::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.message_){}
+      decltype(_impl_.metainfo_){nullptr}
     , decltype(_impl_.swcnodedata_){nullptr}
-    , decltype(_impl_.status_){false}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.message_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.message_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 GetSwcFullNodeDataResponse::~GetSwcFullNodeDataResponse() {
@@ -9817,7 +8756,7 @@ GetSwcFullNodeDataResponse::~GetSwcFullNodeDataResponse() {
 
 inline void GetSwcFullNodeDataResponse::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.message_.Destroy();
+  if (this != internal_default_instance()) delete _impl_.metainfo_;
   if (this != internal_default_instance()) delete _impl_.swcnodedata_;
 }
 
@@ -9831,12 +8770,14 @@ void GetSwcFullNodeDataResponse::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.message_.ClearToEmpty();
+  if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
+    delete _impl_.metainfo_;
+  }
+  _impl_.metainfo_ = nullptr;
   if (GetArenaForAllocation() == nullptr && _impl_.swcnodedata_ != nullptr) {
     delete _impl_.swcnodedata_;
   }
   _impl_.swcnodedata_ = nullptr;
-  _impl_.status_ = false;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -9846,27 +8787,17 @@ const char* GetSwcFullNodeDataResponse::_InternalParse(const char* ptr, ::_pbi::
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bool status = 1;
+      // .proto.ResponseMetaInfoV1 metaInfo = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _impl_.status_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_metainfo(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // string Message = 2;
+      // .proto.SwcDataV1 SwcNodeData = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_message();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "proto.GetSwcFullNodeDataResponse.Message"));
-        } else
-          goto handle_unusual;
-        continue;
-      // .proto.SwcDataV1 SwcNodeData = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_swcnodedata(), ptr);
           CHK_(ptr);
         } else
@@ -9901,26 +8832,17 @@ uint8_t* GetSwcFullNodeDataResponse::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bool status = 1;
-  if (this->_internal_status() != 0) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_status(), target);
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  if (this->_internal_has_metainfo()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::metainfo(this),
+        _Internal::metainfo(this).GetCachedSize(), target, stream);
   }
 
-  // string Message = 2;
-  if (!this->_internal_message().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_message().data(), static_cast<int>(this->_internal_message().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "proto.GetSwcFullNodeDataResponse.Message");
-    target = stream->WriteStringMaybeAliased(
-        2, this->_internal_message(), target);
-  }
-
-  // .proto.SwcDataV1 SwcNodeData = 3;
+  // .proto.SwcDataV1 SwcNodeData = 2;
   if (this->_internal_has_swcnodedata()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(3, _Internal::swcnodedata(this),
+      InternalWriteMessage(2, _Internal::swcnodedata(this),
         _Internal::swcnodedata(this).GetCachedSize(), target, stream);
   }
 
@@ -9940,23 +8862,18 @@ size_t GetSwcFullNodeDataResponse::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string Message = 2;
-  if (!this->_internal_message().empty()) {
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  if (this->_internal_has_metainfo()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_message());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.metainfo_);
   }
 
-  // .proto.SwcDataV1 SwcNodeData = 3;
+  // .proto.SwcDataV1 SwcNodeData = 2;
   if (this->_internal_has_swcnodedata()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.swcnodedata_);
-  }
-
-  // bool status = 1;
-  if (this->_internal_status() != 0) {
-    total_size += 1 + 1;
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -9977,15 +8894,13 @@ void GetSwcFullNodeDataResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_message().empty()) {
-    _this->_internal_set_message(from._internal_message());
+  if (from._internal_has_metainfo()) {
+    _this->_internal_mutable_metainfo()->::proto::ResponseMetaInfoV1::MergeFrom(
+        from._internal_metainfo());
   }
   if (from._internal_has_swcnodedata()) {
     _this->_internal_mutable_swcnodedata()->::proto::SwcDataV1::MergeFrom(
         from._internal_swcnodedata());
-  }
-  if (from._internal_status() != 0) {
-    _this->_internal_set_status(from._internal_status());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -10003,19 +8918,13 @@ bool GetSwcFullNodeDataResponse::IsInitialized() const {
 
 void GetSwcFullNodeDataResponse::InternalSwap(GetSwcFullNodeDataResponse* other) {
   using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.message_, lhs_arena,
-      &other->_impl_.message_, rhs_arena
-  );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(GetSwcFullNodeDataResponse, _impl_.status_)
-      + sizeof(GetSwcFullNodeDataResponse::_impl_.status_)
-      - PROTOBUF_FIELD_OFFSET(GetSwcFullNodeDataResponse, _impl_.swcnodedata_)>(
-          reinterpret_cast<char*>(&_impl_.swcnodedata_),
-          reinterpret_cast<char*>(&other->_impl_.swcnodedata_));
+      PROTOBUF_FIELD_OFFSET(GetSwcFullNodeDataResponse, _impl_.swcnodedata_)
+      + sizeof(GetSwcFullNodeDataResponse::_impl_.swcnodedata_)
+      - PROTOBUF_FIELD_OFFSET(GetSwcFullNodeDataResponse, _impl_.metainfo_)>(
+          reinterpret_cast<char*>(&_impl_.metainfo_),
+          reinterpret_cast<char*>(&other->_impl_.metainfo_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata GetSwcFullNodeDataResponse::GetMetadata() const {
@@ -10028,12 +8937,23 @@ void GetSwcFullNodeDataResponse::InternalSwap(GetSwcFullNodeDataResponse* other)
 
 class GetSwcNodeDataListByTimeAndUserResponse::_Internal {
  public:
+  static const ::proto::ResponseMetaInfoV1& metainfo(const GetSwcNodeDataListByTimeAndUserResponse* msg);
   static const ::proto::SwcDataV1& swcnodedata(const GetSwcNodeDataListByTimeAndUserResponse* msg);
 };
 
+const ::proto::ResponseMetaInfoV1&
+GetSwcNodeDataListByTimeAndUserResponse::_Internal::metainfo(const GetSwcNodeDataListByTimeAndUserResponse* msg) {
+  return *msg->_impl_.metainfo_;
+}
 const ::proto::SwcDataV1&
 GetSwcNodeDataListByTimeAndUserResponse::_Internal::swcnodedata(const GetSwcNodeDataListByTimeAndUserResponse* msg) {
   return *msg->_impl_.swcnodedata_;
+}
+void GetSwcNodeDataListByTimeAndUserResponse::clear_metainfo() {
+  if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
+    delete _impl_.metainfo_;
+  }
+  _impl_.metainfo_ = nullptr;
 }
 void GetSwcNodeDataListByTimeAndUserResponse::clear_swcnodedata() {
   if (GetArenaForAllocation() == nullptr && _impl_.swcnodedata_ != nullptr) {
@@ -10051,24 +8971,17 @@ GetSwcNodeDataListByTimeAndUserResponse::GetSwcNodeDataListByTimeAndUserResponse
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   GetSwcNodeDataListByTimeAndUserResponse* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.message_){}
+      decltype(_impl_.metainfo_){nullptr}
     , decltype(_impl_.swcnodedata_){nullptr}
-    , decltype(_impl_.status_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.message_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.message_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_message().empty()) {
-    _this->_impl_.message_.Set(from._internal_message(), 
-      _this->GetArenaForAllocation());
+  if (from._internal_has_metainfo()) {
+    _this->_impl_.metainfo_ = new ::proto::ResponseMetaInfoV1(*from._impl_.metainfo_);
   }
   if (from._internal_has_swcnodedata()) {
     _this->_impl_.swcnodedata_ = new ::proto::SwcDataV1(*from._impl_.swcnodedata_);
   }
-  _this->_impl_.status_ = from._impl_.status_;
   // @@protoc_insertion_point(copy_constructor:proto.GetSwcNodeDataListByTimeAndUserResponse)
 }
 
@@ -10077,15 +8990,10 @@ inline void GetSwcNodeDataListByTimeAndUserResponse::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.message_){}
+      decltype(_impl_.metainfo_){nullptr}
     , decltype(_impl_.swcnodedata_){nullptr}
-    , decltype(_impl_.status_){false}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.message_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.message_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 GetSwcNodeDataListByTimeAndUserResponse::~GetSwcNodeDataListByTimeAndUserResponse() {
@@ -10099,7 +9007,7 @@ GetSwcNodeDataListByTimeAndUserResponse::~GetSwcNodeDataListByTimeAndUserRespons
 
 inline void GetSwcNodeDataListByTimeAndUserResponse::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.message_.Destroy();
+  if (this != internal_default_instance()) delete _impl_.metainfo_;
   if (this != internal_default_instance()) delete _impl_.swcnodedata_;
 }
 
@@ -10113,12 +9021,14 @@ void GetSwcNodeDataListByTimeAndUserResponse::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.message_.ClearToEmpty();
+  if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
+    delete _impl_.metainfo_;
+  }
+  _impl_.metainfo_ = nullptr;
   if (GetArenaForAllocation() == nullptr && _impl_.swcnodedata_ != nullptr) {
     delete _impl_.swcnodedata_;
   }
   _impl_.swcnodedata_ = nullptr;
-  _impl_.status_ = false;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -10128,27 +9038,17 @@ const char* GetSwcNodeDataListByTimeAndUserResponse::_InternalParse(const char* 
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bool status = 1;
+      // .proto.ResponseMetaInfoV1 metaInfo = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _impl_.status_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_metainfo(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // string Message = 2;
+      // .proto.SwcDataV1 SwcNodeData = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_message();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "proto.GetSwcNodeDataListByTimeAndUserResponse.Message"));
-        } else
-          goto handle_unusual;
-        continue;
-      // .proto.SwcDataV1 SwcNodeData = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_swcnodedata(), ptr);
           CHK_(ptr);
         } else
@@ -10183,26 +9083,17 @@ uint8_t* GetSwcNodeDataListByTimeAndUserResponse::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bool status = 1;
-  if (this->_internal_status() != 0) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_status(), target);
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  if (this->_internal_has_metainfo()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::metainfo(this),
+        _Internal::metainfo(this).GetCachedSize(), target, stream);
   }
 
-  // string Message = 2;
-  if (!this->_internal_message().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_message().data(), static_cast<int>(this->_internal_message().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "proto.GetSwcNodeDataListByTimeAndUserResponse.Message");
-    target = stream->WriteStringMaybeAliased(
-        2, this->_internal_message(), target);
-  }
-
-  // .proto.SwcDataV1 SwcNodeData = 3;
+  // .proto.SwcDataV1 SwcNodeData = 2;
   if (this->_internal_has_swcnodedata()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(3, _Internal::swcnodedata(this),
+      InternalWriteMessage(2, _Internal::swcnodedata(this),
         _Internal::swcnodedata(this).GetCachedSize(), target, stream);
   }
 
@@ -10222,23 +9113,18 @@ size_t GetSwcNodeDataListByTimeAndUserResponse::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string Message = 2;
-  if (!this->_internal_message().empty()) {
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  if (this->_internal_has_metainfo()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_message());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.metainfo_);
   }
 
-  // .proto.SwcDataV1 SwcNodeData = 3;
+  // .proto.SwcDataV1 SwcNodeData = 2;
   if (this->_internal_has_swcnodedata()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.swcnodedata_);
-  }
-
-  // bool status = 1;
-  if (this->_internal_status() != 0) {
-    total_size += 1 + 1;
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -10259,15 +9145,13 @@ void GetSwcNodeDataListByTimeAndUserResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID:
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_message().empty()) {
-    _this->_internal_set_message(from._internal_message());
+  if (from._internal_has_metainfo()) {
+    _this->_internal_mutable_metainfo()->::proto::ResponseMetaInfoV1::MergeFrom(
+        from._internal_metainfo());
   }
   if (from._internal_has_swcnodedata()) {
     _this->_internal_mutable_swcnodedata()->::proto::SwcDataV1::MergeFrom(
         from._internal_swcnodedata());
-  }
-  if (from._internal_status() != 0) {
-    _this->_internal_set_status(from._internal_status());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -10285,19 +9169,13 @@ bool GetSwcNodeDataListByTimeAndUserResponse::IsInitialized() const {
 
 void GetSwcNodeDataListByTimeAndUserResponse::InternalSwap(GetSwcNodeDataListByTimeAndUserResponse* other) {
   using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.message_, lhs_arena,
-      &other->_impl_.message_, rhs_arena
-  );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(GetSwcNodeDataListByTimeAndUserResponse, _impl_.status_)
-      + sizeof(GetSwcNodeDataListByTimeAndUserResponse::_impl_.status_)
-      - PROTOBUF_FIELD_OFFSET(GetSwcNodeDataListByTimeAndUserResponse, _impl_.swcnodedata_)>(
-          reinterpret_cast<char*>(&_impl_.swcnodedata_),
-          reinterpret_cast<char*>(&other->_impl_.swcnodedata_));
+      PROTOBUF_FIELD_OFFSET(GetSwcNodeDataListByTimeAndUserResponse, _impl_.swcnodedata_)
+      + sizeof(GetSwcNodeDataListByTimeAndUserResponse::_impl_.swcnodedata_)
+      - PROTOBUF_FIELD_OFFSET(GetSwcNodeDataListByTimeAndUserResponse, _impl_.metainfo_)>(
+          reinterpret_cast<char*>(&_impl_.metainfo_),
+          reinterpret_cast<char*>(&other->_impl_.metainfo_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata GetSwcNodeDataListByTimeAndUserResponse::GetMetadata() const {
@@ -10310,12 +9188,23 @@ void GetSwcNodeDataListByTimeAndUserResponse::InternalSwap(GetSwcNodeDataListByT
 
 class BackupFullDatabaseResponse::_Internal {
  public:
+  static const ::proto::ResponseMetaInfoV1& metainfo(const BackupFullDatabaseResponse* msg);
   static const ::PROTOBUF_NAMESPACE_ID::Timestamp& delaybackuptime(const BackupFullDatabaseResponse* msg);
 };
 
+const ::proto::ResponseMetaInfoV1&
+BackupFullDatabaseResponse::_Internal::metainfo(const BackupFullDatabaseResponse* msg) {
+  return *msg->_impl_.metainfo_;
+}
 const ::PROTOBUF_NAMESPACE_ID::Timestamp&
 BackupFullDatabaseResponse::_Internal::delaybackuptime(const BackupFullDatabaseResponse* msg) {
   return *msg->_impl_.delaybackuptime_;
+}
+void BackupFullDatabaseResponse::clear_metainfo() {
+  if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
+    delete _impl_.metainfo_;
+  }
+  _impl_.metainfo_ = nullptr;
 }
 void BackupFullDatabaseResponse::clear_delaybackuptime() {
   if (GetArenaForAllocation() == nullptr && _impl_.delaybackuptime_ != nullptr) {
@@ -10333,27 +9222,19 @@ BackupFullDatabaseResponse::BackupFullDatabaseResponse(const BackupFullDatabaseR
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   BackupFullDatabaseResponse* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.message_){}
+      decltype(_impl_.metainfo_){nullptr}
     , decltype(_impl_.delaybackuptime_){nullptr}
-    , decltype(_impl_.status_){}
     , decltype(_impl_.instantbackup_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.message_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.message_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_message().empty()) {
-    _this->_impl_.message_.Set(from._internal_message(), 
-      _this->GetArenaForAllocation());
+  if (from._internal_has_metainfo()) {
+    _this->_impl_.metainfo_ = new ::proto::ResponseMetaInfoV1(*from._impl_.metainfo_);
   }
   if (from._internal_has_delaybackuptime()) {
     _this->_impl_.delaybackuptime_ = new ::PROTOBUF_NAMESPACE_ID::Timestamp(*from._impl_.delaybackuptime_);
   }
-  ::memcpy(&_impl_.status_, &from._impl_.status_,
-    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.instantbackup_) -
-    reinterpret_cast<char*>(&_impl_.status_)) + sizeof(_impl_.instantbackup_));
+  _this->_impl_.instantbackup_ = from._impl_.instantbackup_;
   // @@protoc_insertion_point(copy_constructor:proto.BackupFullDatabaseResponse)
 }
 
@@ -10362,16 +9243,11 @@ inline void BackupFullDatabaseResponse::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.message_){}
+      decltype(_impl_.metainfo_){nullptr}
     , decltype(_impl_.delaybackuptime_){nullptr}
-    , decltype(_impl_.status_){false}
     , decltype(_impl_.instantbackup_){false}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.message_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.message_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 BackupFullDatabaseResponse::~BackupFullDatabaseResponse() {
@@ -10385,7 +9261,7 @@ BackupFullDatabaseResponse::~BackupFullDatabaseResponse() {
 
 inline void BackupFullDatabaseResponse::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.message_.Destroy();
+  if (this != internal_default_instance()) delete _impl_.metainfo_;
   if (this != internal_default_instance()) delete _impl_.delaybackuptime_;
 }
 
@@ -10399,14 +9275,15 @@ void BackupFullDatabaseResponse::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.message_.ClearToEmpty();
+  if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
+    delete _impl_.metainfo_;
+  }
+  _impl_.metainfo_ = nullptr;
   if (GetArenaForAllocation() == nullptr && _impl_.delaybackuptime_ != nullptr) {
     delete _impl_.delaybackuptime_;
   }
   _impl_.delaybackuptime_ = nullptr;
-  ::memset(&_impl_.status_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&_impl_.instantbackup_) -
-      reinterpret_cast<char*>(&_impl_.status_)) + sizeof(_impl_.instantbackup_));
+  _impl_.instantbackup_ = false;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -10416,35 +9293,25 @@ const char* BackupFullDatabaseResponse::_InternalParse(const char* ptr, ::_pbi::
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bool status = 1;
+      // .proto.ResponseMetaInfoV1 metaInfo = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _impl_.status_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_metainfo(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // string Message = 2;
+      // bool InstantBackup = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_message();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "proto.BackupFullDatabaseResponse.Message"));
-        } else
-          goto handle_unusual;
-        continue;
-      // bool InstantBackup = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _impl_.instantbackup_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // .google.protobuf.Timestamp DelayBackupTime = 4;
-      case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
+      // .google.protobuf.Timestamp DelayBackupTime = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_delaybackuptime(), ptr);
           CHK_(ptr);
         } else
@@ -10479,32 +9346,23 @@ uint8_t* BackupFullDatabaseResponse::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bool status = 1;
-  if (this->_internal_status() != 0) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_status(), target);
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  if (this->_internal_has_metainfo()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::metainfo(this),
+        _Internal::metainfo(this).GetCachedSize(), target, stream);
   }
 
-  // string Message = 2;
-  if (!this->_internal_message().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_message().data(), static_cast<int>(this->_internal_message().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "proto.BackupFullDatabaseResponse.Message");
-    target = stream->WriteStringMaybeAliased(
-        2, this->_internal_message(), target);
-  }
-
-  // bool InstantBackup = 3;
+  // bool InstantBackup = 2;
   if (this->_internal_instantbackup() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(3, this->_internal_instantbackup(), target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(2, this->_internal_instantbackup(), target);
   }
 
-  // .google.protobuf.Timestamp DelayBackupTime = 4;
+  // .google.protobuf.Timestamp DelayBackupTime = 3;
   if (this->_internal_has_delaybackuptime()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(4, _Internal::delaybackuptime(this),
+      InternalWriteMessage(3, _Internal::delaybackuptime(this),
         _Internal::delaybackuptime(this).GetCachedSize(), target, stream);
   }
 
@@ -10524,26 +9382,21 @@ size_t BackupFullDatabaseResponse::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string Message = 2;
-  if (!this->_internal_message().empty()) {
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  if (this->_internal_has_metainfo()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_message());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.metainfo_);
   }
 
-  // .google.protobuf.Timestamp DelayBackupTime = 4;
+  // .google.protobuf.Timestamp DelayBackupTime = 3;
   if (this->_internal_has_delaybackuptime()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.delaybackuptime_);
   }
 
-  // bool status = 1;
-  if (this->_internal_status() != 0) {
-    total_size += 1 + 1;
-  }
-
-  // bool InstantBackup = 3;
+  // bool InstantBackup = 2;
   if (this->_internal_instantbackup() != 0) {
     total_size += 1 + 1;
   }
@@ -10566,15 +9419,13 @@ void BackupFullDatabaseResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_message().empty()) {
-    _this->_internal_set_message(from._internal_message());
+  if (from._internal_has_metainfo()) {
+    _this->_internal_mutable_metainfo()->::proto::ResponseMetaInfoV1::MergeFrom(
+        from._internal_metainfo());
   }
   if (from._internal_has_delaybackuptime()) {
     _this->_internal_mutable_delaybackuptime()->::PROTOBUF_NAMESPACE_ID::Timestamp::MergeFrom(
         from._internal_delaybackuptime());
-  }
-  if (from._internal_status() != 0) {
-    _this->_internal_set_status(from._internal_status());
   }
   if (from._internal_instantbackup() != 0) {
     _this->_internal_set_instantbackup(from._internal_instantbackup());
@@ -10595,19 +9446,13 @@ bool BackupFullDatabaseResponse::IsInitialized() const {
 
 void BackupFullDatabaseResponse::InternalSwap(BackupFullDatabaseResponse* other) {
   using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.message_, lhs_arena,
-      &other->_impl_.message_, rhs_arena
-  );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(BackupFullDatabaseResponse, _impl_.instantbackup_)
       + sizeof(BackupFullDatabaseResponse::_impl_.instantbackup_)
-      - PROTOBUF_FIELD_OFFSET(BackupFullDatabaseResponse, _impl_.delaybackuptime_)>(
-          reinterpret_cast<char*>(&_impl_.delaybackuptime_),
-          reinterpret_cast<char*>(&other->_impl_.delaybackuptime_));
+      - PROTOBUF_FIELD_OFFSET(BackupFullDatabaseResponse, _impl_.metainfo_)>(
+          reinterpret_cast<char*>(&_impl_.metainfo_),
+          reinterpret_cast<char*>(&other->_impl_.metainfo_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata BackupFullDatabaseResponse::GetMetadata() const {
@@ -10620,12 +9465,23 @@ void BackupFullDatabaseResponse::InternalSwap(BackupFullDatabaseResponse* other)
 
 class CreateDailyStatisticsResponse::_Internal {
  public:
+  static const ::proto::ResponseMetaInfoV1& metainfo(const CreateDailyStatisticsResponse* msg);
   static const ::proto::DailyStatisticsMetaInfoV1& dailystatisticsinfo(const CreateDailyStatisticsResponse* msg);
 };
 
+const ::proto::ResponseMetaInfoV1&
+CreateDailyStatisticsResponse::_Internal::metainfo(const CreateDailyStatisticsResponse* msg) {
+  return *msg->_impl_.metainfo_;
+}
 const ::proto::DailyStatisticsMetaInfoV1&
 CreateDailyStatisticsResponse::_Internal::dailystatisticsinfo(const CreateDailyStatisticsResponse* msg) {
   return *msg->_impl_.dailystatisticsinfo_;
+}
+void CreateDailyStatisticsResponse::clear_metainfo() {
+  if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
+    delete _impl_.metainfo_;
+  }
+  _impl_.metainfo_ = nullptr;
 }
 void CreateDailyStatisticsResponse::clear_dailystatisticsinfo() {
   if (GetArenaForAllocation() == nullptr && _impl_.dailystatisticsinfo_ != nullptr) {
@@ -10643,24 +9499,17 @@ CreateDailyStatisticsResponse::CreateDailyStatisticsResponse(const CreateDailySt
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   CreateDailyStatisticsResponse* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.message_){}
+      decltype(_impl_.metainfo_){nullptr}
     , decltype(_impl_.dailystatisticsinfo_){nullptr}
-    , decltype(_impl_.status_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.message_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.message_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_message().empty()) {
-    _this->_impl_.message_.Set(from._internal_message(), 
-      _this->GetArenaForAllocation());
+  if (from._internal_has_metainfo()) {
+    _this->_impl_.metainfo_ = new ::proto::ResponseMetaInfoV1(*from._impl_.metainfo_);
   }
   if (from._internal_has_dailystatisticsinfo()) {
     _this->_impl_.dailystatisticsinfo_ = new ::proto::DailyStatisticsMetaInfoV1(*from._impl_.dailystatisticsinfo_);
   }
-  _this->_impl_.status_ = from._impl_.status_;
   // @@protoc_insertion_point(copy_constructor:proto.CreateDailyStatisticsResponse)
 }
 
@@ -10669,15 +9518,10 @@ inline void CreateDailyStatisticsResponse::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.message_){}
+      decltype(_impl_.metainfo_){nullptr}
     , decltype(_impl_.dailystatisticsinfo_){nullptr}
-    , decltype(_impl_.status_){false}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.message_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.message_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 CreateDailyStatisticsResponse::~CreateDailyStatisticsResponse() {
@@ -10691,7 +9535,7 @@ CreateDailyStatisticsResponse::~CreateDailyStatisticsResponse() {
 
 inline void CreateDailyStatisticsResponse::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.message_.Destroy();
+  if (this != internal_default_instance()) delete _impl_.metainfo_;
   if (this != internal_default_instance()) delete _impl_.dailystatisticsinfo_;
 }
 
@@ -10705,12 +9549,14 @@ void CreateDailyStatisticsResponse::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.message_.ClearToEmpty();
+  if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
+    delete _impl_.metainfo_;
+  }
+  _impl_.metainfo_ = nullptr;
   if (GetArenaForAllocation() == nullptr && _impl_.dailystatisticsinfo_ != nullptr) {
     delete _impl_.dailystatisticsinfo_;
   }
   _impl_.dailystatisticsinfo_ = nullptr;
-  _impl_.status_ = false;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -10720,27 +9566,17 @@ const char* CreateDailyStatisticsResponse::_InternalParse(const char* ptr, ::_pb
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bool status = 1;
+      // .proto.ResponseMetaInfoV1 metaInfo = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _impl_.status_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_metainfo(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // string Message = 2;
+      // .proto.DailyStatisticsMetaInfoV1 DailyStatisticsInfo = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_message();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "proto.CreateDailyStatisticsResponse.Message"));
-        } else
-          goto handle_unusual;
-        continue;
-      // .proto.DailyStatisticsMetaInfoV1 DailyStatisticsInfo = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_dailystatisticsinfo(), ptr);
           CHK_(ptr);
         } else
@@ -10775,26 +9611,17 @@ uint8_t* CreateDailyStatisticsResponse::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bool status = 1;
-  if (this->_internal_status() != 0) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_status(), target);
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  if (this->_internal_has_metainfo()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::metainfo(this),
+        _Internal::metainfo(this).GetCachedSize(), target, stream);
   }
 
-  // string Message = 2;
-  if (!this->_internal_message().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_message().data(), static_cast<int>(this->_internal_message().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "proto.CreateDailyStatisticsResponse.Message");
-    target = stream->WriteStringMaybeAliased(
-        2, this->_internal_message(), target);
-  }
-
-  // .proto.DailyStatisticsMetaInfoV1 DailyStatisticsInfo = 3;
+  // .proto.DailyStatisticsMetaInfoV1 DailyStatisticsInfo = 2;
   if (this->_internal_has_dailystatisticsinfo()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(3, _Internal::dailystatisticsinfo(this),
+      InternalWriteMessage(2, _Internal::dailystatisticsinfo(this),
         _Internal::dailystatisticsinfo(this).GetCachedSize(), target, stream);
   }
 
@@ -10814,23 +9641,18 @@ size_t CreateDailyStatisticsResponse::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string Message = 2;
-  if (!this->_internal_message().empty()) {
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  if (this->_internal_has_metainfo()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_message());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.metainfo_);
   }
 
-  // .proto.DailyStatisticsMetaInfoV1 DailyStatisticsInfo = 3;
+  // .proto.DailyStatisticsMetaInfoV1 DailyStatisticsInfo = 2;
   if (this->_internal_has_dailystatisticsinfo()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.dailystatisticsinfo_);
-  }
-
-  // bool status = 1;
-  if (this->_internal_status() != 0) {
-    total_size += 1 + 1;
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -10851,15 +9673,13 @@ void CreateDailyStatisticsResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& 
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_message().empty()) {
-    _this->_internal_set_message(from._internal_message());
+  if (from._internal_has_metainfo()) {
+    _this->_internal_mutable_metainfo()->::proto::ResponseMetaInfoV1::MergeFrom(
+        from._internal_metainfo());
   }
   if (from._internal_has_dailystatisticsinfo()) {
     _this->_internal_mutable_dailystatisticsinfo()->::proto::DailyStatisticsMetaInfoV1::MergeFrom(
         from._internal_dailystatisticsinfo());
-  }
-  if (from._internal_status() != 0) {
-    _this->_internal_set_status(from._internal_status());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -10877,19 +9697,13 @@ bool CreateDailyStatisticsResponse::IsInitialized() const {
 
 void CreateDailyStatisticsResponse::InternalSwap(CreateDailyStatisticsResponse* other) {
   using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.message_, lhs_arena,
-      &other->_impl_.message_, rhs_arena
-  );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(CreateDailyStatisticsResponse, _impl_.status_)
-      + sizeof(CreateDailyStatisticsResponse::_impl_.status_)
-      - PROTOBUF_FIELD_OFFSET(CreateDailyStatisticsResponse, _impl_.dailystatisticsinfo_)>(
-          reinterpret_cast<char*>(&_impl_.dailystatisticsinfo_),
-          reinterpret_cast<char*>(&other->_impl_.dailystatisticsinfo_));
+      PROTOBUF_FIELD_OFFSET(CreateDailyStatisticsResponse, _impl_.dailystatisticsinfo_)
+      + sizeof(CreateDailyStatisticsResponse::_impl_.dailystatisticsinfo_)
+      - PROTOBUF_FIELD_OFFSET(CreateDailyStatisticsResponse, _impl_.metainfo_)>(
+          reinterpret_cast<char*>(&_impl_.metainfo_),
+          reinterpret_cast<char*>(&other->_impl_.metainfo_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata CreateDailyStatisticsResponse::GetMetadata() const {
@@ -10902,12 +9716,23 @@ void CreateDailyStatisticsResponse::InternalSwap(CreateDailyStatisticsResponse* 
 
 class DeleteDailyStatisticsResponse::_Internal {
  public:
+  static const ::proto::ResponseMetaInfoV1& metainfo(const DeleteDailyStatisticsResponse* msg);
   static const ::proto::DailyStatisticsMetaInfoV1& dailystatisticsinfo(const DeleteDailyStatisticsResponse* msg);
 };
 
+const ::proto::ResponseMetaInfoV1&
+DeleteDailyStatisticsResponse::_Internal::metainfo(const DeleteDailyStatisticsResponse* msg) {
+  return *msg->_impl_.metainfo_;
+}
 const ::proto::DailyStatisticsMetaInfoV1&
 DeleteDailyStatisticsResponse::_Internal::dailystatisticsinfo(const DeleteDailyStatisticsResponse* msg) {
   return *msg->_impl_.dailystatisticsinfo_;
+}
+void DeleteDailyStatisticsResponse::clear_metainfo() {
+  if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
+    delete _impl_.metainfo_;
+  }
+  _impl_.metainfo_ = nullptr;
 }
 void DeleteDailyStatisticsResponse::clear_dailystatisticsinfo() {
   if (GetArenaForAllocation() == nullptr && _impl_.dailystatisticsinfo_ != nullptr) {
@@ -10925,24 +9750,17 @@ DeleteDailyStatisticsResponse::DeleteDailyStatisticsResponse(const DeleteDailySt
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   DeleteDailyStatisticsResponse* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.message_){}
+      decltype(_impl_.metainfo_){nullptr}
     , decltype(_impl_.dailystatisticsinfo_){nullptr}
-    , decltype(_impl_.status_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.message_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.message_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_message().empty()) {
-    _this->_impl_.message_.Set(from._internal_message(), 
-      _this->GetArenaForAllocation());
+  if (from._internal_has_metainfo()) {
+    _this->_impl_.metainfo_ = new ::proto::ResponseMetaInfoV1(*from._impl_.metainfo_);
   }
   if (from._internal_has_dailystatisticsinfo()) {
     _this->_impl_.dailystatisticsinfo_ = new ::proto::DailyStatisticsMetaInfoV1(*from._impl_.dailystatisticsinfo_);
   }
-  _this->_impl_.status_ = from._impl_.status_;
   // @@protoc_insertion_point(copy_constructor:proto.DeleteDailyStatisticsResponse)
 }
 
@@ -10951,15 +9769,10 @@ inline void DeleteDailyStatisticsResponse::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.message_){}
+      decltype(_impl_.metainfo_){nullptr}
     , decltype(_impl_.dailystatisticsinfo_){nullptr}
-    , decltype(_impl_.status_){false}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.message_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.message_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 DeleteDailyStatisticsResponse::~DeleteDailyStatisticsResponse() {
@@ -10973,7 +9786,7 @@ DeleteDailyStatisticsResponse::~DeleteDailyStatisticsResponse() {
 
 inline void DeleteDailyStatisticsResponse::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.message_.Destroy();
+  if (this != internal_default_instance()) delete _impl_.metainfo_;
   if (this != internal_default_instance()) delete _impl_.dailystatisticsinfo_;
 }
 
@@ -10987,12 +9800,14 @@ void DeleteDailyStatisticsResponse::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.message_.ClearToEmpty();
+  if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
+    delete _impl_.metainfo_;
+  }
+  _impl_.metainfo_ = nullptr;
   if (GetArenaForAllocation() == nullptr && _impl_.dailystatisticsinfo_ != nullptr) {
     delete _impl_.dailystatisticsinfo_;
   }
   _impl_.dailystatisticsinfo_ = nullptr;
-  _impl_.status_ = false;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -11002,27 +9817,17 @@ const char* DeleteDailyStatisticsResponse::_InternalParse(const char* ptr, ::_pb
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bool status = 1;
+      // .proto.ResponseMetaInfoV1 metaInfo = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _impl_.status_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_metainfo(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // string Message = 2;
+      // .proto.DailyStatisticsMetaInfoV1 DailyStatisticsInfo = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_message();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "proto.DeleteDailyStatisticsResponse.Message"));
-        } else
-          goto handle_unusual;
-        continue;
-      // .proto.DailyStatisticsMetaInfoV1 DailyStatisticsInfo = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_dailystatisticsinfo(), ptr);
           CHK_(ptr);
         } else
@@ -11057,26 +9862,17 @@ uint8_t* DeleteDailyStatisticsResponse::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bool status = 1;
-  if (this->_internal_status() != 0) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_status(), target);
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  if (this->_internal_has_metainfo()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::metainfo(this),
+        _Internal::metainfo(this).GetCachedSize(), target, stream);
   }
 
-  // string Message = 2;
-  if (!this->_internal_message().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_message().data(), static_cast<int>(this->_internal_message().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "proto.DeleteDailyStatisticsResponse.Message");
-    target = stream->WriteStringMaybeAliased(
-        2, this->_internal_message(), target);
-  }
-
-  // .proto.DailyStatisticsMetaInfoV1 DailyStatisticsInfo = 3;
+  // .proto.DailyStatisticsMetaInfoV1 DailyStatisticsInfo = 2;
   if (this->_internal_has_dailystatisticsinfo()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(3, _Internal::dailystatisticsinfo(this),
+      InternalWriteMessage(2, _Internal::dailystatisticsinfo(this),
         _Internal::dailystatisticsinfo(this).GetCachedSize(), target, stream);
   }
 
@@ -11096,23 +9892,18 @@ size_t DeleteDailyStatisticsResponse::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string Message = 2;
-  if (!this->_internal_message().empty()) {
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  if (this->_internal_has_metainfo()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_message());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.metainfo_);
   }
 
-  // .proto.DailyStatisticsMetaInfoV1 DailyStatisticsInfo = 3;
+  // .proto.DailyStatisticsMetaInfoV1 DailyStatisticsInfo = 2;
   if (this->_internal_has_dailystatisticsinfo()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.dailystatisticsinfo_);
-  }
-
-  // bool status = 1;
-  if (this->_internal_status() != 0) {
-    total_size += 1 + 1;
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -11133,15 +9924,13 @@ void DeleteDailyStatisticsResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& 
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_message().empty()) {
-    _this->_internal_set_message(from._internal_message());
+  if (from._internal_has_metainfo()) {
+    _this->_internal_mutable_metainfo()->::proto::ResponseMetaInfoV1::MergeFrom(
+        from._internal_metainfo());
   }
   if (from._internal_has_dailystatisticsinfo()) {
     _this->_internal_mutable_dailystatisticsinfo()->::proto::DailyStatisticsMetaInfoV1::MergeFrom(
         from._internal_dailystatisticsinfo());
-  }
-  if (from._internal_status() != 0) {
-    _this->_internal_set_status(from._internal_status());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -11159,19 +9948,13 @@ bool DeleteDailyStatisticsResponse::IsInitialized() const {
 
 void DeleteDailyStatisticsResponse::InternalSwap(DeleteDailyStatisticsResponse* other) {
   using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.message_, lhs_arena,
-      &other->_impl_.message_, rhs_arena
-  );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(DeleteDailyStatisticsResponse, _impl_.status_)
-      + sizeof(DeleteDailyStatisticsResponse::_impl_.status_)
-      - PROTOBUF_FIELD_OFFSET(DeleteDailyStatisticsResponse, _impl_.dailystatisticsinfo_)>(
-          reinterpret_cast<char*>(&_impl_.dailystatisticsinfo_),
-          reinterpret_cast<char*>(&other->_impl_.dailystatisticsinfo_));
+      PROTOBUF_FIELD_OFFSET(DeleteDailyStatisticsResponse, _impl_.dailystatisticsinfo_)
+      + sizeof(DeleteDailyStatisticsResponse::_impl_.dailystatisticsinfo_)
+      - PROTOBUF_FIELD_OFFSET(DeleteDailyStatisticsResponse, _impl_.metainfo_)>(
+          reinterpret_cast<char*>(&_impl_.metainfo_),
+          reinterpret_cast<char*>(&other->_impl_.metainfo_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata DeleteDailyStatisticsResponse::GetMetadata() const {
@@ -11184,12 +9967,23 @@ void DeleteDailyStatisticsResponse::InternalSwap(DeleteDailyStatisticsResponse* 
 
 class UpdateDailyStatisticsResponse::_Internal {
  public:
+  static const ::proto::ResponseMetaInfoV1& metainfo(const UpdateDailyStatisticsResponse* msg);
   static const ::proto::DailyStatisticsMetaInfoV1& dailystatisticsinfo(const UpdateDailyStatisticsResponse* msg);
 };
 
+const ::proto::ResponseMetaInfoV1&
+UpdateDailyStatisticsResponse::_Internal::metainfo(const UpdateDailyStatisticsResponse* msg) {
+  return *msg->_impl_.metainfo_;
+}
 const ::proto::DailyStatisticsMetaInfoV1&
 UpdateDailyStatisticsResponse::_Internal::dailystatisticsinfo(const UpdateDailyStatisticsResponse* msg) {
   return *msg->_impl_.dailystatisticsinfo_;
+}
+void UpdateDailyStatisticsResponse::clear_metainfo() {
+  if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
+    delete _impl_.metainfo_;
+  }
+  _impl_.metainfo_ = nullptr;
 }
 void UpdateDailyStatisticsResponse::clear_dailystatisticsinfo() {
   if (GetArenaForAllocation() == nullptr && _impl_.dailystatisticsinfo_ != nullptr) {
@@ -11207,24 +10001,17 @@ UpdateDailyStatisticsResponse::UpdateDailyStatisticsResponse(const UpdateDailySt
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   UpdateDailyStatisticsResponse* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.message_){}
+      decltype(_impl_.metainfo_){nullptr}
     , decltype(_impl_.dailystatisticsinfo_){nullptr}
-    , decltype(_impl_.status_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.message_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.message_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_message().empty()) {
-    _this->_impl_.message_.Set(from._internal_message(), 
-      _this->GetArenaForAllocation());
+  if (from._internal_has_metainfo()) {
+    _this->_impl_.metainfo_ = new ::proto::ResponseMetaInfoV1(*from._impl_.metainfo_);
   }
   if (from._internal_has_dailystatisticsinfo()) {
     _this->_impl_.dailystatisticsinfo_ = new ::proto::DailyStatisticsMetaInfoV1(*from._impl_.dailystatisticsinfo_);
   }
-  _this->_impl_.status_ = from._impl_.status_;
   // @@protoc_insertion_point(copy_constructor:proto.UpdateDailyStatisticsResponse)
 }
 
@@ -11233,15 +10020,10 @@ inline void UpdateDailyStatisticsResponse::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.message_){}
+      decltype(_impl_.metainfo_){nullptr}
     , decltype(_impl_.dailystatisticsinfo_){nullptr}
-    , decltype(_impl_.status_){false}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.message_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.message_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 UpdateDailyStatisticsResponse::~UpdateDailyStatisticsResponse() {
@@ -11255,7 +10037,7 @@ UpdateDailyStatisticsResponse::~UpdateDailyStatisticsResponse() {
 
 inline void UpdateDailyStatisticsResponse::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.message_.Destroy();
+  if (this != internal_default_instance()) delete _impl_.metainfo_;
   if (this != internal_default_instance()) delete _impl_.dailystatisticsinfo_;
 }
 
@@ -11269,12 +10051,14 @@ void UpdateDailyStatisticsResponse::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.message_.ClearToEmpty();
+  if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
+    delete _impl_.metainfo_;
+  }
+  _impl_.metainfo_ = nullptr;
   if (GetArenaForAllocation() == nullptr && _impl_.dailystatisticsinfo_ != nullptr) {
     delete _impl_.dailystatisticsinfo_;
   }
   _impl_.dailystatisticsinfo_ = nullptr;
-  _impl_.status_ = false;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -11284,27 +10068,17 @@ const char* UpdateDailyStatisticsResponse::_InternalParse(const char* ptr, ::_pb
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bool status = 1;
+      // .proto.ResponseMetaInfoV1 metaInfo = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _impl_.status_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_metainfo(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // string Message = 2;
+      // .proto.DailyStatisticsMetaInfoV1 DailyStatisticsInfo = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_message();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "proto.UpdateDailyStatisticsResponse.Message"));
-        } else
-          goto handle_unusual;
-        continue;
-      // .proto.DailyStatisticsMetaInfoV1 DailyStatisticsInfo = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_dailystatisticsinfo(), ptr);
           CHK_(ptr);
         } else
@@ -11339,26 +10113,17 @@ uint8_t* UpdateDailyStatisticsResponse::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bool status = 1;
-  if (this->_internal_status() != 0) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_status(), target);
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  if (this->_internal_has_metainfo()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::metainfo(this),
+        _Internal::metainfo(this).GetCachedSize(), target, stream);
   }
 
-  // string Message = 2;
-  if (!this->_internal_message().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_message().data(), static_cast<int>(this->_internal_message().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "proto.UpdateDailyStatisticsResponse.Message");
-    target = stream->WriteStringMaybeAliased(
-        2, this->_internal_message(), target);
-  }
-
-  // .proto.DailyStatisticsMetaInfoV1 DailyStatisticsInfo = 3;
+  // .proto.DailyStatisticsMetaInfoV1 DailyStatisticsInfo = 2;
   if (this->_internal_has_dailystatisticsinfo()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(3, _Internal::dailystatisticsinfo(this),
+      InternalWriteMessage(2, _Internal::dailystatisticsinfo(this),
         _Internal::dailystatisticsinfo(this).GetCachedSize(), target, stream);
   }
 
@@ -11378,23 +10143,18 @@ size_t UpdateDailyStatisticsResponse::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string Message = 2;
-  if (!this->_internal_message().empty()) {
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  if (this->_internal_has_metainfo()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_message());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.metainfo_);
   }
 
-  // .proto.DailyStatisticsMetaInfoV1 DailyStatisticsInfo = 3;
+  // .proto.DailyStatisticsMetaInfoV1 DailyStatisticsInfo = 2;
   if (this->_internal_has_dailystatisticsinfo()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.dailystatisticsinfo_);
-  }
-
-  // bool status = 1;
-  if (this->_internal_status() != 0) {
-    total_size += 1 + 1;
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -11415,15 +10175,13 @@ void UpdateDailyStatisticsResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& 
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_message().empty()) {
-    _this->_internal_set_message(from._internal_message());
+  if (from._internal_has_metainfo()) {
+    _this->_internal_mutable_metainfo()->::proto::ResponseMetaInfoV1::MergeFrom(
+        from._internal_metainfo());
   }
   if (from._internal_has_dailystatisticsinfo()) {
     _this->_internal_mutable_dailystatisticsinfo()->::proto::DailyStatisticsMetaInfoV1::MergeFrom(
         from._internal_dailystatisticsinfo());
-  }
-  if (from._internal_status() != 0) {
-    _this->_internal_set_status(from._internal_status());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -11441,19 +10199,13 @@ bool UpdateDailyStatisticsResponse::IsInitialized() const {
 
 void UpdateDailyStatisticsResponse::InternalSwap(UpdateDailyStatisticsResponse* other) {
   using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.message_, lhs_arena,
-      &other->_impl_.message_, rhs_arena
-  );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(UpdateDailyStatisticsResponse, _impl_.status_)
-      + sizeof(UpdateDailyStatisticsResponse::_impl_.status_)
-      - PROTOBUF_FIELD_OFFSET(UpdateDailyStatisticsResponse, _impl_.dailystatisticsinfo_)>(
-          reinterpret_cast<char*>(&_impl_.dailystatisticsinfo_),
-          reinterpret_cast<char*>(&other->_impl_.dailystatisticsinfo_));
+      PROTOBUF_FIELD_OFFSET(UpdateDailyStatisticsResponse, _impl_.dailystatisticsinfo_)
+      + sizeof(UpdateDailyStatisticsResponse::_impl_.dailystatisticsinfo_)
+      - PROTOBUF_FIELD_OFFSET(UpdateDailyStatisticsResponse, _impl_.metainfo_)>(
+          reinterpret_cast<char*>(&_impl_.metainfo_),
+          reinterpret_cast<char*>(&other->_impl_.metainfo_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata UpdateDailyStatisticsResponse::GetMetadata() const {
@@ -11466,12 +10218,23 @@ void UpdateDailyStatisticsResponse::InternalSwap(UpdateDailyStatisticsResponse* 
 
 class GetDailyStatisticsResponse::_Internal {
  public:
+  static const ::proto::ResponseMetaInfoV1& metainfo(const GetDailyStatisticsResponse* msg);
   static const ::proto::DailyStatisticsMetaInfoV1& dailystatisticsinfo(const GetDailyStatisticsResponse* msg);
 };
 
+const ::proto::ResponseMetaInfoV1&
+GetDailyStatisticsResponse::_Internal::metainfo(const GetDailyStatisticsResponse* msg) {
+  return *msg->_impl_.metainfo_;
+}
 const ::proto::DailyStatisticsMetaInfoV1&
 GetDailyStatisticsResponse::_Internal::dailystatisticsinfo(const GetDailyStatisticsResponse* msg) {
   return *msg->_impl_.dailystatisticsinfo_;
+}
+void GetDailyStatisticsResponse::clear_metainfo() {
+  if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
+    delete _impl_.metainfo_;
+  }
+  _impl_.metainfo_ = nullptr;
 }
 void GetDailyStatisticsResponse::clear_dailystatisticsinfo() {
   if (GetArenaForAllocation() == nullptr && _impl_.dailystatisticsinfo_ != nullptr) {
@@ -11489,24 +10252,17 @@ GetDailyStatisticsResponse::GetDailyStatisticsResponse(const GetDailyStatisticsR
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   GetDailyStatisticsResponse* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.message_){}
+      decltype(_impl_.metainfo_){nullptr}
     , decltype(_impl_.dailystatisticsinfo_){nullptr}
-    , decltype(_impl_.status_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.message_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.message_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_message().empty()) {
-    _this->_impl_.message_.Set(from._internal_message(), 
-      _this->GetArenaForAllocation());
+  if (from._internal_has_metainfo()) {
+    _this->_impl_.metainfo_ = new ::proto::ResponseMetaInfoV1(*from._impl_.metainfo_);
   }
   if (from._internal_has_dailystatisticsinfo()) {
     _this->_impl_.dailystatisticsinfo_ = new ::proto::DailyStatisticsMetaInfoV1(*from._impl_.dailystatisticsinfo_);
   }
-  _this->_impl_.status_ = from._impl_.status_;
   // @@protoc_insertion_point(copy_constructor:proto.GetDailyStatisticsResponse)
 }
 
@@ -11515,15 +10271,10 @@ inline void GetDailyStatisticsResponse::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.message_){}
+      decltype(_impl_.metainfo_){nullptr}
     , decltype(_impl_.dailystatisticsinfo_){nullptr}
-    , decltype(_impl_.status_){false}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.message_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.message_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 GetDailyStatisticsResponse::~GetDailyStatisticsResponse() {
@@ -11537,7 +10288,7 @@ GetDailyStatisticsResponse::~GetDailyStatisticsResponse() {
 
 inline void GetDailyStatisticsResponse::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.message_.Destroy();
+  if (this != internal_default_instance()) delete _impl_.metainfo_;
   if (this != internal_default_instance()) delete _impl_.dailystatisticsinfo_;
 }
 
@@ -11551,12 +10302,14 @@ void GetDailyStatisticsResponse::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.message_.ClearToEmpty();
+  if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
+    delete _impl_.metainfo_;
+  }
+  _impl_.metainfo_ = nullptr;
   if (GetArenaForAllocation() == nullptr && _impl_.dailystatisticsinfo_ != nullptr) {
     delete _impl_.dailystatisticsinfo_;
   }
   _impl_.dailystatisticsinfo_ = nullptr;
-  _impl_.status_ = false;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -11566,27 +10319,17 @@ const char* GetDailyStatisticsResponse::_InternalParse(const char* ptr, ::_pbi::
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bool status = 1;
+      // .proto.ResponseMetaInfoV1 metaInfo = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _impl_.status_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_metainfo(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // string Message = 2;
+      // .proto.DailyStatisticsMetaInfoV1 DailyStatisticsInfo = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_message();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "proto.GetDailyStatisticsResponse.Message"));
-        } else
-          goto handle_unusual;
-        continue;
-      // .proto.DailyStatisticsMetaInfoV1 DailyStatisticsInfo = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_dailystatisticsinfo(), ptr);
           CHK_(ptr);
         } else
@@ -11621,26 +10364,17 @@ uint8_t* GetDailyStatisticsResponse::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bool status = 1;
-  if (this->_internal_status() != 0) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_status(), target);
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  if (this->_internal_has_metainfo()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::metainfo(this),
+        _Internal::metainfo(this).GetCachedSize(), target, stream);
   }
 
-  // string Message = 2;
-  if (!this->_internal_message().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_message().data(), static_cast<int>(this->_internal_message().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "proto.GetDailyStatisticsResponse.Message");
-    target = stream->WriteStringMaybeAliased(
-        2, this->_internal_message(), target);
-  }
-
-  // .proto.DailyStatisticsMetaInfoV1 DailyStatisticsInfo = 3;
+  // .proto.DailyStatisticsMetaInfoV1 DailyStatisticsInfo = 2;
   if (this->_internal_has_dailystatisticsinfo()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(3, _Internal::dailystatisticsinfo(this),
+      InternalWriteMessage(2, _Internal::dailystatisticsinfo(this),
         _Internal::dailystatisticsinfo(this).GetCachedSize(), target, stream);
   }
 
@@ -11660,23 +10394,18 @@ size_t GetDailyStatisticsResponse::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string Message = 2;
-  if (!this->_internal_message().empty()) {
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  if (this->_internal_has_metainfo()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_message());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.metainfo_);
   }
 
-  // .proto.DailyStatisticsMetaInfoV1 DailyStatisticsInfo = 3;
+  // .proto.DailyStatisticsMetaInfoV1 DailyStatisticsInfo = 2;
   if (this->_internal_has_dailystatisticsinfo()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.dailystatisticsinfo_);
-  }
-
-  // bool status = 1;
-  if (this->_internal_status() != 0) {
-    total_size += 1 + 1;
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -11697,15 +10426,13 @@ void GetDailyStatisticsResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_message().empty()) {
-    _this->_internal_set_message(from._internal_message());
+  if (from._internal_has_metainfo()) {
+    _this->_internal_mutable_metainfo()->::proto::ResponseMetaInfoV1::MergeFrom(
+        from._internal_metainfo());
   }
   if (from._internal_has_dailystatisticsinfo()) {
     _this->_internal_mutable_dailystatisticsinfo()->::proto::DailyStatisticsMetaInfoV1::MergeFrom(
         from._internal_dailystatisticsinfo());
-  }
-  if (from._internal_status() != 0) {
-    _this->_internal_set_status(from._internal_status());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -11723,19 +10450,13 @@ bool GetDailyStatisticsResponse::IsInitialized() const {
 
 void GetDailyStatisticsResponse::InternalSwap(GetDailyStatisticsResponse* other) {
   using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.message_, lhs_arena,
-      &other->_impl_.message_, rhs_arena
-  );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(GetDailyStatisticsResponse, _impl_.status_)
-      + sizeof(GetDailyStatisticsResponse::_impl_.status_)
-      - PROTOBUF_FIELD_OFFSET(GetDailyStatisticsResponse, _impl_.dailystatisticsinfo_)>(
-          reinterpret_cast<char*>(&_impl_.dailystatisticsinfo_),
-          reinterpret_cast<char*>(&other->_impl_.dailystatisticsinfo_));
+      PROTOBUF_FIELD_OFFSET(GetDailyStatisticsResponse, _impl_.dailystatisticsinfo_)
+      + sizeof(GetDailyStatisticsResponse::_impl_.dailystatisticsinfo_)
+      - PROTOBUF_FIELD_OFFSET(GetDailyStatisticsResponse, _impl_.metainfo_)>(
+          reinterpret_cast<char*>(&_impl_.metainfo_),
+          reinterpret_cast<char*>(&other->_impl_.metainfo_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata GetDailyStatisticsResponse::GetMetadata() const {
@@ -11748,8 +10469,19 @@ void GetDailyStatisticsResponse::InternalSwap(GetDailyStatisticsResponse* other)
 
 class GetAllDailyStatisticsResponse::_Internal {
  public:
+  static const ::proto::ResponseMetaInfoV1& metainfo(const GetAllDailyStatisticsResponse* msg);
 };
 
+const ::proto::ResponseMetaInfoV1&
+GetAllDailyStatisticsResponse::_Internal::metainfo(const GetAllDailyStatisticsResponse* msg) {
+  return *msg->_impl_.metainfo_;
+}
+void GetAllDailyStatisticsResponse::clear_metainfo() {
+  if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
+    delete _impl_.metainfo_;
+  }
+  _impl_.metainfo_ = nullptr;
+}
 void GetAllDailyStatisticsResponse::clear_dailystatisticsinfo() {
   _impl_.dailystatisticsinfo_.Clear();
 }
@@ -11764,20 +10496,13 @@ GetAllDailyStatisticsResponse::GetAllDailyStatisticsResponse(const GetAllDailySt
   GetAllDailyStatisticsResponse* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.dailystatisticsinfo_){from._impl_.dailystatisticsinfo_}
-    , decltype(_impl_.message_){}
-    , decltype(_impl_.status_){}
+    , decltype(_impl_.metainfo_){nullptr}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.message_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.message_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_message().empty()) {
-    _this->_impl_.message_.Set(from._internal_message(), 
-      _this->GetArenaForAllocation());
+  if (from._internal_has_metainfo()) {
+    _this->_impl_.metainfo_ = new ::proto::ResponseMetaInfoV1(*from._impl_.metainfo_);
   }
-  _this->_impl_.status_ = from._impl_.status_;
   // @@protoc_insertion_point(copy_constructor:proto.GetAllDailyStatisticsResponse)
 }
 
@@ -11787,14 +10512,9 @@ inline void GetAllDailyStatisticsResponse::SharedCtor(
   (void)is_message_owned;
   new (&_impl_) Impl_{
       decltype(_impl_.dailystatisticsinfo_){arena}
-    , decltype(_impl_.message_){}
-    , decltype(_impl_.status_){false}
+    , decltype(_impl_.metainfo_){nullptr}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.message_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.message_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 GetAllDailyStatisticsResponse::~GetAllDailyStatisticsResponse() {
@@ -11809,7 +10529,7 @@ GetAllDailyStatisticsResponse::~GetAllDailyStatisticsResponse() {
 inline void GetAllDailyStatisticsResponse::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   _impl_.dailystatisticsinfo_.~RepeatedPtrField();
-  _impl_.message_.Destroy();
+  if (this != internal_default_instance()) delete _impl_.metainfo_;
 }
 
 void GetAllDailyStatisticsResponse::SetCachedSize(int size) const {
@@ -11823,8 +10543,10 @@ void GetAllDailyStatisticsResponse::Clear() {
   (void) cached_has_bits;
 
   _impl_.dailystatisticsinfo_.Clear();
-  _impl_.message_.ClearToEmpty();
-  _impl_.status_ = false;
+  if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
+    delete _impl_.metainfo_;
+  }
+  _impl_.metainfo_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -11834,34 +10556,24 @@ const char* GetAllDailyStatisticsResponse::_InternalParse(const char* ptr, ::_pb
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bool status = 1;
+      // .proto.ResponseMetaInfoV1 metaInfo = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _impl_.status_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_metainfo(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // string Message = 2;
+      // repeated .proto.DailyStatisticsMetaInfoV1 DailyStatisticsInfo = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_message();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "proto.GetAllDailyStatisticsResponse.Message"));
-        } else
-          goto handle_unusual;
-        continue;
-      // repeated .proto.DailyStatisticsMetaInfoV1 DailyStatisticsInfo = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           ptr -= 1;
           do {
             ptr += 1;
             ptr = ctx->ParseMessage(_internal_add_dailystatisticsinfo(), ptr);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<26>(ptr));
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<18>(ptr));
         } else
           goto handle_unusual;
         continue;
@@ -11894,28 +10606,19 @@ uint8_t* GetAllDailyStatisticsResponse::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bool status = 1;
-  if (this->_internal_status() != 0) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_status(), target);
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  if (this->_internal_has_metainfo()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::metainfo(this),
+        _Internal::metainfo(this).GetCachedSize(), target, stream);
   }
 
-  // string Message = 2;
-  if (!this->_internal_message().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_message().data(), static_cast<int>(this->_internal_message().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "proto.GetAllDailyStatisticsResponse.Message");
-    target = stream->WriteStringMaybeAliased(
-        2, this->_internal_message(), target);
-  }
-
-  // repeated .proto.DailyStatisticsMetaInfoV1 DailyStatisticsInfo = 3;
+  // repeated .proto.DailyStatisticsMetaInfoV1 DailyStatisticsInfo = 2;
   for (unsigned i = 0,
       n = static_cast<unsigned>(this->_internal_dailystatisticsinfo_size()); i < n; i++) {
     const auto& repfield = this->_internal_dailystatisticsinfo(i);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(3, repfield, repfield.GetCachedSize(), target, stream);
+        InternalWriteMessage(2, repfield, repfield.GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -11934,23 +10637,18 @@ size_t GetAllDailyStatisticsResponse::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated .proto.DailyStatisticsMetaInfoV1 DailyStatisticsInfo = 3;
+  // repeated .proto.DailyStatisticsMetaInfoV1 DailyStatisticsInfo = 2;
   total_size += 1UL * this->_internal_dailystatisticsinfo_size();
   for (const auto& msg : this->_impl_.dailystatisticsinfo_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
-  // string Message = 2;
-  if (!this->_internal_message().empty()) {
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  if (this->_internal_has_metainfo()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_message());
-  }
-
-  // bool status = 1;
-  if (this->_internal_status() != 0) {
-    total_size += 1 + 1;
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.metainfo_);
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -11972,11 +10670,9 @@ void GetAllDailyStatisticsResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& 
   (void) cached_has_bits;
 
   _this->_impl_.dailystatisticsinfo_.MergeFrom(from._impl_.dailystatisticsinfo_);
-  if (!from._internal_message().empty()) {
-    _this->_internal_set_message(from._internal_message());
-  }
-  if (from._internal_status() != 0) {
-    _this->_internal_set_status(from._internal_status());
+  if (from._internal_has_metainfo()) {
+    _this->_internal_mutable_metainfo()->::proto::ResponseMetaInfoV1::MergeFrom(
+        from._internal_metainfo());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -11994,15 +10690,9 @@ bool GetAllDailyStatisticsResponse::IsInitialized() const {
 
 void GetAllDailyStatisticsResponse::InternalSwap(GetAllDailyStatisticsResponse* other) {
   using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   _impl_.dailystatisticsinfo_.InternalSwap(&other->_impl_.dailystatisticsinfo_);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.message_, lhs_arena,
-      &other->_impl_.message_, rhs_arena
-  );
-  swap(_impl_.status_, other->_impl_.status_);
+  swap(_impl_.metainfo_, other->_impl_.metainfo_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata GetAllDailyStatisticsResponse::GetMetadata() const {

@@ -1437,6 +1437,116 @@ func (x *UserVerifyInfoV1) GetUserToken() string {
 	return ""
 }
 
+type RequestMetaInfoV1 struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	ApiVersion string `protobuf:"bytes,1,opt,name=ApiVersion,proto3" json:"ApiVersion,omitempty"`
+}
+
+func (x *RequestMetaInfoV1) Reset() {
+	*x = RequestMetaInfoV1{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_Message_Message_proto_msgTypes[16]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *RequestMetaInfoV1) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*RequestMetaInfoV1) ProtoMessage() {}
+
+func (x *RequestMetaInfoV1) ProtoReflect() protoreflect.Message {
+	mi := &file_Message_Message_proto_msgTypes[16]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use RequestMetaInfoV1.ProtoReflect.Descriptor instead.
+func (*RequestMetaInfoV1) Descriptor() ([]byte, []int) {
+	return file_Message_Message_proto_rawDescGZIP(), []int{16}
+}
+
+func (x *RequestMetaInfoV1) GetApiVersion() string {
+	if x != nil {
+		return x.ApiVersion
+	}
+	return ""
+}
+
+type ResponseMetaInfoV1 struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Status  bool   `protobuf:"varint,1,opt,name=Status,proto3" json:"Status,omitempty"`
+	Id      string `protobuf:"bytes,2,opt,name=Id,proto3" json:"Id,omitempty"`
+	Message string `protobuf:"bytes,3,opt,name=Message,proto3" json:"Message,omitempty"`
+}
+
+func (x *ResponseMetaInfoV1) Reset() {
+	*x = ResponseMetaInfoV1{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_Message_Message_proto_msgTypes[17]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *ResponseMetaInfoV1) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*ResponseMetaInfoV1) ProtoMessage() {}
+
+func (x *ResponseMetaInfoV1) ProtoReflect() protoreflect.Message {
+	mi := &file_Message_Message_proto_msgTypes[17]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use ResponseMetaInfoV1.ProtoReflect.Descriptor instead.
+func (*ResponseMetaInfoV1) Descriptor() ([]byte, []int) {
+	return file_Message_Message_proto_rawDescGZIP(), []int{17}
+}
+
+func (x *ResponseMetaInfoV1) GetStatus() bool {
+	if x != nil {
+		return x.Status
+	}
+	return false
+}
+
+func (x *ResponseMetaInfoV1) GetId() string {
+	if x != nil {
+		return x.Id
+	}
+	return ""
+}
+
+func (x *ResponseMetaInfoV1) GetMessage() string {
+	if x != nil {
+		return x.Message
+	}
+	return ""
+}
+
 var File_Message_Message_proto protoreflect.FileDescriptor
 
 var file_Message_Message_proto_rawDesc = []byte{
@@ -1728,15 +1838,24 @@ var file_Message_Message_proto_rawDesc = []byte{
 	0x55, 0x73, 0x65, 0x72, 0x4e, 0x61, 0x6d, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08,
 	0x55, 0x73, 0x65, 0x72, 0x4e, 0x61, 0x6d, 0x65, 0x12, 0x1c, 0x0a, 0x09, 0x55, 0x73, 0x65, 0x72,
 	0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x09, 0x55, 0x73, 0x65,
-	0x72, 0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x2a, 0x47, 0x0a, 0x14, 0x49, 0x6e, 0x63, 0x72, 0x65, 0x6d,
-	0x65, 0x6e, 0x74, 0x4f, 0x70, 0x65, 0x72, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x56, 0x31, 0x12, 0x0b,
-	0x0a, 0x07, 0x55, 0x6e, 0x6b, 0x6e, 0x6f, 0x77, 0x6e, 0x10, 0x00, 0x12, 0x0a, 0x0a, 0x06, 0x43,
-	0x72, 0x65, 0x61, 0x74, 0x65, 0x10, 0x01, 0x12, 0x0a, 0x0a, 0x06, 0x44, 0x65, 0x6c, 0x65, 0x74,
-	0x65, 0x10, 0x02, 0x12, 0x0a, 0x0a, 0x06, 0x55, 0x70, 0x64, 0x61, 0x74, 0x65, 0x10, 0x03, 0x42,
-	0x2f, 0x5a, 0x2d, 0x44, 0x42, 0x4d, 0x53, 0x2f, 0x53, 0x77, 0x63, 0x44, 0x62, 0x6d, 0x73, 0x43,
-	0x6f, 0x6d, 0x6d, 0x6f, 0x6e, 0x2f, 0x47, 0x65, 0x6e, 0x65, 0x72, 0x61, 0x74, 0x65, 0x64, 0x2f,
-	0x67, 0x6f, 0x2f, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2f, 0x6d, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65,
-	0x50, 0x00, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x72, 0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x22, 0x33, 0x0a, 0x11, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73,
+	0x74, 0x4d, 0x65, 0x74, 0x61, 0x49, 0x6e, 0x66, 0x6f, 0x56, 0x31, 0x12, 0x1e, 0x0a, 0x0a, 0x41,
+	0x70, 0x69, 0x56, 0x65, 0x72, 0x73, 0x69, 0x6f, 0x6e, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52,
+	0x0a, 0x41, 0x70, 0x69, 0x56, 0x65, 0x72, 0x73, 0x69, 0x6f, 0x6e, 0x22, 0x56, 0x0a, 0x12, 0x52,
+	0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x4d, 0x65, 0x74, 0x61, 0x49, 0x6e, 0x66, 0x6f, 0x56,
+	0x31, 0x12, 0x16, 0x0a, 0x06, 0x53, 0x74, 0x61, 0x74, 0x75, 0x73, 0x18, 0x01, 0x20, 0x01, 0x28,
+	0x08, 0x52, 0x06, 0x53, 0x74, 0x61, 0x74, 0x75, 0x73, 0x12, 0x0e, 0x0a, 0x02, 0x49, 0x64, 0x18,
+	0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x02, 0x49, 0x64, 0x12, 0x18, 0x0a, 0x07, 0x4d, 0x65, 0x73,
+	0x73, 0x61, 0x67, 0x65, 0x18, 0x03, 0x20, 0x01, 0x28, 0x09, 0x52, 0x07, 0x4d, 0x65, 0x73, 0x73,
+	0x61, 0x67, 0x65, 0x2a, 0x47, 0x0a, 0x14, 0x49, 0x6e, 0x63, 0x72, 0x65, 0x6d, 0x65, 0x6e, 0x74,
+	0x4f, 0x70, 0x65, 0x72, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x56, 0x31, 0x12, 0x0b, 0x0a, 0x07, 0x55,
+	0x6e, 0x6b, 0x6e, 0x6f, 0x77, 0x6e, 0x10, 0x00, 0x12, 0x0a, 0x0a, 0x06, 0x43, 0x72, 0x65, 0x61,
+	0x74, 0x65, 0x10, 0x01, 0x12, 0x0a, 0x0a, 0x06, 0x44, 0x65, 0x6c, 0x65, 0x74, 0x65, 0x10, 0x02,
+	0x12, 0x0a, 0x0a, 0x06, 0x55, 0x70, 0x64, 0x61, 0x74, 0x65, 0x10, 0x03, 0x42, 0x2f, 0x5a, 0x2d,
+	0x44, 0x42, 0x4d, 0x53, 0x2f, 0x53, 0x77, 0x63, 0x44, 0x62, 0x6d, 0x73, 0x43, 0x6f, 0x6d, 0x6d,
+	0x6f, 0x6e, 0x2f, 0x47, 0x65, 0x6e, 0x65, 0x72, 0x61, 0x74, 0x65, 0x64, 0x2f, 0x67, 0x6f, 0x2f,
+	0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2f, 0x6d, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65, 0x50, 0x00, 0x62,
+	0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -1752,7 +1871,7 @@ func file_Message_Message_proto_rawDescGZIP() []byte {
 }
 
 var file_Message_Message_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
-var file_Message_Message_proto_msgTypes = make([]protoimpl.MessageInfo, 16)
+var file_Message_Message_proto_msgTypes = make([]protoimpl.MessageInfo, 18)
 var file_Message_Message_proto_goTypes = []interface{}{
 	(IncrementOperationV1)(0),                // 0: proto.IncrementOperationV1
 	(*MetaInfoBase)(nil),                     // 1: proto.MetaInfoBase
@@ -1771,35 +1890,37 @@ var file_Message_Message_proto_goTypes = []interface{}{
 	(*SwcDataV1)(nil),                        // 14: proto.SwcDataV1
 	(*DailyStatisticsMetaInfoV1)(nil),        // 15: proto.DailyStatisticsMetaInfoV1
 	(*UserVerifyInfoV1)(nil),                 // 16: proto.UserVerifyInfoV1
-	(*timestamppb.Timestamp)(nil),            // 17: google.protobuf.Timestamp
+	(*RequestMetaInfoV1)(nil),                // 17: proto.RequestMetaInfoV1
+	(*ResponseMetaInfoV1)(nil),               // 18: proto.ResponseMetaInfoV1
+	(*timestamppb.Timestamp)(nil),            // 19: google.protobuf.Timestamp
 }
 var file_Message_Message_proto_depIdxs = []int32{
 	1,  // 0: proto.UserMetaInfoV1.Base:type_name -> proto.MetaInfoBase
-	17, // 1: proto.UserMetaInfoV1.CreateTime:type_name -> google.protobuf.Timestamp
+	19, // 1: proto.UserMetaInfoV1.CreateTime:type_name -> google.protobuf.Timestamp
 	1,  // 2: proto.PermissionGroupMetaInfoV1.Base:type_name -> proto.MetaInfoBase
 	3,  // 3: proto.PermissionGroupMetaInfoV1.GlobalPermission:type_name -> proto.GlobalPermissionMetaInfoV1
 	4,  // 4: proto.PermissionGroupMetaInfoV1.ProjectPermission:type_name -> proto.ProjectPermissionMetaInfoV1
 	4,  // 5: proto.UserPermissionOverrideMetaInfoV1.ProjectPermission:type_name -> proto.ProjectPermissionMetaInfoV1
 	1,  // 6: proto.ProjectMetaInfoV1.Base:type_name -> proto.MetaInfoBase
-	17, // 7: proto.ProjectMetaInfoV1.CreateTime:type_name -> google.protobuf.Timestamp
-	17, // 8: proto.ProjectMetaInfoV1.LastModifiedTime:type_name -> google.protobuf.Timestamp
+	19, // 7: proto.ProjectMetaInfoV1.CreateTime:type_name -> google.protobuf.Timestamp
+	19, // 8: proto.ProjectMetaInfoV1.LastModifiedTime:type_name -> google.protobuf.Timestamp
 	6,  // 9: proto.ProjectMetaInfoV1.UserPermissionOverride:type_name -> proto.UserPermissionOverrideMetaInfoV1
 	1,  // 10: proto.SwcSnapshotMetaInfoV1.Base:type_name -> proto.MetaInfoBase
-	17, // 11: proto.SwcSnapshotMetaInfoV1.CreateTime:type_name -> google.protobuf.Timestamp
+	19, // 11: proto.SwcSnapshotMetaInfoV1.CreateTime:type_name -> google.protobuf.Timestamp
 	1,  // 12: proto.SwcIncrementOperationMetaInfoV1.Base:type_name -> proto.MetaInfoBase
-	17, // 13: proto.SwcIncrementOperationMetaInfoV1.CreateTime:type_name -> google.protobuf.Timestamp
+	19, // 13: proto.SwcIncrementOperationMetaInfoV1.CreateTime:type_name -> google.protobuf.Timestamp
 	1,  // 14: proto.SwcIncrementOperationV1.Base:type_name -> proto.MetaInfoBase
 	0,  // 15: proto.SwcIncrementOperationV1.IncrementOperation:type_name -> proto.IncrementOperationV1
 	13, // 16: proto.SwcIncrementOperationV1.SwcNodeData:type_name -> proto.SwcNodeDataV1
 	1,  // 17: proto.SwcMetaInfoV1.Base:type_name -> proto.MetaInfoBase
-	17, // 18: proto.SwcMetaInfoV1.CreateTime:type_name -> google.protobuf.Timestamp
-	17, // 19: proto.SwcMetaInfoV1.LastModifiedTime:type_name -> google.protobuf.Timestamp
+	19, // 18: proto.SwcMetaInfoV1.CreateTime:type_name -> google.protobuf.Timestamp
+	19, // 19: proto.SwcMetaInfoV1.LastModifiedTime:type_name -> google.protobuf.Timestamp
 	8,  // 20: proto.SwcMetaInfoV1.SwcSnapshotMetaInfoList:type_name -> proto.SwcSnapshotMetaInfoV1
 	9,  // 21: proto.SwcMetaInfoV1.SwcIncrementOperationMetaInfoList:type_name -> proto.SwcIncrementOperationMetaInfoV1
 	1,  // 22: proto.SwcNodeDataV1.Base:type_name -> proto.MetaInfoBase
 	12, // 23: proto.SwcNodeDataV1.SwcNodeInternalData:type_name -> proto.SwcNodeInternalDataV1
-	17, // 24: proto.SwcNodeDataV1.CreateTime:type_name -> google.protobuf.Timestamp
-	17, // 25: proto.SwcNodeDataV1.LastModifiedTime:type_name -> google.protobuf.Timestamp
+	19, // 24: proto.SwcNodeDataV1.CreateTime:type_name -> google.protobuf.Timestamp
+	19, // 25: proto.SwcNodeDataV1.LastModifiedTime:type_name -> google.protobuf.Timestamp
 	13, // 26: proto.SwcDataV1.SwcData:type_name -> proto.SwcNodeDataV1
 	1,  // 27: proto.DailyStatisticsMetaInfoV1.Base:type_name -> proto.MetaInfoBase
 	28, // [28:28] is the sub-list for method output_type
@@ -2007,6 +2128,30 @@ func file_Message_Message_proto_init() {
 				return nil
 			}
 		}
+		file_Message_Message_proto_msgTypes[16].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*RequestMetaInfoV1); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_Message_Message_proto_msgTypes[17].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*ResponseMetaInfoV1); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
 	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
@@ -2014,7 +2159,7 @@ func file_Message_Message_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_Message_Message_proto_rawDesc,
 			NumEnums:      1,
-			NumMessages:   16,
+			NumMessages:   18,
 			NumExtensions: 0,
 			NumServices:   0,
 		},

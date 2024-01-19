@@ -8,235 +8,195 @@ import public "google/protobuf/timestamp.proto";
 import "Message/Message.proto";
 
 message CreateUserResponse{
-    bool status = 1;
-    string Message = 2;
-    UserMetaInfoV1 UserInfo = 3;
+    ResponseMetaInfoV1 metaInfo = 1;
+    UserMetaInfoV1 UserInfo = 2;
 }
 
 message DeleteUserResponse{
-    bool status = 1;
-    string Message = 2;
+    ResponseMetaInfoV1 metaInfo = 1;
 }
 
 message UpdateUserResponse{
-    bool status = 1;
-    string Message = 2;
-    UserMetaInfoV1 UserInfo = 3;
+    ResponseMetaInfoV1 metaInfo = 1;
+    UserMetaInfoV1 UserInfo = 2;
 }
 
 message GetUserResponse{
-    bool status = 1;
-    string Message = 2;
-    UserMetaInfoV1 UserInfo = 3;
+    ResponseMetaInfoV1 metaInfo = 1;
+    UserMetaInfoV1 UserInfo = 2;
 }
 
 message GetAllUserResponse{
-    bool status = 1;
-    string Message = 2;
-    repeated UserMetaInfoV1 UserInfo = 3;
+    ResponseMetaInfoV1 metaInfo = 1;
+    repeated UserMetaInfoV1 UserInfo = 2;
 }
 
 message UserLoginResponse{
-    bool status = 1;
-    string Message = 2;
-    UserMetaInfoV1 UserInfo = 3;
-    UserVerifyInfoV1 UserVerifyInfo = 4;
-}
-
-message UserLogoutResponse{
-    bool status = 1;
-    string Message = 2;
-}
-
-message UserOnlineHeartBeatResponse{
-    bool status = 1;
-    string Message = 2;
+    ResponseMetaInfoV1 metaInfo = 1;
+    UserMetaInfoV1 UserInfo = 2;
     UserVerifyInfoV1 UserVerifyInfo = 3;
 }
 
+message UserLogoutResponse{
+    ResponseMetaInfoV1 metaInfo = 1;
+}
+
+message UserOnlineHeartBeatResponse{
+    ResponseMetaInfoV1 metaInfo = 1;
+    UserVerifyInfoV1 UserVerifyInfo = 2;
+}
+
 message GetUserPermissionGroupResponse{
-    bool status = 1;
-    string Message = 2;
-    PermissionGroupMetaInfoV1 PermissionGroup = 3;
+    ResponseMetaInfoV1 metaInfo = 1;
+    PermissionGroupMetaInfoV1 PermissionGroup = 2;
 }
 
 message GetPermissionGroupResponse{
-    bool status = 1;
-    string Message = 2;
-    PermissionGroupMetaInfoV1 PermissionGroup = 3;
+    ResponseMetaInfoV1 metaInfo = 1;
+    PermissionGroupMetaInfoV1 PermissionGroup = 2;
 }
 
 message GetAllPermissionGroupResponse{
-    bool status = 1;
-    string Message = 2;
-    repeated PermissionGroupMetaInfoV1 PermissionGroupList = 3;
+    ResponseMetaInfoV1 metaInfo = 1;
+    repeated PermissionGroupMetaInfoV1 PermissionGroupList = 2;
 }
 
 message ChangeUserPermissionGroupResponse{
-    bool status = 1;
-    string Message = 2;
+    ResponseMetaInfoV1 metaInfo = 1;
 }
 
 message CreateProjectResponse{
-    bool status = 1;
-    string Message = 2;
-    ProjectMetaInfoV1 ProjectInfo = 3;
+    ResponseMetaInfoV1 metaInfo = 1;
+    ProjectMetaInfoV1 ProjectInfo = 2;
 }
 
 message DeleteProjectResponse{
-    bool status = 1;
-    string Message = 2;
-    ProjectMetaInfoV1 ProjectInfo = 3;
+    ResponseMetaInfoV1 metaInfo = 1;
+    ProjectMetaInfoV1 ProjectInfo = 2;
 }
 
 message UpdateProjectResponse{
-    bool status = 1;
-    string Message = 2;
-    ProjectMetaInfoV1 ProjectInfo = 3;
+    ResponseMetaInfoV1 metaInfo = 1;
+    ProjectMetaInfoV1 ProjectInfo = 2;
 }
 
 message GetProjectResponse{
-    bool status = 1;
-    string Message = 2;
-    ProjectMetaInfoV1 ProjectInfo = 3;
+    ResponseMetaInfoV1 metaInfo = 1;
+    ProjectMetaInfoV1 ProjectInfo = 2;
 }
 
 message GetAllProjectResponse{
-    bool status = 1;
-    string Message = 2;
-    repeated ProjectMetaInfoV1 ProjectInfo = 3;
+    ResponseMetaInfoV1 metaInfo = 1;
+    repeated ProjectMetaInfoV1 ProjectInfo = 2;
 }
 
 message CreateSwcResponse{
-    bool status = 1;
-    string Message = 2;
-    SwcMetaInfoV1 SwcInfo = 3;
+    ResponseMetaInfoV1 metaInfo = 1;
+    SwcMetaInfoV1 SwcInfo = 2;
 }
 
 message DeleteSwcResponse{
-    bool status = 1;
-    string Message = 2;
-    SwcMetaInfoV1 SwcInfo = 3;
+    ResponseMetaInfoV1 metaInfo = 1;
+    SwcMetaInfoV1 SwcInfo = 2;
 }
 
 message UpdateSwcResponse{
-    bool status = 1;
-    string Message = 2;
-    SwcMetaInfoV1 SwcInfo = 3;
+    ResponseMetaInfoV1 metaInfo = 1;
+    SwcMetaInfoV1 SwcInfo = 2;
 }
 
 message GetSwcMetaInfoResponse{
-    bool status = 1;
-    string Message = 2;
-    SwcMetaInfoV1 SwcInfo = 3;
+    ResponseMetaInfoV1 metaInfo = 1;
+    SwcMetaInfoV1 SwcInfo = 2;
 }
 
 message GetAllSwcMetaInfoResponse{
-    bool status = 1;
-    string Message = 2;
-    repeated SwcMetaInfoV1 SwcInfo = 3;
+    ResponseMetaInfoV1 metaInfo = 1;
+    repeated SwcMetaInfoV1 SwcInfo = 2;
 }
 
 message CreateSwcSnapshotResponse{
-    bool status = 1;
-    string Message = 2;
+    ResponseMetaInfoV1 metaInfo = 1;
 }
 
 message DeleteSwcSnapshotResponse{
-    bool status = 1;
-    string Message = 2;
+    ResponseMetaInfoV1 metaInfo = 1;
 }
 
 message GetAllSnapshotMetaInfoResponse{
-    bool status = 1;
-    string Message = 2;
-    repeated SwcSnapshotMetaInfoV1 SwcSnapshotList = 3;
+    ResponseMetaInfoV1 metaInfo = 1;
+    repeated SwcSnapshotMetaInfoV1 SwcSnapshotList = 2;
 }
 
 message GetSnapshotResponse{
-    bool status = 1;
-    string Message = 2;
+    ResponseMetaInfoV1 metaInfo = 2;
     SwcDataV1 SwcNodeData = 3;
 }
 
 message GetAllIncrementOperationMetaInfoResponse{
-    bool status = 1;
-    string Message = 2;
-    repeated SwcIncrementOperationMetaInfoV1 SwcIncrementOperationList = 3;
+    ResponseMetaInfoV1 metaInfo = 1;
+    repeated SwcIncrementOperationMetaInfoV1 SwcIncrementOperationList = 2;
 }
 
 message GetIncrementOperationResponse{
-    bool status = 1;
-    string Message = 2;
-    repeated SwcIncrementOperationV1 SwcIncrementOperationList = 3;
+    ResponseMetaInfoV1 metaInfo = 1;
+    repeated SwcIncrementOperationV1 SwcIncrementOperationList = 2;
 }
 
 message CreateSwcNodeDataResponse{
-    bool status = 1;
-    string Message = 2;
+    ResponseMetaInfoV1 metaInfo = 1;
 }
 
 message DeleteSwcNodeDataResponse{
-    bool status = 1;
-    string Message = 2;
+    ResponseMetaInfoV1 metaInfo = 1;
 }
 
 message UpdateSwcNodeDataResponse{
-    bool status = 1;
-    string Message = 2;
+    ResponseMetaInfoV1 metaInfo = 1;
 }
 
 message GetSwcNodeDataResponse{
-    bool status = 1;
-    string Message = 2;
-    SwcDataV1 SwcNodeData = 3;
+    ResponseMetaInfoV1 metaInfo = 1;
+    SwcDataV1 SwcNodeData = 2;
 }
 
 message GetSwcFullNodeDataResponse{
-    bool status = 1;
-    string Message = 2;
-    SwcDataV1 SwcNodeData = 3;
+    ResponseMetaInfoV1 metaInfo = 1;
+    SwcDataV1 SwcNodeData = 2;
 }
 
 message GetSwcNodeDataListByTimeAndUserResponse{
-    bool status = 1;
-    string Message = 2;
-    SwcDataV1 SwcNodeData = 3;
+    ResponseMetaInfoV1 metaInfo = 1;
+    SwcDataV1 SwcNodeData = 2;
 }
 
 message BackupFullDatabaseResponse{
-    bool status = 1;
-    string Message = 2;
-    bool InstantBackup = 3;
-    google.protobuf.Timestamp DelayBackupTime = 4;
+    ResponseMetaInfoV1 metaInfo = 1;
+    bool InstantBackup = 2;
+    google.protobuf.Timestamp DelayBackupTime = 3;
 }
 
 message CreateDailyStatisticsResponse{
-    bool status = 1;
-    string Message = 2;
-    DailyStatisticsMetaInfoV1 DailyStatisticsInfo = 3;
+    ResponseMetaInfoV1 metaInfo = 1;
+    DailyStatisticsMetaInfoV1 DailyStatisticsInfo = 2;
 }
 
 message DeleteDailyStatisticsResponse{
-    bool status = 1;
-    string Message = 2;
-    DailyStatisticsMetaInfoV1 DailyStatisticsInfo = 3;
+    ResponseMetaInfoV1 metaInfo = 1;
+    DailyStatisticsMetaInfoV1 DailyStatisticsInfo = 2;
 }
 
 message UpdateDailyStatisticsResponse{
-    bool status = 1;
-    string Message = 2;
-    DailyStatisticsMetaInfoV1 DailyStatisticsInfo = 3;
+    ResponseMetaInfoV1 metaInfo = 1;
+    DailyStatisticsMetaInfoV1 DailyStatisticsInfo = 2;
 }
 
 message GetDailyStatisticsResponse{
-    bool status = 1;
-    string Message = 2;
-    DailyStatisticsMetaInfoV1 DailyStatisticsInfo = 3;
+    ResponseMetaInfoV1 metaInfo = 1;
+    DailyStatisticsMetaInfoV1 DailyStatisticsInfo = 2;
 }
 
 message GetAllDailyStatisticsResponse{
-    bool status = 1;
-    string Message = 2;
-    repeated DailyStatisticsMetaInfoV1 DailyStatisticsInfo = 3;
+    ResponseMetaInfoV1 metaInfo = 1;
+    repeated DailyStatisticsMetaInfoV1 DailyStatisticsInfo = 2;
 }

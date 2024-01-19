@@ -1301,8 +1301,11 @@
     "protoBackupFullDatabaseRequest": {
       "type": "object",
       "properties": {
-        "UserInfo": {
-          "$ref": "#/definitions/protoUserMetaInfoV1"
+        "RequestMetaInfo": {
+          "$ref": "#/definitions/protoRequestMetaInfoV1"
+        },
+        "UserVerifyInfo": {
+          "$ref": "#/definitions/protoUserVerifyInfoV1"
         },
         "InstantBackup": {
           "type": "boolean"
@@ -1316,11 +1319,8 @@
     "protoBackupFullDatabaseResponse": {
       "type": "object",
       "properties": {
-        "status": {
-          "type": "boolean"
-        },
-        "Message": {
-          "type": "string"
+        "metaInfo": {
+          "$ref": "#/definitions/protoResponseMetaInfoV1"
         },
         "InstantBackup": {
           "type": "boolean"
@@ -1334,33 +1334,36 @@
     "protoChangeUserPermissionGroupRequest": {
       "type": "object",
       "properties": {
-        "UserInfo": {
-          "$ref": "#/definitions/protoUserMetaInfoV1"
+        "RequestMetaInfo": {
+          "$ref": "#/definitions/protoRequestMetaInfoV1"
         },
-        "TargetUserInfo": {
-          "$ref": "#/definitions/protoUserMetaInfoV1"
+        "UserVerifyInfo": {
+          "$ref": "#/definitions/protoUserVerifyInfoV1"
         },
-        "PermissionGroup": {
-          "$ref": "#/definitions/protoPermissionGroupMetaInfoV1"
+        "TargetUserName": {
+          "type": "string"
+        },
+        "PermissionGroupName": {
+          "type": "string"
         }
       }
     },
     "protoChangeUserPermissionGroupResponse": {
       "type": "object",
       "properties": {
-        "status": {
-          "type": "boolean"
-        },
-        "Message": {
-          "type": "string"
+        "metaInfo": {
+          "$ref": "#/definitions/protoResponseMetaInfoV1"
         }
       }
     },
     "protoCreateDailyStatisticsRequest": {
       "type": "object",
       "properties": {
-        "UserInfo": {
-          "$ref": "#/definitions/protoUserMetaInfoV1"
+        "RequestMetaInfo": {
+          "$ref": "#/definitions/protoRequestMetaInfoV1"
+        },
+        "UserVerifyInfo": {
+          "$ref": "#/definitions/protoUserVerifyInfoV1"
         },
         "DailyStatisticsInfo": {
           "$ref": "#/definitions/protoDailyStatisticsMetaInfoV1"
@@ -1370,11 +1373,8 @@
     "protoCreateDailyStatisticsResponse": {
       "type": "object",
       "properties": {
-        "status": {
-          "type": "boolean"
-        },
-        "Message": {
-          "type": "string"
+        "metaInfo": {
+          "$ref": "#/definitions/protoResponseMetaInfoV1"
         },
         "DailyStatisticsInfo": {
           "$ref": "#/definitions/protoDailyStatisticsMetaInfoV1"
@@ -1384,8 +1384,11 @@
     "protoCreateProjectRequest": {
       "type": "object",
       "properties": {
-        "UserInfo": {
-          "$ref": "#/definitions/protoUserMetaInfoV1"
+        "RequestMetaInfo": {
+          "$ref": "#/definitions/protoRequestMetaInfoV1"
+        },
+        "UserVerifyInfo": {
+          "$ref": "#/definitions/protoUserVerifyInfoV1"
         },
         "ProjectInfo": {
           "$ref": "#/definitions/protoProjectMetaInfoV1"
@@ -1395,11 +1398,8 @@
     "protoCreateProjectResponse": {
       "type": "object",
       "properties": {
-        "status": {
-          "type": "boolean"
-        },
-        "Message": {
-          "type": "string"
+        "metaInfo": {
+          "$ref": "#/definitions/protoResponseMetaInfoV1"
         },
         "ProjectInfo": {
           "$ref": "#/definitions/protoProjectMetaInfoV1"
@@ -1409,11 +1409,14 @@
     "protoCreateSwcNodeDataRequest": {
       "type": "object",
       "properties": {
+        "RequestMetaInfo": {
+          "$ref": "#/definitions/protoRequestMetaInfoV1"
+        },
         "UserVerifyInfo": {
           "$ref": "#/definitions/protoUserVerifyInfoV1"
         },
-        "SwcInfo": {
-          "$ref": "#/definitions/protoSwcMetaInfoV1"
+        "SwcName": {
+          "type": "string"
         },
         "SwcData": {
           "$ref": "#/definitions/protoSwcDataV1"
@@ -1423,19 +1426,19 @@
     "protoCreateSwcNodeDataResponse": {
       "type": "object",
       "properties": {
-        "status": {
-          "type": "boolean"
-        },
-        "Message": {
-          "type": "string"
+        "metaInfo": {
+          "$ref": "#/definitions/protoResponseMetaInfoV1"
         }
       }
     },
     "protoCreateSwcRequest": {
       "type": "object",
       "properties": {
-        "UserInfo": {
-          "$ref": "#/definitions/protoUserMetaInfoV1"
+        "RequestMetaInfo": {
+          "$ref": "#/definitions/protoRequestMetaInfoV1"
+        },
+        "UserVerifyInfo": {
+          "$ref": "#/definitions/protoUserVerifyInfoV1"
         },
         "SwcInfo": {
           "$ref": "#/definitions/protoSwcMetaInfoV1"
@@ -1445,11 +1448,8 @@
     "protoCreateSwcResponse": {
       "type": "object",
       "properties": {
-        "status": {
-          "type": "boolean"
-        },
-        "Message": {
-          "type": "string"
+        "metaInfo": {
+          "$ref": "#/definitions/protoResponseMetaInfoV1"
         },
         "SwcInfo": {
           "$ref": "#/definitions/protoSwcMetaInfoV1"
@@ -1459,6 +1459,9 @@
     "protoCreateSwcSnapshotRequest": {
       "type": "object",
       "properties": {
+        "RequestMetaInfo": {
+          "$ref": "#/definitions/protoRequestMetaInfoV1"
+        },
         "UserVerifyInfo": {
           "$ref": "#/definitions/protoUserVerifyInfoV1"
         },
@@ -1470,17 +1473,17 @@
     "protoCreateSwcSnapshotResponse": {
       "type": "object",
       "properties": {
-        "status": {
-          "type": "boolean"
-        },
-        "Message": {
-          "type": "string"
+        "metaInfo": {
+          "$ref": "#/definitions/protoResponseMetaInfoV1"
         }
       }
     },
     "protoCreateUserRequest": {
       "type": "object",
       "properties": {
+        "RequestMetaInfo": {
+          "$ref": "#/definitions/protoRequestMetaInfoV1"
+        },
         "UserInfo": {
           "$ref": "#/definitions/protoUserMetaInfoV1"
         }
@@ -1489,11 +1492,8 @@
     "protoCreateUserResponse": {
       "type": "object",
       "properties": {
-        "status": {
-          "type": "boolean"
-        },
-        "Message": {
-          "type": "string"
+        "metaInfo": {
+          "$ref": "#/definitions/protoResponseMetaInfoV1"
         },
         "UserInfo": {
           "$ref": "#/definitions/protoUserMetaInfoV1"
@@ -1572,22 +1572,22 @@
     "protoDeleteDailyStatisticsRequest": {
       "type": "object",
       "properties": {
-        "UserInfo": {
-          "$ref": "#/definitions/protoUserMetaInfoV1"
+        "RequestMetaInfo": {
+          "$ref": "#/definitions/protoRequestMetaInfoV1"
         },
-        "DailyStatisticsInfo": {
-          "$ref": "#/definitions/protoDailyStatisticsMetaInfoV1"
+        "UserVerifyInfo": {
+          "$ref": "#/definitions/protoUserVerifyInfoV1"
+        },
+        "DailyStatisticsName": {
+          "type": "string"
         }
       }
     },
     "protoDeleteDailyStatisticsResponse": {
       "type": "object",
       "properties": {
-        "status": {
-          "type": "boolean"
-        },
-        "Message": {
-          "type": "string"
+        "metaInfo": {
+          "$ref": "#/definitions/protoResponseMetaInfoV1"
         },
         "DailyStatisticsInfo": {
           "$ref": "#/definitions/protoDailyStatisticsMetaInfoV1"
@@ -1597,22 +1597,22 @@
     "protoDeleteProjectRequest": {
       "type": "object",
       "properties": {
-        "UserInfo": {
-          "$ref": "#/definitions/protoUserMetaInfoV1"
+        "RequestMetaInfo": {
+          "$ref": "#/definitions/protoRequestMetaInfoV1"
         },
-        "ProjectInfo": {
-          "$ref": "#/definitions/protoProjectMetaInfoV1"
+        "UserVerifyInfo": {
+          "$ref": "#/definitions/protoUserVerifyInfoV1"
+        },
+        "ProjectName": {
+          "type": "string"
         }
       }
     },
     "protoDeleteProjectResponse": {
       "type": "object",
       "properties": {
-        "status": {
-          "type": "boolean"
-        },
-        "Message": {
-          "type": "string"
+        "metaInfo": {
+          "$ref": "#/definitions/protoResponseMetaInfoV1"
         },
         "ProjectInfo": {
           "$ref": "#/definitions/protoProjectMetaInfoV1"
@@ -1622,11 +1622,14 @@
     "protoDeleteSwcNodeDataRequest": {
       "type": "object",
       "properties": {
+        "RequestMetaInfo": {
+          "$ref": "#/definitions/protoRequestMetaInfoV1"
+        },
         "UserVerifyInfo": {
           "$ref": "#/definitions/protoUserVerifyInfoV1"
         },
-        "SwcInfo": {
-          "$ref": "#/definitions/protoSwcMetaInfoV1"
+        "SwcName": {
+          "type": "string"
         },
         "SwcData": {
           "$ref": "#/definitions/protoSwcDataV1"
@@ -1636,33 +1639,30 @@
     "protoDeleteSwcNodeDataResponse": {
       "type": "object",
       "properties": {
-        "status": {
-          "type": "boolean"
-        },
-        "Message": {
-          "type": "string"
+        "metaInfo": {
+          "$ref": "#/definitions/protoResponseMetaInfoV1"
         }
       }
     },
     "protoDeleteSwcRequest": {
       "type": "object",
       "properties": {
-        "UserInfo": {
-          "$ref": "#/definitions/protoUserMetaInfoV1"
+        "RequestMetaInfo": {
+          "$ref": "#/definitions/protoRequestMetaInfoV1"
         },
-        "SwcInfo": {
-          "$ref": "#/definitions/protoSwcMetaInfoV1"
+        "UserVerifyInfo": {
+          "$ref": "#/definitions/protoUserVerifyInfoV1"
+        },
+        "SwcName": {
+          "type": "string"
         }
       }
     },
     "protoDeleteSwcResponse": {
       "type": "object",
       "properties": {
-        "status": {
-          "type": "boolean"
-        },
-        "Message": {
-          "type": "string"
+        "metaInfo": {
+          "$ref": "#/definitions/protoResponseMetaInfoV1"
         },
         "SwcInfo": {
           "$ref": "#/definitions/protoSwcMetaInfoV1"
@@ -1672,6 +1672,9 @@
     "protoDeleteSwcSnapshotRequest": {
       "type": "object",
       "properties": {
+        "RequestMetaInfo": {
+          "$ref": "#/definitions/protoRequestMetaInfoV1"
+        },
         "UserVerifyInfo": {
           "$ref": "#/definitions/protoUserVerifyInfoV1"
         },
@@ -1686,52 +1689,49 @@
     "protoDeleteSwcSnapshotResponse": {
       "type": "object",
       "properties": {
-        "status": {
-          "type": "boolean"
-        },
-        "Message": {
-          "type": "string"
+        "metaInfo": {
+          "$ref": "#/definitions/protoResponseMetaInfoV1"
         }
       }
     },
     "protoDeleteUserRequest": {
       "type": "object",
       "properties": {
+        "RequestMetaInfo": {
+          "$ref": "#/definitions/protoRequestMetaInfoV1"
+        },
         "UserVerifyInfo": {
           "$ref": "#/definitions/protoUserVerifyInfoV1"
         },
-        "UserInfo": {
-          "$ref": "#/definitions/protoUserMetaInfoV1"
+        "UserName": {
+          "type": "string"
         }
       }
     },
     "protoDeleteUserResponse": {
       "type": "object",
       "properties": {
-        "status": {
-          "type": "boolean"
-        },
-        "Message": {
-          "type": "string"
+        "metaInfo": {
+          "$ref": "#/definitions/protoResponseMetaInfoV1"
         }
       }
     },
     "protoGetAllDailyStatisticsRequest": {
       "type": "object",
       "properties": {
-        "UserInfo": {
-          "$ref": "#/definitions/protoUserMetaInfoV1"
+        "RequestMetaInfo": {
+          "$ref": "#/definitions/protoRequestMetaInfoV1"
+        },
+        "UserVerifyInfo": {
+          "$ref": "#/definitions/protoUserVerifyInfoV1"
         }
       }
     },
     "protoGetAllDailyStatisticsResponse": {
       "type": "object",
       "properties": {
-        "status": {
-          "type": "boolean"
-        },
-        "Message": {
-          "type": "string"
+        "metaInfo": {
+          "$ref": "#/definitions/protoResponseMetaInfoV1"
         },
         "DailyStatisticsInfo": {
           "type": "array",
@@ -1745,6 +1745,9 @@
     "protoGetAllIncrementOperationMetaInfoRequest": {
       "type": "object",
       "properties": {
+        "RequestMetaInfo": {
+          "$ref": "#/definitions/protoRequestMetaInfoV1"
+        },
         "UserVerifyInfo": {
           "$ref": "#/definitions/protoUserVerifyInfoV1"
         }
@@ -1753,11 +1756,8 @@
     "protoGetAllIncrementOperationMetaInfoResponse": {
       "type": "object",
       "properties": {
-        "status": {
-          "type": "boolean"
-        },
-        "Message": {
-          "type": "string"
+        "metaInfo": {
+          "$ref": "#/definitions/protoResponseMetaInfoV1"
         },
         "SwcIncrementOperationList": {
           "type": "array",
@@ -1771,19 +1771,19 @@
     "protoGetAllPermissionGroupRequest": {
       "type": "object",
       "properties": {
-        "UserInfo": {
-          "$ref": "#/definitions/protoUserMetaInfoV1"
+        "RequestMetaInfo": {
+          "$ref": "#/definitions/protoRequestMetaInfoV1"
+        },
+        "UserVerifyInfo": {
+          "$ref": "#/definitions/protoUserVerifyInfoV1"
         }
       }
     },
     "protoGetAllPermissionGroupResponse": {
       "type": "object",
       "properties": {
-        "status": {
-          "type": "boolean"
-        },
-        "Message": {
-          "type": "string"
+        "metaInfo": {
+          "$ref": "#/definitions/protoResponseMetaInfoV1"
         },
         "PermissionGroupList": {
           "type": "array",
@@ -1797,19 +1797,19 @@
     "protoGetAllProjectRequest": {
       "type": "object",
       "properties": {
-        "UserInfo": {
-          "$ref": "#/definitions/protoUserMetaInfoV1"
+        "RequestMetaInfo": {
+          "$ref": "#/definitions/protoRequestMetaInfoV1"
+        },
+        "UserVerifyInfo": {
+          "$ref": "#/definitions/protoUserVerifyInfoV1"
         }
       }
     },
     "protoGetAllProjectResponse": {
       "type": "object",
       "properties": {
-        "status": {
-          "type": "boolean"
-        },
-        "Message": {
-          "type": "string"
+        "metaInfo": {
+          "$ref": "#/definitions/protoResponseMetaInfoV1"
         },
         "ProjectInfo": {
           "type": "array",
@@ -1823,6 +1823,9 @@
     "protoGetAllSnapshotMetaInfoRequest": {
       "type": "object",
       "properties": {
+        "RequestMetaInfo": {
+          "$ref": "#/definitions/protoRequestMetaInfoV1"
+        },
         "UserVerifyInfo": {
           "$ref": "#/definitions/protoUserVerifyInfoV1"
         }
@@ -1831,11 +1834,8 @@
     "protoGetAllSnapshotMetaInfoResponse": {
       "type": "object",
       "properties": {
-        "status": {
-          "type": "boolean"
-        },
-        "Message": {
-          "type": "string"
+        "metaInfo": {
+          "$ref": "#/definitions/protoResponseMetaInfoV1"
         },
         "SwcSnapshotList": {
           "type": "array",
@@ -1849,19 +1849,19 @@
     "protoGetAllSwcMetaInfoRequest": {
       "type": "object",
       "properties": {
-        "UserInfo": {
-          "$ref": "#/definitions/protoUserMetaInfoV1"
+        "RequestMetaInfo": {
+          "$ref": "#/definitions/protoRequestMetaInfoV1"
+        },
+        "UserVerifyInfo": {
+          "$ref": "#/definitions/protoUserVerifyInfoV1"
         }
       }
     },
     "protoGetAllSwcMetaInfoResponse": {
       "type": "object",
       "properties": {
-        "status": {
-          "type": "boolean"
-        },
-        "Message": {
-          "type": "string"
+        "metaInfo": {
+          "$ref": "#/definitions/protoResponseMetaInfoV1"
         },
         "SwcInfo": {
           "type": "array",
@@ -1875,19 +1875,19 @@
     "protoGetAllUserRequest": {
       "type": "object",
       "properties": {
-        "UserInfo": {
-          "$ref": "#/definitions/protoUserMetaInfoV1"
+        "RequestMetaInfo": {
+          "$ref": "#/definitions/protoRequestMetaInfoV1"
+        },
+        "UserVerifyInfo": {
+          "$ref": "#/definitions/protoUserVerifyInfoV1"
         }
       }
     },
     "protoGetAllUserResponse": {
       "type": "object",
       "properties": {
-        "status": {
-          "type": "boolean"
-        },
-        "Message": {
-          "type": "string"
+        "metaInfo": {
+          "$ref": "#/definitions/protoResponseMetaInfoV1"
         },
         "UserInfo": {
           "type": "array",
@@ -1901,22 +1901,22 @@
     "protoGetDailyStatisticsRequest": {
       "type": "object",
       "properties": {
-        "UserInfo": {
-          "$ref": "#/definitions/protoUserMetaInfoV1"
+        "RequestMetaInfo": {
+          "$ref": "#/definitions/protoRequestMetaInfoV1"
         },
-        "DailyStatisticsInfo": {
-          "$ref": "#/definitions/protoDailyStatisticsMetaInfoV1"
+        "UserVerifyInfo": {
+          "$ref": "#/definitions/protoUserVerifyInfoV1"
+        },
+        "DailyStatisticsName": {
+          "type": "string"
         }
       }
     },
     "protoGetDailyStatisticsResponse": {
       "type": "object",
       "properties": {
-        "status": {
-          "type": "boolean"
-        },
-        "Message": {
-          "type": "string"
+        "metaInfo": {
+          "$ref": "#/definitions/protoResponseMetaInfoV1"
         },
         "DailyStatisticsInfo": {
           "$ref": "#/definitions/protoDailyStatisticsMetaInfoV1"
@@ -1926,6 +1926,9 @@
     "protoGetIncrementOperationRequest": {
       "type": "object",
       "properties": {
+        "RequestMetaInfo": {
+          "$ref": "#/definitions/protoRequestMetaInfoV1"
+        },
         "UserVerifyInfo": {
           "$ref": "#/definitions/protoUserVerifyInfoV1"
         },
@@ -1937,11 +1940,8 @@
     "protoGetIncrementOperationResponse": {
       "type": "object",
       "properties": {
-        "status": {
-          "type": "boolean"
-        },
-        "Message": {
-          "type": "string"
+        "metaInfo": {
+          "$ref": "#/definitions/protoResponseMetaInfoV1"
         },
         "SwcIncrementOperationList": {
           "type": "array",
@@ -1955,8 +1955,11 @@
     "protoGetPermissionGroupRequest": {
       "type": "object",
       "properties": {
-        "UserInfo": {
-          "$ref": "#/definitions/protoUserMetaInfoV1"
+        "RequestMetaInfo": {
+          "$ref": "#/definitions/protoRequestMetaInfoV1"
+        },
+        "UserVerifyInfo": {
+          "$ref": "#/definitions/protoUserVerifyInfoV1"
         },
         "PermissionGroup": {
           "$ref": "#/definitions/protoPermissionGroupMetaInfoV1"
@@ -1966,11 +1969,8 @@
     "protoGetPermissionGroupResponse": {
       "type": "object",
       "properties": {
-        "status": {
-          "type": "boolean"
-        },
-        "Message": {
-          "type": "string"
+        "metaInfo": {
+          "$ref": "#/definitions/protoResponseMetaInfoV1"
         },
         "PermissionGroup": {
           "$ref": "#/definitions/protoPermissionGroupMetaInfoV1"
@@ -1980,22 +1980,22 @@
     "protoGetProjectRequest": {
       "type": "object",
       "properties": {
-        "UserInfo": {
-          "$ref": "#/definitions/protoUserMetaInfoV1"
+        "RequestMetaInfo": {
+          "$ref": "#/definitions/protoRequestMetaInfoV1"
         },
-        "ProjectInfo": {
-          "$ref": "#/definitions/protoProjectMetaInfoV1"
+        "UserVerifyInfo": {
+          "$ref": "#/definitions/protoUserVerifyInfoV1"
+        },
+        "ProjectName": {
+          "type": "string"
         }
       }
     },
     "protoGetProjectResponse": {
       "type": "object",
       "properties": {
-        "status": {
-          "type": "boolean"
-        },
-        "Message": {
-          "type": "string"
+        "metaInfo": {
+          "$ref": "#/definitions/protoResponseMetaInfoV1"
         },
         "ProjectInfo": {
           "$ref": "#/definitions/protoProjectMetaInfoV1"
@@ -2005,6 +2005,9 @@
     "protoGetSnapshotRequest": {
       "type": "object",
       "properties": {
+        "RequestMetaInfo": {
+          "$ref": "#/definitions/protoRequestMetaInfoV1"
+        },
         "UserVerifyInfo": {
           "$ref": "#/definitions/protoUserVerifyInfoV1"
         },
@@ -2016,11 +2019,8 @@
     "protoGetSnapshotResponse": {
       "type": "object",
       "properties": {
-        "status": {
-          "type": "boolean"
-        },
-        "Message": {
-          "type": "string"
+        "metaInfo": {
+          "$ref": "#/definitions/protoResponseMetaInfoV1"
         },
         "SwcNodeData": {
           "$ref": "#/definitions/protoSwcDataV1"
@@ -2030,22 +2030,22 @@
     "protoGetSwcFullNodeDataRequest": {
       "type": "object",
       "properties": {
-        "UserInfo": {
-          "$ref": "#/definitions/protoUserMetaInfoV1"
+        "RequestMetaInfo": {
+          "$ref": "#/definitions/protoRequestMetaInfoV1"
         },
-        "SwcInfo": {
-          "$ref": "#/definitions/protoSwcMetaInfoV1"
+        "UserVerifyInfo": {
+          "$ref": "#/definitions/protoUserVerifyInfoV1"
+        },
+        "SwcName": {
+          "type": "string"
         }
       }
     },
     "protoGetSwcFullNodeDataResponse": {
       "type": "object",
       "properties": {
-        "status": {
-          "type": "boolean"
-        },
-        "Message": {
-          "type": "string"
+        "metaInfo": {
+          "$ref": "#/definitions/protoResponseMetaInfoV1"
         },
         "SwcNodeData": {
           "$ref": "#/definitions/protoSwcDataV1"
@@ -2055,22 +2055,22 @@
     "protoGetSwcMetaInfoRequest": {
       "type": "object",
       "properties": {
-        "UserInfo": {
-          "$ref": "#/definitions/protoUserMetaInfoV1"
+        "RequestMetaInfo": {
+          "$ref": "#/definitions/protoRequestMetaInfoV1"
         },
-        "SwcInfo": {
-          "$ref": "#/definitions/protoSwcMetaInfoV1"
+        "UserVerifyInfo": {
+          "$ref": "#/definitions/protoUserVerifyInfoV1"
+        },
+        "SwcName": {
+          "type": "string"
         }
       }
     },
     "protoGetSwcMetaInfoResponse": {
       "type": "object",
       "properties": {
-        "status": {
-          "type": "boolean"
-        },
-        "Message": {
-          "type": "string"
+        "metaInfo": {
+          "$ref": "#/definitions/protoResponseMetaInfoV1"
         },
         "SwcInfo": {
           "$ref": "#/definitions/protoSwcMetaInfoV1"
@@ -2080,11 +2080,14 @@
     "protoGetSwcNodeDataListByTimeAndUserRequest": {
       "type": "object",
       "properties": {
-        "UserInfo": {
-          "$ref": "#/definitions/protoUserMetaInfoV1"
+        "RequestMetaInfo": {
+          "$ref": "#/definitions/protoRequestMetaInfoV1"
         },
-        "SwcInfo": {
-          "$ref": "#/definitions/protoSwcMetaInfoV1"
+        "UserVerifyInfo": {
+          "$ref": "#/definitions/protoUserVerifyInfoV1"
+        },
+        "SwcName": {
+          "type": "string"
         },
         "StartTime": {
           "type": "string",
@@ -2102,11 +2105,8 @@
     "protoGetSwcNodeDataListByTimeAndUserResponse": {
       "type": "object",
       "properties": {
-        "status": {
-          "type": "boolean"
-        },
-        "Message": {
-          "type": "string"
+        "metaInfo": {
+          "$ref": "#/definitions/protoResponseMetaInfoV1"
         },
         "SwcNodeData": {
           "$ref": "#/definitions/protoSwcDataV1"
@@ -2116,11 +2116,14 @@
     "protoGetSwcNodeDataRequest": {
       "type": "object",
       "properties": {
-        "UserInfo": {
-          "$ref": "#/definitions/protoUserMetaInfoV1"
+        "RequestMetaInfo": {
+          "$ref": "#/definitions/protoRequestMetaInfoV1"
         },
-        "SwcInfo": {
-          "$ref": "#/definitions/protoSwcMetaInfoV1"
+        "UserVerifyInfo": {
+          "$ref": "#/definitions/protoUserVerifyInfoV1"
+        },
+        "SwcName": {
+          "type": "string"
         },
         "SwcNodeData": {
           "$ref": "#/definitions/protoSwcDataV1"
@@ -2130,11 +2133,8 @@
     "protoGetSwcNodeDataResponse": {
       "type": "object",
       "properties": {
-        "status": {
-          "type": "boolean"
-        },
-        "Message": {
-          "type": "string"
+        "metaInfo": {
+          "$ref": "#/definitions/protoResponseMetaInfoV1"
         },
         "SwcNodeData": {
           "$ref": "#/definitions/protoSwcDataV1"
@@ -2144,19 +2144,19 @@
     "protoGetUserPermissionGroupRequest": {
       "type": "object",
       "properties": {
-        "UserInfo": {
-          "$ref": "#/definitions/protoUserMetaInfoV1"
+        "RequestMetaInfo": {
+          "$ref": "#/definitions/protoRequestMetaInfoV1"
+        },
+        "UserVerifyInfo": {
+          "$ref": "#/definitions/protoUserVerifyInfoV1"
         }
       }
     },
     "protoGetUserPermissionGroupResponse": {
       "type": "object",
       "properties": {
-        "status": {
-          "type": "boolean"
-        },
-        "Message": {
-          "type": "string"
+        "metaInfo": {
+          "$ref": "#/definitions/protoResponseMetaInfoV1"
         },
         "PermissionGroup": {
           "$ref": "#/definitions/protoPermissionGroupMetaInfoV1"
@@ -2166,19 +2166,22 @@
     "protoGetUserRequest": {
       "type": "object",
       "properties": {
-        "UserInfo": {
-          "$ref": "#/definitions/protoUserMetaInfoV1"
+        "RequestMetaInfo": {
+          "$ref": "#/definitions/protoRequestMetaInfoV1"
+        },
+        "UserVerifyInfo": {
+          "$ref": "#/definitions/protoUserVerifyInfoV1"
+        },
+        "UserName": {
+          "type": "string"
         }
       }
     },
     "protoGetUserResponse": {
       "type": "object",
       "properties": {
-        "status": {
-          "type": "boolean"
-        },
-        "Message": {
-          "type": "string"
+        "metaInfo": {
+          "$ref": "#/definitions/protoResponseMetaInfoV1"
         },
         "UserInfo": {
           "$ref": "#/definitions/protoUserMetaInfoV1"
@@ -2301,6 +2304,28 @@
         },
         "ReadPerimissionQuery": {
           "type": "boolean"
+        }
+      }
+    },
+    "protoRequestMetaInfoV1": {
+      "type": "object",
+      "properties": {
+        "ApiVersion": {
+          "type": "string"
+        }
+      }
+    },
+    "protoResponseMetaInfoV1": {
+      "type": "object",
+      "properties": {
+        "Status": {
+          "type": "boolean"
+        },
+        "Id": {
+          "type": "string"
+        },
+        "Message": {
+          "type": "string"
         }
       }
     },
@@ -2489,8 +2514,11 @@
     "protoUpdateDailyStatisticsRequest": {
       "type": "object",
       "properties": {
-        "UserInfo": {
-          "$ref": "#/definitions/protoUserMetaInfoV1"
+        "RequestMetaInfo": {
+          "$ref": "#/definitions/protoRequestMetaInfoV1"
+        },
+        "UserVerifyInfo": {
+          "$ref": "#/definitions/protoUserVerifyInfoV1"
         },
         "DailyStatisticsInfo": {
           "$ref": "#/definitions/protoDailyStatisticsMetaInfoV1"
@@ -2500,11 +2528,8 @@
     "protoUpdateDailyStatisticsResponse": {
       "type": "object",
       "properties": {
-        "status": {
-          "type": "boolean"
-        },
-        "Message": {
-          "type": "string"
+        "metaInfo": {
+          "$ref": "#/definitions/protoResponseMetaInfoV1"
         },
         "DailyStatisticsInfo": {
           "$ref": "#/definitions/protoDailyStatisticsMetaInfoV1"
@@ -2514,8 +2539,11 @@
     "protoUpdateProjectRequest": {
       "type": "object",
       "properties": {
-        "UserInfo": {
-          "$ref": "#/definitions/protoUserMetaInfoV1"
+        "RequestMetaInfo": {
+          "$ref": "#/definitions/protoRequestMetaInfoV1"
+        },
+        "UserVerifyInfo": {
+          "$ref": "#/definitions/protoUserVerifyInfoV1"
         },
         "ProjectInfo": {
           "$ref": "#/definitions/protoProjectMetaInfoV1"
@@ -2525,11 +2553,8 @@
     "protoUpdateProjectResponse": {
       "type": "object",
       "properties": {
-        "status": {
-          "type": "boolean"
-        },
-        "Message": {
-          "type": "string"
+        "metaInfo": {
+          "$ref": "#/definitions/protoResponseMetaInfoV1"
         },
         "ProjectInfo": {
           "$ref": "#/definitions/protoProjectMetaInfoV1"
@@ -2539,11 +2564,14 @@
     "protoUpdateSwcNodeDataRequest": {
       "type": "object",
       "properties": {
+        "RequestMetaInfo": {
+          "$ref": "#/definitions/protoRequestMetaInfoV1"
+        },
         "UserVerifyInfo": {
           "$ref": "#/definitions/protoUserVerifyInfoV1"
         },
-        "SwcInfo": {
-          "$ref": "#/definitions/protoSwcMetaInfoV1"
+        "SwcName": {
+          "type": "string"
         },
         "SwcNodeData": {
           "$ref": "#/definitions/protoSwcNodeDataV1"
@@ -2553,19 +2581,19 @@
     "protoUpdateSwcNodeDataResponse": {
       "type": "object",
       "properties": {
-        "status": {
-          "type": "boolean"
-        },
-        "Message": {
-          "type": "string"
+        "metaInfo": {
+          "$ref": "#/definitions/protoResponseMetaInfoV1"
         }
       }
     },
     "protoUpdateSwcRequest": {
       "type": "object",
       "properties": {
-        "UserInfo": {
-          "$ref": "#/definitions/protoUserMetaInfoV1"
+        "RequestMetaInfo": {
+          "$ref": "#/definitions/protoRequestMetaInfoV1"
+        },
+        "UserVerifyInfo": {
+          "$ref": "#/definitions/protoUserVerifyInfoV1"
         },
         "SwcInfo": {
           "$ref": "#/definitions/protoSwcMetaInfoV1"
@@ -2575,11 +2603,8 @@
     "protoUpdateSwcResponse": {
       "type": "object",
       "properties": {
-        "status": {
-          "type": "boolean"
-        },
-        "Message": {
-          "type": "string"
+        "metaInfo": {
+          "$ref": "#/definitions/protoResponseMetaInfoV1"
         },
         "SwcInfo": {
           "$ref": "#/definitions/protoSwcMetaInfoV1"
@@ -2589,6 +2614,12 @@
     "protoUpdateUserRequest": {
       "type": "object",
       "properties": {
+        "RequestMetaInfo": {
+          "$ref": "#/definitions/protoRequestMetaInfoV1"
+        },
+        "UserVerifyInfo": {
+          "$ref": "#/definitions/protoUserVerifyInfoV1"
+        },
         "UserInfo": {
           "$ref": "#/definitions/protoUserMetaInfoV1"
         }
@@ -2597,11 +2628,8 @@
     "protoUpdateUserResponse": {
       "type": "object",
       "properties": {
-        "status": {
-          "type": "boolean"
-        },
-        "Message": {
-          "type": "string"
+        "metaInfo": {
+          "$ref": "#/definitions/protoResponseMetaInfoV1"
         },
         "UserInfo": {
           "$ref": "#/definitions/protoUserMetaInfoV1"
@@ -2611,6 +2639,9 @@
     "protoUserLoginRequest": {
       "type": "object",
       "properties": {
+        "RequestMetaInfo": {
+          "$ref": "#/definitions/protoRequestMetaInfoV1"
+        },
         "UserName": {
           "type": "string"
         },
@@ -2622,11 +2653,8 @@
     "protoUserLoginResponse": {
       "type": "object",
       "properties": {
-        "status": {
-          "type": "boolean"
-        },
-        "Message": {
-          "type": "string"
+        "metaInfo": {
+          "$ref": "#/definitions/protoResponseMetaInfoV1"
         },
         "UserInfo": {
           "$ref": "#/definitions/protoUserMetaInfoV1"
@@ -2639,6 +2667,9 @@
     "protoUserLogoutRequest": {
       "type": "object",
       "properties": {
+        "RequestMetaInfo": {
+          "$ref": "#/definitions/protoRequestMetaInfoV1"
+        },
         "UserVerifyInfo": {
           "$ref": "#/definitions/protoUserVerifyInfoV1"
         }
@@ -2647,11 +2678,8 @@
     "protoUserLogoutResponse": {
       "type": "object",
       "properties": {
-        "status": {
-          "type": "boolean"
-        },
-        "Message": {
-          "type": "string"
+        "metaInfo": {
+          "$ref": "#/definitions/protoResponseMetaInfoV1"
         }
       }
     },
@@ -2686,8 +2714,11 @@
     "protoUserOnlineHeartBeatNotification": {
       "type": "object",
       "properties": {
-        "UserInfo": {
-          "$ref": "#/definitions/protoUserMetaInfoV1"
+        "RequestMetaInfo": {
+          "$ref": "#/definitions/protoRequestMetaInfoV1"
+        },
+        "UserVerifyInfo": {
+          "$ref": "#/definitions/protoUserVerifyInfoV1"
         },
         "HeartBeatTime": {
           "type": "string",
@@ -2698,11 +2729,8 @@
     "protoUserOnlineHeartBeatResponse": {
       "type": "object",
       "properties": {
-        "status": {
-          "type": "boolean"
-        },
-        "Message": {
-          "type": "string"
+        "metaInfo": {
+          "$ref": "#/definitions/protoResponseMetaInfoV1"
         },
         "UserVerifyInfo": {
           "$ref": "#/definitions/protoUserVerifyInfoV1"

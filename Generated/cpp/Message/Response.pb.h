@@ -335,25 +335,28 @@ class CreateUserResponse final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMessageFieldNumber = 2,
-    kUserInfoFieldNumber = 3,
-    kStatusFieldNumber = 1,
+    kMetaInfoFieldNumber = 1,
+    kUserInfoFieldNumber = 2,
   };
-  // string Message = 2;
-  void clear_message();
-  const std::string& message() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_message(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_message();
-  PROTOBUF_NODISCARD std::string* release_message();
-  void set_allocated_message(std::string* message);
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  bool has_metainfo() const;
   private:
-  const std::string& _internal_message() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_message(const std::string& value);
-  std::string* _internal_mutable_message();
+  bool _internal_has_metainfo() const;
   public:
+  void clear_metainfo();
+  const ::proto::ResponseMetaInfoV1& metainfo() const;
+  PROTOBUF_NODISCARD ::proto::ResponseMetaInfoV1* release_metainfo();
+  ::proto::ResponseMetaInfoV1* mutable_metainfo();
+  void set_allocated_metainfo(::proto::ResponseMetaInfoV1* metainfo);
+  private:
+  const ::proto::ResponseMetaInfoV1& _internal_metainfo() const;
+  ::proto::ResponseMetaInfoV1* _internal_mutable_metainfo();
+  public:
+  void unsafe_arena_set_allocated_metainfo(
+      ::proto::ResponseMetaInfoV1* metainfo);
+  ::proto::ResponseMetaInfoV1* unsafe_arena_release_metainfo();
 
-  // .proto.UserMetaInfoV1 UserInfo = 3;
+  // .proto.UserMetaInfoV1 UserInfo = 2;
   bool has_userinfo() const;
   private:
   bool _internal_has_userinfo() const;
@@ -371,15 +374,6 @@ class CreateUserResponse final :
       ::proto::UserMetaInfoV1* userinfo);
   ::proto::UserMetaInfoV1* unsafe_arena_release_userinfo();
 
-  // bool status = 1;
-  void clear_status();
-  bool status() const;
-  void set_status(bool value);
-  private:
-  bool _internal_status() const;
-  void _internal_set_status(bool value);
-  public:
-
   // @@protoc_insertion_point(class_scope:proto.CreateUserResponse)
  private:
   class _Internal;
@@ -388,9 +382,8 @@ class CreateUserResponse final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr message_;
+    ::proto::ResponseMetaInfoV1* metainfo_;
     ::proto::UserMetaInfoV1* userinfo_;
-    bool status_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -519,31 +512,25 @@ class DeleteUserResponse final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMessageFieldNumber = 2,
-    kStatusFieldNumber = 1,
+    kMetaInfoFieldNumber = 1,
   };
-  // string Message = 2;
-  void clear_message();
-  const std::string& message() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_message(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_message();
-  PROTOBUF_NODISCARD std::string* release_message();
-  void set_allocated_message(std::string* message);
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  bool has_metainfo() const;
   private:
-  const std::string& _internal_message() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_message(const std::string& value);
-  std::string* _internal_mutable_message();
+  bool _internal_has_metainfo() const;
   public:
-
-  // bool status = 1;
-  void clear_status();
-  bool status() const;
-  void set_status(bool value);
+  void clear_metainfo();
+  const ::proto::ResponseMetaInfoV1& metainfo() const;
+  PROTOBUF_NODISCARD ::proto::ResponseMetaInfoV1* release_metainfo();
+  ::proto::ResponseMetaInfoV1* mutable_metainfo();
+  void set_allocated_metainfo(::proto::ResponseMetaInfoV1* metainfo);
   private:
-  bool _internal_status() const;
-  void _internal_set_status(bool value);
+  const ::proto::ResponseMetaInfoV1& _internal_metainfo() const;
+  ::proto::ResponseMetaInfoV1* _internal_mutable_metainfo();
   public:
+  void unsafe_arena_set_allocated_metainfo(
+      ::proto::ResponseMetaInfoV1* metainfo);
+  ::proto::ResponseMetaInfoV1* unsafe_arena_release_metainfo();
 
   // @@protoc_insertion_point(class_scope:proto.DeleteUserResponse)
  private:
@@ -553,8 +540,7 @@ class DeleteUserResponse final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr message_;
-    bool status_;
+    ::proto::ResponseMetaInfoV1* metainfo_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -683,25 +669,28 @@ class UpdateUserResponse final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMessageFieldNumber = 2,
-    kUserInfoFieldNumber = 3,
-    kStatusFieldNumber = 1,
+    kMetaInfoFieldNumber = 1,
+    kUserInfoFieldNumber = 2,
   };
-  // string Message = 2;
-  void clear_message();
-  const std::string& message() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_message(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_message();
-  PROTOBUF_NODISCARD std::string* release_message();
-  void set_allocated_message(std::string* message);
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  bool has_metainfo() const;
   private:
-  const std::string& _internal_message() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_message(const std::string& value);
-  std::string* _internal_mutable_message();
+  bool _internal_has_metainfo() const;
   public:
+  void clear_metainfo();
+  const ::proto::ResponseMetaInfoV1& metainfo() const;
+  PROTOBUF_NODISCARD ::proto::ResponseMetaInfoV1* release_metainfo();
+  ::proto::ResponseMetaInfoV1* mutable_metainfo();
+  void set_allocated_metainfo(::proto::ResponseMetaInfoV1* metainfo);
+  private:
+  const ::proto::ResponseMetaInfoV1& _internal_metainfo() const;
+  ::proto::ResponseMetaInfoV1* _internal_mutable_metainfo();
+  public:
+  void unsafe_arena_set_allocated_metainfo(
+      ::proto::ResponseMetaInfoV1* metainfo);
+  ::proto::ResponseMetaInfoV1* unsafe_arena_release_metainfo();
 
-  // .proto.UserMetaInfoV1 UserInfo = 3;
+  // .proto.UserMetaInfoV1 UserInfo = 2;
   bool has_userinfo() const;
   private:
   bool _internal_has_userinfo() const;
@@ -719,15 +708,6 @@ class UpdateUserResponse final :
       ::proto::UserMetaInfoV1* userinfo);
   ::proto::UserMetaInfoV1* unsafe_arena_release_userinfo();
 
-  // bool status = 1;
-  void clear_status();
-  bool status() const;
-  void set_status(bool value);
-  private:
-  bool _internal_status() const;
-  void _internal_set_status(bool value);
-  public:
-
   // @@protoc_insertion_point(class_scope:proto.UpdateUserResponse)
  private:
   class _Internal;
@@ -736,9 +716,8 @@ class UpdateUserResponse final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr message_;
+    ::proto::ResponseMetaInfoV1* metainfo_;
     ::proto::UserMetaInfoV1* userinfo_;
-    bool status_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -867,25 +846,28 @@ class GetUserResponse final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMessageFieldNumber = 2,
-    kUserInfoFieldNumber = 3,
-    kStatusFieldNumber = 1,
+    kMetaInfoFieldNumber = 1,
+    kUserInfoFieldNumber = 2,
   };
-  // string Message = 2;
-  void clear_message();
-  const std::string& message() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_message(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_message();
-  PROTOBUF_NODISCARD std::string* release_message();
-  void set_allocated_message(std::string* message);
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  bool has_metainfo() const;
   private:
-  const std::string& _internal_message() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_message(const std::string& value);
-  std::string* _internal_mutable_message();
+  bool _internal_has_metainfo() const;
   public:
+  void clear_metainfo();
+  const ::proto::ResponseMetaInfoV1& metainfo() const;
+  PROTOBUF_NODISCARD ::proto::ResponseMetaInfoV1* release_metainfo();
+  ::proto::ResponseMetaInfoV1* mutable_metainfo();
+  void set_allocated_metainfo(::proto::ResponseMetaInfoV1* metainfo);
+  private:
+  const ::proto::ResponseMetaInfoV1& _internal_metainfo() const;
+  ::proto::ResponseMetaInfoV1* _internal_mutable_metainfo();
+  public:
+  void unsafe_arena_set_allocated_metainfo(
+      ::proto::ResponseMetaInfoV1* metainfo);
+  ::proto::ResponseMetaInfoV1* unsafe_arena_release_metainfo();
 
-  // .proto.UserMetaInfoV1 UserInfo = 3;
+  // .proto.UserMetaInfoV1 UserInfo = 2;
   bool has_userinfo() const;
   private:
   bool _internal_has_userinfo() const;
@@ -903,15 +885,6 @@ class GetUserResponse final :
       ::proto::UserMetaInfoV1* userinfo);
   ::proto::UserMetaInfoV1* unsafe_arena_release_userinfo();
 
-  // bool status = 1;
-  void clear_status();
-  bool status() const;
-  void set_status(bool value);
-  private:
-  bool _internal_status() const;
-  void _internal_set_status(bool value);
-  public:
-
   // @@protoc_insertion_point(class_scope:proto.GetUserResponse)
  private:
   class _Internal;
@@ -920,9 +893,8 @@ class GetUserResponse final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr message_;
+    ::proto::ResponseMetaInfoV1* metainfo_;
     ::proto::UserMetaInfoV1* userinfo_;
-    bool status_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -1051,11 +1023,10 @@ class GetAllUserResponse final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kUserInfoFieldNumber = 3,
-    kMessageFieldNumber = 2,
-    kStatusFieldNumber = 1,
+    kUserInfoFieldNumber = 2,
+    kMetaInfoFieldNumber = 1,
   };
-  // repeated .proto.UserMetaInfoV1 UserInfo = 3;
+  // repeated .proto.UserMetaInfoV1 UserInfo = 2;
   int userinfo_size() const;
   private:
   int _internal_userinfo_size() const;
@@ -1073,28 +1044,23 @@ class GetAllUserResponse final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::proto::UserMetaInfoV1 >&
       userinfo() const;
 
-  // string Message = 2;
-  void clear_message();
-  const std::string& message() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_message(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_message();
-  PROTOBUF_NODISCARD std::string* release_message();
-  void set_allocated_message(std::string* message);
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  bool has_metainfo() const;
   private:
-  const std::string& _internal_message() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_message(const std::string& value);
-  std::string* _internal_mutable_message();
+  bool _internal_has_metainfo() const;
   public:
-
-  // bool status = 1;
-  void clear_status();
-  bool status() const;
-  void set_status(bool value);
+  void clear_metainfo();
+  const ::proto::ResponseMetaInfoV1& metainfo() const;
+  PROTOBUF_NODISCARD ::proto::ResponseMetaInfoV1* release_metainfo();
+  ::proto::ResponseMetaInfoV1* mutable_metainfo();
+  void set_allocated_metainfo(::proto::ResponseMetaInfoV1* metainfo);
   private:
-  bool _internal_status() const;
-  void _internal_set_status(bool value);
+  const ::proto::ResponseMetaInfoV1& _internal_metainfo() const;
+  ::proto::ResponseMetaInfoV1* _internal_mutable_metainfo();
   public:
+  void unsafe_arena_set_allocated_metainfo(
+      ::proto::ResponseMetaInfoV1* metainfo);
+  ::proto::ResponseMetaInfoV1* unsafe_arena_release_metainfo();
 
   // @@protoc_insertion_point(class_scope:proto.GetAllUserResponse)
  private:
@@ -1105,8 +1071,7 @@ class GetAllUserResponse final :
   typedef void DestructorSkippable_;
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::proto::UserMetaInfoV1 > userinfo_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr message_;
-    bool status_;
+    ::proto::ResponseMetaInfoV1* metainfo_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -1235,26 +1200,29 @@ class UserLoginResponse final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMessageFieldNumber = 2,
-    kUserInfoFieldNumber = 3,
-    kUserVerifyInfoFieldNumber = 4,
-    kStatusFieldNumber = 1,
+    kMetaInfoFieldNumber = 1,
+    kUserInfoFieldNumber = 2,
+    kUserVerifyInfoFieldNumber = 3,
   };
-  // string Message = 2;
-  void clear_message();
-  const std::string& message() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_message(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_message();
-  PROTOBUF_NODISCARD std::string* release_message();
-  void set_allocated_message(std::string* message);
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  bool has_metainfo() const;
   private:
-  const std::string& _internal_message() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_message(const std::string& value);
-  std::string* _internal_mutable_message();
+  bool _internal_has_metainfo() const;
   public:
+  void clear_metainfo();
+  const ::proto::ResponseMetaInfoV1& metainfo() const;
+  PROTOBUF_NODISCARD ::proto::ResponseMetaInfoV1* release_metainfo();
+  ::proto::ResponseMetaInfoV1* mutable_metainfo();
+  void set_allocated_metainfo(::proto::ResponseMetaInfoV1* metainfo);
+  private:
+  const ::proto::ResponseMetaInfoV1& _internal_metainfo() const;
+  ::proto::ResponseMetaInfoV1* _internal_mutable_metainfo();
+  public:
+  void unsafe_arena_set_allocated_metainfo(
+      ::proto::ResponseMetaInfoV1* metainfo);
+  ::proto::ResponseMetaInfoV1* unsafe_arena_release_metainfo();
 
-  // .proto.UserMetaInfoV1 UserInfo = 3;
+  // .proto.UserMetaInfoV1 UserInfo = 2;
   bool has_userinfo() const;
   private:
   bool _internal_has_userinfo() const;
@@ -1272,7 +1240,7 @@ class UserLoginResponse final :
       ::proto::UserMetaInfoV1* userinfo);
   ::proto::UserMetaInfoV1* unsafe_arena_release_userinfo();
 
-  // .proto.UserVerifyInfoV1 UserVerifyInfo = 4;
+  // .proto.UserVerifyInfoV1 UserVerifyInfo = 3;
   bool has_userverifyinfo() const;
   private:
   bool _internal_has_userverifyinfo() const;
@@ -1290,15 +1258,6 @@ class UserLoginResponse final :
       ::proto::UserVerifyInfoV1* userverifyinfo);
   ::proto::UserVerifyInfoV1* unsafe_arena_release_userverifyinfo();
 
-  // bool status = 1;
-  void clear_status();
-  bool status() const;
-  void set_status(bool value);
-  private:
-  bool _internal_status() const;
-  void _internal_set_status(bool value);
-  public:
-
   // @@protoc_insertion_point(class_scope:proto.UserLoginResponse)
  private:
   class _Internal;
@@ -1307,10 +1266,9 @@ class UserLoginResponse final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr message_;
+    ::proto::ResponseMetaInfoV1* metainfo_;
     ::proto::UserMetaInfoV1* userinfo_;
     ::proto::UserVerifyInfoV1* userverifyinfo_;
-    bool status_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -1439,31 +1397,25 @@ class UserLogoutResponse final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMessageFieldNumber = 2,
-    kStatusFieldNumber = 1,
+    kMetaInfoFieldNumber = 1,
   };
-  // string Message = 2;
-  void clear_message();
-  const std::string& message() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_message(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_message();
-  PROTOBUF_NODISCARD std::string* release_message();
-  void set_allocated_message(std::string* message);
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  bool has_metainfo() const;
   private:
-  const std::string& _internal_message() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_message(const std::string& value);
-  std::string* _internal_mutable_message();
+  bool _internal_has_metainfo() const;
   public:
-
-  // bool status = 1;
-  void clear_status();
-  bool status() const;
-  void set_status(bool value);
+  void clear_metainfo();
+  const ::proto::ResponseMetaInfoV1& metainfo() const;
+  PROTOBUF_NODISCARD ::proto::ResponseMetaInfoV1* release_metainfo();
+  ::proto::ResponseMetaInfoV1* mutable_metainfo();
+  void set_allocated_metainfo(::proto::ResponseMetaInfoV1* metainfo);
   private:
-  bool _internal_status() const;
-  void _internal_set_status(bool value);
+  const ::proto::ResponseMetaInfoV1& _internal_metainfo() const;
+  ::proto::ResponseMetaInfoV1* _internal_mutable_metainfo();
   public:
+  void unsafe_arena_set_allocated_metainfo(
+      ::proto::ResponseMetaInfoV1* metainfo);
+  ::proto::ResponseMetaInfoV1* unsafe_arena_release_metainfo();
 
   // @@protoc_insertion_point(class_scope:proto.UserLogoutResponse)
  private:
@@ -1473,8 +1425,7 @@ class UserLogoutResponse final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr message_;
-    bool status_;
+    ::proto::ResponseMetaInfoV1* metainfo_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -1603,25 +1554,28 @@ class UserOnlineHeartBeatResponse final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMessageFieldNumber = 2,
-    kUserVerifyInfoFieldNumber = 3,
-    kStatusFieldNumber = 1,
+    kMetaInfoFieldNumber = 1,
+    kUserVerifyInfoFieldNumber = 2,
   };
-  // string Message = 2;
-  void clear_message();
-  const std::string& message() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_message(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_message();
-  PROTOBUF_NODISCARD std::string* release_message();
-  void set_allocated_message(std::string* message);
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  bool has_metainfo() const;
   private:
-  const std::string& _internal_message() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_message(const std::string& value);
-  std::string* _internal_mutable_message();
+  bool _internal_has_metainfo() const;
   public:
+  void clear_metainfo();
+  const ::proto::ResponseMetaInfoV1& metainfo() const;
+  PROTOBUF_NODISCARD ::proto::ResponseMetaInfoV1* release_metainfo();
+  ::proto::ResponseMetaInfoV1* mutable_metainfo();
+  void set_allocated_metainfo(::proto::ResponseMetaInfoV1* metainfo);
+  private:
+  const ::proto::ResponseMetaInfoV1& _internal_metainfo() const;
+  ::proto::ResponseMetaInfoV1* _internal_mutable_metainfo();
+  public:
+  void unsafe_arena_set_allocated_metainfo(
+      ::proto::ResponseMetaInfoV1* metainfo);
+  ::proto::ResponseMetaInfoV1* unsafe_arena_release_metainfo();
 
-  // .proto.UserVerifyInfoV1 UserVerifyInfo = 3;
+  // .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
   bool has_userverifyinfo() const;
   private:
   bool _internal_has_userverifyinfo() const;
@@ -1639,15 +1593,6 @@ class UserOnlineHeartBeatResponse final :
       ::proto::UserVerifyInfoV1* userverifyinfo);
   ::proto::UserVerifyInfoV1* unsafe_arena_release_userverifyinfo();
 
-  // bool status = 1;
-  void clear_status();
-  bool status() const;
-  void set_status(bool value);
-  private:
-  bool _internal_status() const;
-  void _internal_set_status(bool value);
-  public:
-
   // @@protoc_insertion_point(class_scope:proto.UserOnlineHeartBeatResponse)
  private:
   class _Internal;
@@ -1656,9 +1601,8 @@ class UserOnlineHeartBeatResponse final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr message_;
+    ::proto::ResponseMetaInfoV1* metainfo_;
     ::proto::UserVerifyInfoV1* userverifyinfo_;
-    bool status_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -1787,25 +1731,28 @@ class GetUserPermissionGroupResponse final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMessageFieldNumber = 2,
-    kPermissionGroupFieldNumber = 3,
-    kStatusFieldNumber = 1,
+    kMetaInfoFieldNumber = 1,
+    kPermissionGroupFieldNumber = 2,
   };
-  // string Message = 2;
-  void clear_message();
-  const std::string& message() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_message(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_message();
-  PROTOBUF_NODISCARD std::string* release_message();
-  void set_allocated_message(std::string* message);
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  bool has_metainfo() const;
   private:
-  const std::string& _internal_message() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_message(const std::string& value);
-  std::string* _internal_mutable_message();
+  bool _internal_has_metainfo() const;
   public:
+  void clear_metainfo();
+  const ::proto::ResponseMetaInfoV1& metainfo() const;
+  PROTOBUF_NODISCARD ::proto::ResponseMetaInfoV1* release_metainfo();
+  ::proto::ResponseMetaInfoV1* mutable_metainfo();
+  void set_allocated_metainfo(::proto::ResponseMetaInfoV1* metainfo);
+  private:
+  const ::proto::ResponseMetaInfoV1& _internal_metainfo() const;
+  ::proto::ResponseMetaInfoV1* _internal_mutable_metainfo();
+  public:
+  void unsafe_arena_set_allocated_metainfo(
+      ::proto::ResponseMetaInfoV1* metainfo);
+  ::proto::ResponseMetaInfoV1* unsafe_arena_release_metainfo();
 
-  // .proto.PermissionGroupMetaInfoV1 PermissionGroup = 3;
+  // .proto.PermissionGroupMetaInfoV1 PermissionGroup = 2;
   bool has_permissiongroup() const;
   private:
   bool _internal_has_permissiongroup() const;
@@ -1823,15 +1770,6 @@ class GetUserPermissionGroupResponse final :
       ::proto::PermissionGroupMetaInfoV1* permissiongroup);
   ::proto::PermissionGroupMetaInfoV1* unsafe_arena_release_permissiongroup();
 
-  // bool status = 1;
-  void clear_status();
-  bool status() const;
-  void set_status(bool value);
-  private:
-  bool _internal_status() const;
-  void _internal_set_status(bool value);
-  public:
-
   // @@protoc_insertion_point(class_scope:proto.GetUserPermissionGroupResponse)
  private:
   class _Internal;
@@ -1840,9 +1778,8 @@ class GetUserPermissionGroupResponse final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr message_;
+    ::proto::ResponseMetaInfoV1* metainfo_;
     ::proto::PermissionGroupMetaInfoV1* permissiongroup_;
-    bool status_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -1971,25 +1908,28 @@ class GetPermissionGroupResponse final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMessageFieldNumber = 2,
-    kPermissionGroupFieldNumber = 3,
-    kStatusFieldNumber = 1,
+    kMetaInfoFieldNumber = 1,
+    kPermissionGroupFieldNumber = 2,
   };
-  // string Message = 2;
-  void clear_message();
-  const std::string& message() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_message(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_message();
-  PROTOBUF_NODISCARD std::string* release_message();
-  void set_allocated_message(std::string* message);
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  bool has_metainfo() const;
   private:
-  const std::string& _internal_message() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_message(const std::string& value);
-  std::string* _internal_mutable_message();
+  bool _internal_has_metainfo() const;
   public:
+  void clear_metainfo();
+  const ::proto::ResponseMetaInfoV1& metainfo() const;
+  PROTOBUF_NODISCARD ::proto::ResponseMetaInfoV1* release_metainfo();
+  ::proto::ResponseMetaInfoV1* mutable_metainfo();
+  void set_allocated_metainfo(::proto::ResponseMetaInfoV1* metainfo);
+  private:
+  const ::proto::ResponseMetaInfoV1& _internal_metainfo() const;
+  ::proto::ResponseMetaInfoV1* _internal_mutable_metainfo();
+  public:
+  void unsafe_arena_set_allocated_metainfo(
+      ::proto::ResponseMetaInfoV1* metainfo);
+  ::proto::ResponseMetaInfoV1* unsafe_arena_release_metainfo();
 
-  // .proto.PermissionGroupMetaInfoV1 PermissionGroup = 3;
+  // .proto.PermissionGroupMetaInfoV1 PermissionGroup = 2;
   bool has_permissiongroup() const;
   private:
   bool _internal_has_permissiongroup() const;
@@ -2007,15 +1947,6 @@ class GetPermissionGroupResponse final :
       ::proto::PermissionGroupMetaInfoV1* permissiongroup);
   ::proto::PermissionGroupMetaInfoV1* unsafe_arena_release_permissiongroup();
 
-  // bool status = 1;
-  void clear_status();
-  bool status() const;
-  void set_status(bool value);
-  private:
-  bool _internal_status() const;
-  void _internal_set_status(bool value);
-  public:
-
   // @@protoc_insertion_point(class_scope:proto.GetPermissionGroupResponse)
  private:
   class _Internal;
@@ -2024,9 +1955,8 @@ class GetPermissionGroupResponse final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr message_;
+    ::proto::ResponseMetaInfoV1* metainfo_;
     ::proto::PermissionGroupMetaInfoV1* permissiongroup_;
-    bool status_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -2155,11 +2085,10 @@ class GetAllPermissionGroupResponse final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kPermissionGroupListFieldNumber = 3,
-    kMessageFieldNumber = 2,
-    kStatusFieldNumber = 1,
+    kPermissionGroupListFieldNumber = 2,
+    kMetaInfoFieldNumber = 1,
   };
-  // repeated .proto.PermissionGroupMetaInfoV1 PermissionGroupList = 3;
+  // repeated .proto.PermissionGroupMetaInfoV1 PermissionGroupList = 2;
   int permissiongrouplist_size() const;
   private:
   int _internal_permissiongrouplist_size() const;
@@ -2177,28 +2106,23 @@ class GetAllPermissionGroupResponse final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::proto::PermissionGroupMetaInfoV1 >&
       permissiongrouplist() const;
 
-  // string Message = 2;
-  void clear_message();
-  const std::string& message() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_message(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_message();
-  PROTOBUF_NODISCARD std::string* release_message();
-  void set_allocated_message(std::string* message);
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  bool has_metainfo() const;
   private:
-  const std::string& _internal_message() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_message(const std::string& value);
-  std::string* _internal_mutable_message();
+  bool _internal_has_metainfo() const;
   public:
-
-  // bool status = 1;
-  void clear_status();
-  bool status() const;
-  void set_status(bool value);
+  void clear_metainfo();
+  const ::proto::ResponseMetaInfoV1& metainfo() const;
+  PROTOBUF_NODISCARD ::proto::ResponseMetaInfoV1* release_metainfo();
+  ::proto::ResponseMetaInfoV1* mutable_metainfo();
+  void set_allocated_metainfo(::proto::ResponseMetaInfoV1* metainfo);
   private:
-  bool _internal_status() const;
-  void _internal_set_status(bool value);
+  const ::proto::ResponseMetaInfoV1& _internal_metainfo() const;
+  ::proto::ResponseMetaInfoV1* _internal_mutable_metainfo();
   public:
+  void unsafe_arena_set_allocated_metainfo(
+      ::proto::ResponseMetaInfoV1* metainfo);
+  ::proto::ResponseMetaInfoV1* unsafe_arena_release_metainfo();
 
   // @@protoc_insertion_point(class_scope:proto.GetAllPermissionGroupResponse)
  private:
@@ -2209,8 +2133,7 @@ class GetAllPermissionGroupResponse final :
   typedef void DestructorSkippable_;
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::proto::PermissionGroupMetaInfoV1 > permissiongrouplist_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr message_;
-    bool status_;
+    ::proto::ResponseMetaInfoV1* metainfo_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -2339,31 +2262,25 @@ class ChangeUserPermissionGroupResponse final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMessageFieldNumber = 2,
-    kStatusFieldNumber = 1,
+    kMetaInfoFieldNumber = 1,
   };
-  // string Message = 2;
-  void clear_message();
-  const std::string& message() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_message(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_message();
-  PROTOBUF_NODISCARD std::string* release_message();
-  void set_allocated_message(std::string* message);
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  bool has_metainfo() const;
   private:
-  const std::string& _internal_message() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_message(const std::string& value);
-  std::string* _internal_mutable_message();
+  bool _internal_has_metainfo() const;
   public:
-
-  // bool status = 1;
-  void clear_status();
-  bool status() const;
-  void set_status(bool value);
+  void clear_metainfo();
+  const ::proto::ResponseMetaInfoV1& metainfo() const;
+  PROTOBUF_NODISCARD ::proto::ResponseMetaInfoV1* release_metainfo();
+  ::proto::ResponseMetaInfoV1* mutable_metainfo();
+  void set_allocated_metainfo(::proto::ResponseMetaInfoV1* metainfo);
   private:
-  bool _internal_status() const;
-  void _internal_set_status(bool value);
+  const ::proto::ResponseMetaInfoV1& _internal_metainfo() const;
+  ::proto::ResponseMetaInfoV1* _internal_mutable_metainfo();
   public:
+  void unsafe_arena_set_allocated_metainfo(
+      ::proto::ResponseMetaInfoV1* metainfo);
+  ::proto::ResponseMetaInfoV1* unsafe_arena_release_metainfo();
 
   // @@protoc_insertion_point(class_scope:proto.ChangeUserPermissionGroupResponse)
  private:
@@ -2373,8 +2290,7 @@ class ChangeUserPermissionGroupResponse final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr message_;
-    bool status_;
+    ::proto::ResponseMetaInfoV1* metainfo_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -2503,25 +2419,28 @@ class CreateProjectResponse final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMessageFieldNumber = 2,
-    kProjectInfoFieldNumber = 3,
-    kStatusFieldNumber = 1,
+    kMetaInfoFieldNumber = 1,
+    kProjectInfoFieldNumber = 2,
   };
-  // string Message = 2;
-  void clear_message();
-  const std::string& message() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_message(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_message();
-  PROTOBUF_NODISCARD std::string* release_message();
-  void set_allocated_message(std::string* message);
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  bool has_metainfo() const;
   private:
-  const std::string& _internal_message() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_message(const std::string& value);
-  std::string* _internal_mutable_message();
+  bool _internal_has_metainfo() const;
   public:
+  void clear_metainfo();
+  const ::proto::ResponseMetaInfoV1& metainfo() const;
+  PROTOBUF_NODISCARD ::proto::ResponseMetaInfoV1* release_metainfo();
+  ::proto::ResponseMetaInfoV1* mutable_metainfo();
+  void set_allocated_metainfo(::proto::ResponseMetaInfoV1* metainfo);
+  private:
+  const ::proto::ResponseMetaInfoV1& _internal_metainfo() const;
+  ::proto::ResponseMetaInfoV1* _internal_mutable_metainfo();
+  public:
+  void unsafe_arena_set_allocated_metainfo(
+      ::proto::ResponseMetaInfoV1* metainfo);
+  ::proto::ResponseMetaInfoV1* unsafe_arena_release_metainfo();
 
-  // .proto.ProjectMetaInfoV1 ProjectInfo = 3;
+  // .proto.ProjectMetaInfoV1 ProjectInfo = 2;
   bool has_projectinfo() const;
   private:
   bool _internal_has_projectinfo() const;
@@ -2539,15 +2458,6 @@ class CreateProjectResponse final :
       ::proto::ProjectMetaInfoV1* projectinfo);
   ::proto::ProjectMetaInfoV1* unsafe_arena_release_projectinfo();
 
-  // bool status = 1;
-  void clear_status();
-  bool status() const;
-  void set_status(bool value);
-  private:
-  bool _internal_status() const;
-  void _internal_set_status(bool value);
-  public:
-
   // @@protoc_insertion_point(class_scope:proto.CreateProjectResponse)
  private:
   class _Internal;
@@ -2556,9 +2466,8 @@ class CreateProjectResponse final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr message_;
+    ::proto::ResponseMetaInfoV1* metainfo_;
     ::proto::ProjectMetaInfoV1* projectinfo_;
-    bool status_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -2687,25 +2596,28 @@ class DeleteProjectResponse final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMessageFieldNumber = 2,
-    kProjectInfoFieldNumber = 3,
-    kStatusFieldNumber = 1,
+    kMetaInfoFieldNumber = 1,
+    kProjectInfoFieldNumber = 2,
   };
-  // string Message = 2;
-  void clear_message();
-  const std::string& message() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_message(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_message();
-  PROTOBUF_NODISCARD std::string* release_message();
-  void set_allocated_message(std::string* message);
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  bool has_metainfo() const;
   private:
-  const std::string& _internal_message() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_message(const std::string& value);
-  std::string* _internal_mutable_message();
+  bool _internal_has_metainfo() const;
   public:
+  void clear_metainfo();
+  const ::proto::ResponseMetaInfoV1& metainfo() const;
+  PROTOBUF_NODISCARD ::proto::ResponseMetaInfoV1* release_metainfo();
+  ::proto::ResponseMetaInfoV1* mutable_metainfo();
+  void set_allocated_metainfo(::proto::ResponseMetaInfoV1* metainfo);
+  private:
+  const ::proto::ResponseMetaInfoV1& _internal_metainfo() const;
+  ::proto::ResponseMetaInfoV1* _internal_mutable_metainfo();
+  public:
+  void unsafe_arena_set_allocated_metainfo(
+      ::proto::ResponseMetaInfoV1* metainfo);
+  ::proto::ResponseMetaInfoV1* unsafe_arena_release_metainfo();
 
-  // .proto.ProjectMetaInfoV1 ProjectInfo = 3;
+  // .proto.ProjectMetaInfoV1 ProjectInfo = 2;
   bool has_projectinfo() const;
   private:
   bool _internal_has_projectinfo() const;
@@ -2723,15 +2635,6 @@ class DeleteProjectResponse final :
       ::proto::ProjectMetaInfoV1* projectinfo);
   ::proto::ProjectMetaInfoV1* unsafe_arena_release_projectinfo();
 
-  // bool status = 1;
-  void clear_status();
-  bool status() const;
-  void set_status(bool value);
-  private:
-  bool _internal_status() const;
-  void _internal_set_status(bool value);
-  public:
-
   // @@protoc_insertion_point(class_scope:proto.DeleteProjectResponse)
  private:
   class _Internal;
@@ -2740,9 +2643,8 @@ class DeleteProjectResponse final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr message_;
+    ::proto::ResponseMetaInfoV1* metainfo_;
     ::proto::ProjectMetaInfoV1* projectinfo_;
-    bool status_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -2871,25 +2773,28 @@ class UpdateProjectResponse final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMessageFieldNumber = 2,
-    kProjectInfoFieldNumber = 3,
-    kStatusFieldNumber = 1,
+    kMetaInfoFieldNumber = 1,
+    kProjectInfoFieldNumber = 2,
   };
-  // string Message = 2;
-  void clear_message();
-  const std::string& message() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_message(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_message();
-  PROTOBUF_NODISCARD std::string* release_message();
-  void set_allocated_message(std::string* message);
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  bool has_metainfo() const;
   private:
-  const std::string& _internal_message() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_message(const std::string& value);
-  std::string* _internal_mutable_message();
+  bool _internal_has_metainfo() const;
   public:
+  void clear_metainfo();
+  const ::proto::ResponseMetaInfoV1& metainfo() const;
+  PROTOBUF_NODISCARD ::proto::ResponseMetaInfoV1* release_metainfo();
+  ::proto::ResponseMetaInfoV1* mutable_metainfo();
+  void set_allocated_metainfo(::proto::ResponseMetaInfoV1* metainfo);
+  private:
+  const ::proto::ResponseMetaInfoV1& _internal_metainfo() const;
+  ::proto::ResponseMetaInfoV1* _internal_mutable_metainfo();
+  public:
+  void unsafe_arena_set_allocated_metainfo(
+      ::proto::ResponseMetaInfoV1* metainfo);
+  ::proto::ResponseMetaInfoV1* unsafe_arena_release_metainfo();
 
-  // .proto.ProjectMetaInfoV1 ProjectInfo = 3;
+  // .proto.ProjectMetaInfoV1 ProjectInfo = 2;
   bool has_projectinfo() const;
   private:
   bool _internal_has_projectinfo() const;
@@ -2907,15 +2812,6 @@ class UpdateProjectResponse final :
       ::proto::ProjectMetaInfoV1* projectinfo);
   ::proto::ProjectMetaInfoV1* unsafe_arena_release_projectinfo();
 
-  // bool status = 1;
-  void clear_status();
-  bool status() const;
-  void set_status(bool value);
-  private:
-  bool _internal_status() const;
-  void _internal_set_status(bool value);
-  public:
-
   // @@protoc_insertion_point(class_scope:proto.UpdateProjectResponse)
  private:
   class _Internal;
@@ -2924,9 +2820,8 @@ class UpdateProjectResponse final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr message_;
+    ::proto::ResponseMetaInfoV1* metainfo_;
     ::proto::ProjectMetaInfoV1* projectinfo_;
-    bool status_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -3055,25 +2950,28 @@ class GetProjectResponse final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMessageFieldNumber = 2,
-    kProjectInfoFieldNumber = 3,
-    kStatusFieldNumber = 1,
+    kMetaInfoFieldNumber = 1,
+    kProjectInfoFieldNumber = 2,
   };
-  // string Message = 2;
-  void clear_message();
-  const std::string& message() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_message(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_message();
-  PROTOBUF_NODISCARD std::string* release_message();
-  void set_allocated_message(std::string* message);
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  bool has_metainfo() const;
   private:
-  const std::string& _internal_message() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_message(const std::string& value);
-  std::string* _internal_mutable_message();
+  bool _internal_has_metainfo() const;
   public:
+  void clear_metainfo();
+  const ::proto::ResponseMetaInfoV1& metainfo() const;
+  PROTOBUF_NODISCARD ::proto::ResponseMetaInfoV1* release_metainfo();
+  ::proto::ResponseMetaInfoV1* mutable_metainfo();
+  void set_allocated_metainfo(::proto::ResponseMetaInfoV1* metainfo);
+  private:
+  const ::proto::ResponseMetaInfoV1& _internal_metainfo() const;
+  ::proto::ResponseMetaInfoV1* _internal_mutable_metainfo();
+  public:
+  void unsafe_arena_set_allocated_metainfo(
+      ::proto::ResponseMetaInfoV1* metainfo);
+  ::proto::ResponseMetaInfoV1* unsafe_arena_release_metainfo();
 
-  // .proto.ProjectMetaInfoV1 ProjectInfo = 3;
+  // .proto.ProjectMetaInfoV1 ProjectInfo = 2;
   bool has_projectinfo() const;
   private:
   bool _internal_has_projectinfo() const;
@@ -3091,15 +2989,6 @@ class GetProjectResponse final :
       ::proto::ProjectMetaInfoV1* projectinfo);
   ::proto::ProjectMetaInfoV1* unsafe_arena_release_projectinfo();
 
-  // bool status = 1;
-  void clear_status();
-  bool status() const;
-  void set_status(bool value);
-  private:
-  bool _internal_status() const;
-  void _internal_set_status(bool value);
-  public:
-
   // @@protoc_insertion_point(class_scope:proto.GetProjectResponse)
  private:
   class _Internal;
@@ -3108,9 +2997,8 @@ class GetProjectResponse final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr message_;
+    ::proto::ResponseMetaInfoV1* metainfo_;
     ::proto::ProjectMetaInfoV1* projectinfo_;
-    bool status_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -3239,11 +3127,10 @@ class GetAllProjectResponse final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kProjectInfoFieldNumber = 3,
-    kMessageFieldNumber = 2,
-    kStatusFieldNumber = 1,
+    kProjectInfoFieldNumber = 2,
+    kMetaInfoFieldNumber = 1,
   };
-  // repeated .proto.ProjectMetaInfoV1 ProjectInfo = 3;
+  // repeated .proto.ProjectMetaInfoV1 ProjectInfo = 2;
   int projectinfo_size() const;
   private:
   int _internal_projectinfo_size() const;
@@ -3261,28 +3148,23 @@ class GetAllProjectResponse final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::proto::ProjectMetaInfoV1 >&
       projectinfo() const;
 
-  // string Message = 2;
-  void clear_message();
-  const std::string& message() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_message(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_message();
-  PROTOBUF_NODISCARD std::string* release_message();
-  void set_allocated_message(std::string* message);
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  bool has_metainfo() const;
   private:
-  const std::string& _internal_message() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_message(const std::string& value);
-  std::string* _internal_mutable_message();
+  bool _internal_has_metainfo() const;
   public:
-
-  // bool status = 1;
-  void clear_status();
-  bool status() const;
-  void set_status(bool value);
+  void clear_metainfo();
+  const ::proto::ResponseMetaInfoV1& metainfo() const;
+  PROTOBUF_NODISCARD ::proto::ResponseMetaInfoV1* release_metainfo();
+  ::proto::ResponseMetaInfoV1* mutable_metainfo();
+  void set_allocated_metainfo(::proto::ResponseMetaInfoV1* metainfo);
   private:
-  bool _internal_status() const;
-  void _internal_set_status(bool value);
+  const ::proto::ResponseMetaInfoV1& _internal_metainfo() const;
+  ::proto::ResponseMetaInfoV1* _internal_mutable_metainfo();
   public:
+  void unsafe_arena_set_allocated_metainfo(
+      ::proto::ResponseMetaInfoV1* metainfo);
+  ::proto::ResponseMetaInfoV1* unsafe_arena_release_metainfo();
 
   // @@protoc_insertion_point(class_scope:proto.GetAllProjectResponse)
  private:
@@ -3293,8 +3175,7 @@ class GetAllProjectResponse final :
   typedef void DestructorSkippable_;
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::proto::ProjectMetaInfoV1 > projectinfo_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr message_;
-    bool status_;
+    ::proto::ResponseMetaInfoV1* metainfo_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -3423,25 +3304,28 @@ class CreateSwcResponse final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMessageFieldNumber = 2,
-    kSwcInfoFieldNumber = 3,
-    kStatusFieldNumber = 1,
+    kMetaInfoFieldNumber = 1,
+    kSwcInfoFieldNumber = 2,
   };
-  // string Message = 2;
-  void clear_message();
-  const std::string& message() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_message(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_message();
-  PROTOBUF_NODISCARD std::string* release_message();
-  void set_allocated_message(std::string* message);
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  bool has_metainfo() const;
   private:
-  const std::string& _internal_message() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_message(const std::string& value);
-  std::string* _internal_mutable_message();
+  bool _internal_has_metainfo() const;
   public:
+  void clear_metainfo();
+  const ::proto::ResponseMetaInfoV1& metainfo() const;
+  PROTOBUF_NODISCARD ::proto::ResponseMetaInfoV1* release_metainfo();
+  ::proto::ResponseMetaInfoV1* mutable_metainfo();
+  void set_allocated_metainfo(::proto::ResponseMetaInfoV1* metainfo);
+  private:
+  const ::proto::ResponseMetaInfoV1& _internal_metainfo() const;
+  ::proto::ResponseMetaInfoV1* _internal_mutable_metainfo();
+  public:
+  void unsafe_arena_set_allocated_metainfo(
+      ::proto::ResponseMetaInfoV1* metainfo);
+  ::proto::ResponseMetaInfoV1* unsafe_arena_release_metainfo();
 
-  // .proto.SwcMetaInfoV1 SwcInfo = 3;
+  // .proto.SwcMetaInfoV1 SwcInfo = 2;
   bool has_swcinfo() const;
   private:
   bool _internal_has_swcinfo() const;
@@ -3459,15 +3343,6 @@ class CreateSwcResponse final :
       ::proto::SwcMetaInfoV1* swcinfo);
   ::proto::SwcMetaInfoV1* unsafe_arena_release_swcinfo();
 
-  // bool status = 1;
-  void clear_status();
-  bool status() const;
-  void set_status(bool value);
-  private:
-  bool _internal_status() const;
-  void _internal_set_status(bool value);
-  public:
-
   // @@protoc_insertion_point(class_scope:proto.CreateSwcResponse)
  private:
   class _Internal;
@@ -3476,9 +3351,8 @@ class CreateSwcResponse final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr message_;
+    ::proto::ResponseMetaInfoV1* metainfo_;
     ::proto::SwcMetaInfoV1* swcinfo_;
-    bool status_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -3607,25 +3481,28 @@ class DeleteSwcResponse final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMessageFieldNumber = 2,
-    kSwcInfoFieldNumber = 3,
-    kStatusFieldNumber = 1,
+    kMetaInfoFieldNumber = 1,
+    kSwcInfoFieldNumber = 2,
   };
-  // string Message = 2;
-  void clear_message();
-  const std::string& message() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_message(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_message();
-  PROTOBUF_NODISCARD std::string* release_message();
-  void set_allocated_message(std::string* message);
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  bool has_metainfo() const;
   private:
-  const std::string& _internal_message() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_message(const std::string& value);
-  std::string* _internal_mutable_message();
+  bool _internal_has_metainfo() const;
   public:
+  void clear_metainfo();
+  const ::proto::ResponseMetaInfoV1& metainfo() const;
+  PROTOBUF_NODISCARD ::proto::ResponseMetaInfoV1* release_metainfo();
+  ::proto::ResponseMetaInfoV1* mutable_metainfo();
+  void set_allocated_metainfo(::proto::ResponseMetaInfoV1* metainfo);
+  private:
+  const ::proto::ResponseMetaInfoV1& _internal_metainfo() const;
+  ::proto::ResponseMetaInfoV1* _internal_mutable_metainfo();
+  public:
+  void unsafe_arena_set_allocated_metainfo(
+      ::proto::ResponseMetaInfoV1* metainfo);
+  ::proto::ResponseMetaInfoV1* unsafe_arena_release_metainfo();
 
-  // .proto.SwcMetaInfoV1 SwcInfo = 3;
+  // .proto.SwcMetaInfoV1 SwcInfo = 2;
   bool has_swcinfo() const;
   private:
   bool _internal_has_swcinfo() const;
@@ -3643,15 +3520,6 @@ class DeleteSwcResponse final :
       ::proto::SwcMetaInfoV1* swcinfo);
   ::proto::SwcMetaInfoV1* unsafe_arena_release_swcinfo();
 
-  // bool status = 1;
-  void clear_status();
-  bool status() const;
-  void set_status(bool value);
-  private:
-  bool _internal_status() const;
-  void _internal_set_status(bool value);
-  public:
-
   // @@protoc_insertion_point(class_scope:proto.DeleteSwcResponse)
  private:
   class _Internal;
@@ -3660,9 +3528,8 @@ class DeleteSwcResponse final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr message_;
+    ::proto::ResponseMetaInfoV1* metainfo_;
     ::proto::SwcMetaInfoV1* swcinfo_;
-    bool status_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -3791,25 +3658,28 @@ class UpdateSwcResponse final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMessageFieldNumber = 2,
-    kSwcInfoFieldNumber = 3,
-    kStatusFieldNumber = 1,
+    kMetaInfoFieldNumber = 1,
+    kSwcInfoFieldNumber = 2,
   };
-  // string Message = 2;
-  void clear_message();
-  const std::string& message() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_message(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_message();
-  PROTOBUF_NODISCARD std::string* release_message();
-  void set_allocated_message(std::string* message);
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  bool has_metainfo() const;
   private:
-  const std::string& _internal_message() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_message(const std::string& value);
-  std::string* _internal_mutable_message();
+  bool _internal_has_metainfo() const;
   public:
+  void clear_metainfo();
+  const ::proto::ResponseMetaInfoV1& metainfo() const;
+  PROTOBUF_NODISCARD ::proto::ResponseMetaInfoV1* release_metainfo();
+  ::proto::ResponseMetaInfoV1* mutable_metainfo();
+  void set_allocated_metainfo(::proto::ResponseMetaInfoV1* metainfo);
+  private:
+  const ::proto::ResponseMetaInfoV1& _internal_metainfo() const;
+  ::proto::ResponseMetaInfoV1* _internal_mutable_metainfo();
+  public:
+  void unsafe_arena_set_allocated_metainfo(
+      ::proto::ResponseMetaInfoV1* metainfo);
+  ::proto::ResponseMetaInfoV1* unsafe_arena_release_metainfo();
 
-  // .proto.SwcMetaInfoV1 SwcInfo = 3;
+  // .proto.SwcMetaInfoV1 SwcInfo = 2;
   bool has_swcinfo() const;
   private:
   bool _internal_has_swcinfo() const;
@@ -3827,15 +3697,6 @@ class UpdateSwcResponse final :
       ::proto::SwcMetaInfoV1* swcinfo);
   ::proto::SwcMetaInfoV1* unsafe_arena_release_swcinfo();
 
-  // bool status = 1;
-  void clear_status();
-  bool status() const;
-  void set_status(bool value);
-  private:
-  bool _internal_status() const;
-  void _internal_set_status(bool value);
-  public:
-
   // @@protoc_insertion_point(class_scope:proto.UpdateSwcResponse)
  private:
   class _Internal;
@@ -3844,9 +3705,8 @@ class UpdateSwcResponse final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr message_;
+    ::proto::ResponseMetaInfoV1* metainfo_;
     ::proto::SwcMetaInfoV1* swcinfo_;
-    bool status_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -3975,25 +3835,28 @@ class GetSwcMetaInfoResponse final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMessageFieldNumber = 2,
-    kSwcInfoFieldNumber = 3,
-    kStatusFieldNumber = 1,
+    kMetaInfoFieldNumber = 1,
+    kSwcInfoFieldNumber = 2,
   };
-  // string Message = 2;
-  void clear_message();
-  const std::string& message() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_message(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_message();
-  PROTOBUF_NODISCARD std::string* release_message();
-  void set_allocated_message(std::string* message);
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  bool has_metainfo() const;
   private:
-  const std::string& _internal_message() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_message(const std::string& value);
-  std::string* _internal_mutable_message();
+  bool _internal_has_metainfo() const;
   public:
+  void clear_metainfo();
+  const ::proto::ResponseMetaInfoV1& metainfo() const;
+  PROTOBUF_NODISCARD ::proto::ResponseMetaInfoV1* release_metainfo();
+  ::proto::ResponseMetaInfoV1* mutable_metainfo();
+  void set_allocated_metainfo(::proto::ResponseMetaInfoV1* metainfo);
+  private:
+  const ::proto::ResponseMetaInfoV1& _internal_metainfo() const;
+  ::proto::ResponseMetaInfoV1* _internal_mutable_metainfo();
+  public:
+  void unsafe_arena_set_allocated_metainfo(
+      ::proto::ResponseMetaInfoV1* metainfo);
+  ::proto::ResponseMetaInfoV1* unsafe_arena_release_metainfo();
 
-  // .proto.SwcMetaInfoV1 SwcInfo = 3;
+  // .proto.SwcMetaInfoV1 SwcInfo = 2;
   bool has_swcinfo() const;
   private:
   bool _internal_has_swcinfo() const;
@@ -4011,15 +3874,6 @@ class GetSwcMetaInfoResponse final :
       ::proto::SwcMetaInfoV1* swcinfo);
   ::proto::SwcMetaInfoV1* unsafe_arena_release_swcinfo();
 
-  // bool status = 1;
-  void clear_status();
-  bool status() const;
-  void set_status(bool value);
-  private:
-  bool _internal_status() const;
-  void _internal_set_status(bool value);
-  public:
-
   // @@protoc_insertion_point(class_scope:proto.GetSwcMetaInfoResponse)
  private:
   class _Internal;
@@ -4028,9 +3882,8 @@ class GetSwcMetaInfoResponse final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr message_;
+    ::proto::ResponseMetaInfoV1* metainfo_;
     ::proto::SwcMetaInfoV1* swcinfo_;
-    bool status_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -4159,11 +4012,10 @@ class GetAllSwcMetaInfoResponse final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kSwcInfoFieldNumber = 3,
-    kMessageFieldNumber = 2,
-    kStatusFieldNumber = 1,
+    kSwcInfoFieldNumber = 2,
+    kMetaInfoFieldNumber = 1,
   };
-  // repeated .proto.SwcMetaInfoV1 SwcInfo = 3;
+  // repeated .proto.SwcMetaInfoV1 SwcInfo = 2;
   int swcinfo_size() const;
   private:
   int _internal_swcinfo_size() const;
@@ -4181,28 +4033,23 @@ class GetAllSwcMetaInfoResponse final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::proto::SwcMetaInfoV1 >&
       swcinfo() const;
 
-  // string Message = 2;
-  void clear_message();
-  const std::string& message() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_message(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_message();
-  PROTOBUF_NODISCARD std::string* release_message();
-  void set_allocated_message(std::string* message);
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  bool has_metainfo() const;
   private:
-  const std::string& _internal_message() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_message(const std::string& value);
-  std::string* _internal_mutable_message();
+  bool _internal_has_metainfo() const;
   public:
-
-  // bool status = 1;
-  void clear_status();
-  bool status() const;
-  void set_status(bool value);
+  void clear_metainfo();
+  const ::proto::ResponseMetaInfoV1& metainfo() const;
+  PROTOBUF_NODISCARD ::proto::ResponseMetaInfoV1* release_metainfo();
+  ::proto::ResponseMetaInfoV1* mutable_metainfo();
+  void set_allocated_metainfo(::proto::ResponseMetaInfoV1* metainfo);
   private:
-  bool _internal_status() const;
-  void _internal_set_status(bool value);
+  const ::proto::ResponseMetaInfoV1& _internal_metainfo() const;
+  ::proto::ResponseMetaInfoV1* _internal_mutable_metainfo();
   public:
+  void unsafe_arena_set_allocated_metainfo(
+      ::proto::ResponseMetaInfoV1* metainfo);
+  ::proto::ResponseMetaInfoV1* unsafe_arena_release_metainfo();
 
   // @@protoc_insertion_point(class_scope:proto.GetAllSwcMetaInfoResponse)
  private:
@@ -4213,8 +4060,7 @@ class GetAllSwcMetaInfoResponse final :
   typedef void DestructorSkippable_;
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::proto::SwcMetaInfoV1 > swcinfo_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr message_;
-    bool status_;
+    ::proto::ResponseMetaInfoV1* metainfo_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -4343,31 +4189,25 @@ class CreateSwcSnapshotResponse final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMessageFieldNumber = 2,
-    kStatusFieldNumber = 1,
+    kMetaInfoFieldNumber = 1,
   };
-  // string Message = 2;
-  void clear_message();
-  const std::string& message() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_message(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_message();
-  PROTOBUF_NODISCARD std::string* release_message();
-  void set_allocated_message(std::string* message);
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  bool has_metainfo() const;
   private:
-  const std::string& _internal_message() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_message(const std::string& value);
-  std::string* _internal_mutable_message();
+  bool _internal_has_metainfo() const;
   public:
-
-  // bool status = 1;
-  void clear_status();
-  bool status() const;
-  void set_status(bool value);
+  void clear_metainfo();
+  const ::proto::ResponseMetaInfoV1& metainfo() const;
+  PROTOBUF_NODISCARD ::proto::ResponseMetaInfoV1* release_metainfo();
+  ::proto::ResponseMetaInfoV1* mutable_metainfo();
+  void set_allocated_metainfo(::proto::ResponseMetaInfoV1* metainfo);
   private:
-  bool _internal_status() const;
-  void _internal_set_status(bool value);
+  const ::proto::ResponseMetaInfoV1& _internal_metainfo() const;
+  ::proto::ResponseMetaInfoV1* _internal_mutable_metainfo();
   public:
+  void unsafe_arena_set_allocated_metainfo(
+      ::proto::ResponseMetaInfoV1* metainfo);
+  ::proto::ResponseMetaInfoV1* unsafe_arena_release_metainfo();
 
   // @@protoc_insertion_point(class_scope:proto.CreateSwcSnapshotResponse)
  private:
@@ -4377,8 +4217,7 @@ class CreateSwcSnapshotResponse final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr message_;
-    bool status_;
+    ::proto::ResponseMetaInfoV1* metainfo_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -4507,31 +4346,25 @@ class DeleteSwcSnapshotResponse final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMessageFieldNumber = 2,
-    kStatusFieldNumber = 1,
+    kMetaInfoFieldNumber = 1,
   };
-  // string Message = 2;
-  void clear_message();
-  const std::string& message() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_message(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_message();
-  PROTOBUF_NODISCARD std::string* release_message();
-  void set_allocated_message(std::string* message);
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  bool has_metainfo() const;
   private:
-  const std::string& _internal_message() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_message(const std::string& value);
-  std::string* _internal_mutable_message();
+  bool _internal_has_metainfo() const;
   public:
-
-  // bool status = 1;
-  void clear_status();
-  bool status() const;
-  void set_status(bool value);
+  void clear_metainfo();
+  const ::proto::ResponseMetaInfoV1& metainfo() const;
+  PROTOBUF_NODISCARD ::proto::ResponseMetaInfoV1* release_metainfo();
+  ::proto::ResponseMetaInfoV1* mutable_metainfo();
+  void set_allocated_metainfo(::proto::ResponseMetaInfoV1* metainfo);
   private:
-  bool _internal_status() const;
-  void _internal_set_status(bool value);
+  const ::proto::ResponseMetaInfoV1& _internal_metainfo() const;
+  ::proto::ResponseMetaInfoV1* _internal_mutable_metainfo();
   public:
+  void unsafe_arena_set_allocated_metainfo(
+      ::proto::ResponseMetaInfoV1* metainfo);
+  ::proto::ResponseMetaInfoV1* unsafe_arena_release_metainfo();
 
   // @@protoc_insertion_point(class_scope:proto.DeleteSwcSnapshotResponse)
  private:
@@ -4541,8 +4374,7 @@ class DeleteSwcSnapshotResponse final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr message_;
-    bool status_;
+    ::proto::ResponseMetaInfoV1* metainfo_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -4671,11 +4503,10 @@ class GetAllSnapshotMetaInfoResponse final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kSwcSnapshotListFieldNumber = 3,
-    kMessageFieldNumber = 2,
-    kStatusFieldNumber = 1,
+    kSwcSnapshotListFieldNumber = 2,
+    kMetaInfoFieldNumber = 1,
   };
-  // repeated .proto.SwcSnapshotMetaInfoV1 SwcSnapshotList = 3;
+  // repeated .proto.SwcSnapshotMetaInfoV1 SwcSnapshotList = 2;
   int swcsnapshotlist_size() const;
   private:
   int _internal_swcsnapshotlist_size() const;
@@ -4693,28 +4524,23 @@ class GetAllSnapshotMetaInfoResponse final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::proto::SwcSnapshotMetaInfoV1 >&
       swcsnapshotlist() const;
 
-  // string Message = 2;
-  void clear_message();
-  const std::string& message() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_message(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_message();
-  PROTOBUF_NODISCARD std::string* release_message();
-  void set_allocated_message(std::string* message);
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  bool has_metainfo() const;
   private:
-  const std::string& _internal_message() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_message(const std::string& value);
-  std::string* _internal_mutable_message();
+  bool _internal_has_metainfo() const;
   public:
-
-  // bool status = 1;
-  void clear_status();
-  bool status() const;
-  void set_status(bool value);
+  void clear_metainfo();
+  const ::proto::ResponseMetaInfoV1& metainfo() const;
+  PROTOBUF_NODISCARD ::proto::ResponseMetaInfoV1* release_metainfo();
+  ::proto::ResponseMetaInfoV1* mutable_metainfo();
+  void set_allocated_metainfo(::proto::ResponseMetaInfoV1* metainfo);
   private:
-  bool _internal_status() const;
-  void _internal_set_status(bool value);
+  const ::proto::ResponseMetaInfoV1& _internal_metainfo() const;
+  ::proto::ResponseMetaInfoV1* _internal_mutable_metainfo();
   public:
+  void unsafe_arena_set_allocated_metainfo(
+      ::proto::ResponseMetaInfoV1* metainfo);
+  ::proto::ResponseMetaInfoV1* unsafe_arena_release_metainfo();
 
   // @@protoc_insertion_point(class_scope:proto.GetAllSnapshotMetaInfoResponse)
  private:
@@ -4725,8 +4551,7 @@ class GetAllSnapshotMetaInfoResponse final :
   typedef void DestructorSkippable_;
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::proto::SwcSnapshotMetaInfoV1 > swcsnapshotlist_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr message_;
-    bool status_;
+    ::proto::ResponseMetaInfoV1* metainfo_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -4855,23 +4680,26 @@ class GetSnapshotResponse final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMessageFieldNumber = 2,
+    kMetaInfoFieldNumber = 2,
     kSwcNodeDataFieldNumber = 3,
-    kStatusFieldNumber = 1,
   };
-  // string Message = 2;
-  void clear_message();
-  const std::string& message() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_message(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_message();
-  PROTOBUF_NODISCARD std::string* release_message();
-  void set_allocated_message(std::string* message);
+  // .proto.ResponseMetaInfoV1 metaInfo = 2;
+  bool has_metainfo() const;
   private:
-  const std::string& _internal_message() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_message(const std::string& value);
-  std::string* _internal_mutable_message();
+  bool _internal_has_metainfo() const;
   public:
+  void clear_metainfo();
+  const ::proto::ResponseMetaInfoV1& metainfo() const;
+  PROTOBUF_NODISCARD ::proto::ResponseMetaInfoV1* release_metainfo();
+  ::proto::ResponseMetaInfoV1* mutable_metainfo();
+  void set_allocated_metainfo(::proto::ResponseMetaInfoV1* metainfo);
+  private:
+  const ::proto::ResponseMetaInfoV1& _internal_metainfo() const;
+  ::proto::ResponseMetaInfoV1* _internal_mutable_metainfo();
+  public:
+  void unsafe_arena_set_allocated_metainfo(
+      ::proto::ResponseMetaInfoV1* metainfo);
+  ::proto::ResponseMetaInfoV1* unsafe_arena_release_metainfo();
 
   // .proto.SwcDataV1 SwcNodeData = 3;
   bool has_swcnodedata() const;
@@ -4891,15 +4719,6 @@ class GetSnapshotResponse final :
       ::proto::SwcDataV1* swcnodedata);
   ::proto::SwcDataV1* unsafe_arena_release_swcnodedata();
 
-  // bool status = 1;
-  void clear_status();
-  bool status() const;
-  void set_status(bool value);
-  private:
-  bool _internal_status() const;
-  void _internal_set_status(bool value);
-  public:
-
   // @@protoc_insertion_point(class_scope:proto.GetSnapshotResponse)
  private:
   class _Internal;
@@ -4908,9 +4727,8 @@ class GetSnapshotResponse final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr message_;
+    ::proto::ResponseMetaInfoV1* metainfo_;
     ::proto::SwcDataV1* swcnodedata_;
-    bool status_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -5039,11 +4857,10 @@ class GetAllIncrementOperationMetaInfoResponse final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kSwcIncrementOperationListFieldNumber = 3,
-    kMessageFieldNumber = 2,
-    kStatusFieldNumber = 1,
+    kSwcIncrementOperationListFieldNumber = 2,
+    kMetaInfoFieldNumber = 1,
   };
-  // repeated .proto.SwcIncrementOperationMetaInfoV1 SwcIncrementOperationList = 3;
+  // repeated .proto.SwcIncrementOperationMetaInfoV1 SwcIncrementOperationList = 2;
   int swcincrementoperationlist_size() const;
   private:
   int _internal_swcincrementoperationlist_size() const;
@@ -5061,28 +4878,23 @@ class GetAllIncrementOperationMetaInfoResponse final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::proto::SwcIncrementOperationMetaInfoV1 >&
       swcincrementoperationlist() const;
 
-  // string Message = 2;
-  void clear_message();
-  const std::string& message() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_message(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_message();
-  PROTOBUF_NODISCARD std::string* release_message();
-  void set_allocated_message(std::string* message);
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  bool has_metainfo() const;
   private:
-  const std::string& _internal_message() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_message(const std::string& value);
-  std::string* _internal_mutable_message();
+  bool _internal_has_metainfo() const;
   public:
-
-  // bool status = 1;
-  void clear_status();
-  bool status() const;
-  void set_status(bool value);
+  void clear_metainfo();
+  const ::proto::ResponseMetaInfoV1& metainfo() const;
+  PROTOBUF_NODISCARD ::proto::ResponseMetaInfoV1* release_metainfo();
+  ::proto::ResponseMetaInfoV1* mutable_metainfo();
+  void set_allocated_metainfo(::proto::ResponseMetaInfoV1* metainfo);
   private:
-  bool _internal_status() const;
-  void _internal_set_status(bool value);
+  const ::proto::ResponseMetaInfoV1& _internal_metainfo() const;
+  ::proto::ResponseMetaInfoV1* _internal_mutable_metainfo();
   public:
+  void unsafe_arena_set_allocated_metainfo(
+      ::proto::ResponseMetaInfoV1* metainfo);
+  ::proto::ResponseMetaInfoV1* unsafe_arena_release_metainfo();
 
   // @@protoc_insertion_point(class_scope:proto.GetAllIncrementOperationMetaInfoResponse)
  private:
@@ -5093,8 +4905,7 @@ class GetAllIncrementOperationMetaInfoResponse final :
   typedef void DestructorSkippable_;
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::proto::SwcIncrementOperationMetaInfoV1 > swcincrementoperationlist_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr message_;
-    bool status_;
+    ::proto::ResponseMetaInfoV1* metainfo_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -5223,11 +5034,10 @@ class GetIncrementOperationResponse final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kSwcIncrementOperationListFieldNumber = 3,
-    kMessageFieldNumber = 2,
-    kStatusFieldNumber = 1,
+    kSwcIncrementOperationListFieldNumber = 2,
+    kMetaInfoFieldNumber = 1,
   };
-  // repeated .proto.SwcIncrementOperationV1 SwcIncrementOperationList = 3;
+  // repeated .proto.SwcIncrementOperationV1 SwcIncrementOperationList = 2;
   int swcincrementoperationlist_size() const;
   private:
   int _internal_swcincrementoperationlist_size() const;
@@ -5245,28 +5055,23 @@ class GetIncrementOperationResponse final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::proto::SwcIncrementOperationV1 >&
       swcincrementoperationlist() const;
 
-  // string Message = 2;
-  void clear_message();
-  const std::string& message() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_message(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_message();
-  PROTOBUF_NODISCARD std::string* release_message();
-  void set_allocated_message(std::string* message);
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  bool has_metainfo() const;
   private:
-  const std::string& _internal_message() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_message(const std::string& value);
-  std::string* _internal_mutable_message();
+  bool _internal_has_metainfo() const;
   public:
-
-  // bool status = 1;
-  void clear_status();
-  bool status() const;
-  void set_status(bool value);
+  void clear_metainfo();
+  const ::proto::ResponseMetaInfoV1& metainfo() const;
+  PROTOBUF_NODISCARD ::proto::ResponseMetaInfoV1* release_metainfo();
+  ::proto::ResponseMetaInfoV1* mutable_metainfo();
+  void set_allocated_metainfo(::proto::ResponseMetaInfoV1* metainfo);
   private:
-  bool _internal_status() const;
-  void _internal_set_status(bool value);
+  const ::proto::ResponseMetaInfoV1& _internal_metainfo() const;
+  ::proto::ResponseMetaInfoV1* _internal_mutable_metainfo();
   public:
+  void unsafe_arena_set_allocated_metainfo(
+      ::proto::ResponseMetaInfoV1* metainfo);
+  ::proto::ResponseMetaInfoV1* unsafe_arena_release_metainfo();
 
   // @@protoc_insertion_point(class_scope:proto.GetIncrementOperationResponse)
  private:
@@ -5277,8 +5082,7 @@ class GetIncrementOperationResponse final :
   typedef void DestructorSkippable_;
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::proto::SwcIncrementOperationV1 > swcincrementoperationlist_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr message_;
-    bool status_;
+    ::proto::ResponseMetaInfoV1* metainfo_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -5407,31 +5211,25 @@ class CreateSwcNodeDataResponse final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMessageFieldNumber = 2,
-    kStatusFieldNumber = 1,
+    kMetaInfoFieldNumber = 1,
   };
-  // string Message = 2;
-  void clear_message();
-  const std::string& message() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_message(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_message();
-  PROTOBUF_NODISCARD std::string* release_message();
-  void set_allocated_message(std::string* message);
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  bool has_metainfo() const;
   private:
-  const std::string& _internal_message() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_message(const std::string& value);
-  std::string* _internal_mutable_message();
+  bool _internal_has_metainfo() const;
   public:
-
-  // bool status = 1;
-  void clear_status();
-  bool status() const;
-  void set_status(bool value);
+  void clear_metainfo();
+  const ::proto::ResponseMetaInfoV1& metainfo() const;
+  PROTOBUF_NODISCARD ::proto::ResponseMetaInfoV1* release_metainfo();
+  ::proto::ResponseMetaInfoV1* mutable_metainfo();
+  void set_allocated_metainfo(::proto::ResponseMetaInfoV1* metainfo);
   private:
-  bool _internal_status() const;
-  void _internal_set_status(bool value);
+  const ::proto::ResponseMetaInfoV1& _internal_metainfo() const;
+  ::proto::ResponseMetaInfoV1* _internal_mutable_metainfo();
   public:
+  void unsafe_arena_set_allocated_metainfo(
+      ::proto::ResponseMetaInfoV1* metainfo);
+  ::proto::ResponseMetaInfoV1* unsafe_arena_release_metainfo();
 
   // @@protoc_insertion_point(class_scope:proto.CreateSwcNodeDataResponse)
  private:
@@ -5441,8 +5239,7 @@ class CreateSwcNodeDataResponse final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr message_;
-    bool status_;
+    ::proto::ResponseMetaInfoV1* metainfo_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -5571,31 +5368,25 @@ class DeleteSwcNodeDataResponse final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMessageFieldNumber = 2,
-    kStatusFieldNumber = 1,
+    kMetaInfoFieldNumber = 1,
   };
-  // string Message = 2;
-  void clear_message();
-  const std::string& message() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_message(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_message();
-  PROTOBUF_NODISCARD std::string* release_message();
-  void set_allocated_message(std::string* message);
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  bool has_metainfo() const;
   private:
-  const std::string& _internal_message() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_message(const std::string& value);
-  std::string* _internal_mutable_message();
+  bool _internal_has_metainfo() const;
   public:
-
-  // bool status = 1;
-  void clear_status();
-  bool status() const;
-  void set_status(bool value);
+  void clear_metainfo();
+  const ::proto::ResponseMetaInfoV1& metainfo() const;
+  PROTOBUF_NODISCARD ::proto::ResponseMetaInfoV1* release_metainfo();
+  ::proto::ResponseMetaInfoV1* mutable_metainfo();
+  void set_allocated_metainfo(::proto::ResponseMetaInfoV1* metainfo);
   private:
-  bool _internal_status() const;
-  void _internal_set_status(bool value);
+  const ::proto::ResponseMetaInfoV1& _internal_metainfo() const;
+  ::proto::ResponseMetaInfoV1* _internal_mutable_metainfo();
   public:
+  void unsafe_arena_set_allocated_metainfo(
+      ::proto::ResponseMetaInfoV1* metainfo);
+  ::proto::ResponseMetaInfoV1* unsafe_arena_release_metainfo();
 
   // @@protoc_insertion_point(class_scope:proto.DeleteSwcNodeDataResponse)
  private:
@@ -5605,8 +5396,7 @@ class DeleteSwcNodeDataResponse final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr message_;
-    bool status_;
+    ::proto::ResponseMetaInfoV1* metainfo_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -5735,31 +5525,25 @@ class UpdateSwcNodeDataResponse final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMessageFieldNumber = 2,
-    kStatusFieldNumber = 1,
+    kMetaInfoFieldNumber = 1,
   };
-  // string Message = 2;
-  void clear_message();
-  const std::string& message() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_message(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_message();
-  PROTOBUF_NODISCARD std::string* release_message();
-  void set_allocated_message(std::string* message);
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  bool has_metainfo() const;
   private:
-  const std::string& _internal_message() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_message(const std::string& value);
-  std::string* _internal_mutable_message();
+  bool _internal_has_metainfo() const;
   public:
-
-  // bool status = 1;
-  void clear_status();
-  bool status() const;
-  void set_status(bool value);
+  void clear_metainfo();
+  const ::proto::ResponseMetaInfoV1& metainfo() const;
+  PROTOBUF_NODISCARD ::proto::ResponseMetaInfoV1* release_metainfo();
+  ::proto::ResponseMetaInfoV1* mutable_metainfo();
+  void set_allocated_metainfo(::proto::ResponseMetaInfoV1* metainfo);
   private:
-  bool _internal_status() const;
-  void _internal_set_status(bool value);
+  const ::proto::ResponseMetaInfoV1& _internal_metainfo() const;
+  ::proto::ResponseMetaInfoV1* _internal_mutable_metainfo();
   public:
+  void unsafe_arena_set_allocated_metainfo(
+      ::proto::ResponseMetaInfoV1* metainfo);
+  ::proto::ResponseMetaInfoV1* unsafe_arena_release_metainfo();
 
   // @@protoc_insertion_point(class_scope:proto.UpdateSwcNodeDataResponse)
  private:
@@ -5769,8 +5553,7 @@ class UpdateSwcNodeDataResponse final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr message_;
-    bool status_;
+    ::proto::ResponseMetaInfoV1* metainfo_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -5899,25 +5682,28 @@ class GetSwcNodeDataResponse final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMessageFieldNumber = 2,
-    kSwcNodeDataFieldNumber = 3,
-    kStatusFieldNumber = 1,
+    kMetaInfoFieldNumber = 1,
+    kSwcNodeDataFieldNumber = 2,
   };
-  // string Message = 2;
-  void clear_message();
-  const std::string& message() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_message(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_message();
-  PROTOBUF_NODISCARD std::string* release_message();
-  void set_allocated_message(std::string* message);
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  bool has_metainfo() const;
   private:
-  const std::string& _internal_message() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_message(const std::string& value);
-  std::string* _internal_mutable_message();
+  bool _internal_has_metainfo() const;
   public:
+  void clear_metainfo();
+  const ::proto::ResponseMetaInfoV1& metainfo() const;
+  PROTOBUF_NODISCARD ::proto::ResponseMetaInfoV1* release_metainfo();
+  ::proto::ResponseMetaInfoV1* mutable_metainfo();
+  void set_allocated_metainfo(::proto::ResponseMetaInfoV1* metainfo);
+  private:
+  const ::proto::ResponseMetaInfoV1& _internal_metainfo() const;
+  ::proto::ResponseMetaInfoV1* _internal_mutable_metainfo();
+  public:
+  void unsafe_arena_set_allocated_metainfo(
+      ::proto::ResponseMetaInfoV1* metainfo);
+  ::proto::ResponseMetaInfoV1* unsafe_arena_release_metainfo();
 
-  // .proto.SwcDataV1 SwcNodeData = 3;
+  // .proto.SwcDataV1 SwcNodeData = 2;
   bool has_swcnodedata() const;
   private:
   bool _internal_has_swcnodedata() const;
@@ -5935,15 +5721,6 @@ class GetSwcNodeDataResponse final :
       ::proto::SwcDataV1* swcnodedata);
   ::proto::SwcDataV1* unsafe_arena_release_swcnodedata();
 
-  // bool status = 1;
-  void clear_status();
-  bool status() const;
-  void set_status(bool value);
-  private:
-  bool _internal_status() const;
-  void _internal_set_status(bool value);
-  public:
-
   // @@protoc_insertion_point(class_scope:proto.GetSwcNodeDataResponse)
  private:
   class _Internal;
@@ -5952,9 +5729,8 @@ class GetSwcNodeDataResponse final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr message_;
+    ::proto::ResponseMetaInfoV1* metainfo_;
     ::proto::SwcDataV1* swcnodedata_;
-    bool status_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -6083,25 +5859,28 @@ class GetSwcFullNodeDataResponse final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMessageFieldNumber = 2,
-    kSwcNodeDataFieldNumber = 3,
-    kStatusFieldNumber = 1,
+    kMetaInfoFieldNumber = 1,
+    kSwcNodeDataFieldNumber = 2,
   };
-  // string Message = 2;
-  void clear_message();
-  const std::string& message() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_message(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_message();
-  PROTOBUF_NODISCARD std::string* release_message();
-  void set_allocated_message(std::string* message);
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  bool has_metainfo() const;
   private:
-  const std::string& _internal_message() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_message(const std::string& value);
-  std::string* _internal_mutable_message();
+  bool _internal_has_metainfo() const;
   public:
+  void clear_metainfo();
+  const ::proto::ResponseMetaInfoV1& metainfo() const;
+  PROTOBUF_NODISCARD ::proto::ResponseMetaInfoV1* release_metainfo();
+  ::proto::ResponseMetaInfoV1* mutable_metainfo();
+  void set_allocated_metainfo(::proto::ResponseMetaInfoV1* metainfo);
+  private:
+  const ::proto::ResponseMetaInfoV1& _internal_metainfo() const;
+  ::proto::ResponseMetaInfoV1* _internal_mutable_metainfo();
+  public:
+  void unsafe_arena_set_allocated_metainfo(
+      ::proto::ResponseMetaInfoV1* metainfo);
+  ::proto::ResponseMetaInfoV1* unsafe_arena_release_metainfo();
 
-  // .proto.SwcDataV1 SwcNodeData = 3;
+  // .proto.SwcDataV1 SwcNodeData = 2;
   bool has_swcnodedata() const;
   private:
   bool _internal_has_swcnodedata() const;
@@ -6119,15 +5898,6 @@ class GetSwcFullNodeDataResponse final :
       ::proto::SwcDataV1* swcnodedata);
   ::proto::SwcDataV1* unsafe_arena_release_swcnodedata();
 
-  // bool status = 1;
-  void clear_status();
-  bool status() const;
-  void set_status(bool value);
-  private:
-  bool _internal_status() const;
-  void _internal_set_status(bool value);
-  public:
-
   // @@protoc_insertion_point(class_scope:proto.GetSwcFullNodeDataResponse)
  private:
   class _Internal;
@@ -6136,9 +5906,8 @@ class GetSwcFullNodeDataResponse final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr message_;
+    ::proto::ResponseMetaInfoV1* metainfo_;
     ::proto::SwcDataV1* swcnodedata_;
-    bool status_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -6267,25 +6036,28 @@ class GetSwcNodeDataListByTimeAndUserResponse final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMessageFieldNumber = 2,
-    kSwcNodeDataFieldNumber = 3,
-    kStatusFieldNumber = 1,
+    kMetaInfoFieldNumber = 1,
+    kSwcNodeDataFieldNumber = 2,
   };
-  // string Message = 2;
-  void clear_message();
-  const std::string& message() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_message(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_message();
-  PROTOBUF_NODISCARD std::string* release_message();
-  void set_allocated_message(std::string* message);
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  bool has_metainfo() const;
   private:
-  const std::string& _internal_message() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_message(const std::string& value);
-  std::string* _internal_mutable_message();
+  bool _internal_has_metainfo() const;
   public:
+  void clear_metainfo();
+  const ::proto::ResponseMetaInfoV1& metainfo() const;
+  PROTOBUF_NODISCARD ::proto::ResponseMetaInfoV1* release_metainfo();
+  ::proto::ResponseMetaInfoV1* mutable_metainfo();
+  void set_allocated_metainfo(::proto::ResponseMetaInfoV1* metainfo);
+  private:
+  const ::proto::ResponseMetaInfoV1& _internal_metainfo() const;
+  ::proto::ResponseMetaInfoV1* _internal_mutable_metainfo();
+  public:
+  void unsafe_arena_set_allocated_metainfo(
+      ::proto::ResponseMetaInfoV1* metainfo);
+  ::proto::ResponseMetaInfoV1* unsafe_arena_release_metainfo();
 
-  // .proto.SwcDataV1 SwcNodeData = 3;
+  // .proto.SwcDataV1 SwcNodeData = 2;
   bool has_swcnodedata() const;
   private:
   bool _internal_has_swcnodedata() const;
@@ -6303,15 +6075,6 @@ class GetSwcNodeDataListByTimeAndUserResponse final :
       ::proto::SwcDataV1* swcnodedata);
   ::proto::SwcDataV1* unsafe_arena_release_swcnodedata();
 
-  // bool status = 1;
-  void clear_status();
-  bool status() const;
-  void set_status(bool value);
-  private:
-  bool _internal_status() const;
-  void _internal_set_status(bool value);
-  public:
-
   // @@protoc_insertion_point(class_scope:proto.GetSwcNodeDataListByTimeAndUserResponse)
  private:
   class _Internal;
@@ -6320,9 +6083,8 @@ class GetSwcNodeDataListByTimeAndUserResponse final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr message_;
+    ::proto::ResponseMetaInfoV1* metainfo_;
     ::proto::SwcDataV1* swcnodedata_;
-    bool status_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -6451,26 +6213,29 @@ class BackupFullDatabaseResponse final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMessageFieldNumber = 2,
-    kDelayBackupTimeFieldNumber = 4,
-    kStatusFieldNumber = 1,
-    kInstantBackupFieldNumber = 3,
+    kMetaInfoFieldNumber = 1,
+    kDelayBackupTimeFieldNumber = 3,
+    kInstantBackupFieldNumber = 2,
   };
-  // string Message = 2;
-  void clear_message();
-  const std::string& message() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_message(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_message();
-  PROTOBUF_NODISCARD std::string* release_message();
-  void set_allocated_message(std::string* message);
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  bool has_metainfo() const;
   private:
-  const std::string& _internal_message() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_message(const std::string& value);
-  std::string* _internal_mutable_message();
+  bool _internal_has_metainfo() const;
   public:
+  void clear_metainfo();
+  const ::proto::ResponseMetaInfoV1& metainfo() const;
+  PROTOBUF_NODISCARD ::proto::ResponseMetaInfoV1* release_metainfo();
+  ::proto::ResponseMetaInfoV1* mutable_metainfo();
+  void set_allocated_metainfo(::proto::ResponseMetaInfoV1* metainfo);
+  private:
+  const ::proto::ResponseMetaInfoV1& _internal_metainfo() const;
+  ::proto::ResponseMetaInfoV1* _internal_mutable_metainfo();
+  public:
+  void unsafe_arena_set_allocated_metainfo(
+      ::proto::ResponseMetaInfoV1* metainfo);
+  ::proto::ResponseMetaInfoV1* unsafe_arena_release_metainfo();
 
-  // .google.protobuf.Timestamp DelayBackupTime = 4;
+  // .google.protobuf.Timestamp DelayBackupTime = 3;
   bool has_delaybackuptime() const;
   private:
   bool _internal_has_delaybackuptime() const;
@@ -6488,16 +6253,7 @@ class BackupFullDatabaseResponse final :
       ::PROTOBUF_NAMESPACE_ID::Timestamp* delaybackuptime);
   ::PROTOBUF_NAMESPACE_ID::Timestamp* unsafe_arena_release_delaybackuptime();
 
-  // bool status = 1;
-  void clear_status();
-  bool status() const;
-  void set_status(bool value);
-  private:
-  bool _internal_status() const;
-  void _internal_set_status(bool value);
-  public:
-
-  // bool InstantBackup = 3;
+  // bool InstantBackup = 2;
   void clear_instantbackup();
   bool instantbackup() const;
   void set_instantbackup(bool value);
@@ -6514,9 +6270,8 @@ class BackupFullDatabaseResponse final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr message_;
+    ::proto::ResponseMetaInfoV1* metainfo_;
     ::PROTOBUF_NAMESPACE_ID::Timestamp* delaybackuptime_;
-    bool status_;
     bool instantbackup_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
@@ -6646,25 +6401,28 @@ class CreateDailyStatisticsResponse final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMessageFieldNumber = 2,
-    kDailyStatisticsInfoFieldNumber = 3,
-    kStatusFieldNumber = 1,
+    kMetaInfoFieldNumber = 1,
+    kDailyStatisticsInfoFieldNumber = 2,
   };
-  // string Message = 2;
-  void clear_message();
-  const std::string& message() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_message(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_message();
-  PROTOBUF_NODISCARD std::string* release_message();
-  void set_allocated_message(std::string* message);
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  bool has_metainfo() const;
   private:
-  const std::string& _internal_message() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_message(const std::string& value);
-  std::string* _internal_mutable_message();
+  bool _internal_has_metainfo() const;
   public:
+  void clear_metainfo();
+  const ::proto::ResponseMetaInfoV1& metainfo() const;
+  PROTOBUF_NODISCARD ::proto::ResponseMetaInfoV1* release_metainfo();
+  ::proto::ResponseMetaInfoV1* mutable_metainfo();
+  void set_allocated_metainfo(::proto::ResponseMetaInfoV1* metainfo);
+  private:
+  const ::proto::ResponseMetaInfoV1& _internal_metainfo() const;
+  ::proto::ResponseMetaInfoV1* _internal_mutable_metainfo();
+  public:
+  void unsafe_arena_set_allocated_metainfo(
+      ::proto::ResponseMetaInfoV1* metainfo);
+  ::proto::ResponseMetaInfoV1* unsafe_arena_release_metainfo();
 
-  // .proto.DailyStatisticsMetaInfoV1 DailyStatisticsInfo = 3;
+  // .proto.DailyStatisticsMetaInfoV1 DailyStatisticsInfo = 2;
   bool has_dailystatisticsinfo() const;
   private:
   bool _internal_has_dailystatisticsinfo() const;
@@ -6682,15 +6440,6 @@ class CreateDailyStatisticsResponse final :
       ::proto::DailyStatisticsMetaInfoV1* dailystatisticsinfo);
   ::proto::DailyStatisticsMetaInfoV1* unsafe_arena_release_dailystatisticsinfo();
 
-  // bool status = 1;
-  void clear_status();
-  bool status() const;
-  void set_status(bool value);
-  private:
-  bool _internal_status() const;
-  void _internal_set_status(bool value);
-  public:
-
   // @@protoc_insertion_point(class_scope:proto.CreateDailyStatisticsResponse)
  private:
   class _Internal;
@@ -6699,9 +6448,8 @@ class CreateDailyStatisticsResponse final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr message_;
+    ::proto::ResponseMetaInfoV1* metainfo_;
     ::proto::DailyStatisticsMetaInfoV1* dailystatisticsinfo_;
-    bool status_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -6830,25 +6578,28 @@ class DeleteDailyStatisticsResponse final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMessageFieldNumber = 2,
-    kDailyStatisticsInfoFieldNumber = 3,
-    kStatusFieldNumber = 1,
+    kMetaInfoFieldNumber = 1,
+    kDailyStatisticsInfoFieldNumber = 2,
   };
-  // string Message = 2;
-  void clear_message();
-  const std::string& message() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_message(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_message();
-  PROTOBUF_NODISCARD std::string* release_message();
-  void set_allocated_message(std::string* message);
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  bool has_metainfo() const;
   private:
-  const std::string& _internal_message() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_message(const std::string& value);
-  std::string* _internal_mutable_message();
+  bool _internal_has_metainfo() const;
   public:
+  void clear_metainfo();
+  const ::proto::ResponseMetaInfoV1& metainfo() const;
+  PROTOBUF_NODISCARD ::proto::ResponseMetaInfoV1* release_metainfo();
+  ::proto::ResponseMetaInfoV1* mutable_metainfo();
+  void set_allocated_metainfo(::proto::ResponseMetaInfoV1* metainfo);
+  private:
+  const ::proto::ResponseMetaInfoV1& _internal_metainfo() const;
+  ::proto::ResponseMetaInfoV1* _internal_mutable_metainfo();
+  public:
+  void unsafe_arena_set_allocated_metainfo(
+      ::proto::ResponseMetaInfoV1* metainfo);
+  ::proto::ResponseMetaInfoV1* unsafe_arena_release_metainfo();
 
-  // .proto.DailyStatisticsMetaInfoV1 DailyStatisticsInfo = 3;
+  // .proto.DailyStatisticsMetaInfoV1 DailyStatisticsInfo = 2;
   bool has_dailystatisticsinfo() const;
   private:
   bool _internal_has_dailystatisticsinfo() const;
@@ -6866,15 +6617,6 @@ class DeleteDailyStatisticsResponse final :
       ::proto::DailyStatisticsMetaInfoV1* dailystatisticsinfo);
   ::proto::DailyStatisticsMetaInfoV1* unsafe_arena_release_dailystatisticsinfo();
 
-  // bool status = 1;
-  void clear_status();
-  bool status() const;
-  void set_status(bool value);
-  private:
-  bool _internal_status() const;
-  void _internal_set_status(bool value);
-  public:
-
   // @@protoc_insertion_point(class_scope:proto.DeleteDailyStatisticsResponse)
  private:
   class _Internal;
@@ -6883,9 +6625,8 @@ class DeleteDailyStatisticsResponse final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr message_;
+    ::proto::ResponseMetaInfoV1* metainfo_;
     ::proto::DailyStatisticsMetaInfoV1* dailystatisticsinfo_;
-    bool status_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -7014,25 +6755,28 @@ class UpdateDailyStatisticsResponse final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMessageFieldNumber = 2,
-    kDailyStatisticsInfoFieldNumber = 3,
-    kStatusFieldNumber = 1,
+    kMetaInfoFieldNumber = 1,
+    kDailyStatisticsInfoFieldNumber = 2,
   };
-  // string Message = 2;
-  void clear_message();
-  const std::string& message() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_message(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_message();
-  PROTOBUF_NODISCARD std::string* release_message();
-  void set_allocated_message(std::string* message);
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  bool has_metainfo() const;
   private:
-  const std::string& _internal_message() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_message(const std::string& value);
-  std::string* _internal_mutable_message();
+  bool _internal_has_metainfo() const;
   public:
+  void clear_metainfo();
+  const ::proto::ResponseMetaInfoV1& metainfo() const;
+  PROTOBUF_NODISCARD ::proto::ResponseMetaInfoV1* release_metainfo();
+  ::proto::ResponseMetaInfoV1* mutable_metainfo();
+  void set_allocated_metainfo(::proto::ResponseMetaInfoV1* metainfo);
+  private:
+  const ::proto::ResponseMetaInfoV1& _internal_metainfo() const;
+  ::proto::ResponseMetaInfoV1* _internal_mutable_metainfo();
+  public:
+  void unsafe_arena_set_allocated_metainfo(
+      ::proto::ResponseMetaInfoV1* metainfo);
+  ::proto::ResponseMetaInfoV1* unsafe_arena_release_metainfo();
 
-  // .proto.DailyStatisticsMetaInfoV1 DailyStatisticsInfo = 3;
+  // .proto.DailyStatisticsMetaInfoV1 DailyStatisticsInfo = 2;
   bool has_dailystatisticsinfo() const;
   private:
   bool _internal_has_dailystatisticsinfo() const;
@@ -7050,15 +6794,6 @@ class UpdateDailyStatisticsResponse final :
       ::proto::DailyStatisticsMetaInfoV1* dailystatisticsinfo);
   ::proto::DailyStatisticsMetaInfoV1* unsafe_arena_release_dailystatisticsinfo();
 
-  // bool status = 1;
-  void clear_status();
-  bool status() const;
-  void set_status(bool value);
-  private:
-  bool _internal_status() const;
-  void _internal_set_status(bool value);
-  public:
-
   // @@protoc_insertion_point(class_scope:proto.UpdateDailyStatisticsResponse)
  private:
   class _Internal;
@@ -7067,9 +6802,8 @@ class UpdateDailyStatisticsResponse final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr message_;
+    ::proto::ResponseMetaInfoV1* metainfo_;
     ::proto::DailyStatisticsMetaInfoV1* dailystatisticsinfo_;
-    bool status_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -7198,25 +6932,28 @@ class GetDailyStatisticsResponse final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMessageFieldNumber = 2,
-    kDailyStatisticsInfoFieldNumber = 3,
-    kStatusFieldNumber = 1,
+    kMetaInfoFieldNumber = 1,
+    kDailyStatisticsInfoFieldNumber = 2,
   };
-  // string Message = 2;
-  void clear_message();
-  const std::string& message() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_message(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_message();
-  PROTOBUF_NODISCARD std::string* release_message();
-  void set_allocated_message(std::string* message);
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  bool has_metainfo() const;
   private:
-  const std::string& _internal_message() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_message(const std::string& value);
-  std::string* _internal_mutable_message();
+  bool _internal_has_metainfo() const;
   public:
+  void clear_metainfo();
+  const ::proto::ResponseMetaInfoV1& metainfo() const;
+  PROTOBUF_NODISCARD ::proto::ResponseMetaInfoV1* release_metainfo();
+  ::proto::ResponseMetaInfoV1* mutable_metainfo();
+  void set_allocated_metainfo(::proto::ResponseMetaInfoV1* metainfo);
+  private:
+  const ::proto::ResponseMetaInfoV1& _internal_metainfo() const;
+  ::proto::ResponseMetaInfoV1* _internal_mutable_metainfo();
+  public:
+  void unsafe_arena_set_allocated_metainfo(
+      ::proto::ResponseMetaInfoV1* metainfo);
+  ::proto::ResponseMetaInfoV1* unsafe_arena_release_metainfo();
 
-  // .proto.DailyStatisticsMetaInfoV1 DailyStatisticsInfo = 3;
+  // .proto.DailyStatisticsMetaInfoV1 DailyStatisticsInfo = 2;
   bool has_dailystatisticsinfo() const;
   private:
   bool _internal_has_dailystatisticsinfo() const;
@@ -7234,15 +6971,6 @@ class GetDailyStatisticsResponse final :
       ::proto::DailyStatisticsMetaInfoV1* dailystatisticsinfo);
   ::proto::DailyStatisticsMetaInfoV1* unsafe_arena_release_dailystatisticsinfo();
 
-  // bool status = 1;
-  void clear_status();
-  bool status() const;
-  void set_status(bool value);
-  private:
-  bool _internal_status() const;
-  void _internal_set_status(bool value);
-  public:
-
   // @@protoc_insertion_point(class_scope:proto.GetDailyStatisticsResponse)
  private:
   class _Internal;
@@ -7251,9 +6979,8 @@ class GetDailyStatisticsResponse final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr message_;
+    ::proto::ResponseMetaInfoV1* metainfo_;
     ::proto::DailyStatisticsMetaInfoV1* dailystatisticsinfo_;
-    bool status_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -7382,11 +7109,10 @@ class GetAllDailyStatisticsResponse final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kDailyStatisticsInfoFieldNumber = 3,
-    kMessageFieldNumber = 2,
-    kStatusFieldNumber = 1,
+    kDailyStatisticsInfoFieldNumber = 2,
+    kMetaInfoFieldNumber = 1,
   };
-  // repeated .proto.DailyStatisticsMetaInfoV1 DailyStatisticsInfo = 3;
+  // repeated .proto.DailyStatisticsMetaInfoV1 DailyStatisticsInfo = 2;
   int dailystatisticsinfo_size() const;
   private:
   int _internal_dailystatisticsinfo_size() const;
@@ -7404,28 +7130,23 @@ class GetAllDailyStatisticsResponse final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::proto::DailyStatisticsMetaInfoV1 >&
       dailystatisticsinfo() const;
 
-  // string Message = 2;
-  void clear_message();
-  const std::string& message() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_message(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_message();
-  PROTOBUF_NODISCARD std::string* release_message();
-  void set_allocated_message(std::string* message);
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  bool has_metainfo() const;
   private:
-  const std::string& _internal_message() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_message(const std::string& value);
-  std::string* _internal_mutable_message();
+  bool _internal_has_metainfo() const;
   public:
-
-  // bool status = 1;
-  void clear_status();
-  bool status() const;
-  void set_status(bool value);
+  void clear_metainfo();
+  const ::proto::ResponseMetaInfoV1& metainfo() const;
+  PROTOBUF_NODISCARD ::proto::ResponseMetaInfoV1* release_metainfo();
+  ::proto::ResponseMetaInfoV1* mutable_metainfo();
+  void set_allocated_metainfo(::proto::ResponseMetaInfoV1* metainfo);
   private:
-  bool _internal_status() const;
-  void _internal_set_status(bool value);
+  const ::proto::ResponseMetaInfoV1& _internal_metainfo() const;
+  ::proto::ResponseMetaInfoV1* _internal_mutable_metainfo();
   public:
+  void unsafe_arena_set_allocated_metainfo(
+      ::proto::ResponseMetaInfoV1* metainfo);
+  ::proto::ResponseMetaInfoV1* unsafe_arena_release_metainfo();
 
   // @@protoc_insertion_point(class_scope:proto.GetAllDailyStatisticsResponse)
  private:
@@ -7436,8 +7157,7 @@ class GetAllDailyStatisticsResponse final :
   typedef void DestructorSkippable_;
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::proto::DailyStatisticsMetaInfoV1 > dailystatisticsinfo_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr message_;
-    bool status_;
+    ::proto::ResponseMetaInfoV1* metainfo_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -7454,77 +7174,92 @@ class GetAllDailyStatisticsResponse final :
 #endif  // __GNUC__
 // CreateUserResponse
 
-// bool status = 1;
-inline void CreateUserResponse::clear_status() {
-  _impl_.status_ = false;
+// .proto.ResponseMetaInfoV1 metaInfo = 1;
+inline bool CreateUserResponse::_internal_has_metainfo() const {
+  return this != internal_default_instance() && _impl_.metainfo_ != nullptr;
 }
-inline bool CreateUserResponse::_internal_status() const {
-  return _impl_.status_;
+inline bool CreateUserResponse::has_metainfo() const {
+  return _internal_has_metainfo();
 }
-inline bool CreateUserResponse::status() const {
-  // @@protoc_insertion_point(field_get:proto.CreateUserResponse.status)
-  return _internal_status();
+inline const ::proto::ResponseMetaInfoV1& CreateUserResponse::_internal_metainfo() const {
+  const ::proto::ResponseMetaInfoV1* p = _impl_.metainfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::ResponseMetaInfoV1&>(
+      ::proto::_ResponseMetaInfoV1_default_instance_);
 }
-inline void CreateUserResponse::_internal_set_status(bool value) {
-  
-  _impl_.status_ = value;
+inline const ::proto::ResponseMetaInfoV1& CreateUserResponse::metainfo() const {
+  // @@protoc_insertion_point(field_get:proto.CreateUserResponse.metaInfo)
+  return _internal_metainfo();
 }
-inline void CreateUserResponse::set_status(bool value) {
-  _internal_set_status(value);
-  // @@protoc_insertion_point(field_set:proto.CreateUserResponse.status)
-}
-
-// string Message = 2;
-inline void CreateUserResponse::clear_message() {
-  _impl_.message_.ClearToEmpty();
-}
-inline const std::string& CreateUserResponse::message() const {
-  // @@protoc_insertion_point(field_get:proto.CreateUserResponse.Message)
-  return _internal_message();
-}
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void CreateUserResponse::set_message(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.message_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:proto.CreateUserResponse.Message)
-}
-inline std::string* CreateUserResponse::mutable_message() {
-  std::string* _s = _internal_mutable_message();
-  // @@protoc_insertion_point(field_mutable:proto.CreateUserResponse.Message)
-  return _s;
-}
-inline const std::string& CreateUserResponse::_internal_message() const {
-  return _impl_.message_.Get();
-}
-inline void CreateUserResponse::_internal_set_message(const std::string& value) {
-  
-  _impl_.message_.Set(value, GetArenaForAllocation());
-}
-inline std::string* CreateUserResponse::_internal_mutable_message() {
-  
-  return _impl_.message_.Mutable(GetArenaForAllocation());
-}
-inline std::string* CreateUserResponse::release_message() {
-  // @@protoc_insertion_point(field_release:proto.CreateUserResponse.Message)
-  return _impl_.message_.Release();
-}
-inline void CreateUserResponse::set_allocated_message(std::string* message) {
-  if (message != nullptr) {
+inline void CreateUserResponse::unsafe_arena_set_allocated_metainfo(
+    ::proto::ResponseMetaInfoV1* metainfo) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.metainfo_);
+  }
+  _impl_.metainfo_ = metainfo;
+  if (metainfo) {
     
   } else {
     
   }
-  _impl_.message_.SetAllocated(message, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.message_.IsDefault()) {
-    _impl_.message_.Set("", GetArenaForAllocation());
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.CreateUserResponse.metaInfo)
+}
+inline ::proto::ResponseMetaInfoV1* CreateUserResponse::release_metainfo() {
+  
+  ::proto::ResponseMetaInfoV1* temp = _impl_.metainfo_;
+  _impl_.metainfo_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
   }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:proto.CreateUserResponse.Message)
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::proto::ResponseMetaInfoV1* CreateUserResponse::unsafe_arena_release_metainfo() {
+  // @@protoc_insertion_point(field_release:proto.CreateUserResponse.metaInfo)
+  
+  ::proto::ResponseMetaInfoV1* temp = _impl_.metainfo_;
+  _impl_.metainfo_ = nullptr;
+  return temp;
+}
+inline ::proto::ResponseMetaInfoV1* CreateUserResponse::_internal_mutable_metainfo() {
+  
+  if (_impl_.metainfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::ResponseMetaInfoV1>(GetArenaForAllocation());
+    _impl_.metainfo_ = p;
+  }
+  return _impl_.metainfo_;
+}
+inline ::proto::ResponseMetaInfoV1* CreateUserResponse::mutable_metainfo() {
+  ::proto::ResponseMetaInfoV1* _msg = _internal_mutable_metainfo();
+  // @@protoc_insertion_point(field_mutable:proto.CreateUserResponse.metaInfo)
+  return _msg;
+}
+inline void CreateUserResponse::set_allocated_metainfo(::proto::ResponseMetaInfoV1* metainfo) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.metainfo_);
+  }
+  if (metainfo) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(metainfo));
+    if (message_arena != submessage_arena) {
+      metainfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, metainfo, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  _impl_.metainfo_ = metainfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.CreateUserResponse.metaInfo)
 }
 
-// .proto.UserMetaInfoV1 UserInfo = 3;
+// .proto.UserMetaInfoV1 UserInfo = 2;
 inline bool CreateUserResponse::_internal_has_userinfo() const {
   return this != internal_default_instance() && _impl_.userinfo_ != nullptr;
 }
@@ -7613,151 +7348,181 @@ inline void CreateUserResponse::set_allocated_userinfo(::proto::UserMetaInfoV1* 
 
 // DeleteUserResponse
 
-// bool status = 1;
-inline void DeleteUserResponse::clear_status() {
-  _impl_.status_ = false;
+// .proto.ResponseMetaInfoV1 metaInfo = 1;
+inline bool DeleteUserResponse::_internal_has_metainfo() const {
+  return this != internal_default_instance() && _impl_.metainfo_ != nullptr;
 }
-inline bool DeleteUserResponse::_internal_status() const {
-  return _impl_.status_;
+inline bool DeleteUserResponse::has_metainfo() const {
+  return _internal_has_metainfo();
 }
-inline bool DeleteUserResponse::status() const {
-  // @@protoc_insertion_point(field_get:proto.DeleteUserResponse.status)
-  return _internal_status();
+inline const ::proto::ResponseMetaInfoV1& DeleteUserResponse::_internal_metainfo() const {
+  const ::proto::ResponseMetaInfoV1* p = _impl_.metainfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::ResponseMetaInfoV1&>(
+      ::proto::_ResponseMetaInfoV1_default_instance_);
 }
-inline void DeleteUserResponse::_internal_set_status(bool value) {
-  
-  _impl_.status_ = value;
+inline const ::proto::ResponseMetaInfoV1& DeleteUserResponse::metainfo() const {
+  // @@protoc_insertion_point(field_get:proto.DeleteUserResponse.metaInfo)
+  return _internal_metainfo();
 }
-inline void DeleteUserResponse::set_status(bool value) {
-  _internal_set_status(value);
-  // @@protoc_insertion_point(field_set:proto.DeleteUserResponse.status)
-}
-
-// string Message = 2;
-inline void DeleteUserResponse::clear_message() {
-  _impl_.message_.ClearToEmpty();
-}
-inline const std::string& DeleteUserResponse::message() const {
-  // @@protoc_insertion_point(field_get:proto.DeleteUserResponse.Message)
-  return _internal_message();
-}
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void DeleteUserResponse::set_message(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.message_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:proto.DeleteUserResponse.Message)
-}
-inline std::string* DeleteUserResponse::mutable_message() {
-  std::string* _s = _internal_mutable_message();
-  // @@protoc_insertion_point(field_mutable:proto.DeleteUserResponse.Message)
-  return _s;
-}
-inline const std::string& DeleteUserResponse::_internal_message() const {
-  return _impl_.message_.Get();
-}
-inline void DeleteUserResponse::_internal_set_message(const std::string& value) {
-  
-  _impl_.message_.Set(value, GetArenaForAllocation());
-}
-inline std::string* DeleteUserResponse::_internal_mutable_message() {
-  
-  return _impl_.message_.Mutable(GetArenaForAllocation());
-}
-inline std::string* DeleteUserResponse::release_message() {
-  // @@protoc_insertion_point(field_release:proto.DeleteUserResponse.Message)
-  return _impl_.message_.Release();
-}
-inline void DeleteUserResponse::set_allocated_message(std::string* message) {
-  if (message != nullptr) {
+inline void DeleteUserResponse::unsafe_arena_set_allocated_metainfo(
+    ::proto::ResponseMetaInfoV1* metainfo) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.metainfo_);
+  }
+  _impl_.metainfo_ = metainfo;
+  if (metainfo) {
     
   } else {
     
   }
-  _impl_.message_.SetAllocated(message, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.message_.IsDefault()) {
-    _impl_.message_.Set("", GetArenaForAllocation());
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.DeleteUserResponse.metaInfo)
+}
+inline ::proto::ResponseMetaInfoV1* DeleteUserResponse::release_metainfo() {
+  
+  ::proto::ResponseMetaInfoV1* temp = _impl_.metainfo_;
+  _impl_.metainfo_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
   }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:proto.DeleteUserResponse.Message)
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::proto::ResponseMetaInfoV1* DeleteUserResponse::unsafe_arena_release_metainfo() {
+  // @@protoc_insertion_point(field_release:proto.DeleteUserResponse.metaInfo)
+  
+  ::proto::ResponseMetaInfoV1* temp = _impl_.metainfo_;
+  _impl_.metainfo_ = nullptr;
+  return temp;
+}
+inline ::proto::ResponseMetaInfoV1* DeleteUserResponse::_internal_mutable_metainfo() {
+  
+  if (_impl_.metainfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::ResponseMetaInfoV1>(GetArenaForAllocation());
+    _impl_.metainfo_ = p;
+  }
+  return _impl_.metainfo_;
+}
+inline ::proto::ResponseMetaInfoV1* DeleteUserResponse::mutable_metainfo() {
+  ::proto::ResponseMetaInfoV1* _msg = _internal_mutable_metainfo();
+  // @@protoc_insertion_point(field_mutable:proto.DeleteUserResponse.metaInfo)
+  return _msg;
+}
+inline void DeleteUserResponse::set_allocated_metainfo(::proto::ResponseMetaInfoV1* metainfo) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.metainfo_);
+  }
+  if (metainfo) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(metainfo));
+    if (message_arena != submessage_arena) {
+      metainfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, metainfo, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  _impl_.metainfo_ = metainfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.DeleteUserResponse.metaInfo)
 }
 
 // -------------------------------------------------------------------
 
 // UpdateUserResponse
 
-// bool status = 1;
-inline void UpdateUserResponse::clear_status() {
-  _impl_.status_ = false;
+// .proto.ResponseMetaInfoV1 metaInfo = 1;
+inline bool UpdateUserResponse::_internal_has_metainfo() const {
+  return this != internal_default_instance() && _impl_.metainfo_ != nullptr;
 }
-inline bool UpdateUserResponse::_internal_status() const {
-  return _impl_.status_;
+inline bool UpdateUserResponse::has_metainfo() const {
+  return _internal_has_metainfo();
 }
-inline bool UpdateUserResponse::status() const {
-  // @@protoc_insertion_point(field_get:proto.UpdateUserResponse.status)
-  return _internal_status();
+inline const ::proto::ResponseMetaInfoV1& UpdateUserResponse::_internal_metainfo() const {
+  const ::proto::ResponseMetaInfoV1* p = _impl_.metainfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::ResponseMetaInfoV1&>(
+      ::proto::_ResponseMetaInfoV1_default_instance_);
 }
-inline void UpdateUserResponse::_internal_set_status(bool value) {
-  
-  _impl_.status_ = value;
+inline const ::proto::ResponseMetaInfoV1& UpdateUserResponse::metainfo() const {
+  // @@protoc_insertion_point(field_get:proto.UpdateUserResponse.metaInfo)
+  return _internal_metainfo();
 }
-inline void UpdateUserResponse::set_status(bool value) {
-  _internal_set_status(value);
-  // @@protoc_insertion_point(field_set:proto.UpdateUserResponse.status)
-}
-
-// string Message = 2;
-inline void UpdateUserResponse::clear_message() {
-  _impl_.message_.ClearToEmpty();
-}
-inline const std::string& UpdateUserResponse::message() const {
-  // @@protoc_insertion_point(field_get:proto.UpdateUserResponse.Message)
-  return _internal_message();
-}
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void UpdateUserResponse::set_message(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.message_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:proto.UpdateUserResponse.Message)
-}
-inline std::string* UpdateUserResponse::mutable_message() {
-  std::string* _s = _internal_mutable_message();
-  // @@protoc_insertion_point(field_mutable:proto.UpdateUserResponse.Message)
-  return _s;
-}
-inline const std::string& UpdateUserResponse::_internal_message() const {
-  return _impl_.message_.Get();
-}
-inline void UpdateUserResponse::_internal_set_message(const std::string& value) {
-  
-  _impl_.message_.Set(value, GetArenaForAllocation());
-}
-inline std::string* UpdateUserResponse::_internal_mutable_message() {
-  
-  return _impl_.message_.Mutable(GetArenaForAllocation());
-}
-inline std::string* UpdateUserResponse::release_message() {
-  // @@protoc_insertion_point(field_release:proto.UpdateUserResponse.Message)
-  return _impl_.message_.Release();
-}
-inline void UpdateUserResponse::set_allocated_message(std::string* message) {
-  if (message != nullptr) {
+inline void UpdateUserResponse::unsafe_arena_set_allocated_metainfo(
+    ::proto::ResponseMetaInfoV1* metainfo) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.metainfo_);
+  }
+  _impl_.metainfo_ = metainfo;
+  if (metainfo) {
     
   } else {
     
   }
-  _impl_.message_.SetAllocated(message, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.message_.IsDefault()) {
-    _impl_.message_.Set("", GetArenaForAllocation());
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.UpdateUserResponse.metaInfo)
+}
+inline ::proto::ResponseMetaInfoV1* UpdateUserResponse::release_metainfo() {
+  
+  ::proto::ResponseMetaInfoV1* temp = _impl_.metainfo_;
+  _impl_.metainfo_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
   }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:proto.UpdateUserResponse.Message)
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::proto::ResponseMetaInfoV1* UpdateUserResponse::unsafe_arena_release_metainfo() {
+  // @@protoc_insertion_point(field_release:proto.UpdateUserResponse.metaInfo)
+  
+  ::proto::ResponseMetaInfoV1* temp = _impl_.metainfo_;
+  _impl_.metainfo_ = nullptr;
+  return temp;
+}
+inline ::proto::ResponseMetaInfoV1* UpdateUserResponse::_internal_mutable_metainfo() {
+  
+  if (_impl_.metainfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::ResponseMetaInfoV1>(GetArenaForAllocation());
+    _impl_.metainfo_ = p;
+  }
+  return _impl_.metainfo_;
+}
+inline ::proto::ResponseMetaInfoV1* UpdateUserResponse::mutable_metainfo() {
+  ::proto::ResponseMetaInfoV1* _msg = _internal_mutable_metainfo();
+  // @@protoc_insertion_point(field_mutable:proto.UpdateUserResponse.metaInfo)
+  return _msg;
+}
+inline void UpdateUserResponse::set_allocated_metainfo(::proto::ResponseMetaInfoV1* metainfo) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.metainfo_);
+  }
+  if (metainfo) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(metainfo));
+    if (message_arena != submessage_arena) {
+      metainfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, metainfo, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  _impl_.metainfo_ = metainfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.UpdateUserResponse.metaInfo)
 }
 
-// .proto.UserMetaInfoV1 UserInfo = 3;
+// .proto.UserMetaInfoV1 UserInfo = 2;
 inline bool UpdateUserResponse::_internal_has_userinfo() const {
   return this != internal_default_instance() && _impl_.userinfo_ != nullptr;
 }
@@ -7846,77 +7611,92 @@ inline void UpdateUserResponse::set_allocated_userinfo(::proto::UserMetaInfoV1* 
 
 // GetUserResponse
 
-// bool status = 1;
-inline void GetUserResponse::clear_status() {
-  _impl_.status_ = false;
+// .proto.ResponseMetaInfoV1 metaInfo = 1;
+inline bool GetUserResponse::_internal_has_metainfo() const {
+  return this != internal_default_instance() && _impl_.metainfo_ != nullptr;
 }
-inline bool GetUserResponse::_internal_status() const {
-  return _impl_.status_;
+inline bool GetUserResponse::has_metainfo() const {
+  return _internal_has_metainfo();
 }
-inline bool GetUserResponse::status() const {
-  // @@protoc_insertion_point(field_get:proto.GetUserResponse.status)
-  return _internal_status();
+inline const ::proto::ResponseMetaInfoV1& GetUserResponse::_internal_metainfo() const {
+  const ::proto::ResponseMetaInfoV1* p = _impl_.metainfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::ResponseMetaInfoV1&>(
+      ::proto::_ResponseMetaInfoV1_default_instance_);
 }
-inline void GetUserResponse::_internal_set_status(bool value) {
-  
-  _impl_.status_ = value;
+inline const ::proto::ResponseMetaInfoV1& GetUserResponse::metainfo() const {
+  // @@protoc_insertion_point(field_get:proto.GetUserResponse.metaInfo)
+  return _internal_metainfo();
 }
-inline void GetUserResponse::set_status(bool value) {
-  _internal_set_status(value);
-  // @@protoc_insertion_point(field_set:proto.GetUserResponse.status)
-}
-
-// string Message = 2;
-inline void GetUserResponse::clear_message() {
-  _impl_.message_.ClearToEmpty();
-}
-inline const std::string& GetUserResponse::message() const {
-  // @@protoc_insertion_point(field_get:proto.GetUserResponse.Message)
-  return _internal_message();
-}
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void GetUserResponse::set_message(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.message_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:proto.GetUserResponse.Message)
-}
-inline std::string* GetUserResponse::mutable_message() {
-  std::string* _s = _internal_mutable_message();
-  // @@protoc_insertion_point(field_mutable:proto.GetUserResponse.Message)
-  return _s;
-}
-inline const std::string& GetUserResponse::_internal_message() const {
-  return _impl_.message_.Get();
-}
-inline void GetUserResponse::_internal_set_message(const std::string& value) {
-  
-  _impl_.message_.Set(value, GetArenaForAllocation());
-}
-inline std::string* GetUserResponse::_internal_mutable_message() {
-  
-  return _impl_.message_.Mutable(GetArenaForAllocation());
-}
-inline std::string* GetUserResponse::release_message() {
-  // @@protoc_insertion_point(field_release:proto.GetUserResponse.Message)
-  return _impl_.message_.Release();
-}
-inline void GetUserResponse::set_allocated_message(std::string* message) {
-  if (message != nullptr) {
+inline void GetUserResponse::unsafe_arena_set_allocated_metainfo(
+    ::proto::ResponseMetaInfoV1* metainfo) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.metainfo_);
+  }
+  _impl_.metainfo_ = metainfo;
+  if (metainfo) {
     
   } else {
     
   }
-  _impl_.message_.SetAllocated(message, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.message_.IsDefault()) {
-    _impl_.message_.Set("", GetArenaForAllocation());
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.GetUserResponse.metaInfo)
+}
+inline ::proto::ResponseMetaInfoV1* GetUserResponse::release_metainfo() {
+  
+  ::proto::ResponseMetaInfoV1* temp = _impl_.metainfo_;
+  _impl_.metainfo_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
   }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:proto.GetUserResponse.Message)
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::proto::ResponseMetaInfoV1* GetUserResponse::unsafe_arena_release_metainfo() {
+  // @@protoc_insertion_point(field_release:proto.GetUserResponse.metaInfo)
+  
+  ::proto::ResponseMetaInfoV1* temp = _impl_.metainfo_;
+  _impl_.metainfo_ = nullptr;
+  return temp;
+}
+inline ::proto::ResponseMetaInfoV1* GetUserResponse::_internal_mutable_metainfo() {
+  
+  if (_impl_.metainfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::ResponseMetaInfoV1>(GetArenaForAllocation());
+    _impl_.metainfo_ = p;
+  }
+  return _impl_.metainfo_;
+}
+inline ::proto::ResponseMetaInfoV1* GetUserResponse::mutable_metainfo() {
+  ::proto::ResponseMetaInfoV1* _msg = _internal_mutable_metainfo();
+  // @@protoc_insertion_point(field_mutable:proto.GetUserResponse.metaInfo)
+  return _msg;
+}
+inline void GetUserResponse::set_allocated_metainfo(::proto::ResponseMetaInfoV1* metainfo) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.metainfo_);
+  }
+  if (metainfo) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(metainfo));
+    if (message_arena != submessage_arena) {
+      metainfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, metainfo, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  _impl_.metainfo_ = metainfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.GetUserResponse.metaInfo)
 }
 
-// .proto.UserMetaInfoV1 UserInfo = 3;
+// .proto.UserMetaInfoV1 UserInfo = 2;
 inline bool GetUserResponse::_internal_has_userinfo() const {
   return this != internal_default_instance() && _impl_.userinfo_ != nullptr;
 }
@@ -8005,77 +7785,92 @@ inline void GetUserResponse::set_allocated_userinfo(::proto::UserMetaInfoV1* use
 
 // GetAllUserResponse
 
-// bool status = 1;
-inline void GetAllUserResponse::clear_status() {
-  _impl_.status_ = false;
+// .proto.ResponseMetaInfoV1 metaInfo = 1;
+inline bool GetAllUserResponse::_internal_has_metainfo() const {
+  return this != internal_default_instance() && _impl_.metainfo_ != nullptr;
 }
-inline bool GetAllUserResponse::_internal_status() const {
-  return _impl_.status_;
+inline bool GetAllUserResponse::has_metainfo() const {
+  return _internal_has_metainfo();
 }
-inline bool GetAllUserResponse::status() const {
-  // @@protoc_insertion_point(field_get:proto.GetAllUserResponse.status)
-  return _internal_status();
+inline const ::proto::ResponseMetaInfoV1& GetAllUserResponse::_internal_metainfo() const {
+  const ::proto::ResponseMetaInfoV1* p = _impl_.metainfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::ResponseMetaInfoV1&>(
+      ::proto::_ResponseMetaInfoV1_default_instance_);
 }
-inline void GetAllUserResponse::_internal_set_status(bool value) {
-  
-  _impl_.status_ = value;
+inline const ::proto::ResponseMetaInfoV1& GetAllUserResponse::metainfo() const {
+  // @@protoc_insertion_point(field_get:proto.GetAllUserResponse.metaInfo)
+  return _internal_metainfo();
 }
-inline void GetAllUserResponse::set_status(bool value) {
-  _internal_set_status(value);
-  // @@protoc_insertion_point(field_set:proto.GetAllUserResponse.status)
-}
-
-// string Message = 2;
-inline void GetAllUserResponse::clear_message() {
-  _impl_.message_.ClearToEmpty();
-}
-inline const std::string& GetAllUserResponse::message() const {
-  // @@protoc_insertion_point(field_get:proto.GetAllUserResponse.Message)
-  return _internal_message();
-}
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void GetAllUserResponse::set_message(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.message_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:proto.GetAllUserResponse.Message)
-}
-inline std::string* GetAllUserResponse::mutable_message() {
-  std::string* _s = _internal_mutable_message();
-  // @@protoc_insertion_point(field_mutable:proto.GetAllUserResponse.Message)
-  return _s;
-}
-inline const std::string& GetAllUserResponse::_internal_message() const {
-  return _impl_.message_.Get();
-}
-inline void GetAllUserResponse::_internal_set_message(const std::string& value) {
-  
-  _impl_.message_.Set(value, GetArenaForAllocation());
-}
-inline std::string* GetAllUserResponse::_internal_mutable_message() {
-  
-  return _impl_.message_.Mutable(GetArenaForAllocation());
-}
-inline std::string* GetAllUserResponse::release_message() {
-  // @@protoc_insertion_point(field_release:proto.GetAllUserResponse.Message)
-  return _impl_.message_.Release();
-}
-inline void GetAllUserResponse::set_allocated_message(std::string* message) {
-  if (message != nullptr) {
+inline void GetAllUserResponse::unsafe_arena_set_allocated_metainfo(
+    ::proto::ResponseMetaInfoV1* metainfo) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.metainfo_);
+  }
+  _impl_.metainfo_ = metainfo;
+  if (metainfo) {
     
   } else {
     
   }
-  _impl_.message_.SetAllocated(message, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.message_.IsDefault()) {
-    _impl_.message_.Set("", GetArenaForAllocation());
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.GetAllUserResponse.metaInfo)
+}
+inline ::proto::ResponseMetaInfoV1* GetAllUserResponse::release_metainfo() {
+  
+  ::proto::ResponseMetaInfoV1* temp = _impl_.metainfo_;
+  _impl_.metainfo_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
   }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:proto.GetAllUserResponse.Message)
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::proto::ResponseMetaInfoV1* GetAllUserResponse::unsafe_arena_release_metainfo() {
+  // @@protoc_insertion_point(field_release:proto.GetAllUserResponse.metaInfo)
+  
+  ::proto::ResponseMetaInfoV1* temp = _impl_.metainfo_;
+  _impl_.metainfo_ = nullptr;
+  return temp;
+}
+inline ::proto::ResponseMetaInfoV1* GetAllUserResponse::_internal_mutable_metainfo() {
+  
+  if (_impl_.metainfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::ResponseMetaInfoV1>(GetArenaForAllocation());
+    _impl_.metainfo_ = p;
+  }
+  return _impl_.metainfo_;
+}
+inline ::proto::ResponseMetaInfoV1* GetAllUserResponse::mutable_metainfo() {
+  ::proto::ResponseMetaInfoV1* _msg = _internal_mutable_metainfo();
+  // @@protoc_insertion_point(field_mutable:proto.GetAllUserResponse.metaInfo)
+  return _msg;
+}
+inline void GetAllUserResponse::set_allocated_metainfo(::proto::ResponseMetaInfoV1* metainfo) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.metainfo_);
+  }
+  if (metainfo) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(metainfo));
+    if (message_arena != submessage_arena) {
+      metainfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, metainfo, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  _impl_.metainfo_ = metainfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.GetAllUserResponse.metaInfo)
 }
 
-// repeated .proto.UserMetaInfoV1 UserInfo = 3;
+// repeated .proto.UserMetaInfoV1 UserInfo = 2;
 inline int GetAllUserResponse::_internal_userinfo_size() const {
   return _impl_.userinfo_.size();
 }
@@ -8116,77 +7911,92 @@ GetAllUserResponse::userinfo() const {
 
 // UserLoginResponse
 
-// bool status = 1;
-inline void UserLoginResponse::clear_status() {
-  _impl_.status_ = false;
+// .proto.ResponseMetaInfoV1 metaInfo = 1;
+inline bool UserLoginResponse::_internal_has_metainfo() const {
+  return this != internal_default_instance() && _impl_.metainfo_ != nullptr;
 }
-inline bool UserLoginResponse::_internal_status() const {
-  return _impl_.status_;
+inline bool UserLoginResponse::has_metainfo() const {
+  return _internal_has_metainfo();
 }
-inline bool UserLoginResponse::status() const {
-  // @@protoc_insertion_point(field_get:proto.UserLoginResponse.status)
-  return _internal_status();
+inline const ::proto::ResponseMetaInfoV1& UserLoginResponse::_internal_metainfo() const {
+  const ::proto::ResponseMetaInfoV1* p = _impl_.metainfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::ResponseMetaInfoV1&>(
+      ::proto::_ResponseMetaInfoV1_default_instance_);
 }
-inline void UserLoginResponse::_internal_set_status(bool value) {
-  
-  _impl_.status_ = value;
+inline const ::proto::ResponseMetaInfoV1& UserLoginResponse::metainfo() const {
+  // @@protoc_insertion_point(field_get:proto.UserLoginResponse.metaInfo)
+  return _internal_metainfo();
 }
-inline void UserLoginResponse::set_status(bool value) {
-  _internal_set_status(value);
-  // @@protoc_insertion_point(field_set:proto.UserLoginResponse.status)
-}
-
-// string Message = 2;
-inline void UserLoginResponse::clear_message() {
-  _impl_.message_.ClearToEmpty();
-}
-inline const std::string& UserLoginResponse::message() const {
-  // @@protoc_insertion_point(field_get:proto.UserLoginResponse.Message)
-  return _internal_message();
-}
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void UserLoginResponse::set_message(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.message_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:proto.UserLoginResponse.Message)
-}
-inline std::string* UserLoginResponse::mutable_message() {
-  std::string* _s = _internal_mutable_message();
-  // @@protoc_insertion_point(field_mutable:proto.UserLoginResponse.Message)
-  return _s;
-}
-inline const std::string& UserLoginResponse::_internal_message() const {
-  return _impl_.message_.Get();
-}
-inline void UserLoginResponse::_internal_set_message(const std::string& value) {
-  
-  _impl_.message_.Set(value, GetArenaForAllocation());
-}
-inline std::string* UserLoginResponse::_internal_mutable_message() {
-  
-  return _impl_.message_.Mutable(GetArenaForAllocation());
-}
-inline std::string* UserLoginResponse::release_message() {
-  // @@protoc_insertion_point(field_release:proto.UserLoginResponse.Message)
-  return _impl_.message_.Release();
-}
-inline void UserLoginResponse::set_allocated_message(std::string* message) {
-  if (message != nullptr) {
+inline void UserLoginResponse::unsafe_arena_set_allocated_metainfo(
+    ::proto::ResponseMetaInfoV1* metainfo) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.metainfo_);
+  }
+  _impl_.metainfo_ = metainfo;
+  if (metainfo) {
     
   } else {
     
   }
-  _impl_.message_.SetAllocated(message, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.message_.IsDefault()) {
-    _impl_.message_.Set("", GetArenaForAllocation());
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.UserLoginResponse.metaInfo)
+}
+inline ::proto::ResponseMetaInfoV1* UserLoginResponse::release_metainfo() {
+  
+  ::proto::ResponseMetaInfoV1* temp = _impl_.metainfo_;
+  _impl_.metainfo_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
   }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:proto.UserLoginResponse.Message)
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::proto::ResponseMetaInfoV1* UserLoginResponse::unsafe_arena_release_metainfo() {
+  // @@protoc_insertion_point(field_release:proto.UserLoginResponse.metaInfo)
+  
+  ::proto::ResponseMetaInfoV1* temp = _impl_.metainfo_;
+  _impl_.metainfo_ = nullptr;
+  return temp;
+}
+inline ::proto::ResponseMetaInfoV1* UserLoginResponse::_internal_mutable_metainfo() {
+  
+  if (_impl_.metainfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::ResponseMetaInfoV1>(GetArenaForAllocation());
+    _impl_.metainfo_ = p;
+  }
+  return _impl_.metainfo_;
+}
+inline ::proto::ResponseMetaInfoV1* UserLoginResponse::mutable_metainfo() {
+  ::proto::ResponseMetaInfoV1* _msg = _internal_mutable_metainfo();
+  // @@protoc_insertion_point(field_mutable:proto.UserLoginResponse.metaInfo)
+  return _msg;
+}
+inline void UserLoginResponse::set_allocated_metainfo(::proto::ResponseMetaInfoV1* metainfo) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.metainfo_);
+  }
+  if (metainfo) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(metainfo));
+    if (message_arena != submessage_arena) {
+      metainfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, metainfo, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  _impl_.metainfo_ = metainfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.UserLoginResponse.metaInfo)
 }
 
-// .proto.UserMetaInfoV1 UserInfo = 3;
+// .proto.UserMetaInfoV1 UserInfo = 2;
 inline bool UserLoginResponse::_internal_has_userinfo() const {
   return this != internal_default_instance() && _impl_.userinfo_ != nullptr;
 }
@@ -8271,7 +8081,7 @@ inline void UserLoginResponse::set_allocated_userinfo(::proto::UserMetaInfoV1* u
   // @@protoc_insertion_point(field_set_allocated:proto.UserLoginResponse.UserInfo)
 }
 
-// .proto.UserVerifyInfoV1 UserVerifyInfo = 4;
+// .proto.UserVerifyInfoV1 UserVerifyInfo = 3;
 inline bool UserLoginResponse::_internal_has_userverifyinfo() const {
   return this != internal_default_instance() && _impl_.userverifyinfo_ != nullptr;
 }
@@ -8360,151 +8170,181 @@ inline void UserLoginResponse::set_allocated_userverifyinfo(::proto::UserVerifyI
 
 // UserLogoutResponse
 
-// bool status = 1;
-inline void UserLogoutResponse::clear_status() {
-  _impl_.status_ = false;
+// .proto.ResponseMetaInfoV1 metaInfo = 1;
+inline bool UserLogoutResponse::_internal_has_metainfo() const {
+  return this != internal_default_instance() && _impl_.metainfo_ != nullptr;
 }
-inline bool UserLogoutResponse::_internal_status() const {
-  return _impl_.status_;
+inline bool UserLogoutResponse::has_metainfo() const {
+  return _internal_has_metainfo();
 }
-inline bool UserLogoutResponse::status() const {
-  // @@protoc_insertion_point(field_get:proto.UserLogoutResponse.status)
-  return _internal_status();
+inline const ::proto::ResponseMetaInfoV1& UserLogoutResponse::_internal_metainfo() const {
+  const ::proto::ResponseMetaInfoV1* p = _impl_.metainfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::ResponseMetaInfoV1&>(
+      ::proto::_ResponseMetaInfoV1_default_instance_);
 }
-inline void UserLogoutResponse::_internal_set_status(bool value) {
-  
-  _impl_.status_ = value;
+inline const ::proto::ResponseMetaInfoV1& UserLogoutResponse::metainfo() const {
+  // @@protoc_insertion_point(field_get:proto.UserLogoutResponse.metaInfo)
+  return _internal_metainfo();
 }
-inline void UserLogoutResponse::set_status(bool value) {
-  _internal_set_status(value);
-  // @@protoc_insertion_point(field_set:proto.UserLogoutResponse.status)
-}
-
-// string Message = 2;
-inline void UserLogoutResponse::clear_message() {
-  _impl_.message_.ClearToEmpty();
-}
-inline const std::string& UserLogoutResponse::message() const {
-  // @@protoc_insertion_point(field_get:proto.UserLogoutResponse.Message)
-  return _internal_message();
-}
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void UserLogoutResponse::set_message(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.message_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:proto.UserLogoutResponse.Message)
-}
-inline std::string* UserLogoutResponse::mutable_message() {
-  std::string* _s = _internal_mutable_message();
-  // @@protoc_insertion_point(field_mutable:proto.UserLogoutResponse.Message)
-  return _s;
-}
-inline const std::string& UserLogoutResponse::_internal_message() const {
-  return _impl_.message_.Get();
-}
-inline void UserLogoutResponse::_internal_set_message(const std::string& value) {
-  
-  _impl_.message_.Set(value, GetArenaForAllocation());
-}
-inline std::string* UserLogoutResponse::_internal_mutable_message() {
-  
-  return _impl_.message_.Mutable(GetArenaForAllocation());
-}
-inline std::string* UserLogoutResponse::release_message() {
-  // @@protoc_insertion_point(field_release:proto.UserLogoutResponse.Message)
-  return _impl_.message_.Release();
-}
-inline void UserLogoutResponse::set_allocated_message(std::string* message) {
-  if (message != nullptr) {
+inline void UserLogoutResponse::unsafe_arena_set_allocated_metainfo(
+    ::proto::ResponseMetaInfoV1* metainfo) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.metainfo_);
+  }
+  _impl_.metainfo_ = metainfo;
+  if (metainfo) {
     
   } else {
     
   }
-  _impl_.message_.SetAllocated(message, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.message_.IsDefault()) {
-    _impl_.message_.Set("", GetArenaForAllocation());
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.UserLogoutResponse.metaInfo)
+}
+inline ::proto::ResponseMetaInfoV1* UserLogoutResponse::release_metainfo() {
+  
+  ::proto::ResponseMetaInfoV1* temp = _impl_.metainfo_;
+  _impl_.metainfo_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
   }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:proto.UserLogoutResponse.Message)
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::proto::ResponseMetaInfoV1* UserLogoutResponse::unsafe_arena_release_metainfo() {
+  // @@protoc_insertion_point(field_release:proto.UserLogoutResponse.metaInfo)
+  
+  ::proto::ResponseMetaInfoV1* temp = _impl_.metainfo_;
+  _impl_.metainfo_ = nullptr;
+  return temp;
+}
+inline ::proto::ResponseMetaInfoV1* UserLogoutResponse::_internal_mutable_metainfo() {
+  
+  if (_impl_.metainfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::ResponseMetaInfoV1>(GetArenaForAllocation());
+    _impl_.metainfo_ = p;
+  }
+  return _impl_.metainfo_;
+}
+inline ::proto::ResponseMetaInfoV1* UserLogoutResponse::mutable_metainfo() {
+  ::proto::ResponseMetaInfoV1* _msg = _internal_mutable_metainfo();
+  // @@protoc_insertion_point(field_mutable:proto.UserLogoutResponse.metaInfo)
+  return _msg;
+}
+inline void UserLogoutResponse::set_allocated_metainfo(::proto::ResponseMetaInfoV1* metainfo) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.metainfo_);
+  }
+  if (metainfo) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(metainfo));
+    if (message_arena != submessage_arena) {
+      metainfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, metainfo, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  _impl_.metainfo_ = metainfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.UserLogoutResponse.metaInfo)
 }
 
 // -------------------------------------------------------------------
 
 // UserOnlineHeartBeatResponse
 
-// bool status = 1;
-inline void UserOnlineHeartBeatResponse::clear_status() {
-  _impl_.status_ = false;
+// .proto.ResponseMetaInfoV1 metaInfo = 1;
+inline bool UserOnlineHeartBeatResponse::_internal_has_metainfo() const {
+  return this != internal_default_instance() && _impl_.metainfo_ != nullptr;
 }
-inline bool UserOnlineHeartBeatResponse::_internal_status() const {
-  return _impl_.status_;
+inline bool UserOnlineHeartBeatResponse::has_metainfo() const {
+  return _internal_has_metainfo();
 }
-inline bool UserOnlineHeartBeatResponse::status() const {
-  // @@protoc_insertion_point(field_get:proto.UserOnlineHeartBeatResponse.status)
-  return _internal_status();
+inline const ::proto::ResponseMetaInfoV1& UserOnlineHeartBeatResponse::_internal_metainfo() const {
+  const ::proto::ResponseMetaInfoV1* p = _impl_.metainfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::ResponseMetaInfoV1&>(
+      ::proto::_ResponseMetaInfoV1_default_instance_);
 }
-inline void UserOnlineHeartBeatResponse::_internal_set_status(bool value) {
-  
-  _impl_.status_ = value;
+inline const ::proto::ResponseMetaInfoV1& UserOnlineHeartBeatResponse::metainfo() const {
+  // @@protoc_insertion_point(field_get:proto.UserOnlineHeartBeatResponse.metaInfo)
+  return _internal_metainfo();
 }
-inline void UserOnlineHeartBeatResponse::set_status(bool value) {
-  _internal_set_status(value);
-  // @@protoc_insertion_point(field_set:proto.UserOnlineHeartBeatResponse.status)
-}
-
-// string Message = 2;
-inline void UserOnlineHeartBeatResponse::clear_message() {
-  _impl_.message_.ClearToEmpty();
-}
-inline const std::string& UserOnlineHeartBeatResponse::message() const {
-  // @@protoc_insertion_point(field_get:proto.UserOnlineHeartBeatResponse.Message)
-  return _internal_message();
-}
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void UserOnlineHeartBeatResponse::set_message(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.message_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:proto.UserOnlineHeartBeatResponse.Message)
-}
-inline std::string* UserOnlineHeartBeatResponse::mutable_message() {
-  std::string* _s = _internal_mutable_message();
-  // @@protoc_insertion_point(field_mutable:proto.UserOnlineHeartBeatResponse.Message)
-  return _s;
-}
-inline const std::string& UserOnlineHeartBeatResponse::_internal_message() const {
-  return _impl_.message_.Get();
-}
-inline void UserOnlineHeartBeatResponse::_internal_set_message(const std::string& value) {
-  
-  _impl_.message_.Set(value, GetArenaForAllocation());
-}
-inline std::string* UserOnlineHeartBeatResponse::_internal_mutable_message() {
-  
-  return _impl_.message_.Mutable(GetArenaForAllocation());
-}
-inline std::string* UserOnlineHeartBeatResponse::release_message() {
-  // @@protoc_insertion_point(field_release:proto.UserOnlineHeartBeatResponse.Message)
-  return _impl_.message_.Release();
-}
-inline void UserOnlineHeartBeatResponse::set_allocated_message(std::string* message) {
-  if (message != nullptr) {
+inline void UserOnlineHeartBeatResponse::unsafe_arena_set_allocated_metainfo(
+    ::proto::ResponseMetaInfoV1* metainfo) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.metainfo_);
+  }
+  _impl_.metainfo_ = metainfo;
+  if (metainfo) {
     
   } else {
     
   }
-  _impl_.message_.SetAllocated(message, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.message_.IsDefault()) {
-    _impl_.message_.Set("", GetArenaForAllocation());
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.UserOnlineHeartBeatResponse.metaInfo)
+}
+inline ::proto::ResponseMetaInfoV1* UserOnlineHeartBeatResponse::release_metainfo() {
+  
+  ::proto::ResponseMetaInfoV1* temp = _impl_.metainfo_;
+  _impl_.metainfo_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
   }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:proto.UserOnlineHeartBeatResponse.Message)
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::proto::ResponseMetaInfoV1* UserOnlineHeartBeatResponse::unsafe_arena_release_metainfo() {
+  // @@protoc_insertion_point(field_release:proto.UserOnlineHeartBeatResponse.metaInfo)
+  
+  ::proto::ResponseMetaInfoV1* temp = _impl_.metainfo_;
+  _impl_.metainfo_ = nullptr;
+  return temp;
+}
+inline ::proto::ResponseMetaInfoV1* UserOnlineHeartBeatResponse::_internal_mutable_metainfo() {
+  
+  if (_impl_.metainfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::ResponseMetaInfoV1>(GetArenaForAllocation());
+    _impl_.metainfo_ = p;
+  }
+  return _impl_.metainfo_;
+}
+inline ::proto::ResponseMetaInfoV1* UserOnlineHeartBeatResponse::mutable_metainfo() {
+  ::proto::ResponseMetaInfoV1* _msg = _internal_mutable_metainfo();
+  // @@protoc_insertion_point(field_mutable:proto.UserOnlineHeartBeatResponse.metaInfo)
+  return _msg;
+}
+inline void UserOnlineHeartBeatResponse::set_allocated_metainfo(::proto::ResponseMetaInfoV1* metainfo) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.metainfo_);
+  }
+  if (metainfo) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(metainfo));
+    if (message_arena != submessage_arena) {
+      metainfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, metainfo, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  _impl_.metainfo_ = metainfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.UserOnlineHeartBeatResponse.metaInfo)
 }
 
-// .proto.UserVerifyInfoV1 UserVerifyInfo = 3;
+// .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
 inline bool UserOnlineHeartBeatResponse::_internal_has_userverifyinfo() const {
   return this != internal_default_instance() && _impl_.userverifyinfo_ != nullptr;
 }
@@ -8593,77 +8433,92 @@ inline void UserOnlineHeartBeatResponse::set_allocated_userverifyinfo(::proto::U
 
 // GetUserPermissionGroupResponse
 
-// bool status = 1;
-inline void GetUserPermissionGroupResponse::clear_status() {
-  _impl_.status_ = false;
+// .proto.ResponseMetaInfoV1 metaInfo = 1;
+inline bool GetUserPermissionGroupResponse::_internal_has_metainfo() const {
+  return this != internal_default_instance() && _impl_.metainfo_ != nullptr;
 }
-inline bool GetUserPermissionGroupResponse::_internal_status() const {
-  return _impl_.status_;
+inline bool GetUserPermissionGroupResponse::has_metainfo() const {
+  return _internal_has_metainfo();
 }
-inline bool GetUserPermissionGroupResponse::status() const {
-  // @@protoc_insertion_point(field_get:proto.GetUserPermissionGroupResponse.status)
-  return _internal_status();
+inline const ::proto::ResponseMetaInfoV1& GetUserPermissionGroupResponse::_internal_metainfo() const {
+  const ::proto::ResponseMetaInfoV1* p = _impl_.metainfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::ResponseMetaInfoV1&>(
+      ::proto::_ResponseMetaInfoV1_default_instance_);
 }
-inline void GetUserPermissionGroupResponse::_internal_set_status(bool value) {
-  
-  _impl_.status_ = value;
+inline const ::proto::ResponseMetaInfoV1& GetUserPermissionGroupResponse::metainfo() const {
+  // @@protoc_insertion_point(field_get:proto.GetUserPermissionGroupResponse.metaInfo)
+  return _internal_metainfo();
 }
-inline void GetUserPermissionGroupResponse::set_status(bool value) {
-  _internal_set_status(value);
-  // @@protoc_insertion_point(field_set:proto.GetUserPermissionGroupResponse.status)
-}
-
-// string Message = 2;
-inline void GetUserPermissionGroupResponse::clear_message() {
-  _impl_.message_.ClearToEmpty();
-}
-inline const std::string& GetUserPermissionGroupResponse::message() const {
-  // @@protoc_insertion_point(field_get:proto.GetUserPermissionGroupResponse.Message)
-  return _internal_message();
-}
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void GetUserPermissionGroupResponse::set_message(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.message_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:proto.GetUserPermissionGroupResponse.Message)
-}
-inline std::string* GetUserPermissionGroupResponse::mutable_message() {
-  std::string* _s = _internal_mutable_message();
-  // @@protoc_insertion_point(field_mutable:proto.GetUserPermissionGroupResponse.Message)
-  return _s;
-}
-inline const std::string& GetUserPermissionGroupResponse::_internal_message() const {
-  return _impl_.message_.Get();
-}
-inline void GetUserPermissionGroupResponse::_internal_set_message(const std::string& value) {
-  
-  _impl_.message_.Set(value, GetArenaForAllocation());
-}
-inline std::string* GetUserPermissionGroupResponse::_internal_mutable_message() {
-  
-  return _impl_.message_.Mutable(GetArenaForAllocation());
-}
-inline std::string* GetUserPermissionGroupResponse::release_message() {
-  // @@protoc_insertion_point(field_release:proto.GetUserPermissionGroupResponse.Message)
-  return _impl_.message_.Release();
-}
-inline void GetUserPermissionGroupResponse::set_allocated_message(std::string* message) {
-  if (message != nullptr) {
+inline void GetUserPermissionGroupResponse::unsafe_arena_set_allocated_metainfo(
+    ::proto::ResponseMetaInfoV1* metainfo) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.metainfo_);
+  }
+  _impl_.metainfo_ = metainfo;
+  if (metainfo) {
     
   } else {
     
   }
-  _impl_.message_.SetAllocated(message, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.message_.IsDefault()) {
-    _impl_.message_.Set("", GetArenaForAllocation());
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.GetUserPermissionGroupResponse.metaInfo)
+}
+inline ::proto::ResponseMetaInfoV1* GetUserPermissionGroupResponse::release_metainfo() {
+  
+  ::proto::ResponseMetaInfoV1* temp = _impl_.metainfo_;
+  _impl_.metainfo_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
   }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:proto.GetUserPermissionGroupResponse.Message)
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::proto::ResponseMetaInfoV1* GetUserPermissionGroupResponse::unsafe_arena_release_metainfo() {
+  // @@protoc_insertion_point(field_release:proto.GetUserPermissionGroupResponse.metaInfo)
+  
+  ::proto::ResponseMetaInfoV1* temp = _impl_.metainfo_;
+  _impl_.metainfo_ = nullptr;
+  return temp;
+}
+inline ::proto::ResponseMetaInfoV1* GetUserPermissionGroupResponse::_internal_mutable_metainfo() {
+  
+  if (_impl_.metainfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::ResponseMetaInfoV1>(GetArenaForAllocation());
+    _impl_.metainfo_ = p;
+  }
+  return _impl_.metainfo_;
+}
+inline ::proto::ResponseMetaInfoV1* GetUserPermissionGroupResponse::mutable_metainfo() {
+  ::proto::ResponseMetaInfoV1* _msg = _internal_mutable_metainfo();
+  // @@protoc_insertion_point(field_mutable:proto.GetUserPermissionGroupResponse.metaInfo)
+  return _msg;
+}
+inline void GetUserPermissionGroupResponse::set_allocated_metainfo(::proto::ResponseMetaInfoV1* metainfo) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.metainfo_);
+  }
+  if (metainfo) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(metainfo));
+    if (message_arena != submessage_arena) {
+      metainfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, metainfo, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  _impl_.metainfo_ = metainfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.GetUserPermissionGroupResponse.metaInfo)
 }
 
-// .proto.PermissionGroupMetaInfoV1 PermissionGroup = 3;
+// .proto.PermissionGroupMetaInfoV1 PermissionGroup = 2;
 inline bool GetUserPermissionGroupResponse::_internal_has_permissiongroup() const {
   return this != internal_default_instance() && _impl_.permissiongroup_ != nullptr;
 }
@@ -8752,77 +8607,92 @@ inline void GetUserPermissionGroupResponse::set_allocated_permissiongroup(::prot
 
 // GetPermissionGroupResponse
 
-// bool status = 1;
-inline void GetPermissionGroupResponse::clear_status() {
-  _impl_.status_ = false;
+// .proto.ResponseMetaInfoV1 metaInfo = 1;
+inline bool GetPermissionGroupResponse::_internal_has_metainfo() const {
+  return this != internal_default_instance() && _impl_.metainfo_ != nullptr;
 }
-inline bool GetPermissionGroupResponse::_internal_status() const {
-  return _impl_.status_;
+inline bool GetPermissionGroupResponse::has_metainfo() const {
+  return _internal_has_metainfo();
 }
-inline bool GetPermissionGroupResponse::status() const {
-  // @@protoc_insertion_point(field_get:proto.GetPermissionGroupResponse.status)
-  return _internal_status();
+inline const ::proto::ResponseMetaInfoV1& GetPermissionGroupResponse::_internal_metainfo() const {
+  const ::proto::ResponseMetaInfoV1* p = _impl_.metainfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::ResponseMetaInfoV1&>(
+      ::proto::_ResponseMetaInfoV1_default_instance_);
 }
-inline void GetPermissionGroupResponse::_internal_set_status(bool value) {
-  
-  _impl_.status_ = value;
+inline const ::proto::ResponseMetaInfoV1& GetPermissionGroupResponse::metainfo() const {
+  // @@protoc_insertion_point(field_get:proto.GetPermissionGroupResponse.metaInfo)
+  return _internal_metainfo();
 }
-inline void GetPermissionGroupResponse::set_status(bool value) {
-  _internal_set_status(value);
-  // @@protoc_insertion_point(field_set:proto.GetPermissionGroupResponse.status)
-}
-
-// string Message = 2;
-inline void GetPermissionGroupResponse::clear_message() {
-  _impl_.message_.ClearToEmpty();
-}
-inline const std::string& GetPermissionGroupResponse::message() const {
-  // @@protoc_insertion_point(field_get:proto.GetPermissionGroupResponse.Message)
-  return _internal_message();
-}
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void GetPermissionGroupResponse::set_message(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.message_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:proto.GetPermissionGroupResponse.Message)
-}
-inline std::string* GetPermissionGroupResponse::mutable_message() {
-  std::string* _s = _internal_mutable_message();
-  // @@protoc_insertion_point(field_mutable:proto.GetPermissionGroupResponse.Message)
-  return _s;
-}
-inline const std::string& GetPermissionGroupResponse::_internal_message() const {
-  return _impl_.message_.Get();
-}
-inline void GetPermissionGroupResponse::_internal_set_message(const std::string& value) {
-  
-  _impl_.message_.Set(value, GetArenaForAllocation());
-}
-inline std::string* GetPermissionGroupResponse::_internal_mutable_message() {
-  
-  return _impl_.message_.Mutable(GetArenaForAllocation());
-}
-inline std::string* GetPermissionGroupResponse::release_message() {
-  // @@protoc_insertion_point(field_release:proto.GetPermissionGroupResponse.Message)
-  return _impl_.message_.Release();
-}
-inline void GetPermissionGroupResponse::set_allocated_message(std::string* message) {
-  if (message != nullptr) {
+inline void GetPermissionGroupResponse::unsafe_arena_set_allocated_metainfo(
+    ::proto::ResponseMetaInfoV1* metainfo) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.metainfo_);
+  }
+  _impl_.metainfo_ = metainfo;
+  if (metainfo) {
     
   } else {
     
   }
-  _impl_.message_.SetAllocated(message, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.message_.IsDefault()) {
-    _impl_.message_.Set("", GetArenaForAllocation());
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.GetPermissionGroupResponse.metaInfo)
+}
+inline ::proto::ResponseMetaInfoV1* GetPermissionGroupResponse::release_metainfo() {
+  
+  ::proto::ResponseMetaInfoV1* temp = _impl_.metainfo_;
+  _impl_.metainfo_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
   }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:proto.GetPermissionGroupResponse.Message)
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::proto::ResponseMetaInfoV1* GetPermissionGroupResponse::unsafe_arena_release_metainfo() {
+  // @@protoc_insertion_point(field_release:proto.GetPermissionGroupResponse.metaInfo)
+  
+  ::proto::ResponseMetaInfoV1* temp = _impl_.metainfo_;
+  _impl_.metainfo_ = nullptr;
+  return temp;
+}
+inline ::proto::ResponseMetaInfoV1* GetPermissionGroupResponse::_internal_mutable_metainfo() {
+  
+  if (_impl_.metainfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::ResponseMetaInfoV1>(GetArenaForAllocation());
+    _impl_.metainfo_ = p;
+  }
+  return _impl_.metainfo_;
+}
+inline ::proto::ResponseMetaInfoV1* GetPermissionGroupResponse::mutable_metainfo() {
+  ::proto::ResponseMetaInfoV1* _msg = _internal_mutable_metainfo();
+  // @@protoc_insertion_point(field_mutable:proto.GetPermissionGroupResponse.metaInfo)
+  return _msg;
+}
+inline void GetPermissionGroupResponse::set_allocated_metainfo(::proto::ResponseMetaInfoV1* metainfo) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.metainfo_);
+  }
+  if (metainfo) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(metainfo));
+    if (message_arena != submessage_arena) {
+      metainfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, metainfo, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  _impl_.metainfo_ = metainfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.GetPermissionGroupResponse.metaInfo)
 }
 
-// .proto.PermissionGroupMetaInfoV1 PermissionGroup = 3;
+// .proto.PermissionGroupMetaInfoV1 PermissionGroup = 2;
 inline bool GetPermissionGroupResponse::_internal_has_permissiongroup() const {
   return this != internal_default_instance() && _impl_.permissiongroup_ != nullptr;
 }
@@ -8911,77 +8781,92 @@ inline void GetPermissionGroupResponse::set_allocated_permissiongroup(::proto::P
 
 // GetAllPermissionGroupResponse
 
-// bool status = 1;
-inline void GetAllPermissionGroupResponse::clear_status() {
-  _impl_.status_ = false;
+// .proto.ResponseMetaInfoV1 metaInfo = 1;
+inline bool GetAllPermissionGroupResponse::_internal_has_metainfo() const {
+  return this != internal_default_instance() && _impl_.metainfo_ != nullptr;
 }
-inline bool GetAllPermissionGroupResponse::_internal_status() const {
-  return _impl_.status_;
+inline bool GetAllPermissionGroupResponse::has_metainfo() const {
+  return _internal_has_metainfo();
 }
-inline bool GetAllPermissionGroupResponse::status() const {
-  // @@protoc_insertion_point(field_get:proto.GetAllPermissionGroupResponse.status)
-  return _internal_status();
+inline const ::proto::ResponseMetaInfoV1& GetAllPermissionGroupResponse::_internal_metainfo() const {
+  const ::proto::ResponseMetaInfoV1* p = _impl_.metainfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::ResponseMetaInfoV1&>(
+      ::proto::_ResponseMetaInfoV1_default_instance_);
 }
-inline void GetAllPermissionGroupResponse::_internal_set_status(bool value) {
-  
-  _impl_.status_ = value;
+inline const ::proto::ResponseMetaInfoV1& GetAllPermissionGroupResponse::metainfo() const {
+  // @@protoc_insertion_point(field_get:proto.GetAllPermissionGroupResponse.metaInfo)
+  return _internal_metainfo();
 }
-inline void GetAllPermissionGroupResponse::set_status(bool value) {
-  _internal_set_status(value);
-  // @@protoc_insertion_point(field_set:proto.GetAllPermissionGroupResponse.status)
-}
-
-// string Message = 2;
-inline void GetAllPermissionGroupResponse::clear_message() {
-  _impl_.message_.ClearToEmpty();
-}
-inline const std::string& GetAllPermissionGroupResponse::message() const {
-  // @@protoc_insertion_point(field_get:proto.GetAllPermissionGroupResponse.Message)
-  return _internal_message();
-}
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void GetAllPermissionGroupResponse::set_message(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.message_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:proto.GetAllPermissionGroupResponse.Message)
-}
-inline std::string* GetAllPermissionGroupResponse::mutable_message() {
-  std::string* _s = _internal_mutable_message();
-  // @@protoc_insertion_point(field_mutable:proto.GetAllPermissionGroupResponse.Message)
-  return _s;
-}
-inline const std::string& GetAllPermissionGroupResponse::_internal_message() const {
-  return _impl_.message_.Get();
-}
-inline void GetAllPermissionGroupResponse::_internal_set_message(const std::string& value) {
-  
-  _impl_.message_.Set(value, GetArenaForAllocation());
-}
-inline std::string* GetAllPermissionGroupResponse::_internal_mutable_message() {
-  
-  return _impl_.message_.Mutable(GetArenaForAllocation());
-}
-inline std::string* GetAllPermissionGroupResponse::release_message() {
-  // @@protoc_insertion_point(field_release:proto.GetAllPermissionGroupResponse.Message)
-  return _impl_.message_.Release();
-}
-inline void GetAllPermissionGroupResponse::set_allocated_message(std::string* message) {
-  if (message != nullptr) {
+inline void GetAllPermissionGroupResponse::unsafe_arena_set_allocated_metainfo(
+    ::proto::ResponseMetaInfoV1* metainfo) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.metainfo_);
+  }
+  _impl_.metainfo_ = metainfo;
+  if (metainfo) {
     
   } else {
     
   }
-  _impl_.message_.SetAllocated(message, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.message_.IsDefault()) {
-    _impl_.message_.Set("", GetArenaForAllocation());
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.GetAllPermissionGroupResponse.metaInfo)
+}
+inline ::proto::ResponseMetaInfoV1* GetAllPermissionGroupResponse::release_metainfo() {
+  
+  ::proto::ResponseMetaInfoV1* temp = _impl_.metainfo_;
+  _impl_.metainfo_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
   }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:proto.GetAllPermissionGroupResponse.Message)
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::proto::ResponseMetaInfoV1* GetAllPermissionGroupResponse::unsafe_arena_release_metainfo() {
+  // @@protoc_insertion_point(field_release:proto.GetAllPermissionGroupResponse.metaInfo)
+  
+  ::proto::ResponseMetaInfoV1* temp = _impl_.metainfo_;
+  _impl_.metainfo_ = nullptr;
+  return temp;
+}
+inline ::proto::ResponseMetaInfoV1* GetAllPermissionGroupResponse::_internal_mutable_metainfo() {
+  
+  if (_impl_.metainfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::ResponseMetaInfoV1>(GetArenaForAllocation());
+    _impl_.metainfo_ = p;
+  }
+  return _impl_.metainfo_;
+}
+inline ::proto::ResponseMetaInfoV1* GetAllPermissionGroupResponse::mutable_metainfo() {
+  ::proto::ResponseMetaInfoV1* _msg = _internal_mutable_metainfo();
+  // @@protoc_insertion_point(field_mutable:proto.GetAllPermissionGroupResponse.metaInfo)
+  return _msg;
+}
+inline void GetAllPermissionGroupResponse::set_allocated_metainfo(::proto::ResponseMetaInfoV1* metainfo) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.metainfo_);
+  }
+  if (metainfo) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(metainfo));
+    if (message_arena != submessage_arena) {
+      metainfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, metainfo, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  _impl_.metainfo_ = metainfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.GetAllPermissionGroupResponse.metaInfo)
 }
 
-// repeated .proto.PermissionGroupMetaInfoV1 PermissionGroupList = 3;
+// repeated .proto.PermissionGroupMetaInfoV1 PermissionGroupList = 2;
 inline int GetAllPermissionGroupResponse::_internal_permissiongrouplist_size() const {
   return _impl_.permissiongrouplist_.size();
 }
@@ -9022,151 +8907,181 @@ GetAllPermissionGroupResponse::permissiongrouplist() const {
 
 // ChangeUserPermissionGroupResponse
 
-// bool status = 1;
-inline void ChangeUserPermissionGroupResponse::clear_status() {
-  _impl_.status_ = false;
+// .proto.ResponseMetaInfoV1 metaInfo = 1;
+inline bool ChangeUserPermissionGroupResponse::_internal_has_metainfo() const {
+  return this != internal_default_instance() && _impl_.metainfo_ != nullptr;
 }
-inline bool ChangeUserPermissionGroupResponse::_internal_status() const {
-  return _impl_.status_;
+inline bool ChangeUserPermissionGroupResponse::has_metainfo() const {
+  return _internal_has_metainfo();
 }
-inline bool ChangeUserPermissionGroupResponse::status() const {
-  // @@protoc_insertion_point(field_get:proto.ChangeUserPermissionGroupResponse.status)
-  return _internal_status();
+inline const ::proto::ResponseMetaInfoV1& ChangeUserPermissionGroupResponse::_internal_metainfo() const {
+  const ::proto::ResponseMetaInfoV1* p = _impl_.metainfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::ResponseMetaInfoV1&>(
+      ::proto::_ResponseMetaInfoV1_default_instance_);
 }
-inline void ChangeUserPermissionGroupResponse::_internal_set_status(bool value) {
-  
-  _impl_.status_ = value;
+inline const ::proto::ResponseMetaInfoV1& ChangeUserPermissionGroupResponse::metainfo() const {
+  // @@protoc_insertion_point(field_get:proto.ChangeUserPermissionGroupResponse.metaInfo)
+  return _internal_metainfo();
 }
-inline void ChangeUserPermissionGroupResponse::set_status(bool value) {
-  _internal_set_status(value);
-  // @@protoc_insertion_point(field_set:proto.ChangeUserPermissionGroupResponse.status)
-}
-
-// string Message = 2;
-inline void ChangeUserPermissionGroupResponse::clear_message() {
-  _impl_.message_.ClearToEmpty();
-}
-inline const std::string& ChangeUserPermissionGroupResponse::message() const {
-  // @@protoc_insertion_point(field_get:proto.ChangeUserPermissionGroupResponse.Message)
-  return _internal_message();
-}
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void ChangeUserPermissionGroupResponse::set_message(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.message_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:proto.ChangeUserPermissionGroupResponse.Message)
-}
-inline std::string* ChangeUserPermissionGroupResponse::mutable_message() {
-  std::string* _s = _internal_mutable_message();
-  // @@protoc_insertion_point(field_mutable:proto.ChangeUserPermissionGroupResponse.Message)
-  return _s;
-}
-inline const std::string& ChangeUserPermissionGroupResponse::_internal_message() const {
-  return _impl_.message_.Get();
-}
-inline void ChangeUserPermissionGroupResponse::_internal_set_message(const std::string& value) {
-  
-  _impl_.message_.Set(value, GetArenaForAllocation());
-}
-inline std::string* ChangeUserPermissionGroupResponse::_internal_mutable_message() {
-  
-  return _impl_.message_.Mutable(GetArenaForAllocation());
-}
-inline std::string* ChangeUserPermissionGroupResponse::release_message() {
-  // @@protoc_insertion_point(field_release:proto.ChangeUserPermissionGroupResponse.Message)
-  return _impl_.message_.Release();
-}
-inline void ChangeUserPermissionGroupResponse::set_allocated_message(std::string* message) {
-  if (message != nullptr) {
+inline void ChangeUserPermissionGroupResponse::unsafe_arena_set_allocated_metainfo(
+    ::proto::ResponseMetaInfoV1* metainfo) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.metainfo_);
+  }
+  _impl_.metainfo_ = metainfo;
+  if (metainfo) {
     
   } else {
     
   }
-  _impl_.message_.SetAllocated(message, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.message_.IsDefault()) {
-    _impl_.message_.Set("", GetArenaForAllocation());
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.ChangeUserPermissionGroupResponse.metaInfo)
+}
+inline ::proto::ResponseMetaInfoV1* ChangeUserPermissionGroupResponse::release_metainfo() {
+  
+  ::proto::ResponseMetaInfoV1* temp = _impl_.metainfo_;
+  _impl_.metainfo_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
   }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:proto.ChangeUserPermissionGroupResponse.Message)
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::proto::ResponseMetaInfoV1* ChangeUserPermissionGroupResponse::unsafe_arena_release_metainfo() {
+  // @@protoc_insertion_point(field_release:proto.ChangeUserPermissionGroupResponse.metaInfo)
+  
+  ::proto::ResponseMetaInfoV1* temp = _impl_.metainfo_;
+  _impl_.metainfo_ = nullptr;
+  return temp;
+}
+inline ::proto::ResponseMetaInfoV1* ChangeUserPermissionGroupResponse::_internal_mutable_metainfo() {
+  
+  if (_impl_.metainfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::ResponseMetaInfoV1>(GetArenaForAllocation());
+    _impl_.metainfo_ = p;
+  }
+  return _impl_.metainfo_;
+}
+inline ::proto::ResponseMetaInfoV1* ChangeUserPermissionGroupResponse::mutable_metainfo() {
+  ::proto::ResponseMetaInfoV1* _msg = _internal_mutable_metainfo();
+  // @@protoc_insertion_point(field_mutable:proto.ChangeUserPermissionGroupResponse.metaInfo)
+  return _msg;
+}
+inline void ChangeUserPermissionGroupResponse::set_allocated_metainfo(::proto::ResponseMetaInfoV1* metainfo) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.metainfo_);
+  }
+  if (metainfo) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(metainfo));
+    if (message_arena != submessage_arena) {
+      metainfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, metainfo, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  _impl_.metainfo_ = metainfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.ChangeUserPermissionGroupResponse.metaInfo)
 }
 
 // -------------------------------------------------------------------
 
 // CreateProjectResponse
 
-// bool status = 1;
-inline void CreateProjectResponse::clear_status() {
-  _impl_.status_ = false;
+// .proto.ResponseMetaInfoV1 metaInfo = 1;
+inline bool CreateProjectResponse::_internal_has_metainfo() const {
+  return this != internal_default_instance() && _impl_.metainfo_ != nullptr;
 }
-inline bool CreateProjectResponse::_internal_status() const {
-  return _impl_.status_;
+inline bool CreateProjectResponse::has_metainfo() const {
+  return _internal_has_metainfo();
 }
-inline bool CreateProjectResponse::status() const {
-  // @@protoc_insertion_point(field_get:proto.CreateProjectResponse.status)
-  return _internal_status();
+inline const ::proto::ResponseMetaInfoV1& CreateProjectResponse::_internal_metainfo() const {
+  const ::proto::ResponseMetaInfoV1* p = _impl_.metainfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::ResponseMetaInfoV1&>(
+      ::proto::_ResponseMetaInfoV1_default_instance_);
 }
-inline void CreateProjectResponse::_internal_set_status(bool value) {
-  
-  _impl_.status_ = value;
+inline const ::proto::ResponseMetaInfoV1& CreateProjectResponse::metainfo() const {
+  // @@protoc_insertion_point(field_get:proto.CreateProjectResponse.metaInfo)
+  return _internal_metainfo();
 }
-inline void CreateProjectResponse::set_status(bool value) {
-  _internal_set_status(value);
-  // @@protoc_insertion_point(field_set:proto.CreateProjectResponse.status)
-}
-
-// string Message = 2;
-inline void CreateProjectResponse::clear_message() {
-  _impl_.message_.ClearToEmpty();
-}
-inline const std::string& CreateProjectResponse::message() const {
-  // @@protoc_insertion_point(field_get:proto.CreateProjectResponse.Message)
-  return _internal_message();
-}
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void CreateProjectResponse::set_message(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.message_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:proto.CreateProjectResponse.Message)
-}
-inline std::string* CreateProjectResponse::mutable_message() {
-  std::string* _s = _internal_mutable_message();
-  // @@protoc_insertion_point(field_mutable:proto.CreateProjectResponse.Message)
-  return _s;
-}
-inline const std::string& CreateProjectResponse::_internal_message() const {
-  return _impl_.message_.Get();
-}
-inline void CreateProjectResponse::_internal_set_message(const std::string& value) {
-  
-  _impl_.message_.Set(value, GetArenaForAllocation());
-}
-inline std::string* CreateProjectResponse::_internal_mutable_message() {
-  
-  return _impl_.message_.Mutable(GetArenaForAllocation());
-}
-inline std::string* CreateProjectResponse::release_message() {
-  // @@protoc_insertion_point(field_release:proto.CreateProjectResponse.Message)
-  return _impl_.message_.Release();
-}
-inline void CreateProjectResponse::set_allocated_message(std::string* message) {
-  if (message != nullptr) {
+inline void CreateProjectResponse::unsafe_arena_set_allocated_metainfo(
+    ::proto::ResponseMetaInfoV1* metainfo) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.metainfo_);
+  }
+  _impl_.metainfo_ = metainfo;
+  if (metainfo) {
     
   } else {
     
   }
-  _impl_.message_.SetAllocated(message, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.message_.IsDefault()) {
-    _impl_.message_.Set("", GetArenaForAllocation());
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.CreateProjectResponse.metaInfo)
+}
+inline ::proto::ResponseMetaInfoV1* CreateProjectResponse::release_metainfo() {
+  
+  ::proto::ResponseMetaInfoV1* temp = _impl_.metainfo_;
+  _impl_.metainfo_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
   }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:proto.CreateProjectResponse.Message)
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::proto::ResponseMetaInfoV1* CreateProjectResponse::unsafe_arena_release_metainfo() {
+  // @@protoc_insertion_point(field_release:proto.CreateProjectResponse.metaInfo)
+  
+  ::proto::ResponseMetaInfoV1* temp = _impl_.metainfo_;
+  _impl_.metainfo_ = nullptr;
+  return temp;
+}
+inline ::proto::ResponseMetaInfoV1* CreateProjectResponse::_internal_mutable_metainfo() {
+  
+  if (_impl_.metainfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::ResponseMetaInfoV1>(GetArenaForAllocation());
+    _impl_.metainfo_ = p;
+  }
+  return _impl_.metainfo_;
+}
+inline ::proto::ResponseMetaInfoV1* CreateProjectResponse::mutable_metainfo() {
+  ::proto::ResponseMetaInfoV1* _msg = _internal_mutable_metainfo();
+  // @@protoc_insertion_point(field_mutable:proto.CreateProjectResponse.metaInfo)
+  return _msg;
+}
+inline void CreateProjectResponse::set_allocated_metainfo(::proto::ResponseMetaInfoV1* metainfo) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.metainfo_);
+  }
+  if (metainfo) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(metainfo));
+    if (message_arena != submessage_arena) {
+      metainfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, metainfo, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  _impl_.metainfo_ = metainfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.CreateProjectResponse.metaInfo)
 }
 
-// .proto.ProjectMetaInfoV1 ProjectInfo = 3;
+// .proto.ProjectMetaInfoV1 ProjectInfo = 2;
 inline bool CreateProjectResponse::_internal_has_projectinfo() const {
   return this != internal_default_instance() && _impl_.projectinfo_ != nullptr;
 }
@@ -9255,77 +9170,92 @@ inline void CreateProjectResponse::set_allocated_projectinfo(::proto::ProjectMet
 
 // DeleteProjectResponse
 
-// bool status = 1;
-inline void DeleteProjectResponse::clear_status() {
-  _impl_.status_ = false;
+// .proto.ResponseMetaInfoV1 metaInfo = 1;
+inline bool DeleteProjectResponse::_internal_has_metainfo() const {
+  return this != internal_default_instance() && _impl_.metainfo_ != nullptr;
 }
-inline bool DeleteProjectResponse::_internal_status() const {
-  return _impl_.status_;
+inline bool DeleteProjectResponse::has_metainfo() const {
+  return _internal_has_metainfo();
 }
-inline bool DeleteProjectResponse::status() const {
-  // @@protoc_insertion_point(field_get:proto.DeleteProjectResponse.status)
-  return _internal_status();
+inline const ::proto::ResponseMetaInfoV1& DeleteProjectResponse::_internal_metainfo() const {
+  const ::proto::ResponseMetaInfoV1* p = _impl_.metainfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::ResponseMetaInfoV1&>(
+      ::proto::_ResponseMetaInfoV1_default_instance_);
 }
-inline void DeleteProjectResponse::_internal_set_status(bool value) {
-  
-  _impl_.status_ = value;
+inline const ::proto::ResponseMetaInfoV1& DeleteProjectResponse::metainfo() const {
+  // @@protoc_insertion_point(field_get:proto.DeleteProjectResponse.metaInfo)
+  return _internal_metainfo();
 }
-inline void DeleteProjectResponse::set_status(bool value) {
-  _internal_set_status(value);
-  // @@protoc_insertion_point(field_set:proto.DeleteProjectResponse.status)
-}
-
-// string Message = 2;
-inline void DeleteProjectResponse::clear_message() {
-  _impl_.message_.ClearToEmpty();
-}
-inline const std::string& DeleteProjectResponse::message() const {
-  // @@protoc_insertion_point(field_get:proto.DeleteProjectResponse.Message)
-  return _internal_message();
-}
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void DeleteProjectResponse::set_message(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.message_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:proto.DeleteProjectResponse.Message)
-}
-inline std::string* DeleteProjectResponse::mutable_message() {
-  std::string* _s = _internal_mutable_message();
-  // @@protoc_insertion_point(field_mutable:proto.DeleteProjectResponse.Message)
-  return _s;
-}
-inline const std::string& DeleteProjectResponse::_internal_message() const {
-  return _impl_.message_.Get();
-}
-inline void DeleteProjectResponse::_internal_set_message(const std::string& value) {
-  
-  _impl_.message_.Set(value, GetArenaForAllocation());
-}
-inline std::string* DeleteProjectResponse::_internal_mutable_message() {
-  
-  return _impl_.message_.Mutable(GetArenaForAllocation());
-}
-inline std::string* DeleteProjectResponse::release_message() {
-  // @@protoc_insertion_point(field_release:proto.DeleteProjectResponse.Message)
-  return _impl_.message_.Release();
-}
-inline void DeleteProjectResponse::set_allocated_message(std::string* message) {
-  if (message != nullptr) {
+inline void DeleteProjectResponse::unsafe_arena_set_allocated_metainfo(
+    ::proto::ResponseMetaInfoV1* metainfo) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.metainfo_);
+  }
+  _impl_.metainfo_ = metainfo;
+  if (metainfo) {
     
   } else {
     
   }
-  _impl_.message_.SetAllocated(message, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.message_.IsDefault()) {
-    _impl_.message_.Set("", GetArenaForAllocation());
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.DeleteProjectResponse.metaInfo)
+}
+inline ::proto::ResponseMetaInfoV1* DeleteProjectResponse::release_metainfo() {
+  
+  ::proto::ResponseMetaInfoV1* temp = _impl_.metainfo_;
+  _impl_.metainfo_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
   }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:proto.DeleteProjectResponse.Message)
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::proto::ResponseMetaInfoV1* DeleteProjectResponse::unsafe_arena_release_metainfo() {
+  // @@protoc_insertion_point(field_release:proto.DeleteProjectResponse.metaInfo)
+  
+  ::proto::ResponseMetaInfoV1* temp = _impl_.metainfo_;
+  _impl_.metainfo_ = nullptr;
+  return temp;
+}
+inline ::proto::ResponseMetaInfoV1* DeleteProjectResponse::_internal_mutable_metainfo() {
+  
+  if (_impl_.metainfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::ResponseMetaInfoV1>(GetArenaForAllocation());
+    _impl_.metainfo_ = p;
+  }
+  return _impl_.metainfo_;
+}
+inline ::proto::ResponseMetaInfoV1* DeleteProjectResponse::mutable_metainfo() {
+  ::proto::ResponseMetaInfoV1* _msg = _internal_mutable_metainfo();
+  // @@protoc_insertion_point(field_mutable:proto.DeleteProjectResponse.metaInfo)
+  return _msg;
+}
+inline void DeleteProjectResponse::set_allocated_metainfo(::proto::ResponseMetaInfoV1* metainfo) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.metainfo_);
+  }
+  if (metainfo) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(metainfo));
+    if (message_arena != submessage_arena) {
+      metainfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, metainfo, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  _impl_.metainfo_ = metainfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.DeleteProjectResponse.metaInfo)
 }
 
-// .proto.ProjectMetaInfoV1 ProjectInfo = 3;
+// .proto.ProjectMetaInfoV1 ProjectInfo = 2;
 inline bool DeleteProjectResponse::_internal_has_projectinfo() const {
   return this != internal_default_instance() && _impl_.projectinfo_ != nullptr;
 }
@@ -9414,77 +9344,92 @@ inline void DeleteProjectResponse::set_allocated_projectinfo(::proto::ProjectMet
 
 // UpdateProjectResponse
 
-// bool status = 1;
-inline void UpdateProjectResponse::clear_status() {
-  _impl_.status_ = false;
+// .proto.ResponseMetaInfoV1 metaInfo = 1;
+inline bool UpdateProjectResponse::_internal_has_metainfo() const {
+  return this != internal_default_instance() && _impl_.metainfo_ != nullptr;
 }
-inline bool UpdateProjectResponse::_internal_status() const {
-  return _impl_.status_;
+inline bool UpdateProjectResponse::has_metainfo() const {
+  return _internal_has_metainfo();
 }
-inline bool UpdateProjectResponse::status() const {
-  // @@protoc_insertion_point(field_get:proto.UpdateProjectResponse.status)
-  return _internal_status();
+inline const ::proto::ResponseMetaInfoV1& UpdateProjectResponse::_internal_metainfo() const {
+  const ::proto::ResponseMetaInfoV1* p = _impl_.metainfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::ResponseMetaInfoV1&>(
+      ::proto::_ResponseMetaInfoV1_default_instance_);
 }
-inline void UpdateProjectResponse::_internal_set_status(bool value) {
-  
-  _impl_.status_ = value;
+inline const ::proto::ResponseMetaInfoV1& UpdateProjectResponse::metainfo() const {
+  // @@protoc_insertion_point(field_get:proto.UpdateProjectResponse.metaInfo)
+  return _internal_metainfo();
 }
-inline void UpdateProjectResponse::set_status(bool value) {
-  _internal_set_status(value);
-  // @@protoc_insertion_point(field_set:proto.UpdateProjectResponse.status)
-}
-
-// string Message = 2;
-inline void UpdateProjectResponse::clear_message() {
-  _impl_.message_.ClearToEmpty();
-}
-inline const std::string& UpdateProjectResponse::message() const {
-  // @@protoc_insertion_point(field_get:proto.UpdateProjectResponse.Message)
-  return _internal_message();
-}
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void UpdateProjectResponse::set_message(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.message_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:proto.UpdateProjectResponse.Message)
-}
-inline std::string* UpdateProjectResponse::mutable_message() {
-  std::string* _s = _internal_mutable_message();
-  // @@protoc_insertion_point(field_mutable:proto.UpdateProjectResponse.Message)
-  return _s;
-}
-inline const std::string& UpdateProjectResponse::_internal_message() const {
-  return _impl_.message_.Get();
-}
-inline void UpdateProjectResponse::_internal_set_message(const std::string& value) {
-  
-  _impl_.message_.Set(value, GetArenaForAllocation());
-}
-inline std::string* UpdateProjectResponse::_internal_mutable_message() {
-  
-  return _impl_.message_.Mutable(GetArenaForAllocation());
-}
-inline std::string* UpdateProjectResponse::release_message() {
-  // @@protoc_insertion_point(field_release:proto.UpdateProjectResponse.Message)
-  return _impl_.message_.Release();
-}
-inline void UpdateProjectResponse::set_allocated_message(std::string* message) {
-  if (message != nullptr) {
+inline void UpdateProjectResponse::unsafe_arena_set_allocated_metainfo(
+    ::proto::ResponseMetaInfoV1* metainfo) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.metainfo_);
+  }
+  _impl_.metainfo_ = metainfo;
+  if (metainfo) {
     
   } else {
     
   }
-  _impl_.message_.SetAllocated(message, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.message_.IsDefault()) {
-    _impl_.message_.Set("", GetArenaForAllocation());
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.UpdateProjectResponse.metaInfo)
+}
+inline ::proto::ResponseMetaInfoV1* UpdateProjectResponse::release_metainfo() {
+  
+  ::proto::ResponseMetaInfoV1* temp = _impl_.metainfo_;
+  _impl_.metainfo_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
   }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:proto.UpdateProjectResponse.Message)
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::proto::ResponseMetaInfoV1* UpdateProjectResponse::unsafe_arena_release_metainfo() {
+  // @@protoc_insertion_point(field_release:proto.UpdateProjectResponse.metaInfo)
+  
+  ::proto::ResponseMetaInfoV1* temp = _impl_.metainfo_;
+  _impl_.metainfo_ = nullptr;
+  return temp;
+}
+inline ::proto::ResponseMetaInfoV1* UpdateProjectResponse::_internal_mutable_metainfo() {
+  
+  if (_impl_.metainfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::ResponseMetaInfoV1>(GetArenaForAllocation());
+    _impl_.metainfo_ = p;
+  }
+  return _impl_.metainfo_;
+}
+inline ::proto::ResponseMetaInfoV1* UpdateProjectResponse::mutable_metainfo() {
+  ::proto::ResponseMetaInfoV1* _msg = _internal_mutable_metainfo();
+  // @@protoc_insertion_point(field_mutable:proto.UpdateProjectResponse.metaInfo)
+  return _msg;
+}
+inline void UpdateProjectResponse::set_allocated_metainfo(::proto::ResponseMetaInfoV1* metainfo) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.metainfo_);
+  }
+  if (metainfo) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(metainfo));
+    if (message_arena != submessage_arena) {
+      metainfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, metainfo, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  _impl_.metainfo_ = metainfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.UpdateProjectResponse.metaInfo)
 }
 
-// .proto.ProjectMetaInfoV1 ProjectInfo = 3;
+// .proto.ProjectMetaInfoV1 ProjectInfo = 2;
 inline bool UpdateProjectResponse::_internal_has_projectinfo() const {
   return this != internal_default_instance() && _impl_.projectinfo_ != nullptr;
 }
@@ -9573,77 +9518,92 @@ inline void UpdateProjectResponse::set_allocated_projectinfo(::proto::ProjectMet
 
 // GetProjectResponse
 
-// bool status = 1;
-inline void GetProjectResponse::clear_status() {
-  _impl_.status_ = false;
+// .proto.ResponseMetaInfoV1 metaInfo = 1;
+inline bool GetProjectResponse::_internal_has_metainfo() const {
+  return this != internal_default_instance() && _impl_.metainfo_ != nullptr;
 }
-inline bool GetProjectResponse::_internal_status() const {
-  return _impl_.status_;
+inline bool GetProjectResponse::has_metainfo() const {
+  return _internal_has_metainfo();
 }
-inline bool GetProjectResponse::status() const {
-  // @@protoc_insertion_point(field_get:proto.GetProjectResponse.status)
-  return _internal_status();
+inline const ::proto::ResponseMetaInfoV1& GetProjectResponse::_internal_metainfo() const {
+  const ::proto::ResponseMetaInfoV1* p = _impl_.metainfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::ResponseMetaInfoV1&>(
+      ::proto::_ResponseMetaInfoV1_default_instance_);
 }
-inline void GetProjectResponse::_internal_set_status(bool value) {
-  
-  _impl_.status_ = value;
+inline const ::proto::ResponseMetaInfoV1& GetProjectResponse::metainfo() const {
+  // @@protoc_insertion_point(field_get:proto.GetProjectResponse.metaInfo)
+  return _internal_metainfo();
 }
-inline void GetProjectResponse::set_status(bool value) {
-  _internal_set_status(value);
-  // @@protoc_insertion_point(field_set:proto.GetProjectResponse.status)
-}
-
-// string Message = 2;
-inline void GetProjectResponse::clear_message() {
-  _impl_.message_.ClearToEmpty();
-}
-inline const std::string& GetProjectResponse::message() const {
-  // @@protoc_insertion_point(field_get:proto.GetProjectResponse.Message)
-  return _internal_message();
-}
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void GetProjectResponse::set_message(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.message_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:proto.GetProjectResponse.Message)
-}
-inline std::string* GetProjectResponse::mutable_message() {
-  std::string* _s = _internal_mutable_message();
-  // @@protoc_insertion_point(field_mutable:proto.GetProjectResponse.Message)
-  return _s;
-}
-inline const std::string& GetProjectResponse::_internal_message() const {
-  return _impl_.message_.Get();
-}
-inline void GetProjectResponse::_internal_set_message(const std::string& value) {
-  
-  _impl_.message_.Set(value, GetArenaForAllocation());
-}
-inline std::string* GetProjectResponse::_internal_mutable_message() {
-  
-  return _impl_.message_.Mutable(GetArenaForAllocation());
-}
-inline std::string* GetProjectResponse::release_message() {
-  // @@protoc_insertion_point(field_release:proto.GetProjectResponse.Message)
-  return _impl_.message_.Release();
-}
-inline void GetProjectResponse::set_allocated_message(std::string* message) {
-  if (message != nullptr) {
+inline void GetProjectResponse::unsafe_arena_set_allocated_metainfo(
+    ::proto::ResponseMetaInfoV1* metainfo) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.metainfo_);
+  }
+  _impl_.metainfo_ = metainfo;
+  if (metainfo) {
     
   } else {
     
   }
-  _impl_.message_.SetAllocated(message, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.message_.IsDefault()) {
-    _impl_.message_.Set("", GetArenaForAllocation());
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.GetProjectResponse.metaInfo)
+}
+inline ::proto::ResponseMetaInfoV1* GetProjectResponse::release_metainfo() {
+  
+  ::proto::ResponseMetaInfoV1* temp = _impl_.metainfo_;
+  _impl_.metainfo_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
   }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:proto.GetProjectResponse.Message)
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::proto::ResponseMetaInfoV1* GetProjectResponse::unsafe_arena_release_metainfo() {
+  // @@protoc_insertion_point(field_release:proto.GetProjectResponse.metaInfo)
+  
+  ::proto::ResponseMetaInfoV1* temp = _impl_.metainfo_;
+  _impl_.metainfo_ = nullptr;
+  return temp;
+}
+inline ::proto::ResponseMetaInfoV1* GetProjectResponse::_internal_mutable_metainfo() {
+  
+  if (_impl_.metainfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::ResponseMetaInfoV1>(GetArenaForAllocation());
+    _impl_.metainfo_ = p;
+  }
+  return _impl_.metainfo_;
+}
+inline ::proto::ResponseMetaInfoV1* GetProjectResponse::mutable_metainfo() {
+  ::proto::ResponseMetaInfoV1* _msg = _internal_mutable_metainfo();
+  // @@protoc_insertion_point(field_mutable:proto.GetProjectResponse.metaInfo)
+  return _msg;
+}
+inline void GetProjectResponse::set_allocated_metainfo(::proto::ResponseMetaInfoV1* metainfo) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.metainfo_);
+  }
+  if (metainfo) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(metainfo));
+    if (message_arena != submessage_arena) {
+      metainfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, metainfo, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  _impl_.metainfo_ = metainfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.GetProjectResponse.metaInfo)
 }
 
-// .proto.ProjectMetaInfoV1 ProjectInfo = 3;
+// .proto.ProjectMetaInfoV1 ProjectInfo = 2;
 inline bool GetProjectResponse::_internal_has_projectinfo() const {
   return this != internal_default_instance() && _impl_.projectinfo_ != nullptr;
 }
@@ -9732,77 +9692,92 @@ inline void GetProjectResponse::set_allocated_projectinfo(::proto::ProjectMetaIn
 
 // GetAllProjectResponse
 
-// bool status = 1;
-inline void GetAllProjectResponse::clear_status() {
-  _impl_.status_ = false;
+// .proto.ResponseMetaInfoV1 metaInfo = 1;
+inline bool GetAllProjectResponse::_internal_has_metainfo() const {
+  return this != internal_default_instance() && _impl_.metainfo_ != nullptr;
 }
-inline bool GetAllProjectResponse::_internal_status() const {
-  return _impl_.status_;
+inline bool GetAllProjectResponse::has_metainfo() const {
+  return _internal_has_metainfo();
 }
-inline bool GetAllProjectResponse::status() const {
-  // @@protoc_insertion_point(field_get:proto.GetAllProjectResponse.status)
-  return _internal_status();
+inline const ::proto::ResponseMetaInfoV1& GetAllProjectResponse::_internal_metainfo() const {
+  const ::proto::ResponseMetaInfoV1* p = _impl_.metainfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::ResponseMetaInfoV1&>(
+      ::proto::_ResponseMetaInfoV1_default_instance_);
 }
-inline void GetAllProjectResponse::_internal_set_status(bool value) {
-  
-  _impl_.status_ = value;
+inline const ::proto::ResponseMetaInfoV1& GetAllProjectResponse::metainfo() const {
+  // @@protoc_insertion_point(field_get:proto.GetAllProjectResponse.metaInfo)
+  return _internal_metainfo();
 }
-inline void GetAllProjectResponse::set_status(bool value) {
-  _internal_set_status(value);
-  // @@protoc_insertion_point(field_set:proto.GetAllProjectResponse.status)
-}
-
-// string Message = 2;
-inline void GetAllProjectResponse::clear_message() {
-  _impl_.message_.ClearToEmpty();
-}
-inline const std::string& GetAllProjectResponse::message() const {
-  // @@protoc_insertion_point(field_get:proto.GetAllProjectResponse.Message)
-  return _internal_message();
-}
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void GetAllProjectResponse::set_message(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.message_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:proto.GetAllProjectResponse.Message)
-}
-inline std::string* GetAllProjectResponse::mutable_message() {
-  std::string* _s = _internal_mutable_message();
-  // @@protoc_insertion_point(field_mutable:proto.GetAllProjectResponse.Message)
-  return _s;
-}
-inline const std::string& GetAllProjectResponse::_internal_message() const {
-  return _impl_.message_.Get();
-}
-inline void GetAllProjectResponse::_internal_set_message(const std::string& value) {
-  
-  _impl_.message_.Set(value, GetArenaForAllocation());
-}
-inline std::string* GetAllProjectResponse::_internal_mutable_message() {
-  
-  return _impl_.message_.Mutable(GetArenaForAllocation());
-}
-inline std::string* GetAllProjectResponse::release_message() {
-  // @@protoc_insertion_point(field_release:proto.GetAllProjectResponse.Message)
-  return _impl_.message_.Release();
-}
-inline void GetAllProjectResponse::set_allocated_message(std::string* message) {
-  if (message != nullptr) {
+inline void GetAllProjectResponse::unsafe_arena_set_allocated_metainfo(
+    ::proto::ResponseMetaInfoV1* metainfo) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.metainfo_);
+  }
+  _impl_.metainfo_ = metainfo;
+  if (metainfo) {
     
   } else {
     
   }
-  _impl_.message_.SetAllocated(message, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.message_.IsDefault()) {
-    _impl_.message_.Set("", GetArenaForAllocation());
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.GetAllProjectResponse.metaInfo)
+}
+inline ::proto::ResponseMetaInfoV1* GetAllProjectResponse::release_metainfo() {
+  
+  ::proto::ResponseMetaInfoV1* temp = _impl_.metainfo_;
+  _impl_.metainfo_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
   }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:proto.GetAllProjectResponse.Message)
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::proto::ResponseMetaInfoV1* GetAllProjectResponse::unsafe_arena_release_metainfo() {
+  // @@protoc_insertion_point(field_release:proto.GetAllProjectResponse.metaInfo)
+  
+  ::proto::ResponseMetaInfoV1* temp = _impl_.metainfo_;
+  _impl_.metainfo_ = nullptr;
+  return temp;
+}
+inline ::proto::ResponseMetaInfoV1* GetAllProjectResponse::_internal_mutable_metainfo() {
+  
+  if (_impl_.metainfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::ResponseMetaInfoV1>(GetArenaForAllocation());
+    _impl_.metainfo_ = p;
+  }
+  return _impl_.metainfo_;
+}
+inline ::proto::ResponseMetaInfoV1* GetAllProjectResponse::mutable_metainfo() {
+  ::proto::ResponseMetaInfoV1* _msg = _internal_mutable_metainfo();
+  // @@protoc_insertion_point(field_mutable:proto.GetAllProjectResponse.metaInfo)
+  return _msg;
+}
+inline void GetAllProjectResponse::set_allocated_metainfo(::proto::ResponseMetaInfoV1* metainfo) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.metainfo_);
+  }
+  if (metainfo) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(metainfo));
+    if (message_arena != submessage_arena) {
+      metainfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, metainfo, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  _impl_.metainfo_ = metainfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.GetAllProjectResponse.metaInfo)
 }
 
-// repeated .proto.ProjectMetaInfoV1 ProjectInfo = 3;
+// repeated .proto.ProjectMetaInfoV1 ProjectInfo = 2;
 inline int GetAllProjectResponse::_internal_projectinfo_size() const {
   return _impl_.projectinfo_.size();
 }
@@ -9843,77 +9818,92 @@ GetAllProjectResponse::projectinfo() const {
 
 // CreateSwcResponse
 
-// bool status = 1;
-inline void CreateSwcResponse::clear_status() {
-  _impl_.status_ = false;
+// .proto.ResponseMetaInfoV1 metaInfo = 1;
+inline bool CreateSwcResponse::_internal_has_metainfo() const {
+  return this != internal_default_instance() && _impl_.metainfo_ != nullptr;
 }
-inline bool CreateSwcResponse::_internal_status() const {
-  return _impl_.status_;
+inline bool CreateSwcResponse::has_metainfo() const {
+  return _internal_has_metainfo();
 }
-inline bool CreateSwcResponse::status() const {
-  // @@protoc_insertion_point(field_get:proto.CreateSwcResponse.status)
-  return _internal_status();
+inline const ::proto::ResponseMetaInfoV1& CreateSwcResponse::_internal_metainfo() const {
+  const ::proto::ResponseMetaInfoV1* p = _impl_.metainfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::ResponseMetaInfoV1&>(
+      ::proto::_ResponseMetaInfoV1_default_instance_);
 }
-inline void CreateSwcResponse::_internal_set_status(bool value) {
-  
-  _impl_.status_ = value;
+inline const ::proto::ResponseMetaInfoV1& CreateSwcResponse::metainfo() const {
+  // @@protoc_insertion_point(field_get:proto.CreateSwcResponse.metaInfo)
+  return _internal_metainfo();
 }
-inline void CreateSwcResponse::set_status(bool value) {
-  _internal_set_status(value);
-  // @@protoc_insertion_point(field_set:proto.CreateSwcResponse.status)
-}
-
-// string Message = 2;
-inline void CreateSwcResponse::clear_message() {
-  _impl_.message_.ClearToEmpty();
-}
-inline const std::string& CreateSwcResponse::message() const {
-  // @@protoc_insertion_point(field_get:proto.CreateSwcResponse.Message)
-  return _internal_message();
-}
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void CreateSwcResponse::set_message(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.message_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:proto.CreateSwcResponse.Message)
-}
-inline std::string* CreateSwcResponse::mutable_message() {
-  std::string* _s = _internal_mutable_message();
-  // @@protoc_insertion_point(field_mutable:proto.CreateSwcResponse.Message)
-  return _s;
-}
-inline const std::string& CreateSwcResponse::_internal_message() const {
-  return _impl_.message_.Get();
-}
-inline void CreateSwcResponse::_internal_set_message(const std::string& value) {
-  
-  _impl_.message_.Set(value, GetArenaForAllocation());
-}
-inline std::string* CreateSwcResponse::_internal_mutable_message() {
-  
-  return _impl_.message_.Mutable(GetArenaForAllocation());
-}
-inline std::string* CreateSwcResponse::release_message() {
-  // @@protoc_insertion_point(field_release:proto.CreateSwcResponse.Message)
-  return _impl_.message_.Release();
-}
-inline void CreateSwcResponse::set_allocated_message(std::string* message) {
-  if (message != nullptr) {
+inline void CreateSwcResponse::unsafe_arena_set_allocated_metainfo(
+    ::proto::ResponseMetaInfoV1* metainfo) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.metainfo_);
+  }
+  _impl_.metainfo_ = metainfo;
+  if (metainfo) {
     
   } else {
     
   }
-  _impl_.message_.SetAllocated(message, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.message_.IsDefault()) {
-    _impl_.message_.Set("", GetArenaForAllocation());
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.CreateSwcResponse.metaInfo)
+}
+inline ::proto::ResponseMetaInfoV1* CreateSwcResponse::release_metainfo() {
+  
+  ::proto::ResponseMetaInfoV1* temp = _impl_.metainfo_;
+  _impl_.metainfo_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
   }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:proto.CreateSwcResponse.Message)
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::proto::ResponseMetaInfoV1* CreateSwcResponse::unsafe_arena_release_metainfo() {
+  // @@protoc_insertion_point(field_release:proto.CreateSwcResponse.metaInfo)
+  
+  ::proto::ResponseMetaInfoV1* temp = _impl_.metainfo_;
+  _impl_.metainfo_ = nullptr;
+  return temp;
+}
+inline ::proto::ResponseMetaInfoV1* CreateSwcResponse::_internal_mutable_metainfo() {
+  
+  if (_impl_.metainfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::ResponseMetaInfoV1>(GetArenaForAllocation());
+    _impl_.metainfo_ = p;
+  }
+  return _impl_.metainfo_;
+}
+inline ::proto::ResponseMetaInfoV1* CreateSwcResponse::mutable_metainfo() {
+  ::proto::ResponseMetaInfoV1* _msg = _internal_mutable_metainfo();
+  // @@protoc_insertion_point(field_mutable:proto.CreateSwcResponse.metaInfo)
+  return _msg;
+}
+inline void CreateSwcResponse::set_allocated_metainfo(::proto::ResponseMetaInfoV1* metainfo) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.metainfo_);
+  }
+  if (metainfo) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(metainfo));
+    if (message_arena != submessage_arena) {
+      metainfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, metainfo, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  _impl_.metainfo_ = metainfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.CreateSwcResponse.metaInfo)
 }
 
-// .proto.SwcMetaInfoV1 SwcInfo = 3;
+// .proto.SwcMetaInfoV1 SwcInfo = 2;
 inline bool CreateSwcResponse::_internal_has_swcinfo() const {
   return this != internal_default_instance() && _impl_.swcinfo_ != nullptr;
 }
@@ -10002,77 +9992,92 @@ inline void CreateSwcResponse::set_allocated_swcinfo(::proto::SwcMetaInfoV1* swc
 
 // DeleteSwcResponse
 
-// bool status = 1;
-inline void DeleteSwcResponse::clear_status() {
-  _impl_.status_ = false;
+// .proto.ResponseMetaInfoV1 metaInfo = 1;
+inline bool DeleteSwcResponse::_internal_has_metainfo() const {
+  return this != internal_default_instance() && _impl_.metainfo_ != nullptr;
 }
-inline bool DeleteSwcResponse::_internal_status() const {
-  return _impl_.status_;
+inline bool DeleteSwcResponse::has_metainfo() const {
+  return _internal_has_metainfo();
 }
-inline bool DeleteSwcResponse::status() const {
-  // @@protoc_insertion_point(field_get:proto.DeleteSwcResponse.status)
-  return _internal_status();
+inline const ::proto::ResponseMetaInfoV1& DeleteSwcResponse::_internal_metainfo() const {
+  const ::proto::ResponseMetaInfoV1* p = _impl_.metainfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::ResponseMetaInfoV1&>(
+      ::proto::_ResponseMetaInfoV1_default_instance_);
 }
-inline void DeleteSwcResponse::_internal_set_status(bool value) {
-  
-  _impl_.status_ = value;
+inline const ::proto::ResponseMetaInfoV1& DeleteSwcResponse::metainfo() const {
+  // @@protoc_insertion_point(field_get:proto.DeleteSwcResponse.metaInfo)
+  return _internal_metainfo();
 }
-inline void DeleteSwcResponse::set_status(bool value) {
-  _internal_set_status(value);
-  // @@protoc_insertion_point(field_set:proto.DeleteSwcResponse.status)
-}
-
-// string Message = 2;
-inline void DeleteSwcResponse::clear_message() {
-  _impl_.message_.ClearToEmpty();
-}
-inline const std::string& DeleteSwcResponse::message() const {
-  // @@protoc_insertion_point(field_get:proto.DeleteSwcResponse.Message)
-  return _internal_message();
-}
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void DeleteSwcResponse::set_message(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.message_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:proto.DeleteSwcResponse.Message)
-}
-inline std::string* DeleteSwcResponse::mutable_message() {
-  std::string* _s = _internal_mutable_message();
-  // @@protoc_insertion_point(field_mutable:proto.DeleteSwcResponse.Message)
-  return _s;
-}
-inline const std::string& DeleteSwcResponse::_internal_message() const {
-  return _impl_.message_.Get();
-}
-inline void DeleteSwcResponse::_internal_set_message(const std::string& value) {
-  
-  _impl_.message_.Set(value, GetArenaForAllocation());
-}
-inline std::string* DeleteSwcResponse::_internal_mutable_message() {
-  
-  return _impl_.message_.Mutable(GetArenaForAllocation());
-}
-inline std::string* DeleteSwcResponse::release_message() {
-  // @@protoc_insertion_point(field_release:proto.DeleteSwcResponse.Message)
-  return _impl_.message_.Release();
-}
-inline void DeleteSwcResponse::set_allocated_message(std::string* message) {
-  if (message != nullptr) {
+inline void DeleteSwcResponse::unsafe_arena_set_allocated_metainfo(
+    ::proto::ResponseMetaInfoV1* metainfo) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.metainfo_);
+  }
+  _impl_.metainfo_ = metainfo;
+  if (metainfo) {
     
   } else {
     
   }
-  _impl_.message_.SetAllocated(message, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.message_.IsDefault()) {
-    _impl_.message_.Set("", GetArenaForAllocation());
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.DeleteSwcResponse.metaInfo)
+}
+inline ::proto::ResponseMetaInfoV1* DeleteSwcResponse::release_metainfo() {
+  
+  ::proto::ResponseMetaInfoV1* temp = _impl_.metainfo_;
+  _impl_.metainfo_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
   }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:proto.DeleteSwcResponse.Message)
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::proto::ResponseMetaInfoV1* DeleteSwcResponse::unsafe_arena_release_metainfo() {
+  // @@protoc_insertion_point(field_release:proto.DeleteSwcResponse.metaInfo)
+  
+  ::proto::ResponseMetaInfoV1* temp = _impl_.metainfo_;
+  _impl_.metainfo_ = nullptr;
+  return temp;
+}
+inline ::proto::ResponseMetaInfoV1* DeleteSwcResponse::_internal_mutable_metainfo() {
+  
+  if (_impl_.metainfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::ResponseMetaInfoV1>(GetArenaForAllocation());
+    _impl_.metainfo_ = p;
+  }
+  return _impl_.metainfo_;
+}
+inline ::proto::ResponseMetaInfoV1* DeleteSwcResponse::mutable_metainfo() {
+  ::proto::ResponseMetaInfoV1* _msg = _internal_mutable_metainfo();
+  // @@protoc_insertion_point(field_mutable:proto.DeleteSwcResponse.metaInfo)
+  return _msg;
+}
+inline void DeleteSwcResponse::set_allocated_metainfo(::proto::ResponseMetaInfoV1* metainfo) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.metainfo_);
+  }
+  if (metainfo) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(metainfo));
+    if (message_arena != submessage_arena) {
+      metainfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, metainfo, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  _impl_.metainfo_ = metainfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.DeleteSwcResponse.metaInfo)
 }
 
-// .proto.SwcMetaInfoV1 SwcInfo = 3;
+// .proto.SwcMetaInfoV1 SwcInfo = 2;
 inline bool DeleteSwcResponse::_internal_has_swcinfo() const {
   return this != internal_default_instance() && _impl_.swcinfo_ != nullptr;
 }
@@ -10161,77 +10166,92 @@ inline void DeleteSwcResponse::set_allocated_swcinfo(::proto::SwcMetaInfoV1* swc
 
 // UpdateSwcResponse
 
-// bool status = 1;
-inline void UpdateSwcResponse::clear_status() {
-  _impl_.status_ = false;
+// .proto.ResponseMetaInfoV1 metaInfo = 1;
+inline bool UpdateSwcResponse::_internal_has_metainfo() const {
+  return this != internal_default_instance() && _impl_.metainfo_ != nullptr;
 }
-inline bool UpdateSwcResponse::_internal_status() const {
-  return _impl_.status_;
+inline bool UpdateSwcResponse::has_metainfo() const {
+  return _internal_has_metainfo();
 }
-inline bool UpdateSwcResponse::status() const {
-  // @@protoc_insertion_point(field_get:proto.UpdateSwcResponse.status)
-  return _internal_status();
+inline const ::proto::ResponseMetaInfoV1& UpdateSwcResponse::_internal_metainfo() const {
+  const ::proto::ResponseMetaInfoV1* p = _impl_.metainfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::ResponseMetaInfoV1&>(
+      ::proto::_ResponseMetaInfoV1_default_instance_);
 }
-inline void UpdateSwcResponse::_internal_set_status(bool value) {
-  
-  _impl_.status_ = value;
+inline const ::proto::ResponseMetaInfoV1& UpdateSwcResponse::metainfo() const {
+  // @@protoc_insertion_point(field_get:proto.UpdateSwcResponse.metaInfo)
+  return _internal_metainfo();
 }
-inline void UpdateSwcResponse::set_status(bool value) {
-  _internal_set_status(value);
-  // @@protoc_insertion_point(field_set:proto.UpdateSwcResponse.status)
-}
-
-// string Message = 2;
-inline void UpdateSwcResponse::clear_message() {
-  _impl_.message_.ClearToEmpty();
-}
-inline const std::string& UpdateSwcResponse::message() const {
-  // @@protoc_insertion_point(field_get:proto.UpdateSwcResponse.Message)
-  return _internal_message();
-}
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void UpdateSwcResponse::set_message(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.message_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:proto.UpdateSwcResponse.Message)
-}
-inline std::string* UpdateSwcResponse::mutable_message() {
-  std::string* _s = _internal_mutable_message();
-  // @@protoc_insertion_point(field_mutable:proto.UpdateSwcResponse.Message)
-  return _s;
-}
-inline const std::string& UpdateSwcResponse::_internal_message() const {
-  return _impl_.message_.Get();
-}
-inline void UpdateSwcResponse::_internal_set_message(const std::string& value) {
-  
-  _impl_.message_.Set(value, GetArenaForAllocation());
-}
-inline std::string* UpdateSwcResponse::_internal_mutable_message() {
-  
-  return _impl_.message_.Mutable(GetArenaForAllocation());
-}
-inline std::string* UpdateSwcResponse::release_message() {
-  // @@protoc_insertion_point(field_release:proto.UpdateSwcResponse.Message)
-  return _impl_.message_.Release();
-}
-inline void UpdateSwcResponse::set_allocated_message(std::string* message) {
-  if (message != nullptr) {
+inline void UpdateSwcResponse::unsafe_arena_set_allocated_metainfo(
+    ::proto::ResponseMetaInfoV1* metainfo) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.metainfo_);
+  }
+  _impl_.metainfo_ = metainfo;
+  if (metainfo) {
     
   } else {
     
   }
-  _impl_.message_.SetAllocated(message, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.message_.IsDefault()) {
-    _impl_.message_.Set("", GetArenaForAllocation());
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.UpdateSwcResponse.metaInfo)
+}
+inline ::proto::ResponseMetaInfoV1* UpdateSwcResponse::release_metainfo() {
+  
+  ::proto::ResponseMetaInfoV1* temp = _impl_.metainfo_;
+  _impl_.metainfo_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
   }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:proto.UpdateSwcResponse.Message)
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::proto::ResponseMetaInfoV1* UpdateSwcResponse::unsafe_arena_release_metainfo() {
+  // @@protoc_insertion_point(field_release:proto.UpdateSwcResponse.metaInfo)
+  
+  ::proto::ResponseMetaInfoV1* temp = _impl_.metainfo_;
+  _impl_.metainfo_ = nullptr;
+  return temp;
+}
+inline ::proto::ResponseMetaInfoV1* UpdateSwcResponse::_internal_mutable_metainfo() {
+  
+  if (_impl_.metainfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::ResponseMetaInfoV1>(GetArenaForAllocation());
+    _impl_.metainfo_ = p;
+  }
+  return _impl_.metainfo_;
+}
+inline ::proto::ResponseMetaInfoV1* UpdateSwcResponse::mutable_metainfo() {
+  ::proto::ResponseMetaInfoV1* _msg = _internal_mutable_metainfo();
+  // @@protoc_insertion_point(field_mutable:proto.UpdateSwcResponse.metaInfo)
+  return _msg;
+}
+inline void UpdateSwcResponse::set_allocated_metainfo(::proto::ResponseMetaInfoV1* metainfo) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.metainfo_);
+  }
+  if (metainfo) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(metainfo));
+    if (message_arena != submessage_arena) {
+      metainfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, metainfo, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  _impl_.metainfo_ = metainfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.UpdateSwcResponse.metaInfo)
 }
 
-// .proto.SwcMetaInfoV1 SwcInfo = 3;
+// .proto.SwcMetaInfoV1 SwcInfo = 2;
 inline bool UpdateSwcResponse::_internal_has_swcinfo() const {
   return this != internal_default_instance() && _impl_.swcinfo_ != nullptr;
 }
@@ -10320,77 +10340,92 @@ inline void UpdateSwcResponse::set_allocated_swcinfo(::proto::SwcMetaInfoV1* swc
 
 // GetSwcMetaInfoResponse
 
-// bool status = 1;
-inline void GetSwcMetaInfoResponse::clear_status() {
-  _impl_.status_ = false;
+// .proto.ResponseMetaInfoV1 metaInfo = 1;
+inline bool GetSwcMetaInfoResponse::_internal_has_metainfo() const {
+  return this != internal_default_instance() && _impl_.metainfo_ != nullptr;
 }
-inline bool GetSwcMetaInfoResponse::_internal_status() const {
-  return _impl_.status_;
+inline bool GetSwcMetaInfoResponse::has_metainfo() const {
+  return _internal_has_metainfo();
 }
-inline bool GetSwcMetaInfoResponse::status() const {
-  // @@protoc_insertion_point(field_get:proto.GetSwcMetaInfoResponse.status)
-  return _internal_status();
+inline const ::proto::ResponseMetaInfoV1& GetSwcMetaInfoResponse::_internal_metainfo() const {
+  const ::proto::ResponseMetaInfoV1* p = _impl_.metainfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::ResponseMetaInfoV1&>(
+      ::proto::_ResponseMetaInfoV1_default_instance_);
 }
-inline void GetSwcMetaInfoResponse::_internal_set_status(bool value) {
-  
-  _impl_.status_ = value;
+inline const ::proto::ResponseMetaInfoV1& GetSwcMetaInfoResponse::metainfo() const {
+  // @@protoc_insertion_point(field_get:proto.GetSwcMetaInfoResponse.metaInfo)
+  return _internal_metainfo();
 }
-inline void GetSwcMetaInfoResponse::set_status(bool value) {
-  _internal_set_status(value);
-  // @@protoc_insertion_point(field_set:proto.GetSwcMetaInfoResponse.status)
-}
-
-// string Message = 2;
-inline void GetSwcMetaInfoResponse::clear_message() {
-  _impl_.message_.ClearToEmpty();
-}
-inline const std::string& GetSwcMetaInfoResponse::message() const {
-  // @@protoc_insertion_point(field_get:proto.GetSwcMetaInfoResponse.Message)
-  return _internal_message();
-}
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void GetSwcMetaInfoResponse::set_message(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.message_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:proto.GetSwcMetaInfoResponse.Message)
-}
-inline std::string* GetSwcMetaInfoResponse::mutable_message() {
-  std::string* _s = _internal_mutable_message();
-  // @@protoc_insertion_point(field_mutable:proto.GetSwcMetaInfoResponse.Message)
-  return _s;
-}
-inline const std::string& GetSwcMetaInfoResponse::_internal_message() const {
-  return _impl_.message_.Get();
-}
-inline void GetSwcMetaInfoResponse::_internal_set_message(const std::string& value) {
-  
-  _impl_.message_.Set(value, GetArenaForAllocation());
-}
-inline std::string* GetSwcMetaInfoResponse::_internal_mutable_message() {
-  
-  return _impl_.message_.Mutable(GetArenaForAllocation());
-}
-inline std::string* GetSwcMetaInfoResponse::release_message() {
-  // @@protoc_insertion_point(field_release:proto.GetSwcMetaInfoResponse.Message)
-  return _impl_.message_.Release();
-}
-inline void GetSwcMetaInfoResponse::set_allocated_message(std::string* message) {
-  if (message != nullptr) {
+inline void GetSwcMetaInfoResponse::unsafe_arena_set_allocated_metainfo(
+    ::proto::ResponseMetaInfoV1* metainfo) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.metainfo_);
+  }
+  _impl_.metainfo_ = metainfo;
+  if (metainfo) {
     
   } else {
     
   }
-  _impl_.message_.SetAllocated(message, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.message_.IsDefault()) {
-    _impl_.message_.Set("", GetArenaForAllocation());
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.GetSwcMetaInfoResponse.metaInfo)
+}
+inline ::proto::ResponseMetaInfoV1* GetSwcMetaInfoResponse::release_metainfo() {
+  
+  ::proto::ResponseMetaInfoV1* temp = _impl_.metainfo_;
+  _impl_.metainfo_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
   }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:proto.GetSwcMetaInfoResponse.Message)
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::proto::ResponseMetaInfoV1* GetSwcMetaInfoResponse::unsafe_arena_release_metainfo() {
+  // @@protoc_insertion_point(field_release:proto.GetSwcMetaInfoResponse.metaInfo)
+  
+  ::proto::ResponseMetaInfoV1* temp = _impl_.metainfo_;
+  _impl_.metainfo_ = nullptr;
+  return temp;
+}
+inline ::proto::ResponseMetaInfoV1* GetSwcMetaInfoResponse::_internal_mutable_metainfo() {
+  
+  if (_impl_.metainfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::ResponseMetaInfoV1>(GetArenaForAllocation());
+    _impl_.metainfo_ = p;
+  }
+  return _impl_.metainfo_;
+}
+inline ::proto::ResponseMetaInfoV1* GetSwcMetaInfoResponse::mutable_metainfo() {
+  ::proto::ResponseMetaInfoV1* _msg = _internal_mutable_metainfo();
+  // @@protoc_insertion_point(field_mutable:proto.GetSwcMetaInfoResponse.metaInfo)
+  return _msg;
+}
+inline void GetSwcMetaInfoResponse::set_allocated_metainfo(::proto::ResponseMetaInfoV1* metainfo) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.metainfo_);
+  }
+  if (metainfo) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(metainfo));
+    if (message_arena != submessage_arena) {
+      metainfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, metainfo, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  _impl_.metainfo_ = metainfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.GetSwcMetaInfoResponse.metaInfo)
 }
 
-// .proto.SwcMetaInfoV1 SwcInfo = 3;
+// .proto.SwcMetaInfoV1 SwcInfo = 2;
 inline bool GetSwcMetaInfoResponse::_internal_has_swcinfo() const {
   return this != internal_default_instance() && _impl_.swcinfo_ != nullptr;
 }
@@ -10479,77 +10514,92 @@ inline void GetSwcMetaInfoResponse::set_allocated_swcinfo(::proto::SwcMetaInfoV1
 
 // GetAllSwcMetaInfoResponse
 
-// bool status = 1;
-inline void GetAllSwcMetaInfoResponse::clear_status() {
-  _impl_.status_ = false;
+// .proto.ResponseMetaInfoV1 metaInfo = 1;
+inline bool GetAllSwcMetaInfoResponse::_internal_has_metainfo() const {
+  return this != internal_default_instance() && _impl_.metainfo_ != nullptr;
 }
-inline bool GetAllSwcMetaInfoResponse::_internal_status() const {
-  return _impl_.status_;
+inline bool GetAllSwcMetaInfoResponse::has_metainfo() const {
+  return _internal_has_metainfo();
 }
-inline bool GetAllSwcMetaInfoResponse::status() const {
-  // @@protoc_insertion_point(field_get:proto.GetAllSwcMetaInfoResponse.status)
-  return _internal_status();
+inline const ::proto::ResponseMetaInfoV1& GetAllSwcMetaInfoResponse::_internal_metainfo() const {
+  const ::proto::ResponseMetaInfoV1* p = _impl_.metainfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::ResponseMetaInfoV1&>(
+      ::proto::_ResponseMetaInfoV1_default_instance_);
 }
-inline void GetAllSwcMetaInfoResponse::_internal_set_status(bool value) {
-  
-  _impl_.status_ = value;
+inline const ::proto::ResponseMetaInfoV1& GetAllSwcMetaInfoResponse::metainfo() const {
+  // @@protoc_insertion_point(field_get:proto.GetAllSwcMetaInfoResponse.metaInfo)
+  return _internal_metainfo();
 }
-inline void GetAllSwcMetaInfoResponse::set_status(bool value) {
-  _internal_set_status(value);
-  // @@protoc_insertion_point(field_set:proto.GetAllSwcMetaInfoResponse.status)
-}
-
-// string Message = 2;
-inline void GetAllSwcMetaInfoResponse::clear_message() {
-  _impl_.message_.ClearToEmpty();
-}
-inline const std::string& GetAllSwcMetaInfoResponse::message() const {
-  // @@protoc_insertion_point(field_get:proto.GetAllSwcMetaInfoResponse.Message)
-  return _internal_message();
-}
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void GetAllSwcMetaInfoResponse::set_message(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.message_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:proto.GetAllSwcMetaInfoResponse.Message)
-}
-inline std::string* GetAllSwcMetaInfoResponse::mutable_message() {
-  std::string* _s = _internal_mutable_message();
-  // @@protoc_insertion_point(field_mutable:proto.GetAllSwcMetaInfoResponse.Message)
-  return _s;
-}
-inline const std::string& GetAllSwcMetaInfoResponse::_internal_message() const {
-  return _impl_.message_.Get();
-}
-inline void GetAllSwcMetaInfoResponse::_internal_set_message(const std::string& value) {
-  
-  _impl_.message_.Set(value, GetArenaForAllocation());
-}
-inline std::string* GetAllSwcMetaInfoResponse::_internal_mutable_message() {
-  
-  return _impl_.message_.Mutable(GetArenaForAllocation());
-}
-inline std::string* GetAllSwcMetaInfoResponse::release_message() {
-  // @@protoc_insertion_point(field_release:proto.GetAllSwcMetaInfoResponse.Message)
-  return _impl_.message_.Release();
-}
-inline void GetAllSwcMetaInfoResponse::set_allocated_message(std::string* message) {
-  if (message != nullptr) {
+inline void GetAllSwcMetaInfoResponse::unsafe_arena_set_allocated_metainfo(
+    ::proto::ResponseMetaInfoV1* metainfo) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.metainfo_);
+  }
+  _impl_.metainfo_ = metainfo;
+  if (metainfo) {
     
   } else {
     
   }
-  _impl_.message_.SetAllocated(message, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.message_.IsDefault()) {
-    _impl_.message_.Set("", GetArenaForAllocation());
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.GetAllSwcMetaInfoResponse.metaInfo)
+}
+inline ::proto::ResponseMetaInfoV1* GetAllSwcMetaInfoResponse::release_metainfo() {
+  
+  ::proto::ResponseMetaInfoV1* temp = _impl_.metainfo_;
+  _impl_.metainfo_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
   }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:proto.GetAllSwcMetaInfoResponse.Message)
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::proto::ResponseMetaInfoV1* GetAllSwcMetaInfoResponse::unsafe_arena_release_metainfo() {
+  // @@protoc_insertion_point(field_release:proto.GetAllSwcMetaInfoResponse.metaInfo)
+  
+  ::proto::ResponseMetaInfoV1* temp = _impl_.metainfo_;
+  _impl_.metainfo_ = nullptr;
+  return temp;
+}
+inline ::proto::ResponseMetaInfoV1* GetAllSwcMetaInfoResponse::_internal_mutable_metainfo() {
+  
+  if (_impl_.metainfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::ResponseMetaInfoV1>(GetArenaForAllocation());
+    _impl_.metainfo_ = p;
+  }
+  return _impl_.metainfo_;
+}
+inline ::proto::ResponseMetaInfoV1* GetAllSwcMetaInfoResponse::mutable_metainfo() {
+  ::proto::ResponseMetaInfoV1* _msg = _internal_mutable_metainfo();
+  // @@protoc_insertion_point(field_mutable:proto.GetAllSwcMetaInfoResponse.metaInfo)
+  return _msg;
+}
+inline void GetAllSwcMetaInfoResponse::set_allocated_metainfo(::proto::ResponseMetaInfoV1* metainfo) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.metainfo_);
+  }
+  if (metainfo) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(metainfo));
+    if (message_arena != submessage_arena) {
+      metainfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, metainfo, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  _impl_.metainfo_ = metainfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.GetAllSwcMetaInfoResponse.metaInfo)
 }
 
-// repeated .proto.SwcMetaInfoV1 SwcInfo = 3;
+// repeated .proto.SwcMetaInfoV1 SwcInfo = 2;
 inline int GetAllSwcMetaInfoResponse::_internal_swcinfo_size() const {
   return _impl_.swcinfo_.size();
 }
@@ -10590,225 +10640,270 @@ GetAllSwcMetaInfoResponse::swcinfo() const {
 
 // CreateSwcSnapshotResponse
 
-// bool status = 1;
-inline void CreateSwcSnapshotResponse::clear_status() {
-  _impl_.status_ = false;
+// .proto.ResponseMetaInfoV1 metaInfo = 1;
+inline bool CreateSwcSnapshotResponse::_internal_has_metainfo() const {
+  return this != internal_default_instance() && _impl_.metainfo_ != nullptr;
 }
-inline bool CreateSwcSnapshotResponse::_internal_status() const {
-  return _impl_.status_;
+inline bool CreateSwcSnapshotResponse::has_metainfo() const {
+  return _internal_has_metainfo();
 }
-inline bool CreateSwcSnapshotResponse::status() const {
-  // @@protoc_insertion_point(field_get:proto.CreateSwcSnapshotResponse.status)
-  return _internal_status();
+inline const ::proto::ResponseMetaInfoV1& CreateSwcSnapshotResponse::_internal_metainfo() const {
+  const ::proto::ResponseMetaInfoV1* p = _impl_.metainfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::ResponseMetaInfoV1&>(
+      ::proto::_ResponseMetaInfoV1_default_instance_);
 }
-inline void CreateSwcSnapshotResponse::_internal_set_status(bool value) {
-  
-  _impl_.status_ = value;
+inline const ::proto::ResponseMetaInfoV1& CreateSwcSnapshotResponse::metainfo() const {
+  // @@protoc_insertion_point(field_get:proto.CreateSwcSnapshotResponse.metaInfo)
+  return _internal_metainfo();
 }
-inline void CreateSwcSnapshotResponse::set_status(bool value) {
-  _internal_set_status(value);
-  // @@protoc_insertion_point(field_set:proto.CreateSwcSnapshotResponse.status)
-}
-
-// string Message = 2;
-inline void CreateSwcSnapshotResponse::clear_message() {
-  _impl_.message_.ClearToEmpty();
-}
-inline const std::string& CreateSwcSnapshotResponse::message() const {
-  // @@protoc_insertion_point(field_get:proto.CreateSwcSnapshotResponse.Message)
-  return _internal_message();
-}
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void CreateSwcSnapshotResponse::set_message(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.message_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:proto.CreateSwcSnapshotResponse.Message)
-}
-inline std::string* CreateSwcSnapshotResponse::mutable_message() {
-  std::string* _s = _internal_mutable_message();
-  // @@protoc_insertion_point(field_mutable:proto.CreateSwcSnapshotResponse.Message)
-  return _s;
-}
-inline const std::string& CreateSwcSnapshotResponse::_internal_message() const {
-  return _impl_.message_.Get();
-}
-inline void CreateSwcSnapshotResponse::_internal_set_message(const std::string& value) {
-  
-  _impl_.message_.Set(value, GetArenaForAllocation());
-}
-inline std::string* CreateSwcSnapshotResponse::_internal_mutable_message() {
-  
-  return _impl_.message_.Mutable(GetArenaForAllocation());
-}
-inline std::string* CreateSwcSnapshotResponse::release_message() {
-  // @@protoc_insertion_point(field_release:proto.CreateSwcSnapshotResponse.Message)
-  return _impl_.message_.Release();
-}
-inline void CreateSwcSnapshotResponse::set_allocated_message(std::string* message) {
-  if (message != nullptr) {
+inline void CreateSwcSnapshotResponse::unsafe_arena_set_allocated_metainfo(
+    ::proto::ResponseMetaInfoV1* metainfo) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.metainfo_);
+  }
+  _impl_.metainfo_ = metainfo;
+  if (metainfo) {
     
   } else {
     
   }
-  _impl_.message_.SetAllocated(message, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.message_.IsDefault()) {
-    _impl_.message_.Set("", GetArenaForAllocation());
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.CreateSwcSnapshotResponse.metaInfo)
+}
+inline ::proto::ResponseMetaInfoV1* CreateSwcSnapshotResponse::release_metainfo() {
+  
+  ::proto::ResponseMetaInfoV1* temp = _impl_.metainfo_;
+  _impl_.metainfo_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
   }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:proto.CreateSwcSnapshotResponse.Message)
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::proto::ResponseMetaInfoV1* CreateSwcSnapshotResponse::unsafe_arena_release_metainfo() {
+  // @@protoc_insertion_point(field_release:proto.CreateSwcSnapshotResponse.metaInfo)
+  
+  ::proto::ResponseMetaInfoV1* temp = _impl_.metainfo_;
+  _impl_.metainfo_ = nullptr;
+  return temp;
+}
+inline ::proto::ResponseMetaInfoV1* CreateSwcSnapshotResponse::_internal_mutable_metainfo() {
+  
+  if (_impl_.metainfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::ResponseMetaInfoV1>(GetArenaForAllocation());
+    _impl_.metainfo_ = p;
+  }
+  return _impl_.metainfo_;
+}
+inline ::proto::ResponseMetaInfoV1* CreateSwcSnapshotResponse::mutable_metainfo() {
+  ::proto::ResponseMetaInfoV1* _msg = _internal_mutable_metainfo();
+  // @@protoc_insertion_point(field_mutable:proto.CreateSwcSnapshotResponse.metaInfo)
+  return _msg;
+}
+inline void CreateSwcSnapshotResponse::set_allocated_metainfo(::proto::ResponseMetaInfoV1* metainfo) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.metainfo_);
+  }
+  if (metainfo) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(metainfo));
+    if (message_arena != submessage_arena) {
+      metainfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, metainfo, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  _impl_.metainfo_ = metainfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.CreateSwcSnapshotResponse.metaInfo)
 }
 
 // -------------------------------------------------------------------
 
 // DeleteSwcSnapshotResponse
 
-// bool status = 1;
-inline void DeleteSwcSnapshotResponse::clear_status() {
-  _impl_.status_ = false;
+// .proto.ResponseMetaInfoV1 metaInfo = 1;
+inline bool DeleteSwcSnapshotResponse::_internal_has_metainfo() const {
+  return this != internal_default_instance() && _impl_.metainfo_ != nullptr;
 }
-inline bool DeleteSwcSnapshotResponse::_internal_status() const {
-  return _impl_.status_;
+inline bool DeleteSwcSnapshotResponse::has_metainfo() const {
+  return _internal_has_metainfo();
 }
-inline bool DeleteSwcSnapshotResponse::status() const {
-  // @@protoc_insertion_point(field_get:proto.DeleteSwcSnapshotResponse.status)
-  return _internal_status();
+inline const ::proto::ResponseMetaInfoV1& DeleteSwcSnapshotResponse::_internal_metainfo() const {
+  const ::proto::ResponseMetaInfoV1* p = _impl_.metainfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::ResponseMetaInfoV1&>(
+      ::proto::_ResponseMetaInfoV1_default_instance_);
 }
-inline void DeleteSwcSnapshotResponse::_internal_set_status(bool value) {
-  
-  _impl_.status_ = value;
+inline const ::proto::ResponseMetaInfoV1& DeleteSwcSnapshotResponse::metainfo() const {
+  // @@protoc_insertion_point(field_get:proto.DeleteSwcSnapshotResponse.metaInfo)
+  return _internal_metainfo();
 }
-inline void DeleteSwcSnapshotResponse::set_status(bool value) {
-  _internal_set_status(value);
-  // @@protoc_insertion_point(field_set:proto.DeleteSwcSnapshotResponse.status)
-}
-
-// string Message = 2;
-inline void DeleteSwcSnapshotResponse::clear_message() {
-  _impl_.message_.ClearToEmpty();
-}
-inline const std::string& DeleteSwcSnapshotResponse::message() const {
-  // @@protoc_insertion_point(field_get:proto.DeleteSwcSnapshotResponse.Message)
-  return _internal_message();
-}
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void DeleteSwcSnapshotResponse::set_message(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.message_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:proto.DeleteSwcSnapshotResponse.Message)
-}
-inline std::string* DeleteSwcSnapshotResponse::mutable_message() {
-  std::string* _s = _internal_mutable_message();
-  // @@protoc_insertion_point(field_mutable:proto.DeleteSwcSnapshotResponse.Message)
-  return _s;
-}
-inline const std::string& DeleteSwcSnapshotResponse::_internal_message() const {
-  return _impl_.message_.Get();
-}
-inline void DeleteSwcSnapshotResponse::_internal_set_message(const std::string& value) {
-  
-  _impl_.message_.Set(value, GetArenaForAllocation());
-}
-inline std::string* DeleteSwcSnapshotResponse::_internal_mutable_message() {
-  
-  return _impl_.message_.Mutable(GetArenaForAllocation());
-}
-inline std::string* DeleteSwcSnapshotResponse::release_message() {
-  // @@protoc_insertion_point(field_release:proto.DeleteSwcSnapshotResponse.Message)
-  return _impl_.message_.Release();
-}
-inline void DeleteSwcSnapshotResponse::set_allocated_message(std::string* message) {
-  if (message != nullptr) {
+inline void DeleteSwcSnapshotResponse::unsafe_arena_set_allocated_metainfo(
+    ::proto::ResponseMetaInfoV1* metainfo) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.metainfo_);
+  }
+  _impl_.metainfo_ = metainfo;
+  if (metainfo) {
     
   } else {
     
   }
-  _impl_.message_.SetAllocated(message, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.message_.IsDefault()) {
-    _impl_.message_.Set("", GetArenaForAllocation());
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.DeleteSwcSnapshotResponse.metaInfo)
+}
+inline ::proto::ResponseMetaInfoV1* DeleteSwcSnapshotResponse::release_metainfo() {
+  
+  ::proto::ResponseMetaInfoV1* temp = _impl_.metainfo_;
+  _impl_.metainfo_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
   }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:proto.DeleteSwcSnapshotResponse.Message)
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::proto::ResponseMetaInfoV1* DeleteSwcSnapshotResponse::unsafe_arena_release_metainfo() {
+  // @@protoc_insertion_point(field_release:proto.DeleteSwcSnapshotResponse.metaInfo)
+  
+  ::proto::ResponseMetaInfoV1* temp = _impl_.metainfo_;
+  _impl_.metainfo_ = nullptr;
+  return temp;
+}
+inline ::proto::ResponseMetaInfoV1* DeleteSwcSnapshotResponse::_internal_mutable_metainfo() {
+  
+  if (_impl_.metainfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::ResponseMetaInfoV1>(GetArenaForAllocation());
+    _impl_.metainfo_ = p;
+  }
+  return _impl_.metainfo_;
+}
+inline ::proto::ResponseMetaInfoV1* DeleteSwcSnapshotResponse::mutable_metainfo() {
+  ::proto::ResponseMetaInfoV1* _msg = _internal_mutable_metainfo();
+  // @@protoc_insertion_point(field_mutable:proto.DeleteSwcSnapshotResponse.metaInfo)
+  return _msg;
+}
+inline void DeleteSwcSnapshotResponse::set_allocated_metainfo(::proto::ResponseMetaInfoV1* metainfo) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.metainfo_);
+  }
+  if (metainfo) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(metainfo));
+    if (message_arena != submessage_arena) {
+      metainfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, metainfo, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  _impl_.metainfo_ = metainfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.DeleteSwcSnapshotResponse.metaInfo)
 }
 
 // -------------------------------------------------------------------
 
 // GetAllSnapshotMetaInfoResponse
 
-// bool status = 1;
-inline void GetAllSnapshotMetaInfoResponse::clear_status() {
-  _impl_.status_ = false;
+// .proto.ResponseMetaInfoV1 metaInfo = 1;
+inline bool GetAllSnapshotMetaInfoResponse::_internal_has_metainfo() const {
+  return this != internal_default_instance() && _impl_.metainfo_ != nullptr;
 }
-inline bool GetAllSnapshotMetaInfoResponse::_internal_status() const {
-  return _impl_.status_;
+inline bool GetAllSnapshotMetaInfoResponse::has_metainfo() const {
+  return _internal_has_metainfo();
 }
-inline bool GetAllSnapshotMetaInfoResponse::status() const {
-  // @@protoc_insertion_point(field_get:proto.GetAllSnapshotMetaInfoResponse.status)
-  return _internal_status();
+inline const ::proto::ResponseMetaInfoV1& GetAllSnapshotMetaInfoResponse::_internal_metainfo() const {
+  const ::proto::ResponseMetaInfoV1* p = _impl_.metainfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::ResponseMetaInfoV1&>(
+      ::proto::_ResponseMetaInfoV1_default_instance_);
 }
-inline void GetAllSnapshotMetaInfoResponse::_internal_set_status(bool value) {
-  
-  _impl_.status_ = value;
+inline const ::proto::ResponseMetaInfoV1& GetAllSnapshotMetaInfoResponse::metainfo() const {
+  // @@protoc_insertion_point(field_get:proto.GetAllSnapshotMetaInfoResponse.metaInfo)
+  return _internal_metainfo();
 }
-inline void GetAllSnapshotMetaInfoResponse::set_status(bool value) {
-  _internal_set_status(value);
-  // @@protoc_insertion_point(field_set:proto.GetAllSnapshotMetaInfoResponse.status)
-}
-
-// string Message = 2;
-inline void GetAllSnapshotMetaInfoResponse::clear_message() {
-  _impl_.message_.ClearToEmpty();
-}
-inline const std::string& GetAllSnapshotMetaInfoResponse::message() const {
-  // @@protoc_insertion_point(field_get:proto.GetAllSnapshotMetaInfoResponse.Message)
-  return _internal_message();
-}
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void GetAllSnapshotMetaInfoResponse::set_message(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.message_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:proto.GetAllSnapshotMetaInfoResponse.Message)
-}
-inline std::string* GetAllSnapshotMetaInfoResponse::mutable_message() {
-  std::string* _s = _internal_mutable_message();
-  // @@protoc_insertion_point(field_mutable:proto.GetAllSnapshotMetaInfoResponse.Message)
-  return _s;
-}
-inline const std::string& GetAllSnapshotMetaInfoResponse::_internal_message() const {
-  return _impl_.message_.Get();
-}
-inline void GetAllSnapshotMetaInfoResponse::_internal_set_message(const std::string& value) {
-  
-  _impl_.message_.Set(value, GetArenaForAllocation());
-}
-inline std::string* GetAllSnapshotMetaInfoResponse::_internal_mutable_message() {
-  
-  return _impl_.message_.Mutable(GetArenaForAllocation());
-}
-inline std::string* GetAllSnapshotMetaInfoResponse::release_message() {
-  // @@protoc_insertion_point(field_release:proto.GetAllSnapshotMetaInfoResponse.Message)
-  return _impl_.message_.Release();
-}
-inline void GetAllSnapshotMetaInfoResponse::set_allocated_message(std::string* message) {
-  if (message != nullptr) {
+inline void GetAllSnapshotMetaInfoResponse::unsafe_arena_set_allocated_metainfo(
+    ::proto::ResponseMetaInfoV1* metainfo) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.metainfo_);
+  }
+  _impl_.metainfo_ = metainfo;
+  if (metainfo) {
     
   } else {
     
   }
-  _impl_.message_.SetAllocated(message, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.message_.IsDefault()) {
-    _impl_.message_.Set("", GetArenaForAllocation());
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.GetAllSnapshotMetaInfoResponse.metaInfo)
+}
+inline ::proto::ResponseMetaInfoV1* GetAllSnapshotMetaInfoResponse::release_metainfo() {
+  
+  ::proto::ResponseMetaInfoV1* temp = _impl_.metainfo_;
+  _impl_.metainfo_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
   }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:proto.GetAllSnapshotMetaInfoResponse.Message)
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::proto::ResponseMetaInfoV1* GetAllSnapshotMetaInfoResponse::unsafe_arena_release_metainfo() {
+  // @@protoc_insertion_point(field_release:proto.GetAllSnapshotMetaInfoResponse.metaInfo)
+  
+  ::proto::ResponseMetaInfoV1* temp = _impl_.metainfo_;
+  _impl_.metainfo_ = nullptr;
+  return temp;
+}
+inline ::proto::ResponseMetaInfoV1* GetAllSnapshotMetaInfoResponse::_internal_mutable_metainfo() {
+  
+  if (_impl_.metainfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::ResponseMetaInfoV1>(GetArenaForAllocation());
+    _impl_.metainfo_ = p;
+  }
+  return _impl_.metainfo_;
+}
+inline ::proto::ResponseMetaInfoV1* GetAllSnapshotMetaInfoResponse::mutable_metainfo() {
+  ::proto::ResponseMetaInfoV1* _msg = _internal_mutable_metainfo();
+  // @@protoc_insertion_point(field_mutable:proto.GetAllSnapshotMetaInfoResponse.metaInfo)
+  return _msg;
+}
+inline void GetAllSnapshotMetaInfoResponse::set_allocated_metainfo(::proto::ResponseMetaInfoV1* metainfo) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.metainfo_);
+  }
+  if (metainfo) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(metainfo));
+    if (message_arena != submessage_arena) {
+      metainfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, metainfo, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  _impl_.metainfo_ = metainfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.GetAllSnapshotMetaInfoResponse.metaInfo)
 }
 
-// repeated .proto.SwcSnapshotMetaInfoV1 SwcSnapshotList = 3;
+// repeated .proto.SwcSnapshotMetaInfoV1 SwcSnapshotList = 2;
 inline int GetAllSnapshotMetaInfoResponse::_internal_swcsnapshotlist_size() const {
   return _impl_.swcsnapshotlist_.size();
 }
@@ -10849,74 +10944,89 @@ GetAllSnapshotMetaInfoResponse::swcsnapshotlist() const {
 
 // GetSnapshotResponse
 
-// bool status = 1;
-inline void GetSnapshotResponse::clear_status() {
-  _impl_.status_ = false;
+// .proto.ResponseMetaInfoV1 metaInfo = 2;
+inline bool GetSnapshotResponse::_internal_has_metainfo() const {
+  return this != internal_default_instance() && _impl_.metainfo_ != nullptr;
 }
-inline bool GetSnapshotResponse::_internal_status() const {
-  return _impl_.status_;
+inline bool GetSnapshotResponse::has_metainfo() const {
+  return _internal_has_metainfo();
 }
-inline bool GetSnapshotResponse::status() const {
-  // @@protoc_insertion_point(field_get:proto.GetSnapshotResponse.status)
-  return _internal_status();
+inline const ::proto::ResponseMetaInfoV1& GetSnapshotResponse::_internal_metainfo() const {
+  const ::proto::ResponseMetaInfoV1* p = _impl_.metainfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::ResponseMetaInfoV1&>(
+      ::proto::_ResponseMetaInfoV1_default_instance_);
 }
-inline void GetSnapshotResponse::_internal_set_status(bool value) {
-  
-  _impl_.status_ = value;
+inline const ::proto::ResponseMetaInfoV1& GetSnapshotResponse::metainfo() const {
+  // @@protoc_insertion_point(field_get:proto.GetSnapshotResponse.metaInfo)
+  return _internal_metainfo();
 }
-inline void GetSnapshotResponse::set_status(bool value) {
-  _internal_set_status(value);
-  // @@protoc_insertion_point(field_set:proto.GetSnapshotResponse.status)
-}
-
-// string Message = 2;
-inline void GetSnapshotResponse::clear_message() {
-  _impl_.message_.ClearToEmpty();
-}
-inline const std::string& GetSnapshotResponse::message() const {
-  // @@protoc_insertion_point(field_get:proto.GetSnapshotResponse.Message)
-  return _internal_message();
-}
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void GetSnapshotResponse::set_message(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.message_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:proto.GetSnapshotResponse.Message)
-}
-inline std::string* GetSnapshotResponse::mutable_message() {
-  std::string* _s = _internal_mutable_message();
-  // @@protoc_insertion_point(field_mutable:proto.GetSnapshotResponse.Message)
-  return _s;
-}
-inline const std::string& GetSnapshotResponse::_internal_message() const {
-  return _impl_.message_.Get();
-}
-inline void GetSnapshotResponse::_internal_set_message(const std::string& value) {
-  
-  _impl_.message_.Set(value, GetArenaForAllocation());
-}
-inline std::string* GetSnapshotResponse::_internal_mutable_message() {
-  
-  return _impl_.message_.Mutable(GetArenaForAllocation());
-}
-inline std::string* GetSnapshotResponse::release_message() {
-  // @@protoc_insertion_point(field_release:proto.GetSnapshotResponse.Message)
-  return _impl_.message_.Release();
-}
-inline void GetSnapshotResponse::set_allocated_message(std::string* message) {
-  if (message != nullptr) {
+inline void GetSnapshotResponse::unsafe_arena_set_allocated_metainfo(
+    ::proto::ResponseMetaInfoV1* metainfo) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.metainfo_);
+  }
+  _impl_.metainfo_ = metainfo;
+  if (metainfo) {
     
   } else {
     
   }
-  _impl_.message_.SetAllocated(message, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.message_.IsDefault()) {
-    _impl_.message_.Set("", GetArenaForAllocation());
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.GetSnapshotResponse.metaInfo)
+}
+inline ::proto::ResponseMetaInfoV1* GetSnapshotResponse::release_metainfo() {
+  
+  ::proto::ResponseMetaInfoV1* temp = _impl_.metainfo_;
+  _impl_.metainfo_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
   }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:proto.GetSnapshotResponse.Message)
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::proto::ResponseMetaInfoV1* GetSnapshotResponse::unsafe_arena_release_metainfo() {
+  // @@protoc_insertion_point(field_release:proto.GetSnapshotResponse.metaInfo)
+  
+  ::proto::ResponseMetaInfoV1* temp = _impl_.metainfo_;
+  _impl_.metainfo_ = nullptr;
+  return temp;
+}
+inline ::proto::ResponseMetaInfoV1* GetSnapshotResponse::_internal_mutable_metainfo() {
+  
+  if (_impl_.metainfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::ResponseMetaInfoV1>(GetArenaForAllocation());
+    _impl_.metainfo_ = p;
+  }
+  return _impl_.metainfo_;
+}
+inline ::proto::ResponseMetaInfoV1* GetSnapshotResponse::mutable_metainfo() {
+  ::proto::ResponseMetaInfoV1* _msg = _internal_mutable_metainfo();
+  // @@protoc_insertion_point(field_mutable:proto.GetSnapshotResponse.metaInfo)
+  return _msg;
+}
+inline void GetSnapshotResponse::set_allocated_metainfo(::proto::ResponseMetaInfoV1* metainfo) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.metainfo_);
+  }
+  if (metainfo) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(metainfo));
+    if (message_arena != submessage_arena) {
+      metainfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, metainfo, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  _impl_.metainfo_ = metainfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.GetSnapshotResponse.metaInfo)
 }
 
 // .proto.SwcDataV1 SwcNodeData = 3;
@@ -11008,77 +11118,92 @@ inline void GetSnapshotResponse::set_allocated_swcnodedata(::proto::SwcDataV1* s
 
 // GetAllIncrementOperationMetaInfoResponse
 
-// bool status = 1;
-inline void GetAllIncrementOperationMetaInfoResponse::clear_status() {
-  _impl_.status_ = false;
+// .proto.ResponseMetaInfoV1 metaInfo = 1;
+inline bool GetAllIncrementOperationMetaInfoResponse::_internal_has_metainfo() const {
+  return this != internal_default_instance() && _impl_.metainfo_ != nullptr;
 }
-inline bool GetAllIncrementOperationMetaInfoResponse::_internal_status() const {
-  return _impl_.status_;
+inline bool GetAllIncrementOperationMetaInfoResponse::has_metainfo() const {
+  return _internal_has_metainfo();
 }
-inline bool GetAllIncrementOperationMetaInfoResponse::status() const {
-  // @@protoc_insertion_point(field_get:proto.GetAllIncrementOperationMetaInfoResponse.status)
-  return _internal_status();
+inline const ::proto::ResponseMetaInfoV1& GetAllIncrementOperationMetaInfoResponse::_internal_metainfo() const {
+  const ::proto::ResponseMetaInfoV1* p = _impl_.metainfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::ResponseMetaInfoV1&>(
+      ::proto::_ResponseMetaInfoV1_default_instance_);
 }
-inline void GetAllIncrementOperationMetaInfoResponse::_internal_set_status(bool value) {
-  
-  _impl_.status_ = value;
+inline const ::proto::ResponseMetaInfoV1& GetAllIncrementOperationMetaInfoResponse::metainfo() const {
+  // @@protoc_insertion_point(field_get:proto.GetAllIncrementOperationMetaInfoResponse.metaInfo)
+  return _internal_metainfo();
 }
-inline void GetAllIncrementOperationMetaInfoResponse::set_status(bool value) {
-  _internal_set_status(value);
-  // @@protoc_insertion_point(field_set:proto.GetAllIncrementOperationMetaInfoResponse.status)
-}
-
-// string Message = 2;
-inline void GetAllIncrementOperationMetaInfoResponse::clear_message() {
-  _impl_.message_.ClearToEmpty();
-}
-inline const std::string& GetAllIncrementOperationMetaInfoResponse::message() const {
-  // @@protoc_insertion_point(field_get:proto.GetAllIncrementOperationMetaInfoResponse.Message)
-  return _internal_message();
-}
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void GetAllIncrementOperationMetaInfoResponse::set_message(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.message_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:proto.GetAllIncrementOperationMetaInfoResponse.Message)
-}
-inline std::string* GetAllIncrementOperationMetaInfoResponse::mutable_message() {
-  std::string* _s = _internal_mutable_message();
-  // @@protoc_insertion_point(field_mutable:proto.GetAllIncrementOperationMetaInfoResponse.Message)
-  return _s;
-}
-inline const std::string& GetAllIncrementOperationMetaInfoResponse::_internal_message() const {
-  return _impl_.message_.Get();
-}
-inline void GetAllIncrementOperationMetaInfoResponse::_internal_set_message(const std::string& value) {
-  
-  _impl_.message_.Set(value, GetArenaForAllocation());
-}
-inline std::string* GetAllIncrementOperationMetaInfoResponse::_internal_mutable_message() {
-  
-  return _impl_.message_.Mutable(GetArenaForAllocation());
-}
-inline std::string* GetAllIncrementOperationMetaInfoResponse::release_message() {
-  // @@protoc_insertion_point(field_release:proto.GetAllIncrementOperationMetaInfoResponse.Message)
-  return _impl_.message_.Release();
-}
-inline void GetAllIncrementOperationMetaInfoResponse::set_allocated_message(std::string* message) {
-  if (message != nullptr) {
+inline void GetAllIncrementOperationMetaInfoResponse::unsafe_arena_set_allocated_metainfo(
+    ::proto::ResponseMetaInfoV1* metainfo) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.metainfo_);
+  }
+  _impl_.metainfo_ = metainfo;
+  if (metainfo) {
     
   } else {
     
   }
-  _impl_.message_.SetAllocated(message, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.message_.IsDefault()) {
-    _impl_.message_.Set("", GetArenaForAllocation());
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.GetAllIncrementOperationMetaInfoResponse.metaInfo)
+}
+inline ::proto::ResponseMetaInfoV1* GetAllIncrementOperationMetaInfoResponse::release_metainfo() {
+  
+  ::proto::ResponseMetaInfoV1* temp = _impl_.metainfo_;
+  _impl_.metainfo_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
   }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:proto.GetAllIncrementOperationMetaInfoResponse.Message)
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::proto::ResponseMetaInfoV1* GetAllIncrementOperationMetaInfoResponse::unsafe_arena_release_metainfo() {
+  // @@protoc_insertion_point(field_release:proto.GetAllIncrementOperationMetaInfoResponse.metaInfo)
+  
+  ::proto::ResponseMetaInfoV1* temp = _impl_.metainfo_;
+  _impl_.metainfo_ = nullptr;
+  return temp;
+}
+inline ::proto::ResponseMetaInfoV1* GetAllIncrementOperationMetaInfoResponse::_internal_mutable_metainfo() {
+  
+  if (_impl_.metainfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::ResponseMetaInfoV1>(GetArenaForAllocation());
+    _impl_.metainfo_ = p;
+  }
+  return _impl_.metainfo_;
+}
+inline ::proto::ResponseMetaInfoV1* GetAllIncrementOperationMetaInfoResponse::mutable_metainfo() {
+  ::proto::ResponseMetaInfoV1* _msg = _internal_mutable_metainfo();
+  // @@protoc_insertion_point(field_mutable:proto.GetAllIncrementOperationMetaInfoResponse.metaInfo)
+  return _msg;
+}
+inline void GetAllIncrementOperationMetaInfoResponse::set_allocated_metainfo(::proto::ResponseMetaInfoV1* metainfo) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.metainfo_);
+  }
+  if (metainfo) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(metainfo));
+    if (message_arena != submessage_arena) {
+      metainfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, metainfo, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  _impl_.metainfo_ = metainfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.GetAllIncrementOperationMetaInfoResponse.metaInfo)
 }
 
-// repeated .proto.SwcIncrementOperationMetaInfoV1 SwcIncrementOperationList = 3;
+// repeated .proto.SwcIncrementOperationMetaInfoV1 SwcIncrementOperationList = 2;
 inline int GetAllIncrementOperationMetaInfoResponse::_internal_swcincrementoperationlist_size() const {
   return _impl_.swcincrementoperationlist_.size();
 }
@@ -11119,77 +11244,92 @@ GetAllIncrementOperationMetaInfoResponse::swcincrementoperationlist() const {
 
 // GetIncrementOperationResponse
 
-// bool status = 1;
-inline void GetIncrementOperationResponse::clear_status() {
-  _impl_.status_ = false;
+// .proto.ResponseMetaInfoV1 metaInfo = 1;
+inline bool GetIncrementOperationResponse::_internal_has_metainfo() const {
+  return this != internal_default_instance() && _impl_.metainfo_ != nullptr;
 }
-inline bool GetIncrementOperationResponse::_internal_status() const {
-  return _impl_.status_;
+inline bool GetIncrementOperationResponse::has_metainfo() const {
+  return _internal_has_metainfo();
 }
-inline bool GetIncrementOperationResponse::status() const {
-  // @@protoc_insertion_point(field_get:proto.GetIncrementOperationResponse.status)
-  return _internal_status();
+inline const ::proto::ResponseMetaInfoV1& GetIncrementOperationResponse::_internal_metainfo() const {
+  const ::proto::ResponseMetaInfoV1* p = _impl_.metainfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::ResponseMetaInfoV1&>(
+      ::proto::_ResponseMetaInfoV1_default_instance_);
 }
-inline void GetIncrementOperationResponse::_internal_set_status(bool value) {
-  
-  _impl_.status_ = value;
+inline const ::proto::ResponseMetaInfoV1& GetIncrementOperationResponse::metainfo() const {
+  // @@protoc_insertion_point(field_get:proto.GetIncrementOperationResponse.metaInfo)
+  return _internal_metainfo();
 }
-inline void GetIncrementOperationResponse::set_status(bool value) {
-  _internal_set_status(value);
-  // @@protoc_insertion_point(field_set:proto.GetIncrementOperationResponse.status)
-}
-
-// string Message = 2;
-inline void GetIncrementOperationResponse::clear_message() {
-  _impl_.message_.ClearToEmpty();
-}
-inline const std::string& GetIncrementOperationResponse::message() const {
-  // @@protoc_insertion_point(field_get:proto.GetIncrementOperationResponse.Message)
-  return _internal_message();
-}
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void GetIncrementOperationResponse::set_message(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.message_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:proto.GetIncrementOperationResponse.Message)
-}
-inline std::string* GetIncrementOperationResponse::mutable_message() {
-  std::string* _s = _internal_mutable_message();
-  // @@protoc_insertion_point(field_mutable:proto.GetIncrementOperationResponse.Message)
-  return _s;
-}
-inline const std::string& GetIncrementOperationResponse::_internal_message() const {
-  return _impl_.message_.Get();
-}
-inline void GetIncrementOperationResponse::_internal_set_message(const std::string& value) {
-  
-  _impl_.message_.Set(value, GetArenaForAllocation());
-}
-inline std::string* GetIncrementOperationResponse::_internal_mutable_message() {
-  
-  return _impl_.message_.Mutable(GetArenaForAllocation());
-}
-inline std::string* GetIncrementOperationResponse::release_message() {
-  // @@protoc_insertion_point(field_release:proto.GetIncrementOperationResponse.Message)
-  return _impl_.message_.Release();
-}
-inline void GetIncrementOperationResponse::set_allocated_message(std::string* message) {
-  if (message != nullptr) {
+inline void GetIncrementOperationResponse::unsafe_arena_set_allocated_metainfo(
+    ::proto::ResponseMetaInfoV1* metainfo) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.metainfo_);
+  }
+  _impl_.metainfo_ = metainfo;
+  if (metainfo) {
     
   } else {
     
   }
-  _impl_.message_.SetAllocated(message, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.message_.IsDefault()) {
-    _impl_.message_.Set("", GetArenaForAllocation());
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.GetIncrementOperationResponse.metaInfo)
+}
+inline ::proto::ResponseMetaInfoV1* GetIncrementOperationResponse::release_metainfo() {
+  
+  ::proto::ResponseMetaInfoV1* temp = _impl_.metainfo_;
+  _impl_.metainfo_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
   }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:proto.GetIncrementOperationResponse.Message)
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::proto::ResponseMetaInfoV1* GetIncrementOperationResponse::unsafe_arena_release_metainfo() {
+  // @@protoc_insertion_point(field_release:proto.GetIncrementOperationResponse.metaInfo)
+  
+  ::proto::ResponseMetaInfoV1* temp = _impl_.metainfo_;
+  _impl_.metainfo_ = nullptr;
+  return temp;
+}
+inline ::proto::ResponseMetaInfoV1* GetIncrementOperationResponse::_internal_mutable_metainfo() {
+  
+  if (_impl_.metainfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::ResponseMetaInfoV1>(GetArenaForAllocation());
+    _impl_.metainfo_ = p;
+  }
+  return _impl_.metainfo_;
+}
+inline ::proto::ResponseMetaInfoV1* GetIncrementOperationResponse::mutable_metainfo() {
+  ::proto::ResponseMetaInfoV1* _msg = _internal_mutable_metainfo();
+  // @@protoc_insertion_point(field_mutable:proto.GetIncrementOperationResponse.metaInfo)
+  return _msg;
+}
+inline void GetIncrementOperationResponse::set_allocated_metainfo(::proto::ResponseMetaInfoV1* metainfo) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.metainfo_);
+  }
+  if (metainfo) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(metainfo));
+    if (message_arena != submessage_arena) {
+      metainfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, metainfo, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  _impl_.metainfo_ = metainfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.GetIncrementOperationResponse.metaInfo)
 }
 
-// repeated .proto.SwcIncrementOperationV1 SwcIncrementOperationList = 3;
+// repeated .proto.SwcIncrementOperationV1 SwcIncrementOperationList = 2;
 inline int GetIncrementOperationResponse::_internal_swcincrementoperationlist_size() const {
   return _impl_.swcincrementoperationlist_.size();
 }
@@ -11230,299 +11370,359 @@ GetIncrementOperationResponse::swcincrementoperationlist() const {
 
 // CreateSwcNodeDataResponse
 
-// bool status = 1;
-inline void CreateSwcNodeDataResponse::clear_status() {
-  _impl_.status_ = false;
+// .proto.ResponseMetaInfoV1 metaInfo = 1;
+inline bool CreateSwcNodeDataResponse::_internal_has_metainfo() const {
+  return this != internal_default_instance() && _impl_.metainfo_ != nullptr;
 }
-inline bool CreateSwcNodeDataResponse::_internal_status() const {
-  return _impl_.status_;
+inline bool CreateSwcNodeDataResponse::has_metainfo() const {
+  return _internal_has_metainfo();
 }
-inline bool CreateSwcNodeDataResponse::status() const {
-  // @@protoc_insertion_point(field_get:proto.CreateSwcNodeDataResponse.status)
-  return _internal_status();
+inline const ::proto::ResponseMetaInfoV1& CreateSwcNodeDataResponse::_internal_metainfo() const {
+  const ::proto::ResponseMetaInfoV1* p = _impl_.metainfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::ResponseMetaInfoV1&>(
+      ::proto::_ResponseMetaInfoV1_default_instance_);
 }
-inline void CreateSwcNodeDataResponse::_internal_set_status(bool value) {
-  
-  _impl_.status_ = value;
+inline const ::proto::ResponseMetaInfoV1& CreateSwcNodeDataResponse::metainfo() const {
+  // @@protoc_insertion_point(field_get:proto.CreateSwcNodeDataResponse.metaInfo)
+  return _internal_metainfo();
 }
-inline void CreateSwcNodeDataResponse::set_status(bool value) {
-  _internal_set_status(value);
-  // @@protoc_insertion_point(field_set:proto.CreateSwcNodeDataResponse.status)
-}
-
-// string Message = 2;
-inline void CreateSwcNodeDataResponse::clear_message() {
-  _impl_.message_.ClearToEmpty();
-}
-inline const std::string& CreateSwcNodeDataResponse::message() const {
-  // @@protoc_insertion_point(field_get:proto.CreateSwcNodeDataResponse.Message)
-  return _internal_message();
-}
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void CreateSwcNodeDataResponse::set_message(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.message_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:proto.CreateSwcNodeDataResponse.Message)
-}
-inline std::string* CreateSwcNodeDataResponse::mutable_message() {
-  std::string* _s = _internal_mutable_message();
-  // @@protoc_insertion_point(field_mutable:proto.CreateSwcNodeDataResponse.Message)
-  return _s;
-}
-inline const std::string& CreateSwcNodeDataResponse::_internal_message() const {
-  return _impl_.message_.Get();
-}
-inline void CreateSwcNodeDataResponse::_internal_set_message(const std::string& value) {
-  
-  _impl_.message_.Set(value, GetArenaForAllocation());
-}
-inline std::string* CreateSwcNodeDataResponse::_internal_mutable_message() {
-  
-  return _impl_.message_.Mutable(GetArenaForAllocation());
-}
-inline std::string* CreateSwcNodeDataResponse::release_message() {
-  // @@protoc_insertion_point(field_release:proto.CreateSwcNodeDataResponse.Message)
-  return _impl_.message_.Release();
-}
-inline void CreateSwcNodeDataResponse::set_allocated_message(std::string* message) {
-  if (message != nullptr) {
+inline void CreateSwcNodeDataResponse::unsafe_arena_set_allocated_metainfo(
+    ::proto::ResponseMetaInfoV1* metainfo) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.metainfo_);
+  }
+  _impl_.metainfo_ = metainfo;
+  if (metainfo) {
     
   } else {
     
   }
-  _impl_.message_.SetAllocated(message, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.message_.IsDefault()) {
-    _impl_.message_.Set("", GetArenaForAllocation());
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.CreateSwcNodeDataResponse.metaInfo)
+}
+inline ::proto::ResponseMetaInfoV1* CreateSwcNodeDataResponse::release_metainfo() {
+  
+  ::proto::ResponseMetaInfoV1* temp = _impl_.metainfo_;
+  _impl_.metainfo_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
   }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:proto.CreateSwcNodeDataResponse.Message)
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::proto::ResponseMetaInfoV1* CreateSwcNodeDataResponse::unsafe_arena_release_metainfo() {
+  // @@protoc_insertion_point(field_release:proto.CreateSwcNodeDataResponse.metaInfo)
+  
+  ::proto::ResponseMetaInfoV1* temp = _impl_.metainfo_;
+  _impl_.metainfo_ = nullptr;
+  return temp;
+}
+inline ::proto::ResponseMetaInfoV1* CreateSwcNodeDataResponse::_internal_mutable_metainfo() {
+  
+  if (_impl_.metainfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::ResponseMetaInfoV1>(GetArenaForAllocation());
+    _impl_.metainfo_ = p;
+  }
+  return _impl_.metainfo_;
+}
+inline ::proto::ResponseMetaInfoV1* CreateSwcNodeDataResponse::mutable_metainfo() {
+  ::proto::ResponseMetaInfoV1* _msg = _internal_mutable_metainfo();
+  // @@protoc_insertion_point(field_mutable:proto.CreateSwcNodeDataResponse.metaInfo)
+  return _msg;
+}
+inline void CreateSwcNodeDataResponse::set_allocated_metainfo(::proto::ResponseMetaInfoV1* metainfo) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.metainfo_);
+  }
+  if (metainfo) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(metainfo));
+    if (message_arena != submessage_arena) {
+      metainfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, metainfo, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  _impl_.metainfo_ = metainfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.CreateSwcNodeDataResponse.metaInfo)
 }
 
 // -------------------------------------------------------------------
 
 // DeleteSwcNodeDataResponse
 
-// bool status = 1;
-inline void DeleteSwcNodeDataResponse::clear_status() {
-  _impl_.status_ = false;
+// .proto.ResponseMetaInfoV1 metaInfo = 1;
+inline bool DeleteSwcNodeDataResponse::_internal_has_metainfo() const {
+  return this != internal_default_instance() && _impl_.metainfo_ != nullptr;
 }
-inline bool DeleteSwcNodeDataResponse::_internal_status() const {
-  return _impl_.status_;
+inline bool DeleteSwcNodeDataResponse::has_metainfo() const {
+  return _internal_has_metainfo();
 }
-inline bool DeleteSwcNodeDataResponse::status() const {
-  // @@protoc_insertion_point(field_get:proto.DeleteSwcNodeDataResponse.status)
-  return _internal_status();
+inline const ::proto::ResponseMetaInfoV1& DeleteSwcNodeDataResponse::_internal_metainfo() const {
+  const ::proto::ResponseMetaInfoV1* p = _impl_.metainfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::ResponseMetaInfoV1&>(
+      ::proto::_ResponseMetaInfoV1_default_instance_);
 }
-inline void DeleteSwcNodeDataResponse::_internal_set_status(bool value) {
-  
-  _impl_.status_ = value;
+inline const ::proto::ResponseMetaInfoV1& DeleteSwcNodeDataResponse::metainfo() const {
+  // @@protoc_insertion_point(field_get:proto.DeleteSwcNodeDataResponse.metaInfo)
+  return _internal_metainfo();
 }
-inline void DeleteSwcNodeDataResponse::set_status(bool value) {
-  _internal_set_status(value);
-  // @@protoc_insertion_point(field_set:proto.DeleteSwcNodeDataResponse.status)
-}
-
-// string Message = 2;
-inline void DeleteSwcNodeDataResponse::clear_message() {
-  _impl_.message_.ClearToEmpty();
-}
-inline const std::string& DeleteSwcNodeDataResponse::message() const {
-  // @@protoc_insertion_point(field_get:proto.DeleteSwcNodeDataResponse.Message)
-  return _internal_message();
-}
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void DeleteSwcNodeDataResponse::set_message(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.message_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:proto.DeleteSwcNodeDataResponse.Message)
-}
-inline std::string* DeleteSwcNodeDataResponse::mutable_message() {
-  std::string* _s = _internal_mutable_message();
-  // @@protoc_insertion_point(field_mutable:proto.DeleteSwcNodeDataResponse.Message)
-  return _s;
-}
-inline const std::string& DeleteSwcNodeDataResponse::_internal_message() const {
-  return _impl_.message_.Get();
-}
-inline void DeleteSwcNodeDataResponse::_internal_set_message(const std::string& value) {
-  
-  _impl_.message_.Set(value, GetArenaForAllocation());
-}
-inline std::string* DeleteSwcNodeDataResponse::_internal_mutable_message() {
-  
-  return _impl_.message_.Mutable(GetArenaForAllocation());
-}
-inline std::string* DeleteSwcNodeDataResponse::release_message() {
-  // @@protoc_insertion_point(field_release:proto.DeleteSwcNodeDataResponse.Message)
-  return _impl_.message_.Release();
-}
-inline void DeleteSwcNodeDataResponse::set_allocated_message(std::string* message) {
-  if (message != nullptr) {
+inline void DeleteSwcNodeDataResponse::unsafe_arena_set_allocated_metainfo(
+    ::proto::ResponseMetaInfoV1* metainfo) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.metainfo_);
+  }
+  _impl_.metainfo_ = metainfo;
+  if (metainfo) {
     
   } else {
     
   }
-  _impl_.message_.SetAllocated(message, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.message_.IsDefault()) {
-    _impl_.message_.Set("", GetArenaForAllocation());
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.DeleteSwcNodeDataResponse.metaInfo)
+}
+inline ::proto::ResponseMetaInfoV1* DeleteSwcNodeDataResponse::release_metainfo() {
+  
+  ::proto::ResponseMetaInfoV1* temp = _impl_.metainfo_;
+  _impl_.metainfo_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
   }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:proto.DeleteSwcNodeDataResponse.Message)
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::proto::ResponseMetaInfoV1* DeleteSwcNodeDataResponse::unsafe_arena_release_metainfo() {
+  // @@protoc_insertion_point(field_release:proto.DeleteSwcNodeDataResponse.metaInfo)
+  
+  ::proto::ResponseMetaInfoV1* temp = _impl_.metainfo_;
+  _impl_.metainfo_ = nullptr;
+  return temp;
+}
+inline ::proto::ResponseMetaInfoV1* DeleteSwcNodeDataResponse::_internal_mutable_metainfo() {
+  
+  if (_impl_.metainfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::ResponseMetaInfoV1>(GetArenaForAllocation());
+    _impl_.metainfo_ = p;
+  }
+  return _impl_.metainfo_;
+}
+inline ::proto::ResponseMetaInfoV1* DeleteSwcNodeDataResponse::mutable_metainfo() {
+  ::proto::ResponseMetaInfoV1* _msg = _internal_mutable_metainfo();
+  // @@protoc_insertion_point(field_mutable:proto.DeleteSwcNodeDataResponse.metaInfo)
+  return _msg;
+}
+inline void DeleteSwcNodeDataResponse::set_allocated_metainfo(::proto::ResponseMetaInfoV1* metainfo) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.metainfo_);
+  }
+  if (metainfo) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(metainfo));
+    if (message_arena != submessage_arena) {
+      metainfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, metainfo, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  _impl_.metainfo_ = metainfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.DeleteSwcNodeDataResponse.metaInfo)
 }
 
 // -------------------------------------------------------------------
 
 // UpdateSwcNodeDataResponse
 
-// bool status = 1;
-inline void UpdateSwcNodeDataResponse::clear_status() {
-  _impl_.status_ = false;
+// .proto.ResponseMetaInfoV1 metaInfo = 1;
+inline bool UpdateSwcNodeDataResponse::_internal_has_metainfo() const {
+  return this != internal_default_instance() && _impl_.metainfo_ != nullptr;
 }
-inline bool UpdateSwcNodeDataResponse::_internal_status() const {
-  return _impl_.status_;
+inline bool UpdateSwcNodeDataResponse::has_metainfo() const {
+  return _internal_has_metainfo();
 }
-inline bool UpdateSwcNodeDataResponse::status() const {
-  // @@protoc_insertion_point(field_get:proto.UpdateSwcNodeDataResponse.status)
-  return _internal_status();
+inline const ::proto::ResponseMetaInfoV1& UpdateSwcNodeDataResponse::_internal_metainfo() const {
+  const ::proto::ResponseMetaInfoV1* p = _impl_.metainfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::ResponseMetaInfoV1&>(
+      ::proto::_ResponseMetaInfoV1_default_instance_);
 }
-inline void UpdateSwcNodeDataResponse::_internal_set_status(bool value) {
-  
-  _impl_.status_ = value;
+inline const ::proto::ResponseMetaInfoV1& UpdateSwcNodeDataResponse::metainfo() const {
+  // @@protoc_insertion_point(field_get:proto.UpdateSwcNodeDataResponse.metaInfo)
+  return _internal_metainfo();
 }
-inline void UpdateSwcNodeDataResponse::set_status(bool value) {
-  _internal_set_status(value);
-  // @@protoc_insertion_point(field_set:proto.UpdateSwcNodeDataResponse.status)
-}
-
-// string Message = 2;
-inline void UpdateSwcNodeDataResponse::clear_message() {
-  _impl_.message_.ClearToEmpty();
-}
-inline const std::string& UpdateSwcNodeDataResponse::message() const {
-  // @@protoc_insertion_point(field_get:proto.UpdateSwcNodeDataResponse.Message)
-  return _internal_message();
-}
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void UpdateSwcNodeDataResponse::set_message(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.message_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:proto.UpdateSwcNodeDataResponse.Message)
-}
-inline std::string* UpdateSwcNodeDataResponse::mutable_message() {
-  std::string* _s = _internal_mutable_message();
-  // @@protoc_insertion_point(field_mutable:proto.UpdateSwcNodeDataResponse.Message)
-  return _s;
-}
-inline const std::string& UpdateSwcNodeDataResponse::_internal_message() const {
-  return _impl_.message_.Get();
-}
-inline void UpdateSwcNodeDataResponse::_internal_set_message(const std::string& value) {
-  
-  _impl_.message_.Set(value, GetArenaForAllocation());
-}
-inline std::string* UpdateSwcNodeDataResponse::_internal_mutable_message() {
-  
-  return _impl_.message_.Mutable(GetArenaForAllocation());
-}
-inline std::string* UpdateSwcNodeDataResponse::release_message() {
-  // @@protoc_insertion_point(field_release:proto.UpdateSwcNodeDataResponse.Message)
-  return _impl_.message_.Release();
-}
-inline void UpdateSwcNodeDataResponse::set_allocated_message(std::string* message) {
-  if (message != nullptr) {
+inline void UpdateSwcNodeDataResponse::unsafe_arena_set_allocated_metainfo(
+    ::proto::ResponseMetaInfoV1* metainfo) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.metainfo_);
+  }
+  _impl_.metainfo_ = metainfo;
+  if (metainfo) {
     
   } else {
     
   }
-  _impl_.message_.SetAllocated(message, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.message_.IsDefault()) {
-    _impl_.message_.Set("", GetArenaForAllocation());
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.UpdateSwcNodeDataResponse.metaInfo)
+}
+inline ::proto::ResponseMetaInfoV1* UpdateSwcNodeDataResponse::release_metainfo() {
+  
+  ::proto::ResponseMetaInfoV1* temp = _impl_.metainfo_;
+  _impl_.metainfo_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
   }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:proto.UpdateSwcNodeDataResponse.Message)
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::proto::ResponseMetaInfoV1* UpdateSwcNodeDataResponse::unsafe_arena_release_metainfo() {
+  // @@protoc_insertion_point(field_release:proto.UpdateSwcNodeDataResponse.metaInfo)
+  
+  ::proto::ResponseMetaInfoV1* temp = _impl_.metainfo_;
+  _impl_.metainfo_ = nullptr;
+  return temp;
+}
+inline ::proto::ResponseMetaInfoV1* UpdateSwcNodeDataResponse::_internal_mutable_metainfo() {
+  
+  if (_impl_.metainfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::ResponseMetaInfoV1>(GetArenaForAllocation());
+    _impl_.metainfo_ = p;
+  }
+  return _impl_.metainfo_;
+}
+inline ::proto::ResponseMetaInfoV1* UpdateSwcNodeDataResponse::mutable_metainfo() {
+  ::proto::ResponseMetaInfoV1* _msg = _internal_mutable_metainfo();
+  // @@protoc_insertion_point(field_mutable:proto.UpdateSwcNodeDataResponse.metaInfo)
+  return _msg;
+}
+inline void UpdateSwcNodeDataResponse::set_allocated_metainfo(::proto::ResponseMetaInfoV1* metainfo) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.metainfo_);
+  }
+  if (metainfo) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(metainfo));
+    if (message_arena != submessage_arena) {
+      metainfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, metainfo, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  _impl_.metainfo_ = metainfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.UpdateSwcNodeDataResponse.metaInfo)
 }
 
 // -------------------------------------------------------------------
 
 // GetSwcNodeDataResponse
 
-// bool status = 1;
-inline void GetSwcNodeDataResponse::clear_status() {
-  _impl_.status_ = false;
+// .proto.ResponseMetaInfoV1 metaInfo = 1;
+inline bool GetSwcNodeDataResponse::_internal_has_metainfo() const {
+  return this != internal_default_instance() && _impl_.metainfo_ != nullptr;
 }
-inline bool GetSwcNodeDataResponse::_internal_status() const {
-  return _impl_.status_;
+inline bool GetSwcNodeDataResponse::has_metainfo() const {
+  return _internal_has_metainfo();
 }
-inline bool GetSwcNodeDataResponse::status() const {
-  // @@protoc_insertion_point(field_get:proto.GetSwcNodeDataResponse.status)
-  return _internal_status();
+inline const ::proto::ResponseMetaInfoV1& GetSwcNodeDataResponse::_internal_metainfo() const {
+  const ::proto::ResponseMetaInfoV1* p = _impl_.metainfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::ResponseMetaInfoV1&>(
+      ::proto::_ResponseMetaInfoV1_default_instance_);
 }
-inline void GetSwcNodeDataResponse::_internal_set_status(bool value) {
-  
-  _impl_.status_ = value;
+inline const ::proto::ResponseMetaInfoV1& GetSwcNodeDataResponse::metainfo() const {
+  // @@protoc_insertion_point(field_get:proto.GetSwcNodeDataResponse.metaInfo)
+  return _internal_metainfo();
 }
-inline void GetSwcNodeDataResponse::set_status(bool value) {
-  _internal_set_status(value);
-  // @@protoc_insertion_point(field_set:proto.GetSwcNodeDataResponse.status)
-}
-
-// string Message = 2;
-inline void GetSwcNodeDataResponse::clear_message() {
-  _impl_.message_.ClearToEmpty();
-}
-inline const std::string& GetSwcNodeDataResponse::message() const {
-  // @@protoc_insertion_point(field_get:proto.GetSwcNodeDataResponse.Message)
-  return _internal_message();
-}
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void GetSwcNodeDataResponse::set_message(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.message_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:proto.GetSwcNodeDataResponse.Message)
-}
-inline std::string* GetSwcNodeDataResponse::mutable_message() {
-  std::string* _s = _internal_mutable_message();
-  // @@protoc_insertion_point(field_mutable:proto.GetSwcNodeDataResponse.Message)
-  return _s;
-}
-inline const std::string& GetSwcNodeDataResponse::_internal_message() const {
-  return _impl_.message_.Get();
-}
-inline void GetSwcNodeDataResponse::_internal_set_message(const std::string& value) {
-  
-  _impl_.message_.Set(value, GetArenaForAllocation());
-}
-inline std::string* GetSwcNodeDataResponse::_internal_mutable_message() {
-  
-  return _impl_.message_.Mutable(GetArenaForAllocation());
-}
-inline std::string* GetSwcNodeDataResponse::release_message() {
-  // @@protoc_insertion_point(field_release:proto.GetSwcNodeDataResponse.Message)
-  return _impl_.message_.Release();
-}
-inline void GetSwcNodeDataResponse::set_allocated_message(std::string* message) {
-  if (message != nullptr) {
+inline void GetSwcNodeDataResponse::unsafe_arena_set_allocated_metainfo(
+    ::proto::ResponseMetaInfoV1* metainfo) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.metainfo_);
+  }
+  _impl_.metainfo_ = metainfo;
+  if (metainfo) {
     
   } else {
     
   }
-  _impl_.message_.SetAllocated(message, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.message_.IsDefault()) {
-    _impl_.message_.Set("", GetArenaForAllocation());
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.GetSwcNodeDataResponse.metaInfo)
+}
+inline ::proto::ResponseMetaInfoV1* GetSwcNodeDataResponse::release_metainfo() {
+  
+  ::proto::ResponseMetaInfoV1* temp = _impl_.metainfo_;
+  _impl_.metainfo_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
   }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:proto.GetSwcNodeDataResponse.Message)
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::proto::ResponseMetaInfoV1* GetSwcNodeDataResponse::unsafe_arena_release_metainfo() {
+  // @@protoc_insertion_point(field_release:proto.GetSwcNodeDataResponse.metaInfo)
+  
+  ::proto::ResponseMetaInfoV1* temp = _impl_.metainfo_;
+  _impl_.metainfo_ = nullptr;
+  return temp;
+}
+inline ::proto::ResponseMetaInfoV1* GetSwcNodeDataResponse::_internal_mutable_metainfo() {
+  
+  if (_impl_.metainfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::ResponseMetaInfoV1>(GetArenaForAllocation());
+    _impl_.metainfo_ = p;
+  }
+  return _impl_.metainfo_;
+}
+inline ::proto::ResponseMetaInfoV1* GetSwcNodeDataResponse::mutable_metainfo() {
+  ::proto::ResponseMetaInfoV1* _msg = _internal_mutable_metainfo();
+  // @@protoc_insertion_point(field_mutable:proto.GetSwcNodeDataResponse.metaInfo)
+  return _msg;
+}
+inline void GetSwcNodeDataResponse::set_allocated_metainfo(::proto::ResponseMetaInfoV1* metainfo) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.metainfo_);
+  }
+  if (metainfo) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(metainfo));
+    if (message_arena != submessage_arena) {
+      metainfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, metainfo, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  _impl_.metainfo_ = metainfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.GetSwcNodeDataResponse.metaInfo)
 }
 
-// .proto.SwcDataV1 SwcNodeData = 3;
+// .proto.SwcDataV1 SwcNodeData = 2;
 inline bool GetSwcNodeDataResponse::_internal_has_swcnodedata() const {
   return this != internal_default_instance() && _impl_.swcnodedata_ != nullptr;
 }
@@ -11611,77 +11811,92 @@ inline void GetSwcNodeDataResponse::set_allocated_swcnodedata(::proto::SwcDataV1
 
 // GetSwcFullNodeDataResponse
 
-// bool status = 1;
-inline void GetSwcFullNodeDataResponse::clear_status() {
-  _impl_.status_ = false;
+// .proto.ResponseMetaInfoV1 metaInfo = 1;
+inline bool GetSwcFullNodeDataResponse::_internal_has_metainfo() const {
+  return this != internal_default_instance() && _impl_.metainfo_ != nullptr;
 }
-inline bool GetSwcFullNodeDataResponse::_internal_status() const {
-  return _impl_.status_;
+inline bool GetSwcFullNodeDataResponse::has_metainfo() const {
+  return _internal_has_metainfo();
 }
-inline bool GetSwcFullNodeDataResponse::status() const {
-  // @@protoc_insertion_point(field_get:proto.GetSwcFullNodeDataResponse.status)
-  return _internal_status();
+inline const ::proto::ResponseMetaInfoV1& GetSwcFullNodeDataResponse::_internal_metainfo() const {
+  const ::proto::ResponseMetaInfoV1* p = _impl_.metainfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::ResponseMetaInfoV1&>(
+      ::proto::_ResponseMetaInfoV1_default_instance_);
 }
-inline void GetSwcFullNodeDataResponse::_internal_set_status(bool value) {
-  
-  _impl_.status_ = value;
+inline const ::proto::ResponseMetaInfoV1& GetSwcFullNodeDataResponse::metainfo() const {
+  // @@protoc_insertion_point(field_get:proto.GetSwcFullNodeDataResponse.metaInfo)
+  return _internal_metainfo();
 }
-inline void GetSwcFullNodeDataResponse::set_status(bool value) {
-  _internal_set_status(value);
-  // @@protoc_insertion_point(field_set:proto.GetSwcFullNodeDataResponse.status)
-}
-
-// string Message = 2;
-inline void GetSwcFullNodeDataResponse::clear_message() {
-  _impl_.message_.ClearToEmpty();
-}
-inline const std::string& GetSwcFullNodeDataResponse::message() const {
-  // @@protoc_insertion_point(field_get:proto.GetSwcFullNodeDataResponse.Message)
-  return _internal_message();
-}
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void GetSwcFullNodeDataResponse::set_message(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.message_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:proto.GetSwcFullNodeDataResponse.Message)
-}
-inline std::string* GetSwcFullNodeDataResponse::mutable_message() {
-  std::string* _s = _internal_mutable_message();
-  // @@protoc_insertion_point(field_mutable:proto.GetSwcFullNodeDataResponse.Message)
-  return _s;
-}
-inline const std::string& GetSwcFullNodeDataResponse::_internal_message() const {
-  return _impl_.message_.Get();
-}
-inline void GetSwcFullNodeDataResponse::_internal_set_message(const std::string& value) {
-  
-  _impl_.message_.Set(value, GetArenaForAllocation());
-}
-inline std::string* GetSwcFullNodeDataResponse::_internal_mutable_message() {
-  
-  return _impl_.message_.Mutable(GetArenaForAllocation());
-}
-inline std::string* GetSwcFullNodeDataResponse::release_message() {
-  // @@protoc_insertion_point(field_release:proto.GetSwcFullNodeDataResponse.Message)
-  return _impl_.message_.Release();
-}
-inline void GetSwcFullNodeDataResponse::set_allocated_message(std::string* message) {
-  if (message != nullptr) {
+inline void GetSwcFullNodeDataResponse::unsafe_arena_set_allocated_metainfo(
+    ::proto::ResponseMetaInfoV1* metainfo) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.metainfo_);
+  }
+  _impl_.metainfo_ = metainfo;
+  if (metainfo) {
     
   } else {
     
   }
-  _impl_.message_.SetAllocated(message, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.message_.IsDefault()) {
-    _impl_.message_.Set("", GetArenaForAllocation());
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.GetSwcFullNodeDataResponse.metaInfo)
+}
+inline ::proto::ResponseMetaInfoV1* GetSwcFullNodeDataResponse::release_metainfo() {
+  
+  ::proto::ResponseMetaInfoV1* temp = _impl_.metainfo_;
+  _impl_.metainfo_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
   }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:proto.GetSwcFullNodeDataResponse.Message)
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::proto::ResponseMetaInfoV1* GetSwcFullNodeDataResponse::unsafe_arena_release_metainfo() {
+  // @@protoc_insertion_point(field_release:proto.GetSwcFullNodeDataResponse.metaInfo)
+  
+  ::proto::ResponseMetaInfoV1* temp = _impl_.metainfo_;
+  _impl_.metainfo_ = nullptr;
+  return temp;
+}
+inline ::proto::ResponseMetaInfoV1* GetSwcFullNodeDataResponse::_internal_mutable_metainfo() {
+  
+  if (_impl_.metainfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::ResponseMetaInfoV1>(GetArenaForAllocation());
+    _impl_.metainfo_ = p;
+  }
+  return _impl_.metainfo_;
+}
+inline ::proto::ResponseMetaInfoV1* GetSwcFullNodeDataResponse::mutable_metainfo() {
+  ::proto::ResponseMetaInfoV1* _msg = _internal_mutable_metainfo();
+  // @@protoc_insertion_point(field_mutable:proto.GetSwcFullNodeDataResponse.metaInfo)
+  return _msg;
+}
+inline void GetSwcFullNodeDataResponse::set_allocated_metainfo(::proto::ResponseMetaInfoV1* metainfo) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.metainfo_);
+  }
+  if (metainfo) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(metainfo));
+    if (message_arena != submessage_arena) {
+      metainfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, metainfo, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  _impl_.metainfo_ = metainfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.GetSwcFullNodeDataResponse.metaInfo)
 }
 
-// .proto.SwcDataV1 SwcNodeData = 3;
+// .proto.SwcDataV1 SwcNodeData = 2;
 inline bool GetSwcFullNodeDataResponse::_internal_has_swcnodedata() const {
   return this != internal_default_instance() && _impl_.swcnodedata_ != nullptr;
 }
@@ -11770,77 +11985,92 @@ inline void GetSwcFullNodeDataResponse::set_allocated_swcnodedata(::proto::SwcDa
 
 // GetSwcNodeDataListByTimeAndUserResponse
 
-// bool status = 1;
-inline void GetSwcNodeDataListByTimeAndUserResponse::clear_status() {
-  _impl_.status_ = false;
+// .proto.ResponseMetaInfoV1 metaInfo = 1;
+inline bool GetSwcNodeDataListByTimeAndUserResponse::_internal_has_metainfo() const {
+  return this != internal_default_instance() && _impl_.metainfo_ != nullptr;
 }
-inline bool GetSwcNodeDataListByTimeAndUserResponse::_internal_status() const {
-  return _impl_.status_;
+inline bool GetSwcNodeDataListByTimeAndUserResponse::has_metainfo() const {
+  return _internal_has_metainfo();
 }
-inline bool GetSwcNodeDataListByTimeAndUserResponse::status() const {
-  // @@protoc_insertion_point(field_get:proto.GetSwcNodeDataListByTimeAndUserResponse.status)
-  return _internal_status();
+inline const ::proto::ResponseMetaInfoV1& GetSwcNodeDataListByTimeAndUserResponse::_internal_metainfo() const {
+  const ::proto::ResponseMetaInfoV1* p = _impl_.metainfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::ResponseMetaInfoV1&>(
+      ::proto::_ResponseMetaInfoV1_default_instance_);
 }
-inline void GetSwcNodeDataListByTimeAndUserResponse::_internal_set_status(bool value) {
-  
-  _impl_.status_ = value;
+inline const ::proto::ResponseMetaInfoV1& GetSwcNodeDataListByTimeAndUserResponse::metainfo() const {
+  // @@protoc_insertion_point(field_get:proto.GetSwcNodeDataListByTimeAndUserResponse.metaInfo)
+  return _internal_metainfo();
 }
-inline void GetSwcNodeDataListByTimeAndUserResponse::set_status(bool value) {
-  _internal_set_status(value);
-  // @@protoc_insertion_point(field_set:proto.GetSwcNodeDataListByTimeAndUserResponse.status)
-}
-
-// string Message = 2;
-inline void GetSwcNodeDataListByTimeAndUserResponse::clear_message() {
-  _impl_.message_.ClearToEmpty();
-}
-inline const std::string& GetSwcNodeDataListByTimeAndUserResponse::message() const {
-  // @@protoc_insertion_point(field_get:proto.GetSwcNodeDataListByTimeAndUserResponse.Message)
-  return _internal_message();
-}
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void GetSwcNodeDataListByTimeAndUserResponse::set_message(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.message_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:proto.GetSwcNodeDataListByTimeAndUserResponse.Message)
-}
-inline std::string* GetSwcNodeDataListByTimeAndUserResponse::mutable_message() {
-  std::string* _s = _internal_mutable_message();
-  // @@protoc_insertion_point(field_mutable:proto.GetSwcNodeDataListByTimeAndUserResponse.Message)
-  return _s;
-}
-inline const std::string& GetSwcNodeDataListByTimeAndUserResponse::_internal_message() const {
-  return _impl_.message_.Get();
-}
-inline void GetSwcNodeDataListByTimeAndUserResponse::_internal_set_message(const std::string& value) {
-  
-  _impl_.message_.Set(value, GetArenaForAllocation());
-}
-inline std::string* GetSwcNodeDataListByTimeAndUserResponse::_internal_mutable_message() {
-  
-  return _impl_.message_.Mutable(GetArenaForAllocation());
-}
-inline std::string* GetSwcNodeDataListByTimeAndUserResponse::release_message() {
-  // @@protoc_insertion_point(field_release:proto.GetSwcNodeDataListByTimeAndUserResponse.Message)
-  return _impl_.message_.Release();
-}
-inline void GetSwcNodeDataListByTimeAndUserResponse::set_allocated_message(std::string* message) {
-  if (message != nullptr) {
+inline void GetSwcNodeDataListByTimeAndUserResponse::unsafe_arena_set_allocated_metainfo(
+    ::proto::ResponseMetaInfoV1* metainfo) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.metainfo_);
+  }
+  _impl_.metainfo_ = metainfo;
+  if (metainfo) {
     
   } else {
     
   }
-  _impl_.message_.SetAllocated(message, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.message_.IsDefault()) {
-    _impl_.message_.Set("", GetArenaForAllocation());
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.GetSwcNodeDataListByTimeAndUserResponse.metaInfo)
+}
+inline ::proto::ResponseMetaInfoV1* GetSwcNodeDataListByTimeAndUserResponse::release_metainfo() {
+  
+  ::proto::ResponseMetaInfoV1* temp = _impl_.metainfo_;
+  _impl_.metainfo_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
   }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:proto.GetSwcNodeDataListByTimeAndUserResponse.Message)
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::proto::ResponseMetaInfoV1* GetSwcNodeDataListByTimeAndUserResponse::unsafe_arena_release_metainfo() {
+  // @@protoc_insertion_point(field_release:proto.GetSwcNodeDataListByTimeAndUserResponse.metaInfo)
+  
+  ::proto::ResponseMetaInfoV1* temp = _impl_.metainfo_;
+  _impl_.metainfo_ = nullptr;
+  return temp;
+}
+inline ::proto::ResponseMetaInfoV1* GetSwcNodeDataListByTimeAndUserResponse::_internal_mutable_metainfo() {
+  
+  if (_impl_.metainfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::ResponseMetaInfoV1>(GetArenaForAllocation());
+    _impl_.metainfo_ = p;
+  }
+  return _impl_.metainfo_;
+}
+inline ::proto::ResponseMetaInfoV1* GetSwcNodeDataListByTimeAndUserResponse::mutable_metainfo() {
+  ::proto::ResponseMetaInfoV1* _msg = _internal_mutable_metainfo();
+  // @@protoc_insertion_point(field_mutable:proto.GetSwcNodeDataListByTimeAndUserResponse.metaInfo)
+  return _msg;
+}
+inline void GetSwcNodeDataListByTimeAndUserResponse::set_allocated_metainfo(::proto::ResponseMetaInfoV1* metainfo) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.metainfo_);
+  }
+  if (metainfo) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(metainfo));
+    if (message_arena != submessage_arena) {
+      metainfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, metainfo, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  _impl_.metainfo_ = metainfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.GetSwcNodeDataListByTimeAndUserResponse.metaInfo)
 }
 
-// .proto.SwcDataV1 SwcNodeData = 3;
+// .proto.SwcDataV1 SwcNodeData = 2;
 inline bool GetSwcNodeDataListByTimeAndUserResponse::_internal_has_swcnodedata() const {
   return this != internal_default_instance() && _impl_.swcnodedata_ != nullptr;
 }
@@ -11929,77 +12159,92 @@ inline void GetSwcNodeDataListByTimeAndUserResponse::set_allocated_swcnodedata(:
 
 // BackupFullDatabaseResponse
 
-// bool status = 1;
-inline void BackupFullDatabaseResponse::clear_status() {
-  _impl_.status_ = false;
+// .proto.ResponseMetaInfoV1 metaInfo = 1;
+inline bool BackupFullDatabaseResponse::_internal_has_metainfo() const {
+  return this != internal_default_instance() && _impl_.metainfo_ != nullptr;
 }
-inline bool BackupFullDatabaseResponse::_internal_status() const {
-  return _impl_.status_;
+inline bool BackupFullDatabaseResponse::has_metainfo() const {
+  return _internal_has_metainfo();
 }
-inline bool BackupFullDatabaseResponse::status() const {
-  // @@protoc_insertion_point(field_get:proto.BackupFullDatabaseResponse.status)
-  return _internal_status();
+inline const ::proto::ResponseMetaInfoV1& BackupFullDatabaseResponse::_internal_metainfo() const {
+  const ::proto::ResponseMetaInfoV1* p = _impl_.metainfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::ResponseMetaInfoV1&>(
+      ::proto::_ResponseMetaInfoV1_default_instance_);
 }
-inline void BackupFullDatabaseResponse::_internal_set_status(bool value) {
-  
-  _impl_.status_ = value;
+inline const ::proto::ResponseMetaInfoV1& BackupFullDatabaseResponse::metainfo() const {
+  // @@protoc_insertion_point(field_get:proto.BackupFullDatabaseResponse.metaInfo)
+  return _internal_metainfo();
 }
-inline void BackupFullDatabaseResponse::set_status(bool value) {
-  _internal_set_status(value);
-  // @@protoc_insertion_point(field_set:proto.BackupFullDatabaseResponse.status)
-}
-
-// string Message = 2;
-inline void BackupFullDatabaseResponse::clear_message() {
-  _impl_.message_.ClearToEmpty();
-}
-inline const std::string& BackupFullDatabaseResponse::message() const {
-  // @@protoc_insertion_point(field_get:proto.BackupFullDatabaseResponse.Message)
-  return _internal_message();
-}
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void BackupFullDatabaseResponse::set_message(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.message_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:proto.BackupFullDatabaseResponse.Message)
-}
-inline std::string* BackupFullDatabaseResponse::mutable_message() {
-  std::string* _s = _internal_mutable_message();
-  // @@protoc_insertion_point(field_mutable:proto.BackupFullDatabaseResponse.Message)
-  return _s;
-}
-inline const std::string& BackupFullDatabaseResponse::_internal_message() const {
-  return _impl_.message_.Get();
-}
-inline void BackupFullDatabaseResponse::_internal_set_message(const std::string& value) {
-  
-  _impl_.message_.Set(value, GetArenaForAllocation());
-}
-inline std::string* BackupFullDatabaseResponse::_internal_mutable_message() {
-  
-  return _impl_.message_.Mutable(GetArenaForAllocation());
-}
-inline std::string* BackupFullDatabaseResponse::release_message() {
-  // @@protoc_insertion_point(field_release:proto.BackupFullDatabaseResponse.Message)
-  return _impl_.message_.Release();
-}
-inline void BackupFullDatabaseResponse::set_allocated_message(std::string* message) {
-  if (message != nullptr) {
+inline void BackupFullDatabaseResponse::unsafe_arena_set_allocated_metainfo(
+    ::proto::ResponseMetaInfoV1* metainfo) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.metainfo_);
+  }
+  _impl_.metainfo_ = metainfo;
+  if (metainfo) {
     
   } else {
     
   }
-  _impl_.message_.SetAllocated(message, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.message_.IsDefault()) {
-    _impl_.message_.Set("", GetArenaForAllocation());
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.BackupFullDatabaseResponse.metaInfo)
+}
+inline ::proto::ResponseMetaInfoV1* BackupFullDatabaseResponse::release_metainfo() {
+  
+  ::proto::ResponseMetaInfoV1* temp = _impl_.metainfo_;
+  _impl_.metainfo_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
   }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:proto.BackupFullDatabaseResponse.Message)
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::proto::ResponseMetaInfoV1* BackupFullDatabaseResponse::unsafe_arena_release_metainfo() {
+  // @@protoc_insertion_point(field_release:proto.BackupFullDatabaseResponse.metaInfo)
+  
+  ::proto::ResponseMetaInfoV1* temp = _impl_.metainfo_;
+  _impl_.metainfo_ = nullptr;
+  return temp;
+}
+inline ::proto::ResponseMetaInfoV1* BackupFullDatabaseResponse::_internal_mutable_metainfo() {
+  
+  if (_impl_.metainfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::ResponseMetaInfoV1>(GetArenaForAllocation());
+    _impl_.metainfo_ = p;
+  }
+  return _impl_.metainfo_;
+}
+inline ::proto::ResponseMetaInfoV1* BackupFullDatabaseResponse::mutable_metainfo() {
+  ::proto::ResponseMetaInfoV1* _msg = _internal_mutable_metainfo();
+  // @@protoc_insertion_point(field_mutable:proto.BackupFullDatabaseResponse.metaInfo)
+  return _msg;
+}
+inline void BackupFullDatabaseResponse::set_allocated_metainfo(::proto::ResponseMetaInfoV1* metainfo) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.metainfo_);
+  }
+  if (metainfo) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(metainfo));
+    if (message_arena != submessage_arena) {
+      metainfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, metainfo, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  _impl_.metainfo_ = metainfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.BackupFullDatabaseResponse.metaInfo)
 }
 
-// bool InstantBackup = 3;
+// bool InstantBackup = 2;
 inline void BackupFullDatabaseResponse::clear_instantbackup() {
   _impl_.instantbackup_ = false;
 }
@@ -12019,7 +12264,7 @@ inline void BackupFullDatabaseResponse::set_instantbackup(bool value) {
   // @@protoc_insertion_point(field_set:proto.BackupFullDatabaseResponse.InstantBackup)
 }
 
-// .google.protobuf.Timestamp DelayBackupTime = 4;
+// .google.protobuf.Timestamp DelayBackupTime = 3;
 inline bool BackupFullDatabaseResponse::_internal_has_delaybackuptime() const {
   return this != internal_default_instance() && _impl_.delaybackuptime_ != nullptr;
 }
@@ -12108,77 +12353,92 @@ inline void BackupFullDatabaseResponse::set_allocated_delaybackuptime(::PROTOBUF
 
 // CreateDailyStatisticsResponse
 
-// bool status = 1;
-inline void CreateDailyStatisticsResponse::clear_status() {
-  _impl_.status_ = false;
+// .proto.ResponseMetaInfoV1 metaInfo = 1;
+inline bool CreateDailyStatisticsResponse::_internal_has_metainfo() const {
+  return this != internal_default_instance() && _impl_.metainfo_ != nullptr;
 }
-inline bool CreateDailyStatisticsResponse::_internal_status() const {
-  return _impl_.status_;
+inline bool CreateDailyStatisticsResponse::has_metainfo() const {
+  return _internal_has_metainfo();
 }
-inline bool CreateDailyStatisticsResponse::status() const {
-  // @@protoc_insertion_point(field_get:proto.CreateDailyStatisticsResponse.status)
-  return _internal_status();
+inline const ::proto::ResponseMetaInfoV1& CreateDailyStatisticsResponse::_internal_metainfo() const {
+  const ::proto::ResponseMetaInfoV1* p = _impl_.metainfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::ResponseMetaInfoV1&>(
+      ::proto::_ResponseMetaInfoV1_default_instance_);
 }
-inline void CreateDailyStatisticsResponse::_internal_set_status(bool value) {
-  
-  _impl_.status_ = value;
+inline const ::proto::ResponseMetaInfoV1& CreateDailyStatisticsResponse::metainfo() const {
+  // @@protoc_insertion_point(field_get:proto.CreateDailyStatisticsResponse.metaInfo)
+  return _internal_metainfo();
 }
-inline void CreateDailyStatisticsResponse::set_status(bool value) {
-  _internal_set_status(value);
-  // @@protoc_insertion_point(field_set:proto.CreateDailyStatisticsResponse.status)
-}
-
-// string Message = 2;
-inline void CreateDailyStatisticsResponse::clear_message() {
-  _impl_.message_.ClearToEmpty();
-}
-inline const std::string& CreateDailyStatisticsResponse::message() const {
-  // @@protoc_insertion_point(field_get:proto.CreateDailyStatisticsResponse.Message)
-  return _internal_message();
-}
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void CreateDailyStatisticsResponse::set_message(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.message_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:proto.CreateDailyStatisticsResponse.Message)
-}
-inline std::string* CreateDailyStatisticsResponse::mutable_message() {
-  std::string* _s = _internal_mutable_message();
-  // @@protoc_insertion_point(field_mutable:proto.CreateDailyStatisticsResponse.Message)
-  return _s;
-}
-inline const std::string& CreateDailyStatisticsResponse::_internal_message() const {
-  return _impl_.message_.Get();
-}
-inline void CreateDailyStatisticsResponse::_internal_set_message(const std::string& value) {
-  
-  _impl_.message_.Set(value, GetArenaForAllocation());
-}
-inline std::string* CreateDailyStatisticsResponse::_internal_mutable_message() {
-  
-  return _impl_.message_.Mutable(GetArenaForAllocation());
-}
-inline std::string* CreateDailyStatisticsResponse::release_message() {
-  // @@protoc_insertion_point(field_release:proto.CreateDailyStatisticsResponse.Message)
-  return _impl_.message_.Release();
-}
-inline void CreateDailyStatisticsResponse::set_allocated_message(std::string* message) {
-  if (message != nullptr) {
+inline void CreateDailyStatisticsResponse::unsafe_arena_set_allocated_metainfo(
+    ::proto::ResponseMetaInfoV1* metainfo) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.metainfo_);
+  }
+  _impl_.metainfo_ = metainfo;
+  if (metainfo) {
     
   } else {
     
   }
-  _impl_.message_.SetAllocated(message, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.message_.IsDefault()) {
-    _impl_.message_.Set("", GetArenaForAllocation());
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.CreateDailyStatisticsResponse.metaInfo)
+}
+inline ::proto::ResponseMetaInfoV1* CreateDailyStatisticsResponse::release_metainfo() {
+  
+  ::proto::ResponseMetaInfoV1* temp = _impl_.metainfo_;
+  _impl_.metainfo_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
   }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:proto.CreateDailyStatisticsResponse.Message)
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::proto::ResponseMetaInfoV1* CreateDailyStatisticsResponse::unsafe_arena_release_metainfo() {
+  // @@protoc_insertion_point(field_release:proto.CreateDailyStatisticsResponse.metaInfo)
+  
+  ::proto::ResponseMetaInfoV1* temp = _impl_.metainfo_;
+  _impl_.metainfo_ = nullptr;
+  return temp;
+}
+inline ::proto::ResponseMetaInfoV1* CreateDailyStatisticsResponse::_internal_mutable_metainfo() {
+  
+  if (_impl_.metainfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::ResponseMetaInfoV1>(GetArenaForAllocation());
+    _impl_.metainfo_ = p;
+  }
+  return _impl_.metainfo_;
+}
+inline ::proto::ResponseMetaInfoV1* CreateDailyStatisticsResponse::mutable_metainfo() {
+  ::proto::ResponseMetaInfoV1* _msg = _internal_mutable_metainfo();
+  // @@protoc_insertion_point(field_mutable:proto.CreateDailyStatisticsResponse.metaInfo)
+  return _msg;
+}
+inline void CreateDailyStatisticsResponse::set_allocated_metainfo(::proto::ResponseMetaInfoV1* metainfo) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.metainfo_);
+  }
+  if (metainfo) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(metainfo));
+    if (message_arena != submessage_arena) {
+      metainfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, metainfo, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  _impl_.metainfo_ = metainfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.CreateDailyStatisticsResponse.metaInfo)
 }
 
-// .proto.DailyStatisticsMetaInfoV1 DailyStatisticsInfo = 3;
+// .proto.DailyStatisticsMetaInfoV1 DailyStatisticsInfo = 2;
 inline bool CreateDailyStatisticsResponse::_internal_has_dailystatisticsinfo() const {
   return this != internal_default_instance() && _impl_.dailystatisticsinfo_ != nullptr;
 }
@@ -12267,77 +12527,92 @@ inline void CreateDailyStatisticsResponse::set_allocated_dailystatisticsinfo(::p
 
 // DeleteDailyStatisticsResponse
 
-// bool status = 1;
-inline void DeleteDailyStatisticsResponse::clear_status() {
-  _impl_.status_ = false;
+// .proto.ResponseMetaInfoV1 metaInfo = 1;
+inline bool DeleteDailyStatisticsResponse::_internal_has_metainfo() const {
+  return this != internal_default_instance() && _impl_.metainfo_ != nullptr;
 }
-inline bool DeleteDailyStatisticsResponse::_internal_status() const {
-  return _impl_.status_;
+inline bool DeleteDailyStatisticsResponse::has_metainfo() const {
+  return _internal_has_metainfo();
 }
-inline bool DeleteDailyStatisticsResponse::status() const {
-  // @@protoc_insertion_point(field_get:proto.DeleteDailyStatisticsResponse.status)
-  return _internal_status();
+inline const ::proto::ResponseMetaInfoV1& DeleteDailyStatisticsResponse::_internal_metainfo() const {
+  const ::proto::ResponseMetaInfoV1* p = _impl_.metainfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::ResponseMetaInfoV1&>(
+      ::proto::_ResponseMetaInfoV1_default_instance_);
 }
-inline void DeleteDailyStatisticsResponse::_internal_set_status(bool value) {
-  
-  _impl_.status_ = value;
+inline const ::proto::ResponseMetaInfoV1& DeleteDailyStatisticsResponse::metainfo() const {
+  // @@protoc_insertion_point(field_get:proto.DeleteDailyStatisticsResponse.metaInfo)
+  return _internal_metainfo();
 }
-inline void DeleteDailyStatisticsResponse::set_status(bool value) {
-  _internal_set_status(value);
-  // @@protoc_insertion_point(field_set:proto.DeleteDailyStatisticsResponse.status)
-}
-
-// string Message = 2;
-inline void DeleteDailyStatisticsResponse::clear_message() {
-  _impl_.message_.ClearToEmpty();
-}
-inline const std::string& DeleteDailyStatisticsResponse::message() const {
-  // @@protoc_insertion_point(field_get:proto.DeleteDailyStatisticsResponse.Message)
-  return _internal_message();
-}
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void DeleteDailyStatisticsResponse::set_message(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.message_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:proto.DeleteDailyStatisticsResponse.Message)
-}
-inline std::string* DeleteDailyStatisticsResponse::mutable_message() {
-  std::string* _s = _internal_mutable_message();
-  // @@protoc_insertion_point(field_mutable:proto.DeleteDailyStatisticsResponse.Message)
-  return _s;
-}
-inline const std::string& DeleteDailyStatisticsResponse::_internal_message() const {
-  return _impl_.message_.Get();
-}
-inline void DeleteDailyStatisticsResponse::_internal_set_message(const std::string& value) {
-  
-  _impl_.message_.Set(value, GetArenaForAllocation());
-}
-inline std::string* DeleteDailyStatisticsResponse::_internal_mutable_message() {
-  
-  return _impl_.message_.Mutable(GetArenaForAllocation());
-}
-inline std::string* DeleteDailyStatisticsResponse::release_message() {
-  // @@protoc_insertion_point(field_release:proto.DeleteDailyStatisticsResponse.Message)
-  return _impl_.message_.Release();
-}
-inline void DeleteDailyStatisticsResponse::set_allocated_message(std::string* message) {
-  if (message != nullptr) {
+inline void DeleteDailyStatisticsResponse::unsafe_arena_set_allocated_metainfo(
+    ::proto::ResponseMetaInfoV1* metainfo) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.metainfo_);
+  }
+  _impl_.metainfo_ = metainfo;
+  if (metainfo) {
     
   } else {
     
   }
-  _impl_.message_.SetAllocated(message, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.message_.IsDefault()) {
-    _impl_.message_.Set("", GetArenaForAllocation());
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.DeleteDailyStatisticsResponse.metaInfo)
+}
+inline ::proto::ResponseMetaInfoV1* DeleteDailyStatisticsResponse::release_metainfo() {
+  
+  ::proto::ResponseMetaInfoV1* temp = _impl_.metainfo_;
+  _impl_.metainfo_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
   }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:proto.DeleteDailyStatisticsResponse.Message)
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::proto::ResponseMetaInfoV1* DeleteDailyStatisticsResponse::unsafe_arena_release_metainfo() {
+  // @@protoc_insertion_point(field_release:proto.DeleteDailyStatisticsResponse.metaInfo)
+  
+  ::proto::ResponseMetaInfoV1* temp = _impl_.metainfo_;
+  _impl_.metainfo_ = nullptr;
+  return temp;
+}
+inline ::proto::ResponseMetaInfoV1* DeleteDailyStatisticsResponse::_internal_mutable_metainfo() {
+  
+  if (_impl_.metainfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::ResponseMetaInfoV1>(GetArenaForAllocation());
+    _impl_.metainfo_ = p;
+  }
+  return _impl_.metainfo_;
+}
+inline ::proto::ResponseMetaInfoV1* DeleteDailyStatisticsResponse::mutable_metainfo() {
+  ::proto::ResponseMetaInfoV1* _msg = _internal_mutable_metainfo();
+  // @@protoc_insertion_point(field_mutable:proto.DeleteDailyStatisticsResponse.metaInfo)
+  return _msg;
+}
+inline void DeleteDailyStatisticsResponse::set_allocated_metainfo(::proto::ResponseMetaInfoV1* metainfo) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.metainfo_);
+  }
+  if (metainfo) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(metainfo));
+    if (message_arena != submessage_arena) {
+      metainfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, metainfo, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  _impl_.metainfo_ = metainfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.DeleteDailyStatisticsResponse.metaInfo)
 }
 
-// .proto.DailyStatisticsMetaInfoV1 DailyStatisticsInfo = 3;
+// .proto.DailyStatisticsMetaInfoV1 DailyStatisticsInfo = 2;
 inline bool DeleteDailyStatisticsResponse::_internal_has_dailystatisticsinfo() const {
   return this != internal_default_instance() && _impl_.dailystatisticsinfo_ != nullptr;
 }
@@ -12426,77 +12701,92 @@ inline void DeleteDailyStatisticsResponse::set_allocated_dailystatisticsinfo(::p
 
 // UpdateDailyStatisticsResponse
 
-// bool status = 1;
-inline void UpdateDailyStatisticsResponse::clear_status() {
-  _impl_.status_ = false;
+// .proto.ResponseMetaInfoV1 metaInfo = 1;
+inline bool UpdateDailyStatisticsResponse::_internal_has_metainfo() const {
+  return this != internal_default_instance() && _impl_.metainfo_ != nullptr;
 }
-inline bool UpdateDailyStatisticsResponse::_internal_status() const {
-  return _impl_.status_;
+inline bool UpdateDailyStatisticsResponse::has_metainfo() const {
+  return _internal_has_metainfo();
 }
-inline bool UpdateDailyStatisticsResponse::status() const {
-  // @@protoc_insertion_point(field_get:proto.UpdateDailyStatisticsResponse.status)
-  return _internal_status();
+inline const ::proto::ResponseMetaInfoV1& UpdateDailyStatisticsResponse::_internal_metainfo() const {
+  const ::proto::ResponseMetaInfoV1* p = _impl_.metainfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::ResponseMetaInfoV1&>(
+      ::proto::_ResponseMetaInfoV1_default_instance_);
 }
-inline void UpdateDailyStatisticsResponse::_internal_set_status(bool value) {
-  
-  _impl_.status_ = value;
+inline const ::proto::ResponseMetaInfoV1& UpdateDailyStatisticsResponse::metainfo() const {
+  // @@protoc_insertion_point(field_get:proto.UpdateDailyStatisticsResponse.metaInfo)
+  return _internal_metainfo();
 }
-inline void UpdateDailyStatisticsResponse::set_status(bool value) {
-  _internal_set_status(value);
-  // @@protoc_insertion_point(field_set:proto.UpdateDailyStatisticsResponse.status)
-}
-
-// string Message = 2;
-inline void UpdateDailyStatisticsResponse::clear_message() {
-  _impl_.message_.ClearToEmpty();
-}
-inline const std::string& UpdateDailyStatisticsResponse::message() const {
-  // @@protoc_insertion_point(field_get:proto.UpdateDailyStatisticsResponse.Message)
-  return _internal_message();
-}
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void UpdateDailyStatisticsResponse::set_message(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.message_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:proto.UpdateDailyStatisticsResponse.Message)
-}
-inline std::string* UpdateDailyStatisticsResponse::mutable_message() {
-  std::string* _s = _internal_mutable_message();
-  // @@protoc_insertion_point(field_mutable:proto.UpdateDailyStatisticsResponse.Message)
-  return _s;
-}
-inline const std::string& UpdateDailyStatisticsResponse::_internal_message() const {
-  return _impl_.message_.Get();
-}
-inline void UpdateDailyStatisticsResponse::_internal_set_message(const std::string& value) {
-  
-  _impl_.message_.Set(value, GetArenaForAllocation());
-}
-inline std::string* UpdateDailyStatisticsResponse::_internal_mutable_message() {
-  
-  return _impl_.message_.Mutable(GetArenaForAllocation());
-}
-inline std::string* UpdateDailyStatisticsResponse::release_message() {
-  // @@protoc_insertion_point(field_release:proto.UpdateDailyStatisticsResponse.Message)
-  return _impl_.message_.Release();
-}
-inline void UpdateDailyStatisticsResponse::set_allocated_message(std::string* message) {
-  if (message != nullptr) {
+inline void UpdateDailyStatisticsResponse::unsafe_arena_set_allocated_metainfo(
+    ::proto::ResponseMetaInfoV1* metainfo) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.metainfo_);
+  }
+  _impl_.metainfo_ = metainfo;
+  if (metainfo) {
     
   } else {
     
   }
-  _impl_.message_.SetAllocated(message, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.message_.IsDefault()) {
-    _impl_.message_.Set("", GetArenaForAllocation());
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.UpdateDailyStatisticsResponse.metaInfo)
+}
+inline ::proto::ResponseMetaInfoV1* UpdateDailyStatisticsResponse::release_metainfo() {
+  
+  ::proto::ResponseMetaInfoV1* temp = _impl_.metainfo_;
+  _impl_.metainfo_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
   }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:proto.UpdateDailyStatisticsResponse.Message)
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::proto::ResponseMetaInfoV1* UpdateDailyStatisticsResponse::unsafe_arena_release_metainfo() {
+  // @@protoc_insertion_point(field_release:proto.UpdateDailyStatisticsResponse.metaInfo)
+  
+  ::proto::ResponseMetaInfoV1* temp = _impl_.metainfo_;
+  _impl_.metainfo_ = nullptr;
+  return temp;
+}
+inline ::proto::ResponseMetaInfoV1* UpdateDailyStatisticsResponse::_internal_mutable_metainfo() {
+  
+  if (_impl_.metainfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::ResponseMetaInfoV1>(GetArenaForAllocation());
+    _impl_.metainfo_ = p;
+  }
+  return _impl_.metainfo_;
+}
+inline ::proto::ResponseMetaInfoV1* UpdateDailyStatisticsResponse::mutable_metainfo() {
+  ::proto::ResponseMetaInfoV1* _msg = _internal_mutable_metainfo();
+  // @@protoc_insertion_point(field_mutable:proto.UpdateDailyStatisticsResponse.metaInfo)
+  return _msg;
+}
+inline void UpdateDailyStatisticsResponse::set_allocated_metainfo(::proto::ResponseMetaInfoV1* metainfo) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.metainfo_);
+  }
+  if (metainfo) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(metainfo));
+    if (message_arena != submessage_arena) {
+      metainfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, metainfo, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  _impl_.metainfo_ = metainfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.UpdateDailyStatisticsResponse.metaInfo)
 }
 
-// .proto.DailyStatisticsMetaInfoV1 DailyStatisticsInfo = 3;
+// .proto.DailyStatisticsMetaInfoV1 DailyStatisticsInfo = 2;
 inline bool UpdateDailyStatisticsResponse::_internal_has_dailystatisticsinfo() const {
   return this != internal_default_instance() && _impl_.dailystatisticsinfo_ != nullptr;
 }
@@ -12585,77 +12875,92 @@ inline void UpdateDailyStatisticsResponse::set_allocated_dailystatisticsinfo(::p
 
 // GetDailyStatisticsResponse
 
-// bool status = 1;
-inline void GetDailyStatisticsResponse::clear_status() {
-  _impl_.status_ = false;
+// .proto.ResponseMetaInfoV1 metaInfo = 1;
+inline bool GetDailyStatisticsResponse::_internal_has_metainfo() const {
+  return this != internal_default_instance() && _impl_.metainfo_ != nullptr;
 }
-inline bool GetDailyStatisticsResponse::_internal_status() const {
-  return _impl_.status_;
+inline bool GetDailyStatisticsResponse::has_metainfo() const {
+  return _internal_has_metainfo();
 }
-inline bool GetDailyStatisticsResponse::status() const {
-  // @@protoc_insertion_point(field_get:proto.GetDailyStatisticsResponse.status)
-  return _internal_status();
+inline const ::proto::ResponseMetaInfoV1& GetDailyStatisticsResponse::_internal_metainfo() const {
+  const ::proto::ResponseMetaInfoV1* p = _impl_.metainfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::ResponseMetaInfoV1&>(
+      ::proto::_ResponseMetaInfoV1_default_instance_);
 }
-inline void GetDailyStatisticsResponse::_internal_set_status(bool value) {
-  
-  _impl_.status_ = value;
+inline const ::proto::ResponseMetaInfoV1& GetDailyStatisticsResponse::metainfo() const {
+  // @@protoc_insertion_point(field_get:proto.GetDailyStatisticsResponse.metaInfo)
+  return _internal_metainfo();
 }
-inline void GetDailyStatisticsResponse::set_status(bool value) {
-  _internal_set_status(value);
-  // @@protoc_insertion_point(field_set:proto.GetDailyStatisticsResponse.status)
-}
-
-// string Message = 2;
-inline void GetDailyStatisticsResponse::clear_message() {
-  _impl_.message_.ClearToEmpty();
-}
-inline const std::string& GetDailyStatisticsResponse::message() const {
-  // @@protoc_insertion_point(field_get:proto.GetDailyStatisticsResponse.Message)
-  return _internal_message();
-}
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void GetDailyStatisticsResponse::set_message(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.message_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:proto.GetDailyStatisticsResponse.Message)
-}
-inline std::string* GetDailyStatisticsResponse::mutable_message() {
-  std::string* _s = _internal_mutable_message();
-  // @@protoc_insertion_point(field_mutable:proto.GetDailyStatisticsResponse.Message)
-  return _s;
-}
-inline const std::string& GetDailyStatisticsResponse::_internal_message() const {
-  return _impl_.message_.Get();
-}
-inline void GetDailyStatisticsResponse::_internal_set_message(const std::string& value) {
-  
-  _impl_.message_.Set(value, GetArenaForAllocation());
-}
-inline std::string* GetDailyStatisticsResponse::_internal_mutable_message() {
-  
-  return _impl_.message_.Mutable(GetArenaForAllocation());
-}
-inline std::string* GetDailyStatisticsResponse::release_message() {
-  // @@protoc_insertion_point(field_release:proto.GetDailyStatisticsResponse.Message)
-  return _impl_.message_.Release();
-}
-inline void GetDailyStatisticsResponse::set_allocated_message(std::string* message) {
-  if (message != nullptr) {
+inline void GetDailyStatisticsResponse::unsafe_arena_set_allocated_metainfo(
+    ::proto::ResponseMetaInfoV1* metainfo) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.metainfo_);
+  }
+  _impl_.metainfo_ = metainfo;
+  if (metainfo) {
     
   } else {
     
   }
-  _impl_.message_.SetAllocated(message, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.message_.IsDefault()) {
-    _impl_.message_.Set("", GetArenaForAllocation());
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.GetDailyStatisticsResponse.metaInfo)
+}
+inline ::proto::ResponseMetaInfoV1* GetDailyStatisticsResponse::release_metainfo() {
+  
+  ::proto::ResponseMetaInfoV1* temp = _impl_.metainfo_;
+  _impl_.metainfo_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
   }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:proto.GetDailyStatisticsResponse.Message)
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::proto::ResponseMetaInfoV1* GetDailyStatisticsResponse::unsafe_arena_release_metainfo() {
+  // @@protoc_insertion_point(field_release:proto.GetDailyStatisticsResponse.metaInfo)
+  
+  ::proto::ResponseMetaInfoV1* temp = _impl_.metainfo_;
+  _impl_.metainfo_ = nullptr;
+  return temp;
+}
+inline ::proto::ResponseMetaInfoV1* GetDailyStatisticsResponse::_internal_mutable_metainfo() {
+  
+  if (_impl_.metainfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::ResponseMetaInfoV1>(GetArenaForAllocation());
+    _impl_.metainfo_ = p;
+  }
+  return _impl_.metainfo_;
+}
+inline ::proto::ResponseMetaInfoV1* GetDailyStatisticsResponse::mutable_metainfo() {
+  ::proto::ResponseMetaInfoV1* _msg = _internal_mutable_metainfo();
+  // @@protoc_insertion_point(field_mutable:proto.GetDailyStatisticsResponse.metaInfo)
+  return _msg;
+}
+inline void GetDailyStatisticsResponse::set_allocated_metainfo(::proto::ResponseMetaInfoV1* metainfo) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.metainfo_);
+  }
+  if (metainfo) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(metainfo));
+    if (message_arena != submessage_arena) {
+      metainfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, metainfo, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  _impl_.metainfo_ = metainfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.GetDailyStatisticsResponse.metaInfo)
 }
 
-// .proto.DailyStatisticsMetaInfoV1 DailyStatisticsInfo = 3;
+// .proto.DailyStatisticsMetaInfoV1 DailyStatisticsInfo = 2;
 inline bool GetDailyStatisticsResponse::_internal_has_dailystatisticsinfo() const {
   return this != internal_default_instance() && _impl_.dailystatisticsinfo_ != nullptr;
 }
@@ -12744,77 +13049,92 @@ inline void GetDailyStatisticsResponse::set_allocated_dailystatisticsinfo(::prot
 
 // GetAllDailyStatisticsResponse
 
-// bool status = 1;
-inline void GetAllDailyStatisticsResponse::clear_status() {
-  _impl_.status_ = false;
+// .proto.ResponseMetaInfoV1 metaInfo = 1;
+inline bool GetAllDailyStatisticsResponse::_internal_has_metainfo() const {
+  return this != internal_default_instance() && _impl_.metainfo_ != nullptr;
 }
-inline bool GetAllDailyStatisticsResponse::_internal_status() const {
-  return _impl_.status_;
+inline bool GetAllDailyStatisticsResponse::has_metainfo() const {
+  return _internal_has_metainfo();
 }
-inline bool GetAllDailyStatisticsResponse::status() const {
-  // @@protoc_insertion_point(field_get:proto.GetAllDailyStatisticsResponse.status)
-  return _internal_status();
+inline const ::proto::ResponseMetaInfoV1& GetAllDailyStatisticsResponse::_internal_metainfo() const {
+  const ::proto::ResponseMetaInfoV1* p = _impl_.metainfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::ResponseMetaInfoV1&>(
+      ::proto::_ResponseMetaInfoV1_default_instance_);
 }
-inline void GetAllDailyStatisticsResponse::_internal_set_status(bool value) {
-  
-  _impl_.status_ = value;
+inline const ::proto::ResponseMetaInfoV1& GetAllDailyStatisticsResponse::metainfo() const {
+  // @@protoc_insertion_point(field_get:proto.GetAllDailyStatisticsResponse.metaInfo)
+  return _internal_metainfo();
 }
-inline void GetAllDailyStatisticsResponse::set_status(bool value) {
-  _internal_set_status(value);
-  // @@protoc_insertion_point(field_set:proto.GetAllDailyStatisticsResponse.status)
-}
-
-// string Message = 2;
-inline void GetAllDailyStatisticsResponse::clear_message() {
-  _impl_.message_.ClearToEmpty();
-}
-inline const std::string& GetAllDailyStatisticsResponse::message() const {
-  // @@protoc_insertion_point(field_get:proto.GetAllDailyStatisticsResponse.Message)
-  return _internal_message();
-}
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void GetAllDailyStatisticsResponse::set_message(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.message_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:proto.GetAllDailyStatisticsResponse.Message)
-}
-inline std::string* GetAllDailyStatisticsResponse::mutable_message() {
-  std::string* _s = _internal_mutable_message();
-  // @@protoc_insertion_point(field_mutable:proto.GetAllDailyStatisticsResponse.Message)
-  return _s;
-}
-inline const std::string& GetAllDailyStatisticsResponse::_internal_message() const {
-  return _impl_.message_.Get();
-}
-inline void GetAllDailyStatisticsResponse::_internal_set_message(const std::string& value) {
-  
-  _impl_.message_.Set(value, GetArenaForAllocation());
-}
-inline std::string* GetAllDailyStatisticsResponse::_internal_mutable_message() {
-  
-  return _impl_.message_.Mutable(GetArenaForAllocation());
-}
-inline std::string* GetAllDailyStatisticsResponse::release_message() {
-  // @@protoc_insertion_point(field_release:proto.GetAllDailyStatisticsResponse.Message)
-  return _impl_.message_.Release();
-}
-inline void GetAllDailyStatisticsResponse::set_allocated_message(std::string* message) {
-  if (message != nullptr) {
+inline void GetAllDailyStatisticsResponse::unsafe_arena_set_allocated_metainfo(
+    ::proto::ResponseMetaInfoV1* metainfo) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.metainfo_);
+  }
+  _impl_.metainfo_ = metainfo;
+  if (metainfo) {
     
   } else {
     
   }
-  _impl_.message_.SetAllocated(message, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.message_.IsDefault()) {
-    _impl_.message_.Set("", GetArenaForAllocation());
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.GetAllDailyStatisticsResponse.metaInfo)
+}
+inline ::proto::ResponseMetaInfoV1* GetAllDailyStatisticsResponse::release_metainfo() {
+  
+  ::proto::ResponseMetaInfoV1* temp = _impl_.metainfo_;
+  _impl_.metainfo_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
   }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:proto.GetAllDailyStatisticsResponse.Message)
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::proto::ResponseMetaInfoV1* GetAllDailyStatisticsResponse::unsafe_arena_release_metainfo() {
+  // @@protoc_insertion_point(field_release:proto.GetAllDailyStatisticsResponse.metaInfo)
+  
+  ::proto::ResponseMetaInfoV1* temp = _impl_.metainfo_;
+  _impl_.metainfo_ = nullptr;
+  return temp;
+}
+inline ::proto::ResponseMetaInfoV1* GetAllDailyStatisticsResponse::_internal_mutable_metainfo() {
+  
+  if (_impl_.metainfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::ResponseMetaInfoV1>(GetArenaForAllocation());
+    _impl_.metainfo_ = p;
+  }
+  return _impl_.metainfo_;
+}
+inline ::proto::ResponseMetaInfoV1* GetAllDailyStatisticsResponse::mutable_metainfo() {
+  ::proto::ResponseMetaInfoV1* _msg = _internal_mutable_metainfo();
+  // @@protoc_insertion_point(field_mutable:proto.GetAllDailyStatisticsResponse.metaInfo)
+  return _msg;
+}
+inline void GetAllDailyStatisticsResponse::set_allocated_metainfo(::proto::ResponseMetaInfoV1* metainfo) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.metainfo_);
+  }
+  if (metainfo) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(metainfo));
+    if (message_arena != submessage_arena) {
+      metainfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, metainfo, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  _impl_.metainfo_ = metainfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.GetAllDailyStatisticsResponse.metaInfo)
 }
 
-// repeated .proto.DailyStatisticsMetaInfoV1 DailyStatisticsInfo = 3;
+// repeated .proto.DailyStatisticsMetaInfoV1 DailyStatisticsInfo = 2;
 inline int GetAllDailyStatisticsResponse::_internal_dailystatisticsinfo_size() const {
   return _impl_.dailystatisticsinfo_.size();
 }
