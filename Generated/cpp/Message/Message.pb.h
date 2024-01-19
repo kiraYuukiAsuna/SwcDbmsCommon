@@ -1810,7 +1810,7 @@ class SwcSnapshotMetaInfoV1 final :
   std::string* _internal_mutable_swcsnapshotcollectionname();
   public:
 
-  // string creator = 4;
+  // string Creator = 4;
   void clear_creator();
   const std::string& creator() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -2210,7 +2210,7 @@ class SwcIncrementOperationV1 final :
 
   enum : int {
     kBaseFieldNumber = 1,
-    kSwcNodeDataFieldNumber = 3,
+    kSwcDataFieldNumber = 3,
     kIncrementOperationFieldNumber = 2,
   };
   // .proto.MetaInfoBase Base = 1;
@@ -2231,23 +2231,23 @@ class SwcIncrementOperationV1 final :
       ::proto::MetaInfoBase* base);
   ::proto::MetaInfoBase* unsafe_arena_release_base();
 
-  // .proto.SwcNodeDataV1 SwcNodeData = 3;
-  bool has_swcnodedata() const;
+  // .proto.SwcDataV1 SwcData = 3;
+  bool has_swcdata() const;
   private:
-  bool _internal_has_swcnodedata() const;
+  bool _internal_has_swcdata() const;
   public:
-  void clear_swcnodedata();
-  const ::proto::SwcNodeDataV1& swcnodedata() const;
-  PROTOBUF_NODISCARD ::proto::SwcNodeDataV1* release_swcnodedata();
-  ::proto::SwcNodeDataV1* mutable_swcnodedata();
-  void set_allocated_swcnodedata(::proto::SwcNodeDataV1* swcnodedata);
+  void clear_swcdata();
+  const ::proto::SwcDataV1& swcdata() const;
+  PROTOBUF_NODISCARD ::proto::SwcDataV1* release_swcdata();
+  ::proto::SwcDataV1* mutable_swcdata();
+  void set_allocated_swcdata(::proto::SwcDataV1* swcdata);
   private:
-  const ::proto::SwcNodeDataV1& _internal_swcnodedata() const;
-  ::proto::SwcNodeDataV1* _internal_mutable_swcnodedata();
+  const ::proto::SwcDataV1& _internal_swcdata() const;
+  ::proto::SwcDataV1* _internal_mutable_swcdata();
   public:
-  void unsafe_arena_set_allocated_swcnodedata(
-      ::proto::SwcNodeDataV1* swcnodedata);
-  ::proto::SwcNodeDataV1* unsafe_arena_release_swcnodedata();
+  void unsafe_arena_set_allocated_swcdata(
+      ::proto::SwcDataV1* swcdata);
+  ::proto::SwcDataV1* unsafe_arena_release_swcdata();
 
   // .proto.IncrementOperationV1 IncrementOperation = 2;
   void clear_incrementoperation();
@@ -2267,7 +2267,7 @@ class SwcIncrementOperationV1 final :
   typedef void DestructorSkippable_;
   struct Impl_ {
     ::proto::MetaInfoBase* base_;
-    ::proto::SwcNodeDataV1* swcnodedata_;
+    ::proto::SwcDataV1* swcdata_;
     int incrementoperation_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
@@ -6357,12 +6357,12 @@ inline void SwcSnapshotMetaInfoV1::set_allocated_createtime(::PROTOBUF_NAMESPACE
   // @@protoc_insertion_point(field_set_allocated:proto.SwcSnapshotMetaInfoV1.CreateTime)
 }
 
-// string creator = 4;
+// string Creator = 4;
 inline void SwcSnapshotMetaInfoV1::clear_creator() {
   _impl_.creator_.ClearToEmpty();
 }
 inline const std::string& SwcSnapshotMetaInfoV1::creator() const {
-  // @@protoc_insertion_point(field_get:proto.SwcSnapshotMetaInfoV1.creator)
+  // @@protoc_insertion_point(field_get:proto.SwcSnapshotMetaInfoV1.Creator)
   return _internal_creator();
 }
 template <typename ArgT0, typename... ArgT>
@@ -6370,11 +6370,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void SwcSnapshotMetaInfoV1::set_creator(ArgT0&& arg0, ArgT... args) {
  
  _impl_.creator_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:proto.SwcSnapshotMetaInfoV1.creator)
+  // @@protoc_insertion_point(field_set:proto.SwcSnapshotMetaInfoV1.Creator)
 }
 inline std::string* SwcSnapshotMetaInfoV1::mutable_creator() {
   std::string* _s = _internal_mutable_creator();
-  // @@protoc_insertion_point(field_mutable:proto.SwcSnapshotMetaInfoV1.creator)
+  // @@protoc_insertion_point(field_mutable:proto.SwcSnapshotMetaInfoV1.Creator)
   return _s;
 }
 inline const std::string& SwcSnapshotMetaInfoV1::_internal_creator() const {
@@ -6389,7 +6389,7 @@ inline std::string* SwcSnapshotMetaInfoV1::_internal_mutable_creator() {
   return _impl_.creator_.Mutable(GetArenaForAllocation());
 }
 inline std::string* SwcSnapshotMetaInfoV1::release_creator() {
-  // @@protoc_insertion_point(field_release:proto.SwcSnapshotMetaInfoV1.creator)
+  // @@protoc_insertion_point(field_release:proto.SwcSnapshotMetaInfoV1.Creator)
   return _impl_.creator_.Release();
 }
 inline void SwcSnapshotMetaInfoV1::set_allocated_creator(std::string* creator) {
@@ -6404,7 +6404,7 @@ inline void SwcSnapshotMetaInfoV1::set_allocated_creator(std::string* creator) {
     _impl_.creator_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:proto.SwcSnapshotMetaInfoV1.creator)
+  // @@protoc_insertion_point(field_set_allocated:proto.SwcSnapshotMetaInfoV1.Creator)
 }
 
 // -------------------------------------------------------------------
@@ -6800,45 +6800,45 @@ inline void SwcIncrementOperationV1::set_incrementoperation(::proto::IncrementOp
   // @@protoc_insertion_point(field_set:proto.SwcIncrementOperationV1.IncrementOperation)
 }
 
-// .proto.SwcNodeDataV1 SwcNodeData = 3;
-inline bool SwcIncrementOperationV1::_internal_has_swcnodedata() const {
-  return this != internal_default_instance() && _impl_.swcnodedata_ != nullptr;
+// .proto.SwcDataV1 SwcData = 3;
+inline bool SwcIncrementOperationV1::_internal_has_swcdata() const {
+  return this != internal_default_instance() && _impl_.swcdata_ != nullptr;
 }
-inline bool SwcIncrementOperationV1::has_swcnodedata() const {
-  return _internal_has_swcnodedata();
+inline bool SwcIncrementOperationV1::has_swcdata() const {
+  return _internal_has_swcdata();
 }
-inline void SwcIncrementOperationV1::clear_swcnodedata() {
-  if (GetArenaForAllocation() == nullptr && _impl_.swcnodedata_ != nullptr) {
-    delete _impl_.swcnodedata_;
+inline void SwcIncrementOperationV1::clear_swcdata() {
+  if (GetArenaForAllocation() == nullptr && _impl_.swcdata_ != nullptr) {
+    delete _impl_.swcdata_;
   }
-  _impl_.swcnodedata_ = nullptr;
+  _impl_.swcdata_ = nullptr;
 }
-inline const ::proto::SwcNodeDataV1& SwcIncrementOperationV1::_internal_swcnodedata() const {
-  const ::proto::SwcNodeDataV1* p = _impl_.swcnodedata_;
-  return p != nullptr ? *p : reinterpret_cast<const ::proto::SwcNodeDataV1&>(
-      ::proto::_SwcNodeDataV1_default_instance_);
+inline const ::proto::SwcDataV1& SwcIncrementOperationV1::_internal_swcdata() const {
+  const ::proto::SwcDataV1* p = _impl_.swcdata_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::SwcDataV1&>(
+      ::proto::_SwcDataV1_default_instance_);
 }
-inline const ::proto::SwcNodeDataV1& SwcIncrementOperationV1::swcnodedata() const {
-  // @@protoc_insertion_point(field_get:proto.SwcIncrementOperationV1.SwcNodeData)
-  return _internal_swcnodedata();
+inline const ::proto::SwcDataV1& SwcIncrementOperationV1::swcdata() const {
+  // @@protoc_insertion_point(field_get:proto.SwcIncrementOperationV1.SwcData)
+  return _internal_swcdata();
 }
-inline void SwcIncrementOperationV1::unsafe_arena_set_allocated_swcnodedata(
-    ::proto::SwcNodeDataV1* swcnodedata) {
+inline void SwcIncrementOperationV1::unsafe_arena_set_allocated_swcdata(
+    ::proto::SwcDataV1* swcdata) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.swcnodedata_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.swcdata_);
   }
-  _impl_.swcnodedata_ = swcnodedata;
-  if (swcnodedata) {
+  _impl_.swcdata_ = swcdata;
+  if (swcdata) {
     
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.SwcIncrementOperationV1.SwcNodeData)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.SwcIncrementOperationV1.SwcData)
 }
-inline ::proto::SwcNodeDataV1* SwcIncrementOperationV1::release_swcnodedata() {
+inline ::proto::SwcDataV1* SwcIncrementOperationV1::release_swcdata() {
   
-  ::proto::SwcNodeDataV1* temp = _impl_.swcnodedata_;
-  _impl_.swcnodedata_ = nullptr;
+  ::proto::SwcDataV1* temp = _impl_.swcdata_;
+  _impl_.swcdata_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -6850,44 +6850,44 @@ inline ::proto::SwcNodeDataV1* SwcIncrementOperationV1::release_swcnodedata() {
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::proto::SwcNodeDataV1* SwcIncrementOperationV1::unsafe_arena_release_swcnodedata() {
-  // @@protoc_insertion_point(field_release:proto.SwcIncrementOperationV1.SwcNodeData)
+inline ::proto::SwcDataV1* SwcIncrementOperationV1::unsafe_arena_release_swcdata() {
+  // @@protoc_insertion_point(field_release:proto.SwcIncrementOperationV1.SwcData)
   
-  ::proto::SwcNodeDataV1* temp = _impl_.swcnodedata_;
-  _impl_.swcnodedata_ = nullptr;
+  ::proto::SwcDataV1* temp = _impl_.swcdata_;
+  _impl_.swcdata_ = nullptr;
   return temp;
 }
-inline ::proto::SwcNodeDataV1* SwcIncrementOperationV1::_internal_mutable_swcnodedata() {
+inline ::proto::SwcDataV1* SwcIncrementOperationV1::_internal_mutable_swcdata() {
   
-  if (_impl_.swcnodedata_ == nullptr) {
-    auto* p = CreateMaybeMessage<::proto::SwcNodeDataV1>(GetArenaForAllocation());
-    _impl_.swcnodedata_ = p;
+  if (_impl_.swcdata_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::SwcDataV1>(GetArenaForAllocation());
+    _impl_.swcdata_ = p;
   }
-  return _impl_.swcnodedata_;
+  return _impl_.swcdata_;
 }
-inline ::proto::SwcNodeDataV1* SwcIncrementOperationV1::mutable_swcnodedata() {
-  ::proto::SwcNodeDataV1* _msg = _internal_mutable_swcnodedata();
-  // @@protoc_insertion_point(field_mutable:proto.SwcIncrementOperationV1.SwcNodeData)
+inline ::proto::SwcDataV1* SwcIncrementOperationV1::mutable_swcdata() {
+  ::proto::SwcDataV1* _msg = _internal_mutable_swcdata();
+  // @@protoc_insertion_point(field_mutable:proto.SwcIncrementOperationV1.SwcData)
   return _msg;
 }
-inline void SwcIncrementOperationV1::set_allocated_swcnodedata(::proto::SwcNodeDataV1* swcnodedata) {
+inline void SwcIncrementOperationV1::set_allocated_swcdata(::proto::SwcDataV1* swcdata) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete _impl_.swcnodedata_;
+    delete _impl_.swcdata_;
   }
-  if (swcnodedata) {
+  if (swcdata) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(swcnodedata);
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(swcdata);
     if (message_arena != submessage_arena) {
-      swcnodedata = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, swcnodedata, submessage_arena);
+      swcdata = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, swcdata, submessage_arena);
     }
     
   } else {
     
   }
-  _impl_.swcnodedata_ = swcnodedata;
-  // @@protoc_insertion_point(field_set_allocated:proto.SwcIncrementOperationV1.SwcNodeData)
+  _impl_.swcdata_ = swcdata;
+  // @@protoc_insertion_point(field_set_allocated:proto.SwcIncrementOperationV1.SwcData)
 }
 
 // -------------------------------------------------------------------

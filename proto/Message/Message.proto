@@ -66,7 +66,7 @@ message SwcSnapshotMetaInfoV1{
     MetaInfoBase Base = 1;
     string SwcSnapshotCollectionName = 2;
     google.protobuf.Timestamp CreateTime = 3;
-    string creator = 4;
+    string Creator = 4;
 }
 
 message SwcIncrementOperationMetaInfoV1{
@@ -86,7 +86,7 @@ enum IncrementOperationV1{
 message SwcIncrementOperationV1{
     MetaInfoBase Base = 1;
     IncrementOperationV1 IncrementOperation = 2;
-    SwcNodeDataV1 SwcNodeData = 3;
+    SwcDataV1 SwcData = 3;
 }
 
 message SwcIncrementOperationListV1{

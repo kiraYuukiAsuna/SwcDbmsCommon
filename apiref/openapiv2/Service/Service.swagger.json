@@ -2319,8 +2319,8 @@
         "IncrementOperation": {
           "$ref": "#/definitions/protoIncrementOperationV1"
         },
-        "SwcNodeData": {
-          "$ref": "#/definitions/protoSwcNodeDataV1"
+        "SwcData": {
+          "$ref": "#/definitions/protoSwcDataV1"
         }
       }
     },
@@ -2460,7 +2460,7 @@
           "type": "string",
           "format": "date-time"
         },
-        "creator": {
+        "Creator": {
           "type": "string"
         }
       }
