@@ -1702,7 +1702,7 @@
         "metaInfo": {
           "$ref": "#/definitions/protoResponseMetaInfoV1"
         },
-        "SwcIncrementOperationList": {
+        "SwcIncrementOperationMetaInfoList": {
           "type": "array",
           "items": {
             "type": "object",
@@ -1890,7 +1890,7 @@
           "type": "array",
           "items": {
             "type": "object",
-            "$ref": "#/definitions/protoSwcIncrementOperationV1"
+            "$ref": "#/definitions/protoSwcIncrementOperationListV1"
           }
         }
       }
@@ -2280,6 +2280,18 @@
           "items": {
             "type": "object",
             "$ref": "#/definitions/protoSwcNodeDataV1"
+          }
+        }
+      }
+    },
+    "protoSwcIncrementOperationListV1": {
+      "type": "object",
+      "properties": {
+        "SwcIncrementOperationList": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/protoSwcIncrementOperationV1"
           }
         }
       }

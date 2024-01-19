@@ -185,6 +185,19 @@ struct SwcIncrementOperationV1DefaultTypeInternal {
   };
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SwcIncrementOperationV1DefaultTypeInternal _SwcIncrementOperationV1_default_instance_;
+PROTOBUF_CONSTEXPR SwcIncrementOperationListV1::SwcIncrementOperationListV1(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.swcincrementoperationlist_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct SwcIncrementOperationListV1DefaultTypeInternal {
+  PROTOBUF_CONSTEXPR SwcIncrementOperationListV1DefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~SwcIncrementOperationListV1DefaultTypeInternal() {}
+  union {
+    SwcIncrementOperationListV1 _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SwcIncrementOperationListV1DefaultTypeInternal _SwcIncrementOperationListV1_default_instance_;
 PROTOBUF_CONSTEXPR SwcMetaInfoV1::SwcMetaInfoV1(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_.swcsnapshotmetainfolist_)*/{}
@@ -334,7 +347,7 @@ struct ResponseMetaInfoV1DefaultTypeInternal {
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ResponseMetaInfoV1DefaultTypeInternal _ResponseMetaInfoV1_default_instance_;
 }  // namespace proto
-static ::_pb::Metadata file_level_metadata_Message_2fMessage_2eproto[18];
+static ::_pb::Metadata file_level_metadata_Message_2fMessage_2eproto[19];
 static const ::_pb::EnumDescriptor* file_level_enum_descriptors_Message_2fMessage_2eproto[1];
 static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_Message_2fMessage_2eproto = nullptr;
 
@@ -443,6 +456,13 @@ const uint32_t TableStruct_Message_2fMessage_2eproto::offsets[] PROTOBUF_SECTION
   PROTOBUF_FIELD_OFFSET(::proto::SwcIncrementOperationV1, _impl_.base_),
   PROTOBUF_FIELD_OFFSET(::proto::SwcIncrementOperationV1, _impl_.incrementoperation_),
   PROTOBUF_FIELD_OFFSET(::proto::SwcIncrementOperationV1, _impl_.swcnodedata_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::proto::SwcIncrementOperationListV1, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::proto::SwcIncrementOperationListV1, _impl_.swcincrementoperationlist_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::proto::SwcMetaInfoV1, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -555,14 +575,15 @@ static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protode
   { 76, -1, -1, sizeof(::proto::SwcSnapshotMetaInfoV1)},
   { 85, -1, -1, sizeof(::proto::SwcIncrementOperationMetaInfoV1)},
   { 95, -1, -1, sizeof(::proto::SwcIncrementOperationV1)},
-  { 104, -1, -1, sizeof(::proto::SwcMetaInfoV1)},
-  { 120, -1, -1, sizeof(::proto::SwcNodeInternalDataV1)},
-  { 138, -1, -1, sizeof(::proto::SwcNodeDataV1)},
-  { 150, -1, -1, sizeof(::proto::SwcDataV1)},
-  { 157, -1, -1, sizeof(::proto::DailyStatisticsMetaInfoV1)},
-  { 180, -1, -1, sizeof(::proto::UserVerifyInfoV1)},
-  { 188, -1, -1, sizeof(::proto::RequestMetaInfoV1)},
-  { 195, -1, -1, sizeof(::proto::ResponseMetaInfoV1)},
+  { 104, -1, -1, sizeof(::proto::SwcIncrementOperationListV1)},
+  { 111, -1, -1, sizeof(::proto::SwcMetaInfoV1)},
+  { 127, -1, -1, sizeof(::proto::SwcNodeInternalDataV1)},
+  { 145, -1, -1, sizeof(::proto::SwcNodeDataV1)},
+  { 157, -1, -1, sizeof(::proto::SwcDataV1)},
+  { 164, -1, -1, sizeof(::proto::DailyStatisticsMetaInfoV1)},
+  { 187, -1, -1, sizeof(::proto::UserVerifyInfoV1)},
+  { 195, -1, -1, sizeof(::proto::RequestMetaInfoV1)},
+  { 202, -1, -1, sizeof(::proto::ResponseMetaInfoV1)},
 };
 
 static const ::_pb::Message* const file_default_instances[] = {
@@ -576,6 +597,7 @@ static const ::_pb::Message* const file_default_instances[] = {
   &::proto::_SwcSnapshotMetaInfoV1_default_instance_._instance,
   &::proto::_SwcIncrementOperationMetaInfoV1_default_instance_._instance,
   &::proto::_SwcIncrementOperationV1_default_instance_._instance,
+  &::proto::_SwcIncrementOperationListV1_default_instance_._instance,
   &::proto::_SwcMetaInfoV1_default_instance_._instance,
   &::proto::_SwcNodeInternalDataV1_default_instance_._instance,
   &::proto::_SwcNodeDataV1_default_instance_._instance,
@@ -632,59 +654,61 @@ const char descriptor_table_protodef_Message_2fMessage_2eproto[] PROTOBUF_SECTIO
   "SwcIncrementOperationV1\022!\n\004Base\030\001 \001(\0132\023."
   "proto.MetaInfoBase\0227\n\022IncrementOperation"
   "\030\002 \001(\0162\033.proto.IncrementOperationV1\022)\n\013S"
-  "wcNodeData\030\003 \001(\0132\024.proto.SwcNodeDataV1\"\240"
-  "\003\n\rSwcMetaInfoV1\022!\n\004Base\030\001 \001(\0132\023.proto.M"
+  "wcNodeData\030\003 \001(\0132\024.proto.SwcNodeDataV1\"`"
+  "\n\033SwcIncrementOperationListV1\022A\n\031SwcIncr"
+  "ementOperationList\030\001 \003(\0132\036.proto.SwcIncr"
+  "ementOperationV1\"\240\003\n\rSwcMetaInfoV1\022!\n\004Ba"
+  "se\030\001 \001(\0132\023.proto.MetaInfoBase\022\014\n\004Name\030\002 "
+  "\001(\t\022\023\n\013Description\030\003 \001(\t\022\017\n\007Creator\030\004 \001("
+  "\t\022\017\n\007SwcType\030\005 \001(\t\022.\n\nCreateTime\030\006 \001(\0132\032"
+  ".google.protobuf.Timestamp\0224\n\020LastModifi"
+  "edTime\030\007 \001(\0132\032.google.protobuf.Timestamp"
+  "\022=\n\027SwcSnapshotMetaInfoList\030\010 \003(\0132\034.prot"
+  "o.SwcSnapshotMetaInfoV1\022Q\n!SwcIncrementO"
+  "perationMetaInfoList\030\t \003(\0132&.proto.SwcIn"
+  "crementOperationMetaInfoV1\022/\n\'CurrentInc"
+  "rementOperationCollectionName\030\n \001(\t\"\310\001\n\025"
+  "SwcNodeInternalDataV1\022\t\n\001N\030\001 \001(\005\022\014\n\004Type"
+  "\030\002 \001(\005\022\t\n\001X\030\003 \001(\002\022\t\n\001Y\030\004 \001(\002\022\t\n\001Z\030\005 \001(\002\022"
+  "\016\n\006Radius\030\006 \001(\002\022\016\n\006Parent\030\007 \001(\005\022\016\n\006Seg_i"
+  "d\030\010 \001(\005\022\r\n\005Level\030\t \001(\005\022\014\n\004Mode\030\n \001(\005\022\021\n\t"
+  "Timestamp\030\013 \001(\005\022\025\n\rFeature_value\030\014 \001(\005\"\375"
+  "\001\n\rSwcNodeDataV1\022!\n\004Base\030\001 \001(\0132\023.proto.M"
+  "etaInfoBase\0229\n\023SwcNodeInternalData\030\002 \001(\013"
+  "2\034.proto.SwcNodeInternalDataV1\022\017\n\007Creato"
+  "r\030\003 \001(\t\022.\n\nCreateTime\030\004 \001(\0132\032.google.pro"
+  "tobuf.Timestamp\0224\n\020LastModifiedTime\030\005 \001("
+  "\0132\032.google.protobuf.Timestamp\022\027\n\017Checker"
+  "UserUuid\030\006 \001(\t\"2\n\tSwcDataV1\022%\n\007SwcData\030\001"
+  " \003(\0132\024.proto.SwcNodeDataV1\"\331\003\n\031DailyStat"
+  "isticsMetaInfoV1\022!\n\004Base\030\001 \001(\0132\023.proto.M"
   "etaInfoBase\022\014\n\004Name\030\002 \001(\t\022\023\n\013Description"
-  "\030\003 \001(\t\022\017\n\007Creator\030\004 \001(\t\022\017\n\007SwcType\030\005 \001(\t"
-  "\022.\n\nCreateTime\030\006 \001(\0132\032.google.protobuf.T"
-  "imestamp\0224\n\020LastModifiedTime\030\007 \001(\0132\032.goo"
-  "gle.protobuf.Timestamp\022=\n\027SwcSnapshotMet"
-  "aInfoList\030\010 \003(\0132\034.proto.SwcSnapshotMetaI"
-  "nfoV1\022Q\n!SwcIncrementOperationMetaInfoLi"
-  "st\030\t \003(\0132&.proto.SwcIncrementOperationMe"
-  "taInfoV1\022/\n\'CurrentIncrementOperationCol"
-  "lectionName\030\n \001(\t\"\310\001\n\025SwcNodeInternalDat"
-  "aV1\022\t\n\001N\030\001 \001(\005\022\014\n\004Type\030\002 \001(\005\022\t\n\001X\030\003 \001(\002\022"
-  "\t\n\001Y\030\004 \001(\002\022\t\n\001Z\030\005 \001(\002\022\016\n\006Radius\030\006 \001(\002\022\016\n"
-  "\006Parent\030\007 \001(\005\022\016\n\006Seg_id\030\010 \001(\005\022\r\n\005Level\030\t"
-  " \001(\005\022\014\n\004Mode\030\n \001(\005\022\021\n\tTimestamp\030\013 \001(\005\022\025\n"
-  "\rFeature_value\030\014 \001(\005\"\375\001\n\rSwcNodeDataV1\022!"
-  "\n\004Base\030\001 \001(\0132\023.proto.MetaInfoBase\0229\n\023Swc"
-  "NodeInternalData\030\002 \001(\0132\034.proto.SwcNodeIn"
-  "ternalDataV1\022\017\n\007Creator\030\003 \001(\t\022.\n\nCreateT"
-  "ime\030\004 \001(\0132\032.google.protobuf.Timestamp\0224\n"
-  "\020LastModifiedTime\030\005 \001(\0132\032.google.protobu"
-  "f.Timestamp\022\027\n\017CheckerUserUuid\030\006 \001(\t\"2\n\t"
-  "SwcDataV1\022%\n\007SwcData\030\001 \003(\0132\024.proto.SwcNo"
-  "deDataV1\"\331\003\n\031DailyStatisticsMetaInfoV1\022!"
-  "\n\004Base\030\001 \001(\0132\023.proto.MetaInfoBase\022\014\n\004Nam"
-  "e\030\002 \001(\t\022\023\n\013Description\030\003 \001(\t\022\013\n\003Day\030\004 \001("
-  "\t\022\034\n\024CreatedProjectNumber\030\005 \001(\005\022\030\n\020Creat"
-  "edSwcNumber\030\006 \001(\005\022\033\n\023CreateSwcNodeNumber"
-  "\030\007 \001(\005\022\034\n\024DeletedProjectNumber\030\010 \001(\005\022\030\n\020"
-  "DeletedSwcNumber\030\t \001(\005\022\034\n\024DeletedSwcNode"
-  "Number\030\n \001(\005\022\035\n\025ModifiedProjectNumber\030\013 "
-  "\001(\005\022\031\n\021ModifiedSwcNumber\030\014 \001(\005\022\035\n\025Modifi"
-  "edSwcNodeNumber\030\r \001(\005\022\032\n\022ProjectQueryNum"
-  "ber\030\016 \001(\005\022\026\n\016SwcQueryNumber\030\017 \001(\005\022\027\n\017Nod"
-  "eQueryNumber\030\020 \001(\005\022\030\n\020ActiveUserNumber\030\021"
-  " \001(\005\"7\n\020UserVerifyInfoV1\022\020\n\010UserName\030\001 \001"
-  "(\t\022\021\n\tUserToken\030\002 \001(\t\"\'\n\021RequestMetaInfo"
-  "V1\022\022\n\nApiVersion\030\001 \001(\t\"A\n\022ResponseMetaIn"
-  "foV1\022\016\n\006Status\030\001 \001(\010\022\n\n\002Id\030\002 \001(\t\022\017\n\007Mess"
-  "age\030\003 \001(\t*G\n\024IncrementOperationV1\022\013\n\007Unk"
-  "nown\020\000\022\n\n\006Create\020\001\022\n\n\006Delete\020\002\022\n\n\006Update"
-  "\020\003B/Z-DBMS/SwcDbmsCommon/Generated/go/pr"
-  "oto/messageP\000b\006proto3"
+  "\030\003 \001(\t\022\013\n\003Day\030\004 \001(\t\022\034\n\024CreatedProjectNum"
+  "ber\030\005 \001(\005\022\030\n\020CreatedSwcNumber\030\006 \001(\005\022\033\n\023C"
+  "reateSwcNodeNumber\030\007 \001(\005\022\034\n\024DeletedProje"
+  "ctNumber\030\010 \001(\005\022\030\n\020DeletedSwcNumber\030\t \001(\005"
+  "\022\034\n\024DeletedSwcNodeNumber\030\n \001(\005\022\035\n\025Modifi"
+  "edProjectNumber\030\013 \001(\005\022\031\n\021ModifiedSwcNumb"
+  "er\030\014 \001(\005\022\035\n\025ModifiedSwcNodeNumber\030\r \001(\005\022"
+  "\032\n\022ProjectQueryNumber\030\016 \001(\005\022\026\n\016SwcQueryN"
+  "umber\030\017 \001(\005\022\027\n\017NodeQueryNumber\030\020 \001(\005\022\030\n\020"
+  "ActiveUserNumber\030\021 \001(\005\"7\n\020UserVerifyInfo"
+  "V1\022\020\n\010UserName\030\001 \001(\t\022\021\n\tUserToken\030\002 \001(\t\""
+  "\'\n\021RequestMetaInfoV1\022\022\n\nApiVersion\030\001 \001(\t"
+  "\"A\n\022ResponseMetaInfoV1\022\016\n\006Status\030\001 \001(\010\022\n"
+  "\n\002Id\030\002 \001(\t\022\017\n\007Message\030\003 \001(\t*G\n\024Increment"
+  "OperationV1\022\013\n\007Unknown\020\000\022\n\n\006Create\020\001\022\n\n\006"
+  "Delete\020\002\022\n\n\006Update\020\003B/Z-DBMS/SwcDbmsComm"
+  "on/Generated/go/proto/messageP\000b\006proto3"
   ;
 static const ::_pbi::DescriptorTable* const descriptor_table_Message_2fMessage_2eproto_deps[1] = {
   &::descriptor_table_google_2fprotobuf_2ftimestamp_2eproto,
 };
 static ::_pbi::once_flag descriptor_table_Message_2fMessage_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_Message_2fMessage_2eproto = {
-    false, false, 3541, descriptor_table_protodef_Message_2fMessage_2eproto,
+    false, false, 3639, descriptor_table_protodef_Message_2fMessage_2eproto,
     "Message/Message.proto",
-    &descriptor_table_Message_2fMessage_2eproto_once, descriptor_table_Message_2fMessage_2eproto_deps, 1, 18,
+    &descriptor_table_Message_2fMessage_2eproto_once, descriptor_table_Message_2fMessage_2eproto_deps, 1, 19,
     schemas, file_default_instances, TableStruct_Message_2fMessage_2eproto::offsets,
     file_level_metadata_Message_2fMessage_2eproto, file_level_enum_descriptors_Message_2fMessage_2eproto,
     file_level_service_descriptors_Message_2fMessage_2eproto,
@@ -4134,6 +4158,191 @@ void SwcIncrementOperationV1::InternalSwap(SwcIncrementOperationV1* other) {
 
 // ===================================================================
 
+class SwcIncrementOperationListV1::_Internal {
+ public:
+};
+
+SwcIncrementOperationListV1::SwcIncrementOperationListV1(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:proto.SwcIncrementOperationListV1)
+}
+SwcIncrementOperationListV1::SwcIncrementOperationListV1(const SwcIncrementOperationListV1& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  SwcIncrementOperationListV1* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.swcincrementoperationlist_){from._impl_.swcincrementoperationlist_}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  // @@protoc_insertion_point(copy_constructor:proto.SwcIncrementOperationListV1)
+}
+
+inline void SwcIncrementOperationListV1::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.swcincrementoperationlist_){arena}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+}
+
+SwcIncrementOperationListV1::~SwcIncrementOperationListV1() {
+  // @@protoc_insertion_point(destructor:proto.SwcIncrementOperationListV1)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void SwcIncrementOperationListV1::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.swcincrementoperationlist_.~RepeatedPtrField();
+}
+
+void SwcIncrementOperationListV1::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void SwcIncrementOperationListV1::Clear() {
+// @@protoc_insertion_point(message_clear_start:proto.SwcIncrementOperationListV1)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _impl_.swcincrementoperationlist_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* SwcIncrementOperationListV1::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // repeated .proto.SwcIncrementOperationV1 SwcIncrementOperationList = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            ptr = ctx->ParseMessage(_internal_add_swcincrementoperationlist(), ptr);
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<10>(ptr));
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* SwcIncrementOperationListV1::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:proto.SwcIncrementOperationListV1)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // repeated .proto.SwcIncrementOperationV1 SwcIncrementOperationList = 1;
+  for (unsigned i = 0,
+      n = static_cast<unsigned>(this->_internal_swcincrementoperationlist_size()); i < n; i++) {
+    const auto& repfield = this->_internal_swcincrementoperationlist(i);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        InternalWriteMessage(1, repfield, repfield.GetCachedSize(), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:proto.SwcIncrementOperationListV1)
+  return target;
+}
+
+size_t SwcIncrementOperationListV1::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:proto.SwcIncrementOperationListV1)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // repeated .proto.SwcIncrementOperationV1 SwcIncrementOperationList = 1;
+  total_size += 1UL * this->_internal_swcincrementoperationlist_size();
+  for (const auto& msg : this->_impl_.swcincrementoperationlist_) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData SwcIncrementOperationListV1::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    SwcIncrementOperationListV1::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SwcIncrementOperationListV1::GetClassData() const { return &_class_data_; }
+
+
+void SwcIncrementOperationListV1::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<SwcIncrementOperationListV1*>(&to_msg);
+  auto& from = static_cast<const SwcIncrementOperationListV1&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:proto.SwcIncrementOperationListV1)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  _this->_impl_.swcincrementoperationlist_.MergeFrom(from._impl_.swcincrementoperationlist_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void SwcIncrementOperationListV1::CopyFrom(const SwcIncrementOperationListV1& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:proto.SwcIncrementOperationListV1)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool SwcIncrementOperationListV1::IsInitialized() const {
+  return true;
+}
+
+void SwcIncrementOperationListV1::InternalSwap(SwcIncrementOperationListV1* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  _impl_.swcincrementoperationlist_.InternalSwap(&other->_impl_.swcincrementoperationlist_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata SwcIncrementOperationListV1::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_Message_2fMessage_2eproto_getter, &descriptor_table_Message_2fMessage_2eproto_once,
+      file_level_metadata_Message_2fMessage_2eproto[10]);
+}
+
+// ===================================================================
+
 class SwcMetaInfoV1::_Internal {
  public:
   static const ::proto::MetaInfoBase& base(const SwcMetaInfoV1* msg);
@@ -4741,7 +4950,7 @@ void SwcMetaInfoV1::InternalSwap(SwcMetaInfoV1* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata SwcMetaInfoV1::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fMessage_2eproto_getter, &descriptor_table_Message_2fMessage_2eproto_once,
-      file_level_metadata_Message_2fMessage_2eproto[10]);
+      file_level_metadata_Message_2fMessage_2eproto[11]);
 }
 
 // ===================================================================
@@ -5240,7 +5449,7 @@ void SwcNodeInternalDataV1::InternalSwap(SwcNodeInternalDataV1* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata SwcNodeInternalDataV1::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fMessage_2eproto_getter, &descriptor_table_Message_2fMessage_2eproto_once,
-      file_level_metadata_Message_2fMessage_2eproto[11]);
+      file_level_metadata_Message_2fMessage_2eproto[12]);
 }
 
 // ===================================================================
@@ -5675,7 +5884,7 @@ void SwcNodeDataV1::InternalSwap(SwcNodeDataV1* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata SwcNodeDataV1::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fMessage_2eproto_getter, &descriptor_table_Message_2fMessage_2eproto_once,
-      file_level_metadata_Message_2fMessage_2eproto[12]);
+      file_level_metadata_Message_2fMessage_2eproto[13]);
 }
 
 // ===================================================================
@@ -5860,7 +6069,7 @@ void SwcDataV1::InternalSwap(SwcDataV1* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata SwcDataV1::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fMessage_2eproto_getter, &descriptor_table_Message_2fMessage_2eproto_once,
-      file_level_metadata_Message_2fMessage_2eproto[13]);
+      file_level_metadata_Message_2fMessage_2eproto[14]);
 }
 
 // ===================================================================
@@ -6532,7 +6741,7 @@ void DailyStatisticsMetaInfoV1::InternalSwap(DailyStatisticsMetaInfoV1* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata DailyStatisticsMetaInfoV1::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fMessage_2eproto_getter, &descriptor_table_Message_2fMessage_2eproto_once,
-      file_level_metadata_Message_2fMessage_2eproto[14]);
+      file_level_metadata_Message_2fMessage_2eproto[15]);
 }
 
 // ===================================================================
@@ -6785,7 +6994,7 @@ void UserVerifyInfoV1::InternalSwap(UserVerifyInfoV1* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata UserVerifyInfoV1::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fMessage_2eproto_getter, &descriptor_table_Message_2fMessage_2eproto_once,
-      file_level_metadata_Message_2fMessage_2eproto[15]);
+      file_level_metadata_Message_2fMessage_2eproto[16]);
 }
 
 // ===================================================================
@@ -6988,7 +7197,7 @@ void RequestMetaInfoV1::InternalSwap(RequestMetaInfoV1* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata RequestMetaInfoV1::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fMessage_2eproto_getter, &descriptor_table_Message_2fMessage_2eproto_once,
-      file_level_metadata_Message_2fMessage_2eproto[16]);
+      file_level_metadata_Message_2fMessage_2eproto[17]);
 }
 
 // ===================================================================
@@ -7268,7 +7477,7 @@ void ResponseMetaInfoV1::InternalSwap(ResponseMetaInfoV1* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata ResponseMetaInfoV1::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fMessage_2eproto_getter, &descriptor_table_Message_2fMessage_2eproto_once,
-      file_level_metadata_Message_2fMessage_2eproto[17]);
+      file_level_metadata_Message_2fMessage_2eproto[18]);
 }
 
 // @@protoc_insertion_point(namespace_scope)
@@ -7313,6 +7522,10 @@ Arena::CreateMaybeMessage< ::proto::SwcIncrementOperationMetaInfoV1 >(Arena* are
 template<> PROTOBUF_NOINLINE ::proto::SwcIncrementOperationV1*
 Arena::CreateMaybeMessage< ::proto::SwcIncrementOperationV1 >(Arena* arena) {
   return Arena::CreateMessageInternal< ::proto::SwcIncrementOperationV1 >(arena);
+}
+template<> PROTOBUF_NOINLINE ::proto::SwcIncrementOperationListV1*
+Arena::CreateMaybeMessage< ::proto::SwcIncrementOperationListV1 >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::proto::SwcIncrementOperationListV1 >(arena);
 }
 template<> PROTOBUF_NOINLINE ::proto::SwcMetaInfoV1*
 Arena::CreateMaybeMessage< ::proto::SwcMetaInfoV1 >(Arena* arena) {

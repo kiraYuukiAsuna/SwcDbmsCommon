@@ -74,6 +74,9 @@ extern ResponseMetaInfoV1DefaultTypeInternal _ResponseMetaInfoV1_default_instanc
 class SwcDataV1;
 struct SwcDataV1DefaultTypeInternal;
 extern SwcDataV1DefaultTypeInternal _SwcDataV1_default_instance_;
+class SwcIncrementOperationListV1;
+struct SwcIncrementOperationListV1DefaultTypeInternal;
+extern SwcIncrementOperationListV1DefaultTypeInternal _SwcIncrementOperationListV1_default_instance_;
 class SwcIncrementOperationMetaInfoV1;
 struct SwcIncrementOperationMetaInfoV1DefaultTypeInternal;
 extern SwcIncrementOperationMetaInfoV1DefaultTypeInternal _SwcIncrementOperationMetaInfoV1_default_instance_;
@@ -112,6 +115,7 @@ template<> ::proto::ProjectPermissionMetaInfoV1* Arena::CreateMaybeMessage<::pro
 template<> ::proto::RequestMetaInfoV1* Arena::CreateMaybeMessage<::proto::RequestMetaInfoV1>(Arena*);
 template<> ::proto::ResponseMetaInfoV1* Arena::CreateMaybeMessage<::proto::ResponseMetaInfoV1>(Arena*);
 template<> ::proto::SwcDataV1* Arena::CreateMaybeMessage<::proto::SwcDataV1>(Arena*);
+template<> ::proto::SwcIncrementOperationListV1* Arena::CreateMaybeMessage<::proto::SwcIncrementOperationListV1>(Arena*);
 template<> ::proto::SwcIncrementOperationMetaInfoV1* Arena::CreateMaybeMessage<::proto::SwcIncrementOperationMetaInfoV1>(Arena*);
 template<> ::proto::SwcIncrementOperationV1* Arena::CreateMaybeMessage<::proto::SwcIncrementOperationV1>(Arena*);
 template<> ::proto::SwcMetaInfoV1* Arena::CreateMaybeMessage<::proto::SwcMetaInfoV1>(Arena*);
@@ -2256,6 +2260,163 @@ class SwcIncrementOperationV1 final :
 };
 // -------------------------------------------------------------------
 
+class SwcIncrementOperationListV1 final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:proto.SwcIncrementOperationListV1) */ {
+ public:
+  inline SwcIncrementOperationListV1() : SwcIncrementOperationListV1(nullptr) {}
+  ~SwcIncrementOperationListV1() override;
+  explicit PROTOBUF_CONSTEXPR SwcIncrementOperationListV1(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  SwcIncrementOperationListV1(const SwcIncrementOperationListV1& from);
+  SwcIncrementOperationListV1(SwcIncrementOperationListV1&& from) noexcept
+    : SwcIncrementOperationListV1() {
+    *this = ::std::move(from);
+  }
+
+  inline SwcIncrementOperationListV1& operator=(const SwcIncrementOperationListV1& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline SwcIncrementOperationListV1& operator=(SwcIncrementOperationListV1&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const SwcIncrementOperationListV1& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const SwcIncrementOperationListV1* internal_default_instance() {
+    return reinterpret_cast<const SwcIncrementOperationListV1*>(
+               &_SwcIncrementOperationListV1_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    10;
+
+  friend void swap(SwcIncrementOperationListV1& a, SwcIncrementOperationListV1& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(SwcIncrementOperationListV1* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() != nullptr &&
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(SwcIncrementOperationListV1* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  SwcIncrementOperationListV1* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<SwcIncrementOperationListV1>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const SwcIncrementOperationListV1& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const SwcIncrementOperationListV1& from) {
+    SwcIncrementOperationListV1::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
+
+  private:
+  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(SwcIncrementOperationListV1* other);
+
+  private:
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "proto.SwcIncrementOperationListV1";
+  }
+  protected:
+  explicit SwcIncrementOperationListV1(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kSwcIncrementOperationListFieldNumber = 1,
+  };
+  // repeated .proto.SwcIncrementOperationV1 SwcIncrementOperationList = 1;
+  int swcincrementoperationlist_size() const;
+  private:
+  int _internal_swcincrementoperationlist_size() const;
+  public:
+  void clear_swcincrementoperationlist();
+  ::proto::SwcIncrementOperationV1* mutable_swcincrementoperationlist(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::proto::SwcIncrementOperationV1 >*
+      mutable_swcincrementoperationlist();
+  private:
+  const ::proto::SwcIncrementOperationV1& _internal_swcincrementoperationlist(int index) const;
+  ::proto::SwcIncrementOperationV1* _internal_add_swcincrementoperationlist();
+  public:
+  const ::proto::SwcIncrementOperationV1& swcincrementoperationlist(int index) const;
+  ::proto::SwcIncrementOperationV1* add_swcincrementoperationlist();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::proto::SwcIncrementOperationV1 >&
+      swcincrementoperationlist() const;
+
+  // @@protoc_insertion_point(class_scope:proto.SwcIncrementOperationListV1)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::proto::SwcIncrementOperationV1 > swcincrementoperationlist_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_Message_2fMessage_2eproto;
+};
+// -------------------------------------------------------------------
+
 class SwcMetaInfoV1 final :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:proto.SwcMetaInfoV1) */ {
  public:
@@ -2304,7 +2465,7 @@ class SwcMetaInfoV1 final :
                &_SwcMetaInfoV1_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    10;
+    11;
 
   friend void swap(SwcMetaInfoV1& a, SwcMetaInfoV1& b) {
     a.Swap(&b);
@@ -2621,7 +2782,7 @@ class SwcNodeInternalDataV1 final :
                &_SwcNodeInternalDataV1_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    11;
+    12;
 
   friend void swap(SwcNodeInternalDataV1& a, SwcNodeInternalDataV1& b) {
     a.Swap(&b);
@@ -2890,7 +3051,7 @@ class SwcNodeDataV1 final :
                &_SwcNodeDataV1_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    12;
+    13;
 
   friend void swap(SwcNodeDataV1& a, SwcNodeDataV1& b) {
     a.Swap(&b);
@@ -3139,7 +3300,7 @@ class SwcDataV1 final :
                &_SwcDataV1_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    13;
+    14;
 
   friend void swap(SwcDataV1& a, SwcDataV1& b) {
     a.Swap(&b);
@@ -3296,7 +3457,7 @@ class DailyStatisticsMetaInfoV1 final :
                &_DailyStatisticsMetaInfoV1_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    14;
+    15;
 
   friend void swap(DailyStatisticsMetaInfoV1& a, DailyStatisticsMetaInfoV1& b) {
     a.Swap(&b);
@@ -3644,7 +3805,7 @@ class UserVerifyInfoV1 final :
                &_UserVerifyInfoV1_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    15;
+    16;
 
   friend void swap(UserVerifyInfoV1& a, UserVerifyInfoV1& b) {
     a.Swap(&b);
@@ -3813,7 +3974,7 @@ class RequestMetaInfoV1 final :
                &_RequestMetaInfoV1_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    16;
+    17;
 
   friend void swap(RequestMetaInfoV1& a, RequestMetaInfoV1& b) {
     a.Swap(&b);
@@ -3966,7 +4127,7 @@ class ResponseMetaInfoV1 final :
                &_ResponseMetaInfoV1_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    17;
+    18;
 
   friend void swap(ResponseMetaInfoV1& a, ResponseMetaInfoV1& b) {
     a.Swap(&b);
@@ -6665,6 +6826,50 @@ inline void SwcIncrementOperationV1::set_allocated_swcnodedata(::proto::SwcNodeD
 
 // -------------------------------------------------------------------
 
+// SwcIncrementOperationListV1
+
+// repeated .proto.SwcIncrementOperationV1 SwcIncrementOperationList = 1;
+inline int SwcIncrementOperationListV1::_internal_swcincrementoperationlist_size() const {
+  return _impl_.swcincrementoperationlist_.size();
+}
+inline int SwcIncrementOperationListV1::swcincrementoperationlist_size() const {
+  return _internal_swcincrementoperationlist_size();
+}
+inline void SwcIncrementOperationListV1::clear_swcincrementoperationlist() {
+  _impl_.swcincrementoperationlist_.Clear();
+}
+inline ::proto::SwcIncrementOperationV1* SwcIncrementOperationListV1::mutable_swcincrementoperationlist(int index) {
+  // @@protoc_insertion_point(field_mutable:proto.SwcIncrementOperationListV1.SwcIncrementOperationList)
+  return _impl_.swcincrementoperationlist_.Mutable(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::proto::SwcIncrementOperationV1 >*
+SwcIncrementOperationListV1::mutable_swcincrementoperationlist() {
+  // @@protoc_insertion_point(field_mutable_list:proto.SwcIncrementOperationListV1.SwcIncrementOperationList)
+  return &_impl_.swcincrementoperationlist_;
+}
+inline const ::proto::SwcIncrementOperationV1& SwcIncrementOperationListV1::_internal_swcincrementoperationlist(int index) const {
+  return _impl_.swcincrementoperationlist_.Get(index);
+}
+inline const ::proto::SwcIncrementOperationV1& SwcIncrementOperationListV1::swcincrementoperationlist(int index) const {
+  // @@protoc_insertion_point(field_get:proto.SwcIncrementOperationListV1.SwcIncrementOperationList)
+  return _internal_swcincrementoperationlist(index);
+}
+inline ::proto::SwcIncrementOperationV1* SwcIncrementOperationListV1::_internal_add_swcincrementoperationlist() {
+  return _impl_.swcincrementoperationlist_.Add();
+}
+inline ::proto::SwcIncrementOperationV1* SwcIncrementOperationListV1::add_swcincrementoperationlist() {
+  ::proto::SwcIncrementOperationV1* _add = _internal_add_swcincrementoperationlist();
+  // @@protoc_insertion_point(field_add:proto.SwcIncrementOperationListV1.SwcIncrementOperationList)
+  return _add;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::proto::SwcIncrementOperationV1 >&
+SwcIncrementOperationListV1::swcincrementoperationlist() const {
+  // @@protoc_insertion_point(field_list:proto.SwcIncrementOperationListV1.SwcIncrementOperationList)
+  return _impl_.swcincrementoperationlist_;
+}
+
+// -------------------------------------------------------------------
+
 // SwcMetaInfoV1
 
 // .proto.MetaInfoBase Base = 1;
@@ -8788,6 +8993,8 @@ inline void ResponseMetaInfoV1::set_allocated_message(std::string* message) {
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------

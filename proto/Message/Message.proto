@@ -88,6 +88,10 @@ message SwcIncrementOperationV1{
     SwcNodeDataV1 SwcNodeData = 3;
 }
 
+message SwcIncrementOperationListV1{
+    repeated SwcIncrementOperationV1 SwcIncrementOperationList = 1;
+}
+
 message SwcMetaInfoV1{
     MetaInfoBase Base = 1;
     string Name = 2;
