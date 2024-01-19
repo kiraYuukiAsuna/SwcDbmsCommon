@@ -8,7 +8,7 @@ import public "google/protobuf/timestamp.proto";
 
 message MetaInfoBase{
     string _id = 1;
-    string ApiVersion = 2;
+    string DataAccessModelVersion = 2;
     string Uuid = 3;
 }
 

@@ -2221,7 +2221,7 @@
         "Id": {
           "type": "string"
         },
-        "ApiVersion": {
+        "DataAccessModelVersion": {
           "type": "string"
         },
         "Uuid": {

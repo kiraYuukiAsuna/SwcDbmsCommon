@@ -275,7 +275,7 @@ class MetaInfoBase final :
 
   enum : int {
     kIdFieldNumber = 1,
-    kApiVersionFieldNumber = 2,
+    kDataAccessModelVersionFieldNumber = 2,
     kUuidFieldNumber = 3,
   };
   // string _id = 1;
@@ -292,18 +292,18 @@ class MetaInfoBase final :
   std::string* _internal_mutable__id();
   public:
 
-  // string ApiVersion = 2;
-  void clear_apiversion();
-  const std::string& apiversion() const;
+  // string DataAccessModelVersion = 2;
+  void clear_dataaccessmodelversion();
+  const std::string& dataaccessmodelversion() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_apiversion(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_apiversion();
-  PROTOBUF_NODISCARD std::string* release_apiversion();
-  void set_allocated_apiversion(std::string* apiversion);
+  void set_dataaccessmodelversion(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_dataaccessmodelversion();
+  PROTOBUF_NODISCARD std::string* release_dataaccessmodelversion();
+  void set_allocated_dataaccessmodelversion(std::string* dataaccessmodelversion);
   private:
-  const std::string& _internal_apiversion() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_apiversion(const std::string& value);
-  std::string* _internal_mutable_apiversion();
+  const std::string& _internal_dataaccessmodelversion() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_dataaccessmodelversion(const std::string& value);
+  std::string* _internal_mutable_dataaccessmodelversion();
   public:
 
   // string Uuid = 3;
@@ -329,7 +329,7 @@ class MetaInfoBase final :
   typedef void DestructorSkippable_;
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr _id_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr apiversion_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr dataaccessmodelversion_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr uuid_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
@@ -4157,54 +4157,54 @@ inline void MetaInfoBase::set_allocated__id(std::string* _id) {
   // @@protoc_insertion_point(field_set_allocated:proto.MetaInfoBase._id)
 }
 
-// string ApiVersion = 2;
-inline void MetaInfoBase::clear_apiversion() {
-  _impl_.apiversion_.ClearToEmpty();
+// string DataAccessModelVersion = 2;
+inline void MetaInfoBase::clear_dataaccessmodelversion() {
+  _impl_.dataaccessmodelversion_.ClearToEmpty();
 }
-inline const std::string& MetaInfoBase::apiversion() const {
-  // @@protoc_insertion_point(field_get:proto.MetaInfoBase.ApiVersion)
-  return _internal_apiversion();
+inline const std::string& MetaInfoBase::dataaccessmodelversion() const {
+  // @@protoc_insertion_point(field_get:proto.MetaInfoBase.DataAccessModelVersion)
+  return _internal_dataaccessmodelversion();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void MetaInfoBase::set_apiversion(ArgT0&& arg0, ArgT... args) {
+void MetaInfoBase::set_dataaccessmodelversion(ArgT0&& arg0, ArgT... args) {
  
- _impl_.apiversion_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:proto.MetaInfoBase.ApiVersion)
+ _impl_.dataaccessmodelversion_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:proto.MetaInfoBase.DataAccessModelVersion)
 }
-inline std::string* MetaInfoBase::mutable_apiversion() {
-  std::string* _s = _internal_mutable_apiversion();
-  // @@protoc_insertion_point(field_mutable:proto.MetaInfoBase.ApiVersion)
+inline std::string* MetaInfoBase::mutable_dataaccessmodelversion() {
+  std::string* _s = _internal_mutable_dataaccessmodelversion();
+  // @@protoc_insertion_point(field_mutable:proto.MetaInfoBase.DataAccessModelVersion)
   return _s;
 }
-inline const std::string& MetaInfoBase::_internal_apiversion() const {
-  return _impl_.apiversion_.Get();
+inline const std::string& MetaInfoBase::_internal_dataaccessmodelversion() const {
+  return _impl_.dataaccessmodelversion_.Get();
 }
-inline void MetaInfoBase::_internal_set_apiversion(const std::string& value) {
+inline void MetaInfoBase::_internal_set_dataaccessmodelversion(const std::string& value) {
   
-  _impl_.apiversion_.Set(value, GetArenaForAllocation());
+  _impl_.dataaccessmodelversion_.Set(value, GetArenaForAllocation());
 }
-inline std::string* MetaInfoBase::_internal_mutable_apiversion() {
+inline std::string* MetaInfoBase::_internal_mutable_dataaccessmodelversion() {
   
-  return _impl_.apiversion_.Mutable(GetArenaForAllocation());
+  return _impl_.dataaccessmodelversion_.Mutable(GetArenaForAllocation());
 }
-inline std::string* MetaInfoBase::release_apiversion() {
-  // @@protoc_insertion_point(field_release:proto.MetaInfoBase.ApiVersion)
-  return _impl_.apiversion_.Release();
+inline std::string* MetaInfoBase::release_dataaccessmodelversion() {
+  // @@protoc_insertion_point(field_release:proto.MetaInfoBase.DataAccessModelVersion)
+  return _impl_.dataaccessmodelversion_.Release();
 }
-inline void MetaInfoBase::set_allocated_apiversion(std::string* apiversion) {
-  if (apiversion != nullptr) {
+inline void MetaInfoBase::set_allocated_dataaccessmodelversion(std::string* dataaccessmodelversion) {
+  if (dataaccessmodelversion != nullptr) {
     
   } else {
     
   }
-  _impl_.apiversion_.SetAllocated(apiversion, GetArenaForAllocation());
+  _impl_.dataaccessmodelversion_.SetAllocated(dataaccessmodelversion, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.apiversion_.IsDefault()) {
-    _impl_.apiversion_.Set("", GetArenaForAllocation());
+  if (_impl_.dataaccessmodelversion_.IsDefault()) {
+    _impl_.dataaccessmodelversion_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:proto.MetaInfoBase.ApiVersion)
+  // @@protoc_insertion_point(field_set_allocated:proto.MetaInfoBase.DataAccessModelVersion)
 }
 
 // string Uuid = 3;
