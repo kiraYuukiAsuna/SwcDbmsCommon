@@ -1703,11 +1703,7 @@
           "$ref": "#/definitions/protoResponseMetaInfoV1"
         },
         "SwcIncrementOperationMetaInfoList": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "$ref": "#/definitions/protoSwcIncrementOperationMetaInfoV1"
-          }
+          "$ref": "#/definitions/protoSwcIncrementOperationMetaInfoV1"
         }
       }
     },
