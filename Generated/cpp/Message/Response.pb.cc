@@ -370,8 +370,8 @@ struct GetSnapshotResponseDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetSnapshotResponseDefaultTypeInternal _GetSnapshotResponse_default_instance_;
 PROTOBUF_CONSTEXPR GetAllIncrementOperationMetaInfoResponse::GetAllIncrementOperationMetaInfoResponse(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.metainfo_)*/nullptr
-  , /*decltype(_impl_.swcincrementoperationmetainfolist_)*/nullptr
+    /*decltype(_impl_.swcincrementoperationmetainfolist_)*/{}
+  , /*decltype(_impl_.metainfo_)*/nullptr
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct GetAllIncrementOperationMetaInfoResponseDefaultTypeInternal {
   PROTOBUF_CONSTEXPR GetAllIncrementOperationMetaInfoResponseDefaultTypeInternal()
@@ -384,8 +384,8 @@ struct GetAllIncrementOperationMetaInfoResponseDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetAllIncrementOperationMetaInfoResponseDefaultTypeInternal _GetAllIncrementOperationMetaInfoResponse_default_instance_;
 PROTOBUF_CONSTEXPR GetIncrementOperationResponse::GetIncrementOperationResponse(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.swcincrementoperationlist_)*/{}
-  , /*decltype(_impl_.metainfo_)*/nullptr
+    /*decltype(_impl_.metainfo_)*/nullptr
+  , /*decltype(_impl_.swcincrementoperationlist_)*/nullptr
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct GetIncrementOperationResponseDefaultTypeInternal {
   PROTOBUF_CONSTEXPR GetIncrementOperationResponseDefaultTypeInternal()
@@ -1035,11 +1035,11 @@ const char descriptor_table_protodef_Message_2fResponse_2eproto[] PROTOBUF_SECTI
   "ta\030\003 \001(\0132\020.proto.SwcDataV1\"\252\001\n(GetAllInc"
   "rementOperationMetaInfoResponse\022+\n\010metaI"
   "nfo\030\001 \001(\0132\031.proto.ResponseMetaInfoV1\022Q\n!"
-  "SwcIncrementOperationMetaInfoList\030\002 \001(\0132"
+  "SwcIncrementOperationMetaInfoList\030\002 \003(\0132"
   "&.proto.SwcIncrementOperationMetaInfoV1\""
   "\223\001\n\035GetIncrementOperationResponse\022+\n\010met"
   "aInfo\030\001 \001(\0132\031.proto.ResponseMetaInfoV1\022E"
-  "\n\031SwcIncrementOperationList\030\002 \003(\0132\".prot"
+  "\n\031SwcIncrementOperationList\030\002 \001(\0132\".prot"
   "o.SwcIncrementOperationListV1\"H\n\031CreateS"
   "wcNodeDataResponse\022+\n\010metaInfo\030\001 \001(\0132\031.p"
   "roto.ResponseMetaInfoV1\"H\n\031DeleteSwcNode"
@@ -7145,16 +7145,11 @@ void GetSnapshotResponse::InternalSwap(GetSnapshotResponse* other) {
 class GetAllIncrementOperationMetaInfoResponse::_Internal {
  public:
   static const ::proto::ResponseMetaInfoV1& metainfo(const GetAllIncrementOperationMetaInfoResponse* msg);
-  static const ::proto::SwcIncrementOperationMetaInfoV1& swcincrementoperationmetainfolist(const GetAllIncrementOperationMetaInfoResponse* msg);
 };
 
 const ::proto::ResponseMetaInfoV1&
 GetAllIncrementOperationMetaInfoResponse::_Internal::metainfo(const GetAllIncrementOperationMetaInfoResponse* msg) {
   return *msg->_impl_.metainfo_;
-}
-const ::proto::SwcIncrementOperationMetaInfoV1&
-GetAllIncrementOperationMetaInfoResponse::_Internal::swcincrementoperationmetainfolist(const GetAllIncrementOperationMetaInfoResponse* msg) {
-  return *msg->_impl_.swcincrementoperationmetainfolist_;
 }
 void GetAllIncrementOperationMetaInfoResponse::clear_metainfo() {
   if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
@@ -7163,10 +7158,7 @@ void GetAllIncrementOperationMetaInfoResponse::clear_metainfo() {
   _impl_.metainfo_ = nullptr;
 }
 void GetAllIncrementOperationMetaInfoResponse::clear_swcincrementoperationmetainfolist() {
-  if (GetArenaForAllocation() == nullptr && _impl_.swcincrementoperationmetainfolist_ != nullptr) {
-    delete _impl_.swcincrementoperationmetainfolist_;
-  }
-  _impl_.swcincrementoperationmetainfolist_ = nullptr;
+  _impl_.swcincrementoperationmetainfolist_.Clear();
 }
 GetAllIncrementOperationMetaInfoResponse::GetAllIncrementOperationMetaInfoResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
@@ -7178,16 +7170,13 @@ GetAllIncrementOperationMetaInfoResponse::GetAllIncrementOperationMetaInfoRespon
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   GetAllIncrementOperationMetaInfoResponse* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.metainfo_){nullptr}
-    , decltype(_impl_.swcincrementoperationmetainfolist_){nullptr}
+      decltype(_impl_.swcincrementoperationmetainfolist_){from._impl_.swcincrementoperationmetainfolist_}
+    , decltype(_impl_.metainfo_){nullptr}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_metainfo()) {
     _this->_impl_.metainfo_ = new ::proto::ResponseMetaInfoV1(*from._impl_.metainfo_);
-  }
-  if (from._internal_has_swcincrementoperationmetainfolist()) {
-    _this->_impl_.swcincrementoperationmetainfolist_ = new ::proto::SwcIncrementOperationMetaInfoV1(*from._impl_.swcincrementoperationmetainfolist_);
   }
   // @@protoc_insertion_point(copy_constructor:proto.GetAllIncrementOperationMetaInfoResponse)
 }
@@ -7197,8 +7186,8 @@ inline void GetAllIncrementOperationMetaInfoResponse::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.metainfo_){nullptr}
-    , decltype(_impl_.swcincrementoperationmetainfolist_){nullptr}
+      decltype(_impl_.swcincrementoperationmetainfolist_){arena}
+    , decltype(_impl_.metainfo_){nullptr}
     , /*decltype(_impl_._cached_size_)*/{}
   };
 }
@@ -7214,8 +7203,8 @@ GetAllIncrementOperationMetaInfoResponse::~GetAllIncrementOperationMetaInfoRespo
 
 inline void GetAllIncrementOperationMetaInfoResponse::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.swcincrementoperationmetainfolist_.~RepeatedPtrField();
   if (this != internal_default_instance()) delete _impl_.metainfo_;
-  if (this != internal_default_instance()) delete _impl_.swcincrementoperationmetainfolist_;
 }
 
 void GetAllIncrementOperationMetaInfoResponse::SetCachedSize(int size) const {
@@ -7228,14 +7217,11 @@ void GetAllIncrementOperationMetaInfoResponse::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
+  _impl_.swcincrementoperationmetainfolist_.Clear();
   if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
     delete _impl_.metainfo_;
   }
   _impl_.metainfo_ = nullptr;
-  if (GetArenaForAllocation() == nullptr && _impl_.swcincrementoperationmetainfolist_ != nullptr) {
-    delete _impl_.swcincrementoperationmetainfolist_;
-  }
-  _impl_.swcincrementoperationmetainfolist_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -7253,11 +7239,16 @@ const char* GetAllIncrementOperationMetaInfoResponse::_InternalParse(const char*
         } else
           goto handle_unusual;
         continue;
-      // .proto.SwcIncrementOperationMetaInfoV1 SwcIncrementOperationMetaInfoList = 2;
+      // repeated .proto.SwcIncrementOperationMetaInfoV1 SwcIncrementOperationMetaInfoList = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_swcincrementoperationmetainfolist(), ptr);
-          CHK_(ptr);
+          ptr -= 1;
+          do {
+            ptr += 1;
+            ptr = ctx->ParseMessage(_internal_add_swcincrementoperationmetainfolist(), ptr);
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<18>(ptr));
         } else
           goto handle_unusual;
         continue;
@@ -7297,11 +7288,12 @@ uint8_t* GetAllIncrementOperationMetaInfoResponse::_InternalSerialize(
         _Internal::metainfo(this).GetCachedSize(), target, stream);
   }
 
-  // .proto.SwcIncrementOperationMetaInfoV1 SwcIncrementOperationMetaInfoList = 2;
-  if (this->_internal_has_swcincrementoperationmetainfolist()) {
+  // repeated .proto.SwcIncrementOperationMetaInfoV1 SwcIncrementOperationMetaInfoList = 2;
+  for (unsigned i = 0,
+      n = static_cast<unsigned>(this->_internal_swcincrementoperationmetainfolist_size()); i < n; i++) {
+    const auto& repfield = this->_internal_swcincrementoperationmetainfolist(i);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(2, _Internal::swcincrementoperationmetainfolist(this),
-        _Internal::swcincrementoperationmetainfolist(this).GetCachedSize(), target, stream);
+        InternalWriteMessage(2, repfield, repfield.GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -7320,18 +7312,18 @@ size_t GetAllIncrementOperationMetaInfoResponse::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
+  // repeated .proto.SwcIncrementOperationMetaInfoV1 SwcIncrementOperationMetaInfoList = 2;
+  total_size += 1UL * this->_internal_swcincrementoperationmetainfolist_size();
+  for (const auto& msg : this->_impl_.swcincrementoperationmetainfolist_) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
+  }
+
   // .proto.ResponseMetaInfoV1 metaInfo = 1;
   if (this->_internal_has_metainfo()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.metainfo_);
-  }
-
-  // .proto.SwcIncrementOperationMetaInfoV1 SwcIncrementOperationMetaInfoList = 2;
-  if (this->_internal_has_swcincrementoperationmetainfolist()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.swcincrementoperationmetainfolist_);
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -7352,13 +7344,10 @@ void GetAllIncrementOperationMetaInfoResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
+  _this->_impl_.swcincrementoperationmetainfolist_.MergeFrom(from._impl_.swcincrementoperationmetainfolist_);
   if (from._internal_has_metainfo()) {
     _this->_internal_mutable_metainfo()->::proto::ResponseMetaInfoV1::MergeFrom(
         from._internal_metainfo());
-  }
-  if (from._internal_has_swcincrementoperationmetainfolist()) {
-    _this->_internal_mutable_swcincrementoperationmetainfolist()->::proto::SwcIncrementOperationMetaInfoV1::MergeFrom(
-        from._internal_swcincrementoperationmetainfolist());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -7377,12 +7366,8 @@ bool GetAllIncrementOperationMetaInfoResponse::IsInitialized() const {
 void GetAllIncrementOperationMetaInfoResponse::InternalSwap(GetAllIncrementOperationMetaInfoResponse* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(GetAllIncrementOperationMetaInfoResponse, _impl_.swcincrementoperationmetainfolist_)
-      + sizeof(GetAllIncrementOperationMetaInfoResponse::_impl_.swcincrementoperationmetainfolist_)
-      - PROTOBUF_FIELD_OFFSET(GetAllIncrementOperationMetaInfoResponse, _impl_.metainfo_)>(
-          reinterpret_cast<char*>(&_impl_.metainfo_),
-          reinterpret_cast<char*>(&other->_impl_.metainfo_));
+  _impl_.swcincrementoperationmetainfolist_.InternalSwap(&other->_impl_.swcincrementoperationmetainfolist_);
+  swap(_impl_.metainfo_, other->_impl_.metainfo_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata GetAllIncrementOperationMetaInfoResponse::GetMetadata() const {
@@ -7396,11 +7381,16 @@ void GetAllIncrementOperationMetaInfoResponse::InternalSwap(GetAllIncrementOpera
 class GetIncrementOperationResponse::_Internal {
  public:
   static const ::proto::ResponseMetaInfoV1& metainfo(const GetIncrementOperationResponse* msg);
+  static const ::proto::SwcIncrementOperationListV1& swcincrementoperationlist(const GetIncrementOperationResponse* msg);
 };
 
 const ::proto::ResponseMetaInfoV1&
 GetIncrementOperationResponse::_Internal::metainfo(const GetIncrementOperationResponse* msg) {
   return *msg->_impl_.metainfo_;
+}
+const ::proto::SwcIncrementOperationListV1&
+GetIncrementOperationResponse::_Internal::swcincrementoperationlist(const GetIncrementOperationResponse* msg) {
+  return *msg->_impl_.swcincrementoperationlist_;
 }
 void GetIncrementOperationResponse::clear_metainfo() {
   if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
@@ -7409,7 +7399,10 @@ void GetIncrementOperationResponse::clear_metainfo() {
   _impl_.metainfo_ = nullptr;
 }
 void GetIncrementOperationResponse::clear_swcincrementoperationlist() {
-  _impl_.swcincrementoperationlist_.Clear();
+  if (GetArenaForAllocation() == nullptr && _impl_.swcincrementoperationlist_ != nullptr) {
+    delete _impl_.swcincrementoperationlist_;
+  }
+  _impl_.swcincrementoperationlist_ = nullptr;
 }
 GetIncrementOperationResponse::GetIncrementOperationResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
@@ -7421,13 +7414,16 @@ GetIncrementOperationResponse::GetIncrementOperationResponse(const GetIncrementO
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   GetIncrementOperationResponse* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.swcincrementoperationlist_){from._impl_.swcincrementoperationlist_}
-    , decltype(_impl_.metainfo_){nullptr}
+      decltype(_impl_.metainfo_){nullptr}
+    , decltype(_impl_.swcincrementoperationlist_){nullptr}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_metainfo()) {
     _this->_impl_.metainfo_ = new ::proto::ResponseMetaInfoV1(*from._impl_.metainfo_);
+  }
+  if (from._internal_has_swcincrementoperationlist()) {
+    _this->_impl_.swcincrementoperationlist_ = new ::proto::SwcIncrementOperationListV1(*from._impl_.swcincrementoperationlist_);
   }
   // @@protoc_insertion_point(copy_constructor:proto.GetIncrementOperationResponse)
 }
@@ -7437,8 +7433,8 @@ inline void GetIncrementOperationResponse::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.swcincrementoperationlist_){arena}
-    , decltype(_impl_.metainfo_){nullptr}
+      decltype(_impl_.metainfo_){nullptr}
+    , decltype(_impl_.swcincrementoperationlist_){nullptr}
     , /*decltype(_impl_._cached_size_)*/{}
   };
 }
@@ -7454,8 +7450,8 @@ GetIncrementOperationResponse::~GetIncrementOperationResponse() {
 
 inline void GetIncrementOperationResponse::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.swcincrementoperationlist_.~RepeatedPtrField();
   if (this != internal_default_instance()) delete _impl_.metainfo_;
+  if (this != internal_default_instance()) delete _impl_.swcincrementoperationlist_;
 }
 
 void GetIncrementOperationResponse::SetCachedSize(int size) const {
@@ -7468,11 +7464,14 @@ void GetIncrementOperationResponse::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.swcincrementoperationlist_.Clear();
   if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
     delete _impl_.metainfo_;
   }
   _impl_.metainfo_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.swcincrementoperationlist_ != nullptr) {
+    delete _impl_.swcincrementoperationlist_;
+  }
+  _impl_.swcincrementoperationlist_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -7490,16 +7489,11 @@ const char* GetIncrementOperationResponse::_InternalParse(const char* ptr, ::_pb
         } else
           goto handle_unusual;
         continue;
-      // repeated .proto.SwcIncrementOperationListV1 SwcIncrementOperationList = 2;
+      // .proto.SwcIncrementOperationListV1 SwcIncrementOperationList = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          ptr -= 1;
-          do {
-            ptr += 1;
-            ptr = ctx->ParseMessage(_internal_add_swcincrementoperationlist(), ptr);
-            CHK_(ptr);
-            if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<18>(ptr));
+          ptr = ctx->ParseMessage(_internal_mutable_swcincrementoperationlist(), ptr);
+          CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
@@ -7539,12 +7533,11 @@ uint8_t* GetIncrementOperationResponse::_InternalSerialize(
         _Internal::metainfo(this).GetCachedSize(), target, stream);
   }
 
-  // repeated .proto.SwcIncrementOperationListV1 SwcIncrementOperationList = 2;
-  for (unsigned i = 0,
-      n = static_cast<unsigned>(this->_internal_swcincrementoperationlist_size()); i < n; i++) {
-    const auto& repfield = this->_internal_swcincrementoperationlist(i);
+  // .proto.SwcIncrementOperationListV1 SwcIncrementOperationList = 2;
+  if (this->_internal_has_swcincrementoperationlist()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(2, repfield, repfield.GetCachedSize(), target, stream);
+      InternalWriteMessage(2, _Internal::swcincrementoperationlist(this),
+        _Internal::swcincrementoperationlist(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -7563,18 +7556,18 @@ size_t GetIncrementOperationResponse::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated .proto.SwcIncrementOperationListV1 SwcIncrementOperationList = 2;
-  total_size += 1UL * this->_internal_swcincrementoperationlist_size();
-  for (const auto& msg : this->_impl_.swcincrementoperationlist_) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
-  }
-
   // .proto.ResponseMetaInfoV1 metaInfo = 1;
   if (this->_internal_has_metainfo()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.metainfo_);
+  }
+
+  // .proto.SwcIncrementOperationListV1 SwcIncrementOperationList = 2;
+  if (this->_internal_has_swcincrementoperationlist()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.swcincrementoperationlist_);
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -7595,10 +7588,13 @@ void GetIncrementOperationResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& 
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  _this->_impl_.swcincrementoperationlist_.MergeFrom(from._impl_.swcincrementoperationlist_);
   if (from._internal_has_metainfo()) {
     _this->_internal_mutable_metainfo()->::proto::ResponseMetaInfoV1::MergeFrom(
         from._internal_metainfo());
+  }
+  if (from._internal_has_swcincrementoperationlist()) {
+    _this->_internal_mutable_swcincrementoperationlist()->::proto::SwcIncrementOperationListV1::MergeFrom(
+        from._internal_swcincrementoperationlist());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -7617,8 +7613,12 @@ bool GetIncrementOperationResponse::IsInitialized() const {
 void GetIncrementOperationResponse::InternalSwap(GetIncrementOperationResponse* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  _impl_.swcincrementoperationlist_.InternalSwap(&other->_impl_.swcincrementoperationlist_);
-  swap(_impl_.metainfo_, other->_impl_.metainfo_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(GetIncrementOperationResponse, _impl_.swcincrementoperationlist_)
+      + sizeof(GetIncrementOperationResponse::_impl_.swcincrementoperationlist_)
+      - PROTOBUF_FIELD_OFFSET(GetIncrementOperationResponse, _impl_.metainfo_)>(
+          reinterpret_cast<char*>(&_impl_.metainfo_),
+          reinterpret_cast<char*>(&other->_impl_.metainfo_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata GetIncrementOperationResponse::GetMetadata() const {

@@ -1703,7 +1703,11 @@
           "$ref": "#/definitions/protoResponseMetaInfoV1"
         },
         "SwcIncrementOperationMetaInfoList": {
-          "$ref": "#/definitions/protoSwcIncrementOperationMetaInfoV1"
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/protoSwcIncrementOperationMetaInfoV1"
+          }
         }
       }
     },
@@ -1883,11 +1887,7 @@
           "$ref": "#/definitions/protoResponseMetaInfoV1"
         },
         "SwcIncrementOperationList": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "$ref": "#/definitions/protoSwcIncrementOperationListV1"
-          }
+          "$ref": "#/definitions/protoSwcIncrementOperationListV1"
         }
       }
     },
