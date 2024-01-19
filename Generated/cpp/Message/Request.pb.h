@@ -4689,9 +4689,24 @@ class GetAllSnapshotMetaInfoRequest final :
   // accessors -------------------------------------------------------
 
   enum : int {
+    kSwcNameFieldNumber = 3,
     kMetaInfoFieldNumber = 1,
     kUserVerifyInfoFieldNumber = 2,
   };
+  // string SwcName = 3;
+  void clear_swcname();
+  const std::string& swcname() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_swcname(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_swcname();
+  PROTOBUF_NODISCARD std::string* release_swcname();
+  void set_allocated_swcname(std::string* swcname);
+  private:
+  const std::string& _internal_swcname() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_swcname(const std::string& value);
+  std::string* _internal_mutable_swcname();
+  public:
+
   // .proto.RequestMetaInfoV1 metaInfo = 1;
   bool has_metainfo() const;
   private:
@@ -4736,6 +4751,7 @@ class GetAllSnapshotMetaInfoRequest final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr swcname_;
     ::proto::RequestMetaInfoV1* metainfo_;
     ::proto::UserVerifyInfoV1* userverifyinfo_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
@@ -5059,9 +5075,24 @@ class GetAllIncrementOperationMetaInfoRequest final :
   // accessors -------------------------------------------------------
 
   enum : int {
+    kSwcNameFieldNumber = 3,
     kMetaInfoFieldNumber = 1,
     kUserVerifyInfoFieldNumber = 2,
   };
+  // string SwcName = 3;
+  void clear_swcname();
+  const std::string& swcname() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_swcname(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_swcname();
+  PROTOBUF_NODISCARD std::string* release_swcname();
+  void set_allocated_swcname(std::string* swcname);
+  private:
+  const std::string& _internal_swcname() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_swcname(const std::string& value);
+  std::string* _internal_mutable_swcname();
+  public:
+
   // .proto.RequestMetaInfoV1 metaInfo = 1;
   bool has_metainfo() const;
   private:
@@ -5106,6 +5137,7 @@ class GetAllIncrementOperationMetaInfoRequest final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr swcname_;
     ::proto::RequestMetaInfoV1* metainfo_;
     ::proto::UserVerifyInfoV1* userverifyinfo_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
@@ -12943,6 +12975,56 @@ inline void GetAllSnapshotMetaInfoRequest::set_allocated_userverifyinfo(::proto:
   // @@protoc_insertion_point(field_set_allocated:proto.GetAllSnapshotMetaInfoRequest.UserVerifyInfo)
 }
 
+// string SwcName = 3;
+inline void GetAllSnapshotMetaInfoRequest::clear_swcname() {
+  _impl_.swcname_.ClearToEmpty();
+}
+inline const std::string& GetAllSnapshotMetaInfoRequest::swcname() const {
+  // @@protoc_insertion_point(field_get:proto.GetAllSnapshotMetaInfoRequest.SwcName)
+  return _internal_swcname();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void GetAllSnapshotMetaInfoRequest::set_swcname(ArgT0&& arg0, ArgT... args) {
+ 
+ _impl_.swcname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:proto.GetAllSnapshotMetaInfoRequest.SwcName)
+}
+inline std::string* GetAllSnapshotMetaInfoRequest::mutable_swcname() {
+  std::string* _s = _internal_mutable_swcname();
+  // @@protoc_insertion_point(field_mutable:proto.GetAllSnapshotMetaInfoRequest.SwcName)
+  return _s;
+}
+inline const std::string& GetAllSnapshotMetaInfoRequest::_internal_swcname() const {
+  return _impl_.swcname_.Get();
+}
+inline void GetAllSnapshotMetaInfoRequest::_internal_set_swcname(const std::string& value) {
+  
+  _impl_.swcname_.Set(value, GetArenaForAllocation());
+}
+inline std::string* GetAllSnapshotMetaInfoRequest::_internal_mutable_swcname() {
+  
+  return _impl_.swcname_.Mutable(GetArenaForAllocation());
+}
+inline std::string* GetAllSnapshotMetaInfoRequest::release_swcname() {
+  // @@protoc_insertion_point(field_release:proto.GetAllSnapshotMetaInfoRequest.SwcName)
+  return _impl_.swcname_.Release();
+}
+inline void GetAllSnapshotMetaInfoRequest::set_allocated_swcname(std::string* swcname) {
+  if (swcname != nullptr) {
+    
+  } else {
+    
+  }
+  _impl_.swcname_.SetAllocated(swcname, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.swcname_.IsDefault()) {
+    _impl_.swcname_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:proto.GetAllSnapshotMetaInfoRequest.SwcName)
+}
+
 // -------------------------------------------------------------------
 
 // GetSnapshotRequest
@@ -13339,6 +13421,56 @@ inline void GetAllIncrementOperationMetaInfoRequest::set_allocated_userverifyinf
   }
   _impl_.userverifyinfo_ = userverifyinfo;
   // @@protoc_insertion_point(field_set_allocated:proto.GetAllIncrementOperationMetaInfoRequest.UserVerifyInfo)
+}
+
+// string SwcName = 3;
+inline void GetAllIncrementOperationMetaInfoRequest::clear_swcname() {
+  _impl_.swcname_.ClearToEmpty();
+}
+inline const std::string& GetAllIncrementOperationMetaInfoRequest::swcname() const {
+  // @@protoc_insertion_point(field_get:proto.GetAllIncrementOperationMetaInfoRequest.SwcName)
+  return _internal_swcname();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void GetAllIncrementOperationMetaInfoRequest::set_swcname(ArgT0&& arg0, ArgT... args) {
+ 
+ _impl_.swcname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:proto.GetAllIncrementOperationMetaInfoRequest.SwcName)
+}
+inline std::string* GetAllIncrementOperationMetaInfoRequest::mutable_swcname() {
+  std::string* _s = _internal_mutable_swcname();
+  // @@protoc_insertion_point(field_mutable:proto.GetAllIncrementOperationMetaInfoRequest.SwcName)
+  return _s;
+}
+inline const std::string& GetAllIncrementOperationMetaInfoRequest::_internal_swcname() const {
+  return _impl_.swcname_.Get();
+}
+inline void GetAllIncrementOperationMetaInfoRequest::_internal_set_swcname(const std::string& value) {
+  
+  _impl_.swcname_.Set(value, GetArenaForAllocation());
+}
+inline std::string* GetAllIncrementOperationMetaInfoRequest::_internal_mutable_swcname() {
+  
+  return _impl_.swcname_.Mutable(GetArenaForAllocation());
+}
+inline std::string* GetAllIncrementOperationMetaInfoRequest::release_swcname() {
+  // @@protoc_insertion_point(field_release:proto.GetAllIncrementOperationMetaInfoRequest.SwcName)
+  return _impl_.swcname_.Release();
+}
+inline void GetAllIncrementOperationMetaInfoRequest::set_allocated_swcname(std::string* swcname) {
+  if (swcname != nullptr) {
+    
+  } else {
+    
+  }
+  _impl_.swcname_.SetAllocated(swcname, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.swcname_.IsDefault()) {
+    _impl_.swcname_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:proto.GetAllIncrementOperationMetaInfoRequest.SwcName)
 }
 
 // -------------------------------------------------------------------

@@ -142,6 +142,7 @@ message CreateSwcSnapshotRequest{
 message GetAllSnapshotMetaInfoRequest{
     RequestMetaInfoV1 metaInfo = 1;
     UserVerifyInfoV1 UserVerifyInfo = 2;
+    string SwcName = 3;
 }
 
 message GetSnapshotRequest{
@@ -153,6 +154,7 @@ message GetSnapshotRequest{
 message GetAllIncrementOperationMetaInfoRequest{
     RequestMetaInfoV1 metaInfo = 1;
     UserVerifyInfoV1 UserVerifyInfo = 2;
+    string SwcName = 3;
 }
 
 message GetIncrementOperationRequest{
