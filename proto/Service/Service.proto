@@ -38,7 +38,6 @@ service DBMS {
     rpc GetSwcMetaInfo(GetSwcMetaInfoRequest) returns (GetSwcMetaInfoResponse){}
     rpc GetAllSwcMetaInfo(GetAllSwcMetaInfoRequest) returns (GetAllSwcMetaInfoResponse){}
     rpc CreateSwcSnapshot(CreateSwcSnapshotRequest) returns (CreateSwcSnapshotResponse){}
-    rpc DeleteSwcSnapshot(DeleteSwcSnapshotRequest) returns (DeleteSwcSnapshotResponse){}
     rpc GetAllSnapshotMetaInfo(GetAllSnapshotMetaInfoRequest) returns (GetAllSnapshotMetaInfoResponse){}
     rpc GetSnapshot(GetSnapshotRequest) returns (GetSnapshotResponse){}
     rpc GetAllIncrementOperationMetaInfo(GetAllIncrementOperationMetaInfoRequest) returns (GetAllIncrementOperationMetaInfoResponse){}

@@ -400,38 +400,6 @@
         ]
       }
     },
-    "/proto.DBMS/DeleteSwcSnapshot": {
-      "post": {
-        "operationId": "DBMS_DeleteSwcSnapshot",
-        "responses": {
-          "200": {
-            "description": "A successful response.",
-            "schema": {
-              "$ref": "#/definitions/protoDeleteSwcSnapshotResponse"
-            }
-          },
-          "default": {
-            "description": "An unexpected error response.",
-            "schema": {
-              "$ref": "#/definitions/rpcStatus"
-            }
-          }
-        },
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "schema": {
-              "$ref": "#/definitions/protoDeleteSwcSnapshotRequest"
-            }
-          }
-        ],
-        "tags": [
-          "DBMS"
-        ]
-      }
-    },
     "/proto.DBMS/DeleteUser": {
       "post": {
         "operationId": "DBMS_DeleteUser",
@@ -1666,31 +1634,6 @@
         },
         "SwcInfo": {
           "$ref": "#/definitions/protoSwcMetaInfoV1"
-        }
-      }
-    },
-    "protoDeleteSwcSnapshotRequest": {
-      "type": "object",
-      "properties": {
-        "metaInfo": {
-          "$ref": "#/definitions/protoRequestMetaInfoV1"
-        },
-        "UserVerifyInfo": {
-          "$ref": "#/definitions/protoUserVerifyInfoV1"
-        },
-        "SwcName": {
-          "type": "string"
-        },
-        "SwcSnapshotCollectionName": {
-          "type": "string"
-        }
-      }
-    },
-    "protoDeleteSwcSnapshotResponse": {
-      "type": "object",
-      "properties": {
-        "metaInfo": {
-          "$ref": "#/definitions/protoResponseMetaInfoV1"
         }
       }
     },

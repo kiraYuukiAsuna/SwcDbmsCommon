@@ -360,22 +360,6 @@ struct CreateSwcSnapshotRequestDefaultTypeInternal {
   };
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CreateSwcSnapshotRequestDefaultTypeInternal _CreateSwcSnapshotRequest_default_instance_;
-PROTOBUF_CONSTEXPR DeleteSwcSnapshotRequest::DeleteSwcSnapshotRequest(
-    ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.swcname_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.swcsnapshotcollectionname_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.metainfo_)*/nullptr
-  , /*decltype(_impl_.userverifyinfo_)*/nullptr
-  , /*decltype(_impl_._cached_size_)*/{}} {}
-struct DeleteSwcSnapshotRequestDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR DeleteSwcSnapshotRequestDefaultTypeInternal()
-      : _instance(::_pbi::ConstantInitialized{}) {}
-  ~DeleteSwcSnapshotRequestDefaultTypeInternal() {}
-  union {
-    DeleteSwcSnapshotRequest _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 DeleteSwcSnapshotRequestDefaultTypeInternal _DeleteSwcSnapshotRequest_default_instance_;
 PROTOBUF_CONSTEXPR GetAllSnapshotMetaInfoRequest::GetAllSnapshotMetaInfoRequest(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_.metainfo_)*/nullptr
@@ -622,7 +606,7 @@ struct GetAllDailyStatisticsRequestDefaultTypeInternal {
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetAllDailyStatisticsRequestDefaultTypeInternal _GetAllDailyStatisticsRequest_default_instance_;
 }  // namespace proto
-static ::_pb::Metadata file_level_metadata_Message_2fRequest_2eproto[40];
+static ::_pb::Metadata file_level_metadata_Message_2fRequest_2eproto[39];
 static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_Message_2fRequest_2eproto = nullptr;
 static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_Message_2fRequest_2eproto = nullptr;
 
@@ -829,16 +813,6 @@ const uint32_t TableStruct_Message_2fRequest_2eproto::offsets[] PROTOBUF_SECTION
   PROTOBUF_FIELD_OFFSET(::proto::CreateSwcSnapshotRequest, _impl_.userverifyinfo_),
   PROTOBUF_FIELD_OFFSET(::proto::CreateSwcSnapshotRequest, _impl_.swcname_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::proto::DeleteSwcSnapshotRequest, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::proto::DeleteSwcSnapshotRequest, _impl_.metainfo_),
-  PROTOBUF_FIELD_OFFSET(::proto::DeleteSwcSnapshotRequest, _impl_.userverifyinfo_),
-  PROTOBUF_FIELD_OFFSET(::proto::DeleteSwcSnapshotRequest, _impl_.swcname_),
-  PROTOBUF_FIELD_OFFSET(::proto::DeleteSwcSnapshotRequest, _impl_.swcsnapshotcollectionname_),
-  ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::proto::GetAllSnapshotMetaInfoRequest, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
@@ -1012,23 +986,22 @@ static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protode
   { 175, -1, -1, sizeof(::proto::GetSwcMetaInfoRequest)},
   { 184, -1, -1, sizeof(::proto::GetAllSwcMetaInfoRequest)},
   { 192, -1, -1, sizeof(::proto::CreateSwcSnapshotRequest)},
-  { 201, -1, -1, sizeof(::proto::DeleteSwcSnapshotRequest)},
-  { 211, -1, -1, sizeof(::proto::GetAllSnapshotMetaInfoRequest)},
-  { 219, -1, -1, sizeof(::proto::GetSnapshotRequest)},
-  { 228, -1, -1, sizeof(::proto::GetAllIncrementOperationMetaInfoRequest)},
-  { 236, -1, -1, sizeof(::proto::GetIncrementOperationRequest)},
-  { 245, -1, -1, sizeof(::proto::CreateSwcNodeDataRequest)},
-  { 255, -1, -1, sizeof(::proto::DeleteSwcNodeDataRequest)},
-  { 265, -1, -1, sizeof(::proto::UpdateSwcNodeDataRequest)},
-  { 275, -1, -1, sizeof(::proto::GetSwcNodeDataRequest)},
-  { 285, -1, -1, sizeof(::proto::GetSwcFullNodeDataRequest)},
-  { 294, -1, -1, sizeof(::proto::GetSwcNodeDataListByTimeAndUserRequest)},
-  { 306, -1, -1, sizeof(::proto::BackupFullDatabaseRequest)},
-  { 316, -1, -1, sizeof(::proto::CreateDailyStatisticsRequest)},
-  { 325, -1, -1, sizeof(::proto::DeleteDailyStatisticsRequest)},
-  { 334, -1, -1, sizeof(::proto::UpdateDailyStatisticsRequest)},
-  { 343, -1, -1, sizeof(::proto::GetDailyStatisticsRequest)},
-  { 352, -1, -1, sizeof(::proto::GetAllDailyStatisticsRequest)},
+  { 201, -1, -1, sizeof(::proto::GetAllSnapshotMetaInfoRequest)},
+  { 209, -1, -1, sizeof(::proto::GetSnapshotRequest)},
+  { 218, -1, -1, sizeof(::proto::GetAllIncrementOperationMetaInfoRequest)},
+  { 226, -1, -1, sizeof(::proto::GetIncrementOperationRequest)},
+  { 235, -1, -1, sizeof(::proto::CreateSwcNodeDataRequest)},
+  { 245, -1, -1, sizeof(::proto::DeleteSwcNodeDataRequest)},
+  { 255, -1, -1, sizeof(::proto::UpdateSwcNodeDataRequest)},
+  { 265, -1, -1, sizeof(::proto::GetSwcNodeDataRequest)},
+  { 275, -1, -1, sizeof(::proto::GetSwcFullNodeDataRequest)},
+  { 284, -1, -1, sizeof(::proto::GetSwcNodeDataListByTimeAndUserRequest)},
+  { 296, -1, -1, sizeof(::proto::BackupFullDatabaseRequest)},
+  { 306, -1, -1, sizeof(::proto::CreateDailyStatisticsRequest)},
+  { 315, -1, -1, sizeof(::proto::DeleteDailyStatisticsRequest)},
+  { 324, -1, -1, sizeof(::proto::UpdateDailyStatisticsRequest)},
+  { 333, -1, -1, sizeof(::proto::GetDailyStatisticsRequest)},
+  { 342, -1, -1, sizeof(::proto::GetAllDailyStatisticsRequest)},
 };
 
 static const ::_pb::Message* const file_default_instances[] = {
@@ -1055,7 +1028,6 @@ static const ::_pb::Message* const file_default_instances[] = {
   &::proto::_GetSwcMetaInfoRequest_default_instance_._instance,
   &::proto::_GetAllSwcMetaInfoRequest_default_instance_._instance,
   &::proto::_CreateSwcSnapshotRequest_default_instance_._instance,
-  &::proto::_DeleteSwcSnapshotRequest_default_instance_._instance,
   &::proto::_GetAllSnapshotMetaInfoRequest_default_instance_._instance,
   &::proto::_GetSnapshotRequest_default_instance_._instance,
   &::proto::_GetAllIncrementOperationMetaInfoRequest_default_instance_._instance,
@@ -1156,80 +1128,76 @@ const char descriptor_table_protodef_Message_2fRequest_2eproto[] PROTOBUF_SECTIO
   "V1\"\210\001\n\030CreateSwcSnapshotRequest\022*\n\010metaI"
   "nfo\030\001 \001(\0132\030.proto.RequestMetaInfoV1\022/\n\016U"
   "serVerifyInfo\030\002 \001(\0132\027.proto.UserVerifyIn"
-  "foV1\022\017\n\007SwcName\030\003 \001(\t\"\253\001\n\030DeleteSwcSnaps"
+  "foV1\022\017\n\007SwcName\030\003 \001(\t\"|\n\035GetAllSnapshotM"
+  "etaInfoRequest\022*\n\010metaInfo\030\001 \001(\0132\030.proto"
+  ".RequestMetaInfoV1\022/\n\016UserVerifyInfo\030\002 \001"
+  "(\0132\027.proto.UserVerifyInfoV1\"\224\001\n\022GetSnaps"
   "hotRequest\022*\n\010metaInfo\030\001 \001(\0132\030.proto.Req"
   "uestMetaInfoV1\022/\n\016UserVerifyInfo\030\002 \001(\0132\027"
-  ".proto.UserVerifyInfoV1\022\017\n\007SwcName\030\003 \001(\t"
-  "\022!\n\031SwcSnapshotCollectionName\030\004 \001(\t\"|\n\035G"
-  "etAllSnapshotMetaInfoRequest\022*\n\010metaInfo"
+  ".proto.UserVerifyInfoV1\022!\n\031SwcSnapshotCo"
+  "llectionName\030\003 \001(\t\"\206\001\n\'GetAllIncrementOp"
+  "erationMetaInfoRequest\022*\n\010metaInfo\030\001 \001(\013"
+  "2\030.proto.RequestMetaInfoV1\022/\n\016UserVerify"
+  "Info\030\002 \001(\0132\027.proto.UserVerifyInfoV1\"\245\001\n\034"
+  "GetIncrementOperationRequest\022*\n\010metaInfo"
   "\030\001 \001(\0132\030.proto.RequestMetaInfoV1\022/\n\016User"
   "VerifyInfo\030\002 \001(\0132\027.proto.UserVerifyInfoV"
-  "1\"\224\001\n\022GetSnapshotRequest\022*\n\010metaInfo\030\001 \001"
-  "(\0132\030.proto.RequestMetaInfoV1\022/\n\016UserVeri"
-  "fyInfo\030\002 \001(\0132\027.proto.UserVerifyInfoV1\022!\n"
-  "\031SwcSnapshotCollectionName\030\003 \001(\t\"\206\001\n\'Get"
-  "AllIncrementOperationMetaInfoRequest\022*\n\010"
-  "metaInfo\030\001 \001(\0132\030.proto.RequestMetaInfoV1"
-  "\022/\n\016UserVerifyInfo\030\002 \001(\0132\027.proto.UserVer"
-  "ifyInfoV1\"\245\001\n\034GetIncrementOperationReque"
-  "st\022*\n\010metaInfo\030\001 \001(\0132\030.proto.RequestMeta"
-  "InfoV1\022/\n\016UserVerifyInfo\030\002 \001(\0132\027.proto.U"
-  "serVerifyInfoV1\022(\n IncrementOperationCol"
-  "lectionName\030\003 \001(\t\"\253\001\n\030CreateSwcNodeDataR"
+  "1\022(\n IncrementOperationCollectionName\030\003 "
+  "\001(\t\"\253\001\n\030CreateSwcNodeDataRequest\022*\n\010meta"
+  "Info\030\001 \001(\0132\030.proto.RequestMetaInfoV1\022/\n\016"
+  "UserVerifyInfo\030\002 \001(\0132\027.proto.UserVerifyI"
+  "nfoV1\022\017\n\007SwcName\030\003 \001(\t\022!\n\007SwcData\030\004 \001(\0132"
+  "\020.proto.SwcDataV1\"\253\001\n\030DeleteSwcNodeDataR"
   "equest\022*\n\010metaInfo\030\001 \001(\0132\030.proto.Request"
   "MetaInfoV1\022/\n\016UserVerifyInfo\030\002 \001(\0132\027.pro"
   "to.UserVerifyInfoV1\022\017\n\007SwcName\030\003 \001(\t\022!\n\007"
-  "SwcData\030\004 \001(\0132\020.proto.SwcDataV1\"\253\001\n\030Dele"
+  "SwcData\030\004 \001(\0132\020.proto.SwcDataV1\"\263\001\n\030Upda"
   "teSwcNodeDataRequest\022*\n\010metaInfo\030\001 \001(\0132\030"
   ".proto.RequestMetaInfoV1\022/\n\016UserVerifyIn"
   "fo\030\002 \001(\0132\027.proto.UserVerifyInfoV1\022\017\n\007Swc"
-  "Name\030\003 \001(\t\022!\n\007SwcData\030\004 \001(\0132\020.proto.SwcD"
-  "ataV1\"\263\001\n\030UpdateSwcNodeDataRequest\022*\n\010me"
-  "taInfo\030\001 \001(\0132\030.proto.RequestMetaInfoV1\022/"
-  "\n\016UserVerifyInfo\030\002 \001(\0132\027.proto.UserVerif"
-  "yInfoV1\022\017\n\007SwcName\030\003 \001(\t\022)\n\013SwcNodeData\030"
-  "\004 \001(\0132\024.proto.SwcNodeDataV1\"\254\001\n\025GetSwcNo"
-  "deDataRequest\022*\n\010metaInfo\030\001 \001(\0132\030.proto."
-  "RequestMetaInfoV1\022/\n\016UserVerifyInfo\030\002 \001("
-  "\0132\027.proto.UserVerifyInfoV1\022\017\n\007SwcName\030\003 "
-  "\001(\t\022%\n\013SwcNodeData\030\004 \001(\0132\020.proto.SwcData"
-  "V1\"\211\001\n\031GetSwcFullNodeDataRequest\022*\n\010meta"
-  "Info\030\001 \001(\0132\030.proto.RequestMetaInfoV1\022/\n\016"
-  "UserVerifyInfo\030\002 \001(\0132\027.proto.UserVerifyI"
-  "nfoV1\022\017\n\007SwcName\030\003 \001(\t\"\204\002\n&GetSwcNodeDat"
-  "aListByTimeAndUserRequest\022*\n\010metaInfo\030\001 "
-  "\001(\0132\030.proto.RequestMetaInfoV1\022/\n\016UserVer"
-  "ifyInfo\030\002 \001(\0132\027.proto.UserVerifyInfoV1\022\017"
-  "\n\007SwcName\030\003 \001(\t\022-\n\tStartTime\030\004 \001(\0132\032.goo"
-  "gle.protobuf.Timestamp\022+\n\007EndTime\030\005 \001(\0132"
-  "\032.google.protobuf.Timestamp\022\020\n\010UserName\030"
-  "\006 \001(\t\"\304\001\n\031BackupFullDatabaseRequest\022*\n\010m"
-  "etaInfo\030\001 \001(\0132\030.proto.RequestMetaInfoV1\022"
-  "/\n\016UserVerifyInfo\030\002 \001(\0132\027.proto.UserVeri"
-  "fyInfoV1\022\025\n\rInstantBackup\030\003 \001(\010\0223\n\017Delay"
-  "BackupTime\030\004 \001(\0132\032.google.protobuf.Times"
-  "tamp\"\272\001\n\034CreateDailyStatisticsRequest\022*\n"
-  "\010metaInfo\030\001 \001(\0132\030.proto.RequestMetaInfoV"
-  "1\022/\n\016UserVerifyInfo\030\002 \001(\0132\027.proto.UserVe"
-  "rifyInfoV1\022=\n\023DailyStatisticsInfo\030\003 \001(\0132"
-  " .proto.DailyStatisticsMetaInfoV1\"\230\001\n\034De"
-  "leteDailyStatisticsRequest\022*\n\010metaInfo\030\001"
-  " \001(\0132\030.proto.RequestMetaInfoV1\022/\n\016UserVe"
-  "rifyInfo\030\002 \001(\0132\027.proto.UserVerifyInfoV1\022"
-  "\033\n\023DailyStatisticsName\030\003 \001(\t\"\272\001\n\034UpdateD"
-  "ailyStatisticsRequest\022*\n\010metaInfo\030\001 \001(\0132"
+  "Name\030\003 \001(\t\022)\n\013SwcNodeData\030\004 \001(\0132\024.proto."
+  "SwcNodeDataV1\"\254\001\n\025GetSwcNodeDataRequest\022"
+  "*\n\010metaInfo\030\001 \001(\0132\030.proto.RequestMetaInf"
+  "oV1\022/\n\016UserVerifyInfo\030\002 \001(\0132\027.proto.User"
+  "VerifyInfoV1\022\017\n\007SwcName\030\003 \001(\t\022%\n\013SwcNode"
+  "Data\030\004 \001(\0132\020.proto.SwcDataV1\"\211\001\n\031GetSwcF"
+  "ullNodeDataRequest\022*\n\010metaInfo\030\001 \001(\0132\030.p"
+  "roto.RequestMetaInfoV1\022/\n\016UserVerifyInfo"
+  "\030\002 \001(\0132\027.proto.UserVerifyInfoV1\022\017\n\007SwcNa"
+  "me\030\003 \001(\t\"\204\002\n&GetSwcNodeDataListByTimeAnd"
+  "UserRequest\022*\n\010metaInfo\030\001 \001(\0132\030.proto.Re"
+  "questMetaInfoV1\022/\n\016UserVerifyInfo\030\002 \001(\0132"
+  "\027.proto.UserVerifyInfoV1\022\017\n\007SwcName\030\003 \001("
+  "\t\022-\n\tStartTime\030\004 \001(\0132\032.google.protobuf.T"
+  "imestamp\022+\n\007EndTime\030\005 \001(\0132\032.google.proto"
+  "buf.Timestamp\022\020\n\010UserName\030\006 \001(\t\"\304\001\n\031Back"
+  "upFullDatabaseRequest\022*\n\010metaInfo\030\001 \001(\0132"
   "\030.proto.RequestMetaInfoV1\022/\n\016UserVerifyI"
-  "nfo\030\002 \001(\0132\027.proto.UserVerifyInfoV1\022=\n\023Da"
-  "ilyStatisticsInfo\030\003 \001(\0132 .proto.DailySta"
-  "tisticsMetaInfoV1\"\225\001\n\031GetDailyStatistics"
+  "nfo\030\002 \001(\0132\027.proto.UserVerifyInfoV1\022\025\n\rIn"
+  "stantBackup\030\003 \001(\010\0223\n\017DelayBackupTime\030\004 \001"
+  "(\0132\032.google.protobuf.Timestamp\"\272\001\n\034Creat"
+  "eDailyStatisticsRequest\022*\n\010metaInfo\030\001 \001("
+  "\0132\030.proto.RequestMetaInfoV1\022/\n\016UserVerif"
+  "yInfo\030\002 \001(\0132\027.proto.UserVerifyInfoV1\022=\n\023"
+  "DailyStatisticsInfo\030\003 \001(\0132 .proto.DailyS"
+  "tatisticsMetaInfoV1\"\230\001\n\034DeleteDailyStati"
+  "sticsRequest\022*\n\010metaInfo\030\001 \001(\0132\030.proto.R"
+  "equestMetaInfoV1\022/\n\016UserVerifyInfo\030\002 \001(\013"
+  "2\027.proto.UserVerifyInfoV1\022\033\n\023DailyStatis"
+  "ticsName\030\003 \001(\t\"\272\001\n\034UpdateDailyStatistics"
   "Request\022*\n\010metaInfo\030\001 \001(\0132\030.proto.Reques"
   "tMetaInfoV1\022/\n\016UserVerifyInfo\030\002 \001(\0132\027.pr"
-  "oto.UserVerifyInfoV1\022\033\n\023DailyStatisticsN"
-  "ame\030\003 \001(\t\"{\n\034GetAllDailyStatisticsReques"
-  "t\022*\n\010metaInfo\030\001 \001(\0132\030.proto.RequestMetaI"
-  "nfoV1\022/\n\016UserVerifyInfo\030\002 \001(\0132\027.proto.Us"
-  "erVerifyInfoV1B/Z-DBMS/SwcDbmsCommon/Gen"
-  "erated/go/proto/requestP\000b\006proto3"
+  "oto.UserVerifyInfoV1\022=\n\023DailyStatisticsI"
+  "nfo\030\003 \001(\0132 .proto.DailyStatisticsMetaInf"
+  "oV1\"\225\001\n\031GetDailyStatisticsRequest\022*\n\010met"
+  "aInfo\030\001 \001(\0132\030.proto.RequestMetaInfoV1\022/\n"
+  "\016UserVerifyInfo\030\002 \001(\0132\027.proto.UserVerify"
+  "InfoV1\022\033\n\023DailyStatisticsName\030\003 \001(\t\"{\n\034G"
+  "etAllDailyStatisticsRequest\022*\n\010metaInfo\030"
+  "\001 \001(\0132\030.proto.RequestMetaInfoV1\022/\n\016UserV"
+  "erifyInfo\030\002 \001(\0132\027.proto.UserVerifyInfoV1"
+  "B/Z-DBMS/SwcDbmsCommon/Generated/go/prot"
+  "o/requestP\000b\006proto3"
   ;
 static const ::_pbi::DescriptorTable* const descriptor_table_Message_2fRequest_2eproto_deps[2] = {
   &::descriptor_table_Message_2fMessage_2eproto,
@@ -1237,9 +1205,9 @@ static const ::_pbi::DescriptorTable* const descriptor_table_Message_2fRequest_2
 };
 static ::_pbi::once_flag descriptor_table_Message_2fRequest_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_Message_2fRequest_2eproto = {
-    false, false, 6193, descriptor_table_protodef_Message_2fRequest_2eproto,
+    false, false, 6019, descriptor_table_protodef_Message_2fRequest_2eproto,
     "Message/Request.proto",
-    &descriptor_table_Message_2fRequest_2eproto_once, descriptor_table_Message_2fRequest_2eproto_deps, 2, 40,
+    &descriptor_table_Message_2fRequest_2eproto_once, descriptor_table_Message_2fRequest_2eproto_deps, 2, 39,
     schemas, file_default_instances, TableStruct_Message_2fRequest_2eproto::offsets,
     file_level_metadata_Message_2fRequest_2eproto, file_level_enum_descriptors_Message_2fRequest_2eproto,
     file_level_service_descriptors_Message_2fRequest_2eproto,
@@ -7851,359 +7819,6 @@ void CreateSwcSnapshotRequest::InternalSwap(CreateSwcSnapshotRequest* other) {
 
 // ===================================================================
 
-class DeleteSwcSnapshotRequest::_Internal {
- public:
-  static const ::proto::RequestMetaInfoV1& metainfo(const DeleteSwcSnapshotRequest* msg);
-  static const ::proto::UserVerifyInfoV1& userverifyinfo(const DeleteSwcSnapshotRequest* msg);
-};
-
-const ::proto::RequestMetaInfoV1&
-DeleteSwcSnapshotRequest::_Internal::metainfo(const DeleteSwcSnapshotRequest* msg) {
-  return *msg->_impl_.metainfo_;
-}
-const ::proto::UserVerifyInfoV1&
-DeleteSwcSnapshotRequest::_Internal::userverifyinfo(const DeleteSwcSnapshotRequest* msg) {
-  return *msg->_impl_.userverifyinfo_;
-}
-void DeleteSwcSnapshotRequest::clear_metainfo() {
-  if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
-    delete _impl_.metainfo_;
-  }
-  _impl_.metainfo_ = nullptr;
-}
-void DeleteSwcSnapshotRequest::clear_userverifyinfo() {
-  if (GetArenaForAllocation() == nullptr && _impl_.userverifyinfo_ != nullptr) {
-    delete _impl_.userverifyinfo_;
-  }
-  _impl_.userverifyinfo_ = nullptr;
-}
-DeleteSwcSnapshotRequest::DeleteSwcSnapshotRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
-                         bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
-  SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:proto.DeleteSwcSnapshotRequest)
-}
-DeleteSwcSnapshotRequest::DeleteSwcSnapshotRequest(const DeleteSwcSnapshotRequest& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
-  DeleteSwcSnapshotRequest* const _this = this; (void)_this;
-  new (&_impl_) Impl_{
-      decltype(_impl_.swcname_){}
-    , decltype(_impl_.swcsnapshotcollectionname_){}
-    , decltype(_impl_.metainfo_){nullptr}
-    , decltype(_impl_.userverifyinfo_){nullptr}
-    , /*decltype(_impl_._cached_size_)*/{}};
-
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.swcname_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.swcname_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_swcname().empty()) {
-    _this->_impl_.swcname_.Set(from._internal_swcname(), 
-      _this->GetArenaForAllocation());
-  }
-  _impl_.swcsnapshotcollectionname_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.swcsnapshotcollectionname_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_swcsnapshotcollectionname().empty()) {
-    _this->_impl_.swcsnapshotcollectionname_.Set(from._internal_swcsnapshotcollectionname(), 
-      _this->GetArenaForAllocation());
-  }
-  if (from._internal_has_metainfo()) {
-    _this->_impl_.metainfo_ = new ::proto::RequestMetaInfoV1(*from._impl_.metainfo_);
-  }
-  if (from._internal_has_userverifyinfo()) {
-    _this->_impl_.userverifyinfo_ = new ::proto::UserVerifyInfoV1(*from._impl_.userverifyinfo_);
-  }
-  // @@protoc_insertion_point(copy_constructor:proto.DeleteSwcSnapshotRequest)
-}
-
-inline void DeleteSwcSnapshotRequest::SharedCtor(
-    ::_pb::Arena* arena, bool is_message_owned) {
-  (void)arena;
-  (void)is_message_owned;
-  new (&_impl_) Impl_{
-      decltype(_impl_.swcname_){}
-    , decltype(_impl_.swcsnapshotcollectionname_){}
-    , decltype(_impl_.metainfo_){nullptr}
-    , decltype(_impl_.userverifyinfo_){nullptr}
-    , /*decltype(_impl_._cached_size_)*/{}
-  };
-  _impl_.swcname_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.swcname_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.swcsnapshotcollectionname_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.swcsnapshotcollectionname_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-}
-
-DeleteSwcSnapshotRequest::~DeleteSwcSnapshotRequest() {
-  // @@protoc_insertion_point(destructor:proto.DeleteSwcSnapshotRequest)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
-  (void)arena;
-    return;
-  }
-  SharedDtor();
-}
-
-inline void DeleteSwcSnapshotRequest::SharedDtor() {
-  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.swcname_.Destroy();
-  _impl_.swcsnapshotcollectionname_.Destroy();
-  if (this != internal_default_instance()) delete _impl_.metainfo_;
-  if (this != internal_default_instance()) delete _impl_.userverifyinfo_;
-}
-
-void DeleteSwcSnapshotRequest::SetCachedSize(int size) const {
-  _impl_._cached_size_.Set(size);
-}
-
-void DeleteSwcSnapshotRequest::Clear() {
-// @@protoc_insertion_point(message_clear_start:proto.DeleteSwcSnapshotRequest)
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  _impl_.swcname_.ClearToEmpty();
-  _impl_.swcsnapshotcollectionname_.ClearToEmpty();
-  if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
-    delete _impl_.metainfo_;
-  }
-  _impl_.metainfo_ = nullptr;
-  if (GetArenaForAllocation() == nullptr && _impl_.userverifyinfo_ != nullptr) {
-    delete _impl_.userverifyinfo_;
-  }
-  _impl_.userverifyinfo_ = nullptr;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
-}
-
-const char* DeleteSwcSnapshotRequest::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    uint32_t tag;
-    ptr = ::_pbi::ReadTag(ptr, &tag);
-    switch (tag >> 3) {
-      // .proto.RequestMetaInfoV1 metaInfo = 1;
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_metainfo(), ptr);
-          CHK_(ptr);
-        } else
-          goto handle_unusual;
-        continue;
-      // .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_userverifyinfo(), ptr);
-          CHK_(ptr);
-        } else
-          goto handle_unusual;
-        continue;
-      // string SwcName = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
-          auto str = _internal_mutable_swcname();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "proto.DeleteSwcSnapshotRequest.SwcName"));
-        } else
-          goto handle_unusual;
-        continue;
-      // string SwcSnapshotCollectionName = 4;
-      case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
-          auto str = _internal_mutable_swcsnapshotcollectionname();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "proto.DeleteSwcSnapshotRequest.SwcSnapshotCollectionName"));
-        } else
-          goto handle_unusual;
-        continue;
-      default:
-        goto handle_unusual;
-    }  // switch
-  handle_unusual:
-    if ((tag == 0) || ((tag & 7) == 4)) {
-      CHK_(ptr);
-      ctx->SetLastTag(tag);
-      goto message_done;
-    }
-    ptr = UnknownFieldParse(
-        tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-        ptr, ctx);
-    CHK_(ptr != nullptr);
-  }  // while
-message_done:
-  return ptr;
-failure:
-  ptr = nullptr;
-  goto message_done;
-#undef CHK_
-}
-
-uint8_t* DeleteSwcSnapshotRequest::_InternalSerialize(
-    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:proto.DeleteSwcSnapshotRequest)
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .proto.RequestMetaInfoV1 metaInfo = 1;
-  if (this->_internal_has_metainfo()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(1, _Internal::metainfo(this),
-        _Internal::metainfo(this).GetCachedSize(), target, stream);
-  }
-
-  // .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
-  if (this->_internal_has_userverifyinfo()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(2, _Internal::userverifyinfo(this),
-        _Internal::userverifyinfo(this).GetCachedSize(), target, stream);
-  }
-
-  // string SwcName = 3;
-  if (!this->_internal_swcname().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_swcname().data(), static_cast<int>(this->_internal_swcname().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "proto.DeleteSwcSnapshotRequest.SwcName");
-    target = stream->WriteStringMaybeAliased(
-        3, this->_internal_swcname(), target);
-  }
-
-  // string SwcSnapshotCollectionName = 4;
-  if (!this->_internal_swcsnapshotcollectionname().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_swcsnapshotcollectionname().data(), static_cast<int>(this->_internal_swcsnapshotcollectionname().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "proto.DeleteSwcSnapshotRequest.SwcSnapshotCollectionName");
-    target = stream->WriteStringMaybeAliased(
-        4, this->_internal_swcsnapshotcollectionname(), target);
-  }
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:proto.DeleteSwcSnapshotRequest)
-  return target;
-}
-
-size_t DeleteSwcSnapshotRequest::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:proto.DeleteSwcSnapshotRequest)
-  size_t total_size = 0;
-
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // string SwcName = 3;
-  if (!this->_internal_swcname().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_swcname());
-  }
-
-  // string SwcSnapshotCollectionName = 4;
-  if (!this->_internal_swcsnapshotcollectionname().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_swcsnapshotcollectionname());
-  }
-
-  // .proto.RequestMetaInfoV1 metaInfo = 1;
-  if (this->_internal_has_metainfo()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.metainfo_);
-  }
-
-  // .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
-  if (this->_internal_has_userverifyinfo()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.userverifyinfo_);
-  }
-
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
-}
-
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData DeleteSwcSnapshotRequest::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    DeleteSwcSnapshotRequest::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*DeleteSwcSnapshotRequest::GetClassData() const { return &_class_data_; }
-
-
-void DeleteSwcSnapshotRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<DeleteSwcSnapshotRequest*>(&to_msg);
-  auto& from = static_cast<const DeleteSwcSnapshotRequest&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:proto.DeleteSwcSnapshotRequest)
-  GOOGLE_DCHECK_NE(&from, _this);
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  if (!from._internal_swcname().empty()) {
-    _this->_internal_set_swcname(from._internal_swcname());
-  }
-  if (!from._internal_swcsnapshotcollectionname().empty()) {
-    _this->_internal_set_swcsnapshotcollectionname(from._internal_swcsnapshotcollectionname());
-  }
-  if (from._internal_has_metainfo()) {
-    _this->_internal_mutable_metainfo()->::proto::RequestMetaInfoV1::MergeFrom(
-        from._internal_metainfo());
-  }
-  if (from._internal_has_userverifyinfo()) {
-    _this->_internal_mutable_userverifyinfo()->::proto::UserVerifyInfoV1::MergeFrom(
-        from._internal_userverifyinfo());
-  }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-}
-
-void DeleteSwcSnapshotRequest::CopyFrom(const DeleteSwcSnapshotRequest& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:proto.DeleteSwcSnapshotRequest)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool DeleteSwcSnapshotRequest::IsInitialized() const {
-  return true;
-}
-
-void DeleteSwcSnapshotRequest::InternalSwap(DeleteSwcSnapshotRequest* other) {
-  using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
-  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.swcname_, lhs_arena,
-      &other->_impl_.swcname_, rhs_arena
-  );
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.swcsnapshotcollectionname_, lhs_arena,
-      &other->_impl_.swcsnapshotcollectionname_, rhs_arena
-  );
-  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(DeleteSwcSnapshotRequest, _impl_.userverifyinfo_)
-      + sizeof(DeleteSwcSnapshotRequest::_impl_.userverifyinfo_)
-      - PROTOBUF_FIELD_OFFSET(DeleteSwcSnapshotRequest, _impl_.metainfo_)>(
-          reinterpret_cast<char*>(&_impl_.metainfo_),
-          reinterpret_cast<char*>(&other->_impl_.metainfo_));
-}
-
-::PROTOBUF_NAMESPACE_ID::Metadata DeleteSwcSnapshotRequest::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_Message_2fRequest_2eproto_getter, &descriptor_table_Message_2fRequest_2eproto_once,
-      file_level_metadata_Message_2fRequest_2eproto[23]);
-}
-
-// ===================================================================
-
 class GetAllSnapshotMetaInfoRequest::_Internal {
  public:
   static const ::proto::RequestMetaInfoV1& metainfo(const GetAllSnapshotMetaInfoRequest* msg);
@@ -8450,7 +8065,7 @@ void GetAllSnapshotMetaInfoRequest::InternalSwap(GetAllSnapshotMetaInfoRequest* 
 ::PROTOBUF_NAMESPACE_ID::Metadata GetAllSnapshotMetaInfoRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fRequest_2eproto_getter, &descriptor_table_Message_2fRequest_2eproto_once,
-      file_level_metadata_Message_2fRequest_2eproto[24]);
+      file_level_metadata_Message_2fRequest_2eproto[23]);
 }
 
 // ===================================================================
@@ -8753,7 +8368,7 @@ void GetSnapshotRequest::InternalSwap(GetSnapshotRequest* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata GetSnapshotRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fRequest_2eproto_getter, &descriptor_table_Message_2fRequest_2eproto_once,
-      file_level_metadata_Message_2fRequest_2eproto[25]);
+      file_level_metadata_Message_2fRequest_2eproto[24]);
 }
 
 // ===================================================================
@@ -9004,7 +8619,7 @@ void GetAllIncrementOperationMetaInfoRequest::InternalSwap(GetAllIncrementOperat
 ::PROTOBUF_NAMESPACE_ID::Metadata GetAllIncrementOperationMetaInfoRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fRequest_2eproto_getter, &descriptor_table_Message_2fRequest_2eproto_once,
-      file_level_metadata_Message_2fRequest_2eproto[26]);
+      file_level_metadata_Message_2fRequest_2eproto[25]);
 }
 
 // ===================================================================
@@ -9307,7 +8922,7 @@ void GetIncrementOperationRequest::InternalSwap(GetIncrementOperationRequest* ot
 ::PROTOBUF_NAMESPACE_ID::Metadata GetIncrementOperationRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fRequest_2eproto_getter, &descriptor_table_Message_2fRequest_2eproto_once,
-      file_level_metadata_Message_2fRequest_2eproto[27]);
+      file_level_metadata_Message_2fRequest_2eproto[26]);
 }
 
 // ===================================================================
@@ -9657,7 +9272,7 @@ void CreateSwcNodeDataRequest::InternalSwap(CreateSwcNodeDataRequest* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata CreateSwcNodeDataRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fRequest_2eproto_getter, &descriptor_table_Message_2fRequest_2eproto_once,
-      file_level_metadata_Message_2fRequest_2eproto[28]);
+      file_level_metadata_Message_2fRequest_2eproto[27]);
 }
 
 // ===================================================================
@@ -10007,7 +9622,7 @@ void DeleteSwcNodeDataRequest::InternalSwap(DeleteSwcNodeDataRequest* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata DeleteSwcNodeDataRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fRequest_2eproto_getter, &descriptor_table_Message_2fRequest_2eproto_once,
-      file_level_metadata_Message_2fRequest_2eproto[29]);
+      file_level_metadata_Message_2fRequest_2eproto[28]);
 }
 
 // ===================================================================
@@ -10357,7 +9972,7 @@ void UpdateSwcNodeDataRequest::InternalSwap(UpdateSwcNodeDataRequest* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata UpdateSwcNodeDataRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fRequest_2eproto_getter, &descriptor_table_Message_2fRequest_2eproto_once,
-      file_level_metadata_Message_2fRequest_2eproto[30]);
+      file_level_metadata_Message_2fRequest_2eproto[29]);
 }
 
 // ===================================================================
@@ -10707,7 +10322,7 @@ void GetSwcNodeDataRequest::InternalSwap(GetSwcNodeDataRequest* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata GetSwcNodeDataRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fRequest_2eproto_getter, &descriptor_table_Message_2fRequest_2eproto_once,
-      file_level_metadata_Message_2fRequest_2eproto[31]);
+      file_level_metadata_Message_2fRequest_2eproto[30]);
 }
 
 // ===================================================================
@@ -11010,7 +10625,7 @@ void GetSwcFullNodeDataRequest::InternalSwap(GetSwcFullNodeDataRequest* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata GetSwcFullNodeDataRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fRequest_2eproto_getter, &descriptor_table_Message_2fRequest_2eproto_once,
-      file_level_metadata_Message_2fRequest_2eproto[32]);
+      file_level_metadata_Message_2fRequest_2eproto[31]);
 }
 
 // ===================================================================
@@ -11457,7 +11072,7 @@ void GetSwcNodeDataListByTimeAndUserRequest::InternalSwap(GetSwcNodeDataListByTi
 ::PROTOBUF_NAMESPACE_ID::Metadata GetSwcNodeDataListByTimeAndUserRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fRequest_2eproto_getter, &descriptor_table_Message_2fRequest_2eproto_once,
-      file_level_metadata_Message_2fRequest_2eproto[33]);
+      file_level_metadata_Message_2fRequest_2eproto[32]);
 }
 
 // ===================================================================
@@ -11781,7 +11396,7 @@ void BackupFullDatabaseRequest::InternalSwap(BackupFullDatabaseRequest* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata BackupFullDatabaseRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fRequest_2eproto_getter, &descriptor_table_Message_2fRequest_2eproto_once,
-      file_level_metadata_Message_2fRequest_2eproto[34]);
+      file_level_metadata_Message_2fRequest_2eproto[33]);
 }
 
 // ===================================================================
@@ -12079,7 +11694,7 @@ void CreateDailyStatisticsRequest::InternalSwap(CreateDailyStatisticsRequest* ot
 ::PROTOBUF_NAMESPACE_ID::Metadata CreateDailyStatisticsRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fRequest_2eproto_getter, &descriptor_table_Message_2fRequest_2eproto_once,
-      file_level_metadata_Message_2fRequest_2eproto[35]);
+      file_level_metadata_Message_2fRequest_2eproto[34]);
 }
 
 // ===================================================================
@@ -12382,7 +11997,7 @@ void DeleteDailyStatisticsRequest::InternalSwap(DeleteDailyStatisticsRequest* ot
 ::PROTOBUF_NAMESPACE_ID::Metadata DeleteDailyStatisticsRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fRequest_2eproto_getter, &descriptor_table_Message_2fRequest_2eproto_once,
-      file_level_metadata_Message_2fRequest_2eproto[36]);
+      file_level_metadata_Message_2fRequest_2eproto[35]);
 }
 
 // ===================================================================
@@ -12680,7 +12295,7 @@ void UpdateDailyStatisticsRequest::InternalSwap(UpdateDailyStatisticsRequest* ot
 ::PROTOBUF_NAMESPACE_ID::Metadata UpdateDailyStatisticsRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fRequest_2eproto_getter, &descriptor_table_Message_2fRequest_2eproto_once,
-      file_level_metadata_Message_2fRequest_2eproto[37]);
+      file_level_metadata_Message_2fRequest_2eproto[36]);
 }
 
 // ===================================================================
@@ -12983,7 +12598,7 @@ void GetDailyStatisticsRequest::InternalSwap(GetDailyStatisticsRequest* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata GetDailyStatisticsRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fRequest_2eproto_getter, &descriptor_table_Message_2fRequest_2eproto_once,
-      file_level_metadata_Message_2fRequest_2eproto[38]);
+      file_level_metadata_Message_2fRequest_2eproto[37]);
 }
 
 // ===================================================================
@@ -13234,7 +12849,7 @@ void GetAllDailyStatisticsRequest::InternalSwap(GetAllDailyStatisticsRequest* ot
 ::PROTOBUF_NAMESPACE_ID::Metadata GetAllDailyStatisticsRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fRequest_2eproto_getter, &descriptor_table_Message_2fRequest_2eproto_once,
-      file_level_metadata_Message_2fRequest_2eproto[39]);
+      file_level_metadata_Message_2fRequest_2eproto[38]);
 }
 
 // @@protoc_insertion_point(namespace_scope)
@@ -13331,10 +12946,6 @@ Arena::CreateMaybeMessage< ::proto::GetAllSwcMetaInfoRequest >(Arena* arena) {
 template<> PROTOBUF_NOINLINE ::proto::CreateSwcSnapshotRequest*
 Arena::CreateMaybeMessage< ::proto::CreateSwcSnapshotRequest >(Arena* arena) {
   return Arena::CreateMessageInternal< ::proto::CreateSwcSnapshotRequest >(arena);
-}
-template<> PROTOBUF_NOINLINE ::proto::DeleteSwcSnapshotRequest*
-Arena::CreateMaybeMessage< ::proto::DeleteSwcSnapshotRequest >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::proto::DeleteSwcSnapshotRequest >(arena);
 }
 template<> PROTOBUF_NOINLINE ::proto::GetAllSnapshotMetaInfoRequest*
 Arena::CreateMaybeMessage< ::proto::GetAllSnapshotMetaInfoRequest >(Arena* arena) {

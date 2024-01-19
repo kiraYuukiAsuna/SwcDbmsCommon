@@ -119,10 +119,6 @@ message CreateSwcSnapshotResponse{
     ResponseMetaInfoV1 metaInfo = 1;
 }
 
-message DeleteSwcSnapshotResponse{
-    ResponseMetaInfoV1 metaInfo = 1;
-}
-
 message GetAllSnapshotMetaInfoResponse{
     ResponseMetaInfoV1 metaInfo = 1;
     repeated SwcSnapshotMetaInfoV1 SwcSnapshotList = 2;

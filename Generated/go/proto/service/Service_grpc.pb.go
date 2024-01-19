@@ -44,7 +44,6 @@ const (
 	DBMS_GetSwcMetaInfo_FullMethodName                   = "/proto.DBMS/GetSwcMetaInfo"
 	DBMS_GetAllSwcMetaInfo_FullMethodName                = "/proto.DBMS/GetAllSwcMetaInfo"
 	DBMS_CreateSwcSnapshot_FullMethodName                = "/proto.DBMS/CreateSwcSnapshot"
-	DBMS_DeleteSwcSnapshot_FullMethodName                = "/proto.DBMS/DeleteSwcSnapshot"
 	DBMS_GetAllSnapshotMetaInfo_FullMethodName           = "/proto.DBMS/GetAllSnapshotMetaInfo"
 	DBMS_GetSnapshot_FullMethodName                      = "/proto.DBMS/GetSnapshot"
 	DBMS_GetAllIncrementOperationMetaInfo_FullMethodName = "/proto.DBMS/GetAllIncrementOperationMetaInfo"
@@ -90,7 +89,6 @@ type DBMSClient interface {
 	GetSwcMetaInfo(ctx context.Context, in *request.GetSwcMetaInfoRequest, opts ...grpc.CallOption) (*response.GetSwcMetaInfoResponse, error)
 	GetAllSwcMetaInfo(ctx context.Context, in *request.GetAllSwcMetaInfoRequest, opts ...grpc.CallOption) (*response.GetAllSwcMetaInfoResponse, error)
 	CreateSwcSnapshot(ctx context.Context, in *request.CreateSwcSnapshotRequest, opts ...grpc.CallOption) (*response.CreateSwcSnapshotResponse, error)
-	DeleteSwcSnapshot(ctx context.Context, in *request.DeleteSwcSnapshotRequest, opts ...grpc.CallOption) (*response.DeleteSwcSnapshotResponse, error)
 	GetAllSnapshotMetaInfo(ctx context.Context, in *request.GetAllSnapshotMetaInfoRequest, opts ...grpc.CallOption) (*response.GetAllSnapshotMetaInfoResponse, error)
 	GetSnapshot(ctx context.Context, in *request.GetSnapshotRequest, opts ...grpc.CallOption) (*response.GetSnapshotResponse, error)
 	GetAllIncrementOperationMetaInfo(ctx context.Context, in *request.GetAllIncrementOperationMetaInfoRequest, opts ...grpc.CallOption) (*response.GetAllIncrementOperationMetaInfoResponse, error)
@@ -324,15 +322,6 @@ func (c *dBMSClient) CreateSwcSnapshot(ctx context.Context, in *request.CreateSw
 	return out, nil
 }
 
-func (c *dBMSClient) DeleteSwcSnapshot(ctx context.Context, in *request.DeleteSwcSnapshotRequest, opts ...grpc.CallOption) (*response.DeleteSwcSnapshotResponse, error) {
-	out := new(response.DeleteSwcSnapshotResponse)
-	err := c.cc.Invoke(ctx, DBMS_DeleteSwcSnapshot_FullMethodName, in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
 func (c *dBMSClient) GetAllSnapshotMetaInfo(ctx context.Context, in *request.GetAllSnapshotMetaInfoRequest, opts ...grpc.CallOption) (*response.GetAllSnapshotMetaInfoResponse, error) {
 	out := new(response.GetAllSnapshotMetaInfoResponse)
 	err := c.cc.Invoke(ctx, DBMS_GetAllSnapshotMetaInfo_FullMethodName, in, out, opts...)
@@ -504,7 +493,6 @@ type DBMSServer interface {
 	GetSwcMetaInfo(context.Context, *request.GetSwcMetaInfoRequest) (*response.GetSwcMetaInfoResponse, error)
 	GetAllSwcMetaInfo(context.Context, *request.GetAllSwcMetaInfoRequest) (*response.GetAllSwcMetaInfoResponse, error)
 	CreateSwcSnapshot(context.Context, *request.CreateSwcSnapshotRequest) (*response.CreateSwcSnapshotResponse, error)
-	DeleteSwcSnapshot(context.Context, *request.DeleteSwcSnapshotRequest) (*response.DeleteSwcSnapshotResponse, error)
 	GetAllSnapshotMetaInfo(context.Context, *request.GetAllSnapshotMetaInfoRequest) (*response.GetAllSnapshotMetaInfoResponse, error)
 	GetSnapshot(context.Context, *request.GetSnapshotRequest) (*response.GetSnapshotResponse, error)
 	GetAllIncrementOperationMetaInfo(context.Context, *request.GetAllIncrementOperationMetaInfoRequest) (*response.GetAllIncrementOperationMetaInfoResponse, error)
@@ -596,9 +584,6 @@ func (UnimplementedDBMSServer) GetAllSwcMetaInfo(context.Context, *request.GetAl
 }
 func (UnimplementedDBMSServer) CreateSwcSnapshot(context.Context, *request.CreateSwcSnapshotRequest) (*response.CreateSwcSnapshotResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CreateSwcSnapshot not implemented")
-}
-func (UnimplementedDBMSServer) DeleteSwcSnapshot(context.Context, *request.DeleteSwcSnapshotRequest) (*response.DeleteSwcSnapshotResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method DeleteSwcSnapshot not implemented")
 }
 func (UnimplementedDBMSServer) GetAllSnapshotMetaInfo(context.Context, *request.GetAllSnapshotMetaInfoRequest) (*response.GetAllSnapshotMetaInfoResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetAllSnapshotMetaInfo not implemented")
@@ -1075,24 +1060,6 @@ func _DBMS_CreateSwcSnapshot_Handler(srv interface{}, ctx context.Context, dec f
 	return interceptor(ctx, in, info, handler)
 }
 
-func _DBMS_DeleteSwcSnapshot_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(request.DeleteSwcSnapshotRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(DBMSServer).DeleteSwcSnapshot(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: DBMS_DeleteSwcSnapshot_FullMethodName,
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(DBMSServer).DeleteSwcSnapshot(ctx, req.(*request.DeleteSwcSnapshotRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
 func _DBMS_GetAllSnapshotMetaInfo_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(request.GetAllSnapshotMetaInfoRequest)
 	if err := dec(in); err != nil {
@@ -1479,10 +1446,6 @@ var DBMS_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "CreateSwcSnapshot",
 			Handler:    _DBMS_CreateSwcSnapshot_Handler,
-		},
-		{
-			MethodName: "DeleteSwcSnapshot",
-			Handler:    _DBMS_DeleteSwcSnapshot_Handler,
 		},
 		{
 			MethodName: "GetAllSnapshotMetaInfo",

@@ -14,7 +14,6 @@
     rpc BackupFullDatabase(BackupFullDatabaseRequest) returns (BackupFullDatabaseResponse){}
 
    [M] rpc CreateSwcSnapshot(CreateSwcSnapshotRequest) returns (CreateSwcSnapshotResponse){}
-   [] rpc DeleteSwcSnapshot(DeleteSwcSnapshotRequest) returns (DeleteSwcSnapshotResponse){}
    [] rpc GetAllSnapshotMetaInfo(GetAllSnapshotMetaInfoRequest) returns (GetAllSnapshotMetaInfoResponse){}
    [] rpc GetSnapshot(GetSnapshotRequest) returns (GetSnapshotResponse){}
    [] rpc GetAllIncrementOperationMetaInfo(GetAllIncrementOperationMetaInfoRequest) returns (GetAllIncrementOperationMetaInfoResponse){}

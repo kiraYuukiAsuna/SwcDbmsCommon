@@ -83,9 +83,6 @@ extern DeleteSwcNodeDataResponseDefaultTypeInternal _DeleteSwcNodeDataResponse_d
 class DeleteSwcResponse;
 struct DeleteSwcResponseDefaultTypeInternal;
 extern DeleteSwcResponseDefaultTypeInternal _DeleteSwcResponse_default_instance_;
-class DeleteSwcSnapshotResponse;
-struct DeleteSwcSnapshotResponseDefaultTypeInternal;
-extern DeleteSwcSnapshotResponseDefaultTypeInternal _DeleteSwcSnapshotResponse_default_instance_;
 class DeleteUserResponse;
 struct DeleteUserResponseDefaultTypeInternal;
 extern DeleteUserResponseDefaultTypeInternal _DeleteUserResponse_default_instance_;
@@ -181,7 +178,6 @@ template<> ::proto::DeleteDailyStatisticsResponse* Arena::CreateMaybeMessage<::p
 template<> ::proto::DeleteProjectResponse* Arena::CreateMaybeMessage<::proto::DeleteProjectResponse>(Arena*);
 template<> ::proto::DeleteSwcNodeDataResponse* Arena::CreateMaybeMessage<::proto::DeleteSwcNodeDataResponse>(Arena*);
 template<> ::proto::DeleteSwcResponse* Arena::CreateMaybeMessage<::proto::DeleteSwcResponse>(Arena*);
-template<> ::proto::DeleteSwcSnapshotResponse* Arena::CreateMaybeMessage<::proto::DeleteSwcSnapshotResponse>(Arena*);
 template<> ::proto::DeleteUserResponse* Arena::CreateMaybeMessage<::proto::DeleteUserResponse>(Arena*);
 template<> ::proto::GetAllDailyStatisticsResponse* Arena::CreateMaybeMessage<::proto::GetAllDailyStatisticsResponse>(Arena*);
 template<> ::proto::GetAllIncrementOperationMetaInfoResponse* Arena::CreateMaybeMessage<::proto::GetAllIncrementOperationMetaInfoResponse>(Arena*);
@@ -4225,163 +4221,6 @@ class CreateSwcSnapshotResponse final :
 };
 // -------------------------------------------------------------------
 
-class DeleteSwcSnapshotResponse final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:proto.DeleteSwcSnapshotResponse) */ {
- public:
-  inline DeleteSwcSnapshotResponse() : DeleteSwcSnapshotResponse(nullptr) {}
-  ~DeleteSwcSnapshotResponse() override;
-  explicit PROTOBUF_CONSTEXPR DeleteSwcSnapshotResponse(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
-
-  DeleteSwcSnapshotResponse(const DeleteSwcSnapshotResponse& from);
-  DeleteSwcSnapshotResponse(DeleteSwcSnapshotResponse&& from) noexcept
-    : DeleteSwcSnapshotResponse() {
-    *this = ::std::move(from);
-  }
-
-  inline DeleteSwcSnapshotResponse& operator=(const DeleteSwcSnapshotResponse& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  inline DeleteSwcSnapshotResponse& operator=(DeleteSwcSnapshotResponse&& from) noexcept {
-    if (this == &from) return *this;
-    if (GetOwningArena() == from.GetOwningArena()
-  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
-        && GetOwningArena() != nullptr
-  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
-    ) {
-      InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
-  static const DeleteSwcSnapshotResponse& default_instance() {
-    return *internal_default_instance();
-  }
-  static inline const DeleteSwcSnapshotResponse* internal_default_instance() {
-    return reinterpret_cast<const DeleteSwcSnapshotResponse*>(
-               &_DeleteSwcSnapshotResponse_default_instance_);
-  }
-  static constexpr int kIndexInFileMessages =
-    23;
-
-  friend void swap(DeleteSwcSnapshotResponse& a, DeleteSwcSnapshotResponse& b) {
-    a.Swap(&b);
-  }
-  inline void Swap(DeleteSwcSnapshotResponse* other) {
-    if (other == this) return;
-  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
-    if (GetOwningArena() != nullptr &&
-        GetOwningArena() == other->GetOwningArena()) {
-   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
-    if (GetOwningArena() == other->GetOwningArena()) {
-  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
-      InternalSwap(other);
-    } else {
-      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
-    }
-  }
-  void UnsafeArenaSwap(DeleteSwcSnapshotResponse* other) {
-    if (other == this) return;
-    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
-    InternalSwap(other);
-  }
-
-  // implements Message ----------------------------------------------
-
-  DeleteSwcSnapshotResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<DeleteSwcSnapshotResponse>(arena);
-  }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const DeleteSwcSnapshotResponse& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const DeleteSwcSnapshotResponse& from) {
-    DeleteSwcSnapshotResponse::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const final;
-  void InternalSwap(DeleteSwcSnapshotResponse* other);
-
-  private:
-  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
-  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "proto.DeleteSwcSnapshotResponse";
-  }
-  protected:
-  explicit DeleteSwcSnapshotResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
-                       bool is_message_owned = false);
-  public:
-
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  enum : int {
-    kMetaInfoFieldNumber = 1,
-  };
-  // .proto.ResponseMetaInfoV1 metaInfo = 1;
-  bool has_metainfo() const;
-  private:
-  bool _internal_has_metainfo() const;
-  public:
-  void clear_metainfo();
-  const ::proto::ResponseMetaInfoV1& metainfo() const;
-  PROTOBUF_NODISCARD ::proto::ResponseMetaInfoV1* release_metainfo();
-  ::proto::ResponseMetaInfoV1* mutable_metainfo();
-  void set_allocated_metainfo(::proto::ResponseMetaInfoV1* metainfo);
-  private:
-  const ::proto::ResponseMetaInfoV1& _internal_metainfo() const;
-  ::proto::ResponseMetaInfoV1* _internal_mutable_metainfo();
-  public:
-  void unsafe_arena_set_allocated_metainfo(
-      ::proto::ResponseMetaInfoV1* metainfo);
-  ::proto::ResponseMetaInfoV1* unsafe_arena_release_metainfo();
-
-  // @@protoc_insertion_point(class_scope:proto.DeleteSwcSnapshotResponse)
- private:
-  class _Internal;
-
-  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
-  typedef void InternalArenaConstructable_;
-  typedef void DestructorSkippable_;
-  struct Impl_ {
-    ::proto::ResponseMetaInfoV1* metainfo_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-  };
-  union { Impl_ _impl_; };
-  friend struct ::TableStruct_Message_2fResponse_2eproto;
-};
-// -------------------------------------------------------------------
-
 class GetAllSnapshotMetaInfoResponse final :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:proto.GetAllSnapshotMetaInfoResponse) */ {
  public:
@@ -4430,7 +4269,7 @@ class GetAllSnapshotMetaInfoResponse final :
                &_GetAllSnapshotMetaInfoResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    24;
+    23;
 
   friend void swap(GetAllSnapshotMetaInfoResponse& a, GetAllSnapshotMetaInfoResponse& b) {
     a.Swap(&b);
@@ -4607,7 +4446,7 @@ class GetSnapshotResponse final :
                &_GetSnapshotResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    25;
+    24;
 
   friend void swap(GetSnapshotResponse& a, GetSnapshotResponse& b) {
     a.Swap(&b);
@@ -4784,7 +4623,7 @@ class GetAllIncrementOperationMetaInfoResponse final :
                &_GetAllIncrementOperationMetaInfoResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    26;
+    25;
 
   friend void swap(GetAllIncrementOperationMetaInfoResponse& a, GetAllIncrementOperationMetaInfoResponse& b) {
     a.Swap(&b);
@@ -4961,7 +4800,7 @@ class GetIncrementOperationResponse final :
                &_GetIncrementOperationResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    27;
+    26;
 
   friend void swap(GetIncrementOperationResponse& a, GetIncrementOperationResponse& b) {
     a.Swap(&b);
@@ -5138,7 +4977,7 @@ class CreateSwcNodeDataResponse final :
                &_CreateSwcNodeDataResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    28;
+    27;
 
   friend void swap(CreateSwcNodeDataResponse& a, CreateSwcNodeDataResponse& b) {
     a.Swap(&b);
@@ -5295,7 +5134,7 @@ class DeleteSwcNodeDataResponse final :
                &_DeleteSwcNodeDataResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    29;
+    28;
 
   friend void swap(DeleteSwcNodeDataResponse& a, DeleteSwcNodeDataResponse& b) {
     a.Swap(&b);
@@ -5452,7 +5291,7 @@ class UpdateSwcNodeDataResponse final :
                &_UpdateSwcNodeDataResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    30;
+    29;
 
   friend void swap(UpdateSwcNodeDataResponse& a, UpdateSwcNodeDataResponse& b) {
     a.Swap(&b);
@@ -5609,7 +5448,7 @@ class GetSwcNodeDataResponse final :
                &_GetSwcNodeDataResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    31;
+    30;
 
   friend void swap(GetSwcNodeDataResponse& a, GetSwcNodeDataResponse& b) {
     a.Swap(&b);
@@ -5786,7 +5625,7 @@ class GetSwcFullNodeDataResponse final :
                &_GetSwcFullNodeDataResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    32;
+    31;
 
   friend void swap(GetSwcFullNodeDataResponse& a, GetSwcFullNodeDataResponse& b) {
     a.Swap(&b);
@@ -5963,7 +5802,7 @@ class GetSwcNodeDataListByTimeAndUserResponse final :
                &_GetSwcNodeDataListByTimeAndUserResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    33;
+    32;
 
   friend void swap(GetSwcNodeDataListByTimeAndUserResponse& a, GetSwcNodeDataListByTimeAndUserResponse& b) {
     a.Swap(&b);
@@ -6140,7 +5979,7 @@ class BackupFullDatabaseResponse final :
                &_BackupFullDatabaseResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    34;
+    33;
 
   friend void swap(BackupFullDatabaseResponse& a, BackupFullDatabaseResponse& b) {
     a.Swap(&b);
@@ -6328,7 +6167,7 @@ class CreateDailyStatisticsResponse final :
                &_CreateDailyStatisticsResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    35;
+    34;
 
   friend void swap(CreateDailyStatisticsResponse& a, CreateDailyStatisticsResponse& b) {
     a.Swap(&b);
@@ -6505,7 +6344,7 @@ class DeleteDailyStatisticsResponse final :
                &_DeleteDailyStatisticsResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    36;
+    35;
 
   friend void swap(DeleteDailyStatisticsResponse& a, DeleteDailyStatisticsResponse& b) {
     a.Swap(&b);
@@ -6682,7 +6521,7 @@ class UpdateDailyStatisticsResponse final :
                &_UpdateDailyStatisticsResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    37;
+    36;
 
   friend void swap(UpdateDailyStatisticsResponse& a, UpdateDailyStatisticsResponse& b) {
     a.Swap(&b);
@@ -6859,7 +6698,7 @@ class GetDailyStatisticsResponse final :
                &_GetDailyStatisticsResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    38;
+    37;
 
   friend void swap(GetDailyStatisticsResponse& a, GetDailyStatisticsResponse& b) {
     a.Swap(&b);
@@ -7036,7 +6875,7 @@ class GetAllDailyStatisticsResponse final :
                &_GetAllDailyStatisticsResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    39;
+    38;
 
   friend void swap(GetAllDailyStatisticsResponse& a, GetAllDailyStatisticsResponse& b) {
     a.Swap(&b);
@@ -10727,95 +10566,6 @@ inline void CreateSwcSnapshotResponse::set_allocated_metainfo(::proto::ResponseM
 
 // -------------------------------------------------------------------
 
-// DeleteSwcSnapshotResponse
-
-// .proto.ResponseMetaInfoV1 metaInfo = 1;
-inline bool DeleteSwcSnapshotResponse::_internal_has_metainfo() const {
-  return this != internal_default_instance() && _impl_.metainfo_ != nullptr;
-}
-inline bool DeleteSwcSnapshotResponse::has_metainfo() const {
-  return _internal_has_metainfo();
-}
-inline const ::proto::ResponseMetaInfoV1& DeleteSwcSnapshotResponse::_internal_metainfo() const {
-  const ::proto::ResponseMetaInfoV1* p = _impl_.metainfo_;
-  return p != nullptr ? *p : reinterpret_cast<const ::proto::ResponseMetaInfoV1&>(
-      ::proto::_ResponseMetaInfoV1_default_instance_);
-}
-inline const ::proto::ResponseMetaInfoV1& DeleteSwcSnapshotResponse::metainfo() const {
-  // @@protoc_insertion_point(field_get:proto.DeleteSwcSnapshotResponse.metaInfo)
-  return _internal_metainfo();
-}
-inline void DeleteSwcSnapshotResponse::unsafe_arena_set_allocated_metainfo(
-    ::proto::ResponseMetaInfoV1* metainfo) {
-  if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.metainfo_);
-  }
-  _impl_.metainfo_ = metainfo;
-  if (metainfo) {
-    
-  } else {
-    
-  }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.DeleteSwcSnapshotResponse.metaInfo)
-}
-inline ::proto::ResponseMetaInfoV1* DeleteSwcSnapshotResponse::release_metainfo() {
-  
-  ::proto::ResponseMetaInfoV1* temp = _impl_.metainfo_;
-  _impl_.metainfo_ = nullptr;
-#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
-  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
-  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
-  if (GetArenaForAllocation() == nullptr) { delete old; }
-#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
-  if (GetArenaForAllocation() != nullptr) {
-    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
-  }
-#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
-  return temp;
-}
-inline ::proto::ResponseMetaInfoV1* DeleteSwcSnapshotResponse::unsafe_arena_release_metainfo() {
-  // @@protoc_insertion_point(field_release:proto.DeleteSwcSnapshotResponse.metaInfo)
-  
-  ::proto::ResponseMetaInfoV1* temp = _impl_.metainfo_;
-  _impl_.metainfo_ = nullptr;
-  return temp;
-}
-inline ::proto::ResponseMetaInfoV1* DeleteSwcSnapshotResponse::_internal_mutable_metainfo() {
-  
-  if (_impl_.metainfo_ == nullptr) {
-    auto* p = CreateMaybeMessage<::proto::ResponseMetaInfoV1>(GetArenaForAllocation());
-    _impl_.metainfo_ = p;
-  }
-  return _impl_.metainfo_;
-}
-inline ::proto::ResponseMetaInfoV1* DeleteSwcSnapshotResponse::mutable_metainfo() {
-  ::proto::ResponseMetaInfoV1* _msg = _internal_mutable_metainfo();
-  // @@protoc_insertion_point(field_mutable:proto.DeleteSwcSnapshotResponse.metaInfo)
-  return _msg;
-}
-inline void DeleteSwcSnapshotResponse::set_allocated_metainfo(::proto::ResponseMetaInfoV1* metainfo) {
-  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
-  if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.metainfo_);
-  }
-  if (metainfo) {
-    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(metainfo));
-    if (message_arena != submessage_arena) {
-      metainfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, metainfo, submessage_arena);
-    }
-    
-  } else {
-    
-  }
-  _impl_.metainfo_ = metainfo;
-  // @@protoc_insertion_point(field_set_allocated:proto.DeleteSwcSnapshotResponse.metaInfo)
-}
-
-// -------------------------------------------------------------------
-
 // GetAllSnapshotMetaInfoResponse
 
 // .proto.ResponseMetaInfoV1 metaInfo = 1;
@@ -13174,8 +12924,6 @@ GetAllDailyStatisticsResponse::dailystatisticsinfo() const {
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
-// -------------------------------------------------------------------
-
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------

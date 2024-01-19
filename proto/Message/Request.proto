@@ -139,13 +139,6 @@ message CreateSwcSnapshotRequest{
     string SwcName = 3;
 }
 
-message DeleteSwcSnapshotRequest{
-    RequestMetaInfoV1 metaInfo = 1;
-    UserVerifyInfoV1 UserVerifyInfo = 2;
-    string SwcName = 3;
-    string SwcSnapshotCollectionName = 4;
-}
-
 message GetAllSnapshotMetaInfoRequest{
     RequestMetaInfoV1 metaInfo = 1;
     UserVerifyInfoV1 UserVerifyInfo = 2;

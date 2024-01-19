@@ -83,9 +83,6 @@ extern DeleteSwcNodeDataRequestDefaultTypeInternal _DeleteSwcNodeDataRequest_def
 class DeleteSwcRequest;
 struct DeleteSwcRequestDefaultTypeInternal;
 extern DeleteSwcRequestDefaultTypeInternal _DeleteSwcRequest_default_instance_;
-class DeleteSwcSnapshotRequest;
-struct DeleteSwcSnapshotRequestDefaultTypeInternal;
-extern DeleteSwcSnapshotRequestDefaultTypeInternal _DeleteSwcSnapshotRequest_default_instance_;
 class DeleteUserRequest;
 struct DeleteUserRequestDefaultTypeInternal;
 extern DeleteUserRequestDefaultTypeInternal _DeleteUserRequest_default_instance_;
@@ -181,7 +178,6 @@ template<> ::proto::DeleteDailyStatisticsRequest* Arena::CreateMaybeMessage<::pr
 template<> ::proto::DeleteProjectRequest* Arena::CreateMaybeMessage<::proto::DeleteProjectRequest>(Arena*);
 template<> ::proto::DeleteSwcNodeDataRequest* Arena::CreateMaybeMessage<::proto::DeleteSwcNodeDataRequest>(Arena*);
 template<> ::proto::DeleteSwcRequest* Arena::CreateMaybeMessage<::proto::DeleteSwcRequest>(Arena*);
-template<> ::proto::DeleteSwcSnapshotRequest* Arena::CreateMaybeMessage<::proto::DeleteSwcSnapshotRequest>(Arena*);
 template<> ::proto::DeleteUserRequest* Arena::CreateMaybeMessage<::proto::DeleteUserRequest>(Arena*);
 template<> ::proto::GetAllDailyStatisticsRequest* Arena::CreateMaybeMessage<::proto::GetAllDailyStatisticsRequest>(Arena*);
 template<> ::proto::GetAllIncrementOperationMetaInfoRequest* Arena::CreateMaybeMessage<::proto::GetAllIncrementOperationMetaInfoRequest>(Arena*);
@@ -4572,215 +4568,6 @@ class CreateSwcSnapshotRequest final :
 };
 // -------------------------------------------------------------------
 
-class DeleteSwcSnapshotRequest final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:proto.DeleteSwcSnapshotRequest) */ {
- public:
-  inline DeleteSwcSnapshotRequest() : DeleteSwcSnapshotRequest(nullptr) {}
-  ~DeleteSwcSnapshotRequest() override;
-  explicit PROTOBUF_CONSTEXPR DeleteSwcSnapshotRequest(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
-
-  DeleteSwcSnapshotRequest(const DeleteSwcSnapshotRequest& from);
-  DeleteSwcSnapshotRequest(DeleteSwcSnapshotRequest&& from) noexcept
-    : DeleteSwcSnapshotRequest() {
-    *this = ::std::move(from);
-  }
-
-  inline DeleteSwcSnapshotRequest& operator=(const DeleteSwcSnapshotRequest& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  inline DeleteSwcSnapshotRequest& operator=(DeleteSwcSnapshotRequest&& from) noexcept {
-    if (this == &from) return *this;
-    if (GetOwningArena() == from.GetOwningArena()
-  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
-        && GetOwningArena() != nullptr
-  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
-    ) {
-      InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
-  static const DeleteSwcSnapshotRequest& default_instance() {
-    return *internal_default_instance();
-  }
-  static inline const DeleteSwcSnapshotRequest* internal_default_instance() {
-    return reinterpret_cast<const DeleteSwcSnapshotRequest*>(
-               &_DeleteSwcSnapshotRequest_default_instance_);
-  }
-  static constexpr int kIndexInFileMessages =
-    23;
-
-  friend void swap(DeleteSwcSnapshotRequest& a, DeleteSwcSnapshotRequest& b) {
-    a.Swap(&b);
-  }
-  inline void Swap(DeleteSwcSnapshotRequest* other) {
-    if (other == this) return;
-  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
-    if (GetOwningArena() != nullptr &&
-        GetOwningArena() == other->GetOwningArena()) {
-   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
-    if (GetOwningArena() == other->GetOwningArena()) {
-  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
-      InternalSwap(other);
-    } else {
-      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
-    }
-  }
-  void UnsafeArenaSwap(DeleteSwcSnapshotRequest* other) {
-    if (other == this) return;
-    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
-    InternalSwap(other);
-  }
-
-  // implements Message ----------------------------------------------
-
-  DeleteSwcSnapshotRequest* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<DeleteSwcSnapshotRequest>(arena);
-  }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const DeleteSwcSnapshotRequest& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const DeleteSwcSnapshotRequest& from) {
-    DeleteSwcSnapshotRequest::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const final;
-  void InternalSwap(DeleteSwcSnapshotRequest* other);
-
-  private:
-  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
-  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "proto.DeleteSwcSnapshotRequest";
-  }
-  protected:
-  explicit DeleteSwcSnapshotRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
-                       bool is_message_owned = false);
-  public:
-
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  enum : int {
-    kSwcNameFieldNumber = 3,
-    kSwcSnapshotCollectionNameFieldNumber = 4,
-    kMetaInfoFieldNumber = 1,
-    kUserVerifyInfoFieldNumber = 2,
-  };
-  // string SwcName = 3;
-  void clear_swcname();
-  const std::string& swcname() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_swcname(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_swcname();
-  PROTOBUF_NODISCARD std::string* release_swcname();
-  void set_allocated_swcname(std::string* swcname);
-  private:
-  const std::string& _internal_swcname() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_swcname(const std::string& value);
-  std::string* _internal_mutable_swcname();
-  public:
-
-  // string SwcSnapshotCollectionName = 4;
-  void clear_swcsnapshotcollectionname();
-  const std::string& swcsnapshotcollectionname() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_swcsnapshotcollectionname(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_swcsnapshotcollectionname();
-  PROTOBUF_NODISCARD std::string* release_swcsnapshotcollectionname();
-  void set_allocated_swcsnapshotcollectionname(std::string* swcsnapshotcollectionname);
-  private:
-  const std::string& _internal_swcsnapshotcollectionname() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_swcsnapshotcollectionname(const std::string& value);
-  std::string* _internal_mutable_swcsnapshotcollectionname();
-  public:
-
-  // .proto.RequestMetaInfoV1 metaInfo = 1;
-  bool has_metainfo() const;
-  private:
-  bool _internal_has_metainfo() const;
-  public:
-  void clear_metainfo();
-  const ::proto::RequestMetaInfoV1& metainfo() const;
-  PROTOBUF_NODISCARD ::proto::RequestMetaInfoV1* release_metainfo();
-  ::proto::RequestMetaInfoV1* mutable_metainfo();
-  void set_allocated_metainfo(::proto::RequestMetaInfoV1* metainfo);
-  private:
-  const ::proto::RequestMetaInfoV1& _internal_metainfo() const;
-  ::proto::RequestMetaInfoV1* _internal_mutable_metainfo();
-  public:
-  void unsafe_arena_set_allocated_metainfo(
-      ::proto::RequestMetaInfoV1* metainfo);
-  ::proto::RequestMetaInfoV1* unsafe_arena_release_metainfo();
-
-  // .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
-  bool has_userverifyinfo() const;
-  private:
-  bool _internal_has_userverifyinfo() const;
-  public:
-  void clear_userverifyinfo();
-  const ::proto::UserVerifyInfoV1& userverifyinfo() const;
-  PROTOBUF_NODISCARD ::proto::UserVerifyInfoV1* release_userverifyinfo();
-  ::proto::UserVerifyInfoV1* mutable_userverifyinfo();
-  void set_allocated_userverifyinfo(::proto::UserVerifyInfoV1* userverifyinfo);
-  private:
-  const ::proto::UserVerifyInfoV1& _internal_userverifyinfo() const;
-  ::proto::UserVerifyInfoV1* _internal_mutable_userverifyinfo();
-  public:
-  void unsafe_arena_set_allocated_userverifyinfo(
-      ::proto::UserVerifyInfoV1* userverifyinfo);
-  ::proto::UserVerifyInfoV1* unsafe_arena_release_userverifyinfo();
-
-  // @@protoc_insertion_point(class_scope:proto.DeleteSwcSnapshotRequest)
- private:
-  class _Internal;
-
-  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
-  typedef void InternalArenaConstructable_;
-  typedef void DestructorSkippable_;
-  struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr swcname_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr swcsnapshotcollectionname_;
-    ::proto::RequestMetaInfoV1* metainfo_;
-    ::proto::UserVerifyInfoV1* userverifyinfo_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-  };
-  union { Impl_ _impl_; };
-  friend struct ::TableStruct_Message_2fRequest_2eproto;
-};
-// -------------------------------------------------------------------
-
 class GetAllSnapshotMetaInfoRequest final :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:proto.GetAllSnapshotMetaInfoRequest) */ {
  public:
@@ -4829,7 +4616,7 @@ class GetAllSnapshotMetaInfoRequest final :
                &_GetAllSnapshotMetaInfoRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    24;
+    23;
 
   friend void swap(GetAllSnapshotMetaInfoRequest& a, GetAllSnapshotMetaInfoRequest& b) {
     a.Swap(&b);
@@ -5006,7 +4793,7 @@ class GetSnapshotRequest final :
                &_GetSnapshotRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    25;
+    24;
 
   friend void swap(GetSnapshotRequest& a, GetSnapshotRequest& b) {
     a.Swap(&b);
@@ -5199,7 +4986,7 @@ class GetAllIncrementOperationMetaInfoRequest final :
                &_GetAllIncrementOperationMetaInfoRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    26;
+    25;
 
   friend void swap(GetAllIncrementOperationMetaInfoRequest& a, GetAllIncrementOperationMetaInfoRequest& b) {
     a.Swap(&b);
@@ -5376,7 +5163,7 @@ class GetIncrementOperationRequest final :
                &_GetIncrementOperationRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    27;
+    26;
 
   friend void swap(GetIncrementOperationRequest& a, GetIncrementOperationRequest& b) {
     a.Swap(&b);
@@ -5569,7 +5356,7 @@ class CreateSwcNodeDataRequest final :
                &_CreateSwcNodeDataRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    28;
+    27;
 
   friend void swap(CreateSwcNodeDataRequest& a, CreateSwcNodeDataRequest& b) {
     a.Swap(&b);
@@ -5782,7 +5569,7 @@ class DeleteSwcNodeDataRequest final :
                &_DeleteSwcNodeDataRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    29;
+    28;
 
   friend void swap(DeleteSwcNodeDataRequest& a, DeleteSwcNodeDataRequest& b) {
     a.Swap(&b);
@@ -5995,7 +5782,7 @@ class UpdateSwcNodeDataRequest final :
                &_UpdateSwcNodeDataRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    30;
+    29;
 
   friend void swap(UpdateSwcNodeDataRequest& a, UpdateSwcNodeDataRequest& b) {
     a.Swap(&b);
@@ -6208,7 +5995,7 @@ class GetSwcNodeDataRequest final :
                &_GetSwcNodeDataRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    31;
+    30;
 
   friend void swap(GetSwcNodeDataRequest& a, GetSwcNodeDataRequest& b) {
     a.Swap(&b);
@@ -6421,7 +6208,7 @@ class GetSwcFullNodeDataRequest final :
                &_GetSwcFullNodeDataRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    32;
+    31;
 
   friend void swap(GetSwcFullNodeDataRequest& a, GetSwcFullNodeDataRequest& b) {
     a.Swap(&b);
@@ -6614,7 +6401,7 @@ class GetSwcNodeDataListByTimeAndUserRequest final :
                &_GetSwcNodeDataListByTimeAndUserRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    33;
+    32;
 
   friend void swap(GetSwcNodeDataListByTimeAndUserRequest& a, GetSwcNodeDataListByTimeAndUserRequest& b) {
     a.Swap(&b);
@@ -6863,7 +6650,7 @@ class BackupFullDatabaseRequest final :
                &_BackupFullDatabaseRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    34;
+    33;
 
   friend void swap(BackupFullDatabaseRequest& a, BackupFullDatabaseRequest& b) {
     a.Swap(&b);
@@ -7071,7 +6858,7 @@ class CreateDailyStatisticsRequest final :
                &_CreateDailyStatisticsRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    35;
+    34;
 
   friend void swap(CreateDailyStatisticsRequest& a, CreateDailyStatisticsRequest& b) {
     a.Swap(&b);
@@ -7268,7 +7055,7 @@ class DeleteDailyStatisticsRequest final :
                &_DeleteDailyStatisticsRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    36;
+    35;
 
   friend void swap(DeleteDailyStatisticsRequest& a, DeleteDailyStatisticsRequest& b) {
     a.Swap(&b);
@@ -7461,7 +7248,7 @@ class UpdateDailyStatisticsRequest final :
                &_UpdateDailyStatisticsRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    37;
+    36;
 
   friend void swap(UpdateDailyStatisticsRequest& a, UpdateDailyStatisticsRequest& b) {
     a.Swap(&b);
@@ -7658,7 +7445,7 @@ class GetDailyStatisticsRequest final :
                &_GetDailyStatisticsRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    38;
+    37;
 
   friend void swap(GetDailyStatisticsRequest& a, GetDailyStatisticsRequest& b) {
     a.Swap(&b);
@@ -7851,7 +7638,7 @@ class GetAllDailyStatisticsRequest final :
                &_GetAllDailyStatisticsRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    39;
+    38;
 
   friend void swap(GetAllDailyStatisticsRequest& a, GetAllDailyStatisticsRequest& b) {
     a.Swap(&b);
@@ -12984,280 +12771,6 @@ inline void CreateSwcSnapshotRequest::set_allocated_swcname(std::string* swcname
 
 // -------------------------------------------------------------------
 
-// DeleteSwcSnapshotRequest
-
-// .proto.RequestMetaInfoV1 metaInfo = 1;
-inline bool DeleteSwcSnapshotRequest::_internal_has_metainfo() const {
-  return this != internal_default_instance() && _impl_.metainfo_ != nullptr;
-}
-inline bool DeleteSwcSnapshotRequest::has_metainfo() const {
-  return _internal_has_metainfo();
-}
-inline const ::proto::RequestMetaInfoV1& DeleteSwcSnapshotRequest::_internal_metainfo() const {
-  const ::proto::RequestMetaInfoV1* p = _impl_.metainfo_;
-  return p != nullptr ? *p : reinterpret_cast<const ::proto::RequestMetaInfoV1&>(
-      ::proto::_RequestMetaInfoV1_default_instance_);
-}
-inline const ::proto::RequestMetaInfoV1& DeleteSwcSnapshotRequest::metainfo() const {
-  // @@protoc_insertion_point(field_get:proto.DeleteSwcSnapshotRequest.metaInfo)
-  return _internal_metainfo();
-}
-inline void DeleteSwcSnapshotRequest::unsafe_arena_set_allocated_metainfo(
-    ::proto::RequestMetaInfoV1* metainfo) {
-  if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.metainfo_);
-  }
-  _impl_.metainfo_ = metainfo;
-  if (metainfo) {
-    
-  } else {
-    
-  }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.DeleteSwcSnapshotRequest.metaInfo)
-}
-inline ::proto::RequestMetaInfoV1* DeleteSwcSnapshotRequest::release_metainfo() {
-  
-  ::proto::RequestMetaInfoV1* temp = _impl_.metainfo_;
-  _impl_.metainfo_ = nullptr;
-#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
-  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
-  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
-  if (GetArenaForAllocation() == nullptr) { delete old; }
-#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
-  if (GetArenaForAllocation() != nullptr) {
-    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
-  }
-#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
-  return temp;
-}
-inline ::proto::RequestMetaInfoV1* DeleteSwcSnapshotRequest::unsafe_arena_release_metainfo() {
-  // @@protoc_insertion_point(field_release:proto.DeleteSwcSnapshotRequest.metaInfo)
-  
-  ::proto::RequestMetaInfoV1* temp = _impl_.metainfo_;
-  _impl_.metainfo_ = nullptr;
-  return temp;
-}
-inline ::proto::RequestMetaInfoV1* DeleteSwcSnapshotRequest::_internal_mutable_metainfo() {
-  
-  if (_impl_.metainfo_ == nullptr) {
-    auto* p = CreateMaybeMessage<::proto::RequestMetaInfoV1>(GetArenaForAllocation());
-    _impl_.metainfo_ = p;
-  }
-  return _impl_.metainfo_;
-}
-inline ::proto::RequestMetaInfoV1* DeleteSwcSnapshotRequest::mutable_metainfo() {
-  ::proto::RequestMetaInfoV1* _msg = _internal_mutable_metainfo();
-  // @@protoc_insertion_point(field_mutable:proto.DeleteSwcSnapshotRequest.metaInfo)
-  return _msg;
-}
-inline void DeleteSwcSnapshotRequest::set_allocated_metainfo(::proto::RequestMetaInfoV1* metainfo) {
-  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
-  if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.metainfo_);
-  }
-  if (metainfo) {
-    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(metainfo));
-    if (message_arena != submessage_arena) {
-      metainfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, metainfo, submessage_arena);
-    }
-    
-  } else {
-    
-  }
-  _impl_.metainfo_ = metainfo;
-  // @@protoc_insertion_point(field_set_allocated:proto.DeleteSwcSnapshotRequest.metaInfo)
-}
-
-// .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
-inline bool DeleteSwcSnapshotRequest::_internal_has_userverifyinfo() const {
-  return this != internal_default_instance() && _impl_.userverifyinfo_ != nullptr;
-}
-inline bool DeleteSwcSnapshotRequest::has_userverifyinfo() const {
-  return _internal_has_userverifyinfo();
-}
-inline const ::proto::UserVerifyInfoV1& DeleteSwcSnapshotRequest::_internal_userverifyinfo() const {
-  const ::proto::UserVerifyInfoV1* p = _impl_.userverifyinfo_;
-  return p != nullptr ? *p : reinterpret_cast<const ::proto::UserVerifyInfoV1&>(
-      ::proto::_UserVerifyInfoV1_default_instance_);
-}
-inline const ::proto::UserVerifyInfoV1& DeleteSwcSnapshotRequest::userverifyinfo() const {
-  // @@protoc_insertion_point(field_get:proto.DeleteSwcSnapshotRequest.UserVerifyInfo)
-  return _internal_userverifyinfo();
-}
-inline void DeleteSwcSnapshotRequest::unsafe_arena_set_allocated_userverifyinfo(
-    ::proto::UserVerifyInfoV1* userverifyinfo) {
-  if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userverifyinfo_);
-  }
-  _impl_.userverifyinfo_ = userverifyinfo;
-  if (userverifyinfo) {
-    
-  } else {
-    
-  }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.DeleteSwcSnapshotRequest.UserVerifyInfo)
-}
-inline ::proto::UserVerifyInfoV1* DeleteSwcSnapshotRequest::release_userverifyinfo() {
-  
-  ::proto::UserVerifyInfoV1* temp = _impl_.userverifyinfo_;
-  _impl_.userverifyinfo_ = nullptr;
-#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
-  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
-  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
-  if (GetArenaForAllocation() == nullptr) { delete old; }
-#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
-  if (GetArenaForAllocation() != nullptr) {
-    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
-  }
-#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
-  return temp;
-}
-inline ::proto::UserVerifyInfoV1* DeleteSwcSnapshotRequest::unsafe_arena_release_userverifyinfo() {
-  // @@protoc_insertion_point(field_release:proto.DeleteSwcSnapshotRequest.UserVerifyInfo)
-  
-  ::proto::UserVerifyInfoV1* temp = _impl_.userverifyinfo_;
-  _impl_.userverifyinfo_ = nullptr;
-  return temp;
-}
-inline ::proto::UserVerifyInfoV1* DeleteSwcSnapshotRequest::_internal_mutable_userverifyinfo() {
-  
-  if (_impl_.userverifyinfo_ == nullptr) {
-    auto* p = CreateMaybeMessage<::proto::UserVerifyInfoV1>(GetArenaForAllocation());
-    _impl_.userverifyinfo_ = p;
-  }
-  return _impl_.userverifyinfo_;
-}
-inline ::proto::UserVerifyInfoV1* DeleteSwcSnapshotRequest::mutable_userverifyinfo() {
-  ::proto::UserVerifyInfoV1* _msg = _internal_mutable_userverifyinfo();
-  // @@protoc_insertion_point(field_mutable:proto.DeleteSwcSnapshotRequest.UserVerifyInfo)
-  return _msg;
-}
-inline void DeleteSwcSnapshotRequest::set_allocated_userverifyinfo(::proto::UserVerifyInfoV1* userverifyinfo) {
-  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
-  if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userverifyinfo_);
-  }
-  if (userverifyinfo) {
-    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(userverifyinfo));
-    if (message_arena != submessage_arena) {
-      userverifyinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, userverifyinfo, submessage_arena);
-    }
-    
-  } else {
-    
-  }
-  _impl_.userverifyinfo_ = userverifyinfo;
-  // @@protoc_insertion_point(field_set_allocated:proto.DeleteSwcSnapshotRequest.UserVerifyInfo)
-}
-
-// string SwcName = 3;
-inline void DeleteSwcSnapshotRequest::clear_swcname() {
-  _impl_.swcname_.ClearToEmpty();
-}
-inline const std::string& DeleteSwcSnapshotRequest::swcname() const {
-  // @@protoc_insertion_point(field_get:proto.DeleteSwcSnapshotRequest.SwcName)
-  return _internal_swcname();
-}
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void DeleteSwcSnapshotRequest::set_swcname(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.swcname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:proto.DeleteSwcSnapshotRequest.SwcName)
-}
-inline std::string* DeleteSwcSnapshotRequest::mutable_swcname() {
-  std::string* _s = _internal_mutable_swcname();
-  // @@protoc_insertion_point(field_mutable:proto.DeleteSwcSnapshotRequest.SwcName)
-  return _s;
-}
-inline const std::string& DeleteSwcSnapshotRequest::_internal_swcname() const {
-  return _impl_.swcname_.Get();
-}
-inline void DeleteSwcSnapshotRequest::_internal_set_swcname(const std::string& value) {
-  
-  _impl_.swcname_.Set(value, GetArenaForAllocation());
-}
-inline std::string* DeleteSwcSnapshotRequest::_internal_mutable_swcname() {
-  
-  return _impl_.swcname_.Mutable(GetArenaForAllocation());
-}
-inline std::string* DeleteSwcSnapshotRequest::release_swcname() {
-  // @@protoc_insertion_point(field_release:proto.DeleteSwcSnapshotRequest.SwcName)
-  return _impl_.swcname_.Release();
-}
-inline void DeleteSwcSnapshotRequest::set_allocated_swcname(std::string* swcname) {
-  if (swcname != nullptr) {
-    
-  } else {
-    
-  }
-  _impl_.swcname_.SetAllocated(swcname, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.swcname_.IsDefault()) {
-    _impl_.swcname_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:proto.DeleteSwcSnapshotRequest.SwcName)
-}
-
-// string SwcSnapshotCollectionName = 4;
-inline void DeleteSwcSnapshotRequest::clear_swcsnapshotcollectionname() {
-  _impl_.swcsnapshotcollectionname_.ClearToEmpty();
-}
-inline const std::string& DeleteSwcSnapshotRequest::swcsnapshotcollectionname() const {
-  // @@protoc_insertion_point(field_get:proto.DeleteSwcSnapshotRequest.SwcSnapshotCollectionName)
-  return _internal_swcsnapshotcollectionname();
-}
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void DeleteSwcSnapshotRequest::set_swcsnapshotcollectionname(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.swcsnapshotcollectionname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:proto.DeleteSwcSnapshotRequest.SwcSnapshotCollectionName)
-}
-inline std::string* DeleteSwcSnapshotRequest::mutable_swcsnapshotcollectionname() {
-  std::string* _s = _internal_mutable_swcsnapshotcollectionname();
-  // @@protoc_insertion_point(field_mutable:proto.DeleteSwcSnapshotRequest.SwcSnapshotCollectionName)
-  return _s;
-}
-inline const std::string& DeleteSwcSnapshotRequest::_internal_swcsnapshotcollectionname() const {
-  return _impl_.swcsnapshotcollectionname_.Get();
-}
-inline void DeleteSwcSnapshotRequest::_internal_set_swcsnapshotcollectionname(const std::string& value) {
-  
-  _impl_.swcsnapshotcollectionname_.Set(value, GetArenaForAllocation());
-}
-inline std::string* DeleteSwcSnapshotRequest::_internal_mutable_swcsnapshotcollectionname() {
-  
-  return _impl_.swcsnapshotcollectionname_.Mutable(GetArenaForAllocation());
-}
-inline std::string* DeleteSwcSnapshotRequest::release_swcsnapshotcollectionname() {
-  // @@protoc_insertion_point(field_release:proto.DeleteSwcSnapshotRequest.SwcSnapshotCollectionName)
-  return _impl_.swcsnapshotcollectionname_.Release();
-}
-inline void DeleteSwcSnapshotRequest::set_allocated_swcsnapshotcollectionname(std::string* swcsnapshotcollectionname) {
-  if (swcsnapshotcollectionname != nullptr) {
-    
-  } else {
-    
-  }
-  _impl_.swcsnapshotcollectionname_.SetAllocated(swcsnapshotcollectionname, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.swcsnapshotcollectionname_.IsDefault()) {
-    _impl_.swcsnapshotcollectionname_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:proto.DeleteSwcSnapshotRequest.SwcSnapshotCollectionName)
-}
-
-// -------------------------------------------------------------------
-
 // GetAllSnapshotMetaInfoRequest
 
 // .proto.RequestMetaInfoV1 metaInfo = 1;
@@ -17378,8 +16891,6 @@ inline void GetAllDailyStatisticsRequest::set_allocated_userverifyinfo(::proto::
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
-// -------------------------------------------------------------------
-
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------
