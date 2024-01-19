@@ -131,7 +131,7 @@ message GetSnapshotResponse{
 
 message GetAllIncrementOperationMetaInfoResponse{
     ResponseMetaInfoV1 metaInfo = 1;
-    repeated SwcIncrementOperationMetaInfoV1 SwcIncrementOperationMetaInfoList = 2;
+    repeated SwcIncrementOperationMetaInfoV1 SwcIncrementOperationMetaInfo = 2;
 }
 
 message GetIncrementOperationResponse{

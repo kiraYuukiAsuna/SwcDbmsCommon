@@ -14,8 +14,8 @@
     rpc BackupFullDatabase(BackupFullDatabaseRequest) returns (BackupFullDatabaseResponse){}
 
    [M] rpc CreateSwcSnapshot(CreateSwcSnapshotRequest) returns (CreateSwcSnapshotResponse){}
-   [] rpc GetAllSnapshotMetaInfo(GetAllSnapshotMetaInfoRequest) returns (GetAllSnapshotMetaInfoResponse){}
-   [] rpc GetSnapshot(GetSnapshotRequest) returns (GetSnapshotResponse){}
-   [] rpc GetAllIncrementOperationMetaInfo(GetAllIncrementOperationMetaInfoRequest) returns (GetAllIncrementOperationMetaInfoResponse){}
-   [] rpc GetIncrementOperation(GetIncrementOperationRequest) returns (GetIncrementOperationResponse){}
+   [M] rpc GetAllSnapshotMetaInfo(GetAllSnapshotMetaInfoRequest) returns (GetAllSnapshotMetaInfoResponse){}
+   [M] rpc GetSnapshot(GetSnapshotRequest) returns (GetSnapshotResponse){}
+   [M] rpc GetAllIncrementOperationMetaInfo(GetAllIncrementOperationMetaInfoRequest) returns (GetAllIncrementOperationMetaInfoResponse){}
+   [M] rpc GetIncrementOperation(GetIncrementOperationRequest) returns (GetIncrementOperationResponse){}
     

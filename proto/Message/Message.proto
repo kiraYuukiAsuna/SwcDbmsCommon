@@ -90,7 +90,7 @@ message SwcIncrementOperationV1{
 }
 
 message SwcIncrementOperationListV1{
-    repeated SwcIncrementOperationV1 SwcIncrementOperationList = 1;
+    repeated SwcIncrementOperationV1 SwcIncrementOperation = 1;
 }
 
 message SwcMetaInfoV1{

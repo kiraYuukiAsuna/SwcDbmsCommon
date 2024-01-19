@@ -1705,7 +1705,7 @@
         "metaInfo": {
           "$ref": "#/definitions/protoResponseMetaInfoV1"
         },
-        "SwcIncrementOperationMetaInfoList": {
+        "SwcIncrementOperationMetaInfo": {
           "type": "array",
           "items": {
             "type": "object",
@@ -2289,7 +2289,7 @@
     "protoSwcIncrementOperationListV1": {
       "type": "object",
       "properties": {
-        "SwcIncrementOperationList": {
+        "SwcIncrementOperation": {
           "type": "array",
           "items": {
             "type": "object",
