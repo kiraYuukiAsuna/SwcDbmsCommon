@@ -8,202 +8,202 @@ import public "google/protobuf/timestamp.proto";
 import "Message/Message.proto";
 
 message CreateUserRequest{
-    RequestMetaInfoV1 RequestMetaInfo = 1;
+    RequestMetaInfoV1 metaInfo = 1;
     UserMetaInfoV1 UserInfo = 2;
 }
 
 message DeleteUserRequest{
-    RequestMetaInfoV1 RequestMetaInfo = 1;
+    RequestMetaInfoV1 metaInfo = 1;
     UserVerifyInfoV1 UserVerifyInfo = 2;
     string UserName = 3;
 }
 
 message UpdateUserRequest{
-    RequestMetaInfoV1 RequestMetaInfo = 1;
+    RequestMetaInfoV1 metaInfo = 1;
     UserVerifyInfoV1 UserVerifyInfo = 2;
     UserMetaInfoV1 UserInfo = 3;
 }
 
 message GetUserRequest{
-    RequestMetaInfoV1 RequestMetaInfo = 1;
+    RequestMetaInfoV1 metaInfo = 1;
     UserVerifyInfoV1 UserVerifyInfo = 2;
     string UserName = 3;
 }
 
 message GetAllUserRequest{
-    RequestMetaInfoV1 RequestMetaInfo = 1;
+    RequestMetaInfoV1 metaInfo = 1;
     UserVerifyInfoV1 UserVerifyInfo = 2;
 }
 
 message UserLoginRequest{
-    RequestMetaInfoV1 RequestMetaInfo = 1;
+    RequestMetaInfoV1 metaInfo = 1;
     string UserName = 2;
     string Password = 3;
 }
 
 message UserLogoutRequest{
-    RequestMetaInfoV1 RequestMetaInfo = 1;
+    RequestMetaInfoV1 metaInfo = 1;
     UserVerifyInfoV1 UserVerifyInfo = 2;
 }
 
 message UserOnlineHeartBeatNotification{
-    RequestMetaInfoV1 RequestMetaInfo = 1;
+    RequestMetaInfoV1 metaInfo = 1;
     UserVerifyInfoV1 UserVerifyInfo = 2;
     int64 HeartBeatTime = 3;
 }
 
 message GetUserPermissionGroupRequest{
-    RequestMetaInfoV1 RequestMetaInfo = 1;
+    RequestMetaInfoV1 metaInfo = 1;
     UserVerifyInfoV1 UserVerifyInfo = 2;
 }
 
 message GetPermissionGroupRequest{
-    RequestMetaInfoV1 RequestMetaInfo = 1;
+    RequestMetaInfoV1 metaInfo = 1;
     UserVerifyInfoV1 UserVerifyInfo = 2;
     PermissionGroupMetaInfoV1 PermissionGroup = 3;
 }
 
 message GetAllPermissionGroupRequest{
-    RequestMetaInfoV1 RequestMetaInfo = 1;
+    RequestMetaInfoV1 metaInfo = 1;
     UserVerifyInfoV1 UserVerifyInfo = 2;
 }
 
 message ChangeUserPermissionGroupRequest{
-    RequestMetaInfoV1 RequestMetaInfo = 1;
+    RequestMetaInfoV1 metaInfo = 1;
     UserVerifyInfoV1 UserVerifyInfo = 2;
     string TargetUserName = 3;
     string PermissionGroupName = 4;
 }
 
 message CreateProjectRequest{
-    RequestMetaInfoV1 RequestMetaInfo = 1;
+    RequestMetaInfoV1 metaInfo = 1;
     UserVerifyInfoV1 UserVerifyInfo = 2;
     ProjectMetaInfoV1 ProjectInfo = 3;
 }
 
 message DeleteProjectRequest{
-    RequestMetaInfoV1 RequestMetaInfo = 1;
+    RequestMetaInfoV1 metaInfo = 1;
     UserVerifyInfoV1 UserVerifyInfo = 2;
     string ProjectName = 3;
 }
 
 message UpdateProjectRequest{
-    RequestMetaInfoV1 RequestMetaInfo = 1;
+    RequestMetaInfoV1 metaInfo = 1;
     UserVerifyInfoV1 UserVerifyInfo = 2;
     ProjectMetaInfoV1 ProjectInfo = 3;
 }
 
 message GetProjectRequest{
-    RequestMetaInfoV1 RequestMetaInfo = 1;
+    RequestMetaInfoV1 metaInfo = 1;
     UserVerifyInfoV1 UserVerifyInfo = 2;
     string ProjectName = 3;
 }
 
 message GetAllProjectRequest{
-    RequestMetaInfoV1 RequestMetaInfo = 1;
+    RequestMetaInfoV1 metaInfo = 1;
     UserVerifyInfoV1 UserVerifyInfo = 2;
 }
 
 message CreateSwcRequest{
-    RequestMetaInfoV1 RequestMetaInfo = 1;
+    RequestMetaInfoV1 metaInfo = 1;
     UserVerifyInfoV1 UserVerifyInfo = 2;
     SwcMetaInfoV1 SwcInfo = 3;
 }
 
 message DeleteSwcRequest{
-    RequestMetaInfoV1 RequestMetaInfo = 1;
+    RequestMetaInfoV1 metaInfo = 1;
     UserVerifyInfoV1 UserVerifyInfo = 2;
     string SwcName = 3;
 }
 
 message UpdateSwcRequest{
-    RequestMetaInfoV1 RequestMetaInfo = 1;
+    RequestMetaInfoV1 metaInfo = 1;
     UserVerifyInfoV1 UserVerifyInfo = 2;
     SwcMetaInfoV1 SwcInfo = 3;
 }
 
 message GetSwcMetaInfoRequest{
-    RequestMetaInfoV1 RequestMetaInfo = 1;
+    RequestMetaInfoV1 metaInfo = 1;
     UserVerifyInfoV1 UserVerifyInfo = 2;
     string SwcName = 3;
 }
 
 message GetAllSwcMetaInfoRequest{
-    RequestMetaInfoV1 RequestMetaInfo = 1;
+    RequestMetaInfoV1 metaInfo = 1;
     UserVerifyInfoV1 UserVerifyInfo = 2;
 }
 
 message CreateSwcSnapshotRequest{
-    RequestMetaInfoV1 RequestMetaInfo = 1;
+    RequestMetaInfoV1 metaInfo = 1;
     UserVerifyInfoV1 UserVerifyInfo = 2;
     string SwcName = 3;
 }
 
 message DeleteSwcSnapshotRequest{
-    RequestMetaInfoV1 RequestMetaInfo = 1;
+    RequestMetaInfoV1 metaInfo = 1;
     UserVerifyInfoV1 UserVerifyInfo = 2;
     string SwcName = 3;
     string SwcSnapshotCollectionName = 4;
 }
 
 message GetAllSnapshotMetaInfoRequest{
-    RequestMetaInfoV1 RequestMetaInfo = 1;
+    RequestMetaInfoV1 metaInfo = 1;
     UserVerifyInfoV1 UserVerifyInfo = 2;
 }
 
 message GetSnapshotRequest{
-    RequestMetaInfoV1 RequestMetaInfo = 1;
+    RequestMetaInfoV1 metaInfo = 1;
     UserVerifyInfoV1 UserVerifyInfo = 2;
     string SwcSnapshotCollectionName = 3;
 }
 
 message GetAllIncrementOperationMetaInfoRequest{
-    RequestMetaInfoV1 RequestMetaInfo = 1;
+    RequestMetaInfoV1 metaInfo = 1;
     UserVerifyInfoV1 UserVerifyInfo = 2;
 }
 
 message GetIncrementOperationRequest{
-    RequestMetaInfoV1 RequestMetaInfo = 1;
+    RequestMetaInfoV1 metaInfo = 1;
     UserVerifyInfoV1 UserVerifyInfo = 2;
     string IncrementOperationCollectionName = 3;
 }
 
 message CreateSwcNodeDataRequest{
-    RequestMetaInfoV1 RequestMetaInfo = 1;
+    RequestMetaInfoV1 metaInfo = 1;
     UserVerifyInfoV1 UserVerifyInfo = 2;
     string SwcName = 3;
     SwcDataV1 SwcData = 4;
 }
 
 message DeleteSwcNodeDataRequest{
-    RequestMetaInfoV1 RequestMetaInfo = 1;
+    RequestMetaInfoV1 metaInfo = 1;
     UserVerifyInfoV1 UserVerifyInfo = 2;
     string SwcName = 3;
     SwcDataV1 SwcData = 4;
 }
 
 message UpdateSwcNodeDataRequest{
-    RequestMetaInfoV1 RequestMetaInfo = 1;
+    RequestMetaInfoV1 metaInfo = 1;
     UserVerifyInfoV1 UserVerifyInfo = 2;
     string SwcName = 3;
     SwcNodeDataV1 SwcNodeData = 4;
 }
 
 message GetSwcNodeDataRequest{
-    RequestMetaInfoV1 RequestMetaInfo = 1;
+    RequestMetaInfoV1 metaInfo = 1;
     UserVerifyInfoV1 UserVerifyInfo = 2;
     string SwcName = 3;
     SwcDataV1 SwcNodeData = 4;
 }
 
 message GetSwcFullNodeDataRequest{
-    RequestMetaInfoV1 RequestMetaInfo = 1;
+    RequestMetaInfoV1 metaInfo = 1;
     UserVerifyInfoV1 UserVerifyInfo = 2;
     string SwcName = 3;
 }
 
 message GetSwcNodeDataListByTimeAndUserRequest{
-    RequestMetaInfoV1 RequestMetaInfo = 1;
+    RequestMetaInfoV1 metaInfo = 1;
     UserVerifyInfoV1 UserVerifyInfo = 2;
     string SwcName = 3;
     google.protobuf.Timestamp StartTime = 4;
@@ -212,37 +212,37 @@ message GetSwcNodeDataListByTimeAndUserRequest{
 }
 
 message BackupFullDatabaseRequest{
-    RequestMetaInfoV1 RequestMetaInfo = 1;
+    RequestMetaInfoV1 metaInfo = 1;
     UserVerifyInfoV1 UserVerifyInfo = 2;
     bool InstantBackup = 3;
     google.protobuf.Timestamp DelayBackupTime = 4;
 }
 
 message CreateDailyStatisticsRequest{
-    RequestMetaInfoV1 RequestMetaInfo = 1;
+    RequestMetaInfoV1 metaInfo = 1;
     UserVerifyInfoV1 UserVerifyInfo = 2;
     DailyStatisticsMetaInfoV1 DailyStatisticsInfo = 3;
 }
 
 message DeleteDailyStatisticsRequest{
-    RequestMetaInfoV1 RequestMetaInfo = 1;
+    RequestMetaInfoV1 metaInfo = 1;
     UserVerifyInfoV1 UserVerifyInfo = 2;
     string DailyStatisticsName = 3;
 }
 
 message UpdateDailyStatisticsRequest{
-    RequestMetaInfoV1 RequestMetaInfo = 1;
+    RequestMetaInfoV1 metaInfo = 1;
     UserVerifyInfoV1 UserVerifyInfo = 2;
     DailyStatisticsMetaInfoV1 DailyStatisticsInfo = 3;
 }
 
 message GetDailyStatisticsRequest{
-    RequestMetaInfoV1 RequestMetaInfo = 1;
+    RequestMetaInfoV1 metaInfo = 1;
     UserVerifyInfoV1 UserVerifyInfo = 2;
     string DailyStatisticsName = 3;
 }
 
 message GetAllDailyStatisticsRequest{
-    RequestMetaInfoV1 RequestMetaInfo = 1;
+    RequestMetaInfoV1 metaInfo = 1;
     UserVerifyInfoV1 UserVerifyInfo = 2;
 }
