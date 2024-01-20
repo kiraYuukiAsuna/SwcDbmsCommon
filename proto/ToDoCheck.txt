@@ -7,15 +7,17 @@
     rpc GetAllPermissionGroup(GetAllPermissionGroupRequest) returns (GetAllPermissionGroupResponse){}
     rpc ChangeUserPermissionGroup(ChangeUserPermissionGroupRequest) returns (ChangeUserPermissionGroupResponse){}
     
-    rpc GetSwcNodeData(GetSwcNodeDataRequest) returns (GetSwcNodeDataResponse){}
-    
-    rpc GetSwcNodeDataListByTimeAndUser(GetSwcNodeDataListByTimeAndUserRequest) returns (GetSwcNodeDataListByTimeAndUserResponse){}
-    
     rpc BackupFullDatabase(BackupFullDatabaseRequest) returns (BackupFullDatabaseResponse){}
 
-   [M] rpc CreateSwcSnapshot(CreateSwcSnapshotRequest) returns (CreateSwcSnapshotResponse){}
-   [M] rpc GetAllSnapshotMetaInfo(GetAllSnapshotMetaInfoRequest) returns (GetAllSnapshotMetaInfoResponse){}
-   [M] rpc GetSnapshot(GetSnapshotRequest) returns (GetSnapshotResponse){}
    [M] rpc GetAllIncrementOperationMetaInfo(GetAllIncrementOperationMetaInfoRequest) returns (GetAllIncrementOperationMetaInfoResponse){}
    [M] rpc GetIncrementOperation(GetIncrementOperationRequest) returns (GetIncrementOperationResponse){}
     
+CreateSwcAttachmentAno
+GetSwcAttachmentAno
+DeleteSwcAttachmentAno
+UpdateSwcAttachmentAno
+
+CreateSwcAttachmentApo
+GetSwcAttachmentApo
+DeleteSwcAttachmentApo
+UpdateSwcAttachmentApo
