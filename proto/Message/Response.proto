@@ -199,6 +199,7 @@ message GetAllDailyStatisticsResponse{
 
 message CreateSwcAttachmentAnoResponse{
     ResponseMetaInfoV1 metaInfo = 1;
+    string AnoAttachmentUuid = 2; 
 }
 
 message DeleteSwcAttachmentAnoResponse{
@@ -216,6 +217,7 @@ message GetSwcAttachmentAnoResponse{
 
 message CreateSwcAttachmentApoResponse{
     ResponseMetaInfoV1 metaInfo = 1;
+    string ApoAttachmentUuid = 2; 
 }
 
 message DeleteSwcAttachmentApoResponse{

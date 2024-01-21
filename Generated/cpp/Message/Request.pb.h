@@ -8166,6 +8166,7 @@ class DeleteSwcAttachmentAnoRequest final :
 
   enum : int {
     kSwcNameFieldNumber = 3,
+    kAnoAttachmentUuidFieldNumber = 4,
     kMetaInfoFieldNumber = 1,
     kUserVerifyInfoFieldNumber = 2,
   };
@@ -8181,6 +8182,20 @@ class DeleteSwcAttachmentAnoRequest final :
   const std::string& _internal_swcname() const;
   inline PROTOBUF_ALWAYS_INLINE void _internal_set_swcname(const std::string& value);
   std::string* _internal_mutable_swcname();
+  public:
+
+  // string AnoAttachmentUuid = 4;
+  void clear_anoattachmentuuid();
+  const std::string& anoattachmentuuid() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_anoattachmentuuid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_anoattachmentuuid();
+  PROTOBUF_NODISCARD std::string* release_anoattachmentuuid();
+  void set_allocated_anoattachmentuuid(std::string* anoattachmentuuid);
+  private:
+  const std::string& _internal_anoattachmentuuid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_anoattachmentuuid(const std::string& value);
+  std::string* _internal_mutable_anoattachmentuuid();
   public:
 
   // .proto.RequestMetaInfoV1 metaInfo = 1;
@@ -8228,6 +8243,7 @@ class DeleteSwcAttachmentAnoRequest final :
   typedef void DestructorSkippable_;
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr swcname_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr anoattachmentuuid_;
     ::proto::RequestMetaInfoV1* metainfo_;
     ::proto::UserVerifyInfoV1* userverifyinfo_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
@@ -8359,9 +8375,10 @@ class UpdateSwcAttachmentAnoRequest final :
 
   enum : int {
     kSwcNameFieldNumber = 3,
+    kAnoAttachmentUuidFieldNumber = 4,
     kMetaInfoFieldNumber = 1,
     kUserVerifyInfoFieldNumber = 2,
-    kNewSwcAttachmentAnoFieldNumber = 4,
+    kNewSwcAttachmentAnoFieldNumber = 5,
   };
   // string SwcName = 3;
   void clear_swcname();
@@ -8375,6 +8392,20 @@ class UpdateSwcAttachmentAnoRequest final :
   const std::string& _internal_swcname() const;
   inline PROTOBUF_ALWAYS_INLINE void _internal_set_swcname(const std::string& value);
   std::string* _internal_mutable_swcname();
+  public:
+
+  // string AnoAttachmentUuid = 4;
+  void clear_anoattachmentuuid();
+  const std::string& anoattachmentuuid() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_anoattachmentuuid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_anoattachmentuuid();
+  PROTOBUF_NODISCARD std::string* release_anoattachmentuuid();
+  void set_allocated_anoattachmentuuid(std::string* anoattachmentuuid);
+  private:
+  const std::string& _internal_anoattachmentuuid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_anoattachmentuuid(const std::string& value);
+  std::string* _internal_mutable_anoattachmentuuid();
   public:
 
   // .proto.RequestMetaInfoV1 metaInfo = 1;
@@ -8413,7 +8444,7 @@ class UpdateSwcAttachmentAnoRequest final :
       ::proto::UserVerifyInfoV1* userverifyinfo);
   ::proto::UserVerifyInfoV1* unsafe_arena_release_userverifyinfo();
 
-  // .proto.SwcAttachmentAnoV1 NewSwcAttachmentAno = 4;
+  // .proto.SwcAttachmentAnoV1 NewSwcAttachmentAno = 5;
   bool has_newswcattachmentano() const;
   private:
   bool _internal_has_newswcattachmentano() const;
@@ -8440,6 +8471,7 @@ class UpdateSwcAttachmentAnoRequest final :
   typedef void DestructorSkippable_;
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr swcname_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr anoattachmentuuid_;
     ::proto::RequestMetaInfoV1* metainfo_;
     ::proto::UserVerifyInfoV1* userverifyinfo_;
     ::proto::SwcAttachmentAnoV1* newswcattachmentano_;
@@ -8572,6 +8604,7 @@ class GetSwcAttachmentAnoRequest final :
 
   enum : int {
     kSwcNameFieldNumber = 3,
+    kAnoAttachmentUuidFieldNumber = 4,
     kMetaInfoFieldNumber = 1,
     kUserVerifyInfoFieldNumber = 2,
   };
@@ -8587,6 +8620,20 @@ class GetSwcAttachmentAnoRequest final :
   const std::string& _internal_swcname() const;
   inline PROTOBUF_ALWAYS_INLINE void _internal_set_swcname(const std::string& value);
   std::string* _internal_mutable_swcname();
+  public:
+
+  // string AnoAttachmentUuid = 4;
+  void clear_anoattachmentuuid();
+  const std::string& anoattachmentuuid() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_anoattachmentuuid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_anoattachmentuuid();
+  PROTOBUF_NODISCARD std::string* release_anoattachmentuuid();
+  void set_allocated_anoattachmentuuid(std::string* anoattachmentuuid);
+  private:
+  const std::string& _internal_anoattachmentuuid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_anoattachmentuuid(const std::string& value);
+  std::string* _internal_mutable_anoattachmentuuid();
   public:
 
   // .proto.RequestMetaInfoV1 metaInfo = 1;
@@ -8634,6 +8681,7 @@ class GetSwcAttachmentAnoRequest final :
   typedef void DestructorSkippable_;
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr swcname_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr anoattachmentuuid_;
     ::proto::RequestMetaInfoV1* metainfo_;
     ::proto::UserVerifyInfoV1* userverifyinfo_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
@@ -19209,6 +19257,56 @@ inline void DeleteSwcAttachmentAnoRequest::set_allocated_swcname(std::string* sw
   // @@protoc_insertion_point(field_set_allocated:proto.DeleteSwcAttachmentAnoRequest.SwcName)
 }
 
+// string AnoAttachmentUuid = 4;
+inline void DeleteSwcAttachmentAnoRequest::clear_anoattachmentuuid() {
+  _impl_.anoattachmentuuid_.ClearToEmpty();
+}
+inline const std::string& DeleteSwcAttachmentAnoRequest::anoattachmentuuid() const {
+  // @@protoc_insertion_point(field_get:proto.DeleteSwcAttachmentAnoRequest.AnoAttachmentUuid)
+  return _internal_anoattachmentuuid();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void DeleteSwcAttachmentAnoRequest::set_anoattachmentuuid(ArgT0&& arg0, ArgT... args) {
+ 
+ _impl_.anoattachmentuuid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:proto.DeleteSwcAttachmentAnoRequest.AnoAttachmentUuid)
+}
+inline std::string* DeleteSwcAttachmentAnoRequest::mutable_anoattachmentuuid() {
+  std::string* _s = _internal_mutable_anoattachmentuuid();
+  // @@protoc_insertion_point(field_mutable:proto.DeleteSwcAttachmentAnoRequest.AnoAttachmentUuid)
+  return _s;
+}
+inline const std::string& DeleteSwcAttachmentAnoRequest::_internal_anoattachmentuuid() const {
+  return _impl_.anoattachmentuuid_.Get();
+}
+inline void DeleteSwcAttachmentAnoRequest::_internal_set_anoattachmentuuid(const std::string& value) {
+  
+  _impl_.anoattachmentuuid_.Set(value, GetArenaForAllocation());
+}
+inline std::string* DeleteSwcAttachmentAnoRequest::_internal_mutable_anoattachmentuuid() {
+  
+  return _impl_.anoattachmentuuid_.Mutable(GetArenaForAllocation());
+}
+inline std::string* DeleteSwcAttachmentAnoRequest::release_anoattachmentuuid() {
+  // @@protoc_insertion_point(field_release:proto.DeleteSwcAttachmentAnoRequest.AnoAttachmentUuid)
+  return _impl_.anoattachmentuuid_.Release();
+}
+inline void DeleteSwcAttachmentAnoRequest::set_allocated_anoattachmentuuid(std::string* anoattachmentuuid) {
+  if (anoattachmentuuid != nullptr) {
+    
+  } else {
+    
+  }
+  _impl_.anoattachmentuuid_.SetAllocated(anoattachmentuuid, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.anoattachmentuuid_.IsDefault()) {
+    _impl_.anoattachmentuuid_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:proto.DeleteSwcAttachmentAnoRequest.AnoAttachmentUuid)
+}
+
 // -------------------------------------------------------------------
 
 // UpdateSwcAttachmentAnoRequest
@@ -19433,7 +19531,57 @@ inline void UpdateSwcAttachmentAnoRequest::set_allocated_swcname(std::string* sw
   // @@protoc_insertion_point(field_set_allocated:proto.UpdateSwcAttachmentAnoRequest.SwcName)
 }
 
-// .proto.SwcAttachmentAnoV1 NewSwcAttachmentAno = 4;
+// string AnoAttachmentUuid = 4;
+inline void UpdateSwcAttachmentAnoRequest::clear_anoattachmentuuid() {
+  _impl_.anoattachmentuuid_.ClearToEmpty();
+}
+inline const std::string& UpdateSwcAttachmentAnoRequest::anoattachmentuuid() const {
+  // @@protoc_insertion_point(field_get:proto.UpdateSwcAttachmentAnoRequest.AnoAttachmentUuid)
+  return _internal_anoattachmentuuid();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void UpdateSwcAttachmentAnoRequest::set_anoattachmentuuid(ArgT0&& arg0, ArgT... args) {
+ 
+ _impl_.anoattachmentuuid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:proto.UpdateSwcAttachmentAnoRequest.AnoAttachmentUuid)
+}
+inline std::string* UpdateSwcAttachmentAnoRequest::mutable_anoattachmentuuid() {
+  std::string* _s = _internal_mutable_anoattachmentuuid();
+  // @@protoc_insertion_point(field_mutable:proto.UpdateSwcAttachmentAnoRequest.AnoAttachmentUuid)
+  return _s;
+}
+inline const std::string& UpdateSwcAttachmentAnoRequest::_internal_anoattachmentuuid() const {
+  return _impl_.anoattachmentuuid_.Get();
+}
+inline void UpdateSwcAttachmentAnoRequest::_internal_set_anoattachmentuuid(const std::string& value) {
+  
+  _impl_.anoattachmentuuid_.Set(value, GetArenaForAllocation());
+}
+inline std::string* UpdateSwcAttachmentAnoRequest::_internal_mutable_anoattachmentuuid() {
+  
+  return _impl_.anoattachmentuuid_.Mutable(GetArenaForAllocation());
+}
+inline std::string* UpdateSwcAttachmentAnoRequest::release_anoattachmentuuid() {
+  // @@protoc_insertion_point(field_release:proto.UpdateSwcAttachmentAnoRequest.AnoAttachmentUuid)
+  return _impl_.anoattachmentuuid_.Release();
+}
+inline void UpdateSwcAttachmentAnoRequest::set_allocated_anoattachmentuuid(std::string* anoattachmentuuid) {
+  if (anoattachmentuuid != nullptr) {
+    
+  } else {
+    
+  }
+  _impl_.anoattachmentuuid_.SetAllocated(anoattachmentuuid, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.anoattachmentuuid_.IsDefault()) {
+    _impl_.anoattachmentuuid_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:proto.UpdateSwcAttachmentAnoRequest.AnoAttachmentUuid)
+}
+
+// .proto.SwcAttachmentAnoV1 NewSwcAttachmentAno = 5;
 inline bool UpdateSwcAttachmentAnoRequest::_internal_has_newswcattachmentano() const {
   return this != internal_default_instance() && _impl_.newswcattachmentano_ != nullptr;
 }
@@ -19740,6 +19888,56 @@ inline void GetSwcAttachmentAnoRequest::set_allocated_swcname(std::string* swcna
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   // @@protoc_insertion_point(field_set_allocated:proto.GetSwcAttachmentAnoRequest.SwcName)
+}
+
+// string AnoAttachmentUuid = 4;
+inline void GetSwcAttachmentAnoRequest::clear_anoattachmentuuid() {
+  _impl_.anoattachmentuuid_.ClearToEmpty();
+}
+inline const std::string& GetSwcAttachmentAnoRequest::anoattachmentuuid() const {
+  // @@protoc_insertion_point(field_get:proto.GetSwcAttachmentAnoRequest.AnoAttachmentUuid)
+  return _internal_anoattachmentuuid();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void GetSwcAttachmentAnoRequest::set_anoattachmentuuid(ArgT0&& arg0, ArgT... args) {
+ 
+ _impl_.anoattachmentuuid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:proto.GetSwcAttachmentAnoRequest.AnoAttachmentUuid)
+}
+inline std::string* GetSwcAttachmentAnoRequest::mutable_anoattachmentuuid() {
+  std::string* _s = _internal_mutable_anoattachmentuuid();
+  // @@protoc_insertion_point(field_mutable:proto.GetSwcAttachmentAnoRequest.AnoAttachmentUuid)
+  return _s;
+}
+inline const std::string& GetSwcAttachmentAnoRequest::_internal_anoattachmentuuid() const {
+  return _impl_.anoattachmentuuid_.Get();
+}
+inline void GetSwcAttachmentAnoRequest::_internal_set_anoattachmentuuid(const std::string& value) {
+  
+  _impl_.anoattachmentuuid_.Set(value, GetArenaForAllocation());
+}
+inline std::string* GetSwcAttachmentAnoRequest::_internal_mutable_anoattachmentuuid() {
+  
+  return _impl_.anoattachmentuuid_.Mutable(GetArenaForAllocation());
+}
+inline std::string* GetSwcAttachmentAnoRequest::release_anoattachmentuuid() {
+  // @@protoc_insertion_point(field_release:proto.GetSwcAttachmentAnoRequest.AnoAttachmentUuid)
+  return _impl_.anoattachmentuuid_.Release();
+}
+inline void GetSwcAttachmentAnoRequest::set_allocated_anoattachmentuuid(std::string* anoattachmentuuid) {
+  if (anoattachmentuuid != nullptr) {
+    
+  } else {
+    
+  }
+  _impl_.anoattachmentuuid_.SetAllocated(anoattachmentuuid, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.anoattachmentuuid_.IsDefault()) {
+    _impl_.anoattachmentuuid_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:proto.GetSwcAttachmentAnoRequest.AnoAttachmentUuid)
 }
 
 // -------------------------------------------------------------------
