@@ -176,6 +176,70 @@
         ]
       }
     },
+    "/proto.DBMS/CreateSwcAttachmentAno": {
+      "post": {
+        "operationId": "DBMS_CreateSwcAttachmentAno",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/protoCreateSwcAttachmentAnoResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/protoCreateSwcAttachmentAnoRequest"
+            }
+          }
+        ],
+        "tags": [
+          "DBMS"
+        ]
+      }
+    },
+    "/proto.DBMS/CreateSwcAttachmentApo": {
+      "post": {
+        "operationId": "DBMS_CreateSwcAttachmentApo",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/protoCreateSwcAttachmentApoResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/protoCreateSwcAttachmentApoRequest"
+            }
+          }
+        ],
+        "tags": [
+          "DBMS"
+        ]
+      }
+    },
     "/proto.DBMS/CreateSwcNodeData": {
       "post": {
         "operationId": "DBMS_CreateSwcNodeData",
@@ -360,6 +424,70 @@
             "required": true,
             "schema": {
               "$ref": "#/definitions/protoDeleteSwcRequest"
+            }
+          }
+        ],
+        "tags": [
+          "DBMS"
+        ]
+      }
+    },
+    "/proto.DBMS/DeleteSwcAttachmentAno": {
+      "post": {
+        "operationId": "DBMS_DeleteSwcAttachmentAno",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/protoDeleteSwcAttachmentAnoResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/protoDeleteSwcAttachmentAnoRequest"
+            }
+          }
+        ],
+        "tags": [
+          "DBMS"
+        ]
+      }
+    },
+    "/proto.DBMS/DeleteSwcAttachmentApo": {
+      "post": {
+        "operationId": "DBMS_DeleteSwcAttachmentApo",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/protoDeleteSwcAttachmentApoResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/protoDeleteSwcAttachmentApoRequest"
             }
           }
         ],
@@ -816,6 +944,70 @@
         ]
       }
     },
+    "/proto.DBMS/GetSwcAttachmentAno": {
+      "post": {
+        "operationId": "DBMS_GetSwcAttachmentAno",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/protoGetSwcAttachmentAnoResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/protoGetSwcAttachmentAnoRequest"
+            }
+          }
+        ],
+        "tags": [
+          "DBMS"
+        ]
+      }
+    },
+    "/proto.DBMS/GetSwcAttachmentApo": {
+      "post": {
+        "operationId": "DBMS_GetSwcAttachmentApo",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/protoGetSwcAttachmentApoResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/protoGetSwcAttachmentApoRequest"
+            }
+          }
+        ],
+        "tags": [
+          "DBMS"
+        ]
+      }
+    },
     "/proto.DBMS/GetSwcFullNodeData": {
       "post": {
         "operationId": "DBMS_GetSwcFullNodeData",
@@ -1104,6 +1296,70 @@
         ]
       }
     },
+    "/proto.DBMS/UpdateSwcAttachmentAno": {
+      "post": {
+        "operationId": "DBMS_UpdateSwcAttachmentAno",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/protoUpdateSwcAttachmentAnoResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/protoUpdateSwcAttachmentAnoRequest"
+            }
+          }
+        ],
+        "tags": [
+          "DBMS"
+        ]
+      }
+    },
+    "/proto.DBMS/UpdateSwcAttachmentApo": {
+      "post": {
+        "operationId": "DBMS_UpdateSwcAttachmentApo",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/protoUpdateSwcAttachmentApoResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/protoUpdateSwcAttachmentApoRequest"
+            }
+          }
+        ],
+        "tags": [
+          "DBMS"
+        ]
+      }
+    },
     "/proto.DBMS/UpdateSwcNodeData": {
       "post": {
         "operationId": "DBMS_UpdateSwcNodeData",
@@ -1374,6 +1630,64 @@
         }
       }
     },
+    "protoCreateSwcAttachmentAnoRequest": {
+      "type": "object",
+      "properties": {
+        "metaInfo": {
+          "$ref": "#/definitions/protoRequestMetaInfoV1"
+        },
+        "UserVerifyInfo": {
+          "$ref": "#/definitions/protoUserVerifyInfoV1"
+        },
+        "SwcName": {
+          "type": "string"
+        },
+        "SwcAttachmentAno": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/protoSwcAttachmentAnoV1"
+          }
+        }
+      }
+    },
+    "protoCreateSwcAttachmentAnoResponse": {
+      "type": "object",
+      "properties": {
+        "metaInfo": {
+          "$ref": "#/definitions/protoResponseMetaInfoV1"
+        }
+      }
+    },
+    "protoCreateSwcAttachmentApoRequest": {
+      "type": "object",
+      "properties": {
+        "metaInfo": {
+          "$ref": "#/definitions/protoRequestMetaInfoV1"
+        },
+        "UserVerifyInfo": {
+          "$ref": "#/definitions/protoUserVerifyInfoV1"
+        },
+        "SwcName": {
+          "type": "string"
+        },
+        "SwcAttachmentApo": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/protoSwcAttachmentApoV1"
+          }
+        }
+      }
+    },
+    "protoCreateSwcAttachmentApoResponse": {
+      "type": "object",
+      "properties": {
+        "metaInfo": {
+          "$ref": "#/definitions/protoResponseMetaInfoV1"
+        }
+      }
+    },
     "protoCreateSwcNodeDataRequest": {
       "type": "object",
       "properties": {
@@ -1584,6 +1898,50 @@
         },
         "ProjectInfo": {
           "$ref": "#/definitions/protoProjectMetaInfoV1"
+        }
+      }
+    },
+    "protoDeleteSwcAttachmentAnoRequest": {
+      "type": "object",
+      "properties": {
+        "metaInfo": {
+          "$ref": "#/definitions/protoRequestMetaInfoV1"
+        },
+        "UserVerifyInfo": {
+          "$ref": "#/definitions/protoUserVerifyInfoV1"
+        },
+        "SwcName": {
+          "type": "string"
+        }
+      }
+    },
+    "protoDeleteSwcAttachmentAnoResponse": {
+      "type": "object",
+      "properties": {
+        "metaInfo": {
+          "$ref": "#/definitions/protoResponseMetaInfoV1"
+        }
+      }
+    },
+    "protoDeleteSwcAttachmentApoRequest": {
+      "type": "object",
+      "properties": {
+        "metaInfo": {
+          "$ref": "#/definitions/protoRequestMetaInfoV1"
+        },
+        "UserVerifyInfo": {
+          "$ref": "#/definitions/protoUserVerifyInfoV1"
+        },
+        "SwcName": {
+          "type": "string"
+        }
+      }
+    },
+    "protoDeleteSwcAttachmentApoResponse": {
+      "type": "object",
+      "properties": {
+        "metaInfo": {
+          "$ref": "#/definitions/protoResponseMetaInfoV1"
         }
       }
     },
@@ -1972,6 +2330,64 @@
         }
       }
     },
+    "protoGetSwcAttachmentAnoRequest": {
+      "type": "object",
+      "properties": {
+        "metaInfo": {
+          "$ref": "#/definitions/protoRequestMetaInfoV1"
+        },
+        "UserVerifyInfo": {
+          "$ref": "#/definitions/protoUserVerifyInfoV1"
+        },
+        "SwcName": {
+          "type": "string"
+        }
+      }
+    },
+    "protoGetSwcAttachmentAnoResponse": {
+      "type": "object",
+      "properties": {
+        "metaInfo": {
+          "$ref": "#/definitions/protoResponseMetaInfoV1"
+        },
+        "SwcAttachmentAno": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/protoSwcAttachmentAnoV1"
+          }
+        }
+      }
+    },
+    "protoGetSwcAttachmentApoRequest": {
+      "type": "object",
+      "properties": {
+        "metaInfo": {
+          "$ref": "#/definitions/protoRequestMetaInfoV1"
+        },
+        "UserVerifyInfo": {
+          "$ref": "#/definitions/protoUserVerifyInfoV1"
+        },
+        "SwcName": {
+          "type": "string"
+        }
+      }
+    },
+    "protoGetSwcAttachmentApoResponse": {
+      "type": "object",
+      "properties": {
+        "metaInfo": {
+          "$ref": "#/definitions/protoResponseMetaInfoV1"
+        },
+        "SwcAttachmentApo": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/protoSwcAttachmentApoV1"
+          }
+        }
+      }
+    },
     "protoGetSwcFullNodeDataRequest": {
       "type": "object",
       "properties": {
@@ -2274,6 +2690,79 @@
         }
       }
     },
+    "protoSwcAttachmentAnoV1": {
+      "type": "object",
+      "properties": {
+        "APOFILE": {
+          "type": "string"
+        },
+        "ANOFILE": {
+          "type": "string"
+        }
+      }
+    },
+    "protoSwcAttachmentApoV1": {
+      "type": "object",
+      "properties": {
+        "N": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "orderinfo": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "comment": {
+          "type": "string"
+        },
+        "Z": {
+          "type": "number",
+          "format": "float"
+        },
+        "X": {
+          "type": "number",
+          "format": "float"
+        },
+        "Y": {
+          "type": "number",
+          "format": "float"
+        },
+        "Pixmax": {
+          "type": "number",
+          "format": "float"
+        },
+        "Intensity": {
+          "type": "number",
+          "format": "float"
+        },
+        "Sdev": {
+          "type": "number",
+          "format": "float"
+        },
+        "Volsize": {
+          "type": "number",
+          "format": "float"
+        },
+        "Mass": {
+          "type": "number",
+          "format": "float"
+        },
+        "ColorR": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "ColorG": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "ColorB": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
     "protoSwcDataV1": {
       "type": "object",
       "properties": {
@@ -2518,6 +3007,64 @@
         },
         "ProjectInfo": {
           "$ref": "#/definitions/protoProjectMetaInfoV1"
+        }
+      }
+    },
+    "protoUpdateSwcAttachmentAnoRequest": {
+      "type": "object",
+      "properties": {
+        "metaInfo": {
+          "$ref": "#/definitions/protoRequestMetaInfoV1"
+        },
+        "UserVerifyInfo": {
+          "$ref": "#/definitions/protoUserVerifyInfoV1"
+        },
+        "SwcName": {
+          "type": "string"
+        },
+        "NewSwcAttachmentAno": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/protoSwcAttachmentAnoV1"
+          }
+        }
+      }
+    },
+    "protoUpdateSwcAttachmentAnoResponse": {
+      "type": "object",
+      "properties": {
+        "metaInfo": {
+          "$ref": "#/definitions/protoResponseMetaInfoV1"
+        }
+      }
+    },
+    "protoUpdateSwcAttachmentApoRequest": {
+      "type": "object",
+      "properties": {
+        "metaInfo": {
+          "$ref": "#/definitions/protoRequestMetaInfoV1"
+        },
+        "UserVerifyInfo": {
+          "$ref": "#/definitions/protoUserVerifyInfoV1"
+        },
+        "SwcName": {
+          "type": "string"
+        },
+        "NewSwcAttachmentApo": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/protoSwcAttachmentApoV1"
+          }
+        }
+      }
+    },
+    "protoUpdateSwcAttachmentApoResponse": {
+      "type": "object",
+      "properties": {
+        "metaInfo": {
+          "$ref": "#/definitions/protoResponseMetaInfoV1"
         }
       }
     },

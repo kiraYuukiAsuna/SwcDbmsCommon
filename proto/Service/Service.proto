@@ -55,4 +55,15 @@ service DBMS {
     rpc UpdateDailyStatistics(UpdateDailyStatisticsRequest) returns (UpdateDailyStatisticsResponse){}
     rpc GetDailyStatistics(GetDailyStatisticsRequest) returns (GetDailyStatisticsResponse){}
     rpc GetAllDailyStatistics(GetAllDailyStatisticsRequest) returns (GetAllDailyStatisticsResponse){}
+
+    rpc CreateSwcAttachmentAno(CreateSwcAttachmentAnoRequest) returns (CreateSwcAttachmentAnoResponse){}
+    rpc DeleteSwcAttachmentAno(DeleteSwcAttachmentAnoRequest) returns (DeleteSwcAttachmentAnoResponse){}
+    rpc UpdateSwcAttachmentAno(UpdateSwcAttachmentAnoRequest) returns (UpdateSwcAttachmentAnoResponse){}
+    rpc GetSwcAttachmentAno(GetSwcAttachmentAnoRequest) returns (GetSwcAttachmentAnoResponse){}
+
+    rpc CreateSwcAttachmentApo(CreateSwcAttachmentApoRequest) returns (CreateSwcAttachmentApoResponse){}
+    rpc DeleteSwcAttachmentApo(DeleteSwcAttachmentApoRequest) returns (DeleteSwcAttachmentApoResponse){}
+    rpc UpdateSwcAttachmentApo(UpdateSwcAttachmentApoRequest) returns (UpdateSwcAttachmentApoResponse){}
+    rpc GetSwcAttachmentApo(GetSwcAttachmentApoRequest) returns (GetSwcAttachmentApoResponse){}
+
 }

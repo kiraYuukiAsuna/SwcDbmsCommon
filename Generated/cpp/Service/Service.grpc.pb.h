@@ -308,6 +308,62 @@ class DBMS final {
     std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::proto::GetAllDailyStatisticsResponse>> PrepareAsyncGetAllDailyStatistics(::grpc::ClientContext* context, const ::proto::GetAllDailyStatisticsRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::proto::GetAllDailyStatisticsResponse>>(PrepareAsyncGetAllDailyStatisticsRaw(context, request, cq));
     }
+    virtual ::grpc::Status CreateSwcAttachmentAno(::grpc::ClientContext* context, const ::proto::CreateSwcAttachmentAnoRequest& request, ::proto::CreateSwcAttachmentAnoResponse* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::proto::CreateSwcAttachmentAnoResponse>> AsyncCreateSwcAttachmentAno(::grpc::ClientContext* context, const ::proto::CreateSwcAttachmentAnoRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::proto::CreateSwcAttachmentAnoResponse>>(AsyncCreateSwcAttachmentAnoRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::proto::CreateSwcAttachmentAnoResponse>> PrepareAsyncCreateSwcAttachmentAno(::grpc::ClientContext* context, const ::proto::CreateSwcAttachmentAnoRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::proto::CreateSwcAttachmentAnoResponse>>(PrepareAsyncCreateSwcAttachmentAnoRaw(context, request, cq));
+    }
+    virtual ::grpc::Status DeleteSwcAttachmentAno(::grpc::ClientContext* context, const ::proto::DeleteSwcAttachmentAnoRequest& request, ::proto::DeleteSwcAttachmentAnoResponse* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::proto::DeleteSwcAttachmentAnoResponse>> AsyncDeleteSwcAttachmentAno(::grpc::ClientContext* context, const ::proto::DeleteSwcAttachmentAnoRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::proto::DeleteSwcAttachmentAnoResponse>>(AsyncDeleteSwcAttachmentAnoRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::proto::DeleteSwcAttachmentAnoResponse>> PrepareAsyncDeleteSwcAttachmentAno(::grpc::ClientContext* context, const ::proto::DeleteSwcAttachmentAnoRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::proto::DeleteSwcAttachmentAnoResponse>>(PrepareAsyncDeleteSwcAttachmentAnoRaw(context, request, cq));
+    }
+    virtual ::grpc::Status UpdateSwcAttachmentAno(::grpc::ClientContext* context, const ::proto::UpdateSwcAttachmentAnoRequest& request, ::proto::UpdateSwcAttachmentAnoResponse* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::proto::UpdateSwcAttachmentAnoResponse>> AsyncUpdateSwcAttachmentAno(::grpc::ClientContext* context, const ::proto::UpdateSwcAttachmentAnoRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::proto::UpdateSwcAttachmentAnoResponse>>(AsyncUpdateSwcAttachmentAnoRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::proto::UpdateSwcAttachmentAnoResponse>> PrepareAsyncUpdateSwcAttachmentAno(::grpc::ClientContext* context, const ::proto::UpdateSwcAttachmentAnoRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::proto::UpdateSwcAttachmentAnoResponse>>(PrepareAsyncUpdateSwcAttachmentAnoRaw(context, request, cq));
+    }
+    virtual ::grpc::Status GetSwcAttachmentAno(::grpc::ClientContext* context, const ::proto::GetSwcAttachmentAnoRequest& request, ::proto::GetSwcAttachmentAnoResponse* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::proto::GetSwcAttachmentAnoResponse>> AsyncGetSwcAttachmentAno(::grpc::ClientContext* context, const ::proto::GetSwcAttachmentAnoRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::proto::GetSwcAttachmentAnoResponse>>(AsyncGetSwcAttachmentAnoRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::proto::GetSwcAttachmentAnoResponse>> PrepareAsyncGetSwcAttachmentAno(::grpc::ClientContext* context, const ::proto::GetSwcAttachmentAnoRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::proto::GetSwcAttachmentAnoResponse>>(PrepareAsyncGetSwcAttachmentAnoRaw(context, request, cq));
+    }
+    virtual ::grpc::Status CreateSwcAttachmentApo(::grpc::ClientContext* context, const ::proto::CreateSwcAttachmentApoRequest& request, ::proto::CreateSwcAttachmentApoResponse* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::proto::CreateSwcAttachmentApoResponse>> AsyncCreateSwcAttachmentApo(::grpc::ClientContext* context, const ::proto::CreateSwcAttachmentApoRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::proto::CreateSwcAttachmentApoResponse>>(AsyncCreateSwcAttachmentApoRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::proto::CreateSwcAttachmentApoResponse>> PrepareAsyncCreateSwcAttachmentApo(::grpc::ClientContext* context, const ::proto::CreateSwcAttachmentApoRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::proto::CreateSwcAttachmentApoResponse>>(PrepareAsyncCreateSwcAttachmentApoRaw(context, request, cq));
+    }
+    virtual ::grpc::Status DeleteSwcAttachmentApo(::grpc::ClientContext* context, const ::proto::DeleteSwcAttachmentApoRequest& request, ::proto::DeleteSwcAttachmentApoResponse* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::proto::DeleteSwcAttachmentApoResponse>> AsyncDeleteSwcAttachmentApo(::grpc::ClientContext* context, const ::proto::DeleteSwcAttachmentApoRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::proto::DeleteSwcAttachmentApoResponse>>(AsyncDeleteSwcAttachmentApoRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::proto::DeleteSwcAttachmentApoResponse>> PrepareAsyncDeleteSwcAttachmentApo(::grpc::ClientContext* context, const ::proto::DeleteSwcAttachmentApoRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::proto::DeleteSwcAttachmentApoResponse>>(PrepareAsyncDeleteSwcAttachmentApoRaw(context, request, cq));
+    }
+    virtual ::grpc::Status UpdateSwcAttachmentApo(::grpc::ClientContext* context, const ::proto::UpdateSwcAttachmentApoRequest& request, ::proto::UpdateSwcAttachmentApoResponse* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::proto::UpdateSwcAttachmentApoResponse>> AsyncUpdateSwcAttachmentApo(::grpc::ClientContext* context, const ::proto::UpdateSwcAttachmentApoRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::proto::UpdateSwcAttachmentApoResponse>>(AsyncUpdateSwcAttachmentApoRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::proto::UpdateSwcAttachmentApoResponse>> PrepareAsyncUpdateSwcAttachmentApo(::grpc::ClientContext* context, const ::proto::UpdateSwcAttachmentApoRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::proto::UpdateSwcAttachmentApoResponse>>(PrepareAsyncUpdateSwcAttachmentApoRaw(context, request, cq));
+    }
+    virtual ::grpc::Status GetSwcAttachmentApo(::grpc::ClientContext* context, const ::proto::GetSwcAttachmentApoRequest& request, ::proto::GetSwcAttachmentApoResponse* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::proto::GetSwcAttachmentApoResponse>> AsyncGetSwcAttachmentApo(::grpc::ClientContext* context, const ::proto::GetSwcAttachmentApoRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::proto::GetSwcAttachmentApoResponse>>(AsyncGetSwcAttachmentApoRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::proto::GetSwcAttachmentApoResponse>> PrepareAsyncGetSwcAttachmentApo(::grpc::ClientContext* context, const ::proto::GetSwcAttachmentApoRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::proto::GetSwcAttachmentApoResponse>>(PrepareAsyncGetSwcAttachmentApoRaw(context, request, cq));
+    }
     class async_interface {
      public:
       virtual ~async_interface() {}
@@ -389,6 +445,22 @@ class DBMS final {
       virtual void GetDailyStatistics(::grpc::ClientContext* context, const ::proto::GetDailyStatisticsRequest* request, ::proto::GetDailyStatisticsResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
       virtual void GetAllDailyStatistics(::grpc::ClientContext* context, const ::proto::GetAllDailyStatisticsRequest* request, ::proto::GetAllDailyStatisticsResponse* response, std::function<void(::grpc::Status)>) = 0;
       virtual void GetAllDailyStatistics(::grpc::ClientContext* context, const ::proto::GetAllDailyStatisticsRequest* request, ::proto::GetAllDailyStatisticsResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      virtual void CreateSwcAttachmentAno(::grpc::ClientContext* context, const ::proto::CreateSwcAttachmentAnoRequest* request, ::proto::CreateSwcAttachmentAnoResponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void CreateSwcAttachmentAno(::grpc::ClientContext* context, const ::proto::CreateSwcAttachmentAnoRequest* request, ::proto::CreateSwcAttachmentAnoResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      virtual void DeleteSwcAttachmentAno(::grpc::ClientContext* context, const ::proto::DeleteSwcAttachmentAnoRequest* request, ::proto::DeleteSwcAttachmentAnoResponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void DeleteSwcAttachmentAno(::grpc::ClientContext* context, const ::proto::DeleteSwcAttachmentAnoRequest* request, ::proto::DeleteSwcAttachmentAnoResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      virtual void UpdateSwcAttachmentAno(::grpc::ClientContext* context, const ::proto::UpdateSwcAttachmentAnoRequest* request, ::proto::UpdateSwcAttachmentAnoResponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void UpdateSwcAttachmentAno(::grpc::ClientContext* context, const ::proto::UpdateSwcAttachmentAnoRequest* request, ::proto::UpdateSwcAttachmentAnoResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      virtual void GetSwcAttachmentAno(::grpc::ClientContext* context, const ::proto::GetSwcAttachmentAnoRequest* request, ::proto::GetSwcAttachmentAnoResponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void GetSwcAttachmentAno(::grpc::ClientContext* context, const ::proto::GetSwcAttachmentAnoRequest* request, ::proto::GetSwcAttachmentAnoResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      virtual void CreateSwcAttachmentApo(::grpc::ClientContext* context, const ::proto::CreateSwcAttachmentApoRequest* request, ::proto::CreateSwcAttachmentApoResponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void CreateSwcAttachmentApo(::grpc::ClientContext* context, const ::proto::CreateSwcAttachmentApoRequest* request, ::proto::CreateSwcAttachmentApoResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      virtual void DeleteSwcAttachmentApo(::grpc::ClientContext* context, const ::proto::DeleteSwcAttachmentApoRequest* request, ::proto::DeleteSwcAttachmentApoResponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void DeleteSwcAttachmentApo(::grpc::ClientContext* context, const ::proto::DeleteSwcAttachmentApoRequest* request, ::proto::DeleteSwcAttachmentApoResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      virtual void UpdateSwcAttachmentApo(::grpc::ClientContext* context, const ::proto::UpdateSwcAttachmentApoRequest* request, ::proto::UpdateSwcAttachmentApoResponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void UpdateSwcAttachmentApo(::grpc::ClientContext* context, const ::proto::UpdateSwcAttachmentApoRequest* request, ::proto::UpdateSwcAttachmentApoResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      virtual void GetSwcAttachmentApo(::grpc::ClientContext* context, const ::proto::GetSwcAttachmentApoRequest* request, ::proto::GetSwcAttachmentApoResponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void GetSwcAttachmentApo(::grpc::ClientContext* context, const ::proto::GetSwcAttachmentApoRequest* request, ::proto::GetSwcAttachmentApoResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
     };
     typedef class async_interface experimental_async_interface;
     virtual class async_interface* async() { return nullptr; }
@@ -472,6 +544,22 @@ class DBMS final {
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::proto::GetDailyStatisticsResponse>* PrepareAsyncGetDailyStatisticsRaw(::grpc::ClientContext* context, const ::proto::GetDailyStatisticsRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::proto::GetAllDailyStatisticsResponse>* AsyncGetAllDailyStatisticsRaw(::grpc::ClientContext* context, const ::proto::GetAllDailyStatisticsRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::proto::GetAllDailyStatisticsResponse>* PrepareAsyncGetAllDailyStatisticsRaw(::grpc::ClientContext* context, const ::proto::GetAllDailyStatisticsRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::proto::CreateSwcAttachmentAnoResponse>* AsyncCreateSwcAttachmentAnoRaw(::grpc::ClientContext* context, const ::proto::CreateSwcAttachmentAnoRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::proto::CreateSwcAttachmentAnoResponse>* PrepareAsyncCreateSwcAttachmentAnoRaw(::grpc::ClientContext* context, const ::proto::CreateSwcAttachmentAnoRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::proto::DeleteSwcAttachmentAnoResponse>* AsyncDeleteSwcAttachmentAnoRaw(::grpc::ClientContext* context, const ::proto::DeleteSwcAttachmentAnoRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::proto::DeleteSwcAttachmentAnoResponse>* PrepareAsyncDeleteSwcAttachmentAnoRaw(::grpc::ClientContext* context, const ::proto::DeleteSwcAttachmentAnoRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::proto::UpdateSwcAttachmentAnoResponse>* AsyncUpdateSwcAttachmentAnoRaw(::grpc::ClientContext* context, const ::proto::UpdateSwcAttachmentAnoRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::proto::UpdateSwcAttachmentAnoResponse>* PrepareAsyncUpdateSwcAttachmentAnoRaw(::grpc::ClientContext* context, const ::proto::UpdateSwcAttachmentAnoRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::proto::GetSwcAttachmentAnoResponse>* AsyncGetSwcAttachmentAnoRaw(::grpc::ClientContext* context, const ::proto::GetSwcAttachmentAnoRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::proto::GetSwcAttachmentAnoResponse>* PrepareAsyncGetSwcAttachmentAnoRaw(::grpc::ClientContext* context, const ::proto::GetSwcAttachmentAnoRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::proto::CreateSwcAttachmentApoResponse>* AsyncCreateSwcAttachmentApoRaw(::grpc::ClientContext* context, const ::proto::CreateSwcAttachmentApoRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::proto::CreateSwcAttachmentApoResponse>* PrepareAsyncCreateSwcAttachmentApoRaw(::grpc::ClientContext* context, const ::proto::CreateSwcAttachmentApoRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::proto::DeleteSwcAttachmentApoResponse>* AsyncDeleteSwcAttachmentApoRaw(::grpc::ClientContext* context, const ::proto::DeleteSwcAttachmentApoRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::proto::DeleteSwcAttachmentApoResponse>* PrepareAsyncDeleteSwcAttachmentApoRaw(::grpc::ClientContext* context, const ::proto::DeleteSwcAttachmentApoRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::proto::UpdateSwcAttachmentApoResponse>* AsyncUpdateSwcAttachmentApoRaw(::grpc::ClientContext* context, const ::proto::UpdateSwcAttachmentApoRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::proto::UpdateSwcAttachmentApoResponse>* PrepareAsyncUpdateSwcAttachmentApoRaw(::grpc::ClientContext* context, const ::proto::UpdateSwcAttachmentApoRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::proto::GetSwcAttachmentApoResponse>* AsyncGetSwcAttachmentApoRaw(::grpc::ClientContext* context, const ::proto::GetSwcAttachmentApoRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::proto::GetSwcAttachmentApoResponse>* PrepareAsyncGetSwcAttachmentApoRaw(::grpc::ClientContext* context, const ::proto::GetSwcAttachmentApoRequest& request, ::grpc::CompletionQueue* cq) = 0;
   };
   class Stub final : public StubInterface {
    public:
@@ -749,6 +837,62 @@ class DBMS final {
     std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::proto::GetAllDailyStatisticsResponse>> PrepareAsyncGetAllDailyStatistics(::grpc::ClientContext* context, const ::proto::GetAllDailyStatisticsRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::proto::GetAllDailyStatisticsResponse>>(PrepareAsyncGetAllDailyStatisticsRaw(context, request, cq));
     }
+    ::grpc::Status CreateSwcAttachmentAno(::grpc::ClientContext* context, const ::proto::CreateSwcAttachmentAnoRequest& request, ::proto::CreateSwcAttachmentAnoResponse* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::proto::CreateSwcAttachmentAnoResponse>> AsyncCreateSwcAttachmentAno(::grpc::ClientContext* context, const ::proto::CreateSwcAttachmentAnoRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::proto::CreateSwcAttachmentAnoResponse>>(AsyncCreateSwcAttachmentAnoRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::proto::CreateSwcAttachmentAnoResponse>> PrepareAsyncCreateSwcAttachmentAno(::grpc::ClientContext* context, const ::proto::CreateSwcAttachmentAnoRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::proto::CreateSwcAttachmentAnoResponse>>(PrepareAsyncCreateSwcAttachmentAnoRaw(context, request, cq));
+    }
+    ::grpc::Status DeleteSwcAttachmentAno(::grpc::ClientContext* context, const ::proto::DeleteSwcAttachmentAnoRequest& request, ::proto::DeleteSwcAttachmentAnoResponse* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::proto::DeleteSwcAttachmentAnoResponse>> AsyncDeleteSwcAttachmentAno(::grpc::ClientContext* context, const ::proto::DeleteSwcAttachmentAnoRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::proto::DeleteSwcAttachmentAnoResponse>>(AsyncDeleteSwcAttachmentAnoRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::proto::DeleteSwcAttachmentAnoResponse>> PrepareAsyncDeleteSwcAttachmentAno(::grpc::ClientContext* context, const ::proto::DeleteSwcAttachmentAnoRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::proto::DeleteSwcAttachmentAnoResponse>>(PrepareAsyncDeleteSwcAttachmentAnoRaw(context, request, cq));
+    }
+    ::grpc::Status UpdateSwcAttachmentAno(::grpc::ClientContext* context, const ::proto::UpdateSwcAttachmentAnoRequest& request, ::proto::UpdateSwcAttachmentAnoResponse* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::proto::UpdateSwcAttachmentAnoResponse>> AsyncUpdateSwcAttachmentAno(::grpc::ClientContext* context, const ::proto::UpdateSwcAttachmentAnoRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::proto::UpdateSwcAttachmentAnoResponse>>(AsyncUpdateSwcAttachmentAnoRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::proto::UpdateSwcAttachmentAnoResponse>> PrepareAsyncUpdateSwcAttachmentAno(::grpc::ClientContext* context, const ::proto::UpdateSwcAttachmentAnoRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::proto::UpdateSwcAttachmentAnoResponse>>(PrepareAsyncUpdateSwcAttachmentAnoRaw(context, request, cq));
+    }
+    ::grpc::Status GetSwcAttachmentAno(::grpc::ClientContext* context, const ::proto::GetSwcAttachmentAnoRequest& request, ::proto::GetSwcAttachmentAnoResponse* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::proto::GetSwcAttachmentAnoResponse>> AsyncGetSwcAttachmentAno(::grpc::ClientContext* context, const ::proto::GetSwcAttachmentAnoRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::proto::GetSwcAttachmentAnoResponse>>(AsyncGetSwcAttachmentAnoRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::proto::GetSwcAttachmentAnoResponse>> PrepareAsyncGetSwcAttachmentAno(::grpc::ClientContext* context, const ::proto::GetSwcAttachmentAnoRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::proto::GetSwcAttachmentAnoResponse>>(PrepareAsyncGetSwcAttachmentAnoRaw(context, request, cq));
+    }
+    ::grpc::Status CreateSwcAttachmentApo(::grpc::ClientContext* context, const ::proto::CreateSwcAttachmentApoRequest& request, ::proto::CreateSwcAttachmentApoResponse* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::proto::CreateSwcAttachmentApoResponse>> AsyncCreateSwcAttachmentApo(::grpc::ClientContext* context, const ::proto::CreateSwcAttachmentApoRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::proto::CreateSwcAttachmentApoResponse>>(AsyncCreateSwcAttachmentApoRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::proto::CreateSwcAttachmentApoResponse>> PrepareAsyncCreateSwcAttachmentApo(::grpc::ClientContext* context, const ::proto::CreateSwcAttachmentApoRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::proto::CreateSwcAttachmentApoResponse>>(PrepareAsyncCreateSwcAttachmentApoRaw(context, request, cq));
+    }
+    ::grpc::Status DeleteSwcAttachmentApo(::grpc::ClientContext* context, const ::proto::DeleteSwcAttachmentApoRequest& request, ::proto::DeleteSwcAttachmentApoResponse* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::proto::DeleteSwcAttachmentApoResponse>> AsyncDeleteSwcAttachmentApo(::grpc::ClientContext* context, const ::proto::DeleteSwcAttachmentApoRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::proto::DeleteSwcAttachmentApoResponse>>(AsyncDeleteSwcAttachmentApoRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::proto::DeleteSwcAttachmentApoResponse>> PrepareAsyncDeleteSwcAttachmentApo(::grpc::ClientContext* context, const ::proto::DeleteSwcAttachmentApoRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::proto::DeleteSwcAttachmentApoResponse>>(PrepareAsyncDeleteSwcAttachmentApoRaw(context, request, cq));
+    }
+    ::grpc::Status UpdateSwcAttachmentApo(::grpc::ClientContext* context, const ::proto::UpdateSwcAttachmentApoRequest& request, ::proto::UpdateSwcAttachmentApoResponse* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::proto::UpdateSwcAttachmentApoResponse>> AsyncUpdateSwcAttachmentApo(::grpc::ClientContext* context, const ::proto::UpdateSwcAttachmentApoRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::proto::UpdateSwcAttachmentApoResponse>>(AsyncUpdateSwcAttachmentApoRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::proto::UpdateSwcAttachmentApoResponse>> PrepareAsyncUpdateSwcAttachmentApo(::grpc::ClientContext* context, const ::proto::UpdateSwcAttachmentApoRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::proto::UpdateSwcAttachmentApoResponse>>(PrepareAsyncUpdateSwcAttachmentApoRaw(context, request, cq));
+    }
+    ::grpc::Status GetSwcAttachmentApo(::grpc::ClientContext* context, const ::proto::GetSwcAttachmentApoRequest& request, ::proto::GetSwcAttachmentApoResponse* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::proto::GetSwcAttachmentApoResponse>> AsyncGetSwcAttachmentApo(::grpc::ClientContext* context, const ::proto::GetSwcAttachmentApoRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::proto::GetSwcAttachmentApoResponse>>(AsyncGetSwcAttachmentApoRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::proto::GetSwcAttachmentApoResponse>> PrepareAsyncGetSwcAttachmentApo(::grpc::ClientContext* context, const ::proto::GetSwcAttachmentApoRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::proto::GetSwcAttachmentApoResponse>>(PrepareAsyncGetSwcAttachmentApoRaw(context, request, cq));
+    }
     class async final :
       public StubInterface::async_interface {
      public:
@@ -830,6 +974,22 @@ class DBMS final {
       void GetDailyStatistics(::grpc::ClientContext* context, const ::proto::GetDailyStatisticsRequest* request, ::proto::GetDailyStatisticsResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
       void GetAllDailyStatistics(::grpc::ClientContext* context, const ::proto::GetAllDailyStatisticsRequest* request, ::proto::GetAllDailyStatisticsResponse* response, std::function<void(::grpc::Status)>) override;
       void GetAllDailyStatistics(::grpc::ClientContext* context, const ::proto::GetAllDailyStatisticsRequest* request, ::proto::GetAllDailyStatisticsResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      void CreateSwcAttachmentAno(::grpc::ClientContext* context, const ::proto::CreateSwcAttachmentAnoRequest* request, ::proto::CreateSwcAttachmentAnoResponse* response, std::function<void(::grpc::Status)>) override;
+      void CreateSwcAttachmentAno(::grpc::ClientContext* context, const ::proto::CreateSwcAttachmentAnoRequest* request, ::proto::CreateSwcAttachmentAnoResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      void DeleteSwcAttachmentAno(::grpc::ClientContext* context, const ::proto::DeleteSwcAttachmentAnoRequest* request, ::proto::DeleteSwcAttachmentAnoResponse* response, std::function<void(::grpc::Status)>) override;
+      void DeleteSwcAttachmentAno(::grpc::ClientContext* context, const ::proto::DeleteSwcAttachmentAnoRequest* request, ::proto::DeleteSwcAttachmentAnoResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      void UpdateSwcAttachmentAno(::grpc::ClientContext* context, const ::proto::UpdateSwcAttachmentAnoRequest* request, ::proto::UpdateSwcAttachmentAnoResponse* response, std::function<void(::grpc::Status)>) override;
+      void UpdateSwcAttachmentAno(::grpc::ClientContext* context, const ::proto::UpdateSwcAttachmentAnoRequest* request, ::proto::UpdateSwcAttachmentAnoResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      void GetSwcAttachmentAno(::grpc::ClientContext* context, const ::proto::GetSwcAttachmentAnoRequest* request, ::proto::GetSwcAttachmentAnoResponse* response, std::function<void(::grpc::Status)>) override;
+      void GetSwcAttachmentAno(::grpc::ClientContext* context, const ::proto::GetSwcAttachmentAnoRequest* request, ::proto::GetSwcAttachmentAnoResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      void CreateSwcAttachmentApo(::grpc::ClientContext* context, const ::proto::CreateSwcAttachmentApoRequest* request, ::proto::CreateSwcAttachmentApoResponse* response, std::function<void(::grpc::Status)>) override;
+      void CreateSwcAttachmentApo(::grpc::ClientContext* context, const ::proto::CreateSwcAttachmentApoRequest* request, ::proto::CreateSwcAttachmentApoResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      void DeleteSwcAttachmentApo(::grpc::ClientContext* context, const ::proto::DeleteSwcAttachmentApoRequest* request, ::proto::DeleteSwcAttachmentApoResponse* response, std::function<void(::grpc::Status)>) override;
+      void DeleteSwcAttachmentApo(::grpc::ClientContext* context, const ::proto::DeleteSwcAttachmentApoRequest* request, ::proto::DeleteSwcAttachmentApoResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      void UpdateSwcAttachmentApo(::grpc::ClientContext* context, const ::proto::UpdateSwcAttachmentApoRequest* request, ::proto::UpdateSwcAttachmentApoResponse* response, std::function<void(::grpc::Status)>) override;
+      void UpdateSwcAttachmentApo(::grpc::ClientContext* context, const ::proto::UpdateSwcAttachmentApoRequest* request, ::proto::UpdateSwcAttachmentApoResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      void GetSwcAttachmentApo(::grpc::ClientContext* context, const ::proto::GetSwcAttachmentApoRequest* request, ::proto::GetSwcAttachmentApoResponse* response, std::function<void(::grpc::Status)>) override;
+      void GetSwcAttachmentApo(::grpc::ClientContext* context, const ::proto::GetSwcAttachmentApoRequest* request, ::proto::GetSwcAttachmentApoResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
      private:
       friend class Stub;
       explicit async(Stub* stub): stub_(stub) { }
@@ -919,6 +1079,22 @@ class DBMS final {
     ::grpc::ClientAsyncResponseReader< ::proto::GetDailyStatisticsResponse>* PrepareAsyncGetDailyStatisticsRaw(::grpc::ClientContext* context, const ::proto::GetDailyStatisticsRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::proto::GetAllDailyStatisticsResponse>* AsyncGetAllDailyStatisticsRaw(::grpc::ClientContext* context, const ::proto::GetAllDailyStatisticsRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::proto::GetAllDailyStatisticsResponse>* PrepareAsyncGetAllDailyStatisticsRaw(::grpc::ClientContext* context, const ::proto::GetAllDailyStatisticsRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::proto::CreateSwcAttachmentAnoResponse>* AsyncCreateSwcAttachmentAnoRaw(::grpc::ClientContext* context, const ::proto::CreateSwcAttachmentAnoRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::proto::CreateSwcAttachmentAnoResponse>* PrepareAsyncCreateSwcAttachmentAnoRaw(::grpc::ClientContext* context, const ::proto::CreateSwcAttachmentAnoRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::proto::DeleteSwcAttachmentAnoResponse>* AsyncDeleteSwcAttachmentAnoRaw(::grpc::ClientContext* context, const ::proto::DeleteSwcAttachmentAnoRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::proto::DeleteSwcAttachmentAnoResponse>* PrepareAsyncDeleteSwcAttachmentAnoRaw(::grpc::ClientContext* context, const ::proto::DeleteSwcAttachmentAnoRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::proto::UpdateSwcAttachmentAnoResponse>* AsyncUpdateSwcAttachmentAnoRaw(::grpc::ClientContext* context, const ::proto::UpdateSwcAttachmentAnoRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::proto::UpdateSwcAttachmentAnoResponse>* PrepareAsyncUpdateSwcAttachmentAnoRaw(::grpc::ClientContext* context, const ::proto::UpdateSwcAttachmentAnoRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::proto::GetSwcAttachmentAnoResponse>* AsyncGetSwcAttachmentAnoRaw(::grpc::ClientContext* context, const ::proto::GetSwcAttachmentAnoRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::proto::GetSwcAttachmentAnoResponse>* PrepareAsyncGetSwcAttachmentAnoRaw(::grpc::ClientContext* context, const ::proto::GetSwcAttachmentAnoRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::proto::CreateSwcAttachmentApoResponse>* AsyncCreateSwcAttachmentApoRaw(::grpc::ClientContext* context, const ::proto::CreateSwcAttachmentApoRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::proto::CreateSwcAttachmentApoResponse>* PrepareAsyncCreateSwcAttachmentApoRaw(::grpc::ClientContext* context, const ::proto::CreateSwcAttachmentApoRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::proto::DeleteSwcAttachmentApoResponse>* AsyncDeleteSwcAttachmentApoRaw(::grpc::ClientContext* context, const ::proto::DeleteSwcAttachmentApoRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::proto::DeleteSwcAttachmentApoResponse>* PrepareAsyncDeleteSwcAttachmentApoRaw(::grpc::ClientContext* context, const ::proto::DeleteSwcAttachmentApoRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::proto::UpdateSwcAttachmentApoResponse>* AsyncUpdateSwcAttachmentApoRaw(::grpc::ClientContext* context, const ::proto::UpdateSwcAttachmentApoRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::proto::UpdateSwcAttachmentApoResponse>* PrepareAsyncUpdateSwcAttachmentApoRaw(::grpc::ClientContext* context, const ::proto::UpdateSwcAttachmentApoRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::proto::GetSwcAttachmentApoResponse>* AsyncGetSwcAttachmentApoRaw(::grpc::ClientContext* context, const ::proto::GetSwcAttachmentApoRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::proto::GetSwcAttachmentApoResponse>* PrepareAsyncGetSwcAttachmentApoRaw(::grpc::ClientContext* context, const ::proto::GetSwcAttachmentApoRequest& request, ::grpc::CompletionQueue* cq) override;
     const ::grpc::internal::RpcMethod rpcmethod_CreateUser_;
     const ::grpc::internal::RpcMethod rpcmethod_DeleteUser_;
     const ::grpc::internal::RpcMethod rpcmethod_UpdateUser_;
@@ -958,6 +1134,14 @@ class DBMS final {
     const ::grpc::internal::RpcMethod rpcmethod_UpdateDailyStatistics_;
     const ::grpc::internal::RpcMethod rpcmethod_GetDailyStatistics_;
     const ::grpc::internal::RpcMethod rpcmethod_GetAllDailyStatistics_;
+    const ::grpc::internal::RpcMethod rpcmethod_CreateSwcAttachmentAno_;
+    const ::grpc::internal::RpcMethod rpcmethod_DeleteSwcAttachmentAno_;
+    const ::grpc::internal::RpcMethod rpcmethod_UpdateSwcAttachmentAno_;
+    const ::grpc::internal::RpcMethod rpcmethod_GetSwcAttachmentAno_;
+    const ::grpc::internal::RpcMethod rpcmethod_CreateSwcAttachmentApo_;
+    const ::grpc::internal::RpcMethod rpcmethod_DeleteSwcAttachmentApo_;
+    const ::grpc::internal::RpcMethod rpcmethod_UpdateSwcAttachmentApo_;
+    const ::grpc::internal::RpcMethod rpcmethod_GetSwcAttachmentApo_;
   };
   static std::unique_ptr<Stub> NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options = ::grpc::StubOptions());
 
@@ -1004,6 +1188,14 @@ class DBMS final {
     virtual ::grpc::Status UpdateDailyStatistics(::grpc::ServerContext* context, const ::proto::UpdateDailyStatisticsRequest* request, ::proto::UpdateDailyStatisticsResponse* response);
     virtual ::grpc::Status GetDailyStatistics(::grpc::ServerContext* context, const ::proto::GetDailyStatisticsRequest* request, ::proto::GetDailyStatisticsResponse* response);
     virtual ::grpc::Status GetAllDailyStatistics(::grpc::ServerContext* context, const ::proto::GetAllDailyStatisticsRequest* request, ::proto::GetAllDailyStatisticsResponse* response);
+    virtual ::grpc::Status CreateSwcAttachmentAno(::grpc::ServerContext* context, const ::proto::CreateSwcAttachmentAnoRequest* request, ::proto::CreateSwcAttachmentAnoResponse* response);
+    virtual ::grpc::Status DeleteSwcAttachmentAno(::grpc::ServerContext* context, const ::proto::DeleteSwcAttachmentAnoRequest* request, ::proto::DeleteSwcAttachmentAnoResponse* response);
+    virtual ::grpc::Status UpdateSwcAttachmentAno(::grpc::ServerContext* context, const ::proto::UpdateSwcAttachmentAnoRequest* request, ::proto::UpdateSwcAttachmentAnoResponse* response);
+    virtual ::grpc::Status GetSwcAttachmentAno(::grpc::ServerContext* context, const ::proto::GetSwcAttachmentAnoRequest* request, ::proto::GetSwcAttachmentAnoResponse* response);
+    virtual ::grpc::Status CreateSwcAttachmentApo(::grpc::ServerContext* context, const ::proto::CreateSwcAttachmentApoRequest* request, ::proto::CreateSwcAttachmentApoResponse* response);
+    virtual ::grpc::Status DeleteSwcAttachmentApo(::grpc::ServerContext* context, const ::proto::DeleteSwcAttachmentApoRequest* request, ::proto::DeleteSwcAttachmentApoResponse* response);
+    virtual ::grpc::Status UpdateSwcAttachmentApo(::grpc::ServerContext* context, const ::proto::UpdateSwcAttachmentApoRequest* request, ::proto::UpdateSwcAttachmentApoResponse* response);
+    virtual ::grpc::Status GetSwcAttachmentApo(::grpc::ServerContext* context, const ::proto::GetSwcAttachmentApoRequest* request, ::proto::GetSwcAttachmentApoResponse* response);
   };
   template <class BaseClass>
   class WithAsyncMethod_CreateUser : public BaseClass {
@@ -1785,7 +1977,167 @@ class DBMS final {
       ::grpc::Service::RequestAsyncUnary(38, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
-  typedef WithAsyncMethod_CreateUser<WithAsyncMethod_DeleteUser<WithAsyncMethod_UpdateUser<WithAsyncMethod_GetUser<WithAsyncMethod_GetAllUser<WithAsyncMethod_UserLogin<WithAsyncMethod_UserLogout<WithAsyncMethod_UserOnlineHeartBeatNotifications<WithAsyncMethod_GetUserPermissionGroup<WithAsyncMethod_GetPermissionGroup<WithAsyncMethod_GetAllPermissionGroup<WithAsyncMethod_ChangeUserPermissionGroup<WithAsyncMethod_CreateProject<WithAsyncMethod_DeleteProject<WithAsyncMethod_UpdateProject<WithAsyncMethod_GetProject<WithAsyncMethod_GetAllProject<WithAsyncMethod_CreateSwc<WithAsyncMethod_DeleteSwc<WithAsyncMethod_UpdateSwc<WithAsyncMethod_GetSwcMetaInfo<WithAsyncMethod_GetAllSwcMetaInfo<WithAsyncMethod_CreateSwcSnapshot<WithAsyncMethod_GetAllSnapshotMetaInfo<WithAsyncMethod_GetSnapshot<WithAsyncMethod_GetAllIncrementOperationMetaInfo<WithAsyncMethod_GetIncrementOperation<WithAsyncMethod_CreateSwcNodeData<WithAsyncMethod_DeleteSwcNodeData<WithAsyncMethod_UpdateSwcNodeData<WithAsyncMethod_GetSwcNodeData<WithAsyncMethod_GetSwcFullNodeData<WithAsyncMethod_GetSwcNodeDataListByTimeAndUser<WithAsyncMethod_BackupFullDatabase<WithAsyncMethod_CreateDailyStatistics<WithAsyncMethod_DeleteDailyStatistics<WithAsyncMethod_UpdateDailyStatistics<WithAsyncMethod_GetDailyStatistics<WithAsyncMethod_GetAllDailyStatistics<Service > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > AsyncService;
+  template <class BaseClass>
+  class WithAsyncMethod_CreateSwcAttachmentAno : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithAsyncMethod_CreateSwcAttachmentAno() {
+      ::grpc::Service::MarkMethodAsync(39);
+    }
+    ~WithAsyncMethod_CreateSwcAttachmentAno() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status CreateSwcAttachmentAno(::grpc::ServerContext* /*context*/, const ::proto::CreateSwcAttachmentAnoRequest* /*request*/, ::proto::CreateSwcAttachmentAnoResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestCreateSwcAttachmentAno(::grpc::ServerContext* context, ::proto::CreateSwcAttachmentAnoRequest* request, ::grpc::ServerAsyncResponseWriter< ::proto::CreateSwcAttachmentAnoResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(39, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithAsyncMethod_DeleteSwcAttachmentAno : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithAsyncMethod_DeleteSwcAttachmentAno() {
+      ::grpc::Service::MarkMethodAsync(40);
+    }
+    ~WithAsyncMethod_DeleteSwcAttachmentAno() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status DeleteSwcAttachmentAno(::grpc::ServerContext* /*context*/, const ::proto::DeleteSwcAttachmentAnoRequest* /*request*/, ::proto::DeleteSwcAttachmentAnoResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestDeleteSwcAttachmentAno(::grpc::ServerContext* context, ::proto::DeleteSwcAttachmentAnoRequest* request, ::grpc::ServerAsyncResponseWriter< ::proto::DeleteSwcAttachmentAnoResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(40, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithAsyncMethod_UpdateSwcAttachmentAno : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithAsyncMethod_UpdateSwcAttachmentAno() {
+      ::grpc::Service::MarkMethodAsync(41);
+    }
+    ~WithAsyncMethod_UpdateSwcAttachmentAno() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status UpdateSwcAttachmentAno(::grpc::ServerContext* /*context*/, const ::proto::UpdateSwcAttachmentAnoRequest* /*request*/, ::proto::UpdateSwcAttachmentAnoResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestUpdateSwcAttachmentAno(::grpc::ServerContext* context, ::proto::UpdateSwcAttachmentAnoRequest* request, ::grpc::ServerAsyncResponseWriter< ::proto::UpdateSwcAttachmentAnoResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(41, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithAsyncMethod_GetSwcAttachmentAno : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithAsyncMethod_GetSwcAttachmentAno() {
+      ::grpc::Service::MarkMethodAsync(42);
+    }
+    ~WithAsyncMethod_GetSwcAttachmentAno() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetSwcAttachmentAno(::grpc::ServerContext* /*context*/, const ::proto::GetSwcAttachmentAnoRequest* /*request*/, ::proto::GetSwcAttachmentAnoResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestGetSwcAttachmentAno(::grpc::ServerContext* context, ::proto::GetSwcAttachmentAnoRequest* request, ::grpc::ServerAsyncResponseWriter< ::proto::GetSwcAttachmentAnoResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(42, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithAsyncMethod_CreateSwcAttachmentApo : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithAsyncMethod_CreateSwcAttachmentApo() {
+      ::grpc::Service::MarkMethodAsync(43);
+    }
+    ~WithAsyncMethod_CreateSwcAttachmentApo() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status CreateSwcAttachmentApo(::grpc::ServerContext* /*context*/, const ::proto::CreateSwcAttachmentApoRequest* /*request*/, ::proto::CreateSwcAttachmentApoResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestCreateSwcAttachmentApo(::grpc::ServerContext* context, ::proto::CreateSwcAttachmentApoRequest* request, ::grpc::ServerAsyncResponseWriter< ::proto::CreateSwcAttachmentApoResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(43, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithAsyncMethod_DeleteSwcAttachmentApo : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithAsyncMethod_DeleteSwcAttachmentApo() {
+      ::grpc::Service::MarkMethodAsync(44);
+    }
+    ~WithAsyncMethod_DeleteSwcAttachmentApo() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status DeleteSwcAttachmentApo(::grpc::ServerContext* /*context*/, const ::proto::DeleteSwcAttachmentApoRequest* /*request*/, ::proto::DeleteSwcAttachmentApoResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestDeleteSwcAttachmentApo(::grpc::ServerContext* context, ::proto::DeleteSwcAttachmentApoRequest* request, ::grpc::ServerAsyncResponseWriter< ::proto::DeleteSwcAttachmentApoResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(44, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithAsyncMethod_UpdateSwcAttachmentApo : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithAsyncMethod_UpdateSwcAttachmentApo() {
+      ::grpc::Service::MarkMethodAsync(45);
+    }
+    ~WithAsyncMethod_UpdateSwcAttachmentApo() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status UpdateSwcAttachmentApo(::grpc::ServerContext* /*context*/, const ::proto::UpdateSwcAttachmentApoRequest* /*request*/, ::proto::UpdateSwcAttachmentApoResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestUpdateSwcAttachmentApo(::grpc::ServerContext* context, ::proto::UpdateSwcAttachmentApoRequest* request, ::grpc::ServerAsyncResponseWriter< ::proto::UpdateSwcAttachmentApoResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(45, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithAsyncMethod_GetSwcAttachmentApo : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithAsyncMethod_GetSwcAttachmentApo() {
+      ::grpc::Service::MarkMethodAsync(46);
+    }
+    ~WithAsyncMethod_GetSwcAttachmentApo() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetSwcAttachmentApo(::grpc::ServerContext* /*context*/, const ::proto::GetSwcAttachmentApoRequest* /*request*/, ::proto::GetSwcAttachmentApoResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestGetSwcAttachmentApo(::grpc::ServerContext* context, ::proto::GetSwcAttachmentApoRequest* request, ::grpc::ServerAsyncResponseWriter< ::proto::GetSwcAttachmentApoResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(46, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  typedef WithAsyncMethod_CreateUser<WithAsyncMethod_DeleteUser<WithAsyncMethod_UpdateUser<WithAsyncMethod_GetUser<WithAsyncMethod_GetAllUser<WithAsyncMethod_UserLogin<WithAsyncMethod_UserLogout<WithAsyncMethod_UserOnlineHeartBeatNotifications<WithAsyncMethod_GetUserPermissionGroup<WithAsyncMethod_GetPermissionGroup<WithAsyncMethod_GetAllPermissionGroup<WithAsyncMethod_ChangeUserPermissionGroup<WithAsyncMethod_CreateProject<WithAsyncMethod_DeleteProject<WithAsyncMethod_UpdateProject<WithAsyncMethod_GetProject<WithAsyncMethod_GetAllProject<WithAsyncMethod_CreateSwc<WithAsyncMethod_DeleteSwc<WithAsyncMethod_UpdateSwc<WithAsyncMethod_GetSwcMetaInfo<WithAsyncMethod_GetAllSwcMetaInfo<WithAsyncMethod_CreateSwcSnapshot<WithAsyncMethod_GetAllSnapshotMetaInfo<WithAsyncMethod_GetSnapshot<WithAsyncMethod_GetAllIncrementOperationMetaInfo<WithAsyncMethod_GetIncrementOperation<WithAsyncMethod_CreateSwcNodeData<WithAsyncMethod_DeleteSwcNodeData<WithAsyncMethod_UpdateSwcNodeData<WithAsyncMethod_GetSwcNodeData<WithAsyncMethod_GetSwcFullNodeData<WithAsyncMethod_GetSwcNodeDataListByTimeAndUser<WithAsyncMethod_BackupFullDatabase<WithAsyncMethod_CreateDailyStatistics<WithAsyncMethod_DeleteDailyStatistics<WithAsyncMethod_UpdateDailyStatistics<WithAsyncMethod_GetDailyStatistics<WithAsyncMethod_GetAllDailyStatistics<WithAsyncMethod_CreateSwcAttachmentAno<WithAsyncMethod_DeleteSwcAttachmentAno<WithAsyncMethod_UpdateSwcAttachmentAno<WithAsyncMethod_GetSwcAttachmentAno<WithAsyncMethod_CreateSwcAttachmentApo<WithAsyncMethod_DeleteSwcAttachmentApo<WithAsyncMethod_UpdateSwcAttachmentApo<WithAsyncMethod_GetSwcAttachmentApo<Service > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > AsyncService;
   template <class BaseClass>
   class WithCallbackMethod_CreateUser : public BaseClass {
    private:
@@ -2839,7 +3191,223 @@ class DBMS final {
     virtual ::grpc::ServerUnaryReactor* GetAllDailyStatistics(
       ::grpc::CallbackServerContext* /*context*/, const ::proto::GetAllDailyStatisticsRequest* /*request*/, ::proto::GetAllDailyStatisticsResponse* /*response*/)  { return nullptr; }
   };
-  typedef WithCallbackMethod_CreateUser<WithCallbackMethod_DeleteUser<WithCallbackMethod_UpdateUser<WithCallbackMethod_GetUser<WithCallbackMethod_GetAllUser<WithCallbackMethod_UserLogin<WithCallbackMethod_UserLogout<WithCallbackMethod_UserOnlineHeartBeatNotifications<WithCallbackMethod_GetUserPermissionGroup<WithCallbackMethod_GetPermissionGroup<WithCallbackMethod_GetAllPermissionGroup<WithCallbackMethod_ChangeUserPermissionGroup<WithCallbackMethod_CreateProject<WithCallbackMethod_DeleteProject<WithCallbackMethod_UpdateProject<WithCallbackMethod_GetProject<WithCallbackMethod_GetAllProject<WithCallbackMethod_CreateSwc<WithCallbackMethod_DeleteSwc<WithCallbackMethod_UpdateSwc<WithCallbackMethod_GetSwcMetaInfo<WithCallbackMethod_GetAllSwcMetaInfo<WithCallbackMethod_CreateSwcSnapshot<WithCallbackMethod_GetAllSnapshotMetaInfo<WithCallbackMethod_GetSnapshot<WithCallbackMethod_GetAllIncrementOperationMetaInfo<WithCallbackMethod_GetIncrementOperation<WithCallbackMethod_CreateSwcNodeData<WithCallbackMethod_DeleteSwcNodeData<WithCallbackMethod_UpdateSwcNodeData<WithCallbackMethod_GetSwcNodeData<WithCallbackMethod_GetSwcFullNodeData<WithCallbackMethod_GetSwcNodeDataListByTimeAndUser<WithCallbackMethod_BackupFullDatabase<WithCallbackMethod_CreateDailyStatistics<WithCallbackMethod_DeleteDailyStatistics<WithCallbackMethod_UpdateDailyStatistics<WithCallbackMethod_GetDailyStatistics<WithCallbackMethod_GetAllDailyStatistics<Service > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > CallbackService;
+  template <class BaseClass>
+  class WithCallbackMethod_CreateSwcAttachmentAno : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithCallbackMethod_CreateSwcAttachmentAno() {
+      ::grpc::Service::MarkMethodCallback(39,
+          new ::grpc::internal::CallbackUnaryHandler< ::proto::CreateSwcAttachmentAnoRequest, ::proto::CreateSwcAttachmentAnoResponse>(
+            [this](
+                   ::grpc::CallbackServerContext* context, const ::proto::CreateSwcAttachmentAnoRequest* request, ::proto::CreateSwcAttachmentAnoResponse* response) { return this->CreateSwcAttachmentAno(context, request, response); }));}
+    void SetMessageAllocatorFor_CreateSwcAttachmentAno(
+        ::grpc::MessageAllocator< ::proto::CreateSwcAttachmentAnoRequest, ::proto::CreateSwcAttachmentAnoResponse>* allocator) {
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(39);
+      static_cast<::grpc::internal::CallbackUnaryHandler< ::proto::CreateSwcAttachmentAnoRequest, ::proto::CreateSwcAttachmentAnoResponse>*>(handler)
+              ->SetMessageAllocator(allocator);
+    }
+    ~WithCallbackMethod_CreateSwcAttachmentAno() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status CreateSwcAttachmentAno(::grpc::ServerContext* /*context*/, const ::proto::CreateSwcAttachmentAnoRequest* /*request*/, ::proto::CreateSwcAttachmentAnoResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerUnaryReactor* CreateSwcAttachmentAno(
+      ::grpc::CallbackServerContext* /*context*/, const ::proto::CreateSwcAttachmentAnoRequest* /*request*/, ::proto::CreateSwcAttachmentAnoResponse* /*response*/)  { return nullptr; }
+  };
+  template <class BaseClass>
+  class WithCallbackMethod_DeleteSwcAttachmentAno : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithCallbackMethod_DeleteSwcAttachmentAno() {
+      ::grpc::Service::MarkMethodCallback(40,
+          new ::grpc::internal::CallbackUnaryHandler< ::proto::DeleteSwcAttachmentAnoRequest, ::proto::DeleteSwcAttachmentAnoResponse>(
+            [this](
+                   ::grpc::CallbackServerContext* context, const ::proto::DeleteSwcAttachmentAnoRequest* request, ::proto::DeleteSwcAttachmentAnoResponse* response) { return this->DeleteSwcAttachmentAno(context, request, response); }));}
+    void SetMessageAllocatorFor_DeleteSwcAttachmentAno(
+        ::grpc::MessageAllocator< ::proto::DeleteSwcAttachmentAnoRequest, ::proto::DeleteSwcAttachmentAnoResponse>* allocator) {
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(40);
+      static_cast<::grpc::internal::CallbackUnaryHandler< ::proto::DeleteSwcAttachmentAnoRequest, ::proto::DeleteSwcAttachmentAnoResponse>*>(handler)
+              ->SetMessageAllocator(allocator);
+    }
+    ~WithCallbackMethod_DeleteSwcAttachmentAno() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status DeleteSwcAttachmentAno(::grpc::ServerContext* /*context*/, const ::proto::DeleteSwcAttachmentAnoRequest* /*request*/, ::proto::DeleteSwcAttachmentAnoResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerUnaryReactor* DeleteSwcAttachmentAno(
+      ::grpc::CallbackServerContext* /*context*/, const ::proto::DeleteSwcAttachmentAnoRequest* /*request*/, ::proto::DeleteSwcAttachmentAnoResponse* /*response*/)  { return nullptr; }
+  };
+  template <class BaseClass>
+  class WithCallbackMethod_UpdateSwcAttachmentAno : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithCallbackMethod_UpdateSwcAttachmentAno() {
+      ::grpc::Service::MarkMethodCallback(41,
+          new ::grpc::internal::CallbackUnaryHandler< ::proto::UpdateSwcAttachmentAnoRequest, ::proto::UpdateSwcAttachmentAnoResponse>(
+            [this](
+                   ::grpc::CallbackServerContext* context, const ::proto::UpdateSwcAttachmentAnoRequest* request, ::proto::UpdateSwcAttachmentAnoResponse* response) { return this->UpdateSwcAttachmentAno(context, request, response); }));}
+    void SetMessageAllocatorFor_UpdateSwcAttachmentAno(
+        ::grpc::MessageAllocator< ::proto::UpdateSwcAttachmentAnoRequest, ::proto::UpdateSwcAttachmentAnoResponse>* allocator) {
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(41);
+      static_cast<::grpc::internal::CallbackUnaryHandler< ::proto::UpdateSwcAttachmentAnoRequest, ::proto::UpdateSwcAttachmentAnoResponse>*>(handler)
+              ->SetMessageAllocator(allocator);
+    }
+    ~WithCallbackMethod_UpdateSwcAttachmentAno() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status UpdateSwcAttachmentAno(::grpc::ServerContext* /*context*/, const ::proto::UpdateSwcAttachmentAnoRequest* /*request*/, ::proto::UpdateSwcAttachmentAnoResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerUnaryReactor* UpdateSwcAttachmentAno(
+      ::grpc::CallbackServerContext* /*context*/, const ::proto::UpdateSwcAttachmentAnoRequest* /*request*/, ::proto::UpdateSwcAttachmentAnoResponse* /*response*/)  { return nullptr; }
+  };
+  template <class BaseClass>
+  class WithCallbackMethod_GetSwcAttachmentAno : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithCallbackMethod_GetSwcAttachmentAno() {
+      ::grpc::Service::MarkMethodCallback(42,
+          new ::grpc::internal::CallbackUnaryHandler< ::proto::GetSwcAttachmentAnoRequest, ::proto::GetSwcAttachmentAnoResponse>(
+            [this](
+                   ::grpc::CallbackServerContext* context, const ::proto::GetSwcAttachmentAnoRequest* request, ::proto::GetSwcAttachmentAnoResponse* response) { return this->GetSwcAttachmentAno(context, request, response); }));}
+    void SetMessageAllocatorFor_GetSwcAttachmentAno(
+        ::grpc::MessageAllocator< ::proto::GetSwcAttachmentAnoRequest, ::proto::GetSwcAttachmentAnoResponse>* allocator) {
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(42);
+      static_cast<::grpc::internal::CallbackUnaryHandler< ::proto::GetSwcAttachmentAnoRequest, ::proto::GetSwcAttachmentAnoResponse>*>(handler)
+              ->SetMessageAllocator(allocator);
+    }
+    ~WithCallbackMethod_GetSwcAttachmentAno() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetSwcAttachmentAno(::grpc::ServerContext* /*context*/, const ::proto::GetSwcAttachmentAnoRequest* /*request*/, ::proto::GetSwcAttachmentAnoResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerUnaryReactor* GetSwcAttachmentAno(
+      ::grpc::CallbackServerContext* /*context*/, const ::proto::GetSwcAttachmentAnoRequest* /*request*/, ::proto::GetSwcAttachmentAnoResponse* /*response*/)  { return nullptr; }
+  };
+  template <class BaseClass>
+  class WithCallbackMethod_CreateSwcAttachmentApo : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithCallbackMethod_CreateSwcAttachmentApo() {
+      ::grpc::Service::MarkMethodCallback(43,
+          new ::grpc::internal::CallbackUnaryHandler< ::proto::CreateSwcAttachmentApoRequest, ::proto::CreateSwcAttachmentApoResponse>(
+            [this](
+                   ::grpc::CallbackServerContext* context, const ::proto::CreateSwcAttachmentApoRequest* request, ::proto::CreateSwcAttachmentApoResponse* response) { return this->CreateSwcAttachmentApo(context, request, response); }));}
+    void SetMessageAllocatorFor_CreateSwcAttachmentApo(
+        ::grpc::MessageAllocator< ::proto::CreateSwcAttachmentApoRequest, ::proto::CreateSwcAttachmentApoResponse>* allocator) {
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(43);
+      static_cast<::grpc::internal::CallbackUnaryHandler< ::proto::CreateSwcAttachmentApoRequest, ::proto::CreateSwcAttachmentApoResponse>*>(handler)
+              ->SetMessageAllocator(allocator);
+    }
+    ~WithCallbackMethod_CreateSwcAttachmentApo() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status CreateSwcAttachmentApo(::grpc::ServerContext* /*context*/, const ::proto::CreateSwcAttachmentApoRequest* /*request*/, ::proto::CreateSwcAttachmentApoResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerUnaryReactor* CreateSwcAttachmentApo(
+      ::grpc::CallbackServerContext* /*context*/, const ::proto::CreateSwcAttachmentApoRequest* /*request*/, ::proto::CreateSwcAttachmentApoResponse* /*response*/)  { return nullptr; }
+  };
+  template <class BaseClass>
+  class WithCallbackMethod_DeleteSwcAttachmentApo : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithCallbackMethod_DeleteSwcAttachmentApo() {
+      ::grpc::Service::MarkMethodCallback(44,
+          new ::grpc::internal::CallbackUnaryHandler< ::proto::DeleteSwcAttachmentApoRequest, ::proto::DeleteSwcAttachmentApoResponse>(
+            [this](
+                   ::grpc::CallbackServerContext* context, const ::proto::DeleteSwcAttachmentApoRequest* request, ::proto::DeleteSwcAttachmentApoResponse* response) { return this->DeleteSwcAttachmentApo(context, request, response); }));}
+    void SetMessageAllocatorFor_DeleteSwcAttachmentApo(
+        ::grpc::MessageAllocator< ::proto::DeleteSwcAttachmentApoRequest, ::proto::DeleteSwcAttachmentApoResponse>* allocator) {
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(44);
+      static_cast<::grpc::internal::CallbackUnaryHandler< ::proto::DeleteSwcAttachmentApoRequest, ::proto::DeleteSwcAttachmentApoResponse>*>(handler)
+              ->SetMessageAllocator(allocator);
+    }
+    ~WithCallbackMethod_DeleteSwcAttachmentApo() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status DeleteSwcAttachmentApo(::grpc::ServerContext* /*context*/, const ::proto::DeleteSwcAttachmentApoRequest* /*request*/, ::proto::DeleteSwcAttachmentApoResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerUnaryReactor* DeleteSwcAttachmentApo(
+      ::grpc::CallbackServerContext* /*context*/, const ::proto::DeleteSwcAttachmentApoRequest* /*request*/, ::proto::DeleteSwcAttachmentApoResponse* /*response*/)  { return nullptr; }
+  };
+  template <class BaseClass>
+  class WithCallbackMethod_UpdateSwcAttachmentApo : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithCallbackMethod_UpdateSwcAttachmentApo() {
+      ::grpc::Service::MarkMethodCallback(45,
+          new ::grpc::internal::CallbackUnaryHandler< ::proto::UpdateSwcAttachmentApoRequest, ::proto::UpdateSwcAttachmentApoResponse>(
+            [this](
+                   ::grpc::CallbackServerContext* context, const ::proto::UpdateSwcAttachmentApoRequest* request, ::proto::UpdateSwcAttachmentApoResponse* response) { return this->UpdateSwcAttachmentApo(context, request, response); }));}
+    void SetMessageAllocatorFor_UpdateSwcAttachmentApo(
+        ::grpc::MessageAllocator< ::proto::UpdateSwcAttachmentApoRequest, ::proto::UpdateSwcAttachmentApoResponse>* allocator) {
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(45);
+      static_cast<::grpc::internal::CallbackUnaryHandler< ::proto::UpdateSwcAttachmentApoRequest, ::proto::UpdateSwcAttachmentApoResponse>*>(handler)
+              ->SetMessageAllocator(allocator);
+    }
+    ~WithCallbackMethod_UpdateSwcAttachmentApo() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status UpdateSwcAttachmentApo(::grpc::ServerContext* /*context*/, const ::proto::UpdateSwcAttachmentApoRequest* /*request*/, ::proto::UpdateSwcAttachmentApoResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerUnaryReactor* UpdateSwcAttachmentApo(
+      ::grpc::CallbackServerContext* /*context*/, const ::proto::UpdateSwcAttachmentApoRequest* /*request*/, ::proto::UpdateSwcAttachmentApoResponse* /*response*/)  { return nullptr; }
+  };
+  template <class BaseClass>
+  class WithCallbackMethod_GetSwcAttachmentApo : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithCallbackMethod_GetSwcAttachmentApo() {
+      ::grpc::Service::MarkMethodCallback(46,
+          new ::grpc::internal::CallbackUnaryHandler< ::proto::GetSwcAttachmentApoRequest, ::proto::GetSwcAttachmentApoResponse>(
+            [this](
+                   ::grpc::CallbackServerContext* context, const ::proto::GetSwcAttachmentApoRequest* request, ::proto::GetSwcAttachmentApoResponse* response) { return this->GetSwcAttachmentApo(context, request, response); }));}
+    void SetMessageAllocatorFor_GetSwcAttachmentApo(
+        ::grpc::MessageAllocator< ::proto::GetSwcAttachmentApoRequest, ::proto::GetSwcAttachmentApoResponse>* allocator) {
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(46);
+      static_cast<::grpc::internal::CallbackUnaryHandler< ::proto::GetSwcAttachmentApoRequest, ::proto::GetSwcAttachmentApoResponse>*>(handler)
+              ->SetMessageAllocator(allocator);
+    }
+    ~WithCallbackMethod_GetSwcAttachmentApo() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetSwcAttachmentApo(::grpc::ServerContext* /*context*/, const ::proto::GetSwcAttachmentApoRequest* /*request*/, ::proto::GetSwcAttachmentApoResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerUnaryReactor* GetSwcAttachmentApo(
+      ::grpc::CallbackServerContext* /*context*/, const ::proto::GetSwcAttachmentApoRequest* /*request*/, ::proto::GetSwcAttachmentApoResponse* /*response*/)  { return nullptr; }
+  };
+  typedef WithCallbackMethod_CreateUser<WithCallbackMethod_DeleteUser<WithCallbackMethod_UpdateUser<WithCallbackMethod_GetUser<WithCallbackMethod_GetAllUser<WithCallbackMethod_UserLogin<WithCallbackMethod_UserLogout<WithCallbackMethod_UserOnlineHeartBeatNotifications<WithCallbackMethod_GetUserPermissionGroup<WithCallbackMethod_GetPermissionGroup<WithCallbackMethod_GetAllPermissionGroup<WithCallbackMethod_ChangeUserPermissionGroup<WithCallbackMethod_CreateProject<WithCallbackMethod_DeleteProject<WithCallbackMethod_UpdateProject<WithCallbackMethod_GetProject<WithCallbackMethod_GetAllProject<WithCallbackMethod_CreateSwc<WithCallbackMethod_DeleteSwc<WithCallbackMethod_UpdateSwc<WithCallbackMethod_GetSwcMetaInfo<WithCallbackMethod_GetAllSwcMetaInfo<WithCallbackMethod_CreateSwcSnapshot<WithCallbackMethod_GetAllSnapshotMetaInfo<WithCallbackMethod_GetSnapshot<WithCallbackMethod_GetAllIncrementOperationMetaInfo<WithCallbackMethod_GetIncrementOperation<WithCallbackMethod_CreateSwcNodeData<WithCallbackMethod_DeleteSwcNodeData<WithCallbackMethod_UpdateSwcNodeData<WithCallbackMethod_GetSwcNodeData<WithCallbackMethod_GetSwcFullNodeData<WithCallbackMethod_GetSwcNodeDataListByTimeAndUser<WithCallbackMethod_BackupFullDatabase<WithCallbackMethod_CreateDailyStatistics<WithCallbackMethod_DeleteDailyStatistics<WithCallbackMethod_UpdateDailyStatistics<WithCallbackMethod_GetDailyStatistics<WithCallbackMethod_GetAllDailyStatistics<WithCallbackMethod_CreateSwcAttachmentAno<WithCallbackMethod_DeleteSwcAttachmentAno<WithCallbackMethod_UpdateSwcAttachmentAno<WithCallbackMethod_GetSwcAttachmentAno<WithCallbackMethod_CreateSwcAttachmentApo<WithCallbackMethod_DeleteSwcAttachmentApo<WithCallbackMethod_UpdateSwcAttachmentApo<WithCallbackMethod_GetSwcAttachmentApo<Service > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > CallbackService;
   typedef CallbackService ExperimentalCallbackService;
   template <class BaseClass>
   class WithGenericMethod_CreateUser : public BaseClass {
@@ -3500,6 +4068,142 @@ class DBMS final {
     }
     // disable synchronous version of this method
     ::grpc::Status GetAllDailyStatistics(::grpc::ServerContext* /*context*/, const ::proto::GetAllDailyStatisticsRequest* /*request*/, ::proto::GetAllDailyStatisticsResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+  };
+  template <class BaseClass>
+  class WithGenericMethod_CreateSwcAttachmentAno : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithGenericMethod_CreateSwcAttachmentAno() {
+      ::grpc::Service::MarkMethodGeneric(39);
+    }
+    ~WithGenericMethod_CreateSwcAttachmentAno() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status CreateSwcAttachmentAno(::grpc::ServerContext* /*context*/, const ::proto::CreateSwcAttachmentAnoRequest* /*request*/, ::proto::CreateSwcAttachmentAnoResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+  };
+  template <class BaseClass>
+  class WithGenericMethod_DeleteSwcAttachmentAno : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithGenericMethod_DeleteSwcAttachmentAno() {
+      ::grpc::Service::MarkMethodGeneric(40);
+    }
+    ~WithGenericMethod_DeleteSwcAttachmentAno() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status DeleteSwcAttachmentAno(::grpc::ServerContext* /*context*/, const ::proto::DeleteSwcAttachmentAnoRequest* /*request*/, ::proto::DeleteSwcAttachmentAnoResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+  };
+  template <class BaseClass>
+  class WithGenericMethod_UpdateSwcAttachmentAno : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithGenericMethod_UpdateSwcAttachmentAno() {
+      ::grpc::Service::MarkMethodGeneric(41);
+    }
+    ~WithGenericMethod_UpdateSwcAttachmentAno() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status UpdateSwcAttachmentAno(::grpc::ServerContext* /*context*/, const ::proto::UpdateSwcAttachmentAnoRequest* /*request*/, ::proto::UpdateSwcAttachmentAnoResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+  };
+  template <class BaseClass>
+  class WithGenericMethod_GetSwcAttachmentAno : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithGenericMethod_GetSwcAttachmentAno() {
+      ::grpc::Service::MarkMethodGeneric(42);
+    }
+    ~WithGenericMethod_GetSwcAttachmentAno() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetSwcAttachmentAno(::grpc::ServerContext* /*context*/, const ::proto::GetSwcAttachmentAnoRequest* /*request*/, ::proto::GetSwcAttachmentAnoResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+  };
+  template <class BaseClass>
+  class WithGenericMethod_CreateSwcAttachmentApo : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithGenericMethod_CreateSwcAttachmentApo() {
+      ::grpc::Service::MarkMethodGeneric(43);
+    }
+    ~WithGenericMethod_CreateSwcAttachmentApo() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status CreateSwcAttachmentApo(::grpc::ServerContext* /*context*/, const ::proto::CreateSwcAttachmentApoRequest* /*request*/, ::proto::CreateSwcAttachmentApoResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+  };
+  template <class BaseClass>
+  class WithGenericMethod_DeleteSwcAttachmentApo : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithGenericMethod_DeleteSwcAttachmentApo() {
+      ::grpc::Service::MarkMethodGeneric(44);
+    }
+    ~WithGenericMethod_DeleteSwcAttachmentApo() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status DeleteSwcAttachmentApo(::grpc::ServerContext* /*context*/, const ::proto::DeleteSwcAttachmentApoRequest* /*request*/, ::proto::DeleteSwcAttachmentApoResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+  };
+  template <class BaseClass>
+  class WithGenericMethod_UpdateSwcAttachmentApo : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithGenericMethod_UpdateSwcAttachmentApo() {
+      ::grpc::Service::MarkMethodGeneric(45);
+    }
+    ~WithGenericMethod_UpdateSwcAttachmentApo() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status UpdateSwcAttachmentApo(::grpc::ServerContext* /*context*/, const ::proto::UpdateSwcAttachmentApoRequest* /*request*/, ::proto::UpdateSwcAttachmentApoResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+  };
+  template <class BaseClass>
+  class WithGenericMethod_GetSwcAttachmentApo : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithGenericMethod_GetSwcAttachmentApo() {
+      ::grpc::Service::MarkMethodGeneric(46);
+    }
+    ~WithGenericMethod_GetSwcAttachmentApo() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetSwcAttachmentApo(::grpc::ServerContext* /*context*/, const ::proto::GetSwcAttachmentApoRequest* /*request*/, ::proto::GetSwcAttachmentApoResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -4282,6 +4986,166 @@ class DBMS final {
     }
     void RequestGetAllDailyStatistics(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(38, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_CreateSwcAttachmentAno : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawMethod_CreateSwcAttachmentAno() {
+      ::grpc::Service::MarkMethodRaw(39);
+    }
+    ~WithRawMethod_CreateSwcAttachmentAno() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status CreateSwcAttachmentAno(::grpc::ServerContext* /*context*/, const ::proto::CreateSwcAttachmentAnoRequest* /*request*/, ::proto::CreateSwcAttachmentAnoResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestCreateSwcAttachmentAno(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(39, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_DeleteSwcAttachmentAno : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawMethod_DeleteSwcAttachmentAno() {
+      ::grpc::Service::MarkMethodRaw(40);
+    }
+    ~WithRawMethod_DeleteSwcAttachmentAno() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status DeleteSwcAttachmentAno(::grpc::ServerContext* /*context*/, const ::proto::DeleteSwcAttachmentAnoRequest* /*request*/, ::proto::DeleteSwcAttachmentAnoResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestDeleteSwcAttachmentAno(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(40, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_UpdateSwcAttachmentAno : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawMethod_UpdateSwcAttachmentAno() {
+      ::grpc::Service::MarkMethodRaw(41);
+    }
+    ~WithRawMethod_UpdateSwcAttachmentAno() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status UpdateSwcAttachmentAno(::grpc::ServerContext* /*context*/, const ::proto::UpdateSwcAttachmentAnoRequest* /*request*/, ::proto::UpdateSwcAttachmentAnoResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestUpdateSwcAttachmentAno(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(41, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_GetSwcAttachmentAno : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawMethod_GetSwcAttachmentAno() {
+      ::grpc::Service::MarkMethodRaw(42);
+    }
+    ~WithRawMethod_GetSwcAttachmentAno() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetSwcAttachmentAno(::grpc::ServerContext* /*context*/, const ::proto::GetSwcAttachmentAnoRequest* /*request*/, ::proto::GetSwcAttachmentAnoResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestGetSwcAttachmentAno(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(42, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_CreateSwcAttachmentApo : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawMethod_CreateSwcAttachmentApo() {
+      ::grpc::Service::MarkMethodRaw(43);
+    }
+    ~WithRawMethod_CreateSwcAttachmentApo() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status CreateSwcAttachmentApo(::grpc::ServerContext* /*context*/, const ::proto::CreateSwcAttachmentApoRequest* /*request*/, ::proto::CreateSwcAttachmentApoResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestCreateSwcAttachmentApo(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(43, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_DeleteSwcAttachmentApo : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawMethod_DeleteSwcAttachmentApo() {
+      ::grpc::Service::MarkMethodRaw(44);
+    }
+    ~WithRawMethod_DeleteSwcAttachmentApo() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status DeleteSwcAttachmentApo(::grpc::ServerContext* /*context*/, const ::proto::DeleteSwcAttachmentApoRequest* /*request*/, ::proto::DeleteSwcAttachmentApoResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestDeleteSwcAttachmentApo(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(44, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_UpdateSwcAttachmentApo : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawMethod_UpdateSwcAttachmentApo() {
+      ::grpc::Service::MarkMethodRaw(45);
+    }
+    ~WithRawMethod_UpdateSwcAttachmentApo() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status UpdateSwcAttachmentApo(::grpc::ServerContext* /*context*/, const ::proto::UpdateSwcAttachmentApoRequest* /*request*/, ::proto::UpdateSwcAttachmentApoResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestUpdateSwcAttachmentApo(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(45, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_GetSwcAttachmentApo : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawMethod_GetSwcAttachmentApo() {
+      ::grpc::Service::MarkMethodRaw(46);
+    }
+    ~WithRawMethod_GetSwcAttachmentApo() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetSwcAttachmentApo(::grpc::ServerContext* /*context*/, const ::proto::GetSwcAttachmentApoRequest* /*request*/, ::proto::GetSwcAttachmentApoResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestGetSwcAttachmentApo(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(46, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -5140,6 +6004,182 @@ class DBMS final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     virtual ::grpc::ServerUnaryReactor* GetAllDailyStatistics(
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
+  };
+  template <class BaseClass>
+  class WithRawCallbackMethod_CreateSwcAttachmentAno : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawCallbackMethod_CreateSwcAttachmentAno() {
+      ::grpc::Service::MarkMethodRawCallback(39,
+          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->CreateSwcAttachmentAno(context, request, response); }));
+    }
+    ~WithRawCallbackMethod_CreateSwcAttachmentAno() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status CreateSwcAttachmentAno(::grpc::ServerContext* /*context*/, const ::proto::CreateSwcAttachmentAnoRequest* /*request*/, ::proto::CreateSwcAttachmentAnoResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerUnaryReactor* CreateSwcAttachmentAno(
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
+  };
+  template <class BaseClass>
+  class WithRawCallbackMethod_DeleteSwcAttachmentAno : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawCallbackMethod_DeleteSwcAttachmentAno() {
+      ::grpc::Service::MarkMethodRawCallback(40,
+          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->DeleteSwcAttachmentAno(context, request, response); }));
+    }
+    ~WithRawCallbackMethod_DeleteSwcAttachmentAno() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status DeleteSwcAttachmentAno(::grpc::ServerContext* /*context*/, const ::proto::DeleteSwcAttachmentAnoRequest* /*request*/, ::proto::DeleteSwcAttachmentAnoResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerUnaryReactor* DeleteSwcAttachmentAno(
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
+  };
+  template <class BaseClass>
+  class WithRawCallbackMethod_UpdateSwcAttachmentAno : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawCallbackMethod_UpdateSwcAttachmentAno() {
+      ::grpc::Service::MarkMethodRawCallback(41,
+          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->UpdateSwcAttachmentAno(context, request, response); }));
+    }
+    ~WithRawCallbackMethod_UpdateSwcAttachmentAno() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status UpdateSwcAttachmentAno(::grpc::ServerContext* /*context*/, const ::proto::UpdateSwcAttachmentAnoRequest* /*request*/, ::proto::UpdateSwcAttachmentAnoResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerUnaryReactor* UpdateSwcAttachmentAno(
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
+  };
+  template <class BaseClass>
+  class WithRawCallbackMethod_GetSwcAttachmentAno : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawCallbackMethod_GetSwcAttachmentAno() {
+      ::grpc::Service::MarkMethodRawCallback(42,
+          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->GetSwcAttachmentAno(context, request, response); }));
+    }
+    ~WithRawCallbackMethod_GetSwcAttachmentAno() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetSwcAttachmentAno(::grpc::ServerContext* /*context*/, const ::proto::GetSwcAttachmentAnoRequest* /*request*/, ::proto::GetSwcAttachmentAnoResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerUnaryReactor* GetSwcAttachmentAno(
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
+  };
+  template <class BaseClass>
+  class WithRawCallbackMethod_CreateSwcAttachmentApo : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawCallbackMethod_CreateSwcAttachmentApo() {
+      ::grpc::Service::MarkMethodRawCallback(43,
+          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->CreateSwcAttachmentApo(context, request, response); }));
+    }
+    ~WithRawCallbackMethod_CreateSwcAttachmentApo() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status CreateSwcAttachmentApo(::grpc::ServerContext* /*context*/, const ::proto::CreateSwcAttachmentApoRequest* /*request*/, ::proto::CreateSwcAttachmentApoResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerUnaryReactor* CreateSwcAttachmentApo(
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
+  };
+  template <class BaseClass>
+  class WithRawCallbackMethod_DeleteSwcAttachmentApo : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawCallbackMethod_DeleteSwcAttachmentApo() {
+      ::grpc::Service::MarkMethodRawCallback(44,
+          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->DeleteSwcAttachmentApo(context, request, response); }));
+    }
+    ~WithRawCallbackMethod_DeleteSwcAttachmentApo() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status DeleteSwcAttachmentApo(::grpc::ServerContext* /*context*/, const ::proto::DeleteSwcAttachmentApoRequest* /*request*/, ::proto::DeleteSwcAttachmentApoResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerUnaryReactor* DeleteSwcAttachmentApo(
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
+  };
+  template <class BaseClass>
+  class WithRawCallbackMethod_UpdateSwcAttachmentApo : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawCallbackMethod_UpdateSwcAttachmentApo() {
+      ::grpc::Service::MarkMethodRawCallback(45,
+          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->UpdateSwcAttachmentApo(context, request, response); }));
+    }
+    ~WithRawCallbackMethod_UpdateSwcAttachmentApo() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status UpdateSwcAttachmentApo(::grpc::ServerContext* /*context*/, const ::proto::UpdateSwcAttachmentApoRequest* /*request*/, ::proto::UpdateSwcAttachmentApoResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerUnaryReactor* UpdateSwcAttachmentApo(
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
+  };
+  template <class BaseClass>
+  class WithRawCallbackMethod_GetSwcAttachmentApo : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawCallbackMethod_GetSwcAttachmentApo() {
+      ::grpc::Service::MarkMethodRawCallback(46,
+          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->GetSwcAttachmentApo(context, request, response); }));
+    }
+    ~WithRawCallbackMethod_GetSwcAttachmentApo() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetSwcAttachmentApo(::grpc::ServerContext* /*context*/, const ::proto::GetSwcAttachmentApoRequest* /*request*/, ::proto::GetSwcAttachmentApoResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerUnaryReactor* GetSwcAttachmentApo(
       ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
   };
   template <class BaseClass>
@@ -6195,9 +7235,225 @@ class DBMS final {
     // replace default version of method with streamed unary
     virtual ::grpc::Status StreamedGetAllDailyStatistics(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::proto::GetAllDailyStatisticsRequest,::proto::GetAllDailyStatisticsResponse>* server_unary_streamer) = 0;
   };
-  typedef WithStreamedUnaryMethod_CreateUser<WithStreamedUnaryMethod_DeleteUser<WithStreamedUnaryMethod_UpdateUser<WithStreamedUnaryMethod_GetUser<WithStreamedUnaryMethod_GetAllUser<WithStreamedUnaryMethod_UserLogin<WithStreamedUnaryMethod_UserLogout<WithStreamedUnaryMethod_UserOnlineHeartBeatNotifications<WithStreamedUnaryMethod_GetUserPermissionGroup<WithStreamedUnaryMethod_GetPermissionGroup<WithStreamedUnaryMethod_GetAllPermissionGroup<WithStreamedUnaryMethod_ChangeUserPermissionGroup<WithStreamedUnaryMethod_CreateProject<WithStreamedUnaryMethod_DeleteProject<WithStreamedUnaryMethod_UpdateProject<WithStreamedUnaryMethod_GetProject<WithStreamedUnaryMethod_GetAllProject<WithStreamedUnaryMethod_CreateSwc<WithStreamedUnaryMethod_DeleteSwc<WithStreamedUnaryMethod_UpdateSwc<WithStreamedUnaryMethod_GetSwcMetaInfo<WithStreamedUnaryMethod_GetAllSwcMetaInfo<WithStreamedUnaryMethod_CreateSwcSnapshot<WithStreamedUnaryMethod_GetAllSnapshotMetaInfo<WithStreamedUnaryMethod_GetSnapshot<WithStreamedUnaryMethod_GetAllIncrementOperationMetaInfo<WithStreamedUnaryMethod_GetIncrementOperation<WithStreamedUnaryMethod_CreateSwcNodeData<WithStreamedUnaryMethod_DeleteSwcNodeData<WithStreamedUnaryMethod_UpdateSwcNodeData<WithStreamedUnaryMethod_GetSwcNodeData<WithStreamedUnaryMethod_GetSwcFullNodeData<WithStreamedUnaryMethod_GetSwcNodeDataListByTimeAndUser<WithStreamedUnaryMethod_BackupFullDatabase<WithStreamedUnaryMethod_CreateDailyStatistics<WithStreamedUnaryMethod_DeleteDailyStatistics<WithStreamedUnaryMethod_UpdateDailyStatistics<WithStreamedUnaryMethod_GetDailyStatistics<WithStreamedUnaryMethod_GetAllDailyStatistics<Service > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > StreamedUnaryService;
+  template <class BaseClass>
+  class WithStreamedUnaryMethod_CreateSwcAttachmentAno : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithStreamedUnaryMethod_CreateSwcAttachmentAno() {
+      ::grpc::Service::MarkMethodStreamed(39,
+        new ::grpc::internal::StreamedUnaryHandler<
+          ::proto::CreateSwcAttachmentAnoRequest, ::proto::CreateSwcAttachmentAnoResponse>(
+            [this](::grpc::ServerContext* context,
+                   ::grpc::ServerUnaryStreamer<
+                     ::proto::CreateSwcAttachmentAnoRequest, ::proto::CreateSwcAttachmentAnoResponse>* streamer) {
+                       return this->StreamedCreateSwcAttachmentAno(context,
+                         streamer);
+                  }));
+    }
+    ~WithStreamedUnaryMethod_CreateSwcAttachmentAno() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable regular version of this method
+    ::grpc::Status CreateSwcAttachmentAno(::grpc::ServerContext* /*context*/, const ::proto::CreateSwcAttachmentAnoRequest* /*request*/, ::proto::CreateSwcAttachmentAnoResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    // replace default version of method with streamed unary
+    virtual ::grpc::Status StreamedCreateSwcAttachmentAno(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::proto::CreateSwcAttachmentAnoRequest,::proto::CreateSwcAttachmentAnoResponse>* server_unary_streamer) = 0;
+  };
+  template <class BaseClass>
+  class WithStreamedUnaryMethod_DeleteSwcAttachmentAno : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithStreamedUnaryMethod_DeleteSwcAttachmentAno() {
+      ::grpc::Service::MarkMethodStreamed(40,
+        new ::grpc::internal::StreamedUnaryHandler<
+          ::proto::DeleteSwcAttachmentAnoRequest, ::proto::DeleteSwcAttachmentAnoResponse>(
+            [this](::grpc::ServerContext* context,
+                   ::grpc::ServerUnaryStreamer<
+                     ::proto::DeleteSwcAttachmentAnoRequest, ::proto::DeleteSwcAttachmentAnoResponse>* streamer) {
+                       return this->StreamedDeleteSwcAttachmentAno(context,
+                         streamer);
+                  }));
+    }
+    ~WithStreamedUnaryMethod_DeleteSwcAttachmentAno() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable regular version of this method
+    ::grpc::Status DeleteSwcAttachmentAno(::grpc::ServerContext* /*context*/, const ::proto::DeleteSwcAttachmentAnoRequest* /*request*/, ::proto::DeleteSwcAttachmentAnoResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    // replace default version of method with streamed unary
+    virtual ::grpc::Status StreamedDeleteSwcAttachmentAno(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::proto::DeleteSwcAttachmentAnoRequest,::proto::DeleteSwcAttachmentAnoResponse>* server_unary_streamer) = 0;
+  };
+  template <class BaseClass>
+  class WithStreamedUnaryMethod_UpdateSwcAttachmentAno : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithStreamedUnaryMethod_UpdateSwcAttachmentAno() {
+      ::grpc::Service::MarkMethodStreamed(41,
+        new ::grpc::internal::StreamedUnaryHandler<
+          ::proto::UpdateSwcAttachmentAnoRequest, ::proto::UpdateSwcAttachmentAnoResponse>(
+            [this](::grpc::ServerContext* context,
+                   ::grpc::ServerUnaryStreamer<
+                     ::proto::UpdateSwcAttachmentAnoRequest, ::proto::UpdateSwcAttachmentAnoResponse>* streamer) {
+                       return this->StreamedUpdateSwcAttachmentAno(context,
+                         streamer);
+                  }));
+    }
+    ~WithStreamedUnaryMethod_UpdateSwcAttachmentAno() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable regular version of this method
+    ::grpc::Status UpdateSwcAttachmentAno(::grpc::ServerContext* /*context*/, const ::proto::UpdateSwcAttachmentAnoRequest* /*request*/, ::proto::UpdateSwcAttachmentAnoResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    // replace default version of method with streamed unary
+    virtual ::grpc::Status StreamedUpdateSwcAttachmentAno(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::proto::UpdateSwcAttachmentAnoRequest,::proto::UpdateSwcAttachmentAnoResponse>* server_unary_streamer) = 0;
+  };
+  template <class BaseClass>
+  class WithStreamedUnaryMethod_GetSwcAttachmentAno : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithStreamedUnaryMethod_GetSwcAttachmentAno() {
+      ::grpc::Service::MarkMethodStreamed(42,
+        new ::grpc::internal::StreamedUnaryHandler<
+          ::proto::GetSwcAttachmentAnoRequest, ::proto::GetSwcAttachmentAnoResponse>(
+            [this](::grpc::ServerContext* context,
+                   ::grpc::ServerUnaryStreamer<
+                     ::proto::GetSwcAttachmentAnoRequest, ::proto::GetSwcAttachmentAnoResponse>* streamer) {
+                       return this->StreamedGetSwcAttachmentAno(context,
+                         streamer);
+                  }));
+    }
+    ~WithStreamedUnaryMethod_GetSwcAttachmentAno() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable regular version of this method
+    ::grpc::Status GetSwcAttachmentAno(::grpc::ServerContext* /*context*/, const ::proto::GetSwcAttachmentAnoRequest* /*request*/, ::proto::GetSwcAttachmentAnoResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    // replace default version of method with streamed unary
+    virtual ::grpc::Status StreamedGetSwcAttachmentAno(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::proto::GetSwcAttachmentAnoRequest,::proto::GetSwcAttachmentAnoResponse>* server_unary_streamer) = 0;
+  };
+  template <class BaseClass>
+  class WithStreamedUnaryMethod_CreateSwcAttachmentApo : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithStreamedUnaryMethod_CreateSwcAttachmentApo() {
+      ::grpc::Service::MarkMethodStreamed(43,
+        new ::grpc::internal::StreamedUnaryHandler<
+          ::proto::CreateSwcAttachmentApoRequest, ::proto::CreateSwcAttachmentApoResponse>(
+            [this](::grpc::ServerContext* context,
+                   ::grpc::ServerUnaryStreamer<
+                     ::proto::CreateSwcAttachmentApoRequest, ::proto::CreateSwcAttachmentApoResponse>* streamer) {
+                       return this->StreamedCreateSwcAttachmentApo(context,
+                         streamer);
+                  }));
+    }
+    ~WithStreamedUnaryMethod_CreateSwcAttachmentApo() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable regular version of this method
+    ::grpc::Status CreateSwcAttachmentApo(::grpc::ServerContext* /*context*/, const ::proto::CreateSwcAttachmentApoRequest* /*request*/, ::proto::CreateSwcAttachmentApoResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    // replace default version of method with streamed unary
+    virtual ::grpc::Status StreamedCreateSwcAttachmentApo(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::proto::CreateSwcAttachmentApoRequest,::proto::CreateSwcAttachmentApoResponse>* server_unary_streamer) = 0;
+  };
+  template <class BaseClass>
+  class WithStreamedUnaryMethod_DeleteSwcAttachmentApo : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithStreamedUnaryMethod_DeleteSwcAttachmentApo() {
+      ::grpc::Service::MarkMethodStreamed(44,
+        new ::grpc::internal::StreamedUnaryHandler<
+          ::proto::DeleteSwcAttachmentApoRequest, ::proto::DeleteSwcAttachmentApoResponse>(
+            [this](::grpc::ServerContext* context,
+                   ::grpc::ServerUnaryStreamer<
+                     ::proto::DeleteSwcAttachmentApoRequest, ::proto::DeleteSwcAttachmentApoResponse>* streamer) {
+                       return this->StreamedDeleteSwcAttachmentApo(context,
+                         streamer);
+                  }));
+    }
+    ~WithStreamedUnaryMethod_DeleteSwcAttachmentApo() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable regular version of this method
+    ::grpc::Status DeleteSwcAttachmentApo(::grpc::ServerContext* /*context*/, const ::proto::DeleteSwcAttachmentApoRequest* /*request*/, ::proto::DeleteSwcAttachmentApoResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    // replace default version of method with streamed unary
+    virtual ::grpc::Status StreamedDeleteSwcAttachmentApo(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::proto::DeleteSwcAttachmentApoRequest,::proto::DeleteSwcAttachmentApoResponse>* server_unary_streamer) = 0;
+  };
+  template <class BaseClass>
+  class WithStreamedUnaryMethod_UpdateSwcAttachmentApo : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithStreamedUnaryMethod_UpdateSwcAttachmentApo() {
+      ::grpc::Service::MarkMethodStreamed(45,
+        new ::grpc::internal::StreamedUnaryHandler<
+          ::proto::UpdateSwcAttachmentApoRequest, ::proto::UpdateSwcAttachmentApoResponse>(
+            [this](::grpc::ServerContext* context,
+                   ::grpc::ServerUnaryStreamer<
+                     ::proto::UpdateSwcAttachmentApoRequest, ::proto::UpdateSwcAttachmentApoResponse>* streamer) {
+                       return this->StreamedUpdateSwcAttachmentApo(context,
+                         streamer);
+                  }));
+    }
+    ~WithStreamedUnaryMethod_UpdateSwcAttachmentApo() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable regular version of this method
+    ::grpc::Status UpdateSwcAttachmentApo(::grpc::ServerContext* /*context*/, const ::proto::UpdateSwcAttachmentApoRequest* /*request*/, ::proto::UpdateSwcAttachmentApoResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    // replace default version of method with streamed unary
+    virtual ::grpc::Status StreamedUpdateSwcAttachmentApo(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::proto::UpdateSwcAttachmentApoRequest,::proto::UpdateSwcAttachmentApoResponse>* server_unary_streamer) = 0;
+  };
+  template <class BaseClass>
+  class WithStreamedUnaryMethod_GetSwcAttachmentApo : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithStreamedUnaryMethod_GetSwcAttachmentApo() {
+      ::grpc::Service::MarkMethodStreamed(46,
+        new ::grpc::internal::StreamedUnaryHandler<
+          ::proto::GetSwcAttachmentApoRequest, ::proto::GetSwcAttachmentApoResponse>(
+            [this](::grpc::ServerContext* context,
+                   ::grpc::ServerUnaryStreamer<
+                     ::proto::GetSwcAttachmentApoRequest, ::proto::GetSwcAttachmentApoResponse>* streamer) {
+                       return this->StreamedGetSwcAttachmentApo(context,
+                         streamer);
+                  }));
+    }
+    ~WithStreamedUnaryMethod_GetSwcAttachmentApo() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable regular version of this method
+    ::grpc::Status GetSwcAttachmentApo(::grpc::ServerContext* /*context*/, const ::proto::GetSwcAttachmentApoRequest* /*request*/, ::proto::GetSwcAttachmentApoResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    // replace default version of method with streamed unary
+    virtual ::grpc::Status StreamedGetSwcAttachmentApo(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::proto::GetSwcAttachmentApoRequest,::proto::GetSwcAttachmentApoResponse>* server_unary_streamer) = 0;
+  };
+  typedef WithStreamedUnaryMethod_CreateUser<WithStreamedUnaryMethod_DeleteUser<WithStreamedUnaryMethod_UpdateUser<WithStreamedUnaryMethod_GetUser<WithStreamedUnaryMethod_GetAllUser<WithStreamedUnaryMethod_UserLogin<WithStreamedUnaryMethod_UserLogout<WithStreamedUnaryMethod_UserOnlineHeartBeatNotifications<WithStreamedUnaryMethod_GetUserPermissionGroup<WithStreamedUnaryMethod_GetPermissionGroup<WithStreamedUnaryMethod_GetAllPermissionGroup<WithStreamedUnaryMethod_ChangeUserPermissionGroup<WithStreamedUnaryMethod_CreateProject<WithStreamedUnaryMethod_DeleteProject<WithStreamedUnaryMethod_UpdateProject<WithStreamedUnaryMethod_GetProject<WithStreamedUnaryMethod_GetAllProject<WithStreamedUnaryMethod_CreateSwc<WithStreamedUnaryMethod_DeleteSwc<WithStreamedUnaryMethod_UpdateSwc<WithStreamedUnaryMethod_GetSwcMetaInfo<WithStreamedUnaryMethod_GetAllSwcMetaInfo<WithStreamedUnaryMethod_CreateSwcSnapshot<WithStreamedUnaryMethod_GetAllSnapshotMetaInfo<WithStreamedUnaryMethod_GetSnapshot<WithStreamedUnaryMethod_GetAllIncrementOperationMetaInfo<WithStreamedUnaryMethod_GetIncrementOperation<WithStreamedUnaryMethod_CreateSwcNodeData<WithStreamedUnaryMethod_DeleteSwcNodeData<WithStreamedUnaryMethod_UpdateSwcNodeData<WithStreamedUnaryMethod_GetSwcNodeData<WithStreamedUnaryMethod_GetSwcFullNodeData<WithStreamedUnaryMethod_GetSwcNodeDataListByTimeAndUser<WithStreamedUnaryMethod_BackupFullDatabase<WithStreamedUnaryMethod_CreateDailyStatistics<WithStreamedUnaryMethod_DeleteDailyStatistics<WithStreamedUnaryMethod_UpdateDailyStatistics<WithStreamedUnaryMethod_GetDailyStatistics<WithStreamedUnaryMethod_GetAllDailyStatistics<WithStreamedUnaryMethod_CreateSwcAttachmentAno<WithStreamedUnaryMethod_DeleteSwcAttachmentAno<WithStreamedUnaryMethod_UpdateSwcAttachmentAno<WithStreamedUnaryMethod_GetSwcAttachmentAno<WithStreamedUnaryMethod_CreateSwcAttachmentApo<WithStreamedUnaryMethod_DeleteSwcAttachmentApo<WithStreamedUnaryMethod_UpdateSwcAttachmentApo<WithStreamedUnaryMethod_GetSwcAttachmentApo<Service > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > StreamedUnaryService;
   typedef Service SplitStreamedService;
-  typedef WithStreamedUnaryMethod_CreateUser<WithStreamedUnaryMethod_DeleteUser<WithStreamedUnaryMethod_UpdateUser<WithStreamedUnaryMethod_GetUser<WithStreamedUnaryMethod_GetAllUser<WithStreamedUnaryMethod_UserLogin<WithStreamedUnaryMethod_UserLogout<WithStreamedUnaryMethod_UserOnlineHeartBeatNotifications<WithStreamedUnaryMethod_GetUserPermissionGroup<WithStreamedUnaryMethod_GetPermissionGroup<WithStreamedUnaryMethod_GetAllPermissionGroup<WithStreamedUnaryMethod_ChangeUserPermissionGroup<WithStreamedUnaryMethod_CreateProject<WithStreamedUnaryMethod_DeleteProject<WithStreamedUnaryMethod_UpdateProject<WithStreamedUnaryMethod_GetProject<WithStreamedUnaryMethod_GetAllProject<WithStreamedUnaryMethod_CreateSwc<WithStreamedUnaryMethod_DeleteSwc<WithStreamedUnaryMethod_UpdateSwc<WithStreamedUnaryMethod_GetSwcMetaInfo<WithStreamedUnaryMethod_GetAllSwcMetaInfo<WithStreamedUnaryMethod_CreateSwcSnapshot<WithStreamedUnaryMethod_GetAllSnapshotMetaInfo<WithStreamedUnaryMethod_GetSnapshot<WithStreamedUnaryMethod_GetAllIncrementOperationMetaInfo<WithStreamedUnaryMethod_GetIncrementOperation<WithStreamedUnaryMethod_CreateSwcNodeData<WithStreamedUnaryMethod_DeleteSwcNodeData<WithStreamedUnaryMethod_UpdateSwcNodeData<WithStreamedUnaryMethod_GetSwcNodeData<WithStreamedUnaryMethod_GetSwcFullNodeData<WithStreamedUnaryMethod_GetSwcNodeDataListByTimeAndUser<WithStreamedUnaryMethod_BackupFullDatabase<WithStreamedUnaryMethod_CreateDailyStatistics<WithStreamedUnaryMethod_DeleteDailyStatistics<WithStreamedUnaryMethod_UpdateDailyStatistics<WithStreamedUnaryMethod_GetDailyStatistics<WithStreamedUnaryMethod_GetAllDailyStatistics<Service > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > StreamedService;
+  typedef WithStreamedUnaryMethod_CreateUser<WithStreamedUnaryMethod_DeleteUser<WithStreamedUnaryMethod_UpdateUser<WithStreamedUnaryMethod_GetUser<WithStreamedUnaryMethod_GetAllUser<WithStreamedUnaryMethod_UserLogin<WithStreamedUnaryMethod_UserLogout<WithStreamedUnaryMethod_UserOnlineHeartBeatNotifications<WithStreamedUnaryMethod_GetUserPermissionGroup<WithStreamedUnaryMethod_GetPermissionGroup<WithStreamedUnaryMethod_GetAllPermissionGroup<WithStreamedUnaryMethod_ChangeUserPermissionGroup<WithStreamedUnaryMethod_CreateProject<WithStreamedUnaryMethod_DeleteProject<WithStreamedUnaryMethod_UpdateProject<WithStreamedUnaryMethod_GetProject<WithStreamedUnaryMethod_GetAllProject<WithStreamedUnaryMethod_CreateSwc<WithStreamedUnaryMethod_DeleteSwc<WithStreamedUnaryMethod_UpdateSwc<WithStreamedUnaryMethod_GetSwcMetaInfo<WithStreamedUnaryMethod_GetAllSwcMetaInfo<WithStreamedUnaryMethod_CreateSwcSnapshot<WithStreamedUnaryMethod_GetAllSnapshotMetaInfo<WithStreamedUnaryMethod_GetSnapshot<WithStreamedUnaryMethod_GetAllIncrementOperationMetaInfo<WithStreamedUnaryMethod_GetIncrementOperation<WithStreamedUnaryMethod_CreateSwcNodeData<WithStreamedUnaryMethod_DeleteSwcNodeData<WithStreamedUnaryMethod_UpdateSwcNodeData<WithStreamedUnaryMethod_GetSwcNodeData<WithStreamedUnaryMethod_GetSwcFullNodeData<WithStreamedUnaryMethod_GetSwcNodeDataListByTimeAndUser<WithStreamedUnaryMethod_BackupFullDatabase<WithStreamedUnaryMethod_CreateDailyStatistics<WithStreamedUnaryMethod_DeleteDailyStatistics<WithStreamedUnaryMethod_UpdateDailyStatistics<WithStreamedUnaryMethod_GetDailyStatistics<WithStreamedUnaryMethod_GetAllDailyStatistics<WithStreamedUnaryMethod_CreateSwcAttachmentAno<WithStreamedUnaryMethod_DeleteSwcAttachmentAno<WithStreamedUnaryMethod_UpdateSwcAttachmentAno<WithStreamedUnaryMethod_GetSwcAttachmentAno<WithStreamedUnaryMethod_CreateSwcAttachmentApo<WithStreamedUnaryMethod_DeleteSwcAttachmentApo<WithStreamedUnaryMethod_UpdateSwcAttachmentApo<WithStreamedUnaryMethod_GetSwcAttachmentApo<Service > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > StreamedService;
 };
 
 }  // namespace proto

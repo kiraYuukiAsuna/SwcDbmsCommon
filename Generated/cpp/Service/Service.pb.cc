@@ -32,7 +32,7 @@ const char descriptor_table_protodef_Service_2fService_2eproto[] PROTOBUF_SECTIO
   "\n\025Service/Service.proto\022\005proto\032\037google/p"
   "rotobuf/timestamp.proto\032\025Message/Message"
   ".proto\032\025Message/Request.proto\032\026Message/R"
-  "esponse.proto2\347\032\n\004DBMS\022C\n\nCreateUser\022\030.p"
+  "esponse.proto2\235!\n\004DBMS\022C\n\nCreateUser\022\030.p"
   "roto.CreateUserRequest\032\031.proto.CreateUse"
   "rResponse\"\000\022C\n\nDeleteUser\022\030.proto.Delete"
   "UserRequest\032\031.proto.DeleteUserResponse\"\000"
@@ -118,8 +118,29 @@ const char descriptor_table_protodef_Service_2fService_2eproto[] PROTOBUF_SECTIO
   "DailyStatisticsResponse\"\000\022d\n\025GetAllDaily"
   "Statistics\022#.proto.GetAllDailyStatistics"
   "Request\032$.proto.GetAllDailyStatisticsRes"
-  "ponse\"\000B/Z-DBMS/SwcDbmsCommon/Generated/"
-  "go/proto/serviceP\000b\006proto3"
+  "ponse\"\000\022g\n\026CreateSwcAttachmentAno\022$.prot"
+  "o.CreateSwcAttachmentAnoRequest\032%.proto."
+  "CreateSwcAttachmentAnoResponse\"\000\022g\n\026Dele"
+  "teSwcAttachmentAno\022$.proto.DeleteSwcAtta"
+  "chmentAnoRequest\032%.proto.DeleteSwcAttach"
+  "mentAnoResponse\"\000\022g\n\026UpdateSwcAttachment"
+  "Ano\022$.proto.UpdateSwcAttachmentAnoReques"
+  "t\032%.proto.UpdateSwcAttachmentAnoResponse"
+  "\"\000\022^\n\023GetSwcAttachmentAno\022!.proto.GetSwc"
+  "AttachmentAnoRequest\032\".proto.GetSwcAttac"
+  "hmentAnoResponse\"\000\022g\n\026CreateSwcAttachmen"
+  "tApo\022$.proto.CreateSwcAttachmentApoReque"
+  "st\032%.proto.CreateSwcAttachmentApoRespons"
+  "e\"\000\022g\n\026DeleteSwcAttachmentApo\022$.proto.De"
+  "leteSwcAttachmentApoRequest\032%.proto.Dele"
+  "teSwcAttachmentApoResponse\"\000\022g\n\026UpdateSw"
+  "cAttachmentApo\022$.proto.UpdateSwcAttachme"
+  "ntApoRequest\032%.proto.UpdateSwcAttachment"
+  "ApoResponse\"\000\022^\n\023GetSwcAttachmentApo\022!.p"
+  "roto.GetSwcAttachmentApoRequest\032\".proto."
+  "GetSwcAttachmentApoResponse\"\000B/Z-DBMS/Sw"
+  "cDbmsCommon/Generated/go/proto/serviceP\000"
+  "b\006proto3"
   ;
 static const ::_pbi::DescriptorTable* const descriptor_table_Service_2fService_2eproto_deps[4] = {
   &::descriptor_table_Message_2fMessage_2eproto,
@@ -129,7 +150,7 @@ static const ::_pbi::DescriptorTable* const descriptor_table_Service_2fService_2
 };
 static ::_pbi::once_flag descriptor_table_Service_2fService_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_Service_2fService_2eproto = {
-    false, false, 3626, descriptor_table_protodef_Service_2fService_2eproto,
+    false, false, 4448, descriptor_table_protodef_Service_2fService_2eproto,
     "Service/Service.proto",
     &descriptor_table_Service_2fService_2eproto_once, descriptor_table_Service_2fService_2eproto_deps, 4, 0,
     schemas, file_default_instances, TableStruct_Service_2fService_2eproto::offsets,

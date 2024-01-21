@@ -168,3 +168,26 @@ message ResponseMetaInfoV1{
     string Id = 2;
     string Message = 3;
 }
+
+message SwcAttachmentAnoV1{
+    string APOFILE = 1;
+    string ANOFILE = 2;
+}
+
+message SwcAttachmentApoV1{
+    int32 N = 1;
+    string orderinfo = 2;
+    string name = 3;
+    string comment = 4;
+    float Z = 5;
+    float X = 6;
+    float Y = 7;
+    float Pixmax = 8;
+    float Intensity = 9;
+    float Sdev = 10;
+    float Volsize = 11;
+    float Mass = 12;
+    int32 ColorR = 13;
+    int32 ColorG = 14;
+    int32 ColorB = 15;
+}

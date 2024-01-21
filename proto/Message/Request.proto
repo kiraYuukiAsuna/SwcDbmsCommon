@@ -241,3 +241,56 @@ message GetAllDailyStatisticsRequest{
     RequestMetaInfoV1 metaInfo = 1;
     UserVerifyInfoV1 UserVerifyInfo = 2;
 }
+
+message CreateSwcAttachmentAnoRequest{
+    RequestMetaInfoV1 metaInfo = 1;
+    UserVerifyInfoV1 UserVerifyInfo = 2;
+    string SwcName = 3;
+    repeated SwcAttachmentAnoV1 SwcAttachmentAno = 4;
+}
+
+message DeleteSwcAttachmentAnoRequest{
+    RequestMetaInfoV1 metaInfo = 1;
+    UserVerifyInfoV1 UserVerifyInfo = 2;
+    string SwcName = 3;
+}
+
+message UpdateSwcAttachmentAnoRequest{
+    RequestMetaInfoV1 metaInfo = 1;
+    UserVerifyInfoV1 UserVerifyInfo = 2;
+    string SwcName = 3;
+    repeated SwcAttachmentAnoV1 NewSwcAttachmentAno = 4;
+}
+
+message GetSwcAttachmentAnoRequest{
+    RequestMetaInfoV1 metaInfo = 1;
+    UserVerifyInfoV1 UserVerifyInfo = 2;
+    string SwcName = 3;
+}
+
+message CreateSwcAttachmentApoRequest{
+    RequestMetaInfoV1 metaInfo = 1;
+    UserVerifyInfoV1 UserVerifyInfo = 2;
+    string SwcName = 3;
+    repeated SwcAttachmentApoV1 SwcAttachmentApo = 4;
+}
+
+message DeleteSwcAttachmentApoRequest{
+    RequestMetaInfoV1 metaInfo = 1;
+    UserVerifyInfoV1 UserVerifyInfo = 2;
+    string SwcName = 3;
+}
+
+message UpdateSwcAttachmentApoRequest{
+    RequestMetaInfoV1 metaInfo = 1;
+    UserVerifyInfoV1 UserVerifyInfo = 2;
+    string SwcName = 3;
+    repeated SwcAttachmentApoV1 NewSwcAttachmentApo = 4;
+}
+
+message GetSwcAttachmentApoRequest{
+    RequestMetaInfoV1 metaInfo = 1;
+    UserVerifyInfoV1 UserVerifyInfo = 2;
+    string SwcName = 3;
+}
+

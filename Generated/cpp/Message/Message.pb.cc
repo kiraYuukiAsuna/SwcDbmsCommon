@@ -347,8 +347,49 @@ struct ResponseMetaInfoV1DefaultTypeInternal {
   };
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ResponseMetaInfoV1DefaultTypeInternal _ResponseMetaInfoV1_default_instance_;
+PROTOBUF_CONSTEXPR SwcAttachmentAnoV1::SwcAttachmentAnoV1(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.apofile_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.anofile_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct SwcAttachmentAnoV1DefaultTypeInternal {
+  PROTOBUF_CONSTEXPR SwcAttachmentAnoV1DefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~SwcAttachmentAnoV1DefaultTypeInternal() {}
+  union {
+    SwcAttachmentAnoV1 _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SwcAttachmentAnoV1DefaultTypeInternal _SwcAttachmentAnoV1_default_instance_;
+PROTOBUF_CONSTEXPR SwcAttachmentApoV1::SwcAttachmentApoV1(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.orderinfo_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.name_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.comment_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.n_)*/0
+  , /*decltype(_impl_.z_)*/0
+  , /*decltype(_impl_.x_)*/0
+  , /*decltype(_impl_.y_)*/0
+  , /*decltype(_impl_.pixmax_)*/0
+  , /*decltype(_impl_.intensity_)*/0
+  , /*decltype(_impl_.sdev_)*/0
+  , /*decltype(_impl_.volsize_)*/0
+  , /*decltype(_impl_.mass_)*/0
+  , /*decltype(_impl_.colorr_)*/0
+  , /*decltype(_impl_.colorg_)*/0
+  , /*decltype(_impl_.colorb_)*/0
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct SwcAttachmentApoV1DefaultTypeInternal {
+  PROTOBUF_CONSTEXPR SwcAttachmentApoV1DefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~SwcAttachmentApoV1DefaultTypeInternal() {}
+  union {
+    SwcAttachmentApoV1 _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SwcAttachmentApoV1DefaultTypeInternal _SwcAttachmentApoV1_default_instance_;
 }  // namespace proto
-static ::_pb::Metadata file_level_metadata_Message_2fMessage_2eproto[19];
+static ::_pb::Metadata file_level_metadata_Message_2fMessage_2eproto[21];
 static const ::_pb::EnumDescriptor* file_level_enum_descriptors_Message_2fMessage_2eproto[1];
 static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_Message_2fMessage_2eproto = nullptr;
 
@@ -565,6 +606,35 @@ const uint32_t TableStruct_Message_2fMessage_2eproto::offsets[] PROTOBUF_SECTION
   PROTOBUF_FIELD_OFFSET(::proto::ResponseMetaInfoV1, _impl_.status_),
   PROTOBUF_FIELD_OFFSET(::proto::ResponseMetaInfoV1, _impl_.id_),
   PROTOBUF_FIELD_OFFSET(::proto::ResponseMetaInfoV1, _impl_.message_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::proto::SwcAttachmentAnoV1, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::proto::SwcAttachmentAnoV1, _impl_.apofile_),
+  PROTOBUF_FIELD_OFFSET(::proto::SwcAttachmentAnoV1, _impl_.anofile_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::proto::SwcAttachmentApoV1, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::proto::SwcAttachmentApoV1, _impl_.n_),
+  PROTOBUF_FIELD_OFFSET(::proto::SwcAttachmentApoV1, _impl_.orderinfo_),
+  PROTOBUF_FIELD_OFFSET(::proto::SwcAttachmentApoV1, _impl_.name_),
+  PROTOBUF_FIELD_OFFSET(::proto::SwcAttachmentApoV1, _impl_.comment_),
+  PROTOBUF_FIELD_OFFSET(::proto::SwcAttachmentApoV1, _impl_.z_),
+  PROTOBUF_FIELD_OFFSET(::proto::SwcAttachmentApoV1, _impl_.x_),
+  PROTOBUF_FIELD_OFFSET(::proto::SwcAttachmentApoV1, _impl_.y_),
+  PROTOBUF_FIELD_OFFSET(::proto::SwcAttachmentApoV1, _impl_.pixmax_),
+  PROTOBUF_FIELD_OFFSET(::proto::SwcAttachmentApoV1, _impl_.intensity_),
+  PROTOBUF_FIELD_OFFSET(::proto::SwcAttachmentApoV1, _impl_.sdev_),
+  PROTOBUF_FIELD_OFFSET(::proto::SwcAttachmentApoV1, _impl_.volsize_),
+  PROTOBUF_FIELD_OFFSET(::proto::SwcAttachmentApoV1, _impl_.mass_),
+  PROTOBUF_FIELD_OFFSET(::proto::SwcAttachmentApoV1, _impl_.colorr_),
+  PROTOBUF_FIELD_OFFSET(::proto::SwcAttachmentApoV1, _impl_.colorg_),
+  PROTOBUF_FIELD_OFFSET(::proto::SwcAttachmentApoV1, _impl_.colorb_),
 };
 static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, -1, sizeof(::proto::MetaInfoBase)},
@@ -586,6 +656,8 @@ static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protode
   { 188, -1, -1, sizeof(::proto::UserVerifyInfoV1)},
   { 196, -1, -1, sizeof(::proto::RequestMetaInfoV1)},
   { 203, -1, -1, sizeof(::proto::ResponseMetaInfoV1)},
+  { 212, -1, -1, sizeof(::proto::SwcAttachmentAnoV1)},
+  { 220, -1, -1, sizeof(::proto::SwcAttachmentApoV1)},
 };
 
 static const ::_pb::Message* const file_default_instances[] = {
@@ -608,6 +680,8 @@ static const ::_pb::Message* const file_default_instances[] = {
   &::proto::_UserVerifyInfoV1_default_instance_._instance,
   &::proto::_RequestMetaInfoV1_default_instance_._instance,
   &::proto::_ResponseMetaInfoV1_default_instance_._instance,
+  &::proto::_SwcAttachmentAnoV1_default_instance_._instance,
+  &::proto::_SwcAttachmentApoV1_default_instance_._instance,
 };
 
 const char descriptor_table_protodef_Message_2fMessage_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
@@ -698,20 +772,27 @@ const char descriptor_table_protodef_Message_2fMessage_2eproto[] PROTOBUF_SECTIO
   "yInfoV1\022\020\n\010UserName\030\001 \001(\t\022\021\n\tUserToken\030\002"
   " \001(\t\"\'\n\021RequestMetaInfoV1\022\022\n\nApiVersion\030"
   "\001 \001(\t\"A\n\022ResponseMetaInfoV1\022\016\n\006Status\030\001 "
-  "\001(\010\022\n\n\002Id\030\002 \001(\t\022\017\n\007Message\030\003 \001(\t*G\n\024Incr"
-  "ementOperationV1\022\013\n\007Unknown\020\000\022\n\n\006Create\020"
-  "\001\022\n\n\006Delete\020\002\022\n\n\006Update\020\003B/Z-DBMS/SwcDbm"
-  "sCommon/Generated/go/proto/messageP\000b\006pr"
-  "oto3"
+  "\001(\010\022\n\n\002Id\030\002 \001(\t\022\017\n\007Message\030\003 \001(\t\"6\n\022SwcA"
+  "ttachmentAnoV1\022\017\n\007APOFILE\030\001 \001(\t\022\017\n\007ANOFI"
+  "LE\030\002 \001(\t\"\362\001\n\022SwcAttachmentApoV1\022\t\n\001N\030\001 \001"
+  "(\005\022\021\n\torderinfo\030\002 \001(\t\022\014\n\004name\030\003 \001(\t\022\017\n\007c"
+  "omment\030\004 \001(\t\022\t\n\001Z\030\005 \001(\002\022\t\n\001X\030\006 \001(\002\022\t\n\001Y\030"
+  "\007 \001(\002\022\016\n\006Pixmax\030\010 \001(\002\022\021\n\tIntensity\030\t \001(\002"
+  "\022\014\n\004Sdev\030\n \001(\002\022\017\n\007Volsize\030\013 \001(\002\022\014\n\004Mass\030"
+  "\014 \001(\002\022\016\n\006ColorR\030\r \001(\005\022\016\n\006ColorG\030\016 \001(\005\022\016\n"
+  "\006ColorB\030\017 \001(\005*G\n\024IncrementOperationV1\022\013\n"
+  "\007Unknown\020\000\022\n\n\006Create\020\001\022\n\n\006Delete\020\002\022\n\n\006Up"
+  "date\020\003B/Z-DBMS/SwcDbmsCommon/Generated/g"
+  "o/proto/messageP\000b\006proto3"
   ;
 static const ::_pbi::DescriptorTable* const descriptor_table_Message_2fMessage_2eproto_deps[1] = {
   &::descriptor_table_google_2fprotobuf_2ftimestamp_2eproto,
 };
 static ::_pbi::once_flag descriptor_table_Message_2fMessage_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_Message_2fMessage_2eproto = {
-    false, false, 3644, descriptor_table_protodef_Message_2fMessage_2eproto,
+    false, false, 3945, descriptor_table_protodef_Message_2fMessage_2eproto,
     "Message/Message.proto",
-    &descriptor_table_Message_2fMessage_2eproto_once, descriptor_table_Message_2fMessage_2eproto_deps, 1, 19,
+    &descriptor_table_Message_2fMessage_2eproto_once, descriptor_table_Message_2fMessage_2eproto_deps, 1, 21,
     schemas, file_default_instances, TableStruct_Message_2fMessage_2eproto::offsets,
     file_level_metadata_Message_2fMessage_2eproto, file_level_enum_descriptors_Message_2fMessage_2eproto,
     file_level_service_descriptors_Message_2fMessage_2eproto,
@@ -7533,6 +7614,958 @@ void ResponseMetaInfoV1::InternalSwap(ResponseMetaInfoV1* other) {
       file_level_metadata_Message_2fMessage_2eproto[18]);
 }
 
+// ===================================================================
+
+class SwcAttachmentAnoV1::_Internal {
+ public:
+};
+
+SwcAttachmentAnoV1::SwcAttachmentAnoV1(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:proto.SwcAttachmentAnoV1)
+}
+SwcAttachmentAnoV1::SwcAttachmentAnoV1(const SwcAttachmentAnoV1& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  SwcAttachmentAnoV1* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.apofile_){}
+    , decltype(_impl_.anofile_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _impl_.apofile_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.apofile_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (!from._internal_apofile().empty()) {
+    _this->_impl_.apofile_.Set(from._internal_apofile(), 
+      _this->GetArenaForAllocation());
+  }
+  _impl_.anofile_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.anofile_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (!from._internal_anofile().empty()) {
+    _this->_impl_.anofile_.Set(from._internal_anofile(), 
+      _this->GetArenaForAllocation());
+  }
+  // @@protoc_insertion_point(copy_constructor:proto.SwcAttachmentAnoV1)
+}
+
+inline void SwcAttachmentAnoV1::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.apofile_){}
+    , decltype(_impl_.anofile_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+  _impl_.apofile_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.apofile_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  _impl_.anofile_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.anofile_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+}
+
+SwcAttachmentAnoV1::~SwcAttachmentAnoV1() {
+  // @@protoc_insertion_point(destructor:proto.SwcAttachmentAnoV1)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void SwcAttachmentAnoV1::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.apofile_.Destroy();
+  _impl_.anofile_.Destroy();
+}
+
+void SwcAttachmentAnoV1::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void SwcAttachmentAnoV1::Clear() {
+// @@protoc_insertion_point(message_clear_start:proto.SwcAttachmentAnoV1)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _impl_.apofile_.ClearToEmpty();
+  _impl_.anofile_.ClearToEmpty();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* SwcAttachmentAnoV1::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // string APOFILE = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          auto str = _internal_mutable_apofile();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "proto.SwcAttachmentAnoV1.APOFILE"));
+        } else
+          goto handle_unusual;
+        continue;
+      // string ANOFILE = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
+          auto str = _internal_mutable_anofile();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "proto.SwcAttachmentAnoV1.ANOFILE"));
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* SwcAttachmentAnoV1::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:proto.SwcAttachmentAnoV1)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // string APOFILE = 1;
+  if (!this->_internal_apofile().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_apofile().data(), static_cast<int>(this->_internal_apofile().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "proto.SwcAttachmentAnoV1.APOFILE");
+    target = stream->WriteStringMaybeAliased(
+        1, this->_internal_apofile(), target);
+  }
+
+  // string ANOFILE = 2;
+  if (!this->_internal_anofile().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_anofile().data(), static_cast<int>(this->_internal_anofile().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "proto.SwcAttachmentAnoV1.ANOFILE");
+    target = stream->WriteStringMaybeAliased(
+        2, this->_internal_anofile(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:proto.SwcAttachmentAnoV1)
+  return target;
+}
+
+size_t SwcAttachmentAnoV1::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:proto.SwcAttachmentAnoV1)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // string APOFILE = 1;
+  if (!this->_internal_apofile().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_apofile());
+  }
+
+  // string ANOFILE = 2;
+  if (!this->_internal_anofile().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_anofile());
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData SwcAttachmentAnoV1::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    SwcAttachmentAnoV1::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SwcAttachmentAnoV1::GetClassData() const { return &_class_data_; }
+
+
+void SwcAttachmentAnoV1::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<SwcAttachmentAnoV1*>(&to_msg);
+  auto& from = static_cast<const SwcAttachmentAnoV1&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:proto.SwcAttachmentAnoV1)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (!from._internal_apofile().empty()) {
+    _this->_internal_set_apofile(from._internal_apofile());
+  }
+  if (!from._internal_anofile().empty()) {
+    _this->_internal_set_anofile(from._internal_anofile());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void SwcAttachmentAnoV1::CopyFrom(const SwcAttachmentAnoV1& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:proto.SwcAttachmentAnoV1)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool SwcAttachmentAnoV1::IsInitialized() const {
+  return true;
+}
+
+void SwcAttachmentAnoV1::InternalSwap(SwcAttachmentAnoV1* other) {
+  using std::swap;
+  auto* lhs_arena = GetArenaForAllocation();
+  auto* rhs_arena = other->GetArenaForAllocation();
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.apofile_, lhs_arena,
+      &other->_impl_.apofile_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.anofile_, lhs_arena,
+      &other->_impl_.anofile_, rhs_arena
+  );
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata SwcAttachmentAnoV1::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_Message_2fMessage_2eproto_getter, &descriptor_table_Message_2fMessage_2eproto_once,
+      file_level_metadata_Message_2fMessage_2eproto[19]);
+}
+
+// ===================================================================
+
+class SwcAttachmentApoV1::_Internal {
+ public:
+};
+
+SwcAttachmentApoV1::SwcAttachmentApoV1(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:proto.SwcAttachmentApoV1)
+}
+SwcAttachmentApoV1::SwcAttachmentApoV1(const SwcAttachmentApoV1& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  SwcAttachmentApoV1* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.orderinfo_){}
+    , decltype(_impl_.name_){}
+    , decltype(_impl_.comment_){}
+    , decltype(_impl_.n_){}
+    , decltype(_impl_.z_){}
+    , decltype(_impl_.x_){}
+    , decltype(_impl_.y_){}
+    , decltype(_impl_.pixmax_){}
+    , decltype(_impl_.intensity_){}
+    , decltype(_impl_.sdev_){}
+    , decltype(_impl_.volsize_){}
+    , decltype(_impl_.mass_){}
+    , decltype(_impl_.colorr_){}
+    , decltype(_impl_.colorg_){}
+    , decltype(_impl_.colorb_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _impl_.orderinfo_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.orderinfo_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (!from._internal_orderinfo().empty()) {
+    _this->_impl_.orderinfo_.Set(from._internal_orderinfo(), 
+      _this->GetArenaForAllocation());
+  }
+  _impl_.name_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.name_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (!from._internal_name().empty()) {
+    _this->_impl_.name_.Set(from._internal_name(), 
+      _this->GetArenaForAllocation());
+  }
+  _impl_.comment_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.comment_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (!from._internal_comment().empty()) {
+    _this->_impl_.comment_.Set(from._internal_comment(), 
+      _this->GetArenaForAllocation());
+  }
+  ::memcpy(&_impl_.n_, &from._impl_.n_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.colorb_) -
+    reinterpret_cast<char*>(&_impl_.n_)) + sizeof(_impl_.colorb_));
+  // @@protoc_insertion_point(copy_constructor:proto.SwcAttachmentApoV1)
+}
+
+inline void SwcAttachmentApoV1::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.orderinfo_){}
+    , decltype(_impl_.name_){}
+    , decltype(_impl_.comment_){}
+    , decltype(_impl_.n_){0}
+    , decltype(_impl_.z_){0}
+    , decltype(_impl_.x_){0}
+    , decltype(_impl_.y_){0}
+    , decltype(_impl_.pixmax_){0}
+    , decltype(_impl_.intensity_){0}
+    , decltype(_impl_.sdev_){0}
+    , decltype(_impl_.volsize_){0}
+    , decltype(_impl_.mass_){0}
+    , decltype(_impl_.colorr_){0}
+    , decltype(_impl_.colorg_){0}
+    , decltype(_impl_.colorb_){0}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+  _impl_.orderinfo_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.orderinfo_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  _impl_.name_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.name_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  _impl_.comment_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.comment_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+}
+
+SwcAttachmentApoV1::~SwcAttachmentApoV1() {
+  // @@protoc_insertion_point(destructor:proto.SwcAttachmentApoV1)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void SwcAttachmentApoV1::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.orderinfo_.Destroy();
+  _impl_.name_.Destroy();
+  _impl_.comment_.Destroy();
+}
+
+void SwcAttachmentApoV1::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void SwcAttachmentApoV1::Clear() {
+// @@protoc_insertion_point(message_clear_start:proto.SwcAttachmentApoV1)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _impl_.orderinfo_.ClearToEmpty();
+  _impl_.name_.ClearToEmpty();
+  _impl_.comment_.ClearToEmpty();
+  ::memset(&_impl_.n_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&_impl_.colorb_) -
+      reinterpret_cast<char*>(&_impl_.n_)) + sizeof(_impl_.colorb_));
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* SwcAttachmentApoV1::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // int32 N = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _impl_.n_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // string orderinfo = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
+          auto str = _internal_mutable_orderinfo();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "proto.SwcAttachmentApoV1.orderinfo"));
+        } else
+          goto handle_unusual;
+        continue;
+      // string name = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
+          auto str = _internal_mutable_name();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "proto.SwcAttachmentApoV1.name"));
+        } else
+          goto handle_unusual;
+        continue;
+      // string comment = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
+          auto str = _internal_mutable_comment();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "proto.SwcAttachmentApoV1.comment"));
+        } else
+          goto handle_unusual;
+        continue;
+      // float Z = 5;
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 45)) {
+          _impl_.z_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
+          ptr += sizeof(float);
+        } else
+          goto handle_unusual;
+        continue;
+      // float X = 6;
+      case 6:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 53)) {
+          _impl_.x_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
+          ptr += sizeof(float);
+        } else
+          goto handle_unusual;
+        continue;
+      // float Y = 7;
+      case 7:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 61)) {
+          _impl_.y_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
+          ptr += sizeof(float);
+        } else
+          goto handle_unusual;
+        continue;
+      // float Pixmax = 8;
+      case 8:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 69)) {
+          _impl_.pixmax_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
+          ptr += sizeof(float);
+        } else
+          goto handle_unusual;
+        continue;
+      // float Intensity = 9;
+      case 9:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 77)) {
+          _impl_.intensity_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
+          ptr += sizeof(float);
+        } else
+          goto handle_unusual;
+        continue;
+      // float Sdev = 10;
+      case 10:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 85)) {
+          _impl_.sdev_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
+          ptr += sizeof(float);
+        } else
+          goto handle_unusual;
+        continue;
+      // float Volsize = 11;
+      case 11:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 93)) {
+          _impl_.volsize_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
+          ptr += sizeof(float);
+        } else
+          goto handle_unusual;
+        continue;
+      // float Mass = 12;
+      case 12:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 101)) {
+          _impl_.mass_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
+          ptr += sizeof(float);
+        } else
+          goto handle_unusual;
+        continue;
+      // int32 ColorR = 13;
+      case 13:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 104)) {
+          _impl_.colorr_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // int32 ColorG = 14;
+      case 14:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 112)) {
+          _impl_.colorg_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // int32 ColorB = 15;
+      case 15:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 120)) {
+          _impl_.colorb_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* SwcAttachmentApoV1::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:proto.SwcAttachmentApoV1)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // int32 N = 1;
+  if (this->_internal_n() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(1, this->_internal_n(), target);
+  }
+
+  // string orderinfo = 2;
+  if (!this->_internal_orderinfo().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_orderinfo().data(), static_cast<int>(this->_internal_orderinfo().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "proto.SwcAttachmentApoV1.orderinfo");
+    target = stream->WriteStringMaybeAliased(
+        2, this->_internal_orderinfo(), target);
+  }
+
+  // string name = 3;
+  if (!this->_internal_name().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_name().data(), static_cast<int>(this->_internal_name().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "proto.SwcAttachmentApoV1.name");
+    target = stream->WriteStringMaybeAliased(
+        3, this->_internal_name(), target);
+  }
+
+  // string comment = 4;
+  if (!this->_internal_comment().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_comment().data(), static_cast<int>(this->_internal_comment().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "proto.SwcAttachmentApoV1.comment");
+    target = stream->WriteStringMaybeAliased(
+        4, this->_internal_comment(), target);
+  }
+
+  // float Z = 5;
+  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
+  float tmp_z = this->_internal_z();
+  uint32_t raw_z;
+  memcpy(&raw_z, &tmp_z, sizeof(tmp_z));
+  if (raw_z != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteFloatToArray(5, this->_internal_z(), target);
+  }
+
+  // float X = 6;
+  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
+  float tmp_x = this->_internal_x();
+  uint32_t raw_x;
+  memcpy(&raw_x, &tmp_x, sizeof(tmp_x));
+  if (raw_x != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteFloatToArray(6, this->_internal_x(), target);
+  }
+
+  // float Y = 7;
+  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
+  float tmp_y = this->_internal_y();
+  uint32_t raw_y;
+  memcpy(&raw_y, &tmp_y, sizeof(tmp_y));
+  if (raw_y != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteFloatToArray(7, this->_internal_y(), target);
+  }
+
+  // float Pixmax = 8;
+  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
+  float tmp_pixmax = this->_internal_pixmax();
+  uint32_t raw_pixmax;
+  memcpy(&raw_pixmax, &tmp_pixmax, sizeof(tmp_pixmax));
+  if (raw_pixmax != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteFloatToArray(8, this->_internal_pixmax(), target);
+  }
+
+  // float Intensity = 9;
+  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
+  float tmp_intensity = this->_internal_intensity();
+  uint32_t raw_intensity;
+  memcpy(&raw_intensity, &tmp_intensity, sizeof(tmp_intensity));
+  if (raw_intensity != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteFloatToArray(9, this->_internal_intensity(), target);
+  }
+
+  // float Sdev = 10;
+  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
+  float tmp_sdev = this->_internal_sdev();
+  uint32_t raw_sdev;
+  memcpy(&raw_sdev, &tmp_sdev, sizeof(tmp_sdev));
+  if (raw_sdev != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteFloatToArray(10, this->_internal_sdev(), target);
+  }
+
+  // float Volsize = 11;
+  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
+  float tmp_volsize = this->_internal_volsize();
+  uint32_t raw_volsize;
+  memcpy(&raw_volsize, &tmp_volsize, sizeof(tmp_volsize));
+  if (raw_volsize != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteFloatToArray(11, this->_internal_volsize(), target);
+  }
+
+  // float Mass = 12;
+  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
+  float tmp_mass = this->_internal_mass();
+  uint32_t raw_mass;
+  memcpy(&raw_mass, &tmp_mass, sizeof(tmp_mass));
+  if (raw_mass != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteFloatToArray(12, this->_internal_mass(), target);
+  }
+
+  // int32 ColorR = 13;
+  if (this->_internal_colorr() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(13, this->_internal_colorr(), target);
+  }
+
+  // int32 ColorG = 14;
+  if (this->_internal_colorg() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(14, this->_internal_colorg(), target);
+  }
+
+  // int32 ColorB = 15;
+  if (this->_internal_colorb() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(15, this->_internal_colorb(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:proto.SwcAttachmentApoV1)
+  return target;
+}
+
+size_t SwcAttachmentApoV1::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:proto.SwcAttachmentApoV1)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // string orderinfo = 2;
+  if (!this->_internal_orderinfo().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_orderinfo());
+  }
+
+  // string name = 3;
+  if (!this->_internal_name().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_name());
+  }
+
+  // string comment = 4;
+  if (!this->_internal_comment().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_comment());
+  }
+
+  // int32 N = 1;
+  if (this->_internal_n() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_n());
+  }
+
+  // float Z = 5;
+  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
+  float tmp_z = this->_internal_z();
+  uint32_t raw_z;
+  memcpy(&raw_z, &tmp_z, sizeof(tmp_z));
+  if (raw_z != 0) {
+    total_size += 1 + 4;
+  }
+
+  // float X = 6;
+  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
+  float tmp_x = this->_internal_x();
+  uint32_t raw_x;
+  memcpy(&raw_x, &tmp_x, sizeof(tmp_x));
+  if (raw_x != 0) {
+    total_size += 1 + 4;
+  }
+
+  // float Y = 7;
+  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
+  float tmp_y = this->_internal_y();
+  uint32_t raw_y;
+  memcpy(&raw_y, &tmp_y, sizeof(tmp_y));
+  if (raw_y != 0) {
+    total_size += 1 + 4;
+  }
+
+  // float Pixmax = 8;
+  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
+  float tmp_pixmax = this->_internal_pixmax();
+  uint32_t raw_pixmax;
+  memcpy(&raw_pixmax, &tmp_pixmax, sizeof(tmp_pixmax));
+  if (raw_pixmax != 0) {
+    total_size += 1 + 4;
+  }
+
+  // float Intensity = 9;
+  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
+  float tmp_intensity = this->_internal_intensity();
+  uint32_t raw_intensity;
+  memcpy(&raw_intensity, &tmp_intensity, sizeof(tmp_intensity));
+  if (raw_intensity != 0) {
+    total_size += 1 + 4;
+  }
+
+  // float Sdev = 10;
+  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
+  float tmp_sdev = this->_internal_sdev();
+  uint32_t raw_sdev;
+  memcpy(&raw_sdev, &tmp_sdev, sizeof(tmp_sdev));
+  if (raw_sdev != 0) {
+    total_size += 1 + 4;
+  }
+
+  // float Volsize = 11;
+  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
+  float tmp_volsize = this->_internal_volsize();
+  uint32_t raw_volsize;
+  memcpy(&raw_volsize, &tmp_volsize, sizeof(tmp_volsize));
+  if (raw_volsize != 0) {
+    total_size += 1 + 4;
+  }
+
+  // float Mass = 12;
+  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
+  float tmp_mass = this->_internal_mass();
+  uint32_t raw_mass;
+  memcpy(&raw_mass, &tmp_mass, sizeof(tmp_mass));
+  if (raw_mass != 0) {
+    total_size += 1 + 4;
+  }
+
+  // int32 ColorR = 13;
+  if (this->_internal_colorr() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_colorr());
+  }
+
+  // int32 ColorG = 14;
+  if (this->_internal_colorg() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_colorg());
+  }
+
+  // int32 ColorB = 15;
+  if (this->_internal_colorb() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_colorb());
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData SwcAttachmentApoV1::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    SwcAttachmentApoV1::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SwcAttachmentApoV1::GetClassData() const { return &_class_data_; }
+
+
+void SwcAttachmentApoV1::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<SwcAttachmentApoV1*>(&to_msg);
+  auto& from = static_cast<const SwcAttachmentApoV1&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:proto.SwcAttachmentApoV1)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (!from._internal_orderinfo().empty()) {
+    _this->_internal_set_orderinfo(from._internal_orderinfo());
+  }
+  if (!from._internal_name().empty()) {
+    _this->_internal_set_name(from._internal_name());
+  }
+  if (!from._internal_comment().empty()) {
+    _this->_internal_set_comment(from._internal_comment());
+  }
+  if (from._internal_n() != 0) {
+    _this->_internal_set_n(from._internal_n());
+  }
+  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
+  float tmp_z = from._internal_z();
+  uint32_t raw_z;
+  memcpy(&raw_z, &tmp_z, sizeof(tmp_z));
+  if (raw_z != 0) {
+    _this->_internal_set_z(from._internal_z());
+  }
+  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
+  float tmp_x = from._internal_x();
+  uint32_t raw_x;
+  memcpy(&raw_x, &tmp_x, sizeof(tmp_x));
+  if (raw_x != 0) {
+    _this->_internal_set_x(from._internal_x());
+  }
+  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
+  float tmp_y = from._internal_y();
+  uint32_t raw_y;
+  memcpy(&raw_y, &tmp_y, sizeof(tmp_y));
+  if (raw_y != 0) {
+    _this->_internal_set_y(from._internal_y());
+  }
+  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
+  float tmp_pixmax = from._internal_pixmax();
+  uint32_t raw_pixmax;
+  memcpy(&raw_pixmax, &tmp_pixmax, sizeof(tmp_pixmax));
+  if (raw_pixmax != 0) {
+    _this->_internal_set_pixmax(from._internal_pixmax());
+  }
+  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
+  float tmp_intensity = from._internal_intensity();
+  uint32_t raw_intensity;
+  memcpy(&raw_intensity, &tmp_intensity, sizeof(tmp_intensity));
+  if (raw_intensity != 0) {
+    _this->_internal_set_intensity(from._internal_intensity());
+  }
+  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
+  float tmp_sdev = from._internal_sdev();
+  uint32_t raw_sdev;
+  memcpy(&raw_sdev, &tmp_sdev, sizeof(tmp_sdev));
+  if (raw_sdev != 0) {
+    _this->_internal_set_sdev(from._internal_sdev());
+  }
+  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
+  float tmp_volsize = from._internal_volsize();
+  uint32_t raw_volsize;
+  memcpy(&raw_volsize, &tmp_volsize, sizeof(tmp_volsize));
+  if (raw_volsize != 0) {
+    _this->_internal_set_volsize(from._internal_volsize());
+  }
+  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
+  float tmp_mass = from._internal_mass();
+  uint32_t raw_mass;
+  memcpy(&raw_mass, &tmp_mass, sizeof(tmp_mass));
+  if (raw_mass != 0) {
+    _this->_internal_set_mass(from._internal_mass());
+  }
+  if (from._internal_colorr() != 0) {
+    _this->_internal_set_colorr(from._internal_colorr());
+  }
+  if (from._internal_colorg() != 0) {
+    _this->_internal_set_colorg(from._internal_colorg());
+  }
+  if (from._internal_colorb() != 0) {
+    _this->_internal_set_colorb(from._internal_colorb());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void SwcAttachmentApoV1::CopyFrom(const SwcAttachmentApoV1& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:proto.SwcAttachmentApoV1)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool SwcAttachmentApoV1::IsInitialized() const {
+  return true;
+}
+
+void SwcAttachmentApoV1::InternalSwap(SwcAttachmentApoV1* other) {
+  using std::swap;
+  auto* lhs_arena = GetArenaForAllocation();
+  auto* rhs_arena = other->GetArenaForAllocation();
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.orderinfo_, lhs_arena,
+      &other->_impl_.orderinfo_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.name_, lhs_arena,
+      &other->_impl_.name_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.comment_, lhs_arena,
+      &other->_impl_.comment_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(SwcAttachmentApoV1, _impl_.colorb_)
+      + sizeof(SwcAttachmentApoV1::_impl_.colorb_)
+      - PROTOBUF_FIELD_OFFSET(SwcAttachmentApoV1, _impl_.n_)>(
+          reinterpret_cast<char*>(&_impl_.n_),
+          reinterpret_cast<char*>(&other->_impl_.n_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata SwcAttachmentApoV1::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_Message_2fMessage_2eproto_getter, &descriptor_table_Message_2fMessage_2eproto_once,
+      file_level_metadata_Message_2fMessage_2eproto[20]);
+}
+
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace proto
 PROTOBUF_NAMESPACE_OPEN
@@ -7611,6 +8644,14 @@ Arena::CreateMaybeMessage< ::proto::RequestMetaInfoV1 >(Arena* arena) {
 template<> PROTOBUF_NOINLINE ::proto::ResponseMetaInfoV1*
 Arena::CreateMaybeMessage< ::proto::ResponseMetaInfoV1 >(Arena* arena) {
   return Arena::CreateMessageInternal< ::proto::ResponseMetaInfoV1 >(arena);
+}
+template<> PROTOBUF_NOINLINE ::proto::SwcAttachmentAnoV1*
+Arena::CreateMaybeMessage< ::proto::SwcAttachmentAnoV1 >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::proto::SwcAttachmentAnoV1 >(arena);
+}
+template<> PROTOBUF_NOINLINE ::proto::SwcAttachmentApoV1*
+Arena::CreateMaybeMessage< ::proto::SwcAttachmentApoV1 >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::proto::SwcAttachmentApoV1 >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE
 

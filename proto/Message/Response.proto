@@ -196,3 +196,38 @@ message GetAllDailyStatisticsResponse{
     ResponseMetaInfoV1 metaInfo = 1;
     repeated DailyStatisticsMetaInfoV1 DailyStatisticsInfo = 2;
 }
+
+message CreateSwcAttachmentAnoResponse{
+    ResponseMetaInfoV1 metaInfo = 1;
+}
+
+message DeleteSwcAttachmentAnoResponse{
+    ResponseMetaInfoV1 metaInfo = 1;
+}
+
+message UpdateSwcAttachmentAnoResponse{
+    ResponseMetaInfoV1 metaInfo = 1;
+}
+
+message GetSwcAttachmentAnoResponse{
+    ResponseMetaInfoV1 metaInfo = 1;
+    repeated SwcAttachmentAnoV1 SwcAttachmentAno = 2;
+}
+
+message CreateSwcAttachmentApoResponse{
+    ResponseMetaInfoV1 metaInfo = 1;
+}
+
+message DeleteSwcAttachmentApoResponse{
+    ResponseMetaInfoV1 metaInfo = 1;
+}
+
+message UpdateSwcAttachmentApoResponse{
+    ResponseMetaInfoV1 metaInfo = 1;
+}
+
+message GetSwcAttachmentApoResponse{
+    ResponseMetaInfoV1 metaInfo = 1;
+    repeated SwcAttachmentApoV1 SwcAttachmentApo = 2;
+}
+

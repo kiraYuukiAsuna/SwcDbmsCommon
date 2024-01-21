@@ -60,6 +60,14 @@ const (
 	DBMS_UpdateDailyStatistics_FullMethodName            = "/proto.DBMS/UpdateDailyStatistics"
 	DBMS_GetDailyStatistics_FullMethodName               = "/proto.DBMS/GetDailyStatistics"
 	DBMS_GetAllDailyStatistics_FullMethodName            = "/proto.DBMS/GetAllDailyStatistics"
+	DBMS_CreateSwcAttachmentAno_FullMethodName           = "/proto.DBMS/CreateSwcAttachmentAno"
+	DBMS_DeleteSwcAttachmentAno_FullMethodName           = "/proto.DBMS/DeleteSwcAttachmentAno"
+	DBMS_UpdateSwcAttachmentAno_FullMethodName           = "/proto.DBMS/UpdateSwcAttachmentAno"
+	DBMS_GetSwcAttachmentAno_FullMethodName              = "/proto.DBMS/GetSwcAttachmentAno"
+	DBMS_CreateSwcAttachmentApo_FullMethodName           = "/proto.DBMS/CreateSwcAttachmentApo"
+	DBMS_DeleteSwcAttachmentApo_FullMethodName           = "/proto.DBMS/DeleteSwcAttachmentApo"
+	DBMS_UpdateSwcAttachmentApo_FullMethodName           = "/proto.DBMS/UpdateSwcAttachmentApo"
+	DBMS_GetSwcAttachmentApo_FullMethodName              = "/proto.DBMS/GetSwcAttachmentApo"
 )
 
 // DBMSClient is the client API for DBMS service.
@@ -105,6 +113,14 @@ type DBMSClient interface {
 	UpdateDailyStatistics(ctx context.Context, in *request.UpdateDailyStatisticsRequest, opts ...grpc.CallOption) (*response.UpdateDailyStatisticsResponse, error)
 	GetDailyStatistics(ctx context.Context, in *request.GetDailyStatisticsRequest, opts ...grpc.CallOption) (*response.GetDailyStatisticsResponse, error)
 	GetAllDailyStatistics(ctx context.Context, in *request.GetAllDailyStatisticsRequest, opts ...grpc.CallOption) (*response.GetAllDailyStatisticsResponse, error)
+	CreateSwcAttachmentAno(ctx context.Context, in *request.CreateSwcAttachmentAnoRequest, opts ...grpc.CallOption) (*response.CreateSwcAttachmentAnoResponse, error)
+	DeleteSwcAttachmentAno(ctx context.Context, in *request.DeleteSwcAttachmentAnoRequest, opts ...grpc.CallOption) (*response.DeleteSwcAttachmentAnoResponse, error)
+	UpdateSwcAttachmentAno(ctx context.Context, in *request.UpdateSwcAttachmentAnoRequest, opts ...grpc.CallOption) (*response.UpdateSwcAttachmentAnoResponse, error)
+	GetSwcAttachmentAno(ctx context.Context, in *request.GetSwcAttachmentAnoRequest, opts ...grpc.CallOption) (*response.GetSwcAttachmentAnoResponse, error)
+	CreateSwcAttachmentApo(ctx context.Context, in *request.CreateSwcAttachmentApoRequest, opts ...grpc.CallOption) (*response.CreateSwcAttachmentApoResponse, error)
+	DeleteSwcAttachmentApo(ctx context.Context, in *request.DeleteSwcAttachmentApoRequest, opts ...grpc.CallOption) (*response.DeleteSwcAttachmentApoResponse, error)
+	UpdateSwcAttachmentApo(ctx context.Context, in *request.UpdateSwcAttachmentApoRequest, opts ...grpc.CallOption) (*response.UpdateSwcAttachmentApoResponse, error)
+	GetSwcAttachmentApo(ctx context.Context, in *request.GetSwcAttachmentApoRequest, opts ...grpc.CallOption) (*response.GetSwcAttachmentApoResponse, error)
 }
 
 type dBMSClient struct {
@@ -466,6 +482,78 @@ func (c *dBMSClient) GetAllDailyStatistics(ctx context.Context, in *request.GetA
 	return out, nil
 }
 
+func (c *dBMSClient) CreateSwcAttachmentAno(ctx context.Context, in *request.CreateSwcAttachmentAnoRequest, opts ...grpc.CallOption) (*response.CreateSwcAttachmentAnoResponse, error) {
+	out := new(response.CreateSwcAttachmentAnoResponse)
+	err := c.cc.Invoke(ctx, DBMS_CreateSwcAttachmentAno_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *dBMSClient) DeleteSwcAttachmentAno(ctx context.Context, in *request.DeleteSwcAttachmentAnoRequest, opts ...grpc.CallOption) (*response.DeleteSwcAttachmentAnoResponse, error) {
+	out := new(response.DeleteSwcAttachmentAnoResponse)
+	err := c.cc.Invoke(ctx, DBMS_DeleteSwcAttachmentAno_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *dBMSClient) UpdateSwcAttachmentAno(ctx context.Context, in *request.UpdateSwcAttachmentAnoRequest, opts ...grpc.CallOption) (*response.UpdateSwcAttachmentAnoResponse, error) {
+	out := new(response.UpdateSwcAttachmentAnoResponse)
+	err := c.cc.Invoke(ctx, DBMS_UpdateSwcAttachmentAno_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *dBMSClient) GetSwcAttachmentAno(ctx context.Context, in *request.GetSwcAttachmentAnoRequest, opts ...grpc.CallOption) (*response.GetSwcAttachmentAnoResponse, error) {
+	out := new(response.GetSwcAttachmentAnoResponse)
+	err := c.cc.Invoke(ctx, DBMS_GetSwcAttachmentAno_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *dBMSClient) CreateSwcAttachmentApo(ctx context.Context, in *request.CreateSwcAttachmentApoRequest, opts ...grpc.CallOption) (*response.CreateSwcAttachmentApoResponse, error) {
+	out := new(response.CreateSwcAttachmentApoResponse)
+	err := c.cc.Invoke(ctx, DBMS_CreateSwcAttachmentApo_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *dBMSClient) DeleteSwcAttachmentApo(ctx context.Context, in *request.DeleteSwcAttachmentApoRequest, opts ...grpc.CallOption) (*response.DeleteSwcAttachmentApoResponse, error) {
+	out := new(response.DeleteSwcAttachmentApoResponse)
+	err := c.cc.Invoke(ctx, DBMS_DeleteSwcAttachmentApo_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *dBMSClient) UpdateSwcAttachmentApo(ctx context.Context, in *request.UpdateSwcAttachmentApoRequest, opts ...grpc.CallOption) (*response.UpdateSwcAttachmentApoResponse, error) {
+	out := new(response.UpdateSwcAttachmentApoResponse)
+	err := c.cc.Invoke(ctx, DBMS_UpdateSwcAttachmentApo_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *dBMSClient) GetSwcAttachmentApo(ctx context.Context, in *request.GetSwcAttachmentApoRequest, opts ...grpc.CallOption) (*response.GetSwcAttachmentApoResponse, error) {
+	out := new(response.GetSwcAttachmentApoResponse)
+	err := c.cc.Invoke(ctx, DBMS_GetSwcAttachmentApo_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // DBMSServer is the server API for DBMS service.
 // All implementations must embed UnimplementedDBMSServer
 // for forward compatibility
@@ -509,6 +597,14 @@ type DBMSServer interface {
 	UpdateDailyStatistics(context.Context, *request.UpdateDailyStatisticsRequest) (*response.UpdateDailyStatisticsResponse, error)
 	GetDailyStatistics(context.Context, *request.GetDailyStatisticsRequest) (*response.GetDailyStatisticsResponse, error)
 	GetAllDailyStatistics(context.Context, *request.GetAllDailyStatisticsRequest) (*response.GetAllDailyStatisticsResponse, error)
+	CreateSwcAttachmentAno(context.Context, *request.CreateSwcAttachmentAnoRequest) (*response.CreateSwcAttachmentAnoResponse, error)
+	DeleteSwcAttachmentAno(context.Context, *request.DeleteSwcAttachmentAnoRequest) (*response.DeleteSwcAttachmentAnoResponse, error)
+	UpdateSwcAttachmentAno(context.Context, *request.UpdateSwcAttachmentAnoRequest) (*response.UpdateSwcAttachmentAnoResponse, error)
+	GetSwcAttachmentAno(context.Context, *request.GetSwcAttachmentAnoRequest) (*response.GetSwcAttachmentAnoResponse, error)
+	CreateSwcAttachmentApo(context.Context, *request.CreateSwcAttachmentApoRequest) (*response.CreateSwcAttachmentApoResponse, error)
+	DeleteSwcAttachmentApo(context.Context, *request.DeleteSwcAttachmentApoRequest) (*response.DeleteSwcAttachmentApoResponse, error)
+	UpdateSwcAttachmentApo(context.Context, *request.UpdateSwcAttachmentApoRequest) (*response.UpdateSwcAttachmentApoResponse, error)
+	GetSwcAttachmentApo(context.Context, *request.GetSwcAttachmentApoRequest) (*response.GetSwcAttachmentApoResponse, error)
 	mustEmbedUnimplementedDBMSServer()
 }
 
@@ -632,6 +728,30 @@ func (UnimplementedDBMSServer) GetDailyStatistics(context.Context, *request.GetD
 }
 func (UnimplementedDBMSServer) GetAllDailyStatistics(context.Context, *request.GetAllDailyStatisticsRequest) (*response.GetAllDailyStatisticsResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetAllDailyStatistics not implemented")
+}
+func (UnimplementedDBMSServer) CreateSwcAttachmentAno(context.Context, *request.CreateSwcAttachmentAnoRequest) (*response.CreateSwcAttachmentAnoResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CreateSwcAttachmentAno not implemented")
+}
+func (UnimplementedDBMSServer) DeleteSwcAttachmentAno(context.Context, *request.DeleteSwcAttachmentAnoRequest) (*response.DeleteSwcAttachmentAnoResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method DeleteSwcAttachmentAno not implemented")
+}
+func (UnimplementedDBMSServer) UpdateSwcAttachmentAno(context.Context, *request.UpdateSwcAttachmentAnoRequest) (*response.UpdateSwcAttachmentAnoResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method UpdateSwcAttachmentAno not implemented")
+}
+func (UnimplementedDBMSServer) GetSwcAttachmentAno(context.Context, *request.GetSwcAttachmentAnoRequest) (*response.GetSwcAttachmentAnoResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetSwcAttachmentAno not implemented")
+}
+func (UnimplementedDBMSServer) CreateSwcAttachmentApo(context.Context, *request.CreateSwcAttachmentApoRequest) (*response.CreateSwcAttachmentApoResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CreateSwcAttachmentApo not implemented")
+}
+func (UnimplementedDBMSServer) DeleteSwcAttachmentApo(context.Context, *request.DeleteSwcAttachmentApoRequest) (*response.DeleteSwcAttachmentApoResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method DeleteSwcAttachmentApo not implemented")
+}
+func (UnimplementedDBMSServer) UpdateSwcAttachmentApo(context.Context, *request.UpdateSwcAttachmentApoRequest) (*response.UpdateSwcAttachmentApoResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method UpdateSwcAttachmentApo not implemented")
+}
+func (UnimplementedDBMSServer) GetSwcAttachmentApo(context.Context, *request.GetSwcAttachmentApoRequest) (*response.GetSwcAttachmentApoResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetSwcAttachmentApo not implemented")
 }
 func (UnimplementedDBMSServer) mustEmbedUnimplementedDBMSServer() {}
 
@@ -1348,6 +1468,150 @@ func _DBMS_GetAllDailyStatistics_Handler(srv interface{}, ctx context.Context, d
 	return interceptor(ctx, in, info, handler)
 }
 
+func _DBMS_CreateSwcAttachmentAno_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(request.CreateSwcAttachmentAnoRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(DBMSServer).CreateSwcAttachmentAno(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: DBMS_CreateSwcAttachmentAno_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(DBMSServer).CreateSwcAttachmentAno(ctx, req.(*request.CreateSwcAttachmentAnoRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _DBMS_DeleteSwcAttachmentAno_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(request.DeleteSwcAttachmentAnoRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(DBMSServer).DeleteSwcAttachmentAno(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: DBMS_DeleteSwcAttachmentAno_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(DBMSServer).DeleteSwcAttachmentAno(ctx, req.(*request.DeleteSwcAttachmentAnoRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _DBMS_UpdateSwcAttachmentAno_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(request.UpdateSwcAttachmentAnoRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(DBMSServer).UpdateSwcAttachmentAno(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: DBMS_UpdateSwcAttachmentAno_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(DBMSServer).UpdateSwcAttachmentAno(ctx, req.(*request.UpdateSwcAttachmentAnoRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _DBMS_GetSwcAttachmentAno_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(request.GetSwcAttachmentAnoRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(DBMSServer).GetSwcAttachmentAno(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: DBMS_GetSwcAttachmentAno_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(DBMSServer).GetSwcAttachmentAno(ctx, req.(*request.GetSwcAttachmentAnoRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _DBMS_CreateSwcAttachmentApo_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(request.CreateSwcAttachmentApoRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(DBMSServer).CreateSwcAttachmentApo(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: DBMS_CreateSwcAttachmentApo_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(DBMSServer).CreateSwcAttachmentApo(ctx, req.(*request.CreateSwcAttachmentApoRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _DBMS_DeleteSwcAttachmentApo_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(request.DeleteSwcAttachmentApoRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(DBMSServer).DeleteSwcAttachmentApo(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: DBMS_DeleteSwcAttachmentApo_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(DBMSServer).DeleteSwcAttachmentApo(ctx, req.(*request.DeleteSwcAttachmentApoRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _DBMS_UpdateSwcAttachmentApo_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(request.UpdateSwcAttachmentApoRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(DBMSServer).UpdateSwcAttachmentApo(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: DBMS_UpdateSwcAttachmentApo_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(DBMSServer).UpdateSwcAttachmentApo(ctx, req.(*request.UpdateSwcAttachmentApoRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _DBMS_GetSwcAttachmentApo_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(request.GetSwcAttachmentApoRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(DBMSServer).GetSwcAttachmentApo(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: DBMS_GetSwcAttachmentApo_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(DBMSServer).GetSwcAttachmentApo(ctx, req.(*request.GetSwcAttachmentApoRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // DBMS_ServiceDesc is the grpc.ServiceDesc for DBMS service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -1510,6 +1774,38 @@ var DBMS_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "GetAllDailyStatistics",
 			Handler:    _DBMS_GetAllDailyStatistics_Handler,
+		},
+		{
+			MethodName: "CreateSwcAttachmentAno",
+			Handler:    _DBMS_CreateSwcAttachmentAno_Handler,
+		},
+		{
+			MethodName: "DeleteSwcAttachmentAno",
+			Handler:    _DBMS_DeleteSwcAttachmentAno_Handler,
+		},
+		{
+			MethodName: "UpdateSwcAttachmentAno",
+			Handler:    _DBMS_UpdateSwcAttachmentAno_Handler,
+		},
+		{
+			MethodName: "GetSwcAttachmentAno",
+			Handler:    _DBMS_GetSwcAttachmentAno_Handler,
+		},
+		{
+			MethodName: "CreateSwcAttachmentApo",
+			Handler:    _DBMS_CreateSwcAttachmentApo_Handler,
+		},
+		{
+			MethodName: "DeleteSwcAttachmentApo",
+			Handler:    _DBMS_DeleteSwcAttachmentApo_Handler,
+		},
+		{
+			MethodName: "UpdateSwcAttachmentApo",
+			Handler:    _DBMS_UpdateSwcAttachmentApo_Handler,
+		},
+		{
+			MethodName: "GetSwcAttachmentApo",
+			Handler:    _DBMS_GetSwcAttachmentApo_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
