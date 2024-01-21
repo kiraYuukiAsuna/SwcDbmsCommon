@@ -170,24 +170,26 @@ message ResponseMetaInfoV1{
 }
 
 message SwcAttachmentAnoV1{
-    string APOFILE = 1;
-    string SWCFILE = 2;
+    MetaInfoBase Base = 1;
+    string APOFILE = 2;
+    string SWCFILE = 3;
 }
 
 message SwcAttachmentApoV1{
-    int32 N = 1;
-    string Orderinfo = 2;
-    string Name = 3;
-    string Comment = 4;
-    float Z = 5;
-    float X = 6;
-    float Y = 7;
-    float Pixmax = 8;
-    float Intensity = 9;
-    float Sdev = 10;
-    float Volsize = 11;
-    float Mass = 12;
-    int32 ColorR = 13;
-    int32 ColorG = 14;
-    int32 ColorB = 15;
+    MetaInfoBase Base = 1;
+    int32 N = 2;
+    string Orderinfo = 3;
+    string Name = 4;
+    string Comment = 5;
+    float Z = 6;
+    float X = 7;
+    float Y = 8;
+    float Pixmax = 9;
+    float Intensity = 10;
+    float Sdev = 11;
+    float Volsize = 12;
+    float Mass = 13;
+    int32 ColorR = 14;
+    int32 ColorG = 15;
+    int32 ColorB = 16;
 }

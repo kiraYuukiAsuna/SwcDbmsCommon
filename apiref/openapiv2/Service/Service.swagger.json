@@ -2697,6 +2697,9 @@
     "protoSwcAttachmentAnoV1": {
       "type": "object",
       "properties": {
+        "Base": {
+          "$ref": "#/definitions/protoMetaInfoBase"
+        },
         "APOFILE": {
           "type": "string"
         },
@@ -2708,6 +2711,9 @@
     "protoSwcAttachmentApoV1": {
       "type": "object",
       "properties": {
+        "Base": {
+          "$ref": "#/definitions/protoMetaInfoBase"
+        },
         "N": {
           "type": "integer",
           "format": "int32"

@@ -4404,10 +4404,11 @@ class SwcAttachmentAnoV1 final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAPOFILEFieldNumber = 1,
-    kSWCFILEFieldNumber = 2,
+    kAPOFILEFieldNumber = 2,
+    kSWCFILEFieldNumber = 3,
+    kBaseFieldNumber = 1,
   };
-  // string APOFILE = 1;
+  // string APOFILE = 2;
   void clear_apofile();
   const std::string& apofile() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -4421,7 +4422,7 @@ class SwcAttachmentAnoV1 final :
   std::string* _internal_mutable_apofile();
   public:
 
-  // string SWCFILE = 2;
+  // string SWCFILE = 3;
   void clear_swcfile();
   const std::string& swcfile() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -4435,6 +4436,24 @@ class SwcAttachmentAnoV1 final :
   std::string* _internal_mutable_swcfile();
   public:
 
+  // .proto.MetaInfoBase Base = 1;
+  bool has_base() const;
+  private:
+  bool _internal_has_base() const;
+  public:
+  void clear_base();
+  const ::proto::MetaInfoBase& base() const;
+  PROTOBUF_NODISCARD ::proto::MetaInfoBase* release_base();
+  ::proto::MetaInfoBase* mutable_base();
+  void set_allocated_base(::proto::MetaInfoBase* base);
+  private:
+  const ::proto::MetaInfoBase& _internal_base() const;
+  ::proto::MetaInfoBase* _internal_mutable_base();
+  public:
+  void unsafe_arena_set_allocated_base(
+      ::proto::MetaInfoBase* base);
+  ::proto::MetaInfoBase* unsafe_arena_release_base();
+
   // @@protoc_insertion_point(class_scope:proto.SwcAttachmentAnoV1)
  private:
   class _Internal;
@@ -4445,6 +4464,7 @@ class SwcAttachmentAnoV1 final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr apofile_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr swcfile_;
+    ::proto::MetaInfoBase* base_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -4573,23 +4593,24 @@ class SwcAttachmentApoV1 final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kOrderinfoFieldNumber = 2,
-    kNameFieldNumber = 3,
-    kCommentFieldNumber = 4,
-    kNFieldNumber = 1,
-    kZFieldNumber = 5,
-    kXFieldNumber = 6,
-    kYFieldNumber = 7,
-    kPixmaxFieldNumber = 8,
-    kIntensityFieldNumber = 9,
-    kSdevFieldNumber = 10,
-    kVolsizeFieldNumber = 11,
-    kMassFieldNumber = 12,
-    kColorRFieldNumber = 13,
-    kColorGFieldNumber = 14,
-    kColorBFieldNumber = 15,
+    kOrderinfoFieldNumber = 3,
+    kNameFieldNumber = 4,
+    kCommentFieldNumber = 5,
+    kBaseFieldNumber = 1,
+    kNFieldNumber = 2,
+    kZFieldNumber = 6,
+    kXFieldNumber = 7,
+    kYFieldNumber = 8,
+    kPixmaxFieldNumber = 9,
+    kIntensityFieldNumber = 10,
+    kSdevFieldNumber = 11,
+    kVolsizeFieldNumber = 12,
+    kMassFieldNumber = 13,
+    kColorRFieldNumber = 14,
+    kColorGFieldNumber = 15,
+    kColorBFieldNumber = 16,
   };
-  // string Orderinfo = 2;
+  // string Orderinfo = 3;
   void clear_orderinfo();
   const std::string& orderinfo() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -4603,7 +4624,7 @@ class SwcAttachmentApoV1 final :
   std::string* _internal_mutable_orderinfo();
   public:
 
-  // string Name = 3;
+  // string Name = 4;
   void clear_name();
   const std::string& name() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -4617,7 +4638,7 @@ class SwcAttachmentApoV1 final :
   std::string* _internal_mutable_name();
   public:
 
-  // string Comment = 4;
+  // string Comment = 5;
   void clear_comment();
   const std::string& comment() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -4631,7 +4652,25 @@ class SwcAttachmentApoV1 final :
   std::string* _internal_mutable_comment();
   public:
 
-  // int32 N = 1;
+  // .proto.MetaInfoBase Base = 1;
+  bool has_base() const;
+  private:
+  bool _internal_has_base() const;
+  public:
+  void clear_base();
+  const ::proto::MetaInfoBase& base() const;
+  PROTOBUF_NODISCARD ::proto::MetaInfoBase* release_base();
+  ::proto::MetaInfoBase* mutable_base();
+  void set_allocated_base(::proto::MetaInfoBase* base);
+  private:
+  const ::proto::MetaInfoBase& _internal_base() const;
+  ::proto::MetaInfoBase* _internal_mutable_base();
+  public:
+  void unsafe_arena_set_allocated_base(
+      ::proto::MetaInfoBase* base);
+  ::proto::MetaInfoBase* unsafe_arena_release_base();
+
+  // int32 N = 2;
   void clear_n();
   int32_t n() const;
   void set_n(int32_t value);
@@ -4640,7 +4679,7 @@ class SwcAttachmentApoV1 final :
   void _internal_set_n(int32_t value);
   public:
 
-  // float Z = 5;
+  // float Z = 6;
   void clear_z();
   float z() const;
   void set_z(float value);
@@ -4649,7 +4688,7 @@ class SwcAttachmentApoV1 final :
   void _internal_set_z(float value);
   public:
 
-  // float X = 6;
+  // float X = 7;
   void clear_x();
   float x() const;
   void set_x(float value);
@@ -4658,7 +4697,7 @@ class SwcAttachmentApoV1 final :
   void _internal_set_x(float value);
   public:
 
-  // float Y = 7;
+  // float Y = 8;
   void clear_y();
   float y() const;
   void set_y(float value);
@@ -4667,7 +4706,7 @@ class SwcAttachmentApoV1 final :
   void _internal_set_y(float value);
   public:
 
-  // float Pixmax = 8;
+  // float Pixmax = 9;
   void clear_pixmax();
   float pixmax() const;
   void set_pixmax(float value);
@@ -4676,7 +4715,7 @@ class SwcAttachmentApoV1 final :
   void _internal_set_pixmax(float value);
   public:
 
-  // float Intensity = 9;
+  // float Intensity = 10;
   void clear_intensity();
   float intensity() const;
   void set_intensity(float value);
@@ -4685,7 +4724,7 @@ class SwcAttachmentApoV1 final :
   void _internal_set_intensity(float value);
   public:
 
-  // float Sdev = 10;
+  // float Sdev = 11;
   void clear_sdev();
   float sdev() const;
   void set_sdev(float value);
@@ -4694,7 +4733,7 @@ class SwcAttachmentApoV1 final :
   void _internal_set_sdev(float value);
   public:
 
-  // float Volsize = 11;
+  // float Volsize = 12;
   void clear_volsize();
   float volsize() const;
   void set_volsize(float value);
@@ -4703,7 +4742,7 @@ class SwcAttachmentApoV1 final :
   void _internal_set_volsize(float value);
   public:
 
-  // float Mass = 12;
+  // float Mass = 13;
   void clear_mass();
   float mass() const;
   void set_mass(float value);
@@ -4712,7 +4751,7 @@ class SwcAttachmentApoV1 final :
   void _internal_set_mass(float value);
   public:
 
-  // int32 ColorR = 13;
+  // int32 ColorR = 14;
   void clear_colorr();
   int32_t colorr() const;
   void set_colorr(int32_t value);
@@ -4721,7 +4760,7 @@ class SwcAttachmentApoV1 final :
   void _internal_set_colorr(int32_t value);
   public:
 
-  // int32 ColorG = 14;
+  // int32 ColorG = 15;
   void clear_colorg();
   int32_t colorg() const;
   void set_colorg(int32_t value);
@@ -4730,7 +4769,7 @@ class SwcAttachmentApoV1 final :
   void _internal_set_colorg(int32_t value);
   public:
 
-  // int32 ColorB = 15;
+  // int32 ColorB = 16;
   void clear_colorb();
   int32_t colorb() const;
   void set_colorb(int32_t value);
@@ -4750,6 +4789,7 @@ class SwcAttachmentApoV1 final :
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr orderinfo_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr name_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr comment_;
+    ::proto::MetaInfoBase* base_;
     int32_t n_;
     float z_;
     float x_;
@@ -9554,7 +9594,97 @@ inline void ResponseMetaInfoV1::set_allocated_message(std::string* message) {
 
 // SwcAttachmentAnoV1
 
-// string APOFILE = 1;
+// .proto.MetaInfoBase Base = 1;
+inline bool SwcAttachmentAnoV1::_internal_has_base() const {
+  return this != internal_default_instance() && _impl_.base_ != nullptr;
+}
+inline bool SwcAttachmentAnoV1::has_base() const {
+  return _internal_has_base();
+}
+inline void SwcAttachmentAnoV1::clear_base() {
+  if (GetArenaForAllocation() == nullptr && _impl_.base_ != nullptr) {
+    delete _impl_.base_;
+  }
+  _impl_.base_ = nullptr;
+}
+inline const ::proto::MetaInfoBase& SwcAttachmentAnoV1::_internal_base() const {
+  const ::proto::MetaInfoBase* p = _impl_.base_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::MetaInfoBase&>(
+      ::proto::_MetaInfoBase_default_instance_);
+}
+inline const ::proto::MetaInfoBase& SwcAttachmentAnoV1::base() const {
+  // @@protoc_insertion_point(field_get:proto.SwcAttachmentAnoV1.Base)
+  return _internal_base();
+}
+inline void SwcAttachmentAnoV1::unsafe_arena_set_allocated_base(
+    ::proto::MetaInfoBase* base) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.base_);
+  }
+  _impl_.base_ = base;
+  if (base) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.SwcAttachmentAnoV1.Base)
+}
+inline ::proto::MetaInfoBase* SwcAttachmentAnoV1::release_base() {
+  
+  ::proto::MetaInfoBase* temp = _impl_.base_;
+  _impl_.base_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::proto::MetaInfoBase* SwcAttachmentAnoV1::unsafe_arena_release_base() {
+  // @@protoc_insertion_point(field_release:proto.SwcAttachmentAnoV1.Base)
+  
+  ::proto::MetaInfoBase* temp = _impl_.base_;
+  _impl_.base_ = nullptr;
+  return temp;
+}
+inline ::proto::MetaInfoBase* SwcAttachmentAnoV1::_internal_mutable_base() {
+  
+  if (_impl_.base_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::MetaInfoBase>(GetArenaForAllocation());
+    _impl_.base_ = p;
+  }
+  return _impl_.base_;
+}
+inline ::proto::MetaInfoBase* SwcAttachmentAnoV1::mutable_base() {
+  ::proto::MetaInfoBase* _msg = _internal_mutable_base();
+  // @@protoc_insertion_point(field_mutable:proto.SwcAttachmentAnoV1.Base)
+  return _msg;
+}
+inline void SwcAttachmentAnoV1::set_allocated_base(::proto::MetaInfoBase* base) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete _impl_.base_;
+  }
+  if (base) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(base);
+    if (message_arena != submessage_arena) {
+      base = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, base, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  _impl_.base_ = base;
+  // @@protoc_insertion_point(field_set_allocated:proto.SwcAttachmentAnoV1.Base)
+}
+
+// string APOFILE = 2;
 inline void SwcAttachmentAnoV1::clear_apofile() {
   _impl_.apofile_.ClearToEmpty();
 }
@@ -9604,7 +9734,7 @@ inline void SwcAttachmentAnoV1::set_allocated_apofile(std::string* apofile) {
   // @@protoc_insertion_point(field_set_allocated:proto.SwcAttachmentAnoV1.APOFILE)
 }
 
-// string SWCFILE = 2;
+// string SWCFILE = 3;
 inline void SwcAttachmentAnoV1::clear_swcfile() {
   _impl_.swcfile_.ClearToEmpty();
 }
@@ -9658,7 +9788,97 @@ inline void SwcAttachmentAnoV1::set_allocated_swcfile(std::string* swcfile) {
 
 // SwcAttachmentApoV1
 
-// int32 N = 1;
+// .proto.MetaInfoBase Base = 1;
+inline bool SwcAttachmentApoV1::_internal_has_base() const {
+  return this != internal_default_instance() && _impl_.base_ != nullptr;
+}
+inline bool SwcAttachmentApoV1::has_base() const {
+  return _internal_has_base();
+}
+inline void SwcAttachmentApoV1::clear_base() {
+  if (GetArenaForAllocation() == nullptr && _impl_.base_ != nullptr) {
+    delete _impl_.base_;
+  }
+  _impl_.base_ = nullptr;
+}
+inline const ::proto::MetaInfoBase& SwcAttachmentApoV1::_internal_base() const {
+  const ::proto::MetaInfoBase* p = _impl_.base_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::MetaInfoBase&>(
+      ::proto::_MetaInfoBase_default_instance_);
+}
+inline const ::proto::MetaInfoBase& SwcAttachmentApoV1::base() const {
+  // @@protoc_insertion_point(field_get:proto.SwcAttachmentApoV1.Base)
+  return _internal_base();
+}
+inline void SwcAttachmentApoV1::unsafe_arena_set_allocated_base(
+    ::proto::MetaInfoBase* base) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.base_);
+  }
+  _impl_.base_ = base;
+  if (base) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.SwcAttachmentApoV1.Base)
+}
+inline ::proto::MetaInfoBase* SwcAttachmentApoV1::release_base() {
+  
+  ::proto::MetaInfoBase* temp = _impl_.base_;
+  _impl_.base_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::proto::MetaInfoBase* SwcAttachmentApoV1::unsafe_arena_release_base() {
+  // @@protoc_insertion_point(field_release:proto.SwcAttachmentApoV1.Base)
+  
+  ::proto::MetaInfoBase* temp = _impl_.base_;
+  _impl_.base_ = nullptr;
+  return temp;
+}
+inline ::proto::MetaInfoBase* SwcAttachmentApoV1::_internal_mutable_base() {
+  
+  if (_impl_.base_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::MetaInfoBase>(GetArenaForAllocation());
+    _impl_.base_ = p;
+  }
+  return _impl_.base_;
+}
+inline ::proto::MetaInfoBase* SwcAttachmentApoV1::mutable_base() {
+  ::proto::MetaInfoBase* _msg = _internal_mutable_base();
+  // @@protoc_insertion_point(field_mutable:proto.SwcAttachmentApoV1.Base)
+  return _msg;
+}
+inline void SwcAttachmentApoV1::set_allocated_base(::proto::MetaInfoBase* base) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete _impl_.base_;
+  }
+  if (base) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(base);
+    if (message_arena != submessage_arena) {
+      base = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, base, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  _impl_.base_ = base;
+  // @@protoc_insertion_point(field_set_allocated:proto.SwcAttachmentApoV1.Base)
+}
+
+// int32 N = 2;
 inline void SwcAttachmentApoV1::clear_n() {
   _impl_.n_ = 0;
 }
@@ -9678,7 +9898,7 @@ inline void SwcAttachmentApoV1::set_n(int32_t value) {
   // @@protoc_insertion_point(field_set:proto.SwcAttachmentApoV1.N)
 }
 
-// string Orderinfo = 2;
+// string Orderinfo = 3;
 inline void SwcAttachmentApoV1::clear_orderinfo() {
   _impl_.orderinfo_.ClearToEmpty();
 }
@@ -9728,7 +9948,7 @@ inline void SwcAttachmentApoV1::set_allocated_orderinfo(std::string* orderinfo) 
   // @@protoc_insertion_point(field_set_allocated:proto.SwcAttachmentApoV1.Orderinfo)
 }
 
-// string Name = 3;
+// string Name = 4;
 inline void SwcAttachmentApoV1::clear_name() {
   _impl_.name_.ClearToEmpty();
 }
@@ -9778,7 +9998,7 @@ inline void SwcAttachmentApoV1::set_allocated_name(std::string* name) {
   // @@protoc_insertion_point(field_set_allocated:proto.SwcAttachmentApoV1.Name)
 }
 
-// string Comment = 4;
+// string Comment = 5;
 inline void SwcAttachmentApoV1::clear_comment() {
   _impl_.comment_.ClearToEmpty();
 }
@@ -9828,7 +10048,7 @@ inline void SwcAttachmentApoV1::set_allocated_comment(std::string* comment) {
   // @@protoc_insertion_point(field_set_allocated:proto.SwcAttachmentApoV1.Comment)
 }
 
-// float Z = 5;
+// float Z = 6;
 inline void SwcAttachmentApoV1::clear_z() {
   _impl_.z_ = 0;
 }
@@ -9848,7 +10068,7 @@ inline void SwcAttachmentApoV1::set_z(float value) {
   // @@protoc_insertion_point(field_set:proto.SwcAttachmentApoV1.Z)
 }
 
-// float X = 6;
+// float X = 7;
 inline void SwcAttachmentApoV1::clear_x() {
   _impl_.x_ = 0;
 }
@@ -9868,7 +10088,7 @@ inline void SwcAttachmentApoV1::set_x(float value) {
   // @@protoc_insertion_point(field_set:proto.SwcAttachmentApoV1.X)
 }
 
-// float Y = 7;
+// float Y = 8;
 inline void SwcAttachmentApoV1::clear_y() {
   _impl_.y_ = 0;
 }
@@ -9888,7 +10108,7 @@ inline void SwcAttachmentApoV1::set_y(float value) {
   // @@protoc_insertion_point(field_set:proto.SwcAttachmentApoV1.Y)
 }
 
-// float Pixmax = 8;
+// float Pixmax = 9;
 inline void SwcAttachmentApoV1::clear_pixmax() {
   _impl_.pixmax_ = 0;
 }
@@ -9908,7 +10128,7 @@ inline void SwcAttachmentApoV1::set_pixmax(float value) {
   // @@protoc_insertion_point(field_set:proto.SwcAttachmentApoV1.Pixmax)
 }
 
-// float Intensity = 9;
+// float Intensity = 10;
 inline void SwcAttachmentApoV1::clear_intensity() {
   _impl_.intensity_ = 0;
 }
@@ -9928,7 +10148,7 @@ inline void SwcAttachmentApoV1::set_intensity(float value) {
   // @@protoc_insertion_point(field_set:proto.SwcAttachmentApoV1.Intensity)
 }
 
-// float Sdev = 10;
+// float Sdev = 11;
 inline void SwcAttachmentApoV1::clear_sdev() {
   _impl_.sdev_ = 0;
 }
@@ -9948,7 +10168,7 @@ inline void SwcAttachmentApoV1::set_sdev(float value) {
   // @@protoc_insertion_point(field_set:proto.SwcAttachmentApoV1.Sdev)
 }
 
-// float Volsize = 11;
+// float Volsize = 12;
 inline void SwcAttachmentApoV1::clear_volsize() {
   _impl_.volsize_ = 0;
 }
@@ -9968,7 +10188,7 @@ inline void SwcAttachmentApoV1::set_volsize(float value) {
   // @@protoc_insertion_point(field_set:proto.SwcAttachmentApoV1.Volsize)
 }
 
-// float Mass = 12;
+// float Mass = 13;
 inline void SwcAttachmentApoV1::clear_mass() {
   _impl_.mass_ = 0;
 }
@@ -9988,7 +10208,7 @@ inline void SwcAttachmentApoV1::set_mass(float value) {
   // @@protoc_insertion_point(field_set:proto.SwcAttachmentApoV1.Mass)
 }
 
-// int32 ColorR = 13;
+// int32 ColorR = 14;
 inline void SwcAttachmentApoV1::clear_colorr() {
   _impl_.colorr_ = 0;
 }
@@ -10008,7 +10228,7 @@ inline void SwcAttachmentApoV1::set_colorr(int32_t value) {
   // @@protoc_insertion_point(field_set:proto.SwcAttachmentApoV1.ColorR)
 }
 
-// int32 ColorG = 14;
+// int32 ColorG = 15;
 inline void SwcAttachmentApoV1::clear_colorg() {
   _impl_.colorg_ = 0;
 }
@@ -10028,7 +10248,7 @@ inline void SwcAttachmentApoV1::set_colorg(int32_t value) {
   // @@protoc_insertion_point(field_set:proto.SwcAttachmentApoV1.ColorG)
 }
 
-// int32 ColorB = 15;
+// int32 ColorB = 16;
 inline void SwcAttachmentApoV1::clear_colorb() {
   _impl_.colorb_ = 0;
 }
