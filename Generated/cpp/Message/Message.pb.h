@@ -4405,7 +4405,7 @@ class SwcAttachmentAnoV1 final :
 
   enum : int {
     kAPOFILEFieldNumber = 1,
-    kANOFILEFieldNumber = 2,
+    kSWCFILEFieldNumber = 2,
   };
   // string APOFILE = 1;
   void clear_apofile();
@@ -4421,18 +4421,18 @@ class SwcAttachmentAnoV1 final :
   std::string* _internal_mutable_apofile();
   public:
 
-  // string ANOFILE = 2;
-  void clear_anofile();
-  const std::string& anofile() const;
+  // string SWCFILE = 2;
+  void clear_swcfile();
+  const std::string& swcfile() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_anofile(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_anofile();
-  PROTOBUF_NODISCARD std::string* release_anofile();
-  void set_allocated_anofile(std::string* anofile);
+  void set_swcfile(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_swcfile();
+  PROTOBUF_NODISCARD std::string* release_swcfile();
+  void set_allocated_swcfile(std::string* swcfile);
   private:
-  const std::string& _internal_anofile() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_anofile(const std::string& value);
-  std::string* _internal_mutable_anofile();
+  const std::string& _internal_swcfile() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_swcfile(const std::string& value);
+  std::string* _internal_mutable_swcfile();
   public:
 
   // @@protoc_insertion_point(class_scope:proto.SwcAttachmentAnoV1)
@@ -4444,7 +4444,7 @@ class SwcAttachmentAnoV1 final :
   typedef void DestructorSkippable_;
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr apofile_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr anofile_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr swcfile_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -4589,7 +4589,7 @@ class SwcAttachmentApoV1 final :
     kColorGFieldNumber = 14,
     kColorBFieldNumber = 15,
   };
-  // string orderinfo = 2;
+  // string Orderinfo = 2;
   void clear_orderinfo();
   const std::string& orderinfo() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -4603,7 +4603,7 @@ class SwcAttachmentApoV1 final :
   std::string* _internal_mutable_orderinfo();
   public:
 
-  // string name = 3;
+  // string Name = 3;
   void clear_name();
   const std::string& name() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -4617,7 +4617,7 @@ class SwcAttachmentApoV1 final :
   std::string* _internal_mutable_name();
   public:
 
-  // string comment = 4;
+  // string Comment = 4;
   void clear_comment();
   const std::string& comment() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -9604,54 +9604,54 @@ inline void SwcAttachmentAnoV1::set_allocated_apofile(std::string* apofile) {
   // @@protoc_insertion_point(field_set_allocated:proto.SwcAttachmentAnoV1.APOFILE)
 }
 
-// string ANOFILE = 2;
-inline void SwcAttachmentAnoV1::clear_anofile() {
-  _impl_.anofile_.ClearToEmpty();
+// string SWCFILE = 2;
+inline void SwcAttachmentAnoV1::clear_swcfile() {
+  _impl_.swcfile_.ClearToEmpty();
 }
-inline const std::string& SwcAttachmentAnoV1::anofile() const {
-  // @@protoc_insertion_point(field_get:proto.SwcAttachmentAnoV1.ANOFILE)
-  return _internal_anofile();
+inline const std::string& SwcAttachmentAnoV1::swcfile() const {
+  // @@protoc_insertion_point(field_get:proto.SwcAttachmentAnoV1.SWCFILE)
+  return _internal_swcfile();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void SwcAttachmentAnoV1::set_anofile(ArgT0&& arg0, ArgT... args) {
+void SwcAttachmentAnoV1::set_swcfile(ArgT0&& arg0, ArgT... args) {
  
- _impl_.anofile_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:proto.SwcAttachmentAnoV1.ANOFILE)
+ _impl_.swcfile_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:proto.SwcAttachmentAnoV1.SWCFILE)
 }
-inline std::string* SwcAttachmentAnoV1::mutable_anofile() {
-  std::string* _s = _internal_mutable_anofile();
-  // @@protoc_insertion_point(field_mutable:proto.SwcAttachmentAnoV1.ANOFILE)
+inline std::string* SwcAttachmentAnoV1::mutable_swcfile() {
+  std::string* _s = _internal_mutable_swcfile();
+  // @@protoc_insertion_point(field_mutable:proto.SwcAttachmentAnoV1.SWCFILE)
   return _s;
 }
-inline const std::string& SwcAttachmentAnoV1::_internal_anofile() const {
-  return _impl_.anofile_.Get();
+inline const std::string& SwcAttachmentAnoV1::_internal_swcfile() const {
+  return _impl_.swcfile_.Get();
 }
-inline void SwcAttachmentAnoV1::_internal_set_anofile(const std::string& value) {
+inline void SwcAttachmentAnoV1::_internal_set_swcfile(const std::string& value) {
   
-  _impl_.anofile_.Set(value, GetArenaForAllocation());
+  _impl_.swcfile_.Set(value, GetArenaForAllocation());
 }
-inline std::string* SwcAttachmentAnoV1::_internal_mutable_anofile() {
+inline std::string* SwcAttachmentAnoV1::_internal_mutable_swcfile() {
   
-  return _impl_.anofile_.Mutable(GetArenaForAllocation());
+  return _impl_.swcfile_.Mutable(GetArenaForAllocation());
 }
-inline std::string* SwcAttachmentAnoV1::release_anofile() {
-  // @@protoc_insertion_point(field_release:proto.SwcAttachmentAnoV1.ANOFILE)
-  return _impl_.anofile_.Release();
+inline std::string* SwcAttachmentAnoV1::release_swcfile() {
+  // @@protoc_insertion_point(field_release:proto.SwcAttachmentAnoV1.SWCFILE)
+  return _impl_.swcfile_.Release();
 }
-inline void SwcAttachmentAnoV1::set_allocated_anofile(std::string* anofile) {
-  if (anofile != nullptr) {
+inline void SwcAttachmentAnoV1::set_allocated_swcfile(std::string* swcfile) {
+  if (swcfile != nullptr) {
     
   } else {
     
   }
-  _impl_.anofile_.SetAllocated(anofile, GetArenaForAllocation());
+  _impl_.swcfile_.SetAllocated(swcfile, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.anofile_.IsDefault()) {
-    _impl_.anofile_.Set("", GetArenaForAllocation());
+  if (_impl_.swcfile_.IsDefault()) {
+    _impl_.swcfile_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:proto.SwcAttachmentAnoV1.ANOFILE)
+  // @@protoc_insertion_point(field_set_allocated:proto.SwcAttachmentAnoV1.SWCFILE)
 }
 
 // -------------------------------------------------------------------
@@ -9678,12 +9678,12 @@ inline void SwcAttachmentApoV1::set_n(int32_t value) {
   // @@protoc_insertion_point(field_set:proto.SwcAttachmentApoV1.N)
 }
 
-// string orderinfo = 2;
+// string Orderinfo = 2;
 inline void SwcAttachmentApoV1::clear_orderinfo() {
   _impl_.orderinfo_.ClearToEmpty();
 }
 inline const std::string& SwcAttachmentApoV1::orderinfo() const {
-  // @@protoc_insertion_point(field_get:proto.SwcAttachmentApoV1.orderinfo)
+  // @@protoc_insertion_point(field_get:proto.SwcAttachmentApoV1.Orderinfo)
   return _internal_orderinfo();
 }
 template <typename ArgT0, typename... ArgT>
@@ -9691,11 +9691,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void SwcAttachmentApoV1::set_orderinfo(ArgT0&& arg0, ArgT... args) {
  
  _impl_.orderinfo_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:proto.SwcAttachmentApoV1.orderinfo)
+  // @@protoc_insertion_point(field_set:proto.SwcAttachmentApoV1.Orderinfo)
 }
 inline std::string* SwcAttachmentApoV1::mutable_orderinfo() {
   std::string* _s = _internal_mutable_orderinfo();
-  // @@protoc_insertion_point(field_mutable:proto.SwcAttachmentApoV1.orderinfo)
+  // @@protoc_insertion_point(field_mutable:proto.SwcAttachmentApoV1.Orderinfo)
   return _s;
 }
 inline const std::string& SwcAttachmentApoV1::_internal_orderinfo() const {
@@ -9710,7 +9710,7 @@ inline std::string* SwcAttachmentApoV1::_internal_mutable_orderinfo() {
   return _impl_.orderinfo_.Mutable(GetArenaForAllocation());
 }
 inline std::string* SwcAttachmentApoV1::release_orderinfo() {
-  // @@protoc_insertion_point(field_release:proto.SwcAttachmentApoV1.orderinfo)
+  // @@protoc_insertion_point(field_release:proto.SwcAttachmentApoV1.Orderinfo)
   return _impl_.orderinfo_.Release();
 }
 inline void SwcAttachmentApoV1::set_allocated_orderinfo(std::string* orderinfo) {
@@ -9725,15 +9725,15 @@ inline void SwcAttachmentApoV1::set_allocated_orderinfo(std::string* orderinfo) 
     _impl_.orderinfo_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:proto.SwcAttachmentApoV1.orderinfo)
+  // @@protoc_insertion_point(field_set_allocated:proto.SwcAttachmentApoV1.Orderinfo)
 }
 
-// string name = 3;
+// string Name = 3;
 inline void SwcAttachmentApoV1::clear_name() {
   _impl_.name_.ClearToEmpty();
 }
 inline const std::string& SwcAttachmentApoV1::name() const {
-  // @@protoc_insertion_point(field_get:proto.SwcAttachmentApoV1.name)
+  // @@protoc_insertion_point(field_get:proto.SwcAttachmentApoV1.Name)
   return _internal_name();
 }
 template <typename ArgT0, typename... ArgT>
@@ -9741,11 +9741,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void SwcAttachmentApoV1::set_name(ArgT0&& arg0, ArgT... args) {
  
  _impl_.name_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:proto.SwcAttachmentApoV1.name)
+  // @@protoc_insertion_point(field_set:proto.SwcAttachmentApoV1.Name)
 }
 inline std::string* SwcAttachmentApoV1::mutable_name() {
   std::string* _s = _internal_mutable_name();
-  // @@protoc_insertion_point(field_mutable:proto.SwcAttachmentApoV1.name)
+  // @@protoc_insertion_point(field_mutable:proto.SwcAttachmentApoV1.Name)
   return _s;
 }
 inline const std::string& SwcAttachmentApoV1::_internal_name() const {
@@ -9760,7 +9760,7 @@ inline std::string* SwcAttachmentApoV1::_internal_mutable_name() {
   return _impl_.name_.Mutable(GetArenaForAllocation());
 }
 inline std::string* SwcAttachmentApoV1::release_name() {
-  // @@protoc_insertion_point(field_release:proto.SwcAttachmentApoV1.name)
+  // @@protoc_insertion_point(field_release:proto.SwcAttachmentApoV1.Name)
   return _impl_.name_.Release();
 }
 inline void SwcAttachmentApoV1::set_allocated_name(std::string* name) {
@@ -9775,15 +9775,15 @@ inline void SwcAttachmentApoV1::set_allocated_name(std::string* name) {
     _impl_.name_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:proto.SwcAttachmentApoV1.name)
+  // @@protoc_insertion_point(field_set_allocated:proto.SwcAttachmentApoV1.Name)
 }
 
-// string comment = 4;
+// string Comment = 4;
 inline void SwcAttachmentApoV1::clear_comment() {
   _impl_.comment_.ClearToEmpty();
 }
 inline const std::string& SwcAttachmentApoV1::comment() const {
-  // @@protoc_insertion_point(field_get:proto.SwcAttachmentApoV1.comment)
+  // @@protoc_insertion_point(field_get:proto.SwcAttachmentApoV1.Comment)
   return _internal_comment();
 }
 template <typename ArgT0, typename... ArgT>
@@ -9791,11 +9791,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void SwcAttachmentApoV1::set_comment(ArgT0&& arg0, ArgT... args) {
  
  _impl_.comment_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:proto.SwcAttachmentApoV1.comment)
+  // @@protoc_insertion_point(field_set:proto.SwcAttachmentApoV1.Comment)
 }
 inline std::string* SwcAttachmentApoV1::mutable_comment() {
   std::string* _s = _internal_mutable_comment();
-  // @@protoc_insertion_point(field_mutable:proto.SwcAttachmentApoV1.comment)
+  // @@protoc_insertion_point(field_mutable:proto.SwcAttachmentApoV1.Comment)
   return _s;
 }
 inline const std::string& SwcAttachmentApoV1::_internal_comment() const {
@@ -9810,7 +9810,7 @@ inline std::string* SwcAttachmentApoV1::_internal_mutable_comment() {
   return _impl_.comment_.Mutable(GetArenaForAllocation());
 }
 inline std::string* SwcAttachmentApoV1::release_comment() {
-  // @@protoc_insertion_point(field_release:proto.SwcAttachmentApoV1.comment)
+  // @@protoc_insertion_point(field_release:proto.SwcAttachmentApoV1.Comment)
   return _impl_.comment_.Release();
 }
 inline void SwcAttachmentApoV1::set_allocated_comment(std::string* comment) {
@@ -9825,7 +9825,7 @@ inline void SwcAttachmentApoV1::set_allocated_comment(std::string* comment) {
     _impl_.comment_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:proto.SwcAttachmentApoV1.comment)
+  // @@protoc_insertion_point(field_set_allocated:proto.SwcAttachmentApoV1.Comment)
 }
 
 // float Z = 5;

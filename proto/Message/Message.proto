@@ -171,14 +171,14 @@ message ResponseMetaInfoV1{
 
 message SwcAttachmentAnoV1{
     string APOFILE = 1;
-    string ANOFILE = 2;
+    string SWCFILE = 2;
 }
 
 message SwcAttachmentApoV1{
     int32 N = 1;
-    string orderinfo = 2;
-    string name = 3;
-    string comment = 4;
+    string Orderinfo = 2;
+    string Name = 3;
+    string Comment = 4;
     float Z = 5;
     float X = 6;
     float Y = 7;

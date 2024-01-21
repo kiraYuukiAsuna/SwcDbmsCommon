@@ -2696,7 +2696,7 @@
         "APOFILE": {
           "type": "string"
         },
-        "ANOFILE": {
+        "SWCFILE": {
           "type": "string"
         }
       }
@@ -2708,13 +2708,13 @@
           "type": "integer",
           "format": "int32"
         },
-        "orderinfo": {
+        "Orderinfo": {
           "type": "string"
         },
-        "name": {
+        "Name": {
           "type": "string"
         },
-        "comment": {
+        "Comment": {
           "type": "string"
         },
         "Z": {
