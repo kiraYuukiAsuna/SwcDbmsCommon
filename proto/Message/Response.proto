@@ -211,7 +211,7 @@ message UpdateSwcAttachmentAnoResponse{
 
 message GetSwcAttachmentAnoResponse{
     ResponseMetaInfoV1 metaInfo = 1;
-    repeated SwcAttachmentAnoV1 SwcAttachmentAno = 2;
+    SwcAttachmentAnoV1 SwcAttachmentAno = 2;
 }
 
 message CreateSwcAttachmentApoResponse{

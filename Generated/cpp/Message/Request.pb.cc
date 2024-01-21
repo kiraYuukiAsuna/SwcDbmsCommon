@@ -609,10 +609,10 @@ struct GetAllDailyStatisticsRequestDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetAllDailyStatisticsRequestDefaultTypeInternal _GetAllDailyStatisticsRequest_default_instance_;
 PROTOBUF_CONSTEXPR CreateSwcAttachmentAnoRequest::CreateSwcAttachmentAnoRequest(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.swcattachmentano_)*/{}
-  , /*decltype(_impl_.swcname_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.swcname_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.metainfo_)*/nullptr
   , /*decltype(_impl_.userverifyinfo_)*/nullptr
+  , /*decltype(_impl_.swcattachmentano_)*/nullptr
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct CreateSwcAttachmentAnoRequestDefaultTypeInternal {
   PROTOBUF_CONSTEXPR CreateSwcAttachmentAnoRequestDefaultTypeInternal()
@@ -640,10 +640,10 @@ struct DeleteSwcAttachmentAnoRequestDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 DeleteSwcAttachmentAnoRequestDefaultTypeInternal _DeleteSwcAttachmentAnoRequest_default_instance_;
 PROTOBUF_CONSTEXPR UpdateSwcAttachmentAnoRequest::UpdateSwcAttachmentAnoRequest(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.newswcattachmentano_)*/{}
-  , /*decltype(_impl_.swcname_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.swcname_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.metainfo_)*/nullptr
   , /*decltype(_impl_.userverifyinfo_)*/nullptr
+  , /*decltype(_impl_.newswcattachmentano_)*/nullptr
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct UpdateSwcAttachmentAnoRequestDefaultTypeInternal {
   PROTOBUF_CONSTEXPR UpdateSwcAttachmentAnoRequestDefaultTypeInternal()
@@ -1421,7 +1421,7 @@ const char descriptor_table_protodef_Message_2fRequest_2eproto[] PROTOBUF_SECTIO
   "o\030\001 \001(\0132\030.proto.RequestMetaInfoV1\022/\n\016Use"
   "rVerifyInfo\030\002 \001(\0132\027.proto.UserVerifyInfo"
   "V1\022\017\n\007SwcName\030\003 \001(\t\0223\n\020SwcAttachmentAno\030"
-  "\004 \003(\0132\031.proto.SwcAttachmentAnoV1\"\215\001\n\035Del"
+  "\004 \001(\0132\031.proto.SwcAttachmentAnoV1\"\215\001\n\035Del"
   "eteSwcAttachmentAnoRequest\022*\n\010metaInfo\030\001"
   " \001(\0132\030.proto.RequestMetaInfoV1\022/\n\016UserVe"
   "rifyInfo\030\002 \001(\0132\027.proto.UserVerifyInfoV1\022"
@@ -1429,7 +1429,7 @@ const char descriptor_table_protodef_Message_2fRequest_2eproto[] PROTOBUF_SECTIO
   "AnoRequest\022*\n\010metaInfo\030\001 \001(\0132\030.proto.Req"
   "uestMetaInfoV1\022/\n\016UserVerifyInfo\030\002 \001(\0132\027"
   ".proto.UserVerifyInfoV1\022\017\n\007SwcName\030\003 \001(\t"
-  "\0226\n\023NewSwcAttachmentAno\030\004 \003(\0132\031.proto.Sw"
+  "\0226\n\023NewSwcAttachmentAno\030\004 \001(\0132\031.proto.Sw"
   "cAttachmentAnoV1\"\212\001\n\032GetSwcAttachmentAno"
   "Request\022*\n\010metaInfo\030\001 \001(\0132\030.proto.Reques"
   "tMetaInfoV1\022/\n\016UserVerifyInfo\030\002 \001(\0132\027.pr"
@@ -13217,6 +13217,7 @@ class CreateSwcAttachmentAnoRequest::_Internal {
  public:
   static const ::proto::RequestMetaInfoV1& metainfo(const CreateSwcAttachmentAnoRequest* msg);
   static const ::proto::UserVerifyInfoV1& userverifyinfo(const CreateSwcAttachmentAnoRequest* msg);
+  static const ::proto::SwcAttachmentAnoV1& swcattachmentano(const CreateSwcAttachmentAnoRequest* msg);
 };
 
 const ::proto::RequestMetaInfoV1&
@@ -13226,6 +13227,10 @@ CreateSwcAttachmentAnoRequest::_Internal::metainfo(const CreateSwcAttachmentAnoR
 const ::proto::UserVerifyInfoV1&
 CreateSwcAttachmentAnoRequest::_Internal::userverifyinfo(const CreateSwcAttachmentAnoRequest* msg) {
   return *msg->_impl_.userverifyinfo_;
+}
+const ::proto::SwcAttachmentAnoV1&
+CreateSwcAttachmentAnoRequest::_Internal::swcattachmentano(const CreateSwcAttachmentAnoRequest* msg) {
+  return *msg->_impl_.swcattachmentano_;
 }
 void CreateSwcAttachmentAnoRequest::clear_metainfo() {
   if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
@@ -13240,7 +13245,10 @@ void CreateSwcAttachmentAnoRequest::clear_userverifyinfo() {
   _impl_.userverifyinfo_ = nullptr;
 }
 void CreateSwcAttachmentAnoRequest::clear_swcattachmentano() {
-  _impl_.swcattachmentano_.Clear();
+  if (GetArenaForAllocation() == nullptr && _impl_.swcattachmentano_ != nullptr) {
+    delete _impl_.swcattachmentano_;
+  }
+  _impl_.swcattachmentano_ = nullptr;
 }
 CreateSwcAttachmentAnoRequest::CreateSwcAttachmentAnoRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
@@ -13252,10 +13260,10 @@ CreateSwcAttachmentAnoRequest::CreateSwcAttachmentAnoRequest(const CreateSwcAtta
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   CreateSwcAttachmentAnoRequest* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.swcattachmentano_){from._impl_.swcattachmentano_}
-    , decltype(_impl_.swcname_){}
+      decltype(_impl_.swcname_){}
     , decltype(_impl_.metainfo_){nullptr}
     , decltype(_impl_.userverifyinfo_){nullptr}
+    , decltype(_impl_.swcattachmentano_){nullptr}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
@@ -13273,6 +13281,9 @@ CreateSwcAttachmentAnoRequest::CreateSwcAttachmentAnoRequest(const CreateSwcAtta
   if (from._internal_has_userverifyinfo()) {
     _this->_impl_.userverifyinfo_ = new ::proto::UserVerifyInfoV1(*from._impl_.userverifyinfo_);
   }
+  if (from._internal_has_swcattachmentano()) {
+    _this->_impl_.swcattachmentano_ = new ::proto::SwcAttachmentAnoV1(*from._impl_.swcattachmentano_);
+  }
   // @@protoc_insertion_point(copy_constructor:proto.CreateSwcAttachmentAnoRequest)
 }
 
@@ -13281,10 +13292,10 @@ inline void CreateSwcAttachmentAnoRequest::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.swcattachmentano_){arena}
-    , decltype(_impl_.swcname_){}
+      decltype(_impl_.swcname_){}
     , decltype(_impl_.metainfo_){nullptr}
     , decltype(_impl_.userverifyinfo_){nullptr}
+    , decltype(_impl_.swcattachmentano_){nullptr}
     , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.swcname_.InitDefault();
@@ -13304,10 +13315,10 @@ CreateSwcAttachmentAnoRequest::~CreateSwcAttachmentAnoRequest() {
 
 inline void CreateSwcAttachmentAnoRequest::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.swcattachmentano_.~RepeatedPtrField();
   _impl_.swcname_.Destroy();
   if (this != internal_default_instance()) delete _impl_.metainfo_;
   if (this != internal_default_instance()) delete _impl_.userverifyinfo_;
+  if (this != internal_default_instance()) delete _impl_.swcattachmentano_;
 }
 
 void CreateSwcAttachmentAnoRequest::SetCachedSize(int size) const {
@@ -13320,7 +13331,6 @@ void CreateSwcAttachmentAnoRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.swcattachmentano_.Clear();
   _impl_.swcname_.ClearToEmpty();
   if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
     delete _impl_.metainfo_;
@@ -13330,6 +13340,10 @@ void CreateSwcAttachmentAnoRequest::Clear() {
     delete _impl_.userverifyinfo_;
   }
   _impl_.userverifyinfo_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.swcattachmentano_ != nullptr) {
+    delete _impl_.swcattachmentano_;
+  }
+  _impl_.swcattachmentano_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -13365,16 +13379,11 @@ const char* CreateSwcAttachmentAnoRequest::_InternalParse(const char* ptr, ::_pb
         } else
           goto handle_unusual;
         continue;
-      // repeated .proto.SwcAttachmentAnoV1 SwcAttachmentAno = 4;
+      // .proto.SwcAttachmentAnoV1 SwcAttachmentAno = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
-          ptr -= 1;
-          do {
-            ptr += 1;
-            ptr = ctx->ParseMessage(_internal_add_swcattachmentano(), ptr);
-            CHK_(ptr);
-            if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<34>(ptr));
+          ptr = ctx->ParseMessage(_internal_mutable_swcattachmentano(), ptr);
+          CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
@@ -13431,12 +13440,11 @@ uint8_t* CreateSwcAttachmentAnoRequest::_InternalSerialize(
         3, this->_internal_swcname(), target);
   }
 
-  // repeated .proto.SwcAttachmentAnoV1 SwcAttachmentAno = 4;
-  for (unsigned i = 0,
-      n = static_cast<unsigned>(this->_internal_swcattachmentano_size()); i < n; i++) {
-    const auto& repfield = this->_internal_swcattachmentano(i);
+  // .proto.SwcAttachmentAnoV1 SwcAttachmentAno = 4;
+  if (this->_internal_has_swcattachmentano()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(4, repfield, repfield.GetCachedSize(), target, stream);
+      InternalWriteMessage(4, _Internal::swcattachmentano(this),
+        _Internal::swcattachmentano(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -13454,13 +13462,6 @@ size_t CreateSwcAttachmentAnoRequest::ByteSizeLong() const {
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
-
-  // repeated .proto.SwcAttachmentAnoV1 SwcAttachmentAno = 4;
-  total_size += 1UL * this->_internal_swcattachmentano_size();
-  for (const auto& msg : this->_impl_.swcattachmentano_) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
-  }
 
   // string SwcName = 3;
   if (!this->_internal_swcname().empty()) {
@@ -13483,6 +13484,13 @@ size_t CreateSwcAttachmentAnoRequest::ByteSizeLong() const {
         *_impl_.userverifyinfo_);
   }
 
+  // .proto.SwcAttachmentAnoV1 SwcAttachmentAno = 4;
+  if (this->_internal_has_swcattachmentano()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.swcattachmentano_);
+  }
+
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
@@ -13501,7 +13509,6 @@ void CreateSwcAttachmentAnoRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& 
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  _this->_impl_.swcattachmentano_.MergeFrom(from._impl_.swcattachmentano_);
   if (!from._internal_swcname().empty()) {
     _this->_internal_set_swcname(from._internal_swcname());
   }
@@ -13512,6 +13519,10 @@ void CreateSwcAttachmentAnoRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& 
   if (from._internal_has_userverifyinfo()) {
     _this->_internal_mutable_userverifyinfo()->::proto::UserVerifyInfoV1::MergeFrom(
         from._internal_userverifyinfo());
+  }
+  if (from._internal_has_swcattachmentano()) {
+    _this->_internal_mutable_swcattachmentano()->::proto::SwcAttachmentAnoV1::MergeFrom(
+        from._internal_swcattachmentano());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -13532,14 +13543,13 @@ void CreateSwcAttachmentAnoRequest::InternalSwap(CreateSwcAttachmentAnoRequest* 
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  _impl_.swcattachmentano_.InternalSwap(&other->_impl_.swcattachmentano_);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.swcname_, lhs_arena,
       &other->_impl_.swcname_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(CreateSwcAttachmentAnoRequest, _impl_.userverifyinfo_)
-      + sizeof(CreateSwcAttachmentAnoRequest::_impl_.userverifyinfo_)
+      PROTOBUF_FIELD_OFFSET(CreateSwcAttachmentAnoRequest, _impl_.swcattachmentano_)
+      + sizeof(CreateSwcAttachmentAnoRequest::_impl_.swcattachmentano_)
       - PROTOBUF_FIELD_OFFSET(CreateSwcAttachmentAnoRequest, _impl_.metainfo_)>(
           reinterpret_cast<char*>(&_impl_.metainfo_),
           reinterpret_cast<char*>(&other->_impl_.metainfo_));
@@ -13860,6 +13870,7 @@ class UpdateSwcAttachmentAnoRequest::_Internal {
  public:
   static const ::proto::RequestMetaInfoV1& metainfo(const UpdateSwcAttachmentAnoRequest* msg);
   static const ::proto::UserVerifyInfoV1& userverifyinfo(const UpdateSwcAttachmentAnoRequest* msg);
+  static const ::proto::SwcAttachmentAnoV1& newswcattachmentano(const UpdateSwcAttachmentAnoRequest* msg);
 };
 
 const ::proto::RequestMetaInfoV1&
@@ -13869,6 +13880,10 @@ UpdateSwcAttachmentAnoRequest::_Internal::metainfo(const UpdateSwcAttachmentAnoR
 const ::proto::UserVerifyInfoV1&
 UpdateSwcAttachmentAnoRequest::_Internal::userverifyinfo(const UpdateSwcAttachmentAnoRequest* msg) {
   return *msg->_impl_.userverifyinfo_;
+}
+const ::proto::SwcAttachmentAnoV1&
+UpdateSwcAttachmentAnoRequest::_Internal::newswcattachmentano(const UpdateSwcAttachmentAnoRequest* msg) {
+  return *msg->_impl_.newswcattachmentano_;
 }
 void UpdateSwcAttachmentAnoRequest::clear_metainfo() {
   if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
@@ -13883,7 +13898,10 @@ void UpdateSwcAttachmentAnoRequest::clear_userverifyinfo() {
   _impl_.userverifyinfo_ = nullptr;
 }
 void UpdateSwcAttachmentAnoRequest::clear_newswcattachmentano() {
-  _impl_.newswcattachmentano_.Clear();
+  if (GetArenaForAllocation() == nullptr && _impl_.newswcattachmentano_ != nullptr) {
+    delete _impl_.newswcattachmentano_;
+  }
+  _impl_.newswcattachmentano_ = nullptr;
 }
 UpdateSwcAttachmentAnoRequest::UpdateSwcAttachmentAnoRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
@@ -13895,10 +13913,10 @@ UpdateSwcAttachmentAnoRequest::UpdateSwcAttachmentAnoRequest(const UpdateSwcAtta
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   UpdateSwcAttachmentAnoRequest* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.newswcattachmentano_){from._impl_.newswcattachmentano_}
-    , decltype(_impl_.swcname_){}
+      decltype(_impl_.swcname_){}
     , decltype(_impl_.metainfo_){nullptr}
     , decltype(_impl_.userverifyinfo_){nullptr}
+    , decltype(_impl_.newswcattachmentano_){nullptr}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
@@ -13916,6 +13934,9 @@ UpdateSwcAttachmentAnoRequest::UpdateSwcAttachmentAnoRequest(const UpdateSwcAtta
   if (from._internal_has_userverifyinfo()) {
     _this->_impl_.userverifyinfo_ = new ::proto::UserVerifyInfoV1(*from._impl_.userverifyinfo_);
   }
+  if (from._internal_has_newswcattachmentano()) {
+    _this->_impl_.newswcattachmentano_ = new ::proto::SwcAttachmentAnoV1(*from._impl_.newswcattachmentano_);
+  }
   // @@protoc_insertion_point(copy_constructor:proto.UpdateSwcAttachmentAnoRequest)
 }
 
@@ -13924,10 +13945,10 @@ inline void UpdateSwcAttachmentAnoRequest::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.newswcattachmentano_){arena}
-    , decltype(_impl_.swcname_){}
+      decltype(_impl_.swcname_){}
     , decltype(_impl_.metainfo_){nullptr}
     , decltype(_impl_.userverifyinfo_){nullptr}
+    , decltype(_impl_.newswcattachmentano_){nullptr}
     , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.swcname_.InitDefault();
@@ -13947,10 +13968,10 @@ UpdateSwcAttachmentAnoRequest::~UpdateSwcAttachmentAnoRequest() {
 
 inline void UpdateSwcAttachmentAnoRequest::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.newswcattachmentano_.~RepeatedPtrField();
   _impl_.swcname_.Destroy();
   if (this != internal_default_instance()) delete _impl_.metainfo_;
   if (this != internal_default_instance()) delete _impl_.userverifyinfo_;
+  if (this != internal_default_instance()) delete _impl_.newswcattachmentano_;
 }
 
 void UpdateSwcAttachmentAnoRequest::SetCachedSize(int size) const {
@@ -13963,7 +13984,6 @@ void UpdateSwcAttachmentAnoRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.newswcattachmentano_.Clear();
   _impl_.swcname_.ClearToEmpty();
   if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
     delete _impl_.metainfo_;
@@ -13973,6 +13993,10 @@ void UpdateSwcAttachmentAnoRequest::Clear() {
     delete _impl_.userverifyinfo_;
   }
   _impl_.userverifyinfo_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.newswcattachmentano_ != nullptr) {
+    delete _impl_.newswcattachmentano_;
+  }
+  _impl_.newswcattachmentano_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -14008,16 +14032,11 @@ const char* UpdateSwcAttachmentAnoRequest::_InternalParse(const char* ptr, ::_pb
         } else
           goto handle_unusual;
         continue;
-      // repeated .proto.SwcAttachmentAnoV1 NewSwcAttachmentAno = 4;
+      // .proto.SwcAttachmentAnoV1 NewSwcAttachmentAno = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
-          ptr -= 1;
-          do {
-            ptr += 1;
-            ptr = ctx->ParseMessage(_internal_add_newswcattachmentano(), ptr);
-            CHK_(ptr);
-            if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<34>(ptr));
+          ptr = ctx->ParseMessage(_internal_mutable_newswcattachmentano(), ptr);
+          CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
@@ -14074,12 +14093,11 @@ uint8_t* UpdateSwcAttachmentAnoRequest::_InternalSerialize(
         3, this->_internal_swcname(), target);
   }
 
-  // repeated .proto.SwcAttachmentAnoV1 NewSwcAttachmentAno = 4;
-  for (unsigned i = 0,
-      n = static_cast<unsigned>(this->_internal_newswcattachmentano_size()); i < n; i++) {
-    const auto& repfield = this->_internal_newswcattachmentano(i);
+  // .proto.SwcAttachmentAnoV1 NewSwcAttachmentAno = 4;
+  if (this->_internal_has_newswcattachmentano()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(4, repfield, repfield.GetCachedSize(), target, stream);
+      InternalWriteMessage(4, _Internal::newswcattachmentano(this),
+        _Internal::newswcattachmentano(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -14097,13 +14115,6 @@ size_t UpdateSwcAttachmentAnoRequest::ByteSizeLong() const {
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
-
-  // repeated .proto.SwcAttachmentAnoV1 NewSwcAttachmentAno = 4;
-  total_size += 1UL * this->_internal_newswcattachmentano_size();
-  for (const auto& msg : this->_impl_.newswcattachmentano_) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
-  }
 
   // string SwcName = 3;
   if (!this->_internal_swcname().empty()) {
@@ -14126,6 +14137,13 @@ size_t UpdateSwcAttachmentAnoRequest::ByteSizeLong() const {
         *_impl_.userverifyinfo_);
   }
 
+  // .proto.SwcAttachmentAnoV1 NewSwcAttachmentAno = 4;
+  if (this->_internal_has_newswcattachmentano()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.newswcattachmentano_);
+  }
+
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
@@ -14144,7 +14162,6 @@ void UpdateSwcAttachmentAnoRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& 
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  _this->_impl_.newswcattachmentano_.MergeFrom(from._impl_.newswcattachmentano_);
   if (!from._internal_swcname().empty()) {
     _this->_internal_set_swcname(from._internal_swcname());
   }
@@ -14155,6 +14172,10 @@ void UpdateSwcAttachmentAnoRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& 
   if (from._internal_has_userverifyinfo()) {
     _this->_internal_mutable_userverifyinfo()->::proto::UserVerifyInfoV1::MergeFrom(
         from._internal_userverifyinfo());
+  }
+  if (from._internal_has_newswcattachmentano()) {
+    _this->_internal_mutable_newswcattachmentano()->::proto::SwcAttachmentAnoV1::MergeFrom(
+        from._internal_newswcattachmentano());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -14175,14 +14196,13 @@ void UpdateSwcAttachmentAnoRequest::InternalSwap(UpdateSwcAttachmentAnoRequest* 
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  _impl_.newswcattachmentano_.InternalSwap(&other->_impl_.newswcattachmentano_);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.swcname_, lhs_arena,
       &other->_impl_.swcname_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(UpdateSwcAttachmentAnoRequest, _impl_.userverifyinfo_)
-      + sizeof(UpdateSwcAttachmentAnoRequest::_impl_.userverifyinfo_)
+      PROTOBUF_FIELD_OFFSET(UpdateSwcAttachmentAnoRequest, _impl_.newswcattachmentano_)
+      + sizeof(UpdateSwcAttachmentAnoRequest::_impl_.newswcattachmentano_)
       - PROTOBUF_FIELD_OFFSET(UpdateSwcAttachmentAnoRequest, _impl_.metainfo_)>(
           reinterpret_cast<char*>(&_impl_.metainfo_),
           reinterpret_cast<char*>(&other->_impl_.metainfo_));

@@ -246,7 +246,7 @@ message CreateSwcAttachmentAnoRequest{
     RequestMetaInfoV1 metaInfo = 1;
     UserVerifyInfoV1 UserVerifyInfo = 2;
     string SwcName = 3;
-    repeated SwcAttachmentAnoV1 SwcAttachmentAno = 4;
+    SwcAttachmentAnoV1 SwcAttachmentAno = 4;
 }
 
 message DeleteSwcAttachmentAnoRequest{
@@ -259,7 +259,7 @@ message UpdateSwcAttachmentAnoRequest{
     RequestMetaInfoV1 metaInfo = 1;
     UserVerifyInfoV1 UserVerifyInfo = 2;
     string SwcName = 3;
-    repeated SwcAttachmentAnoV1 NewSwcAttachmentAno = 4;
+    SwcAttachmentAnoV1 NewSwcAttachmentAno = 4;
 }
 
 message GetSwcAttachmentAnoRequest{

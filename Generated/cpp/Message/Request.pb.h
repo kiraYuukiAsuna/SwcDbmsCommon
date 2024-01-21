@@ -7952,29 +7952,11 @@ class CreateSwcAttachmentAnoRequest final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kSwcAttachmentAnoFieldNumber = 4,
     kSwcNameFieldNumber = 3,
     kMetaInfoFieldNumber = 1,
     kUserVerifyInfoFieldNumber = 2,
+    kSwcAttachmentAnoFieldNumber = 4,
   };
-  // repeated .proto.SwcAttachmentAnoV1 SwcAttachmentAno = 4;
-  int swcattachmentano_size() const;
-  private:
-  int _internal_swcattachmentano_size() const;
-  public:
-  void clear_swcattachmentano();
-  ::proto::SwcAttachmentAnoV1* mutable_swcattachmentano(int index);
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::proto::SwcAttachmentAnoV1 >*
-      mutable_swcattachmentano();
-  private:
-  const ::proto::SwcAttachmentAnoV1& _internal_swcattachmentano(int index) const;
-  ::proto::SwcAttachmentAnoV1* _internal_add_swcattachmentano();
-  public:
-  const ::proto::SwcAttachmentAnoV1& swcattachmentano(int index) const;
-  ::proto::SwcAttachmentAnoV1* add_swcattachmentano();
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::proto::SwcAttachmentAnoV1 >&
-      swcattachmentano() const;
-
   // string SwcName = 3;
   void clear_swcname();
   const std::string& swcname() const;
@@ -8025,6 +8007,24 @@ class CreateSwcAttachmentAnoRequest final :
       ::proto::UserVerifyInfoV1* userverifyinfo);
   ::proto::UserVerifyInfoV1* unsafe_arena_release_userverifyinfo();
 
+  // .proto.SwcAttachmentAnoV1 SwcAttachmentAno = 4;
+  bool has_swcattachmentano() const;
+  private:
+  bool _internal_has_swcattachmentano() const;
+  public:
+  void clear_swcattachmentano();
+  const ::proto::SwcAttachmentAnoV1& swcattachmentano() const;
+  PROTOBUF_NODISCARD ::proto::SwcAttachmentAnoV1* release_swcattachmentano();
+  ::proto::SwcAttachmentAnoV1* mutable_swcattachmentano();
+  void set_allocated_swcattachmentano(::proto::SwcAttachmentAnoV1* swcattachmentano);
+  private:
+  const ::proto::SwcAttachmentAnoV1& _internal_swcattachmentano() const;
+  ::proto::SwcAttachmentAnoV1* _internal_mutable_swcattachmentano();
+  public:
+  void unsafe_arena_set_allocated_swcattachmentano(
+      ::proto::SwcAttachmentAnoV1* swcattachmentano);
+  ::proto::SwcAttachmentAnoV1* unsafe_arena_release_swcattachmentano();
+
   // @@protoc_insertion_point(class_scope:proto.CreateSwcAttachmentAnoRequest)
  private:
   class _Internal;
@@ -8033,10 +8033,10 @@ class CreateSwcAttachmentAnoRequest final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::proto::SwcAttachmentAnoV1 > swcattachmentano_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr swcname_;
     ::proto::RequestMetaInfoV1* metainfo_;
     ::proto::UserVerifyInfoV1* userverifyinfo_;
+    ::proto::SwcAttachmentAnoV1* swcattachmentano_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -8358,29 +8358,11 @@ class UpdateSwcAttachmentAnoRequest final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kNewSwcAttachmentAnoFieldNumber = 4,
     kSwcNameFieldNumber = 3,
     kMetaInfoFieldNumber = 1,
     kUserVerifyInfoFieldNumber = 2,
+    kNewSwcAttachmentAnoFieldNumber = 4,
   };
-  // repeated .proto.SwcAttachmentAnoV1 NewSwcAttachmentAno = 4;
-  int newswcattachmentano_size() const;
-  private:
-  int _internal_newswcattachmentano_size() const;
-  public:
-  void clear_newswcattachmentano();
-  ::proto::SwcAttachmentAnoV1* mutable_newswcattachmentano(int index);
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::proto::SwcAttachmentAnoV1 >*
-      mutable_newswcattachmentano();
-  private:
-  const ::proto::SwcAttachmentAnoV1& _internal_newswcattachmentano(int index) const;
-  ::proto::SwcAttachmentAnoV1* _internal_add_newswcattachmentano();
-  public:
-  const ::proto::SwcAttachmentAnoV1& newswcattachmentano(int index) const;
-  ::proto::SwcAttachmentAnoV1* add_newswcattachmentano();
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::proto::SwcAttachmentAnoV1 >&
-      newswcattachmentano() const;
-
   // string SwcName = 3;
   void clear_swcname();
   const std::string& swcname() const;
@@ -8431,6 +8413,24 @@ class UpdateSwcAttachmentAnoRequest final :
       ::proto::UserVerifyInfoV1* userverifyinfo);
   ::proto::UserVerifyInfoV1* unsafe_arena_release_userverifyinfo();
 
+  // .proto.SwcAttachmentAnoV1 NewSwcAttachmentAno = 4;
+  bool has_newswcattachmentano() const;
+  private:
+  bool _internal_has_newswcattachmentano() const;
+  public:
+  void clear_newswcattachmentano();
+  const ::proto::SwcAttachmentAnoV1& newswcattachmentano() const;
+  PROTOBUF_NODISCARD ::proto::SwcAttachmentAnoV1* release_newswcattachmentano();
+  ::proto::SwcAttachmentAnoV1* mutable_newswcattachmentano();
+  void set_allocated_newswcattachmentano(::proto::SwcAttachmentAnoV1* newswcattachmentano);
+  private:
+  const ::proto::SwcAttachmentAnoV1& _internal_newswcattachmentano() const;
+  ::proto::SwcAttachmentAnoV1* _internal_mutable_newswcattachmentano();
+  public:
+  void unsafe_arena_set_allocated_newswcattachmentano(
+      ::proto::SwcAttachmentAnoV1* newswcattachmentano);
+  ::proto::SwcAttachmentAnoV1* unsafe_arena_release_newswcattachmentano();
+
   // @@protoc_insertion_point(class_scope:proto.UpdateSwcAttachmentAnoRequest)
  private:
   class _Internal;
@@ -8439,10 +8439,10 @@ class UpdateSwcAttachmentAnoRequest final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::proto::SwcAttachmentAnoV1 > newswcattachmentano_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr swcname_;
     ::proto::RequestMetaInfoV1* metainfo_;
     ::proto::UserVerifyInfoV1* userverifyinfo_;
+    ::proto::SwcAttachmentAnoV1* newswcattachmentano_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -18900,41 +18900,89 @@ inline void CreateSwcAttachmentAnoRequest::set_allocated_swcname(std::string* sw
   // @@protoc_insertion_point(field_set_allocated:proto.CreateSwcAttachmentAnoRequest.SwcName)
 }
 
-// repeated .proto.SwcAttachmentAnoV1 SwcAttachmentAno = 4;
-inline int CreateSwcAttachmentAnoRequest::_internal_swcattachmentano_size() const {
-  return _impl_.swcattachmentano_.size();
+// .proto.SwcAttachmentAnoV1 SwcAttachmentAno = 4;
+inline bool CreateSwcAttachmentAnoRequest::_internal_has_swcattachmentano() const {
+  return this != internal_default_instance() && _impl_.swcattachmentano_ != nullptr;
 }
-inline int CreateSwcAttachmentAnoRequest::swcattachmentano_size() const {
-  return _internal_swcattachmentano_size();
+inline bool CreateSwcAttachmentAnoRequest::has_swcattachmentano() const {
+  return _internal_has_swcattachmentano();
 }
-inline ::proto::SwcAttachmentAnoV1* CreateSwcAttachmentAnoRequest::mutable_swcattachmentano(int index) {
-  // @@protoc_insertion_point(field_mutable:proto.CreateSwcAttachmentAnoRequest.SwcAttachmentAno)
-  return _impl_.swcattachmentano_.Mutable(index);
+inline const ::proto::SwcAttachmentAnoV1& CreateSwcAttachmentAnoRequest::_internal_swcattachmentano() const {
+  const ::proto::SwcAttachmentAnoV1* p = _impl_.swcattachmentano_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::SwcAttachmentAnoV1&>(
+      ::proto::_SwcAttachmentAnoV1_default_instance_);
 }
-inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::proto::SwcAttachmentAnoV1 >*
-CreateSwcAttachmentAnoRequest::mutable_swcattachmentano() {
-  // @@protoc_insertion_point(field_mutable_list:proto.CreateSwcAttachmentAnoRequest.SwcAttachmentAno)
-  return &_impl_.swcattachmentano_;
-}
-inline const ::proto::SwcAttachmentAnoV1& CreateSwcAttachmentAnoRequest::_internal_swcattachmentano(int index) const {
-  return _impl_.swcattachmentano_.Get(index);
-}
-inline const ::proto::SwcAttachmentAnoV1& CreateSwcAttachmentAnoRequest::swcattachmentano(int index) const {
+inline const ::proto::SwcAttachmentAnoV1& CreateSwcAttachmentAnoRequest::swcattachmentano() const {
   // @@protoc_insertion_point(field_get:proto.CreateSwcAttachmentAnoRequest.SwcAttachmentAno)
-  return _internal_swcattachmentano(index);
+  return _internal_swcattachmentano();
 }
-inline ::proto::SwcAttachmentAnoV1* CreateSwcAttachmentAnoRequest::_internal_add_swcattachmentano() {
-  return _impl_.swcattachmentano_.Add();
+inline void CreateSwcAttachmentAnoRequest::unsafe_arena_set_allocated_swcattachmentano(
+    ::proto::SwcAttachmentAnoV1* swcattachmentano) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.swcattachmentano_);
+  }
+  _impl_.swcattachmentano_ = swcattachmentano;
+  if (swcattachmentano) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.CreateSwcAttachmentAnoRequest.SwcAttachmentAno)
 }
-inline ::proto::SwcAttachmentAnoV1* CreateSwcAttachmentAnoRequest::add_swcattachmentano() {
-  ::proto::SwcAttachmentAnoV1* _add = _internal_add_swcattachmentano();
-  // @@protoc_insertion_point(field_add:proto.CreateSwcAttachmentAnoRequest.SwcAttachmentAno)
-  return _add;
+inline ::proto::SwcAttachmentAnoV1* CreateSwcAttachmentAnoRequest::release_swcattachmentano() {
+  
+  ::proto::SwcAttachmentAnoV1* temp = _impl_.swcattachmentano_;
+  _impl_.swcattachmentano_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
 }
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::proto::SwcAttachmentAnoV1 >&
-CreateSwcAttachmentAnoRequest::swcattachmentano() const {
-  // @@protoc_insertion_point(field_list:proto.CreateSwcAttachmentAnoRequest.SwcAttachmentAno)
+inline ::proto::SwcAttachmentAnoV1* CreateSwcAttachmentAnoRequest::unsafe_arena_release_swcattachmentano() {
+  // @@protoc_insertion_point(field_release:proto.CreateSwcAttachmentAnoRequest.SwcAttachmentAno)
+  
+  ::proto::SwcAttachmentAnoV1* temp = _impl_.swcattachmentano_;
+  _impl_.swcattachmentano_ = nullptr;
+  return temp;
+}
+inline ::proto::SwcAttachmentAnoV1* CreateSwcAttachmentAnoRequest::_internal_mutable_swcattachmentano() {
+  
+  if (_impl_.swcattachmentano_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::SwcAttachmentAnoV1>(GetArenaForAllocation());
+    _impl_.swcattachmentano_ = p;
+  }
   return _impl_.swcattachmentano_;
+}
+inline ::proto::SwcAttachmentAnoV1* CreateSwcAttachmentAnoRequest::mutable_swcattachmentano() {
+  ::proto::SwcAttachmentAnoV1* _msg = _internal_mutable_swcattachmentano();
+  // @@protoc_insertion_point(field_mutable:proto.CreateSwcAttachmentAnoRequest.SwcAttachmentAno)
+  return _msg;
+}
+inline void CreateSwcAttachmentAnoRequest::set_allocated_swcattachmentano(::proto::SwcAttachmentAnoV1* swcattachmentano) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.swcattachmentano_);
+  }
+  if (swcattachmentano) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(swcattachmentano));
+    if (message_arena != submessage_arena) {
+      swcattachmentano = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, swcattachmentano, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  _impl_.swcattachmentano_ = swcattachmentano;
+  // @@protoc_insertion_point(field_set_allocated:proto.CreateSwcAttachmentAnoRequest.SwcAttachmentAno)
 }
 
 // -------------------------------------------------------------------
@@ -19385,41 +19433,89 @@ inline void UpdateSwcAttachmentAnoRequest::set_allocated_swcname(std::string* sw
   // @@protoc_insertion_point(field_set_allocated:proto.UpdateSwcAttachmentAnoRequest.SwcName)
 }
 
-// repeated .proto.SwcAttachmentAnoV1 NewSwcAttachmentAno = 4;
-inline int UpdateSwcAttachmentAnoRequest::_internal_newswcattachmentano_size() const {
-  return _impl_.newswcattachmentano_.size();
+// .proto.SwcAttachmentAnoV1 NewSwcAttachmentAno = 4;
+inline bool UpdateSwcAttachmentAnoRequest::_internal_has_newswcattachmentano() const {
+  return this != internal_default_instance() && _impl_.newswcattachmentano_ != nullptr;
 }
-inline int UpdateSwcAttachmentAnoRequest::newswcattachmentano_size() const {
-  return _internal_newswcattachmentano_size();
+inline bool UpdateSwcAttachmentAnoRequest::has_newswcattachmentano() const {
+  return _internal_has_newswcattachmentano();
 }
-inline ::proto::SwcAttachmentAnoV1* UpdateSwcAttachmentAnoRequest::mutable_newswcattachmentano(int index) {
-  // @@protoc_insertion_point(field_mutable:proto.UpdateSwcAttachmentAnoRequest.NewSwcAttachmentAno)
-  return _impl_.newswcattachmentano_.Mutable(index);
+inline const ::proto::SwcAttachmentAnoV1& UpdateSwcAttachmentAnoRequest::_internal_newswcattachmentano() const {
+  const ::proto::SwcAttachmentAnoV1* p = _impl_.newswcattachmentano_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::SwcAttachmentAnoV1&>(
+      ::proto::_SwcAttachmentAnoV1_default_instance_);
 }
-inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::proto::SwcAttachmentAnoV1 >*
-UpdateSwcAttachmentAnoRequest::mutable_newswcattachmentano() {
-  // @@protoc_insertion_point(field_mutable_list:proto.UpdateSwcAttachmentAnoRequest.NewSwcAttachmentAno)
-  return &_impl_.newswcattachmentano_;
-}
-inline const ::proto::SwcAttachmentAnoV1& UpdateSwcAttachmentAnoRequest::_internal_newswcattachmentano(int index) const {
-  return _impl_.newswcattachmentano_.Get(index);
-}
-inline const ::proto::SwcAttachmentAnoV1& UpdateSwcAttachmentAnoRequest::newswcattachmentano(int index) const {
+inline const ::proto::SwcAttachmentAnoV1& UpdateSwcAttachmentAnoRequest::newswcattachmentano() const {
   // @@protoc_insertion_point(field_get:proto.UpdateSwcAttachmentAnoRequest.NewSwcAttachmentAno)
-  return _internal_newswcattachmentano(index);
+  return _internal_newswcattachmentano();
 }
-inline ::proto::SwcAttachmentAnoV1* UpdateSwcAttachmentAnoRequest::_internal_add_newswcattachmentano() {
-  return _impl_.newswcattachmentano_.Add();
+inline void UpdateSwcAttachmentAnoRequest::unsafe_arena_set_allocated_newswcattachmentano(
+    ::proto::SwcAttachmentAnoV1* newswcattachmentano) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.newswcattachmentano_);
+  }
+  _impl_.newswcattachmentano_ = newswcattachmentano;
+  if (newswcattachmentano) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.UpdateSwcAttachmentAnoRequest.NewSwcAttachmentAno)
 }
-inline ::proto::SwcAttachmentAnoV1* UpdateSwcAttachmentAnoRequest::add_newswcattachmentano() {
-  ::proto::SwcAttachmentAnoV1* _add = _internal_add_newswcattachmentano();
-  // @@protoc_insertion_point(field_add:proto.UpdateSwcAttachmentAnoRequest.NewSwcAttachmentAno)
-  return _add;
+inline ::proto::SwcAttachmentAnoV1* UpdateSwcAttachmentAnoRequest::release_newswcattachmentano() {
+  
+  ::proto::SwcAttachmentAnoV1* temp = _impl_.newswcattachmentano_;
+  _impl_.newswcattachmentano_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
 }
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::proto::SwcAttachmentAnoV1 >&
-UpdateSwcAttachmentAnoRequest::newswcattachmentano() const {
-  // @@protoc_insertion_point(field_list:proto.UpdateSwcAttachmentAnoRequest.NewSwcAttachmentAno)
+inline ::proto::SwcAttachmentAnoV1* UpdateSwcAttachmentAnoRequest::unsafe_arena_release_newswcattachmentano() {
+  // @@protoc_insertion_point(field_release:proto.UpdateSwcAttachmentAnoRequest.NewSwcAttachmentAno)
+  
+  ::proto::SwcAttachmentAnoV1* temp = _impl_.newswcattachmentano_;
+  _impl_.newswcattachmentano_ = nullptr;
+  return temp;
+}
+inline ::proto::SwcAttachmentAnoV1* UpdateSwcAttachmentAnoRequest::_internal_mutable_newswcattachmentano() {
+  
+  if (_impl_.newswcattachmentano_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::SwcAttachmentAnoV1>(GetArenaForAllocation());
+    _impl_.newswcattachmentano_ = p;
+  }
   return _impl_.newswcattachmentano_;
+}
+inline ::proto::SwcAttachmentAnoV1* UpdateSwcAttachmentAnoRequest::mutable_newswcattachmentano() {
+  ::proto::SwcAttachmentAnoV1* _msg = _internal_mutable_newswcattachmentano();
+  // @@protoc_insertion_point(field_mutable:proto.UpdateSwcAttachmentAnoRequest.NewSwcAttachmentAno)
+  return _msg;
+}
+inline void UpdateSwcAttachmentAnoRequest::set_allocated_newswcattachmentano(::proto::SwcAttachmentAnoV1* newswcattachmentano) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.newswcattachmentano_);
+  }
+  if (newswcattachmentano) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(newswcattachmentano));
+    if (message_arena != submessage_arena) {
+      newswcattachmentano = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, newswcattachmentano, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  _impl_.newswcattachmentano_ = newswcattachmentano;
+  // @@protoc_insertion_point(field_set_allocated:proto.UpdateSwcAttachmentAnoRequest.NewSwcAttachmentAno)
 }
 
 // -------------------------------------------------------------------

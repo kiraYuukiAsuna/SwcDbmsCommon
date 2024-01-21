@@ -1643,11 +1643,7 @@
           "type": "string"
         },
         "SwcAttachmentAno": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "$ref": "#/definitions/protoSwcAttachmentAnoV1"
-          }
+          "$ref": "#/definitions/protoSwcAttachmentAnoV1"
         }
       }
     },
@@ -2351,11 +2347,7 @@
           "$ref": "#/definitions/protoResponseMetaInfoV1"
         },
         "SwcAttachmentAno": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "$ref": "#/definitions/protoSwcAttachmentAnoV1"
-          }
+          "$ref": "#/definitions/protoSwcAttachmentAnoV1"
         }
       }
     },
@@ -3023,11 +3015,7 @@
           "type": "string"
         },
         "NewSwcAttachmentAno": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "$ref": "#/definitions/protoSwcAttachmentAnoV1"
-          }
+          "$ref": "#/definitions/protoSwcAttachmentAnoV1"
         }
       }
     },

@@ -7628,27 +7628,9 @@ class GetSwcAttachmentAnoResponse final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kSwcAttachmentAnoFieldNumber = 2,
     kMetaInfoFieldNumber = 1,
+    kSwcAttachmentAnoFieldNumber = 2,
   };
-  // repeated .proto.SwcAttachmentAnoV1 SwcAttachmentAno = 2;
-  int swcattachmentano_size() const;
-  private:
-  int _internal_swcattachmentano_size() const;
-  public:
-  void clear_swcattachmentano();
-  ::proto::SwcAttachmentAnoV1* mutable_swcattachmentano(int index);
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::proto::SwcAttachmentAnoV1 >*
-      mutable_swcattachmentano();
-  private:
-  const ::proto::SwcAttachmentAnoV1& _internal_swcattachmentano(int index) const;
-  ::proto::SwcAttachmentAnoV1* _internal_add_swcattachmentano();
-  public:
-  const ::proto::SwcAttachmentAnoV1& swcattachmentano(int index) const;
-  ::proto::SwcAttachmentAnoV1* add_swcattachmentano();
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::proto::SwcAttachmentAnoV1 >&
-      swcattachmentano() const;
-
   // .proto.ResponseMetaInfoV1 metaInfo = 1;
   bool has_metainfo() const;
   private:
@@ -7667,6 +7649,24 @@ class GetSwcAttachmentAnoResponse final :
       ::proto::ResponseMetaInfoV1* metainfo);
   ::proto::ResponseMetaInfoV1* unsafe_arena_release_metainfo();
 
+  // .proto.SwcAttachmentAnoV1 SwcAttachmentAno = 2;
+  bool has_swcattachmentano() const;
+  private:
+  bool _internal_has_swcattachmentano() const;
+  public:
+  void clear_swcattachmentano();
+  const ::proto::SwcAttachmentAnoV1& swcattachmentano() const;
+  PROTOBUF_NODISCARD ::proto::SwcAttachmentAnoV1* release_swcattachmentano();
+  ::proto::SwcAttachmentAnoV1* mutable_swcattachmentano();
+  void set_allocated_swcattachmentano(::proto::SwcAttachmentAnoV1* swcattachmentano);
+  private:
+  const ::proto::SwcAttachmentAnoV1& _internal_swcattachmentano() const;
+  ::proto::SwcAttachmentAnoV1* _internal_mutable_swcattachmentano();
+  public:
+  void unsafe_arena_set_allocated_swcattachmentano(
+      ::proto::SwcAttachmentAnoV1* swcattachmentano);
+  ::proto::SwcAttachmentAnoV1* unsafe_arena_release_swcattachmentano();
+
   // @@protoc_insertion_point(class_scope:proto.GetSwcAttachmentAnoResponse)
  private:
   class _Internal;
@@ -7675,8 +7675,8 @@ class GetSwcAttachmentAnoResponse final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::proto::SwcAttachmentAnoV1 > swcattachmentano_;
     ::proto::ResponseMetaInfoV1* metainfo_;
+    ::proto::SwcAttachmentAnoV1* swcattachmentano_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -14653,41 +14653,89 @@ inline void GetSwcAttachmentAnoResponse::set_allocated_metainfo(::proto::Respons
   // @@protoc_insertion_point(field_set_allocated:proto.GetSwcAttachmentAnoResponse.metaInfo)
 }
 
-// repeated .proto.SwcAttachmentAnoV1 SwcAttachmentAno = 2;
-inline int GetSwcAttachmentAnoResponse::_internal_swcattachmentano_size() const {
-  return _impl_.swcattachmentano_.size();
+// .proto.SwcAttachmentAnoV1 SwcAttachmentAno = 2;
+inline bool GetSwcAttachmentAnoResponse::_internal_has_swcattachmentano() const {
+  return this != internal_default_instance() && _impl_.swcattachmentano_ != nullptr;
 }
-inline int GetSwcAttachmentAnoResponse::swcattachmentano_size() const {
-  return _internal_swcattachmentano_size();
+inline bool GetSwcAttachmentAnoResponse::has_swcattachmentano() const {
+  return _internal_has_swcattachmentano();
 }
-inline ::proto::SwcAttachmentAnoV1* GetSwcAttachmentAnoResponse::mutable_swcattachmentano(int index) {
-  // @@protoc_insertion_point(field_mutable:proto.GetSwcAttachmentAnoResponse.SwcAttachmentAno)
-  return _impl_.swcattachmentano_.Mutable(index);
+inline const ::proto::SwcAttachmentAnoV1& GetSwcAttachmentAnoResponse::_internal_swcattachmentano() const {
+  const ::proto::SwcAttachmentAnoV1* p = _impl_.swcattachmentano_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::SwcAttachmentAnoV1&>(
+      ::proto::_SwcAttachmentAnoV1_default_instance_);
 }
-inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::proto::SwcAttachmentAnoV1 >*
-GetSwcAttachmentAnoResponse::mutable_swcattachmentano() {
-  // @@protoc_insertion_point(field_mutable_list:proto.GetSwcAttachmentAnoResponse.SwcAttachmentAno)
-  return &_impl_.swcattachmentano_;
-}
-inline const ::proto::SwcAttachmentAnoV1& GetSwcAttachmentAnoResponse::_internal_swcattachmentano(int index) const {
-  return _impl_.swcattachmentano_.Get(index);
-}
-inline const ::proto::SwcAttachmentAnoV1& GetSwcAttachmentAnoResponse::swcattachmentano(int index) const {
+inline const ::proto::SwcAttachmentAnoV1& GetSwcAttachmentAnoResponse::swcattachmentano() const {
   // @@protoc_insertion_point(field_get:proto.GetSwcAttachmentAnoResponse.SwcAttachmentAno)
-  return _internal_swcattachmentano(index);
+  return _internal_swcattachmentano();
 }
-inline ::proto::SwcAttachmentAnoV1* GetSwcAttachmentAnoResponse::_internal_add_swcattachmentano() {
-  return _impl_.swcattachmentano_.Add();
+inline void GetSwcAttachmentAnoResponse::unsafe_arena_set_allocated_swcattachmentano(
+    ::proto::SwcAttachmentAnoV1* swcattachmentano) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.swcattachmentano_);
+  }
+  _impl_.swcattachmentano_ = swcattachmentano;
+  if (swcattachmentano) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.GetSwcAttachmentAnoResponse.SwcAttachmentAno)
 }
-inline ::proto::SwcAttachmentAnoV1* GetSwcAttachmentAnoResponse::add_swcattachmentano() {
-  ::proto::SwcAttachmentAnoV1* _add = _internal_add_swcattachmentano();
-  // @@protoc_insertion_point(field_add:proto.GetSwcAttachmentAnoResponse.SwcAttachmentAno)
-  return _add;
+inline ::proto::SwcAttachmentAnoV1* GetSwcAttachmentAnoResponse::release_swcattachmentano() {
+  
+  ::proto::SwcAttachmentAnoV1* temp = _impl_.swcattachmentano_;
+  _impl_.swcattachmentano_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
 }
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::proto::SwcAttachmentAnoV1 >&
-GetSwcAttachmentAnoResponse::swcattachmentano() const {
-  // @@protoc_insertion_point(field_list:proto.GetSwcAttachmentAnoResponse.SwcAttachmentAno)
+inline ::proto::SwcAttachmentAnoV1* GetSwcAttachmentAnoResponse::unsafe_arena_release_swcattachmentano() {
+  // @@protoc_insertion_point(field_release:proto.GetSwcAttachmentAnoResponse.SwcAttachmentAno)
+  
+  ::proto::SwcAttachmentAnoV1* temp = _impl_.swcattachmentano_;
+  _impl_.swcattachmentano_ = nullptr;
+  return temp;
+}
+inline ::proto::SwcAttachmentAnoV1* GetSwcAttachmentAnoResponse::_internal_mutable_swcattachmentano() {
+  
+  if (_impl_.swcattachmentano_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::SwcAttachmentAnoV1>(GetArenaForAllocation());
+    _impl_.swcattachmentano_ = p;
+  }
   return _impl_.swcattachmentano_;
+}
+inline ::proto::SwcAttachmentAnoV1* GetSwcAttachmentAnoResponse::mutable_swcattachmentano() {
+  ::proto::SwcAttachmentAnoV1* _msg = _internal_mutable_swcattachmentano();
+  // @@protoc_insertion_point(field_mutable:proto.GetSwcAttachmentAnoResponse.SwcAttachmentAno)
+  return _msg;
+}
+inline void GetSwcAttachmentAnoResponse::set_allocated_swcattachmentano(::proto::SwcAttachmentAnoV1* swcattachmentano) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.swcattachmentano_);
+  }
+  if (swcattachmentano) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(swcattachmentano));
+    if (message_arena != submessage_arena) {
+      swcattachmentano = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, swcattachmentano, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  _impl_.swcattachmentano_ = swcattachmentano;
+  // @@protoc_insertion_point(field_set_allocated:proto.GetSwcAttachmentAnoResponse.SwcAttachmentAno)
 }
 
 // -------------------------------------------------------------------
