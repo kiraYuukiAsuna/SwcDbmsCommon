@@ -1939,6 +1939,9 @@
         },
         "SwcName": {
           "type": "string"
+        },
+        "ApoAttachmentUuid": {
+          "type": "string"
         }
       }
     },
@@ -2373,6 +2376,9 @@
           "$ref": "#/definitions/protoUserVerifyInfoV1"
         },
         "SwcName": {
+          "type": "string"
+        },
+        "AnoAttachmentUuid": {
           "type": "string"
         }
       }
@@ -3058,6 +3064,9 @@
           "$ref": "#/definitions/protoUserVerifyInfoV1"
         },
         "SwcName": {
+          "type": "string"
+        },
+        "AnoAttachmentUuid": {
           "type": "string"
         },
         "NewSwcAttachmentApo": {
