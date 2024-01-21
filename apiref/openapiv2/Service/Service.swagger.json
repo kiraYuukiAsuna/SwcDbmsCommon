@@ -2378,7 +2378,7 @@
         "SwcName": {
           "type": "string"
         },
-        "AnoAttachmentUuid": {
+        "ApoAttachmentUuid": {
           "type": "string"
         }
       }
@@ -3066,7 +3066,7 @@
         "SwcName": {
           "type": "string"
         },
-        "AnoAttachmentUuid": {
+        "ApoAttachmentUuid": {
           "type": "string"
         },
         "NewSwcAttachmentApo": {

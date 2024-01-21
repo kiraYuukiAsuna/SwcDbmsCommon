@@ -2,6 +2,8 @@
 
     rpc GetUser(GetUserRequest) returns (GetUserResponse) {}
 
+    GetSwcNodeData{}
+
     rpc GetUserPermissionGroup(GetUserPermissionGroupRequest) returns (GetUserPermissionGroupResponse){}
     rpc GetPermissionGroup(GetPermissionGroupRequest) returns (GetPermissionGroupResponse){}
     rpc GetAllPermissionGroup(GetAllPermissionGroupRequest) returns (GetAllPermissionGroupResponse){}

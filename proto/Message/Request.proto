@@ -289,7 +289,7 @@ message UpdateSwcAttachmentApoRequest{
     RequestMetaInfoV1 metaInfo = 1;
     UserVerifyInfoV1 UserVerifyInfo = 2;
     string SwcName = 3;
-    string AnoAttachmentUuid = 4;
+    string ApoAttachmentUuid = 4;
     repeated SwcAttachmentApoV1 NewSwcAttachmentApo = 5;
 }
 
@@ -297,6 +297,6 @@ message GetSwcAttachmentApoRequest{
     RequestMetaInfoV1 metaInfo = 1;
     UserVerifyInfoV1 UserVerifyInfo = 2;
     string SwcName = 3;
-    string AnoAttachmentUuid = 4;
+    string ApoAttachmentUuid = 4;
 }
 
