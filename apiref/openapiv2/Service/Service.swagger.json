@@ -2700,6 +2700,14 @@
         }
       }
     },
+    "protoSwcAttachmentAnoMetaInfoV1": {
+      "type": "object",
+      "properties": {
+        "AttachmentUuid": {
+          "type": "string"
+        }
+      }
+    },
     "protoSwcAttachmentAnoV1": {
       "type": "object",
       "properties": {
@@ -2710,6 +2718,14 @@
           "type": "string"
         },
         "SWCFILE": {
+          "type": "string"
+        }
+      }
+    },
+    "protoSwcAttachmentApoMetaInfoV1": {
+      "type": "object",
+      "properties": {
+        "AttachmentUuid": {
           "type": "string"
         }
       }
@@ -2881,6 +2897,12 @@
         },
         "CurrentIncrementOperationCollectionName": {
           "type": "string"
+        },
+        "SwcAttachmentAnoMetaInfo": {
+          "$ref": "#/definitions/protoSwcAttachmentAnoMetaInfoV1"
+        },
+        "SwcAttachmentApoMetaInfo": {
+          "$ref": "#/definitions/protoSwcAttachmentApoMetaInfoV1"
         }
       }
     },

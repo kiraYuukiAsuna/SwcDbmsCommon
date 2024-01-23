@@ -94,6 +94,14 @@ message SwcIncrementOperationListV1{
     repeated SwcIncrementOperationV1 SwcIncrementOperation = 1;
 }
 
+message SwcAttachmentAnoMetaInfoV1{
+    string AttachmentUuid = 1;
+}
+
+message SwcAttachmentApoMetaInfoV1{
+    string AttachmentUuid = 1;
+}
+
 message SwcMetaInfoV1{
     MetaInfoBase Base = 1;
     string Name = 2;
@@ -105,6 +113,8 @@ message SwcMetaInfoV1{
     repeated SwcSnapshotMetaInfoV1 SwcSnapshotMetaInfoList = 8;
     repeated SwcIncrementOperationMetaInfoV1 SwcIncrementOperationMetaInfoList = 9;
     string CurrentIncrementOperationCollectionName = 10;
+    SwcAttachmentAnoMetaInfoV1 SwcAttachmentAnoMetaInfo = 11;
+    SwcAttachmentApoMetaInfoV1 SwcAttachmentApoMetaInfo = 12;
 }
 
 message SwcNodeInternalDataV1{
