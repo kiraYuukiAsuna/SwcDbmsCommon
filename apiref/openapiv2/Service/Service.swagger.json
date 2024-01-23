@@ -2827,6 +2827,10 @@
         "Base": {
           "$ref": "#/definitions/protoMetaInfoBase"
         },
+        "CreateTime": {
+          "type": "string",
+          "format": "date-time"
+        },
         "IncrementOperation": {
           "$ref": "#/definitions/protoIncrementOperationV1"
         },
