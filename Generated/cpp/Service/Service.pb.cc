@@ -32,7 +32,7 @@ const char descriptor_table_protodef_Service_2fService_2eproto[] PROTOBUF_SECTIO
   "\n\025Service/Service.proto\022\005proto\032\037google/p"
   "rotobuf/timestamp.proto\032\025Message/Message"
   ".proto\032\025Message/Request.proto\032\026Message/R"
-  "esponse.proto2\235!\n\004DBMS\022C\n\nCreateUser\022\030.p"
+  "esponse.proto2\364!\n\004DBMS\022C\n\nCreateUser\022\030.p"
   "roto.CreateUserRequest\032\031.proto.CreateUse"
   "rResponse\"\000\022C\n\nDeleteUser\022\030.proto.Delete"
   "UserRequest\032\031.proto.DeleteUserResponse\"\000"
@@ -138,9 +138,11 @@ const char descriptor_table_protodef_Service_2fService_2eproto[] PROTOBUF_SECTIO
   "ntApoRequest\032%.proto.UpdateSwcAttachment"
   "ApoResponse\"\000\022^\n\023GetSwcAttachmentApo\022!.p"
   "roto.GetSwcAttachmentApoRequest\032\".proto."
-  "GetSwcAttachmentApoResponse\"\000B/Z-DBMS/Sw"
-  "cDbmsCommon/Generated/go/proto/serviceP\000"
-  "b\006proto3"
+  "GetSwcAttachmentApoResponse\"\000\022U\n\020RevertS"
+  "wcVersion\022\036.proto.RevertSwcVersionReques"
+  "t\032\037.proto.RevertSwcVersionResponse\"\000B/Z-"
+  "DBMS/SwcDbmsCommon/Generated/go/proto/se"
+  "rviceP\000b\006proto3"
   ;
 static const ::_pbi::DescriptorTable* const descriptor_table_Service_2fService_2eproto_deps[4] = {
   &::descriptor_table_Message_2fMessage_2eproto,
@@ -150,7 +152,7 @@ static const ::_pbi::DescriptorTable* const descriptor_table_Service_2fService_2
 };
 static ::_pbi::once_flag descriptor_table_Service_2fService_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_Service_2fService_2eproto = {
-    false, false, 4448, descriptor_table_protodef_Service_2fService_2eproto,
+    false, false, 4535, descriptor_table_protodef_Service_2fService_2eproto,
     "Service/Service.proto",
     &descriptor_table_Service_2fService_2eproto_once, descriptor_table_Service_2fService_2eproto_deps, 4, 0,
     schemas, file_default_instances, TableStruct_Service_2fService_2eproto::offsets,

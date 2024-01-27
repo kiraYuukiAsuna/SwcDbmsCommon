@@ -69,6 +69,7 @@ static const char* DBMS_method_names[] = {
   "/proto.DBMS/DeleteSwcAttachmentApo",
   "/proto.DBMS/UpdateSwcAttachmentApo",
   "/proto.DBMS/GetSwcAttachmentApo",
+  "/proto.DBMS/RevertSwcVersion",
 };
 
 std::unique_ptr< DBMS::Stub> DBMS::NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options) {
@@ -125,6 +126,7 @@ DBMS::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, cons
   , rpcmethod_DeleteSwcAttachmentApo_(DBMS_method_names[44], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   , rpcmethod_UpdateSwcAttachmentApo_(DBMS_method_names[45], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   , rpcmethod_GetSwcAttachmentApo_(DBMS_method_names[46], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_RevertSwcVersion_(DBMS_method_names[47], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   {}
 
 ::grpc::Status DBMS::Stub::CreateUser(::grpc::ClientContext* context, const ::proto::CreateUserRequest& request, ::proto::CreateUserResponse* response) {
@@ -1208,6 +1210,29 @@ void DBMS::Stub::async::GetSwcAttachmentApo(::grpc::ClientContext* context, cons
   return result;
 }
 
+::grpc::Status DBMS::Stub::RevertSwcVersion(::grpc::ClientContext* context, const ::proto::RevertSwcVersionRequest& request, ::proto::RevertSwcVersionResponse* response) {
+  return ::grpc::internal::BlockingUnaryCall< ::proto::RevertSwcVersionRequest, ::proto::RevertSwcVersionResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_RevertSwcVersion_, context, request, response);
+}
+
+void DBMS::Stub::async::RevertSwcVersion(::grpc::ClientContext* context, const ::proto::RevertSwcVersionRequest* request, ::proto::RevertSwcVersionResponse* response, std::function<void(::grpc::Status)> f) {
+  ::grpc::internal::CallbackUnaryCall< ::proto::RevertSwcVersionRequest, ::proto::RevertSwcVersionResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_RevertSwcVersion_, context, request, response, std::move(f));
+}
+
+void DBMS::Stub::async::RevertSwcVersion(::grpc::ClientContext* context, const ::proto::RevertSwcVersionRequest* request, ::proto::RevertSwcVersionResponse* response, ::grpc::ClientUnaryReactor* reactor) {
+  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_RevertSwcVersion_, context, request, response, reactor);
+}
+
+::grpc::ClientAsyncResponseReader< ::proto::RevertSwcVersionResponse>* DBMS::Stub::PrepareAsyncRevertSwcVersionRaw(::grpc::ClientContext* context, const ::proto::RevertSwcVersionRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::proto::RevertSwcVersionResponse, ::proto::RevertSwcVersionRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_RevertSwcVersion_, context, request);
+}
+
+::grpc::ClientAsyncResponseReader< ::proto::RevertSwcVersionResponse>* DBMS::Stub::AsyncRevertSwcVersionRaw(::grpc::ClientContext* context, const ::proto::RevertSwcVersionRequest& request, ::grpc::CompletionQueue* cq) {
+  auto* result =
+    this->PrepareAsyncRevertSwcVersionRaw(context, request, cq);
+  result->StartCall();
+  return result;
+}
+
 DBMS::Service::Service() {
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       DBMS_method_names[0],
@@ -1679,6 +1704,16 @@ DBMS::Service::Service() {
              ::proto::GetSwcAttachmentApoResponse* resp) {
                return service->GetSwcAttachmentApo(ctx, req, resp);
              }, this)));
+  AddMethod(new ::grpc::internal::RpcServiceMethod(
+      DBMS_method_names[47],
+      ::grpc::internal::RpcMethod::NORMAL_RPC,
+      new ::grpc::internal::RpcMethodHandler< DBMS::Service, ::proto::RevertSwcVersionRequest, ::proto::RevertSwcVersionResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
+          [](DBMS::Service* service,
+             ::grpc::ServerContext* ctx,
+             const ::proto::RevertSwcVersionRequest* req,
+             ::proto::RevertSwcVersionResponse* resp) {
+               return service->RevertSwcVersion(ctx, req, resp);
+             }, this)));
 }
 
 DBMS::Service::~Service() {
@@ -2007,6 +2042,13 @@ DBMS::Service::~Service() {
 }
 
 ::grpc::Status DBMS::Service::GetSwcAttachmentApo(::grpc::ServerContext* context, const ::proto::GetSwcAttachmentApoRequest* request, ::proto::GetSwcAttachmentApoResponse* response) {
+  (void) context;
+  (void) request;
+  (void) response;
+  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+}
+
+::grpc::Status DBMS::Service::RevertSwcVersion(::grpc::ServerContext* context, const ::proto::RevertSwcVersionRequest* request, ::proto::RevertSwcVersionResponse* response) {
   (void) context;
   (void) request;
   (void) response;

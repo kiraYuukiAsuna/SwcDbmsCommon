@@ -68,6 +68,7 @@ const (
 	DBMS_DeleteSwcAttachmentApo_FullMethodName           = "/proto.DBMS/DeleteSwcAttachmentApo"
 	DBMS_UpdateSwcAttachmentApo_FullMethodName           = "/proto.DBMS/UpdateSwcAttachmentApo"
 	DBMS_GetSwcAttachmentApo_FullMethodName              = "/proto.DBMS/GetSwcAttachmentApo"
+	DBMS_RevertSwcVersion_FullMethodName                 = "/proto.DBMS/RevertSwcVersion"
 )
 
 // DBMSClient is the client API for DBMS service.
@@ -121,6 +122,7 @@ type DBMSClient interface {
 	DeleteSwcAttachmentApo(ctx context.Context, in *request.DeleteSwcAttachmentApoRequest, opts ...grpc.CallOption) (*response.DeleteSwcAttachmentApoResponse, error)
 	UpdateSwcAttachmentApo(ctx context.Context, in *request.UpdateSwcAttachmentApoRequest, opts ...grpc.CallOption) (*response.UpdateSwcAttachmentApoResponse, error)
 	GetSwcAttachmentApo(ctx context.Context, in *request.GetSwcAttachmentApoRequest, opts ...grpc.CallOption) (*response.GetSwcAttachmentApoResponse, error)
+	RevertSwcVersion(ctx context.Context, in *request.RevertSwcVersionRequest, opts ...grpc.CallOption) (*response.RevertSwcVersionResponse, error)
 }
 
 type dBMSClient struct {
@@ -554,6 +556,15 @@ func (c *dBMSClient) GetSwcAttachmentApo(ctx context.Context, in *request.GetSwc
 	return out, nil
 }
 
+func (c *dBMSClient) RevertSwcVersion(ctx context.Context, in *request.RevertSwcVersionRequest, opts ...grpc.CallOption) (*response.RevertSwcVersionResponse, error) {
+	out := new(response.RevertSwcVersionResponse)
+	err := c.cc.Invoke(ctx, DBMS_RevertSwcVersion_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // DBMSServer is the server API for DBMS service.
 // All implementations must embed UnimplementedDBMSServer
 // for forward compatibility
@@ -605,6 +616,7 @@ type DBMSServer interface {
 	DeleteSwcAttachmentApo(context.Context, *request.DeleteSwcAttachmentApoRequest) (*response.DeleteSwcAttachmentApoResponse, error)
 	UpdateSwcAttachmentApo(context.Context, *request.UpdateSwcAttachmentApoRequest) (*response.UpdateSwcAttachmentApoResponse, error)
 	GetSwcAttachmentApo(context.Context, *request.GetSwcAttachmentApoRequest) (*response.GetSwcAttachmentApoResponse, error)
+	RevertSwcVersion(context.Context, *request.RevertSwcVersionRequest) (*response.RevertSwcVersionResponse, error)
 	mustEmbedUnimplementedDBMSServer()
 }
 
@@ -752,6 +764,9 @@ func (UnimplementedDBMSServer) UpdateSwcAttachmentApo(context.Context, *request.
 }
 func (UnimplementedDBMSServer) GetSwcAttachmentApo(context.Context, *request.GetSwcAttachmentApoRequest) (*response.GetSwcAttachmentApoResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetSwcAttachmentApo not implemented")
+}
+func (UnimplementedDBMSServer) RevertSwcVersion(context.Context, *request.RevertSwcVersionRequest) (*response.RevertSwcVersionResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method RevertSwcVersion not implemented")
 }
 func (UnimplementedDBMSServer) mustEmbedUnimplementedDBMSServer() {}
 
@@ -1612,6 +1627,24 @@ func _DBMS_GetSwcAttachmentApo_Handler(srv interface{}, ctx context.Context, dec
 	return interceptor(ctx, in, info, handler)
 }
 
+func _DBMS_RevertSwcVersion_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(request.RevertSwcVersionRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(DBMSServer).RevertSwcVersion(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: DBMS_RevertSwcVersion_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(DBMSServer).RevertSwcVersion(ctx, req.(*request.RevertSwcVersionRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // DBMS_ServiceDesc is the grpc.ServiceDesc for DBMS service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -1806,6 +1839,10 @@ var DBMS_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "GetSwcAttachmentApo",
 			Handler:    _DBMS_GetSwcAttachmentApo_Handler,
+		},
+		{
+			MethodName: "RevertSwcVersion",
+			Handler:    _DBMS_RevertSwcVersion_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

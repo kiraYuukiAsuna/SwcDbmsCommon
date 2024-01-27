@@ -141,6 +141,7 @@ message GetIncrementOperationResponse{
 
 message CreateSwcNodeDataResponse{
     ResponseMetaInfoV1 metaInfo = 1;
+    repeated string CreatedNodesUuid = 2;
 }
 
 message DeleteSwcNodeDataResponse{
@@ -233,3 +234,6 @@ message GetSwcAttachmentApoResponse{
     repeated SwcAttachmentApoV1 SwcAttachmentApo = 2;
 }
 
+message RevertSwcVersionResponse{
+    ResponseMetaInfoV1 metaInfo = 1;
+}

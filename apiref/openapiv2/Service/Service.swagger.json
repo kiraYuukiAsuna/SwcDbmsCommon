@@ -1200,6 +1200,38 @@
         ]
       }
     },
+    "/proto.DBMS/RevertSwcVersion": {
+      "post": {
+        "operationId": "DBMS_RevertSwcVersion",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/protoRevertSwcVersionResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/protoRevertSwcVersionRequest"
+            }
+          }
+        ],
+        "tags": [
+          "DBMS"
+        ]
+      }
+    },
     "/proto.DBMS/UpdateDailyStatistics": {
       "post": {
         "operationId": "DBMS_UpdateDailyStatistics",
@@ -1712,6 +1744,12 @@
       "properties": {
         "metaInfo": {
           "$ref": "#/definitions/protoResponseMetaInfoV1"
+        },
+        "CreatedNodesUuid": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
         }
       }
     },
@@ -2700,6 +2738,32 @@
         }
       }
     },
+    "protoRevertSwcVersionRequest": {
+      "type": "object",
+      "properties": {
+        "metaInfo": {
+          "$ref": "#/definitions/protoRequestMetaInfoV1"
+        },
+        "UserVerifyInfo": {
+          "$ref": "#/definitions/protoUserVerifyInfoV1"
+        },
+        "SwcName": {
+          "type": "string"
+        },
+        "VersionEndTime": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "protoRevertSwcVersionResponse": {
+      "type": "object",
+      "properties": {
+        "metaInfo": {
+          "$ref": "#/definitions/protoResponseMetaInfoV1"
+        }
+      }
+    },
     "protoSwcAttachmentAnoMetaInfoV1": {
       "type": "object",
       "properties": {
@@ -3124,8 +3188,8 @@
         "SwcName": {
           "type": "string"
         },
-        "SwcNodeData": {
-          "$ref": "#/definitions/protoSwcNodeDataV1"
+        "SwcData": {
+          "$ref": "#/definitions/protoSwcDataV1"
         }
       }
     },

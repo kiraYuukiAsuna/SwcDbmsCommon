@@ -181,7 +181,7 @@ message UpdateSwcNodeDataRequest{
     RequestMetaInfoV1 metaInfo = 1;
     UserVerifyInfoV1 UserVerifyInfo = 2;
     string SwcName = 3;
-    SwcNodeDataV1 SwcNodeData = 4;
+    SwcDataV1 SwcData = 4;
 }
 
 message GetSwcNodeDataRequest{
@@ -300,3 +300,9 @@ message GetSwcAttachmentApoRequest{
     string ApoAttachmentUuid = 4;
 }
 
+message RevertSwcVersionRequest{
+    RequestMetaInfoV1 metaInfo = 1;
+    UserVerifyInfoV1 UserVerifyInfo = 2;
+    string SwcName = 3;
+    google.protobuf.Timestamp VersionEndTime = 4;
+}

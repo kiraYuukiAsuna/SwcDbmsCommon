@@ -66,4 +66,5 @@ service DBMS {
     rpc UpdateSwcAttachmentApo(UpdateSwcAttachmentApoRequest) returns (UpdateSwcAttachmentApoResponse){}
     rpc GetSwcAttachmentApo(GetSwcAttachmentApoRequest) returns (GetSwcAttachmentApoResponse){}
 
+    rpc RevertSwcVersion(RevertSwcVersionRequest) returns (RevertSwcVersionResponse){}
 }
