@@ -486,6 +486,7 @@ class UserMetaInfoV1 final :
     kUserPermissionGroupFieldNumber = 7,
     kBaseFieldNumber = 1,
     kCreateTimeFieldNumber = 5,
+    kUserIdFieldNumber = 8,
   };
   // string Name = 2;
   void clear_name();
@@ -593,6 +594,15 @@ class UserMetaInfoV1 final :
       ::PROTOBUF_NAMESPACE_ID::Timestamp* createtime);
   ::PROTOBUF_NAMESPACE_ID::Timestamp* unsafe_arena_release_createtime();
 
+  // int32 UserId = 8;
+  void clear_userid();
+  int32_t userid() const;
+  void set_userid(int32_t value);
+  private:
+  int32_t _internal_userid() const;
+  void _internal_set_userid(int32_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:proto.UserMetaInfoV1)
  private:
   class _Internal;
@@ -608,6 +618,7 @@ class UserMetaInfoV1 final :
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr userpermissiongroup_;
     ::proto::MetaInfoBase* base_;
     ::PROTOBUF_NAMESPACE_ID::Timestamp* createtime_;
+    int32_t userid_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -5769,6 +5780,26 @@ inline void UserMetaInfoV1::set_allocated_userpermissiongroup(std::string* userp
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   // @@protoc_insertion_point(field_set_allocated:proto.UserMetaInfoV1.UserPermissionGroup)
+}
+
+// int32 UserId = 8;
+inline void UserMetaInfoV1::clear_userid() {
+  _impl_.userid_ = 0;
+}
+inline int32_t UserMetaInfoV1::_internal_userid() const {
+  return _impl_.userid_;
+}
+inline int32_t UserMetaInfoV1::userid() const {
+  // @@protoc_insertion_point(field_get:proto.UserMetaInfoV1.UserId)
+  return _internal_userid();
+}
+inline void UserMetaInfoV1::_internal_set_userid(int32_t value) {
+  
+  _impl_.userid_ = value;
+}
+inline void UserMetaInfoV1::set_userid(int32_t value) {
+  _internal_set_userid(value);
+  // @@protoc_insertion_point(field_set:proto.UserMetaInfoV1.UserId)
 }
 
 // -------------------------------------------------------------------

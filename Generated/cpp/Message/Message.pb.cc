@@ -45,6 +45,7 @@ PROTOBUF_CONSTEXPR UserMetaInfoV1::UserMetaInfoV1(
   , /*decltype(_impl_.userpermissiongroup_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.base_)*/nullptr
   , /*decltype(_impl_.createtime_)*/nullptr
+  , /*decltype(_impl_.userid_)*/0
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct UserMetaInfoV1DefaultTypeInternal {
   PROTOBUF_CONSTEXPR UserMetaInfoV1DefaultTypeInternal()
@@ -447,6 +448,7 @@ const uint32_t TableStruct_Message_2fMessage_2eproto::offsets[] PROTOBUF_SECTION
   PROTOBUF_FIELD_OFFSET(::proto::UserMetaInfoV1, _impl_.createtime_),
   PROTOBUF_FIELD_OFFSET(::proto::UserMetaInfoV1, _impl_.headphotobindata_),
   PROTOBUF_FIELD_OFFSET(::proto::UserMetaInfoV1, _impl_.userpermissiongroup_),
+  PROTOBUF_FIELD_OFFSET(::proto::UserMetaInfoV1, _impl_.userid_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::proto::GlobalPermissionMetaInfoV1, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -689,27 +691,27 @@ const uint32_t TableStruct_Message_2fMessage_2eproto::offsets[] PROTOBUF_SECTION
 static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, -1, sizeof(::proto::MetaInfoBase)},
   { 9, -1, -1, sizeof(::proto::UserMetaInfoV1)},
-  { 22, -1, -1, sizeof(::proto::GlobalPermissionMetaInfoV1)},
-  { 32, -1, -1, sizeof(::proto::ProjectPermissionMetaInfoV1)},
-  { 42, -1, -1, sizeof(::proto::PermissionGroupMetaInfoV1)},
-  { 53, -1, -1, sizeof(::proto::UserPermissionOverrideMetaInfoV1)},
-  { 61, -1, -1, sizeof(::proto::ProjectMetaInfoV1)},
-  { 76, -1, -1, sizeof(::proto::SwcSnapshotMetaInfoV1)},
-  { 86, -1, -1, sizeof(::proto::SwcIncrementOperationMetaInfoV1)},
-  { 96, -1, -1, sizeof(::proto::SwcIncrementOperationV1)},
-  { 106, -1, -1, sizeof(::proto::SwcIncrementOperationListV1)},
-  { 113, -1, -1, sizeof(::proto::SwcAttachmentAnoMetaInfoV1)},
-  { 120, -1, -1, sizeof(::proto::SwcAttachmentApoMetaInfoV1)},
-  { 127, -1, -1, sizeof(::proto::SwcMetaInfoV1)},
-  { 145, -1, -1, sizeof(::proto::SwcNodeInternalDataV1)},
-  { 163, -1, -1, sizeof(::proto::SwcNodeDataV1)},
-  { 175, -1, -1, sizeof(::proto::SwcDataV1)},
-  { 182, -1, -1, sizeof(::proto::DailyStatisticsMetaInfoV1)},
-  { 205, -1, -1, sizeof(::proto::UserVerifyInfoV1)},
-  { 213, -1, -1, sizeof(::proto::RequestMetaInfoV1)},
-  { 220, -1, -1, sizeof(::proto::ResponseMetaInfoV1)},
-  { 229, -1, -1, sizeof(::proto::SwcAttachmentAnoV1)},
-  { 238, -1, -1, sizeof(::proto::SwcAttachmentApoV1)},
+  { 23, -1, -1, sizeof(::proto::GlobalPermissionMetaInfoV1)},
+  { 33, -1, -1, sizeof(::proto::ProjectPermissionMetaInfoV1)},
+  { 43, -1, -1, sizeof(::proto::PermissionGroupMetaInfoV1)},
+  { 54, -1, -1, sizeof(::proto::UserPermissionOverrideMetaInfoV1)},
+  { 62, -1, -1, sizeof(::proto::ProjectMetaInfoV1)},
+  { 77, -1, -1, sizeof(::proto::SwcSnapshotMetaInfoV1)},
+  { 87, -1, -1, sizeof(::proto::SwcIncrementOperationMetaInfoV1)},
+  { 97, -1, -1, sizeof(::proto::SwcIncrementOperationV1)},
+  { 107, -1, -1, sizeof(::proto::SwcIncrementOperationListV1)},
+  { 114, -1, -1, sizeof(::proto::SwcAttachmentAnoMetaInfoV1)},
+  { 121, -1, -1, sizeof(::proto::SwcAttachmentApoMetaInfoV1)},
+  { 128, -1, -1, sizeof(::proto::SwcMetaInfoV1)},
+  { 146, -1, -1, sizeof(::proto::SwcNodeInternalDataV1)},
+  { 164, -1, -1, sizeof(::proto::SwcNodeDataV1)},
+  { 176, -1, -1, sizeof(::proto::SwcDataV1)},
+  { 183, -1, -1, sizeof(::proto::DailyStatisticsMetaInfoV1)},
+  { 206, -1, -1, sizeof(::proto::UserVerifyInfoV1)},
+  { 214, -1, -1, sizeof(::proto::RequestMetaInfoV1)},
+  { 221, -1, -1, sizeof(::proto::ResponseMetaInfoV1)},
+  { 230, -1, -1, sizeof(::proto::SwcAttachmentAnoV1)},
+  { 239, -1, -1, sizeof(::proto::SwcAttachmentApoV1)},
 };
 
 static const ::_pb::Message* const file_default_instances[] = {
@@ -742,118 +744,119 @@ const char descriptor_table_protodef_Message_2fMessage_2eproto[] PROTOBUF_SECTIO
   "\n\025Message/Message.proto\022\005proto\032\037google/p"
   "rotobuf/timestamp.proto\"I\n\014MetaInfoBase\022"
   "\013\n\003_id\030\001 \001(\t\022\036\n\026DataAccessModelVersion\030\002"
-  " \001(\t\022\014\n\004Uuid\030\003 \001(\t\"\317\001\n\016UserMetaInfoV1\022!\n"
+  " \001(\t\022\014\n\004Uuid\030\003 \001(\t\"\337\001\n\016UserMetaInfoV1\022!\n"
   "\004Base\030\001 \001(\0132\023.proto.MetaInfoBase\022\014\n\004Name"
   "\030\002 \001(\t\022\020\n\010Password\030\003 \001(\t\022\023\n\013Description\030"
   "\004 \001(\t\022.\n\nCreateTime\030\005 \001(\0132\032.google.proto"
   "buf.Timestamp\022\030\n\020HeadPhotoBinData\030\006 \001(\014\022"
-  "\033\n\023UserPermissionGroup\030\007 \001(\t\"\254\001\n\032GlobalP"
-  "ermissionMetaInfoV1\022$\n\034WritePermissionCr"
-  "eateProject\030\001 \001(\010\022$\n\034WritePermissionModi"
-  "fyProject\030\002 \001(\010\022$\n\034WritePermissionDelete"
-  "Project\030\003 \001(\010\022\034\n\024ReadPerimissionQuery\030\004 "
-  "\001(\010\"\241\001\n\033ProjectPermissionMetaInfoV1\022\036\n\026W"
-  "ritePermissionAddData\030\001 \001(\010\022!\n\031WritePerm"
-  "issionModifyData\030\002 \001(\010\022!\n\031WritePermissio"
-  "nDeleteData\030\003 \001(\010\022\034\n\024ReadPerimissionQuer"
-  "y\030\004 \001(\010\"\335\001\n\031PermissionGroupMetaInfoV1\022!\n"
-  "\004Base\030\001 \001(\0132\023.proto.MetaInfoBase\022\014\n\004Name"
-  "\030\002 \001(\t\022\023\n\013Description\030\003 \001(\t\022;\n\020GlobalPer"
-  "mission\030\004 \001(\0132!.proto.GlobalPermissionMe"
-  "taInfoV1\022=\n\021ProjectPermission\030\005 \001(\0132\".pr"
-  "oto.ProjectPermissionMetaInfoV1\"s\n UserP"
-  "ermissionOverrideMetaInfoV1\022=\n\021ProjectPe"
-  "rmission\030\001 \001(\0132\".proto.ProjectPermission"
-  "MetaInfoV1\022\020\n\010UserName\030\002 \001(\t\"\274\002\n\021Project"
-  "MetaInfoV1\022!\n\004Base\030\001 \001(\0132\023.proto.MetaInf"
-  "oBase\022\014\n\004Name\030\002 \001(\t\022\023\n\013Description\030\003 \001(\t"
-  "\022\017\n\007Creator\030\004 \001(\t\022.\n\nCreateTime\030\005 \001(\0132\032."
-  "google.protobuf.Timestamp\0224\n\020LastModifie"
-  "dTime\030\006 \001(\0132\032.google.protobuf.Timestamp\022"
-  "\017\n\007SwcList\030\007 \003(\t\022G\n\026UserPermissionOverri"
-  "de\030\010 \003(\0132\'.proto.UserPermissionOverrideM"
-  "etaInfoV1\022\020\n\010WorkMode\030\t \001(\t\"\236\001\n\025SwcSnaps"
-  "hotMetaInfoV1\022!\n\004Base\030\001 \001(\0132\023.proto.Meta"
-  "InfoBase\022!\n\031SwcSnapshotCollectionName\030\002 "
-  "\001(\t\022.\n\nCreateTime\030\003 \001(\0132\032.google.protobu"
-  "f.Timestamp\022\017\n\007Creator\030\004 \001(\t\"\265\001\n\037SwcIncr"
-  "ementOperationMetaInfoV1\022!\n\004Base\030\001 \001(\0132\023"
-  ".proto.MetaInfoBase\022(\n IncrementOperatio"
-  "nCollectionName\030\002 \001(\t\022\025\n\rStartSnapshot\030\003"
-  " \001(\t\022.\n\nCreateTime\030\004 \001(\0132\032.google.protob"
-  "uf.Timestamp\"\310\001\n\027SwcIncrementOperationV1"
-  "\022!\n\004Base\030\001 \001(\0132\023.proto.MetaInfoBase\022.\n\nC"
-  "reateTime\030\002 \001(\0132\032.google.protobuf.Timest"
-  "amp\0227\n\022IncrementOperation\030\003 \001(\0162\033.proto."
-  "IncrementOperationV1\022!\n\007SwcData\030\004 \001(\0132\020."
-  "proto.SwcDataV1\"\\\n\033SwcIncrementOperation"
-  "ListV1\022=\n\025SwcIncrementOperation\030\001 \003(\0132\036."
-  "proto.SwcIncrementOperationV1\"4\n\032SwcAtta"
-  "chmentAnoMetaInfoV1\022\026\n\016AttachmentUuid\030\001 "
-  "\001(\t\"4\n\032SwcAttachmentApoMetaInfoV1\022\026\n\016Att"
-  "achmentUuid\030\001 \001(\t\"\252\004\n\rSwcMetaInfoV1\022!\n\004B"
-  "ase\030\001 \001(\0132\023.proto.MetaInfoBase\022\014\n\004Name\030\002"
-  " \001(\t\022\023\n\013Description\030\003 \001(\t\022\017\n\007Creator\030\004 \001"
-  "(\t\022\017\n\007SwcType\030\005 \001(\t\022.\n\nCreateTime\030\006 \001(\0132"
-  "\032.google.protobuf.Timestamp\0224\n\020LastModif"
-  "iedTime\030\007 \001(\0132\032.google.protobuf.Timestam"
-  "p\022=\n\027SwcSnapshotMetaInfoList\030\010 \003(\0132\034.pro"
-  "to.SwcSnapshotMetaInfoV1\022Q\n!SwcIncrement"
-  "OperationMetaInfoList\030\t \003(\0132&.proto.SwcI"
-  "ncrementOperationMetaInfoV1\022/\n\'CurrentIn"
-  "crementOperationCollectionName\030\n \001(\t\022C\n\030"
-  "SwcAttachmentAnoMetaInfo\030\013 \001(\0132!.proto.S"
-  "wcAttachmentAnoMetaInfoV1\022C\n\030SwcAttachme"
-  "ntApoMetaInfo\030\014 \001(\0132!.proto.SwcAttachmen"
-  "tApoMetaInfoV1\"\310\001\n\025SwcNodeInternalDataV1"
-  "\022\t\n\001N\030\001 \001(\005\022\014\n\004Type\030\002 \001(\005\022\t\n\001X\030\003 \001(\002\022\t\n\001"
-  "Y\030\004 \001(\002\022\t\n\001Z\030\005 \001(\002\022\016\n\006Radius\030\006 \001(\002\022\016\n\006Pa"
-  "rent\030\007 \001(\005\022\016\n\006Seg_id\030\010 \001(\005\022\r\n\005Level\030\t \001("
-  "\005\022\014\n\004Mode\030\n \001(\005\022\021\n\tTimestamp\030\013 \001(\005\022\025\n\rFe"
-  "ature_value\030\014 \001(\005\"\375\001\n\rSwcNodeDataV1\022!\n\004B"
-  "ase\030\001 \001(\0132\023.proto.MetaInfoBase\0229\n\023SwcNod"
-  "eInternalData\030\002 \001(\0132\034.proto.SwcNodeInter"
-  "nalDataV1\022\017\n\007Creator\030\003 \001(\t\022.\n\nCreateTime"
-  "\030\004 \001(\0132\032.google.protobuf.Timestamp\0224\n\020La"
-  "stModifiedTime\030\005 \001(\0132\032.google.protobuf.T"
-  "imestamp\022\027\n\017CheckerUserUuid\030\006 \001(\t\"2\n\tSwc"
-  "DataV1\022%\n\007SwcData\030\001 \003(\0132\024.proto.SwcNodeD"
-  "ataV1\"\331\003\n\031DailyStatisticsMetaInfoV1\022!\n\004B"
-  "ase\030\001 \001(\0132\023.proto.MetaInfoBase\022\014\n\004Name\030\002"
-  " \001(\t\022\023\n\013Description\030\003 \001(\t\022\013\n\003Day\030\004 \001(\t\022\034"
-  "\n\024CreatedProjectNumber\030\005 \001(\005\022\030\n\020CreatedS"
-  "wcNumber\030\006 \001(\005\022\033\n\023CreateSwcNodeNumber\030\007 "
-  "\001(\005\022\034\n\024DeletedProjectNumber\030\010 \001(\005\022\030\n\020Del"
-  "etedSwcNumber\030\t \001(\005\022\034\n\024DeletedSwcNodeNum"
-  "ber\030\n \001(\005\022\035\n\025ModifiedProjectNumber\030\013 \001(\005"
-  "\022\031\n\021ModifiedSwcNumber\030\014 \001(\005\022\035\n\025ModifiedS"
-  "wcNodeNumber\030\r \001(\005\022\032\n\022ProjectQueryNumber"
-  "\030\016 \001(\005\022\026\n\016SwcQueryNumber\030\017 \001(\005\022\027\n\017NodeQu"
-  "eryNumber\030\020 \001(\005\022\030\n\020ActiveUserNumber\030\021 \001("
-  "\005\"7\n\020UserVerifyInfoV1\022\020\n\010UserName\030\001 \001(\t\022"
-  "\021\n\tUserToken\030\002 \001(\t\"\'\n\021RequestMetaInfoV1\022"
-  "\022\n\nApiVersion\030\001 \001(\t\"A\n\022ResponseMetaInfoV"
-  "1\022\016\n\006Status\030\001 \001(\010\022\n\n\002Id\030\002 \001(\t\022\017\n\007Message"
-  "\030\003 \001(\t\"Y\n\022SwcAttachmentAnoV1\022!\n\004Base\030\001 \001"
-  "(\0132\023.proto.MetaInfoBase\022\017\n\007APOFILE\030\002 \001(\t"
-  "\022\017\n\007SWCFILE\030\003 \001(\t\"\225\002\n\022SwcAttachmentApoV1"
-  "\022!\n\004Base\030\001 \001(\0132\023.proto.MetaInfoBase\022\t\n\001N"
-  "\030\002 \001(\005\022\021\n\tOrderinfo\030\003 \001(\t\022\014\n\004Name\030\004 \001(\t\022"
-  "\017\n\007Comment\030\005 \001(\t\022\t\n\001Z\030\006 \001(\002\022\t\n\001X\030\007 \001(\002\022\t"
-  "\n\001Y\030\010 \001(\002\022\016\n\006Pixmax\030\t \001(\002\022\021\n\tIntensity\030\n"
-  " \001(\002\022\014\n\004Sdev\030\013 \001(\002\022\017\n\007Volsize\030\014 \001(\002\022\014\n\004M"
-  "ass\030\r \001(\002\022\016\n\006ColorR\030\016 \001(\005\022\016\n\006ColorG\030\017 \001("
-  "\005\022\016\n\006ColorB\030\020 \001(\005*G\n\024IncrementOperationV"
-  "1\022\013\n\007Unknown\020\000\022\n\n\006Create\020\001\022\n\n\006Delete\020\002\022\n"
-  "\n\006Update\020\003B/Z-DBMS/SwcDbmsCommon/Generat"
-  "ed/go/proto/messageP\000b\006proto3"
+  "\033\n\023UserPermissionGroup\030\007 \001(\t\022\016\n\006UserId\030\010"
+  " \001(\005\"\254\001\n\032GlobalPermissionMetaInfoV1\022$\n\034W"
+  "ritePermissionCreateProject\030\001 \001(\010\022$\n\034Wri"
+  "tePermissionModifyProject\030\002 \001(\010\022$\n\034Write"
+  "PermissionDeleteProject\030\003 \001(\010\022\034\n\024ReadPer"
+  "imissionQuery\030\004 \001(\010\"\241\001\n\033ProjectPermissio"
+  "nMetaInfoV1\022\036\n\026WritePermissionAddData\030\001 "
+  "\001(\010\022!\n\031WritePermissionModifyData\030\002 \001(\010\022!"
+  "\n\031WritePermissionDeleteData\030\003 \001(\010\022\034\n\024Rea"
+  "dPerimissionQuery\030\004 \001(\010\"\335\001\n\031PermissionGr"
+  "oupMetaInfoV1\022!\n\004Base\030\001 \001(\0132\023.proto.Meta"
+  "InfoBase\022\014\n\004Name\030\002 \001(\t\022\023\n\013Description\030\003 "
+  "\001(\t\022;\n\020GlobalPermission\030\004 \001(\0132!.proto.Gl"
+  "obalPermissionMetaInfoV1\022=\n\021ProjectPermi"
+  "ssion\030\005 \001(\0132\".proto.ProjectPermissionMet"
+  "aInfoV1\"s\n UserPermissionOverrideMetaInf"
+  "oV1\022=\n\021ProjectPermission\030\001 \001(\0132\".proto.P"
+  "rojectPermissionMetaInfoV1\022\020\n\010UserName\030\002"
+  " \001(\t\"\274\002\n\021ProjectMetaInfoV1\022!\n\004Base\030\001 \001(\013"
+  "2\023.proto.MetaInfoBase\022\014\n\004Name\030\002 \001(\t\022\023\n\013D"
+  "escription\030\003 \001(\t\022\017\n\007Creator\030\004 \001(\t\022.\n\nCre"
+  "ateTime\030\005 \001(\0132\032.google.protobuf.Timestam"
+  "p\0224\n\020LastModifiedTime\030\006 \001(\0132\032.google.pro"
+  "tobuf.Timestamp\022\017\n\007SwcList\030\007 \003(\t\022G\n\026User"
+  "PermissionOverride\030\010 \003(\0132\'.proto.UserPer"
+  "missionOverrideMetaInfoV1\022\020\n\010WorkMode\030\t "
+  "\001(\t\"\236\001\n\025SwcSnapshotMetaInfoV1\022!\n\004Base\030\001 "
+  "\001(\0132\023.proto.MetaInfoBase\022!\n\031SwcSnapshotC"
+  "ollectionName\030\002 \001(\t\022.\n\nCreateTime\030\003 \001(\0132"
+  "\032.google.protobuf.Timestamp\022\017\n\007Creator\030\004"
+  " \001(\t\"\265\001\n\037SwcIncrementOperationMetaInfoV1"
+  "\022!\n\004Base\030\001 \001(\0132\023.proto.MetaInfoBase\022(\n I"
+  "ncrementOperationCollectionName\030\002 \001(\t\022\025\n"
+  "\rStartSnapshot\030\003 \001(\t\022.\n\nCreateTime\030\004 \001(\013"
+  "2\032.google.protobuf.Timestamp\"\310\001\n\027SwcIncr"
+  "ementOperationV1\022!\n\004Base\030\001 \001(\0132\023.proto.M"
+  "etaInfoBase\022.\n\nCreateTime\030\002 \001(\0132\032.google"
+  ".protobuf.Timestamp\0227\n\022IncrementOperatio"
+  "n\030\003 \001(\0162\033.proto.IncrementOperationV1\022!\n\007"
+  "SwcData\030\004 \001(\0132\020.proto.SwcDataV1\"\\\n\033SwcIn"
+  "crementOperationListV1\022=\n\025SwcIncrementOp"
+  "eration\030\001 \003(\0132\036.proto.SwcIncrementOperat"
+  "ionV1\"4\n\032SwcAttachmentAnoMetaInfoV1\022\026\n\016A"
+  "ttachmentUuid\030\001 \001(\t\"4\n\032SwcAttachmentApoM"
+  "etaInfoV1\022\026\n\016AttachmentUuid\030\001 \001(\t\"\252\004\n\rSw"
+  "cMetaInfoV1\022!\n\004Base\030\001 \001(\0132\023.proto.MetaIn"
+  "foBase\022\014\n\004Name\030\002 \001(\t\022\023\n\013Description\030\003 \001("
+  "\t\022\017\n\007Creator\030\004 \001(\t\022\017\n\007SwcType\030\005 \001(\t\022.\n\nC"
+  "reateTime\030\006 \001(\0132\032.google.protobuf.Timest"
+  "amp\0224\n\020LastModifiedTime\030\007 \001(\0132\032.google.p"
+  "rotobuf.Timestamp\022=\n\027SwcSnapshotMetaInfo"
+  "List\030\010 \003(\0132\034.proto.SwcSnapshotMetaInfoV1"
+  "\022Q\n!SwcIncrementOperationMetaInfoList\030\t "
+  "\003(\0132&.proto.SwcIncrementOperationMetaInf"
+  "oV1\022/\n\'CurrentIncrementOperationCollecti"
+  "onName\030\n \001(\t\022C\n\030SwcAttachmentAnoMetaInfo"
+  "\030\013 \001(\0132!.proto.SwcAttachmentAnoMetaInfoV"
+  "1\022C\n\030SwcAttachmentApoMetaInfo\030\014 \001(\0132!.pr"
+  "oto.SwcAttachmentApoMetaInfoV1\"\310\001\n\025SwcNo"
+  "deInternalDataV1\022\t\n\001N\030\001 \001(\005\022\014\n\004Type\030\002 \001("
+  "\005\022\t\n\001X\030\003 \001(\002\022\t\n\001Y\030\004 \001(\002\022\t\n\001Z\030\005 \001(\002\022\016\n\006Ra"
+  "dius\030\006 \001(\002\022\016\n\006Parent\030\007 \001(\005\022\016\n\006Seg_id\030\010 \001"
+  "(\005\022\r\n\005Level\030\t \001(\005\022\014\n\004Mode\030\n \001(\005\022\021\n\tTimes"
+  "tamp\030\013 \001(\005\022\025\n\rFeature_value\030\014 \001(\005\"\375\001\n\rSw"
+  "cNodeDataV1\022!\n\004Base\030\001 \001(\0132\023.proto.MetaIn"
+  "foBase\0229\n\023SwcNodeInternalData\030\002 \001(\0132\034.pr"
+  "oto.SwcNodeInternalDataV1\022\017\n\007Creator\030\003 \001"
+  "(\t\022.\n\nCreateTime\030\004 \001(\0132\032.google.protobuf"
+  ".Timestamp\0224\n\020LastModifiedTime\030\005 \001(\0132\032.g"
+  "oogle.protobuf.Timestamp\022\027\n\017CheckerUserU"
+  "uid\030\006 \001(\t\"2\n\tSwcDataV1\022%\n\007SwcData\030\001 \003(\0132"
+  "\024.proto.SwcNodeDataV1\"\331\003\n\031DailyStatistic"
+  "sMetaInfoV1\022!\n\004Base\030\001 \001(\0132\023.proto.MetaIn"
+  "foBase\022\014\n\004Name\030\002 \001(\t\022\023\n\013Description\030\003 \001("
+  "\t\022\013\n\003Day\030\004 \001(\t\022\034\n\024CreatedProjectNumber\030\005"
+  " \001(\005\022\030\n\020CreatedSwcNumber\030\006 \001(\005\022\033\n\023Create"
+  "SwcNodeNumber\030\007 \001(\005\022\034\n\024DeletedProjectNum"
+  "ber\030\010 \001(\005\022\030\n\020DeletedSwcNumber\030\t \001(\005\022\034\n\024D"
+  "eletedSwcNodeNumber\030\n \001(\005\022\035\n\025ModifiedPro"
+  "jectNumber\030\013 \001(\005\022\031\n\021ModifiedSwcNumber\030\014 "
+  "\001(\005\022\035\n\025ModifiedSwcNodeNumber\030\r \001(\005\022\032\n\022Pr"
+  "ojectQueryNumber\030\016 \001(\005\022\026\n\016SwcQueryNumber"
+  "\030\017 \001(\005\022\027\n\017NodeQueryNumber\030\020 \001(\005\022\030\n\020Activ"
+  "eUserNumber\030\021 \001(\005\"7\n\020UserVerifyInfoV1\022\020\n"
+  "\010UserName\030\001 \001(\t\022\021\n\tUserToken\030\002 \001(\t\"\'\n\021Re"
+  "questMetaInfoV1\022\022\n\nApiVersion\030\001 \001(\t\"A\n\022R"
+  "esponseMetaInfoV1\022\016\n\006Status\030\001 \001(\010\022\n\n\002Id\030"
+  "\002 \001(\t\022\017\n\007Message\030\003 \001(\t\"Y\n\022SwcAttachmentA"
+  "noV1\022!\n\004Base\030\001 \001(\0132\023.proto.MetaInfoBase\022"
+  "\017\n\007APOFILE\030\002 \001(\t\022\017\n\007SWCFILE\030\003 \001(\t\"\225\002\n\022Sw"
+  "cAttachmentApoV1\022!\n\004Base\030\001 \001(\0132\023.proto.M"
+  "etaInfoBase\022\t\n\001N\030\002 \001(\005\022\021\n\tOrderinfo\030\003 \001("
+  "\t\022\014\n\004Name\030\004 \001(\t\022\017\n\007Comment\030\005 \001(\t\022\t\n\001Z\030\006 "
+  "\001(\002\022\t\n\001X\030\007 \001(\002\022\t\n\001Y\030\010 \001(\002\022\016\n\006Pixmax\030\t \001("
+  "\002\022\021\n\tIntensity\030\n \001(\002\022\014\n\004Sdev\030\013 \001(\002\022\017\n\007Vo"
+  "lsize\030\014 \001(\002\022\014\n\004Mass\030\r \001(\002\022\016\n\006ColorR\030\016 \001("
+  "\005\022\016\n\006ColorG\030\017 \001(\005\022\016\n\006ColorB\030\020 \001(\005*G\n\024Inc"
+  "rementOperationV1\022\013\n\007Unknown\020\000\022\n\n\006Create"
+  "\020\001\022\n\n\006Delete\020\002\022\n\n\006Update\020\003B/Z-DBMS/SwcDb"
+  "msCommon/Generated/go/proto/messageP\000b\006p"
+  "roto3"
   ;
 static const ::_pbi::DescriptorTable* const descriptor_table_Message_2fMessage_2eproto_deps[1] = {
   &::descriptor_table_google_2fprotobuf_2ftimestamp_2eproto,
 };
 static ::_pbi::once_flag descriptor_table_Message_2fMessage_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_Message_2fMessage_2eproto = {
-    false, false, 4309, descriptor_table_protodef_Message_2fMessage_2eproto,
+    false, false, 4325, descriptor_table_protodef_Message_2fMessage_2eproto,
     "Message/Message.proto",
     &descriptor_table_Message_2fMessage_2eproto_once, descriptor_table_Message_2fMessage_2eproto_deps, 1, 23,
     schemas, file_default_instances, TableStruct_Message_2fMessage_2eproto::offsets,
@@ -1226,6 +1229,7 @@ UserMetaInfoV1::UserMetaInfoV1(const UserMetaInfoV1& from)
     , decltype(_impl_.userpermissiongroup_){}
     , decltype(_impl_.base_){nullptr}
     , decltype(_impl_.createtime_){nullptr}
+    , decltype(_impl_.userid_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
@@ -1275,6 +1279,7 @@ UserMetaInfoV1::UserMetaInfoV1(const UserMetaInfoV1& from)
   if (from._internal_has_createtime()) {
     _this->_impl_.createtime_ = new ::PROTOBUF_NAMESPACE_ID::Timestamp(*from._impl_.createtime_);
   }
+  _this->_impl_.userid_ = from._impl_.userid_;
   // @@protoc_insertion_point(copy_constructor:proto.UserMetaInfoV1)
 }
 
@@ -1290,6 +1295,7 @@ inline void UserMetaInfoV1::SharedCtor(
     , decltype(_impl_.userpermissiongroup_){}
     , decltype(_impl_.base_){nullptr}
     , decltype(_impl_.createtime_){nullptr}
+    , decltype(_impl_.userid_){0}
     , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.name_.InitDefault();
@@ -1357,6 +1363,7 @@ void UserMetaInfoV1::Clear() {
     delete _impl_.createtime_;
   }
   _impl_.createtime_ = nullptr;
+  _impl_.userid_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -1428,6 +1435,14 @@ const char* UserMetaInfoV1::_InternalParse(const char* ptr, ::_pbi::ParseContext
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
           CHK_(::_pbi::VerifyUTF8(str, "proto.UserMetaInfoV1.UserPermissionGroup"));
+        } else
+          goto handle_unusual;
+        continue;
+      // int32 UserId = 8;
+      case 8:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 64)) {
+          _impl_.userid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
@@ -1520,6 +1535,12 @@ uint8_t* UserMetaInfoV1::_InternalSerialize(
         7, this->_internal_userpermissiongroup(), target);
   }
 
+  // int32 UserId = 8;
+  if (this->_internal_userid() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(8, this->_internal_userid(), target);
+  }
+
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
@@ -1585,6 +1606,11 @@ size_t UserMetaInfoV1::ByteSizeLong() const {
         *_impl_.createtime_);
   }
 
+  // int32 UserId = 8;
+  if (this->_internal_userid() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_userid());
+  }
+
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
@@ -1626,6 +1652,9 @@ void UserMetaInfoV1::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const :
     _this->_internal_mutable_createtime()->::PROTOBUF_NAMESPACE_ID::Timestamp::MergeFrom(
         from._internal_createtime());
   }
+  if (from._internal_userid() != 0) {
+    _this->_internal_set_userid(from._internal_userid());
+  }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
@@ -1666,8 +1695,8 @@ void UserMetaInfoV1::InternalSwap(UserMetaInfoV1* other) {
       &other->_impl_.userpermissiongroup_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(UserMetaInfoV1, _impl_.createtime_)
-      + sizeof(UserMetaInfoV1::_impl_.createtime_)
+      PROTOBUF_FIELD_OFFSET(UserMetaInfoV1, _impl_.userid_)
+      + sizeof(UserMetaInfoV1::_impl_.userid_)
       - PROTOBUF_FIELD_OFFSET(UserMetaInfoV1, _impl_.base_)>(
           reinterpret_cast<char*>(&_impl_.base_),
           reinterpret_cast<char*>(&other->_impl_.base_));

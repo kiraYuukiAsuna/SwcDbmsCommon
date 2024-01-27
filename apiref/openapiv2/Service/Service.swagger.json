@@ -3323,6 +3323,10 @@
         },
         "UserPermissionGroup": {
           "type": "string"
+        },
+        "UserId": {
+          "type": "integer",
+          "format": "int32"
         }
       }
     },
