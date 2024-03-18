@@ -43,7 +43,6 @@ message PermissionGroupMetaInfoV1{
     string Description = 3;
     GlobalPermissionMetaInfoV1 GlobalPermission = 4;
     ProjectPermissionMetaInfoV1 ProjectPermission = 5;
-
 }
 
 message UserPermissionOverrideMetaInfoV1{
