@@ -1522,6 +1522,28 @@
     }
   },
   "definitions": {
+    "protoBrainTellServerMysqlDBCompatibleData": {
+      "type": "object",
+      "properties": {
+        "Email": {
+          "type": "string"
+        },
+        "NickName": {
+          "type": "string"
+        },
+        "Score": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "AppKey": {
+          "type": "string"
+        },
+        "IsDeleted": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
     "protoChangeUserPermissionGroupRequest": {
       "type": "object",
       "properties": {
@@ -3278,6 +3300,9 @@
         "UserId": {
           "type": "integer",
           "format": "int32"
+        },
+        "CompatibleData": {
+          "$ref": "#/definitions/protoBrainTellServerMysqlDBCompatibleData"
         }
       }
     },

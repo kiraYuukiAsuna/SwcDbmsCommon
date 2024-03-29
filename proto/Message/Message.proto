@@ -12,6 +12,14 @@ message MetaInfoBase{
     string Uuid = 3;
 }
 
+message BrainTellServerMysqlDBCompatibleData{
+    string Email = 1;
+    string NickName = 2;
+    int32 Score = 3;
+    string AppKey = 4;
+    int32 IsDeleted = 5;
+}
+
 message UserMetaInfoV1{
     MetaInfoBase Base = 1;
     string Name = 2;
@@ -21,6 +29,7 @@ message UserMetaInfoV1{
     bytes HeadPhotoBinData = 6;
     string UserPermissionGroup = 7;
     int32 UserId = 8;
+    BrainTellServerMysqlDBCompatibleData CompatibleData = 9;
 }
 
 message GlobalPermissionMetaInfoV1{

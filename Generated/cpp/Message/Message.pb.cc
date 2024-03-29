@@ -36,6 +36,23 @@ struct MetaInfoBaseDefaultTypeInternal {
   };
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 MetaInfoBaseDefaultTypeInternal _MetaInfoBase_default_instance_;
+PROTOBUF_CONSTEXPR BrainTellServerMysqlDBCompatibleData::BrainTellServerMysqlDBCompatibleData(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.email_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.nickname_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.appkey_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.score_)*/0
+  , /*decltype(_impl_.isdeleted_)*/0
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct BrainTellServerMysqlDBCompatibleDataDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR BrainTellServerMysqlDBCompatibleDataDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~BrainTellServerMysqlDBCompatibleDataDefaultTypeInternal() {}
+  union {
+    BrainTellServerMysqlDBCompatibleData _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 BrainTellServerMysqlDBCompatibleDataDefaultTypeInternal _BrainTellServerMysqlDBCompatibleData_default_instance_;
 PROTOBUF_CONSTEXPR UserMetaInfoV1::UserMetaInfoV1(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_.name_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
@@ -45,6 +62,7 @@ PROTOBUF_CONSTEXPR UserMetaInfoV1::UserMetaInfoV1(
   , /*decltype(_impl_.userpermissiongroup_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.base_)*/nullptr
   , /*decltype(_impl_.createtime_)*/nullptr
+  , /*decltype(_impl_.compatibledata_)*/nullptr
   , /*decltype(_impl_.userid_)*/0
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct UserMetaInfoV1DefaultTypeInternal {
@@ -421,7 +439,7 @@ struct SwcAttachmentApoV1DefaultTypeInternal {
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SwcAttachmentApoV1DefaultTypeInternal _SwcAttachmentApoV1_default_instance_;
 }  // namespace proto
-static ::_pb::Metadata file_level_metadata_Message_2fMessage_2eproto[23];
+static ::_pb::Metadata file_level_metadata_Message_2fMessage_2eproto[24];
 static const ::_pb::EnumDescriptor* file_level_enum_descriptors_Message_2fMessage_2eproto[1];
 static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_Message_2fMessage_2eproto = nullptr;
 
@@ -436,6 +454,17 @@ const uint32_t TableStruct_Message_2fMessage_2eproto::offsets[] PROTOBUF_SECTION
   PROTOBUF_FIELD_OFFSET(::proto::MetaInfoBase, _impl_.dataaccessmodelversion_),
   PROTOBUF_FIELD_OFFSET(::proto::MetaInfoBase, _impl_.uuid_),
   ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::proto::BrainTellServerMysqlDBCompatibleData, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::proto::BrainTellServerMysqlDBCompatibleData, _impl_.email_),
+  PROTOBUF_FIELD_OFFSET(::proto::BrainTellServerMysqlDBCompatibleData, _impl_.nickname_),
+  PROTOBUF_FIELD_OFFSET(::proto::BrainTellServerMysqlDBCompatibleData, _impl_.score_),
+  PROTOBUF_FIELD_OFFSET(::proto::BrainTellServerMysqlDBCompatibleData, _impl_.appkey_),
+  PROTOBUF_FIELD_OFFSET(::proto::BrainTellServerMysqlDBCompatibleData, _impl_.isdeleted_),
+  ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::proto::UserMetaInfoV1, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
@@ -449,6 +478,7 @@ const uint32_t TableStruct_Message_2fMessage_2eproto::offsets[] PROTOBUF_SECTION
   PROTOBUF_FIELD_OFFSET(::proto::UserMetaInfoV1, _impl_.headphotobindata_),
   PROTOBUF_FIELD_OFFSET(::proto::UserMetaInfoV1, _impl_.userpermissiongroup_),
   PROTOBUF_FIELD_OFFSET(::proto::UserMetaInfoV1, _impl_.userid_),
+  PROTOBUF_FIELD_OFFSET(::proto::UserMetaInfoV1, _impl_.compatibledata_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::proto::GlobalPermissionMetaInfoV1, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -690,32 +720,34 @@ const uint32_t TableStruct_Message_2fMessage_2eproto::offsets[] PROTOBUF_SECTION
 };
 static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, -1, sizeof(::proto::MetaInfoBase)},
-  { 9, -1, -1, sizeof(::proto::UserMetaInfoV1)},
-  { 23, -1, -1, sizeof(::proto::GlobalPermissionMetaInfoV1)},
-  { 33, -1, -1, sizeof(::proto::ProjectPermissionMetaInfoV1)},
-  { 43, -1, -1, sizeof(::proto::PermissionGroupMetaInfoV1)},
-  { 54, -1, -1, sizeof(::proto::UserPermissionOverrideMetaInfoV1)},
-  { 62, -1, -1, sizeof(::proto::ProjectMetaInfoV1)},
-  { 77, -1, -1, sizeof(::proto::SwcSnapshotMetaInfoV1)},
-  { 87, -1, -1, sizeof(::proto::SwcIncrementOperationMetaInfoV1)},
-  { 97, -1, -1, sizeof(::proto::SwcIncrementOperationV1)},
-  { 107, -1, -1, sizeof(::proto::SwcIncrementOperationListV1)},
-  { 114, -1, -1, sizeof(::proto::SwcAttachmentAnoMetaInfoV1)},
-  { 121, -1, -1, sizeof(::proto::SwcAttachmentApoMetaInfoV1)},
-  { 128, -1, -1, sizeof(::proto::SwcMetaInfoV1)},
-  { 146, -1, -1, sizeof(::proto::SwcNodeInternalDataV1)},
-  { 164, -1, -1, sizeof(::proto::SwcNodeDataV1)},
-  { 176, -1, -1, sizeof(::proto::SwcDataV1)},
-  { 183, -1, -1, sizeof(::proto::DailyStatisticsMetaInfoV1)},
-  { 206, -1, -1, sizeof(::proto::UserVerifyInfoV1)},
-  { 214, -1, -1, sizeof(::proto::RequestMetaInfoV1)},
-  { 221, -1, -1, sizeof(::proto::ResponseMetaInfoV1)},
-  { 230, -1, -1, sizeof(::proto::SwcAttachmentAnoV1)},
-  { 239, -1, -1, sizeof(::proto::SwcAttachmentApoV1)},
+  { 9, -1, -1, sizeof(::proto::BrainTellServerMysqlDBCompatibleData)},
+  { 20, -1, -1, sizeof(::proto::UserMetaInfoV1)},
+  { 35, -1, -1, sizeof(::proto::GlobalPermissionMetaInfoV1)},
+  { 45, -1, -1, sizeof(::proto::ProjectPermissionMetaInfoV1)},
+  { 55, -1, -1, sizeof(::proto::PermissionGroupMetaInfoV1)},
+  { 66, -1, -1, sizeof(::proto::UserPermissionOverrideMetaInfoV1)},
+  { 74, -1, -1, sizeof(::proto::ProjectMetaInfoV1)},
+  { 89, -1, -1, sizeof(::proto::SwcSnapshotMetaInfoV1)},
+  { 99, -1, -1, sizeof(::proto::SwcIncrementOperationMetaInfoV1)},
+  { 109, -1, -1, sizeof(::proto::SwcIncrementOperationV1)},
+  { 119, -1, -1, sizeof(::proto::SwcIncrementOperationListV1)},
+  { 126, -1, -1, sizeof(::proto::SwcAttachmentAnoMetaInfoV1)},
+  { 133, -1, -1, sizeof(::proto::SwcAttachmentApoMetaInfoV1)},
+  { 140, -1, -1, sizeof(::proto::SwcMetaInfoV1)},
+  { 158, -1, -1, sizeof(::proto::SwcNodeInternalDataV1)},
+  { 176, -1, -1, sizeof(::proto::SwcNodeDataV1)},
+  { 188, -1, -1, sizeof(::proto::SwcDataV1)},
+  { 195, -1, -1, sizeof(::proto::DailyStatisticsMetaInfoV1)},
+  { 218, -1, -1, sizeof(::proto::UserVerifyInfoV1)},
+  { 226, -1, -1, sizeof(::proto::RequestMetaInfoV1)},
+  { 233, -1, -1, sizeof(::proto::ResponseMetaInfoV1)},
+  { 242, -1, -1, sizeof(::proto::SwcAttachmentAnoV1)},
+  { 251, -1, -1, sizeof(::proto::SwcAttachmentApoV1)},
 };
 
 static const ::_pb::Message* const file_default_instances[] = {
   &::proto::_MetaInfoBase_default_instance_._instance,
+  &::proto::_BrainTellServerMysqlDBCompatibleData_default_instance_._instance,
   &::proto::_UserMetaInfoV1_default_instance_._instance,
   &::proto::_GlobalPermissionMetaInfoV1_default_instance_._instance,
   &::proto::_ProjectPermissionMetaInfoV1_default_instance_._instance,
@@ -744,121 +776,125 @@ const char descriptor_table_protodef_Message_2fMessage_2eproto[] PROTOBUF_SECTIO
   "\n\025Message/Message.proto\022\005proto\032\037google/p"
   "rotobuf/timestamp.proto\"I\n\014MetaInfoBase\022"
   "\013\n\003_id\030\001 \001(\t\022\036\n\026DataAccessModelVersion\030\002"
-  " \001(\t\022\014\n\004Uuid\030\003 \001(\t\"\337\001\n\016UserMetaInfoV1\022!\n"
-  "\004Base\030\001 \001(\0132\023.proto.MetaInfoBase\022\014\n\004Name"
-  "\030\002 \001(\t\022\020\n\010Password\030\003 \001(\t\022\023\n\013Description\030"
-  "\004 \001(\t\022.\n\nCreateTime\030\005 \001(\0132\032.google.proto"
-  "buf.Timestamp\022\030\n\020HeadPhotoBinData\030\006 \001(\014\022"
-  "\033\n\023UserPermissionGroup\030\007 \001(\t\022\016\n\006UserId\030\010"
-  " \001(\005\"\254\001\n\032GlobalPermissionMetaInfoV1\022$\n\034W"
-  "ritePermissionCreateProject\030\001 \001(\010\022$\n\034Wri"
-  "tePermissionModifyProject\030\002 \001(\010\022$\n\034Write"
-  "PermissionDeleteProject\030\003 \001(\010\022\034\n\024ReadPer"
-  "imissionQuery\030\004 \001(\010\"\241\001\n\033ProjectPermissio"
-  "nMetaInfoV1\022\036\n\026WritePermissionAddData\030\001 "
-  "\001(\010\022!\n\031WritePermissionModifyData\030\002 \001(\010\022!"
-  "\n\031WritePermissionDeleteData\030\003 \001(\010\022\034\n\024Rea"
-  "dPerimissionQuery\030\004 \001(\010\"\335\001\n\031PermissionGr"
-  "oupMetaInfoV1\022!\n\004Base\030\001 \001(\0132\023.proto.Meta"
-  "InfoBase\022\014\n\004Name\030\002 \001(\t\022\023\n\013Description\030\003 "
-  "\001(\t\022;\n\020GlobalPermission\030\004 \001(\0132!.proto.Gl"
-  "obalPermissionMetaInfoV1\022=\n\021ProjectPermi"
-  "ssion\030\005 \001(\0132\".proto.ProjectPermissionMet"
-  "aInfoV1\"s\n UserPermissionOverrideMetaInf"
-  "oV1\022=\n\021ProjectPermission\030\001 \001(\0132\".proto.P"
-  "rojectPermissionMetaInfoV1\022\020\n\010UserName\030\002"
-  " \001(\t\"\274\002\n\021ProjectMetaInfoV1\022!\n\004Base\030\001 \001(\013"
-  "2\023.proto.MetaInfoBase\022\014\n\004Name\030\002 \001(\t\022\023\n\013D"
-  "escription\030\003 \001(\t\022\017\n\007Creator\030\004 \001(\t\022.\n\nCre"
-  "ateTime\030\005 \001(\0132\032.google.protobuf.Timestam"
-  "p\0224\n\020LastModifiedTime\030\006 \001(\0132\032.google.pro"
-  "tobuf.Timestamp\022\017\n\007SwcList\030\007 \003(\t\022G\n\026User"
-  "PermissionOverride\030\010 \003(\0132\'.proto.UserPer"
-  "missionOverrideMetaInfoV1\022\020\n\010WorkMode\030\t "
-  "\001(\t\"\236\001\n\025SwcSnapshotMetaInfoV1\022!\n\004Base\030\001 "
-  "\001(\0132\023.proto.MetaInfoBase\022!\n\031SwcSnapshotC"
-  "ollectionName\030\002 \001(\t\022.\n\nCreateTime\030\003 \001(\0132"
-  "\032.google.protobuf.Timestamp\022\017\n\007Creator\030\004"
-  " \001(\t\"\265\001\n\037SwcIncrementOperationMetaInfoV1"
-  "\022!\n\004Base\030\001 \001(\0132\023.proto.MetaInfoBase\022(\n I"
-  "ncrementOperationCollectionName\030\002 \001(\t\022\025\n"
-  "\rStartSnapshot\030\003 \001(\t\022.\n\nCreateTime\030\004 \001(\013"
-  "2\032.google.protobuf.Timestamp\"\310\001\n\027SwcIncr"
-  "ementOperationV1\022!\n\004Base\030\001 \001(\0132\023.proto.M"
-  "etaInfoBase\022.\n\nCreateTime\030\002 \001(\0132\032.google"
-  ".protobuf.Timestamp\0227\n\022IncrementOperatio"
-  "n\030\003 \001(\0162\033.proto.IncrementOperationV1\022!\n\007"
-  "SwcData\030\004 \001(\0132\020.proto.SwcDataV1\"\\\n\033SwcIn"
-  "crementOperationListV1\022=\n\025SwcIncrementOp"
-  "eration\030\001 \003(\0132\036.proto.SwcIncrementOperat"
-  "ionV1\"4\n\032SwcAttachmentAnoMetaInfoV1\022\026\n\016A"
-  "ttachmentUuid\030\001 \001(\t\"4\n\032SwcAttachmentApoM"
-  "etaInfoV1\022\026\n\016AttachmentUuid\030\001 \001(\t\"\252\004\n\rSw"
-  "cMetaInfoV1\022!\n\004Base\030\001 \001(\0132\023.proto.MetaIn"
-  "foBase\022\014\n\004Name\030\002 \001(\t\022\023\n\013Description\030\003 \001("
-  "\t\022\017\n\007Creator\030\004 \001(\t\022\017\n\007SwcType\030\005 \001(\t\022.\n\nC"
-  "reateTime\030\006 \001(\0132\032.google.protobuf.Timest"
-  "amp\0224\n\020LastModifiedTime\030\007 \001(\0132\032.google.p"
-  "rotobuf.Timestamp\022=\n\027SwcSnapshotMetaInfo"
-  "List\030\010 \003(\0132\034.proto.SwcSnapshotMetaInfoV1"
-  "\022Q\n!SwcIncrementOperationMetaInfoList\030\t "
-  "\003(\0132&.proto.SwcIncrementOperationMetaInf"
-  "oV1\022/\n\'CurrentIncrementOperationCollecti"
-  "onName\030\n \001(\t\022C\n\030SwcAttachmentAnoMetaInfo"
-  "\030\013 \001(\0132!.proto.SwcAttachmentAnoMetaInfoV"
-  "1\022C\n\030SwcAttachmentApoMetaInfo\030\014 \001(\0132!.pr"
-  "oto.SwcAttachmentApoMetaInfoV1\"\310\001\n\025SwcNo"
-  "deInternalDataV1\022\t\n\001N\030\001 \001(\005\022\014\n\004Type\030\002 \001("
-  "\005\022\t\n\001X\030\003 \001(\002\022\t\n\001Y\030\004 \001(\002\022\t\n\001Z\030\005 \001(\002\022\016\n\006Ra"
-  "dius\030\006 \001(\002\022\016\n\006Parent\030\007 \001(\005\022\016\n\006Seg_id\030\010 \001"
-  "(\005\022\r\n\005Level\030\t \001(\005\022\014\n\004Mode\030\n \001(\005\022\021\n\tTimes"
-  "tamp\030\013 \001(\005\022\025\n\rFeature_value\030\014 \001(\005\"\375\001\n\rSw"
-  "cNodeDataV1\022!\n\004Base\030\001 \001(\0132\023.proto.MetaIn"
-  "foBase\0229\n\023SwcNodeInternalData\030\002 \001(\0132\034.pr"
-  "oto.SwcNodeInternalDataV1\022\017\n\007Creator\030\003 \001"
-  "(\t\022.\n\nCreateTime\030\004 \001(\0132\032.google.protobuf"
-  ".Timestamp\0224\n\020LastModifiedTime\030\005 \001(\0132\032.g"
-  "oogle.protobuf.Timestamp\022\027\n\017CheckerUserU"
-  "uid\030\006 \001(\t\"2\n\tSwcDataV1\022%\n\007SwcData\030\001 \003(\0132"
-  "\024.proto.SwcNodeDataV1\"\331\003\n\031DailyStatistic"
-  "sMetaInfoV1\022!\n\004Base\030\001 \001(\0132\023.proto.MetaIn"
-  "foBase\022\014\n\004Name\030\002 \001(\t\022\023\n\013Description\030\003 \001("
-  "\t\022\013\n\003Day\030\004 \001(\t\022\034\n\024CreatedProjectNumber\030\005"
-  " \001(\005\022\030\n\020CreatedSwcNumber\030\006 \001(\005\022\033\n\023Create"
-  "SwcNodeNumber\030\007 \001(\005\022\034\n\024DeletedProjectNum"
-  "ber\030\010 \001(\005\022\030\n\020DeletedSwcNumber\030\t \001(\005\022\034\n\024D"
-  "eletedSwcNodeNumber\030\n \001(\005\022\035\n\025ModifiedPro"
-  "jectNumber\030\013 \001(\005\022\031\n\021ModifiedSwcNumber\030\014 "
-  "\001(\005\022\035\n\025ModifiedSwcNodeNumber\030\r \001(\005\022\032\n\022Pr"
-  "ojectQueryNumber\030\016 \001(\005\022\026\n\016SwcQueryNumber"
-  "\030\017 \001(\005\022\027\n\017NodeQueryNumber\030\020 \001(\005\022\030\n\020Activ"
-  "eUserNumber\030\021 \001(\005\"7\n\020UserVerifyInfoV1\022\020\n"
-  "\010UserName\030\001 \001(\t\022\021\n\tUserToken\030\002 \001(\t\"\'\n\021Re"
-  "questMetaInfoV1\022\022\n\nApiVersion\030\001 \001(\t\"A\n\022R"
-  "esponseMetaInfoV1\022\016\n\006Status\030\001 \001(\010\022\n\n\002Id\030"
-  "\002 \001(\t\022\017\n\007Message\030\003 \001(\t\"Y\n\022SwcAttachmentA"
-  "noV1\022!\n\004Base\030\001 \001(\0132\023.proto.MetaInfoBase\022"
-  "\017\n\007APOFILE\030\002 \001(\t\022\017\n\007SWCFILE\030\003 \001(\t\"\225\002\n\022Sw"
-  "cAttachmentApoV1\022!\n\004Base\030\001 \001(\0132\023.proto.M"
-  "etaInfoBase\022\t\n\001N\030\002 \001(\005\022\021\n\tOrderinfo\030\003 \001("
-  "\t\022\014\n\004Name\030\004 \001(\t\022\017\n\007Comment\030\005 \001(\t\022\t\n\001Z\030\006 "
-  "\001(\002\022\t\n\001X\030\007 \001(\002\022\t\n\001Y\030\010 \001(\002\022\016\n\006Pixmax\030\t \001("
-  "\002\022\021\n\tIntensity\030\n \001(\002\022\014\n\004Sdev\030\013 \001(\002\022\017\n\007Vo"
-  "lsize\030\014 \001(\002\022\014\n\004Mass\030\r \001(\002\022\016\n\006ColorR\030\016 \001("
-  "\005\022\016\n\006ColorG\030\017 \001(\005\022\016\n\006ColorB\030\020 \001(\005*G\n\024Inc"
-  "rementOperationV1\022\013\n\007Unknown\020\000\022\n\n\006Create"
-  "\020\001\022\n\n\006Delete\020\002\022\n\n\006Update\020\003B/Z-DBMS/SwcDb"
-  "msCommon/Generated/go/proto/messageP\000b\006p"
-  "roto3"
+  " \001(\t\022\014\n\004Uuid\030\003 \001(\t\"y\n$BrainTellServerMys"
+  "qlDBCompatibleData\022\r\n\005Email\030\001 \001(\t\022\020\n\010Nic"
+  "kName\030\002 \001(\t\022\r\n\005Score\030\003 \001(\005\022\016\n\006AppKey\030\004 \001"
+  "(\t\022\021\n\tIsDeleted\030\005 \001(\005\"\244\002\n\016UserMetaInfoV1"
+  "\022!\n\004Base\030\001 \001(\0132\023.proto.MetaInfoBase\022\014\n\004N"
+  "ame\030\002 \001(\t\022\020\n\010Password\030\003 \001(\t\022\023\n\013Descripti"
+  "on\030\004 \001(\t\022.\n\nCreateTime\030\005 \001(\0132\032.google.pr"
+  "otobuf.Timestamp\022\030\n\020HeadPhotoBinData\030\006 \001"
+  "(\014\022\033\n\023UserPermissionGroup\030\007 \001(\t\022\016\n\006UserI"
+  "d\030\010 \001(\005\022C\n\016CompatibleData\030\t \001(\0132+.proto."
+  "BrainTellServerMysqlDBCompatibleData\"\254\001\n"
+  "\032GlobalPermissionMetaInfoV1\022$\n\034WritePerm"
+  "issionCreateProject\030\001 \001(\010\022$\n\034WritePermis"
+  "sionModifyProject\030\002 \001(\010\022$\n\034WritePermissi"
+  "onDeleteProject\030\003 \001(\010\022\034\n\024ReadPerimission"
+  "Query\030\004 \001(\010\"\241\001\n\033ProjectPermissionMetaInf"
+  "oV1\022\036\n\026WritePermissionAddData\030\001 \001(\010\022!\n\031W"
+  "ritePermissionModifyData\030\002 \001(\010\022!\n\031WriteP"
+  "ermissionDeleteData\030\003 \001(\010\022\034\n\024ReadPerimis"
+  "sionQuery\030\004 \001(\010\"\335\001\n\031PermissionGroupMetaI"
+  "nfoV1\022!\n\004Base\030\001 \001(\0132\023.proto.MetaInfoBase"
+  "\022\014\n\004Name\030\002 \001(\t\022\023\n\013Description\030\003 \001(\t\022;\n\020G"
+  "lobalPermission\030\004 \001(\0132!.proto.GlobalPerm"
+  "issionMetaInfoV1\022=\n\021ProjectPermission\030\005 "
+  "\001(\0132\".proto.ProjectPermissionMetaInfoV1\""
+  "s\n UserPermissionOverrideMetaInfoV1\022=\n\021P"
+  "rojectPermission\030\001 \001(\0132\".proto.ProjectPe"
+  "rmissionMetaInfoV1\022\020\n\010UserName\030\002 \001(\t\"\274\002\n"
+  "\021ProjectMetaInfoV1\022!\n\004Base\030\001 \001(\0132\023.proto"
+  ".MetaInfoBase\022\014\n\004Name\030\002 \001(\t\022\023\n\013Descripti"
+  "on\030\003 \001(\t\022\017\n\007Creator\030\004 \001(\t\022.\n\nCreateTime\030"
+  "\005 \001(\0132\032.google.protobuf.Timestamp\0224\n\020Las"
+  "tModifiedTime\030\006 \001(\0132\032.google.protobuf.Ti"
+  "mestamp\022\017\n\007SwcList\030\007 \003(\t\022G\n\026UserPermissi"
+  "onOverride\030\010 \003(\0132\'.proto.UserPermissionO"
+  "verrideMetaInfoV1\022\020\n\010WorkMode\030\t \001(\t\"\236\001\n\025"
+  "SwcSnapshotMetaInfoV1\022!\n\004Base\030\001 \001(\0132\023.pr"
+  "oto.MetaInfoBase\022!\n\031SwcSnapshotCollectio"
+  "nName\030\002 \001(\t\022.\n\nCreateTime\030\003 \001(\0132\032.google"
+  ".protobuf.Timestamp\022\017\n\007Creator\030\004 \001(\t\"\265\001\n"
+  "\037SwcIncrementOperationMetaInfoV1\022!\n\004Base"
+  "\030\001 \001(\0132\023.proto.MetaInfoBase\022(\n Increment"
+  "OperationCollectionName\030\002 \001(\t\022\025\n\rStartSn"
+  "apshot\030\003 \001(\t\022.\n\nCreateTime\030\004 \001(\0132\032.googl"
+  "e.protobuf.Timestamp\"\310\001\n\027SwcIncrementOpe"
+  "rationV1\022!\n\004Base\030\001 \001(\0132\023.proto.MetaInfoB"
+  "ase\022.\n\nCreateTime\030\002 \001(\0132\032.google.protobu"
+  "f.Timestamp\0227\n\022IncrementOperation\030\003 \001(\0162"
+  "\033.proto.IncrementOperationV1\022!\n\007SwcData\030"
+  "\004 \001(\0132\020.proto.SwcDataV1\"\\\n\033SwcIncrementO"
+  "perationListV1\022=\n\025SwcIncrementOperation\030"
+  "\001 \003(\0132\036.proto.SwcIncrementOperationV1\"4\n"
+  "\032SwcAttachmentAnoMetaInfoV1\022\026\n\016Attachmen"
+  "tUuid\030\001 \001(\t\"4\n\032SwcAttachmentApoMetaInfoV"
+  "1\022\026\n\016AttachmentUuid\030\001 \001(\t\"\252\004\n\rSwcMetaInf"
+  "oV1\022!\n\004Base\030\001 \001(\0132\023.proto.MetaInfoBase\022\014"
+  "\n\004Name\030\002 \001(\t\022\023\n\013Description\030\003 \001(\t\022\017\n\007Cre"
+  "ator\030\004 \001(\t\022\017\n\007SwcType\030\005 \001(\t\022.\n\nCreateTim"
+  "e\030\006 \001(\0132\032.google.protobuf.Timestamp\0224\n\020L"
+  "astModifiedTime\030\007 \001(\0132\032.google.protobuf."
+  "Timestamp\022=\n\027SwcSnapshotMetaInfoList\030\010 \003"
+  "(\0132\034.proto.SwcSnapshotMetaInfoV1\022Q\n!SwcI"
+  "ncrementOperationMetaInfoList\030\t \003(\0132&.pr"
+  "oto.SwcIncrementOperationMetaInfoV1\022/\n\'C"
+  "urrentIncrementOperationCollectionName\030\n"
+  " \001(\t\022C\n\030SwcAttachmentAnoMetaInfo\030\013 \001(\0132!"
+  ".proto.SwcAttachmentAnoMetaInfoV1\022C\n\030Swc"
+  "AttachmentApoMetaInfo\030\014 \001(\0132!.proto.SwcA"
+  "ttachmentApoMetaInfoV1\"\310\001\n\025SwcNodeIntern"
+  "alDataV1\022\t\n\001N\030\001 \001(\005\022\014\n\004Type\030\002 \001(\005\022\t\n\001X\030\003"
+  " \001(\002\022\t\n\001Y\030\004 \001(\002\022\t\n\001Z\030\005 \001(\002\022\016\n\006Radius\030\006 \001"
+  "(\002\022\016\n\006Parent\030\007 \001(\005\022\016\n\006Seg_id\030\010 \001(\005\022\r\n\005Le"
+  "vel\030\t \001(\005\022\014\n\004Mode\030\n \001(\005\022\021\n\tTimestamp\030\013 \001"
+  "(\005\022\025\n\rFeature_value\030\014 \001(\005\"\375\001\n\rSwcNodeDat"
+  "aV1\022!\n\004Base\030\001 \001(\0132\023.proto.MetaInfoBase\0229"
+  "\n\023SwcNodeInternalData\030\002 \001(\0132\034.proto.SwcN"
+  "odeInternalDataV1\022\017\n\007Creator\030\003 \001(\t\022.\n\nCr"
+  "eateTime\030\004 \001(\0132\032.google.protobuf.Timesta"
+  "mp\0224\n\020LastModifiedTime\030\005 \001(\0132\032.google.pr"
+  "otobuf.Timestamp\022\027\n\017CheckerUserUuid\030\006 \001("
+  "\t\"2\n\tSwcDataV1\022%\n\007SwcData\030\001 \003(\0132\024.proto."
+  "SwcNodeDataV1\"\331\003\n\031DailyStatisticsMetaInf"
+  "oV1\022!\n\004Base\030\001 \001(\0132\023.proto.MetaInfoBase\022\014"
+  "\n\004Name\030\002 \001(\t\022\023\n\013Description\030\003 \001(\t\022\013\n\003Day"
+  "\030\004 \001(\t\022\034\n\024CreatedProjectNumber\030\005 \001(\005\022\030\n\020"
+  "CreatedSwcNumber\030\006 \001(\005\022\033\n\023CreateSwcNodeN"
+  "umber\030\007 \001(\005\022\034\n\024DeletedProjectNumber\030\010 \001("
+  "\005\022\030\n\020DeletedSwcNumber\030\t \001(\005\022\034\n\024DeletedSw"
+  "cNodeNumber\030\n \001(\005\022\035\n\025ModifiedProjectNumb"
+  "er\030\013 \001(\005\022\031\n\021ModifiedSwcNumber\030\014 \001(\005\022\035\n\025M"
+  "odifiedSwcNodeNumber\030\r \001(\005\022\032\n\022ProjectQue"
+  "ryNumber\030\016 \001(\005\022\026\n\016SwcQueryNumber\030\017 \001(\005\022\027"
+  "\n\017NodeQueryNumber\030\020 \001(\005\022\030\n\020ActiveUserNum"
+  "ber\030\021 \001(\005\"7\n\020UserVerifyInfoV1\022\020\n\010UserNam"
+  "e\030\001 \001(\t\022\021\n\tUserToken\030\002 \001(\t\"\'\n\021RequestMet"
+  "aInfoV1\022\022\n\nApiVersion\030\001 \001(\t\"A\n\022ResponseM"
+  "etaInfoV1\022\016\n\006Status\030\001 \001(\010\022\n\n\002Id\030\002 \001(\t\022\017\n"
+  "\007Message\030\003 \001(\t\"Y\n\022SwcAttachmentAnoV1\022!\n\004"
+  "Base\030\001 \001(\0132\023.proto.MetaInfoBase\022\017\n\007APOFI"
+  "LE\030\002 \001(\t\022\017\n\007SWCFILE\030\003 \001(\t\"\225\002\n\022SwcAttachm"
+  "entApoV1\022!\n\004Base\030\001 \001(\0132\023.proto.MetaInfoB"
+  "ase\022\t\n\001N\030\002 \001(\005\022\021\n\tOrderinfo\030\003 \001(\t\022\014\n\004Nam"
+  "e\030\004 \001(\t\022\017\n\007Comment\030\005 \001(\t\022\t\n\001Z\030\006 \001(\002\022\t\n\001X"
+  "\030\007 \001(\002\022\t\n\001Y\030\010 \001(\002\022\016\n\006Pixmax\030\t \001(\002\022\021\n\tInt"
+  "ensity\030\n \001(\002\022\014\n\004Sdev\030\013 \001(\002\022\017\n\007Volsize\030\014 "
+  "\001(\002\022\014\n\004Mass\030\r \001(\002\022\016\n\006ColorR\030\016 \001(\005\022\016\n\006Col"
+  "orG\030\017 \001(\005\022\016\n\006ColorB\030\020 \001(\005*G\n\024IncrementOp"
+  "erationV1\022\013\n\007Unknown\020\000\022\n\n\006Create\020\001\022\n\n\006De"
+  "lete\020\002\022\n\n\006Update\020\003B/Z-DBMS/SwcDbmsCommon"
+  "/Generated/go/proto/messageP\000b\006proto3"
   ;
 static const ::_pbi::DescriptorTable* const descriptor_table_Message_2fMessage_2eproto_deps[1] = {
   &::descriptor_table_google_2fprotobuf_2ftimestamp_2eproto,
 };
 static ::_pbi::once_flag descriptor_table_Message_2fMessage_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_Message_2fMessage_2eproto = {
-    false, false, 4325, descriptor_table_protodef_Message_2fMessage_2eproto,
+    false, false, 4517, descriptor_table_protodef_Message_2fMessage_2eproto,
     "Message/Message.proto",
-    &descriptor_table_Message_2fMessage_2eproto_once, descriptor_table_Message_2fMessage_2eproto_deps, 1, 23,
+    &descriptor_table_Message_2fMessage_2eproto_once, descriptor_table_Message_2fMessage_2eproto_deps, 1, 24,
     schemas, file_default_instances, TableStruct_Message_2fMessage_2eproto::offsets,
     file_level_metadata_Message_2fMessage_2eproto, file_level_enum_descriptors_Message_2fMessage_2eproto,
     file_level_service_descriptors_Message_2fMessage_2eproto,
@@ -1192,10 +1228,374 @@ void MetaInfoBase::InternalSwap(MetaInfoBase* other) {
 
 // ===================================================================
 
+class BrainTellServerMysqlDBCompatibleData::_Internal {
+ public:
+};
+
+BrainTellServerMysqlDBCompatibleData::BrainTellServerMysqlDBCompatibleData(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:proto.BrainTellServerMysqlDBCompatibleData)
+}
+BrainTellServerMysqlDBCompatibleData::BrainTellServerMysqlDBCompatibleData(const BrainTellServerMysqlDBCompatibleData& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  BrainTellServerMysqlDBCompatibleData* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.email_){}
+    , decltype(_impl_.nickname_){}
+    , decltype(_impl_.appkey_){}
+    , decltype(_impl_.score_){}
+    , decltype(_impl_.isdeleted_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _impl_.email_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.email_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (!from._internal_email().empty()) {
+    _this->_impl_.email_.Set(from._internal_email(), 
+      _this->GetArenaForAllocation());
+  }
+  _impl_.nickname_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.nickname_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (!from._internal_nickname().empty()) {
+    _this->_impl_.nickname_.Set(from._internal_nickname(), 
+      _this->GetArenaForAllocation());
+  }
+  _impl_.appkey_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.appkey_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (!from._internal_appkey().empty()) {
+    _this->_impl_.appkey_.Set(from._internal_appkey(), 
+      _this->GetArenaForAllocation());
+  }
+  ::memcpy(&_impl_.score_, &from._impl_.score_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.isdeleted_) -
+    reinterpret_cast<char*>(&_impl_.score_)) + sizeof(_impl_.isdeleted_));
+  // @@protoc_insertion_point(copy_constructor:proto.BrainTellServerMysqlDBCompatibleData)
+}
+
+inline void BrainTellServerMysqlDBCompatibleData::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.email_){}
+    , decltype(_impl_.nickname_){}
+    , decltype(_impl_.appkey_){}
+    , decltype(_impl_.score_){0}
+    , decltype(_impl_.isdeleted_){0}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+  _impl_.email_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.email_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  _impl_.nickname_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.nickname_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  _impl_.appkey_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.appkey_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+}
+
+BrainTellServerMysqlDBCompatibleData::~BrainTellServerMysqlDBCompatibleData() {
+  // @@protoc_insertion_point(destructor:proto.BrainTellServerMysqlDBCompatibleData)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void BrainTellServerMysqlDBCompatibleData::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.email_.Destroy();
+  _impl_.nickname_.Destroy();
+  _impl_.appkey_.Destroy();
+}
+
+void BrainTellServerMysqlDBCompatibleData::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void BrainTellServerMysqlDBCompatibleData::Clear() {
+// @@protoc_insertion_point(message_clear_start:proto.BrainTellServerMysqlDBCompatibleData)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _impl_.email_.ClearToEmpty();
+  _impl_.nickname_.ClearToEmpty();
+  _impl_.appkey_.ClearToEmpty();
+  ::memset(&_impl_.score_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&_impl_.isdeleted_) -
+      reinterpret_cast<char*>(&_impl_.score_)) + sizeof(_impl_.isdeleted_));
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* BrainTellServerMysqlDBCompatibleData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // string Email = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          auto str = _internal_mutable_email();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "proto.BrainTellServerMysqlDBCompatibleData.Email"));
+        } else
+          goto handle_unusual;
+        continue;
+      // string NickName = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
+          auto str = _internal_mutable_nickname();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "proto.BrainTellServerMysqlDBCompatibleData.NickName"));
+        } else
+          goto handle_unusual;
+        continue;
+      // int32 Score = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
+          _impl_.score_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // string AppKey = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
+          auto str = _internal_mutable_appkey();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "proto.BrainTellServerMysqlDBCompatibleData.AppKey"));
+        } else
+          goto handle_unusual;
+        continue;
+      // int32 IsDeleted = 5;
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
+          _impl_.isdeleted_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* BrainTellServerMysqlDBCompatibleData::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:proto.BrainTellServerMysqlDBCompatibleData)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // string Email = 1;
+  if (!this->_internal_email().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_email().data(), static_cast<int>(this->_internal_email().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "proto.BrainTellServerMysqlDBCompatibleData.Email");
+    target = stream->WriteStringMaybeAliased(
+        1, this->_internal_email(), target);
+  }
+
+  // string NickName = 2;
+  if (!this->_internal_nickname().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_nickname().data(), static_cast<int>(this->_internal_nickname().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "proto.BrainTellServerMysqlDBCompatibleData.NickName");
+    target = stream->WriteStringMaybeAliased(
+        2, this->_internal_nickname(), target);
+  }
+
+  // int32 Score = 3;
+  if (this->_internal_score() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(3, this->_internal_score(), target);
+  }
+
+  // string AppKey = 4;
+  if (!this->_internal_appkey().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_appkey().data(), static_cast<int>(this->_internal_appkey().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "proto.BrainTellServerMysqlDBCompatibleData.AppKey");
+    target = stream->WriteStringMaybeAliased(
+        4, this->_internal_appkey(), target);
+  }
+
+  // int32 IsDeleted = 5;
+  if (this->_internal_isdeleted() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(5, this->_internal_isdeleted(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:proto.BrainTellServerMysqlDBCompatibleData)
+  return target;
+}
+
+size_t BrainTellServerMysqlDBCompatibleData::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:proto.BrainTellServerMysqlDBCompatibleData)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // string Email = 1;
+  if (!this->_internal_email().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_email());
+  }
+
+  // string NickName = 2;
+  if (!this->_internal_nickname().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_nickname());
+  }
+
+  // string AppKey = 4;
+  if (!this->_internal_appkey().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_appkey());
+  }
+
+  // int32 Score = 3;
+  if (this->_internal_score() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_score());
+  }
+
+  // int32 IsDeleted = 5;
+  if (this->_internal_isdeleted() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_isdeleted());
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData BrainTellServerMysqlDBCompatibleData::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    BrainTellServerMysqlDBCompatibleData::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*BrainTellServerMysqlDBCompatibleData::GetClassData() const { return &_class_data_; }
+
+
+void BrainTellServerMysqlDBCompatibleData::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<BrainTellServerMysqlDBCompatibleData*>(&to_msg);
+  auto& from = static_cast<const BrainTellServerMysqlDBCompatibleData&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:proto.BrainTellServerMysqlDBCompatibleData)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (!from._internal_email().empty()) {
+    _this->_internal_set_email(from._internal_email());
+  }
+  if (!from._internal_nickname().empty()) {
+    _this->_internal_set_nickname(from._internal_nickname());
+  }
+  if (!from._internal_appkey().empty()) {
+    _this->_internal_set_appkey(from._internal_appkey());
+  }
+  if (from._internal_score() != 0) {
+    _this->_internal_set_score(from._internal_score());
+  }
+  if (from._internal_isdeleted() != 0) {
+    _this->_internal_set_isdeleted(from._internal_isdeleted());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void BrainTellServerMysqlDBCompatibleData::CopyFrom(const BrainTellServerMysqlDBCompatibleData& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:proto.BrainTellServerMysqlDBCompatibleData)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool BrainTellServerMysqlDBCompatibleData::IsInitialized() const {
+  return true;
+}
+
+void BrainTellServerMysqlDBCompatibleData::InternalSwap(BrainTellServerMysqlDBCompatibleData* other) {
+  using std::swap;
+  auto* lhs_arena = GetArenaForAllocation();
+  auto* rhs_arena = other->GetArenaForAllocation();
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.email_, lhs_arena,
+      &other->_impl_.email_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.nickname_, lhs_arena,
+      &other->_impl_.nickname_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.appkey_, lhs_arena,
+      &other->_impl_.appkey_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(BrainTellServerMysqlDBCompatibleData, _impl_.isdeleted_)
+      + sizeof(BrainTellServerMysqlDBCompatibleData::_impl_.isdeleted_)
+      - PROTOBUF_FIELD_OFFSET(BrainTellServerMysqlDBCompatibleData, _impl_.score_)>(
+          reinterpret_cast<char*>(&_impl_.score_),
+          reinterpret_cast<char*>(&other->_impl_.score_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata BrainTellServerMysqlDBCompatibleData::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_Message_2fMessage_2eproto_getter, &descriptor_table_Message_2fMessage_2eproto_once,
+      file_level_metadata_Message_2fMessage_2eproto[1]);
+}
+
+// ===================================================================
+
 class UserMetaInfoV1::_Internal {
  public:
   static const ::proto::MetaInfoBase& base(const UserMetaInfoV1* msg);
   static const ::PROTOBUF_NAMESPACE_ID::Timestamp& createtime(const UserMetaInfoV1* msg);
+  static const ::proto::BrainTellServerMysqlDBCompatibleData& compatibledata(const UserMetaInfoV1* msg);
 };
 
 const ::proto::MetaInfoBase&
@@ -1205,6 +1605,10 @@ UserMetaInfoV1::_Internal::base(const UserMetaInfoV1* msg) {
 const ::PROTOBUF_NAMESPACE_ID::Timestamp&
 UserMetaInfoV1::_Internal::createtime(const UserMetaInfoV1* msg) {
   return *msg->_impl_.createtime_;
+}
+const ::proto::BrainTellServerMysqlDBCompatibleData&
+UserMetaInfoV1::_Internal::compatibledata(const UserMetaInfoV1* msg) {
+  return *msg->_impl_.compatibledata_;
 }
 void UserMetaInfoV1::clear_createtime() {
   if (GetArenaForAllocation() == nullptr && _impl_.createtime_ != nullptr) {
@@ -1229,6 +1633,7 @@ UserMetaInfoV1::UserMetaInfoV1(const UserMetaInfoV1& from)
     , decltype(_impl_.userpermissiongroup_){}
     , decltype(_impl_.base_){nullptr}
     , decltype(_impl_.createtime_){nullptr}
+    , decltype(_impl_.compatibledata_){nullptr}
     , decltype(_impl_.userid_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
@@ -1279,6 +1684,9 @@ UserMetaInfoV1::UserMetaInfoV1(const UserMetaInfoV1& from)
   if (from._internal_has_createtime()) {
     _this->_impl_.createtime_ = new ::PROTOBUF_NAMESPACE_ID::Timestamp(*from._impl_.createtime_);
   }
+  if (from._internal_has_compatibledata()) {
+    _this->_impl_.compatibledata_ = new ::proto::BrainTellServerMysqlDBCompatibleData(*from._impl_.compatibledata_);
+  }
   _this->_impl_.userid_ = from._impl_.userid_;
   // @@protoc_insertion_point(copy_constructor:proto.UserMetaInfoV1)
 }
@@ -1295,6 +1703,7 @@ inline void UserMetaInfoV1::SharedCtor(
     , decltype(_impl_.userpermissiongroup_){}
     , decltype(_impl_.base_){nullptr}
     , decltype(_impl_.createtime_){nullptr}
+    , decltype(_impl_.compatibledata_){nullptr}
     , decltype(_impl_.userid_){0}
     , /*decltype(_impl_._cached_size_)*/{}
   };
@@ -1338,6 +1747,7 @@ inline void UserMetaInfoV1::SharedDtor() {
   _impl_.userpermissiongroup_.Destroy();
   if (this != internal_default_instance()) delete _impl_.base_;
   if (this != internal_default_instance()) delete _impl_.createtime_;
+  if (this != internal_default_instance()) delete _impl_.compatibledata_;
 }
 
 void UserMetaInfoV1::SetCachedSize(int size) const {
@@ -1363,6 +1773,10 @@ void UserMetaInfoV1::Clear() {
     delete _impl_.createtime_;
   }
   _impl_.createtime_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.compatibledata_ != nullptr) {
+    delete _impl_.compatibledata_;
+  }
+  _impl_.compatibledata_ = nullptr;
   _impl_.userid_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
@@ -1442,6 +1856,14 @@ const char* UserMetaInfoV1::_InternalParse(const char* ptr, ::_pbi::ParseContext
       case 8:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 64)) {
           _impl_.userid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // .proto.BrainTellServerMysqlDBCompatibleData CompatibleData = 9;
+      case 9:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 74)) {
+          ptr = ctx->ParseMessage(_internal_mutable_compatibledata(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -1541,6 +1963,13 @@ uint8_t* UserMetaInfoV1::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteInt32ToArray(8, this->_internal_userid(), target);
   }
 
+  // .proto.BrainTellServerMysqlDBCompatibleData CompatibleData = 9;
+  if (this->_internal_has_compatibledata()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(9, _Internal::compatibledata(this),
+        _Internal::compatibledata(this).GetCachedSize(), target, stream);
+  }
+
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
@@ -1606,6 +2035,13 @@ size_t UserMetaInfoV1::ByteSizeLong() const {
         *_impl_.createtime_);
   }
 
+  // .proto.BrainTellServerMysqlDBCompatibleData CompatibleData = 9;
+  if (this->_internal_has_compatibledata()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.compatibledata_);
+  }
+
   // int32 UserId = 8;
   if (this->_internal_userid() != 0) {
     total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_userid());
@@ -1651,6 +2087,10 @@ void UserMetaInfoV1::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const :
   if (from._internal_has_createtime()) {
     _this->_internal_mutable_createtime()->::PROTOBUF_NAMESPACE_ID::Timestamp::MergeFrom(
         from._internal_createtime());
+  }
+  if (from._internal_has_compatibledata()) {
+    _this->_internal_mutable_compatibledata()->::proto::BrainTellServerMysqlDBCompatibleData::MergeFrom(
+        from._internal_compatibledata());
   }
   if (from._internal_userid() != 0) {
     _this->_internal_set_userid(from._internal_userid());
@@ -1705,7 +2145,7 @@ void UserMetaInfoV1::InternalSwap(UserMetaInfoV1* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata UserMetaInfoV1::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fMessage_2eproto_getter, &descriptor_table_Message_2fMessage_2eproto_once,
-      file_level_metadata_Message_2fMessage_2eproto[1]);
+      file_level_metadata_Message_2fMessage_2eproto[2]);
 }
 
 // ===================================================================
@@ -1964,7 +2404,7 @@ void GlobalPermissionMetaInfoV1::InternalSwap(GlobalPermissionMetaInfoV1* other)
 ::PROTOBUF_NAMESPACE_ID::Metadata GlobalPermissionMetaInfoV1::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fMessage_2eproto_getter, &descriptor_table_Message_2fMessage_2eproto_once,
-      file_level_metadata_Message_2fMessage_2eproto[2]);
+      file_level_metadata_Message_2fMessage_2eproto[3]);
 }
 
 // ===================================================================
@@ -2223,7 +2663,7 @@ void ProjectPermissionMetaInfoV1::InternalSwap(ProjectPermissionMetaInfoV1* othe
 ::PROTOBUF_NAMESPACE_ID::Metadata ProjectPermissionMetaInfoV1::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fMessage_2eproto_getter, &descriptor_table_Message_2fMessage_2eproto_once,
-      file_level_metadata_Message_2fMessage_2eproto[3]);
+      file_level_metadata_Message_2fMessage_2eproto[4]);
 }
 
 // ===================================================================
@@ -2605,7 +3045,7 @@ void PermissionGroupMetaInfoV1::InternalSwap(PermissionGroupMetaInfoV1* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata PermissionGroupMetaInfoV1::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fMessage_2eproto_getter, &descriptor_table_Message_2fMessage_2eproto_once,
-      file_level_metadata_Message_2fMessage_2eproto[4]);
+      file_level_metadata_Message_2fMessage_2eproto[5]);
 }
 
 // ===================================================================
@@ -2850,7 +3290,7 @@ void UserPermissionOverrideMetaInfoV1::InternalSwap(UserPermissionOverrideMetaIn
 ::PROTOBUF_NAMESPACE_ID::Metadata UserPermissionOverrideMetaInfoV1::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fMessage_2eproto_getter, &descriptor_table_Message_2fMessage_2eproto_once,
-      file_level_metadata_Message_2fMessage_2eproto[5]);
+      file_level_metadata_Message_2fMessage_2eproto[6]);
 }
 
 // ===================================================================
@@ -3417,7 +3857,7 @@ void ProjectMetaInfoV1::InternalSwap(ProjectMetaInfoV1* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata ProjectMetaInfoV1::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fMessage_2eproto_getter, &descriptor_table_Message_2fMessage_2eproto_once,
-      file_level_metadata_Message_2fMessage_2eproto[6]);
+      file_level_metadata_Message_2fMessage_2eproto[7]);
 }
 
 // ===================================================================
@@ -3764,7 +4204,7 @@ void SwcSnapshotMetaInfoV1::InternalSwap(SwcSnapshotMetaInfoV1* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata SwcSnapshotMetaInfoV1::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fMessage_2eproto_getter, &descriptor_table_Message_2fMessage_2eproto_once,
-      file_level_metadata_Message_2fMessage_2eproto[7]);
+      file_level_metadata_Message_2fMessage_2eproto[8]);
 }
 
 // ===================================================================
@@ -4111,7 +4551,7 @@ void SwcIncrementOperationMetaInfoV1::InternalSwap(SwcIncrementOperationMetaInfo
 ::PROTOBUF_NAMESPACE_ID::Metadata SwcIncrementOperationMetaInfoV1::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fMessage_2eproto_getter, &descriptor_table_Message_2fMessage_2eproto_once,
-      file_level_metadata_Message_2fMessage_2eproto[8]);
+      file_level_metadata_Message_2fMessage_2eproto[9]);
 }
 
 // ===================================================================
@@ -4426,7 +4866,7 @@ void SwcIncrementOperationV1::InternalSwap(SwcIncrementOperationV1* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata SwcIncrementOperationV1::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fMessage_2eproto_getter, &descriptor_table_Message_2fMessage_2eproto_once,
-      file_level_metadata_Message_2fMessage_2eproto[9]);
+      file_level_metadata_Message_2fMessage_2eproto[10]);
 }
 
 // ===================================================================
@@ -4611,7 +5051,7 @@ void SwcIncrementOperationListV1::InternalSwap(SwcIncrementOperationListV1* othe
 ::PROTOBUF_NAMESPACE_ID::Metadata SwcIncrementOperationListV1::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fMessage_2eproto_getter, &descriptor_table_Message_2fMessage_2eproto_once,
-      file_level_metadata_Message_2fMessage_2eproto[10]);
+      file_level_metadata_Message_2fMessage_2eproto[11]);
 }
 
 // ===================================================================
@@ -4814,7 +5254,7 @@ void SwcAttachmentAnoMetaInfoV1::InternalSwap(SwcAttachmentAnoMetaInfoV1* other)
 ::PROTOBUF_NAMESPACE_ID::Metadata SwcAttachmentAnoMetaInfoV1::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fMessage_2eproto_getter, &descriptor_table_Message_2fMessage_2eproto_once,
-      file_level_metadata_Message_2fMessage_2eproto[11]);
+      file_level_metadata_Message_2fMessage_2eproto[12]);
 }
 
 // ===================================================================
@@ -5017,7 +5457,7 @@ void SwcAttachmentApoMetaInfoV1::InternalSwap(SwcAttachmentApoMetaInfoV1* other)
 ::PROTOBUF_NAMESPACE_ID::Metadata SwcAttachmentApoMetaInfoV1::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fMessage_2eproto_getter, &descriptor_table_Message_2fMessage_2eproto_once,
-      file_level_metadata_Message_2fMessage_2eproto[12]);
+      file_level_metadata_Message_2fMessage_2eproto[13]);
 }
 
 // ===================================================================
@@ -5711,7 +6151,7 @@ void SwcMetaInfoV1::InternalSwap(SwcMetaInfoV1* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata SwcMetaInfoV1::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fMessage_2eproto_getter, &descriptor_table_Message_2fMessage_2eproto_once,
-      file_level_metadata_Message_2fMessage_2eproto[13]);
+      file_level_metadata_Message_2fMessage_2eproto[14]);
 }
 
 // ===================================================================
@@ -6210,7 +6650,7 @@ void SwcNodeInternalDataV1::InternalSwap(SwcNodeInternalDataV1* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata SwcNodeInternalDataV1::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fMessage_2eproto_getter, &descriptor_table_Message_2fMessage_2eproto_once,
-      file_level_metadata_Message_2fMessage_2eproto[14]);
+      file_level_metadata_Message_2fMessage_2eproto[15]);
 }
 
 // ===================================================================
@@ -6645,7 +7085,7 @@ void SwcNodeDataV1::InternalSwap(SwcNodeDataV1* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata SwcNodeDataV1::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fMessage_2eproto_getter, &descriptor_table_Message_2fMessage_2eproto_once,
-      file_level_metadata_Message_2fMessage_2eproto[15]);
+      file_level_metadata_Message_2fMessage_2eproto[16]);
 }
 
 // ===================================================================
@@ -6830,7 +7270,7 @@ void SwcDataV1::InternalSwap(SwcDataV1* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata SwcDataV1::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fMessage_2eproto_getter, &descriptor_table_Message_2fMessage_2eproto_once,
-      file_level_metadata_Message_2fMessage_2eproto[16]);
+      file_level_metadata_Message_2fMessage_2eproto[17]);
 }
 
 // ===================================================================
@@ -7502,7 +7942,7 @@ void DailyStatisticsMetaInfoV1::InternalSwap(DailyStatisticsMetaInfoV1* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata DailyStatisticsMetaInfoV1::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fMessage_2eproto_getter, &descriptor_table_Message_2fMessage_2eproto_once,
-      file_level_metadata_Message_2fMessage_2eproto[17]);
+      file_level_metadata_Message_2fMessage_2eproto[18]);
 }
 
 // ===================================================================
@@ -7755,7 +8195,7 @@ void UserVerifyInfoV1::InternalSwap(UserVerifyInfoV1* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata UserVerifyInfoV1::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fMessage_2eproto_getter, &descriptor_table_Message_2fMessage_2eproto_once,
-      file_level_metadata_Message_2fMessage_2eproto[18]);
+      file_level_metadata_Message_2fMessage_2eproto[19]);
 }
 
 // ===================================================================
@@ -7958,7 +8398,7 @@ void RequestMetaInfoV1::InternalSwap(RequestMetaInfoV1* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata RequestMetaInfoV1::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fMessage_2eproto_getter, &descriptor_table_Message_2fMessage_2eproto_once,
-      file_level_metadata_Message_2fMessage_2eproto[19]);
+      file_level_metadata_Message_2fMessage_2eproto[20]);
 }
 
 // ===================================================================
@@ -8238,7 +8678,7 @@ void ResponseMetaInfoV1::InternalSwap(ResponseMetaInfoV1* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata ResponseMetaInfoV1::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fMessage_2eproto_getter, &descriptor_table_Message_2fMessage_2eproto_once,
-      file_level_metadata_Message_2fMessage_2eproto[20]);
+      file_level_metadata_Message_2fMessage_2eproto[21]);
 }
 
 // ===================================================================
@@ -8533,7 +8973,7 @@ void SwcAttachmentAnoV1::InternalSwap(SwcAttachmentAnoV1* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata SwcAttachmentAnoV1::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fMessage_2eproto_getter, &descriptor_table_Message_2fMessage_2eproto_once,
-      file_level_metadata_Message_2fMessage_2eproto[21]);
+      file_level_metadata_Message_2fMessage_2eproto[22]);
 }
 
 // ===================================================================
@@ -9275,7 +9715,7 @@ void SwcAttachmentApoV1::InternalSwap(SwcAttachmentApoV1* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata SwcAttachmentApoV1::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fMessage_2eproto_getter, &descriptor_table_Message_2fMessage_2eproto_once,
-      file_level_metadata_Message_2fMessage_2eproto[22]);
+      file_level_metadata_Message_2fMessage_2eproto[23]);
 }
 
 // @@protoc_insertion_point(namespace_scope)
@@ -9284,6 +9724,10 @@ PROTOBUF_NAMESPACE_OPEN
 template<> PROTOBUF_NOINLINE ::proto::MetaInfoBase*
 Arena::CreateMaybeMessage< ::proto::MetaInfoBase >(Arena* arena) {
   return Arena::CreateMessageInternal< ::proto::MetaInfoBase >(arena);
+}
+template<> PROTOBUF_NOINLINE ::proto::BrainTellServerMysqlDBCompatibleData*
+Arena::CreateMaybeMessage< ::proto::BrainTellServerMysqlDBCompatibleData >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::proto::BrainTellServerMysqlDBCompatibleData >(arena);
 }
 template<> PROTOBUF_NOINLINE ::proto::UserMetaInfoV1*
 Arena::CreateMaybeMessage< ::proto::UserMetaInfoV1 >(Arena* arena) {
