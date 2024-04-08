@@ -4520,6 +4520,7 @@ class UserVerifyInfoV1 final :
   enum : int {
     kUserNameFieldNumber = 1,
     kUserTokenFieldNumber = 2,
+    kUserPasswordFieldNumber = 3,
   };
   // string UserName = 1;
   void clear_username();
@@ -4549,6 +4550,20 @@ class UserVerifyInfoV1 final :
   std::string* _internal_mutable_usertoken();
   public:
 
+  // string UserPassword = 3;
+  void clear_userpassword();
+  const std::string& userpassword() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_userpassword(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_userpassword();
+  PROTOBUF_NODISCARD std::string* release_userpassword();
+  void set_allocated_userpassword(std::string* userpassword);
+  private:
+  const std::string& _internal_userpassword() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_userpassword(const std::string& value);
+  std::string* _internal_mutable_userpassword();
+  public:
+
   // @@protoc_insertion_point(class_scope:proto.UserVerifyInfoV1)
  private:
   class _Internal;
@@ -4559,6 +4574,7 @@ class UserVerifyInfoV1 final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr username_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr usertoken_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr userpassword_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -10703,6 +10719,56 @@ inline void UserVerifyInfoV1::set_allocated_usertoken(std::string* usertoken) {
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   // @@protoc_insertion_point(field_set_allocated:proto.UserVerifyInfoV1.UserToken)
+}
+
+// string UserPassword = 3;
+inline void UserVerifyInfoV1::clear_userpassword() {
+  _impl_.userpassword_.ClearToEmpty();
+}
+inline const std::string& UserVerifyInfoV1::userpassword() const {
+  // @@protoc_insertion_point(field_get:proto.UserVerifyInfoV1.UserPassword)
+  return _internal_userpassword();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void UserVerifyInfoV1::set_userpassword(ArgT0&& arg0, ArgT... args) {
+ 
+ _impl_.userpassword_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:proto.UserVerifyInfoV1.UserPassword)
+}
+inline std::string* UserVerifyInfoV1::mutable_userpassword() {
+  std::string* _s = _internal_mutable_userpassword();
+  // @@protoc_insertion_point(field_mutable:proto.UserVerifyInfoV1.UserPassword)
+  return _s;
+}
+inline const std::string& UserVerifyInfoV1::_internal_userpassword() const {
+  return _impl_.userpassword_.Get();
+}
+inline void UserVerifyInfoV1::_internal_set_userpassword(const std::string& value) {
+  
+  _impl_.userpassword_.Set(value, GetArenaForAllocation());
+}
+inline std::string* UserVerifyInfoV1::_internal_mutable_userpassword() {
+  
+  return _impl_.userpassword_.Mutable(GetArenaForAllocation());
+}
+inline std::string* UserVerifyInfoV1::release_userpassword() {
+  // @@protoc_insertion_point(field_release:proto.UserVerifyInfoV1.UserPassword)
+  return _impl_.userpassword_.Release();
+}
+inline void UserVerifyInfoV1::set_allocated_userpassword(std::string* userpassword) {
+  if (userpassword != nullptr) {
+    
+  } else {
+    
+  }
+  _impl_.userpassword_.SetAllocated(userpassword, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.userpassword_.IsDefault()) {
+    _impl_.userpassword_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:proto.UserVerifyInfoV1.UserPassword)
 }
 
 // -------------------------------------------------------------------

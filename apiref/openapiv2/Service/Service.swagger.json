@@ -3351,6 +3351,9 @@
         },
         "UserToken": {
           "type": "string"
+        },
+        "UserPassword": {
+          "type": "string"
         }
       }
     },

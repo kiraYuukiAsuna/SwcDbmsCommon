@@ -177,6 +177,7 @@ message DailyStatisticsMetaInfoV1{
 message UserVerifyInfoV1{
     string UserName = 1;
     string UserToken = 2;
+    string UserPassword = 3;
 }
 
 message RequestMetaInfoV1{

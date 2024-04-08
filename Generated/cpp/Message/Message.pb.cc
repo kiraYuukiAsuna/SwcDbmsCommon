@@ -357,6 +357,7 @@ PROTOBUF_CONSTEXPR UserVerifyInfoV1::UserVerifyInfoV1(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_.username_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.usertoken_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.userpassword_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct UserVerifyInfoV1DefaultTypeInternal {
   PROTOBUF_CONSTEXPR UserVerifyInfoV1DefaultTypeInternal()
@@ -670,6 +671,7 @@ const uint32_t TableStruct_Message_2fMessage_2eproto::offsets[] PROTOBUF_SECTION
   ~0u,  // no _inlined_string_donated_
   PROTOBUF_FIELD_OFFSET(::proto::UserVerifyInfoV1, _impl_.username_),
   PROTOBUF_FIELD_OFFSET(::proto::UserVerifyInfoV1, _impl_.usertoken_),
+  PROTOBUF_FIELD_OFFSET(::proto::UserVerifyInfoV1, _impl_.userpassword_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::proto::RequestMetaInfoV1, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -739,10 +741,10 @@ static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protode
   { 188, -1, -1, sizeof(::proto::SwcDataV1)},
   { 195, -1, -1, sizeof(::proto::DailyStatisticsMetaInfoV1)},
   { 218, -1, -1, sizeof(::proto::UserVerifyInfoV1)},
-  { 226, -1, -1, sizeof(::proto::RequestMetaInfoV1)},
-  { 233, -1, -1, sizeof(::proto::ResponseMetaInfoV1)},
-  { 242, -1, -1, sizeof(::proto::SwcAttachmentAnoV1)},
-  { 251, -1, -1, sizeof(::proto::SwcAttachmentApoV1)},
+  { 227, -1, -1, sizeof(::proto::RequestMetaInfoV1)},
+  { 234, -1, -1, sizeof(::proto::ResponseMetaInfoV1)},
+  { 243, -1, -1, sizeof(::proto::SwcAttachmentAnoV1)},
+  { 252, -1, -1, sizeof(::proto::SwcAttachmentApoV1)},
 };
 
 static const ::_pb::Message* const file_default_instances[] = {
@@ -869,30 +871,31 @@ const char descriptor_table_protodef_Message_2fMessage_2eproto[] PROTOBUF_SECTIO
   "odifiedSwcNodeNumber\030\r \001(\005\022\032\n\022ProjectQue"
   "ryNumber\030\016 \001(\005\022\026\n\016SwcQueryNumber\030\017 \001(\005\022\027"
   "\n\017NodeQueryNumber\030\020 \001(\005\022\030\n\020ActiveUserNum"
-  "ber\030\021 \001(\005\"7\n\020UserVerifyInfoV1\022\020\n\010UserNam"
-  "e\030\001 \001(\t\022\021\n\tUserToken\030\002 \001(\t\"\'\n\021RequestMet"
-  "aInfoV1\022\022\n\nApiVersion\030\001 \001(\t\"A\n\022ResponseM"
-  "etaInfoV1\022\016\n\006Status\030\001 \001(\010\022\n\n\002Id\030\002 \001(\t\022\017\n"
-  "\007Message\030\003 \001(\t\"Y\n\022SwcAttachmentAnoV1\022!\n\004"
-  "Base\030\001 \001(\0132\023.proto.MetaInfoBase\022\017\n\007APOFI"
-  "LE\030\002 \001(\t\022\017\n\007SWCFILE\030\003 \001(\t\"\225\002\n\022SwcAttachm"
-  "entApoV1\022!\n\004Base\030\001 \001(\0132\023.proto.MetaInfoB"
-  "ase\022\t\n\001N\030\002 \001(\005\022\021\n\tOrderinfo\030\003 \001(\t\022\014\n\004Nam"
-  "e\030\004 \001(\t\022\017\n\007Comment\030\005 \001(\t\022\t\n\001Z\030\006 \001(\002\022\t\n\001X"
-  "\030\007 \001(\002\022\t\n\001Y\030\010 \001(\002\022\016\n\006Pixmax\030\t \001(\002\022\021\n\tInt"
-  "ensity\030\n \001(\002\022\014\n\004Sdev\030\013 \001(\002\022\017\n\007Volsize\030\014 "
-  "\001(\002\022\014\n\004Mass\030\r \001(\002\022\016\n\006ColorR\030\016 \001(\005\022\016\n\006Col"
-  "orG\030\017 \001(\005\022\016\n\006ColorB\030\020 \001(\005*G\n\024IncrementOp"
-  "erationV1\022\013\n\007Unknown\020\000\022\n\n\006Create\020\001\022\n\n\006De"
-  "lete\020\002\022\n\n\006Update\020\003B/Z-DBMS/SwcDbmsCommon"
-  "/Generated/go/proto/messageP\000b\006proto3"
+  "ber\030\021 \001(\005\"M\n\020UserVerifyInfoV1\022\020\n\010UserNam"
+  "e\030\001 \001(\t\022\021\n\tUserToken\030\002 \001(\t\022\024\n\014UserPasswo"
+  "rd\030\003 \001(\t\"\'\n\021RequestMetaInfoV1\022\022\n\nApiVers"
+  "ion\030\001 \001(\t\"A\n\022ResponseMetaInfoV1\022\016\n\006Statu"
+  "s\030\001 \001(\010\022\n\n\002Id\030\002 \001(\t\022\017\n\007Message\030\003 \001(\t\"Y\n\022"
+  "SwcAttachmentAnoV1\022!\n\004Base\030\001 \001(\0132\023.proto"
+  ".MetaInfoBase\022\017\n\007APOFILE\030\002 \001(\t\022\017\n\007SWCFIL"
+  "E\030\003 \001(\t\"\225\002\n\022SwcAttachmentApoV1\022!\n\004Base\030\001"
+  " \001(\0132\023.proto.MetaInfoBase\022\t\n\001N\030\002 \001(\005\022\021\n\t"
+  "Orderinfo\030\003 \001(\t\022\014\n\004Name\030\004 \001(\t\022\017\n\007Comment"
+  "\030\005 \001(\t\022\t\n\001Z\030\006 \001(\002\022\t\n\001X\030\007 \001(\002\022\t\n\001Y\030\010 \001(\002\022"
+  "\016\n\006Pixmax\030\t \001(\002\022\021\n\tIntensity\030\n \001(\002\022\014\n\004Sd"
+  "ev\030\013 \001(\002\022\017\n\007Volsize\030\014 \001(\002\022\014\n\004Mass\030\r \001(\002\022"
+  "\016\n\006ColorR\030\016 \001(\005\022\016\n\006ColorG\030\017 \001(\005\022\016\n\006Color"
+  "B\030\020 \001(\005*G\n\024IncrementOperationV1\022\013\n\007Unkno"
+  "wn\020\000\022\n\n\006Create\020\001\022\n\n\006Delete\020\002\022\n\n\006Update\020\003"
+  "B/Z-DBMS/SwcDbmsCommon/Generated/go/prot"
+  "o/messageP\000b\006proto3"
   ;
 static const ::_pbi::DescriptorTable* const descriptor_table_Message_2fMessage_2eproto_deps[1] = {
   &::descriptor_table_google_2fprotobuf_2ftimestamp_2eproto,
 };
 static ::_pbi::once_flag descriptor_table_Message_2fMessage_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_Message_2fMessage_2eproto = {
-    false, false, 4517, descriptor_table_protodef_Message_2fMessage_2eproto,
+    false, false, 4539, descriptor_table_protodef_Message_2fMessage_2eproto,
     "Message/Message.proto",
     &descriptor_table_Message_2fMessage_2eproto_once, descriptor_table_Message_2fMessage_2eproto_deps, 1, 24,
     schemas, file_default_instances, TableStruct_Message_2fMessage_2eproto::offsets,
@@ -7963,6 +7966,7 @@ UserVerifyInfoV1::UserVerifyInfoV1(const UserVerifyInfoV1& from)
   new (&_impl_) Impl_{
       decltype(_impl_.username_){}
     , decltype(_impl_.usertoken_){}
+    , decltype(_impl_.userpassword_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
@@ -7982,6 +7986,14 @@ UserVerifyInfoV1::UserVerifyInfoV1(const UserVerifyInfoV1& from)
     _this->_impl_.usertoken_.Set(from._internal_usertoken(), 
       _this->GetArenaForAllocation());
   }
+  _impl_.userpassword_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.userpassword_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (!from._internal_userpassword().empty()) {
+    _this->_impl_.userpassword_.Set(from._internal_userpassword(), 
+      _this->GetArenaForAllocation());
+  }
   // @@protoc_insertion_point(copy_constructor:proto.UserVerifyInfoV1)
 }
 
@@ -7992,6 +8004,7 @@ inline void UserVerifyInfoV1::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_.username_){}
     , decltype(_impl_.usertoken_){}
+    , decltype(_impl_.userpassword_){}
     , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.username_.InitDefault();
@@ -8001,6 +8014,10 @@ inline void UserVerifyInfoV1::SharedCtor(
   _impl_.usertoken_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.usertoken_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  _impl_.userpassword_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.userpassword_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -8017,6 +8034,7 @@ inline void UserVerifyInfoV1::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   _impl_.username_.Destroy();
   _impl_.usertoken_.Destroy();
+  _impl_.userpassword_.Destroy();
 }
 
 void UserVerifyInfoV1::SetCachedSize(int size) const {
@@ -8031,6 +8049,7 @@ void UserVerifyInfoV1::Clear() {
 
   _impl_.username_.ClearToEmpty();
   _impl_.usertoken_.ClearToEmpty();
+  _impl_.userpassword_.ClearToEmpty();
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -8057,6 +8076,16 @@ const char* UserVerifyInfoV1::_InternalParse(const char* ptr, ::_pbi::ParseConte
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
           CHK_(::_pbi::VerifyUTF8(str, "proto.UserVerifyInfoV1.UserToken"));
+        } else
+          goto handle_unusual;
+        continue;
+      // string UserPassword = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
+          auto str = _internal_mutable_userpassword();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "proto.UserVerifyInfoV1.UserPassword"));
         } else
           goto handle_unusual;
         continue;
@@ -8109,6 +8138,16 @@ uint8_t* UserVerifyInfoV1::_InternalSerialize(
         2, this->_internal_usertoken(), target);
   }
 
+  // string UserPassword = 3;
+  if (!this->_internal_userpassword().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_userpassword().data(), static_cast<int>(this->_internal_userpassword().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "proto.UserVerifyInfoV1.UserPassword");
+    target = stream->WriteStringMaybeAliased(
+        3, this->_internal_userpassword(), target);
+  }
+
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
@@ -8139,6 +8178,13 @@ size_t UserVerifyInfoV1::ByteSizeLong() const {
         this->_internal_usertoken());
   }
 
+  // string UserPassword = 3;
+  if (!this->_internal_userpassword().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_userpassword());
+  }
+
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
@@ -8162,6 +8208,9 @@ void UserVerifyInfoV1::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const
   }
   if (!from._internal_usertoken().empty()) {
     _this->_internal_set_usertoken(from._internal_usertoken());
+  }
+  if (!from._internal_userpassword().empty()) {
+    _this->_internal_set_userpassword(from._internal_userpassword());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -8189,6 +8238,10 @@ void UserVerifyInfoV1::InternalSwap(UserVerifyInfoV1* other) {
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.usertoken_, lhs_arena,
       &other->_impl_.usertoken_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.userpassword_, lhs_arena,
+      &other->_impl_.userpassword_, rhs_arena
   );
 }
 
