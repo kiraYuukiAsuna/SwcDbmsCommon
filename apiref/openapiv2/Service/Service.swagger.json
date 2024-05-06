@@ -208,6 +208,38 @@
         ]
       }
     },
+    "/proto.DBMS/CreateSwcAttachmentSwc": {
+      "post": {
+        "operationId": "DBMS_CreateSwcAttachmentSwc",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/protoCreateSwcAttachmentSwcResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/protoCreateSwcAttachmentSwcRequest"
+            }
+          }
+        ],
+        "tags": [
+          "DBMS"
+        ]
+      }
+    },
     "/proto.DBMS/CreateSwcNodeData": {
       "post": {
         "operationId": "DBMS_CreateSwcNodeData",
@@ -456,6 +488,38 @@
             "required": true,
             "schema": {
               "$ref": "#/definitions/protoDeleteSwcAttachmentApoRequest"
+            }
+          }
+        ],
+        "tags": [
+          "DBMS"
+        ]
+      }
+    },
+    "/proto.DBMS/DeleteSwcAttachmentSwc": {
+      "post": {
+        "operationId": "DBMS_DeleteSwcAttachmentSwc",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/protoDeleteSwcAttachmentSwcResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/protoDeleteSwcAttachmentSwcRequest"
             }
           }
         ],
@@ -976,6 +1040,38 @@
         ]
       }
     },
+    "/proto.DBMS/GetSwcAttachmentSwc": {
+      "post": {
+        "operationId": "DBMS_GetSwcAttachmentSwc",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/protoGetSwcAttachmentSwcResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/protoGetSwcAttachmentSwcRequest"
+            }
+          }
+        ],
+        "tags": [
+          "DBMS"
+        ]
+      }
+    },
     "/proto.DBMS/GetSwcFullNodeData": {
       "post": {
         "operationId": "DBMS_GetSwcFullNodeData",
@@ -1360,6 +1456,38 @@
         ]
       }
     },
+    "/proto.DBMS/UpdateSwcAttachmentSwc": {
+      "post": {
+        "operationId": "DBMS_UpdateSwcAttachmentSwc",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/protoUpdateSwcAttachmentSwcResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/protoUpdateSwcAttachmentSwcRequest"
+            }
+          }
+        ],
+        "tags": [
+          "DBMS"
+        ]
+      }
+    },
     "/proto.DBMS/UpdateSwcNodeData": {
       "post": {
         "operationId": "DBMS_UpdateSwcNodeData",
@@ -1679,6 +1807,38 @@
         }
       }
     },
+    "protoCreateSwcAttachmentSwcRequest": {
+      "type": "object",
+      "properties": {
+        "metaInfo": {
+          "$ref": "#/definitions/protoRequestMetaInfoV1"
+        },
+        "UserVerifyInfo": {
+          "$ref": "#/definitions/protoUserVerifyInfoV1"
+        },
+        "SwcName": {
+          "type": "string"
+        },
+        "SwcData": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/protoSwcNodeDataV1"
+          }
+        }
+      }
+    },
+    "protoCreateSwcAttachmentSwcResponse": {
+      "type": "object",
+      "properties": {
+        "metaInfo": {
+          "$ref": "#/definitions/protoResponseMetaInfoV1"
+        },
+        "SwcAttachmentUuid": {
+          "type": "string"
+        }
+      }
+    },
     "protoCreateSwcNodeDataRequest": {
       "type": "object",
       "properties": {
@@ -1957,6 +2117,31 @@
       }
     },
     "protoDeleteSwcAttachmentApoResponse": {
+      "type": "object",
+      "properties": {
+        "metaInfo": {
+          "$ref": "#/definitions/protoResponseMetaInfoV1"
+        }
+      }
+    },
+    "protoDeleteSwcAttachmentSwcRequest": {
+      "type": "object",
+      "properties": {
+        "metaInfo": {
+          "$ref": "#/definitions/protoRequestMetaInfoV1"
+        },
+        "UserVerifyInfo": {
+          "$ref": "#/definitions/protoUserVerifyInfoV1"
+        },
+        "SwcName": {
+          "type": "string"
+        },
+        "SwcAttachmentUuid": {
+          "type": "string"
+        }
+      }
+    },
+    "protoDeleteSwcAttachmentSwcResponse": {
       "type": "object",
       "properties": {
         "metaInfo": {
@@ -2405,6 +2590,38 @@
           "items": {
             "type": "object",
             "$ref": "#/definitions/protoSwcAttachmentApoV1"
+          }
+        }
+      }
+    },
+    "protoGetSwcAttachmentSwcRequest": {
+      "type": "object",
+      "properties": {
+        "metaInfo": {
+          "$ref": "#/definitions/protoRequestMetaInfoV1"
+        },
+        "UserVerifyInfo": {
+          "$ref": "#/definitions/protoUserVerifyInfoV1"
+        },
+        "SwcName": {
+          "type": "string"
+        },
+        "SwcAttachmentUuid": {
+          "type": "string"
+        }
+      }
+    },
+    "protoGetSwcAttachmentSwcResponse": {
+      "type": "object",
+      "properties": {
+        "metaInfo": {
+          "$ref": "#/definitions/protoResponseMetaInfoV1"
+        },
+        "SwcData": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/protoSwcNodeDataV1"
           }
         }
       }
@@ -3142,6 +3359,38 @@
       }
     },
     "protoUpdateSwcAttachmentApoResponse": {
+      "type": "object",
+      "properties": {
+        "metaInfo": {
+          "$ref": "#/definitions/protoResponseMetaInfoV1"
+        }
+      }
+    },
+    "protoUpdateSwcAttachmentSwcRequest": {
+      "type": "object",
+      "properties": {
+        "metaInfo": {
+          "$ref": "#/definitions/protoRequestMetaInfoV1"
+        },
+        "UserVerifyInfo": {
+          "$ref": "#/definitions/protoUserVerifyInfoV1"
+        },
+        "SwcName": {
+          "type": "string"
+        },
+        "SwcAttachmentUuid": {
+          "type": "string"
+        },
+        "NewSwcData": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/protoSwcNodeDataV1"
+          }
+        }
+      }
+    },
+    "protoUpdateSwcAttachmentSwcResponse": {
       "type": "object",
       "properties": {
         "metaInfo": {
