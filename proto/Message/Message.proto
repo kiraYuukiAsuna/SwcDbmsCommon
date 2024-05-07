@@ -145,6 +145,8 @@ message SwcMetaInfoV1{
     string CurrentIncrementOperationCollectionName = 10;
     SwcAttachmentAnoMetaInfoV1 SwcAttachmentAnoMetaInfo = 11;
     SwcAttachmentApoMetaInfoV1 SwcAttachmentApoMetaInfo = 12;
+    string SwcAttachmentSwcUuid = 13;
+	PermissionMetaInfoV1 Permission = 14;
 }
 
 message SwcNodeInternalDataV1{
