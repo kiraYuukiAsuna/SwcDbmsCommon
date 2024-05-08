@@ -251,3 +251,15 @@ message GetSwcAttachmentSwcResponse{
     ResponseMetaInfoV1 metaInfo = 1;
     repeated SwcNodeDataV1 SwcData = 2;
 }
+
+message CreatePermissionGroupResponse{
+    ResponseMetaInfoV1 metaInfo = 1;
+}
+
+message DeletePermissionGroupResponse{
+    ResponseMetaInfoV1 metaInfo = 1;
+}
+
+message UpdatePermissionGroupResponse{
+    ResponseMetaInfoV1 metaInfo = 1;
+}

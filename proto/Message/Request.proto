@@ -330,3 +330,25 @@ message GetSwcAttachmentSwcRequest{
     string SwcName = 3;
     string SwcAttachmentUuid = 4;
 }
+
+message CreatePermissionGroupRequest{
+    RequestMetaInfoV1 metaInfo = 1;
+    UserVerifyInfoV1 UserVerifyInfo = 2;
+    string PermissionGroupName = 3;
+    string PermissionGroupDescription = 4;
+}
+
+message DeletePermissionGroupRequest{
+    RequestMetaInfoV1 metaInfo = 1;
+    UserVerifyInfoV1 UserVerifyInfo = 2;
+    string PermissionGroupUuid = 3;
+}
+
+message UpdatePermissionGroupRequest{
+    RequestMetaInfoV1 metaInfo = 1;
+    UserVerifyInfoV1 UserVerifyInfo = 2;
+    string PermissionGroupUuid = 3;
+    string PermissionGroupName = 4;
+    string PermissionGroupDescription = 5;
+    PermissionGroupAceV1 Ace = 6;
+}
