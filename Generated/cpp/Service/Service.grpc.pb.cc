@@ -73,6 +73,9 @@ static const char* DBMS_method_names[] = {
   "/proto.DBMS/DeleteSwcAttachmentSwc",
   "/proto.DBMS/UpdateSwcAttachmentSwc",
   "/proto.DBMS/GetSwcAttachmentSwc",
+  "/proto.DBMS/CreatePermissionGroup",
+  "/proto.DBMS/DeletePermissionGroup",
+  "/proto.DBMS/UpdatePermissionGroup",
 };
 
 std::unique_ptr< DBMS::Stub> DBMS::NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options) {
@@ -133,6 +136,9 @@ DBMS::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, cons
   , rpcmethod_DeleteSwcAttachmentSwc_(DBMS_method_names[48], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   , rpcmethod_UpdateSwcAttachmentSwc_(DBMS_method_names[49], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   , rpcmethod_GetSwcAttachmentSwc_(DBMS_method_names[50], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_CreatePermissionGroup_(DBMS_method_names[51], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_DeletePermissionGroup_(DBMS_method_names[52], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_UpdatePermissionGroup_(DBMS_method_names[53], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   {}
 
 ::grpc::Status DBMS::Stub::CreateUser(::grpc::ClientContext* context, const ::proto::CreateUserRequest& request, ::proto::CreateUserResponse* response) {
@@ -1308,6 +1314,75 @@ void DBMS::Stub::async::GetSwcAttachmentSwc(::grpc::ClientContext* context, cons
   return result;
 }
 
+::grpc::Status DBMS::Stub::CreatePermissionGroup(::grpc::ClientContext* context, const ::proto::CreatePermissionGroupRequest& request, ::proto::CreatePermissionGroupResponse* response) {
+  return ::grpc::internal::BlockingUnaryCall< ::proto::CreatePermissionGroupRequest, ::proto::CreatePermissionGroupResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_CreatePermissionGroup_, context, request, response);
+}
+
+void DBMS::Stub::async::CreatePermissionGroup(::grpc::ClientContext* context, const ::proto::CreatePermissionGroupRequest* request, ::proto::CreatePermissionGroupResponse* response, std::function<void(::grpc::Status)> f) {
+  ::grpc::internal::CallbackUnaryCall< ::proto::CreatePermissionGroupRequest, ::proto::CreatePermissionGroupResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_CreatePermissionGroup_, context, request, response, std::move(f));
+}
+
+void DBMS::Stub::async::CreatePermissionGroup(::grpc::ClientContext* context, const ::proto::CreatePermissionGroupRequest* request, ::proto::CreatePermissionGroupResponse* response, ::grpc::ClientUnaryReactor* reactor) {
+  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_CreatePermissionGroup_, context, request, response, reactor);
+}
+
+::grpc::ClientAsyncResponseReader< ::proto::CreatePermissionGroupResponse>* DBMS::Stub::PrepareAsyncCreatePermissionGroupRaw(::grpc::ClientContext* context, const ::proto::CreatePermissionGroupRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::proto::CreatePermissionGroupResponse, ::proto::CreatePermissionGroupRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_CreatePermissionGroup_, context, request);
+}
+
+::grpc::ClientAsyncResponseReader< ::proto::CreatePermissionGroupResponse>* DBMS::Stub::AsyncCreatePermissionGroupRaw(::grpc::ClientContext* context, const ::proto::CreatePermissionGroupRequest& request, ::grpc::CompletionQueue* cq) {
+  auto* result =
+    this->PrepareAsyncCreatePermissionGroupRaw(context, request, cq);
+  result->StartCall();
+  return result;
+}
+
+::grpc::Status DBMS::Stub::DeletePermissionGroup(::grpc::ClientContext* context, const ::proto::DeletePermissionGroupRequest& request, ::proto::DeletePermissionGroupResponse* response) {
+  return ::grpc::internal::BlockingUnaryCall< ::proto::DeletePermissionGroupRequest, ::proto::DeletePermissionGroupResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_DeletePermissionGroup_, context, request, response);
+}
+
+void DBMS::Stub::async::DeletePermissionGroup(::grpc::ClientContext* context, const ::proto::DeletePermissionGroupRequest* request, ::proto::DeletePermissionGroupResponse* response, std::function<void(::grpc::Status)> f) {
+  ::grpc::internal::CallbackUnaryCall< ::proto::DeletePermissionGroupRequest, ::proto::DeletePermissionGroupResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_DeletePermissionGroup_, context, request, response, std::move(f));
+}
+
+void DBMS::Stub::async::DeletePermissionGroup(::grpc::ClientContext* context, const ::proto::DeletePermissionGroupRequest* request, ::proto::DeletePermissionGroupResponse* response, ::grpc::ClientUnaryReactor* reactor) {
+  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_DeletePermissionGroup_, context, request, response, reactor);
+}
+
+::grpc::ClientAsyncResponseReader< ::proto::DeletePermissionGroupResponse>* DBMS::Stub::PrepareAsyncDeletePermissionGroupRaw(::grpc::ClientContext* context, const ::proto::DeletePermissionGroupRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::proto::DeletePermissionGroupResponse, ::proto::DeletePermissionGroupRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_DeletePermissionGroup_, context, request);
+}
+
+::grpc::ClientAsyncResponseReader< ::proto::DeletePermissionGroupResponse>* DBMS::Stub::AsyncDeletePermissionGroupRaw(::grpc::ClientContext* context, const ::proto::DeletePermissionGroupRequest& request, ::grpc::CompletionQueue* cq) {
+  auto* result =
+    this->PrepareAsyncDeletePermissionGroupRaw(context, request, cq);
+  result->StartCall();
+  return result;
+}
+
+::grpc::Status DBMS::Stub::UpdatePermissionGroup(::grpc::ClientContext* context, const ::proto::UpdatePermissionGroupRequest& request, ::proto::UpdatePermissionGroupResponse* response) {
+  return ::grpc::internal::BlockingUnaryCall< ::proto::UpdatePermissionGroupRequest, ::proto::UpdatePermissionGroupResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_UpdatePermissionGroup_, context, request, response);
+}
+
+void DBMS::Stub::async::UpdatePermissionGroup(::grpc::ClientContext* context, const ::proto::UpdatePermissionGroupRequest* request, ::proto::UpdatePermissionGroupResponse* response, std::function<void(::grpc::Status)> f) {
+  ::grpc::internal::CallbackUnaryCall< ::proto::UpdatePermissionGroupRequest, ::proto::UpdatePermissionGroupResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_UpdatePermissionGroup_, context, request, response, std::move(f));
+}
+
+void DBMS::Stub::async::UpdatePermissionGroup(::grpc::ClientContext* context, const ::proto::UpdatePermissionGroupRequest* request, ::proto::UpdatePermissionGroupResponse* response, ::grpc::ClientUnaryReactor* reactor) {
+  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_UpdatePermissionGroup_, context, request, response, reactor);
+}
+
+::grpc::ClientAsyncResponseReader< ::proto::UpdatePermissionGroupResponse>* DBMS::Stub::PrepareAsyncUpdatePermissionGroupRaw(::grpc::ClientContext* context, const ::proto::UpdatePermissionGroupRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::proto::UpdatePermissionGroupResponse, ::proto::UpdatePermissionGroupRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_UpdatePermissionGroup_, context, request);
+}
+
+::grpc::ClientAsyncResponseReader< ::proto::UpdatePermissionGroupResponse>* DBMS::Stub::AsyncUpdatePermissionGroupRaw(::grpc::ClientContext* context, const ::proto::UpdatePermissionGroupRequest& request, ::grpc::CompletionQueue* cq) {
+  auto* result =
+    this->PrepareAsyncUpdatePermissionGroupRaw(context, request, cq);
+  result->StartCall();
+  return result;
+}
+
 DBMS::Service::Service() {
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       DBMS_method_names[0],
@@ -1819,6 +1894,36 @@ DBMS::Service::Service() {
              ::proto::GetSwcAttachmentSwcResponse* resp) {
                return service->GetSwcAttachmentSwc(ctx, req, resp);
              }, this)));
+  AddMethod(new ::grpc::internal::RpcServiceMethod(
+      DBMS_method_names[51],
+      ::grpc::internal::RpcMethod::NORMAL_RPC,
+      new ::grpc::internal::RpcMethodHandler< DBMS::Service, ::proto::CreatePermissionGroupRequest, ::proto::CreatePermissionGroupResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
+          [](DBMS::Service* service,
+             ::grpc::ServerContext* ctx,
+             const ::proto::CreatePermissionGroupRequest* req,
+             ::proto::CreatePermissionGroupResponse* resp) {
+               return service->CreatePermissionGroup(ctx, req, resp);
+             }, this)));
+  AddMethod(new ::grpc::internal::RpcServiceMethod(
+      DBMS_method_names[52],
+      ::grpc::internal::RpcMethod::NORMAL_RPC,
+      new ::grpc::internal::RpcMethodHandler< DBMS::Service, ::proto::DeletePermissionGroupRequest, ::proto::DeletePermissionGroupResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
+          [](DBMS::Service* service,
+             ::grpc::ServerContext* ctx,
+             const ::proto::DeletePermissionGroupRequest* req,
+             ::proto::DeletePermissionGroupResponse* resp) {
+               return service->DeletePermissionGroup(ctx, req, resp);
+             }, this)));
+  AddMethod(new ::grpc::internal::RpcServiceMethod(
+      DBMS_method_names[53],
+      ::grpc::internal::RpcMethod::NORMAL_RPC,
+      new ::grpc::internal::RpcMethodHandler< DBMS::Service, ::proto::UpdatePermissionGroupRequest, ::proto::UpdatePermissionGroupResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
+          [](DBMS::Service* service,
+             ::grpc::ServerContext* ctx,
+             const ::proto::UpdatePermissionGroupRequest* req,
+             ::proto::UpdatePermissionGroupResponse* resp) {
+               return service->UpdatePermissionGroup(ctx, req, resp);
+             }, this)));
 }
 
 DBMS::Service::~Service() {
@@ -2175,6 +2280,27 @@ DBMS::Service::~Service() {
 }
 
 ::grpc::Status DBMS::Service::GetSwcAttachmentSwc(::grpc::ServerContext* context, const ::proto::GetSwcAttachmentSwcRequest* request, ::proto::GetSwcAttachmentSwcResponse* response) {
+  (void) context;
+  (void) request;
+  (void) response;
+  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+}
+
+::grpc::Status DBMS::Service::CreatePermissionGroup(::grpc::ServerContext* context, const ::proto::CreatePermissionGroupRequest* request, ::proto::CreatePermissionGroupResponse* response) {
+  (void) context;
+  (void) request;
+  (void) response;
+  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+}
+
+::grpc::Status DBMS::Service::DeletePermissionGroup(::grpc::ServerContext* context, const ::proto::DeletePermissionGroupRequest* request, ::proto::DeletePermissionGroupResponse* response) {
+  (void) context;
+  (void) request;
+  (void) response;
+  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+}
+
+::grpc::Status DBMS::Service::UpdatePermissionGroup(::grpc::ServerContext* context, const ::proto::UpdatePermissionGroupRequest* request, ::proto::UpdatePermissionGroupResponse* response) {
   (void) context;
   (void) request;
   (void) response;

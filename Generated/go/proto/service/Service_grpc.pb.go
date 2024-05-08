@@ -72,6 +72,9 @@ const (
 	DBMS_DeleteSwcAttachmentSwc_FullMethodName           = "/proto.DBMS/DeleteSwcAttachmentSwc"
 	DBMS_UpdateSwcAttachmentSwc_FullMethodName           = "/proto.DBMS/UpdateSwcAttachmentSwc"
 	DBMS_GetSwcAttachmentSwc_FullMethodName              = "/proto.DBMS/GetSwcAttachmentSwc"
+	DBMS_CreatePermissionGroup_FullMethodName            = "/proto.DBMS/CreatePermissionGroup"
+	DBMS_DeletePermissionGroup_FullMethodName            = "/proto.DBMS/DeletePermissionGroup"
+	DBMS_UpdatePermissionGroup_FullMethodName            = "/proto.DBMS/UpdatePermissionGroup"
 )
 
 // DBMSClient is the client API for DBMS service.
@@ -129,6 +132,9 @@ type DBMSClient interface {
 	DeleteSwcAttachmentSwc(ctx context.Context, in *request.DeleteSwcAttachmentSwcRequest, opts ...grpc.CallOption) (*response.DeleteSwcAttachmentSwcResponse, error)
 	UpdateSwcAttachmentSwc(ctx context.Context, in *request.UpdateSwcAttachmentSwcRequest, opts ...grpc.CallOption) (*response.UpdateSwcAttachmentSwcResponse, error)
 	GetSwcAttachmentSwc(ctx context.Context, in *request.GetSwcAttachmentSwcRequest, opts ...grpc.CallOption) (*response.GetSwcAttachmentSwcResponse, error)
+	CreatePermissionGroup(ctx context.Context, in *request.CreatePermissionGroupRequest, opts ...grpc.CallOption) (*response.CreatePermissionGroupResponse, error)
+	DeletePermissionGroup(ctx context.Context, in *request.DeletePermissionGroupRequest, opts ...grpc.CallOption) (*response.DeletePermissionGroupResponse, error)
+	UpdatePermissionGroup(ctx context.Context, in *request.UpdatePermissionGroupRequest, opts ...grpc.CallOption) (*response.UpdatePermissionGroupResponse, error)
 }
 
 type dBMSClient struct {
@@ -598,6 +604,33 @@ func (c *dBMSClient) GetSwcAttachmentSwc(ctx context.Context, in *request.GetSwc
 	return out, nil
 }
 
+func (c *dBMSClient) CreatePermissionGroup(ctx context.Context, in *request.CreatePermissionGroupRequest, opts ...grpc.CallOption) (*response.CreatePermissionGroupResponse, error) {
+	out := new(response.CreatePermissionGroupResponse)
+	err := c.cc.Invoke(ctx, DBMS_CreatePermissionGroup_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *dBMSClient) DeletePermissionGroup(ctx context.Context, in *request.DeletePermissionGroupRequest, opts ...grpc.CallOption) (*response.DeletePermissionGroupResponse, error) {
+	out := new(response.DeletePermissionGroupResponse)
+	err := c.cc.Invoke(ctx, DBMS_DeletePermissionGroup_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *dBMSClient) UpdatePermissionGroup(ctx context.Context, in *request.UpdatePermissionGroupRequest, opts ...grpc.CallOption) (*response.UpdatePermissionGroupResponse, error) {
+	out := new(response.UpdatePermissionGroupResponse)
+	err := c.cc.Invoke(ctx, DBMS_UpdatePermissionGroup_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // DBMSServer is the server API for DBMS service.
 // All implementations must embed UnimplementedDBMSServer
 // for forward compatibility
@@ -653,6 +686,9 @@ type DBMSServer interface {
 	DeleteSwcAttachmentSwc(context.Context, *request.DeleteSwcAttachmentSwcRequest) (*response.DeleteSwcAttachmentSwcResponse, error)
 	UpdateSwcAttachmentSwc(context.Context, *request.UpdateSwcAttachmentSwcRequest) (*response.UpdateSwcAttachmentSwcResponse, error)
 	GetSwcAttachmentSwc(context.Context, *request.GetSwcAttachmentSwcRequest) (*response.GetSwcAttachmentSwcResponse, error)
+	CreatePermissionGroup(context.Context, *request.CreatePermissionGroupRequest) (*response.CreatePermissionGroupResponse, error)
+	DeletePermissionGroup(context.Context, *request.DeletePermissionGroupRequest) (*response.DeletePermissionGroupResponse, error)
+	UpdatePermissionGroup(context.Context, *request.UpdatePermissionGroupRequest) (*response.UpdatePermissionGroupResponse, error)
 	mustEmbedUnimplementedDBMSServer()
 }
 
@@ -812,6 +848,15 @@ func (UnimplementedDBMSServer) UpdateSwcAttachmentSwc(context.Context, *request.
 }
 func (UnimplementedDBMSServer) GetSwcAttachmentSwc(context.Context, *request.GetSwcAttachmentSwcRequest) (*response.GetSwcAttachmentSwcResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetSwcAttachmentSwc not implemented")
+}
+func (UnimplementedDBMSServer) CreatePermissionGroup(context.Context, *request.CreatePermissionGroupRequest) (*response.CreatePermissionGroupResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CreatePermissionGroup not implemented")
+}
+func (UnimplementedDBMSServer) DeletePermissionGroup(context.Context, *request.DeletePermissionGroupRequest) (*response.DeletePermissionGroupResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method DeletePermissionGroup not implemented")
+}
+func (UnimplementedDBMSServer) UpdatePermissionGroup(context.Context, *request.UpdatePermissionGroupRequest) (*response.UpdatePermissionGroupResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method UpdatePermissionGroup not implemented")
 }
 func (UnimplementedDBMSServer) mustEmbedUnimplementedDBMSServer() {}
 
@@ -1744,6 +1789,60 @@ func _DBMS_GetSwcAttachmentSwc_Handler(srv interface{}, ctx context.Context, dec
 	return interceptor(ctx, in, info, handler)
 }
 
+func _DBMS_CreatePermissionGroup_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(request.CreatePermissionGroupRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(DBMSServer).CreatePermissionGroup(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: DBMS_CreatePermissionGroup_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(DBMSServer).CreatePermissionGroup(ctx, req.(*request.CreatePermissionGroupRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _DBMS_DeletePermissionGroup_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(request.DeletePermissionGroupRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(DBMSServer).DeletePermissionGroup(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: DBMS_DeletePermissionGroup_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(DBMSServer).DeletePermissionGroup(ctx, req.(*request.DeletePermissionGroupRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _DBMS_UpdatePermissionGroup_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(request.UpdatePermissionGroupRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(DBMSServer).UpdatePermissionGroup(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: DBMS_UpdatePermissionGroup_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(DBMSServer).UpdatePermissionGroup(ctx, req.(*request.UpdatePermissionGroupRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // DBMS_ServiceDesc is the grpc.ServiceDesc for DBMS service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -1954,6 +2053,18 @@ var DBMS_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "GetSwcAttachmentSwc",
 			Handler:    _DBMS_GetSwcAttachmentSwc_Handler,
+		},
+		{
+			MethodName: "CreatePermissionGroup",
+			Handler:    _DBMS_CreatePermissionGroup_Handler,
+		},
+		{
+			MethodName: "DeletePermissionGroup",
+			Handler:    _DBMS_DeletePermissionGroup_Handler,
+		},
+		{
+			MethodName: "UpdatePermissionGroup",
+			Handler:    _DBMS_UpdatePermissionGroup_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

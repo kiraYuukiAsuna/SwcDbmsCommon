@@ -80,6 +80,38 @@
         ]
       }
     },
+    "/proto.DBMS/CreatePermissionGroup": {
+      "post": {
+        "operationId": "DBMS_CreatePermissionGroup",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/protoCreatePermissionGroupResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/protoCreatePermissionGroupRequest"
+            }
+          }
+        ],
+        "tags": [
+          "DBMS"
+        ]
+      }
+    },
     "/proto.DBMS/CreateProject": {
       "post": {
         "operationId": "DBMS_CreateProject",
@@ -360,6 +392,38 @@
             "required": true,
             "schema": {
               "$ref": "#/definitions/protoDeleteDailyStatisticsRequest"
+            }
+          }
+        ],
+        "tags": [
+          "DBMS"
+        ]
+      }
+    },
+    "/proto.DBMS/DeletePermissionGroup": {
+      "post": {
+        "operationId": "DBMS_DeletePermissionGroup",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/protoDeletePermissionGroupResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/protoDeletePermissionGroupRequest"
             }
           }
         ],
@@ -1328,6 +1392,38 @@
         ]
       }
     },
+    "/proto.DBMS/UpdatePermissionGroup": {
+      "post": {
+        "operationId": "DBMS_UpdatePermissionGroup",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/protoUpdatePermissionGroupResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/protoUpdatePermissionGroupRequest"
+            }
+          }
+        ],
+        "tags": [
+          "DBMS"
+        ]
+      }
+    },
     "/proto.DBMS/UpdateProject": {
       "post": {
         "operationId": "DBMS_UpdateProject",
@@ -1722,6 +1818,31 @@
         }
       }
     },
+    "protoCreatePermissionGroupRequest": {
+      "type": "object",
+      "properties": {
+        "metaInfo": {
+          "$ref": "#/definitions/protoRequestMetaInfoV1"
+        },
+        "UserVerifyInfo": {
+          "$ref": "#/definitions/protoUserVerifyInfoV1"
+        },
+        "PermissionGroupName": {
+          "type": "string"
+        },
+        "PermissionGroupDescription": {
+          "type": "string"
+        }
+      }
+    },
+    "protoCreatePermissionGroupResponse": {
+      "type": "object",
+      "properties": {
+        "metaInfo": {
+          "$ref": "#/definitions/protoResponseMetaInfoV1"
+        }
+      }
+    },
     "protoCreateProjectRequest": {
       "type": "object",
       "properties": {
@@ -2046,6 +2167,28 @@
         },
         "DailyStatisticsInfo": {
           "$ref": "#/definitions/protoDailyStatisticsMetaInfoV1"
+        }
+      }
+    },
+    "protoDeletePermissionGroupRequest": {
+      "type": "object",
+      "properties": {
+        "metaInfo": {
+          "$ref": "#/definitions/protoRequestMetaInfoV1"
+        },
+        "UserVerifyInfo": {
+          "$ref": "#/definitions/protoUserVerifyInfoV1"
+        },
+        "PermissionGroupUuid": {
+          "type": "string"
+        }
+      }
+    },
+    "protoDeletePermissionGroupResponse": {
+      "type": "object",
+      "properties": {
+        "metaInfo": {
+          "$ref": "#/definitions/protoResponseMetaInfoV1"
         }
       }
     },
@@ -3325,6 +3468,37 @@
         },
         "DailyStatisticsInfo": {
           "$ref": "#/definitions/protoDailyStatisticsMetaInfoV1"
+        }
+      }
+    },
+    "protoUpdatePermissionGroupRequest": {
+      "type": "object",
+      "properties": {
+        "metaInfo": {
+          "$ref": "#/definitions/protoRequestMetaInfoV1"
+        },
+        "UserVerifyInfo": {
+          "$ref": "#/definitions/protoUserVerifyInfoV1"
+        },
+        "PermissionGroupUuid": {
+          "type": "string"
+        },
+        "PermissionGroupName": {
+          "type": "string"
+        },
+        "PermissionGroupDescription": {
+          "type": "string"
+        },
+        "Ace": {
+          "$ref": "#/definitions/protoPermissionGroupAceV1"
+        }
+      }
+    },
+    "protoUpdatePermissionGroupResponse": {
+      "type": "object",
+      "properties": {
+        "metaInfo": {
+          "$ref": "#/definitions/protoResponseMetaInfoV1"
         }
       }
     },

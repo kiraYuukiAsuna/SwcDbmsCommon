@@ -72,4 +72,8 @@ service DBMS {
     rpc DeleteSwcAttachmentSwc(DeleteSwcAttachmentSwcRequest) returns (DeleteSwcAttachmentSwcResponse){}
     rpc UpdateSwcAttachmentSwc(UpdateSwcAttachmentSwcRequest) returns (UpdateSwcAttachmentSwcResponse){}
     rpc GetSwcAttachmentSwc(GetSwcAttachmentSwcRequest) returns (GetSwcAttachmentSwcResponse){}
+
+    rpc CreatePermissionGroup(CreatePermissionGroupRequest) returns (CreatePermissionGroupResponse){}
+    rpc DeletePermissionGroup(DeletePermissionGroupRequest) returns (DeletePermissionGroupResponse){}
+    rpc UpdatePermissionGroup(UpdatePermissionGroupRequest) returns (UpdatePermissionGroupResponse){}
 }

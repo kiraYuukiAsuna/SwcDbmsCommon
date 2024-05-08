@@ -392,6 +392,27 @@ class DBMS final {
     std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::proto::GetSwcAttachmentSwcResponse>> PrepareAsyncGetSwcAttachmentSwc(::grpc::ClientContext* context, const ::proto::GetSwcAttachmentSwcRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::proto::GetSwcAttachmentSwcResponse>>(PrepareAsyncGetSwcAttachmentSwcRaw(context, request, cq));
     }
+    virtual ::grpc::Status CreatePermissionGroup(::grpc::ClientContext* context, const ::proto::CreatePermissionGroupRequest& request, ::proto::CreatePermissionGroupResponse* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::proto::CreatePermissionGroupResponse>> AsyncCreatePermissionGroup(::grpc::ClientContext* context, const ::proto::CreatePermissionGroupRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::proto::CreatePermissionGroupResponse>>(AsyncCreatePermissionGroupRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::proto::CreatePermissionGroupResponse>> PrepareAsyncCreatePermissionGroup(::grpc::ClientContext* context, const ::proto::CreatePermissionGroupRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::proto::CreatePermissionGroupResponse>>(PrepareAsyncCreatePermissionGroupRaw(context, request, cq));
+    }
+    virtual ::grpc::Status DeletePermissionGroup(::grpc::ClientContext* context, const ::proto::DeletePermissionGroupRequest& request, ::proto::DeletePermissionGroupResponse* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::proto::DeletePermissionGroupResponse>> AsyncDeletePermissionGroup(::grpc::ClientContext* context, const ::proto::DeletePermissionGroupRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::proto::DeletePermissionGroupResponse>>(AsyncDeletePermissionGroupRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::proto::DeletePermissionGroupResponse>> PrepareAsyncDeletePermissionGroup(::grpc::ClientContext* context, const ::proto::DeletePermissionGroupRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::proto::DeletePermissionGroupResponse>>(PrepareAsyncDeletePermissionGroupRaw(context, request, cq));
+    }
+    virtual ::grpc::Status UpdatePermissionGroup(::grpc::ClientContext* context, const ::proto::UpdatePermissionGroupRequest& request, ::proto::UpdatePermissionGroupResponse* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::proto::UpdatePermissionGroupResponse>> AsyncUpdatePermissionGroup(::grpc::ClientContext* context, const ::proto::UpdatePermissionGroupRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::proto::UpdatePermissionGroupResponse>>(AsyncUpdatePermissionGroupRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::proto::UpdatePermissionGroupResponse>> PrepareAsyncUpdatePermissionGroup(::grpc::ClientContext* context, const ::proto::UpdatePermissionGroupRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::proto::UpdatePermissionGroupResponse>>(PrepareAsyncUpdatePermissionGroupRaw(context, request, cq));
+    }
     class async_interface {
      public:
       virtual ~async_interface() {}
@@ -497,6 +518,12 @@ class DBMS final {
       virtual void UpdateSwcAttachmentSwc(::grpc::ClientContext* context, const ::proto::UpdateSwcAttachmentSwcRequest* request, ::proto::UpdateSwcAttachmentSwcResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
       virtual void GetSwcAttachmentSwc(::grpc::ClientContext* context, const ::proto::GetSwcAttachmentSwcRequest* request, ::proto::GetSwcAttachmentSwcResponse* response, std::function<void(::grpc::Status)>) = 0;
       virtual void GetSwcAttachmentSwc(::grpc::ClientContext* context, const ::proto::GetSwcAttachmentSwcRequest* request, ::proto::GetSwcAttachmentSwcResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      virtual void CreatePermissionGroup(::grpc::ClientContext* context, const ::proto::CreatePermissionGroupRequest* request, ::proto::CreatePermissionGroupResponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void CreatePermissionGroup(::grpc::ClientContext* context, const ::proto::CreatePermissionGroupRequest* request, ::proto::CreatePermissionGroupResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      virtual void DeletePermissionGroup(::grpc::ClientContext* context, const ::proto::DeletePermissionGroupRequest* request, ::proto::DeletePermissionGroupResponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void DeletePermissionGroup(::grpc::ClientContext* context, const ::proto::DeletePermissionGroupRequest* request, ::proto::DeletePermissionGroupResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      virtual void UpdatePermissionGroup(::grpc::ClientContext* context, const ::proto::UpdatePermissionGroupRequest* request, ::proto::UpdatePermissionGroupResponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void UpdatePermissionGroup(::grpc::ClientContext* context, const ::proto::UpdatePermissionGroupRequest* request, ::proto::UpdatePermissionGroupResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
     };
     typedef class async_interface experimental_async_interface;
     virtual class async_interface* async() { return nullptr; }
@@ -604,6 +631,12 @@ class DBMS final {
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::proto::UpdateSwcAttachmentSwcResponse>* PrepareAsyncUpdateSwcAttachmentSwcRaw(::grpc::ClientContext* context, const ::proto::UpdateSwcAttachmentSwcRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::proto::GetSwcAttachmentSwcResponse>* AsyncGetSwcAttachmentSwcRaw(::grpc::ClientContext* context, const ::proto::GetSwcAttachmentSwcRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::proto::GetSwcAttachmentSwcResponse>* PrepareAsyncGetSwcAttachmentSwcRaw(::grpc::ClientContext* context, const ::proto::GetSwcAttachmentSwcRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::proto::CreatePermissionGroupResponse>* AsyncCreatePermissionGroupRaw(::grpc::ClientContext* context, const ::proto::CreatePermissionGroupRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::proto::CreatePermissionGroupResponse>* PrepareAsyncCreatePermissionGroupRaw(::grpc::ClientContext* context, const ::proto::CreatePermissionGroupRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::proto::DeletePermissionGroupResponse>* AsyncDeletePermissionGroupRaw(::grpc::ClientContext* context, const ::proto::DeletePermissionGroupRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::proto::DeletePermissionGroupResponse>* PrepareAsyncDeletePermissionGroupRaw(::grpc::ClientContext* context, const ::proto::DeletePermissionGroupRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::proto::UpdatePermissionGroupResponse>* AsyncUpdatePermissionGroupRaw(::grpc::ClientContext* context, const ::proto::UpdatePermissionGroupRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::proto::UpdatePermissionGroupResponse>* PrepareAsyncUpdatePermissionGroupRaw(::grpc::ClientContext* context, const ::proto::UpdatePermissionGroupRequest& request, ::grpc::CompletionQueue* cq) = 0;
   };
   class Stub final : public StubInterface {
    public:
@@ -965,6 +998,27 @@ class DBMS final {
     std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::proto::GetSwcAttachmentSwcResponse>> PrepareAsyncGetSwcAttachmentSwc(::grpc::ClientContext* context, const ::proto::GetSwcAttachmentSwcRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::proto::GetSwcAttachmentSwcResponse>>(PrepareAsyncGetSwcAttachmentSwcRaw(context, request, cq));
     }
+    ::grpc::Status CreatePermissionGroup(::grpc::ClientContext* context, const ::proto::CreatePermissionGroupRequest& request, ::proto::CreatePermissionGroupResponse* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::proto::CreatePermissionGroupResponse>> AsyncCreatePermissionGroup(::grpc::ClientContext* context, const ::proto::CreatePermissionGroupRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::proto::CreatePermissionGroupResponse>>(AsyncCreatePermissionGroupRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::proto::CreatePermissionGroupResponse>> PrepareAsyncCreatePermissionGroup(::grpc::ClientContext* context, const ::proto::CreatePermissionGroupRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::proto::CreatePermissionGroupResponse>>(PrepareAsyncCreatePermissionGroupRaw(context, request, cq));
+    }
+    ::grpc::Status DeletePermissionGroup(::grpc::ClientContext* context, const ::proto::DeletePermissionGroupRequest& request, ::proto::DeletePermissionGroupResponse* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::proto::DeletePermissionGroupResponse>> AsyncDeletePermissionGroup(::grpc::ClientContext* context, const ::proto::DeletePermissionGroupRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::proto::DeletePermissionGroupResponse>>(AsyncDeletePermissionGroupRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::proto::DeletePermissionGroupResponse>> PrepareAsyncDeletePermissionGroup(::grpc::ClientContext* context, const ::proto::DeletePermissionGroupRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::proto::DeletePermissionGroupResponse>>(PrepareAsyncDeletePermissionGroupRaw(context, request, cq));
+    }
+    ::grpc::Status UpdatePermissionGroup(::grpc::ClientContext* context, const ::proto::UpdatePermissionGroupRequest& request, ::proto::UpdatePermissionGroupResponse* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::proto::UpdatePermissionGroupResponse>> AsyncUpdatePermissionGroup(::grpc::ClientContext* context, const ::proto::UpdatePermissionGroupRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::proto::UpdatePermissionGroupResponse>>(AsyncUpdatePermissionGroupRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::proto::UpdatePermissionGroupResponse>> PrepareAsyncUpdatePermissionGroup(::grpc::ClientContext* context, const ::proto::UpdatePermissionGroupRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::proto::UpdatePermissionGroupResponse>>(PrepareAsyncUpdatePermissionGroupRaw(context, request, cq));
+    }
     class async final :
       public StubInterface::async_interface {
      public:
@@ -1070,6 +1124,12 @@ class DBMS final {
       void UpdateSwcAttachmentSwc(::grpc::ClientContext* context, const ::proto::UpdateSwcAttachmentSwcRequest* request, ::proto::UpdateSwcAttachmentSwcResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
       void GetSwcAttachmentSwc(::grpc::ClientContext* context, const ::proto::GetSwcAttachmentSwcRequest* request, ::proto::GetSwcAttachmentSwcResponse* response, std::function<void(::grpc::Status)>) override;
       void GetSwcAttachmentSwc(::grpc::ClientContext* context, const ::proto::GetSwcAttachmentSwcRequest* request, ::proto::GetSwcAttachmentSwcResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      void CreatePermissionGroup(::grpc::ClientContext* context, const ::proto::CreatePermissionGroupRequest* request, ::proto::CreatePermissionGroupResponse* response, std::function<void(::grpc::Status)>) override;
+      void CreatePermissionGroup(::grpc::ClientContext* context, const ::proto::CreatePermissionGroupRequest* request, ::proto::CreatePermissionGroupResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      void DeletePermissionGroup(::grpc::ClientContext* context, const ::proto::DeletePermissionGroupRequest* request, ::proto::DeletePermissionGroupResponse* response, std::function<void(::grpc::Status)>) override;
+      void DeletePermissionGroup(::grpc::ClientContext* context, const ::proto::DeletePermissionGroupRequest* request, ::proto::DeletePermissionGroupResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      void UpdatePermissionGroup(::grpc::ClientContext* context, const ::proto::UpdatePermissionGroupRequest* request, ::proto::UpdatePermissionGroupResponse* response, std::function<void(::grpc::Status)>) override;
+      void UpdatePermissionGroup(::grpc::ClientContext* context, const ::proto::UpdatePermissionGroupRequest* request, ::proto::UpdatePermissionGroupResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
      private:
       friend class Stub;
       explicit async(Stub* stub): stub_(stub) { }
@@ -1183,6 +1243,12 @@ class DBMS final {
     ::grpc::ClientAsyncResponseReader< ::proto::UpdateSwcAttachmentSwcResponse>* PrepareAsyncUpdateSwcAttachmentSwcRaw(::grpc::ClientContext* context, const ::proto::UpdateSwcAttachmentSwcRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::proto::GetSwcAttachmentSwcResponse>* AsyncGetSwcAttachmentSwcRaw(::grpc::ClientContext* context, const ::proto::GetSwcAttachmentSwcRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::proto::GetSwcAttachmentSwcResponse>* PrepareAsyncGetSwcAttachmentSwcRaw(::grpc::ClientContext* context, const ::proto::GetSwcAttachmentSwcRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::proto::CreatePermissionGroupResponse>* AsyncCreatePermissionGroupRaw(::grpc::ClientContext* context, const ::proto::CreatePermissionGroupRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::proto::CreatePermissionGroupResponse>* PrepareAsyncCreatePermissionGroupRaw(::grpc::ClientContext* context, const ::proto::CreatePermissionGroupRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::proto::DeletePermissionGroupResponse>* AsyncDeletePermissionGroupRaw(::grpc::ClientContext* context, const ::proto::DeletePermissionGroupRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::proto::DeletePermissionGroupResponse>* PrepareAsyncDeletePermissionGroupRaw(::grpc::ClientContext* context, const ::proto::DeletePermissionGroupRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::proto::UpdatePermissionGroupResponse>* AsyncUpdatePermissionGroupRaw(::grpc::ClientContext* context, const ::proto::UpdatePermissionGroupRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::proto::UpdatePermissionGroupResponse>* PrepareAsyncUpdatePermissionGroupRaw(::grpc::ClientContext* context, const ::proto::UpdatePermissionGroupRequest& request, ::grpc::CompletionQueue* cq) override;
     const ::grpc::internal::RpcMethod rpcmethod_CreateUser_;
     const ::grpc::internal::RpcMethod rpcmethod_DeleteUser_;
     const ::grpc::internal::RpcMethod rpcmethod_UpdateUser_;
@@ -1234,6 +1300,9 @@ class DBMS final {
     const ::grpc::internal::RpcMethod rpcmethod_DeleteSwcAttachmentSwc_;
     const ::grpc::internal::RpcMethod rpcmethod_UpdateSwcAttachmentSwc_;
     const ::grpc::internal::RpcMethod rpcmethod_GetSwcAttachmentSwc_;
+    const ::grpc::internal::RpcMethod rpcmethod_CreatePermissionGroup_;
+    const ::grpc::internal::RpcMethod rpcmethod_DeletePermissionGroup_;
+    const ::grpc::internal::RpcMethod rpcmethod_UpdatePermissionGroup_;
   };
   static std::unique_ptr<Stub> NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options = ::grpc::StubOptions());
 
@@ -1292,6 +1361,9 @@ class DBMS final {
     virtual ::grpc::Status DeleteSwcAttachmentSwc(::grpc::ServerContext* context, const ::proto::DeleteSwcAttachmentSwcRequest* request, ::proto::DeleteSwcAttachmentSwcResponse* response);
     virtual ::grpc::Status UpdateSwcAttachmentSwc(::grpc::ServerContext* context, const ::proto::UpdateSwcAttachmentSwcRequest* request, ::proto::UpdateSwcAttachmentSwcResponse* response);
     virtual ::grpc::Status GetSwcAttachmentSwc(::grpc::ServerContext* context, const ::proto::GetSwcAttachmentSwcRequest* request, ::proto::GetSwcAttachmentSwcResponse* response);
+    virtual ::grpc::Status CreatePermissionGroup(::grpc::ServerContext* context, const ::proto::CreatePermissionGroupRequest* request, ::proto::CreatePermissionGroupResponse* response);
+    virtual ::grpc::Status DeletePermissionGroup(::grpc::ServerContext* context, const ::proto::DeletePermissionGroupRequest* request, ::proto::DeletePermissionGroupResponse* response);
+    virtual ::grpc::Status UpdatePermissionGroup(::grpc::ServerContext* context, const ::proto::UpdatePermissionGroupRequest* request, ::proto::UpdatePermissionGroupResponse* response);
   };
   template <class BaseClass>
   class WithAsyncMethod_CreateUser : public BaseClass {
@@ -2313,7 +2385,67 @@ class DBMS final {
       ::grpc::Service::RequestAsyncUnary(50, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
-  typedef WithAsyncMethod_CreateUser<WithAsyncMethod_DeleteUser<WithAsyncMethod_UpdateUser<WithAsyncMethod_GetUser<WithAsyncMethod_GetAllUser<WithAsyncMethod_UserLogin<WithAsyncMethod_UserLogout<WithAsyncMethod_UserOnlineHeartBeatNotifications<WithAsyncMethod_GetUserPermissionGroup<WithAsyncMethod_GetPermissionGroup<WithAsyncMethod_GetAllPermissionGroup<WithAsyncMethod_ChangeUserPermissionGroup<WithAsyncMethod_CreateProject<WithAsyncMethod_DeleteProject<WithAsyncMethod_UpdateProject<WithAsyncMethod_GetProject<WithAsyncMethod_GetAllProject<WithAsyncMethod_CreateSwc<WithAsyncMethod_DeleteSwc<WithAsyncMethod_UpdateSwc<WithAsyncMethod_GetSwcMetaInfo<WithAsyncMethod_GetAllSwcMetaInfo<WithAsyncMethod_CreateSwcSnapshot<WithAsyncMethod_GetAllSnapshotMetaInfo<WithAsyncMethod_GetSnapshot<WithAsyncMethod_GetAllIncrementOperationMetaInfo<WithAsyncMethod_GetIncrementOperation<WithAsyncMethod_CreateSwcNodeData<WithAsyncMethod_DeleteSwcNodeData<WithAsyncMethod_UpdateSwcNodeData<WithAsyncMethod_GetSwcNodeData<WithAsyncMethod_GetSwcFullNodeData<WithAsyncMethod_GetSwcNodeDataListByTimeAndUser<WithAsyncMethod_CreateDailyStatistics<WithAsyncMethod_DeleteDailyStatistics<WithAsyncMethod_UpdateDailyStatistics<WithAsyncMethod_GetDailyStatistics<WithAsyncMethod_GetAllDailyStatistics<WithAsyncMethod_CreateSwcAttachmentAno<WithAsyncMethod_DeleteSwcAttachmentAno<WithAsyncMethod_UpdateSwcAttachmentAno<WithAsyncMethod_GetSwcAttachmentAno<WithAsyncMethod_CreateSwcAttachmentApo<WithAsyncMethod_DeleteSwcAttachmentApo<WithAsyncMethod_UpdateSwcAttachmentApo<WithAsyncMethod_GetSwcAttachmentApo<WithAsyncMethod_RevertSwcVersion<WithAsyncMethod_CreateSwcAttachmentSwc<WithAsyncMethod_DeleteSwcAttachmentSwc<WithAsyncMethod_UpdateSwcAttachmentSwc<WithAsyncMethod_GetSwcAttachmentSwc<Service > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > AsyncService;
+  template <class BaseClass>
+  class WithAsyncMethod_CreatePermissionGroup : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithAsyncMethod_CreatePermissionGroup() {
+      ::grpc::Service::MarkMethodAsync(51);
+    }
+    ~WithAsyncMethod_CreatePermissionGroup() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status CreatePermissionGroup(::grpc::ServerContext* /*context*/, const ::proto::CreatePermissionGroupRequest* /*request*/, ::proto::CreatePermissionGroupResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestCreatePermissionGroup(::grpc::ServerContext* context, ::proto::CreatePermissionGroupRequest* request, ::grpc::ServerAsyncResponseWriter< ::proto::CreatePermissionGroupResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(51, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithAsyncMethod_DeletePermissionGroup : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithAsyncMethod_DeletePermissionGroup() {
+      ::grpc::Service::MarkMethodAsync(52);
+    }
+    ~WithAsyncMethod_DeletePermissionGroup() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status DeletePermissionGroup(::grpc::ServerContext* /*context*/, const ::proto::DeletePermissionGroupRequest* /*request*/, ::proto::DeletePermissionGroupResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestDeletePermissionGroup(::grpc::ServerContext* context, ::proto::DeletePermissionGroupRequest* request, ::grpc::ServerAsyncResponseWriter< ::proto::DeletePermissionGroupResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(52, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithAsyncMethod_UpdatePermissionGroup : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithAsyncMethod_UpdatePermissionGroup() {
+      ::grpc::Service::MarkMethodAsync(53);
+    }
+    ~WithAsyncMethod_UpdatePermissionGroup() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status UpdatePermissionGroup(::grpc::ServerContext* /*context*/, const ::proto::UpdatePermissionGroupRequest* /*request*/, ::proto::UpdatePermissionGroupResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestUpdatePermissionGroup(::grpc::ServerContext* context, ::proto::UpdatePermissionGroupRequest* request, ::grpc::ServerAsyncResponseWriter< ::proto::UpdatePermissionGroupResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(53, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  typedef WithAsyncMethod_CreateUser<WithAsyncMethod_DeleteUser<WithAsyncMethod_UpdateUser<WithAsyncMethod_GetUser<WithAsyncMethod_GetAllUser<WithAsyncMethod_UserLogin<WithAsyncMethod_UserLogout<WithAsyncMethod_UserOnlineHeartBeatNotifications<WithAsyncMethod_GetUserPermissionGroup<WithAsyncMethod_GetPermissionGroup<WithAsyncMethod_GetAllPermissionGroup<WithAsyncMethod_ChangeUserPermissionGroup<WithAsyncMethod_CreateProject<WithAsyncMethod_DeleteProject<WithAsyncMethod_UpdateProject<WithAsyncMethod_GetProject<WithAsyncMethod_GetAllProject<WithAsyncMethod_CreateSwc<WithAsyncMethod_DeleteSwc<WithAsyncMethod_UpdateSwc<WithAsyncMethod_GetSwcMetaInfo<WithAsyncMethod_GetAllSwcMetaInfo<WithAsyncMethod_CreateSwcSnapshot<WithAsyncMethod_GetAllSnapshotMetaInfo<WithAsyncMethod_GetSnapshot<WithAsyncMethod_GetAllIncrementOperationMetaInfo<WithAsyncMethod_GetIncrementOperation<WithAsyncMethod_CreateSwcNodeData<WithAsyncMethod_DeleteSwcNodeData<WithAsyncMethod_UpdateSwcNodeData<WithAsyncMethod_GetSwcNodeData<WithAsyncMethod_GetSwcFullNodeData<WithAsyncMethod_GetSwcNodeDataListByTimeAndUser<WithAsyncMethod_CreateDailyStatistics<WithAsyncMethod_DeleteDailyStatistics<WithAsyncMethod_UpdateDailyStatistics<WithAsyncMethod_GetDailyStatistics<WithAsyncMethod_GetAllDailyStatistics<WithAsyncMethod_CreateSwcAttachmentAno<WithAsyncMethod_DeleteSwcAttachmentAno<WithAsyncMethod_UpdateSwcAttachmentAno<WithAsyncMethod_GetSwcAttachmentAno<WithAsyncMethod_CreateSwcAttachmentApo<WithAsyncMethod_DeleteSwcAttachmentApo<WithAsyncMethod_UpdateSwcAttachmentApo<WithAsyncMethod_GetSwcAttachmentApo<WithAsyncMethod_RevertSwcVersion<WithAsyncMethod_CreateSwcAttachmentSwc<WithAsyncMethod_DeleteSwcAttachmentSwc<WithAsyncMethod_UpdateSwcAttachmentSwc<WithAsyncMethod_GetSwcAttachmentSwc<WithAsyncMethod_CreatePermissionGroup<WithAsyncMethod_DeletePermissionGroup<WithAsyncMethod_UpdatePermissionGroup<Service > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > AsyncService;
   template <class BaseClass>
   class WithCallbackMethod_CreateUser : public BaseClass {
    private:
@@ -3691,7 +3823,88 @@ class DBMS final {
     virtual ::grpc::ServerUnaryReactor* GetSwcAttachmentSwc(
       ::grpc::CallbackServerContext* /*context*/, const ::proto::GetSwcAttachmentSwcRequest* /*request*/, ::proto::GetSwcAttachmentSwcResponse* /*response*/)  { return nullptr; }
   };
-  typedef WithCallbackMethod_CreateUser<WithCallbackMethod_DeleteUser<WithCallbackMethod_UpdateUser<WithCallbackMethod_GetUser<WithCallbackMethod_GetAllUser<WithCallbackMethod_UserLogin<WithCallbackMethod_UserLogout<WithCallbackMethod_UserOnlineHeartBeatNotifications<WithCallbackMethod_GetUserPermissionGroup<WithCallbackMethod_GetPermissionGroup<WithCallbackMethod_GetAllPermissionGroup<WithCallbackMethod_ChangeUserPermissionGroup<WithCallbackMethod_CreateProject<WithCallbackMethod_DeleteProject<WithCallbackMethod_UpdateProject<WithCallbackMethod_GetProject<WithCallbackMethod_GetAllProject<WithCallbackMethod_CreateSwc<WithCallbackMethod_DeleteSwc<WithCallbackMethod_UpdateSwc<WithCallbackMethod_GetSwcMetaInfo<WithCallbackMethod_GetAllSwcMetaInfo<WithCallbackMethod_CreateSwcSnapshot<WithCallbackMethod_GetAllSnapshotMetaInfo<WithCallbackMethod_GetSnapshot<WithCallbackMethod_GetAllIncrementOperationMetaInfo<WithCallbackMethod_GetIncrementOperation<WithCallbackMethod_CreateSwcNodeData<WithCallbackMethod_DeleteSwcNodeData<WithCallbackMethod_UpdateSwcNodeData<WithCallbackMethod_GetSwcNodeData<WithCallbackMethod_GetSwcFullNodeData<WithCallbackMethod_GetSwcNodeDataListByTimeAndUser<WithCallbackMethod_CreateDailyStatistics<WithCallbackMethod_DeleteDailyStatistics<WithCallbackMethod_UpdateDailyStatistics<WithCallbackMethod_GetDailyStatistics<WithCallbackMethod_GetAllDailyStatistics<WithCallbackMethod_CreateSwcAttachmentAno<WithCallbackMethod_DeleteSwcAttachmentAno<WithCallbackMethod_UpdateSwcAttachmentAno<WithCallbackMethod_GetSwcAttachmentAno<WithCallbackMethod_CreateSwcAttachmentApo<WithCallbackMethod_DeleteSwcAttachmentApo<WithCallbackMethod_UpdateSwcAttachmentApo<WithCallbackMethod_GetSwcAttachmentApo<WithCallbackMethod_RevertSwcVersion<WithCallbackMethod_CreateSwcAttachmentSwc<WithCallbackMethod_DeleteSwcAttachmentSwc<WithCallbackMethod_UpdateSwcAttachmentSwc<WithCallbackMethod_GetSwcAttachmentSwc<Service > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > CallbackService;
+  template <class BaseClass>
+  class WithCallbackMethod_CreatePermissionGroup : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithCallbackMethod_CreatePermissionGroup() {
+      ::grpc::Service::MarkMethodCallback(51,
+          new ::grpc::internal::CallbackUnaryHandler< ::proto::CreatePermissionGroupRequest, ::proto::CreatePermissionGroupResponse>(
+            [this](
+                   ::grpc::CallbackServerContext* context, const ::proto::CreatePermissionGroupRequest* request, ::proto::CreatePermissionGroupResponse* response) { return this->CreatePermissionGroup(context, request, response); }));}
+    void SetMessageAllocatorFor_CreatePermissionGroup(
+        ::grpc::MessageAllocator< ::proto::CreatePermissionGroupRequest, ::proto::CreatePermissionGroupResponse>* allocator) {
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(51);
+      static_cast<::grpc::internal::CallbackUnaryHandler< ::proto::CreatePermissionGroupRequest, ::proto::CreatePermissionGroupResponse>*>(handler)
+              ->SetMessageAllocator(allocator);
+    }
+    ~WithCallbackMethod_CreatePermissionGroup() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status CreatePermissionGroup(::grpc::ServerContext* /*context*/, const ::proto::CreatePermissionGroupRequest* /*request*/, ::proto::CreatePermissionGroupResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerUnaryReactor* CreatePermissionGroup(
+      ::grpc::CallbackServerContext* /*context*/, const ::proto::CreatePermissionGroupRequest* /*request*/, ::proto::CreatePermissionGroupResponse* /*response*/)  { return nullptr; }
+  };
+  template <class BaseClass>
+  class WithCallbackMethod_DeletePermissionGroup : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithCallbackMethod_DeletePermissionGroup() {
+      ::grpc::Service::MarkMethodCallback(52,
+          new ::grpc::internal::CallbackUnaryHandler< ::proto::DeletePermissionGroupRequest, ::proto::DeletePermissionGroupResponse>(
+            [this](
+                   ::grpc::CallbackServerContext* context, const ::proto::DeletePermissionGroupRequest* request, ::proto::DeletePermissionGroupResponse* response) { return this->DeletePermissionGroup(context, request, response); }));}
+    void SetMessageAllocatorFor_DeletePermissionGroup(
+        ::grpc::MessageAllocator< ::proto::DeletePermissionGroupRequest, ::proto::DeletePermissionGroupResponse>* allocator) {
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(52);
+      static_cast<::grpc::internal::CallbackUnaryHandler< ::proto::DeletePermissionGroupRequest, ::proto::DeletePermissionGroupResponse>*>(handler)
+              ->SetMessageAllocator(allocator);
+    }
+    ~WithCallbackMethod_DeletePermissionGroup() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status DeletePermissionGroup(::grpc::ServerContext* /*context*/, const ::proto::DeletePermissionGroupRequest* /*request*/, ::proto::DeletePermissionGroupResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerUnaryReactor* DeletePermissionGroup(
+      ::grpc::CallbackServerContext* /*context*/, const ::proto::DeletePermissionGroupRequest* /*request*/, ::proto::DeletePermissionGroupResponse* /*response*/)  { return nullptr; }
+  };
+  template <class BaseClass>
+  class WithCallbackMethod_UpdatePermissionGroup : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithCallbackMethod_UpdatePermissionGroup() {
+      ::grpc::Service::MarkMethodCallback(53,
+          new ::grpc::internal::CallbackUnaryHandler< ::proto::UpdatePermissionGroupRequest, ::proto::UpdatePermissionGroupResponse>(
+            [this](
+                   ::grpc::CallbackServerContext* context, const ::proto::UpdatePermissionGroupRequest* request, ::proto::UpdatePermissionGroupResponse* response) { return this->UpdatePermissionGroup(context, request, response); }));}
+    void SetMessageAllocatorFor_UpdatePermissionGroup(
+        ::grpc::MessageAllocator< ::proto::UpdatePermissionGroupRequest, ::proto::UpdatePermissionGroupResponse>* allocator) {
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(53);
+      static_cast<::grpc::internal::CallbackUnaryHandler< ::proto::UpdatePermissionGroupRequest, ::proto::UpdatePermissionGroupResponse>*>(handler)
+              ->SetMessageAllocator(allocator);
+    }
+    ~WithCallbackMethod_UpdatePermissionGroup() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status UpdatePermissionGroup(::grpc::ServerContext* /*context*/, const ::proto::UpdatePermissionGroupRequest* /*request*/, ::proto::UpdatePermissionGroupResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerUnaryReactor* UpdatePermissionGroup(
+      ::grpc::CallbackServerContext* /*context*/, const ::proto::UpdatePermissionGroupRequest* /*request*/, ::proto::UpdatePermissionGroupResponse* /*response*/)  { return nullptr; }
+  };
+  typedef WithCallbackMethod_CreateUser<WithCallbackMethod_DeleteUser<WithCallbackMethod_UpdateUser<WithCallbackMethod_GetUser<WithCallbackMethod_GetAllUser<WithCallbackMethod_UserLogin<WithCallbackMethod_UserLogout<WithCallbackMethod_UserOnlineHeartBeatNotifications<WithCallbackMethod_GetUserPermissionGroup<WithCallbackMethod_GetPermissionGroup<WithCallbackMethod_GetAllPermissionGroup<WithCallbackMethod_ChangeUserPermissionGroup<WithCallbackMethod_CreateProject<WithCallbackMethod_DeleteProject<WithCallbackMethod_UpdateProject<WithCallbackMethod_GetProject<WithCallbackMethod_GetAllProject<WithCallbackMethod_CreateSwc<WithCallbackMethod_DeleteSwc<WithCallbackMethod_UpdateSwc<WithCallbackMethod_GetSwcMetaInfo<WithCallbackMethod_GetAllSwcMetaInfo<WithCallbackMethod_CreateSwcSnapshot<WithCallbackMethod_GetAllSnapshotMetaInfo<WithCallbackMethod_GetSnapshot<WithCallbackMethod_GetAllIncrementOperationMetaInfo<WithCallbackMethod_GetIncrementOperation<WithCallbackMethod_CreateSwcNodeData<WithCallbackMethod_DeleteSwcNodeData<WithCallbackMethod_UpdateSwcNodeData<WithCallbackMethod_GetSwcNodeData<WithCallbackMethod_GetSwcFullNodeData<WithCallbackMethod_GetSwcNodeDataListByTimeAndUser<WithCallbackMethod_CreateDailyStatistics<WithCallbackMethod_DeleteDailyStatistics<WithCallbackMethod_UpdateDailyStatistics<WithCallbackMethod_GetDailyStatistics<WithCallbackMethod_GetAllDailyStatistics<WithCallbackMethod_CreateSwcAttachmentAno<WithCallbackMethod_DeleteSwcAttachmentAno<WithCallbackMethod_UpdateSwcAttachmentAno<WithCallbackMethod_GetSwcAttachmentAno<WithCallbackMethod_CreateSwcAttachmentApo<WithCallbackMethod_DeleteSwcAttachmentApo<WithCallbackMethod_UpdateSwcAttachmentApo<WithCallbackMethod_GetSwcAttachmentApo<WithCallbackMethod_RevertSwcVersion<WithCallbackMethod_CreateSwcAttachmentSwc<WithCallbackMethod_DeleteSwcAttachmentSwc<WithCallbackMethod_UpdateSwcAttachmentSwc<WithCallbackMethod_GetSwcAttachmentSwc<WithCallbackMethod_CreatePermissionGroup<WithCallbackMethod_DeletePermissionGroup<WithCallbackMethod_UpdatePermissionGroup<Service > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > CallbackService;
   typedef CallbackService ExperimentalCallbackService;
   template <class BaseClass>
   class WithGenericMethod_CreateUser : public BaseClass {
@@ -4556,6 +4769,57 @@ class DBMS final {
     }
     // disable synchronous version of this method
     ::grpc::Status GetSwcAttachmentSwc(::grpc::ServerContext* /*context*/, const ::proto::GetSwcAttachmentSwcRequest* /*request*/, ::proto::GetSwcAttachmentSwcResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+  };
+  template <class BaseClass>
+  class WithGenericMethod_CreatePermissionGroup : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithGenericMethod_CreatePermissionGroup() {
+      ::grpc::Service::MarkMethodGeneric(51);
+    }
+    ~WithGenericMethod_CreatePermissionGroup() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status CreatePermissionGroup(::grpc::ServerContext* /*context*/, const ::proto::CreatePermissionGroupRequest* /*request*/, ::proto::CreatePermissionGroupResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+  };
+  template <class BaseClass>
+  class WithGenericMethod_DeletePermissionGroup : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithGenericMethod_DeletePermissionGroup() {
+      ::grpc::Service::MarkMethodGeneric(52);
+    }
+    ~WithGenericMethod_DeletePermissionGroup() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status DeletePermissionGroup(::grpc::ServerContext* /*context*/, const ::proto::DeletePermissionGroupRequest* /*request*/, ::proto::DeletePermissionGroupResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+  };
+  template <class BaseClass>
+  class WithGenericMethod_UpdatePermissionGroup : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithGenericMethod_UpdatePermissionGroup() {
+      ::grpc::Service::MarkMethodGeneric(53);
+    }
+    ~WithGenericMethod_UpdatePermissionGroup() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status UpdatePermissionGroup(::grpc::ServerContext* /*context*/, const ::proto::UpdatePermissionGroupRequest* /*request*/, ::proto::UpdatePermissionGroupResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -5578,6 +5842,66 @@ class DBMS final {
     }
     void RequestGetSwcAttachmentSwc(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(50, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_CreatePermissionGroup : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawMethod_CreatePermissionGroup() {
+      ::grpc::Service::MarkMethodRaw(51);
+    }
+    ~WithRawMethod_CreatePermissionGroup() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status CreatePermissionGroup(::grpc::ServerContext* /*context*/, const ::proto::CreatePermissionGroupRequest* /*request*/, ::proto::CreatePermissionGroupResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestCreatePermissionGroup(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(51, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_DeletePermissionGroup : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawMethod_DeletePermissionGroup() {
+      ::grpc::Service::MarkMethodRaw(52);
+    }
+    ~WithRawMethod_DeletePermissionGroup() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status DeletePermissionGroup(::grpc::ServerContext* /*context*/, const ::proto::DeletePermissionGroupRequest* /*request*/, ::proto::DeletePermissionGroupResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestDeletePermissionGroup(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(52, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_UpdatePermissionGroup : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawMethod_UpdatePermissionGroup() {
+      ::grpc::Service::MarkMethodRaw(53);
+    }
+    ~WithRawMethod_UpdatePermissionGroup() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status UpdatePermissionGroup(::grpc::ServerContext* /*context*/, const ::proto::UpdatePermissionGroupRequest* /*request*/, ::proto::UpdatePermissionGroupResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestUpdatePermissionGroup(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(53, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -6700,6 +7024,72 @@ class DBMS final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     virtual ::grpc::ServerUnaryReactor* GetSwcAttachmentSwc(
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
+  };
+  template <class BaseClass>
+  class WithRawCallbackMethod_CreatePermissionGroup : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawCallbackMethod_CreatePermissionGroup() {
+      ::grpc::Service::MarkMethodRawCallback(51,
+          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->CreatePermissionGroup(context, request, response); }));
+    }
+    ~WithRawCallbackMethod_CreatePermissionGroup() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status CreatePermissionGroup(::grpc::ServerContext* /*context*/, const ::proto::CreatePermissionGroupRequest* /*request*/, ::proto::CreatePermissionGroupResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerUnaryReactor* CreatePermissionGroup(
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
+  };
+  template <class BaseClass>
+  class WithRawCallbackMethod_DeletePermissionGroup : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawCallbackMethod_DeletePermissionGroup() {
+      ::grpc::Service::MarkMethodRawCallback(52,
+          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->DeletePermissionGroup(context, request, response); }));
+    }
+    ~WithRawCallbackMethod_DeletePermissionGroup() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status DeletePermissionGroup(::grpc::ServerContext* /*context*/, const ::proto::DeletePermissionGroupRequest* /*request*/, ::proto::DeletePermissionGroupResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerUnaryReactor* DeletePermissionGroup(
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
+  };
+  template <class BaseClass>
+  class WithRawCallbackMethod_UpdatePermissionGroup : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawCallbackMethod_UpdatePermissionGroup() {
+      ::grpc::Service::MarkMethodRawCallback(53,
+          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->UpdatePermissionGroup(context, request, response); }));
+    }
+    ~WithRawCallbackMethod_UpdatePermissionGroup() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status UpdatePermissionGroup(::grpc::ServerContext* /*context*/, const ::proto::UpdatePermissionGroupRequest* /*request*/, ::proto::UpdatePermissionGroupResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerUnaryReactor* UpdatePermissionGroup(
       ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
   };
   template <class BaseClass>
@@ -8079,9 +8469,90 @@ class DBMS final {
     // replace default version of method with streamed unary
     virtual ::grpc::Status StreamedGetSwcAttachmentSwc(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::proto::GetSwcAttachmentSwcRequest,::proto::GetSwcAttachmentSwcResponse>* server_unary_streamer) = 0;
   };
-  typedef WithStreamedUnaryMethod_CreateUser<WithStreamedUnaryMethod_DeleteUser<WithStreamedUnaryMethod_UpdateUser<WithStreamedUnaryMethod_GetUser<WithStreamedUnaryMethod_GetAllUser<WithStreamedUnaryMethod_UserLogin<WithStreamedUnaryMethod_UserLogout<WithStreamedUnaryMethod_UserOnlineHeartBeatNotifications<WithStreamedUnaryMethod_GetUserPermissionGroup<WithStreamedUnaryMethod_GetPermissionGroup<WithStreamedUnaryMethod_GetAllPermissionGroup<WithStreamedUnaryMethod_ChangeUserPermissionGroup<WithStreamedUnaryMethod_CreateProject<WithStreamedUnaryMethod_DeleteProject<WithStreamedUnaryMethod_UpdateProject<WithStreamedUnaryMethod_GetProject<WithStreamedUnaryMethod_GetAllProject<WithStreamedUnaryMethod_CreateSwc<WithStreamedUnaryMethod_DeleteSwc<WithStreamedUnaryMethod_UpdateSwc<WithStreamedUnaryMethod_GetSwcMetaInfo<WithStreamedUnaryMethod_GetAllSwcMetaInfo<WithStreamedUnaryMethod_CreateSwcSnapshot<WithStreamedUnaryMethod_GetAllSnapshotMetaInfo<WithStreamedUnaryMethod_GetSnapshot<WithStreamedUnaryMethod_GetAllIncrementOperationMetaInfo<WithStreamedUnaryMethod_GetIncrementOperation<WithStreamedUnaryMethod_CreateSwcNodeData<WithStreamedUnaryMethod_DeleteSwcNodeData<WithStreamedUnaryMethod_UpdateSwcNodeData<WithStreamedUnaryMethod_GetSwcNodeData<WithStreamedUnaryMethod_GetSwcFullNodeData<WithStreamedUnaryMethod_GetSwcNodeDataListByTimeAndUser<WithStreamedUnaryMethod_CreateDailyStatistics<WithStreamedUnaryMethod_DeleteDailyStatistics<WithStreamedUnaryMethod_UpdateDailyStatistics<WithStreamedUnaryMethod_GetDailyStatistics<WithStreamedUnaryMethod_GetAllDailyStatistics<WithStreamedUnaryMethod_CreateSwcAttachmentAno<WithStreamedUnaryMethod_DeleteSwcAttachmentAno<WithStreamedUnaryMethod_UpdateSwcAttachmentAno<WithStreamedUnaryMethod_GetSwcAttachmentAno<WithStreamedUnaryMethod_CreateSwcAttachmentApo<WithStreamedUnaryMethod_DeleteSwcAttachmentApo<WithStreamedUnaryMethod_UpdateSwcAttachmentApo<WithStreamedUnaryMethod_GetSwcAttachmentApo<WithStreamedUnaryMethod_RevertSwcVersion<WithStreamedUnaryMethod_CreateSwcAttachmentSwc<WithStreamedUnaryMethod_DeleteSwcAttachmentSwc<WithStreamedUnaryMethod_UpdateSwcAttachmentSwc<WithStreamedUnaryMethod_GetSwcAttachmentSwc<Service > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > StreamedUnaryService;
+  template <class BaseClass>
+  class WithStreamedUnaryMethod_CreatePermissionGroup : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithStreamedUnaryMethod_CreatePermissionGroup() {
+      ::grpc::Service::MarkMethodStreamed(51,
+        new ::grpc::internal::StreamedUnaryHandler<
+          ::proto::CreatePermissionGroupRequest, ::proto::CreatePermissionGroupResponse>(
+            [this](::grpc::ServerContext* context,
+                   ::grpc::ServerUnaryStreamer<
+                     ::proto::CreatePermissionGroupRequest, ::proto::CreatePermissionGroupResponse>* streamer) {
+                       return this->StreamedCreatePermissionGroup(context,
+                         streamer);
+                  }));
+    }
+    ~WithStreamedUnaryMethod_CreatePermissionGroup() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable regular version of this method
+    ::grpc::Status CreatePermissionGroup(::grpc::ServerContext* /*context*/, const ::proto::CreatePermissionGroupRequest* /*request*/, ::proto::CreatePermissionGroupResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    // replace default version of method with streamed unary
+    virtual ::grpc::Status StreamedCreatePermissionGroup(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::proto::CreatePermissionGroupRequest,::proto::CreatePermissionGroupResponse>* server_unary_streamer) = 0;
+  };
+  template <class BaseClass>
+  class WithStreamedUnaryMethod_DeletePermissionGroup : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithStreamedUnaryMethod_DeletePermissionGroup() {
+      ::grpc::Service::MarkMethodStreamed(52,
+        new ::grpc::internal::StreamedUnaryHandler<
+          ::proto::DeletePermissionGroupRequest, ::proto::DeletePermissionGroupResponse>(
+            [this](::grpc::ServerContext* context,
+                   ::grpc::ServerUnaryStreamer<
+                     ::proto::DeletePermissionGroupRequest, ::proto::DeletePermissionGroupResponse>* streamer) {
+                       return this->StreamedDeletePermissionGroup(context,
+                         streamer);
+                  }));
+    }
+    ~WithStreamedUnaryMethod_DeletePermissionGroup() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable regular version of this method
+    ::grpc::Status DeletePermissionGroup(::grpc::ServerContext* /*context*/, const ::proto::DeletePermissionGroupRequest* /*request*/, ::proto::DeletePermissionGroupResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    // replace default version of method with streamed unary
+    virtual ::grpc::Status StreamedDeletePermissionGroup(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::proto::DeletePermissionGroupRequest,::proto::DeletePermissionGroupResponse>* server_unary_streamer) = 0;
+  };
+  template <class BaseClass>
+  class WithStreamedUnaryMethod_UpdatePermissionGroup : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithStreamedUnaryMethod_UpdatePermissionGroup() {
+      ::grpc::Service::MarkMethodStreamed(53,
+        new ::grpc::internal::StreamedUnaryHandler<
+          ::proto::UpdatePermissionGroupRequest, ::proto::UpdatePermissionGroupResponse>(
+            [this](::grpc::ServerContext* context,
+                   ::grpc::ServerUnaryStreamer<
+                     ::proto::UpdatePermissionGroupRequest, ::proto::UpdatePermissionGroupResponse>* streamer) {
+                       return this->StreamedUpdatePermissionGroup(context,
+                         streamer);
+                  }));
+    }
+    ~WithStreamedUnaryMethod_UpdatePermissionGroup() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable regular version of this method
+    ::grpc::Status UpdatePermissionGroup(::grpc::ServerContext* /*context*/, const ::proto::UpdatePermissionGroupRequest* /*request*/, ::proto::UpdatePermissionGroupResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    // replace default version of method with streamed unary
+    virtual ::grpc::Status StreamedUpdatePermissionGroup(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::proto::UpdatePermissionGroupRequest,::proto::UpdatePermissionGroupResponse>* server_unary_streamer) = 0;
+  };
+  typedef WithStreamedUnaryMethod_CreateUser<WithStreamedUnaryMethod_DeleteUser<WithStreamedUnaryMethod_UpdateUser<WithStreamedUnaryMethod_GetUser<WithStreamedUnaryMethod_GetAllUser<WithStreamedUnaryMethod_UserLogin<WithStreamedUnaryMethod_UserLogout<WithStreamedUnaryMethod_UserOnlineHeartBeatNotifications<WithStreamedUnaryMethod_GetUserPermissionGroup<WithStreamedUnaryMethod_GetPermissionGroup<WithStreamedUnaryMethod_GetAllPermissionGroup<WithStreamedUnaryMethod_ChangeUserPermissionGroup<WithStreamedUnaryMethod_CreateProject<WithStreamedUnaryMethod_DeleteProject<WithStreamedUnaryMethod_UpdateProject<WithStreamedUnaryMethod_GetProject<WithStreamedUnaryMethod_GetAllProject<WithStreamedUnaryMethod_CreateSwc<WithStreamedUnaryMethod_DeleteSwc<WithStreamedUnaryMethod_UpdateSwc<WithStreamedUnaryMethod_GetSwcMetaInfo<WithStreamedUnaryMethod_GetAllSwcMetaInfo<WithStreamedUnaryMethod_CreateSwcSnapshot<WithStreamedUnaryMethod_GetAllSnapshotMetaInfo<WithStreamedUnaryMethod_GetSnapshot<WithStreamedUnaryMethod_GetAllIncrementOperationMetaInfo<WithStreamedUnaryMethod_GetIncrementOperation<WithStreamedUnaryMethod_CreateSwcNodeData<WithStreamedUnaryMethod_DeleteSwcNodeData<WithStreamedUnaryMethod_UpdateSwcNodeData<WithStreamedUnaryMethod_GetSwcNodeData<WithStreamedUnaryMethod_GetSwcFullNodeData<WithStreamedUnaryMethod_GetSwcNodeDataListByTimeAndUser<WithStreamedUnaryMethod_CreateDailyStatistics<WithStreamedUnaryMethod_DeleteDailyStatistics<WithStreamedUnaryMethod_UpdateDailyStatistics<WithStreamedUnaryMethod_GetDailyStatistics<WithStreamedUnaryMethod_GetAllDailyStatistics<WithStreamedUnaryMethod_CreateSwcAttachmentAno<WithStreamedUnaryMethod_DeleteSwcAttachmentAno<WithStreamedUnaryMethod_UpdateSwcAttachmentAno<WithStreamedUnaryMethod_GetSwcAttachmentAno<WithStreamedUnaryMethod_CreateSwcAttachmentApo<WithStreamedUnaryMethod_DeleteSwcAttachmentApo<WithStreamedUnaryMethod_UpdateSwcAttachmentApo<WithStreamedUnaryMethod_GetSwcAttachmentApo<WithStreamedUnaryMethod_RevertSwcVersion<WithStreamedUnaryMethod_CreateSwcAttachmentSwc<WithStreamedUnaryMethod_DeleteSwcAttachmentSwc<WithStreamedUnaryMethod_UpdateSwcAttachmentSwc<WithStreamedUnaryMethod_GetSwcAttachmentSwc<WithStreamedUnaryMethod_CreatePermissionGroup<WithStreamedUnaryMethod_DeletePermissionGroup<WithStreamedUnaryMethod_UpdatePermissionGroup<Service > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > StreamedUnaryService;
   typedef Service SplitStreamedService;
-  typedef WithStreamedUnaryMethod_CreateUser<WithStreamedUnaryMethod_DeleteUser<WithStreamedUnaryMethod_UpdateUser<WithStreamedUnaryMethod_GetUser<WithStreamedUnaryMethod_GetAllUser<WithStreamedUnaryMethod_UserLogin<WithStreamedUnaryMethod_UserLogout<WithStreamedUnaryMethod_UserOnlineHeartBeatNotifications<WithStreamedUnaryMethod_GetUserPermissionGroup<WithStreamedUnaryMethod_GetPermissionGroup<WithStreamedUnaryMethod_GetAllPermissionGroup<WithStreamedUnaryMethod_ChangeUserPermissionGroup<WithStreamedUnaryMethod_CreateProject<WithStreamedUnaryMethod_DeleteProject<WithStreamedUnaryMethod_UpdateProject<WithStreamedUnaryMethod_GetProject<WithStreamedUnaryMethod_GetAllProject<WithStreamedUnaryMethod_CreateSwc<WithStreamedUnaryMethod_DeleteSwc<WithStreamedUnaryMethod_UpdateSwc<WithStreamedUnaryMethod_GetSwcMetaInfo<WithStreamedUnaryMethod_GetAllSwcMetaInfo<WithStreamedUnaryMethod_CreateSwcSnapshot<WithStreamedUnaryMethod_GetAllSnapshotMetaInfo<WithStreamedUnaryMethod_GetSnapshot<WithStreamedUnaryMethod_GetAllIncrementOperationMetaInfo<WithStreamedUnaryMethod_GetIncrementOperation<WithStreamedUnaryMethod_CreateSwcNodeData<WithStreamedUnaryMethod_DeleteSwcNodeData<WithStreamedUnaryMethod_UpdateSwcNodeData<WithStreamedUnaryMethod_GetSwcNodeData<WithStreamedUnaryMethod_GetSwcFullNodeData<WithStreamedUnaryMethod_GetSwcNodeDataListByTimeAndUser<WithStreamedUnaryMethod_CreateDailyStatistics<WithStreamedUnaryMethod_DeleteDailyStatistics<WithStreamedUnaryMethod_UpdateDailyStatistics<WithStreamedUnaryMethod_GetDailyStatistics<WithStreamedUnaryMethod_GetAllDailyStatistics<WithStreamedUnaryMethod_CreateSwcAttachmentAno<WithStreamedUnaryMethod_DeleteSwcAttachmentAno<WithStreamedUnaryMethod_UpdateSwcAttachmentAno<WithStreamedUnaryMethod_GetSwcAttachmentAno<WithStreamedUnaryMethod_CreateSwcAttachmentApo<WithStreamedUnaryMethod_DeleteSwcAttachmentApo<WithStreamedUnaryMethod_UpdateSwcAttachmentApo<WithStreamedUnaryMethod_GetSwcAttachmentApo<WithStreamedUnaryMethod_RevertSwcVersion<WithStreamedUnaryMethod_CreateSwcAttachmentSwc<WithStreamedUnaryMethod_DeleteSwcAttachmentSwc<WithStreamedUnaryMethod_UpdateSwcAttachmentSwc<WithStreamedUnaryMethod_GetSwcAttachmentSwc<Service > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > StreamedService;
+  typedef WithStreamedUnaryMethod_CreateUser<WithStreamedUnaryMethod_DeleteUser<WithStreamedUnaryMethod_UpdateUser<WithStreamedUnaryMethod_GetUser<WithStreamedUnaryMethod_GetAllUser<WithStreamedUnaryMethod_UserLogin<WithStreamedUnaryMethod_UserLogout<WithStreamedUnaryMethod_UserOnlineHeartBeatNotifications<WithStreamedUnaryMethod_GetUserPermissionGroup<WithStreamedUnaryMethod_GetPermissionGroup<WithStreamedUnaryMethod_GetAllPermissionGroup<WithStreamedUnaryMethod_ChangeUserPermissionGroup<WithStreamedUnaryMethod_CreateProject<WithStreamedUnaryMethod_DeleteProject<WithStreamedUnaryMethod_UpdateProject<WithStreamedUnaryMethod_GetProject<WithStreamedUnaryMethod_GetAllProject<WithStreamedUnaryMethod_CreateSwc<WithStreamedUnaryMethod_DeleteSwc<WithStreamedUnaryMethod_UpdateSwc<WithStreamedUnaryMethod_GetSwcMetaInfo<WithStreamedUnaryMethod_GetAllSwcMetaInfo<WithStreamedUnaryMethod_CreateSwcSnapshot<WithStreamedUnaryMethod_GetAllSnapshotMetaInfo<WithStreamedUnaryMethod_GetSnapshot<WithStreamedUnaryMethod_GetAllIncrementOperationMetaInfo<WithStreamedUnaryMethod_GetIncrementOperation<WithStreamedUnaryMethod_CreateSwcNodeData<WithStreamedUnaryMethod_DeleteSwcNodeData<WithStreamedUnaryMethod_UpdateSwcNodeData<WithStreamedUnaryMethod_GetSwcNodeData<WithStreamedUnaryMethod_GetSwcFullNodeData<WithStreamedUnaryMethod_GetSwcNodeDataListByTimeAndUser<WithStreamedUnaryMethod_CreateDailyStatistics<WithStreamedUnaryMethod_DeleteDailyStatistics<WithStreamedUnaryMethod_UpdateDailyStatistics<WithStreamedUnaryMethod_GetDailyStatistics<WithStreamedUnaryMethod_GetAllDailyStatistics<WithStreamedUnaryMethod_CreateSwcAttachmentAno<WithStreamedUnaryMethod_DeleteSwcAttachmentAno<WithStreamedUnaryMethod_UpdateSwcAttachmentAno<WithStreamedUnaryMethod_GetSwcAttachmentAno<WithStreamedUnaryMethod_CreateSwcAttachmentApo<WithStreamedUnaryMethod_DeleteSwcAttachmentApo<WithStreamedUnaryMethod_UpdateSwcAttachmentApo<WithStreamedUnaryMethod_GetSwcAttachmentApo<WithStreamedUnaryMethod_RevertSwcVersion<WithStreamedUnaryMethod_CreateSwcAttachmentSwc<WithStreamedUnaryMethod_DeleteSwcAttachmentSwc<WithStreamedUnaryMethod_UpdateSwcAttachmentSwc<WithStreamedUnaryMethod_GetSwcAttachmentSwc<WithStreamedUnaryMethod_CreatePermissionGroup<WithStreamedUnaryMethod_DeletePermissionGroup<WithStreamedUnaryMethod_UpdatePermissionGroup<Service > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > StreamedService;
 };
 
 }  // namespace proto
