@@ -1264,14 +1264,14 @@
         ]
       }
     },
-    "/proto.DBMS/GetUser": {
+    "/proto.DBMS/GetUserByName": {
       "post": {
-        "operationId": "DBMS_GetUser",
+        "operationId": "DBMS_GetUserByName",
         "responses": {
           "200": {
             "description": "A successful response.",
             "schema": {
-              "$ref": "#/definitions/protoGetUserResponse"
+              "$ref": "#/definitions/protoGetUserByNameResponse"
             }
           },
           "default": {
@@ -1287,7 +1287,39 @@
             "in": "body",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/protoGetUserRequest"
+              "$ref": "#/definitions/protoGetUserByNameRequest"
+            }
+          }
+        ],
+        "tags": [
+          "DBMS"
+        ]
+      }
+    },
+    "/proto.DBMS/GetUserByUuid": {
+      "post": {
+        "operationId": "DBMS_GetUserByUuid",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/protoGetUserByUuidResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/protoGetUserByUuidRequest"
             }
           }
         ],
@@ -2883,6 +2915,56 @@
         }
       }
     },
+    "protoGetUserByNameRequest": {
+      "type": "object",
+      "properties": {
+        "metaInfo": {
+          "$ref": "#/definitions/protoRequestMetaInfoV1"
+        },
+        "UserVerifyInfo": {
+          "$ref": "#/definitions/protoUserVerifyInfoV1"
+        },
+        "UserName": {
+          "type": "string"
+        }
+      }
+    },
+    "protoGetUserByNameResponse": {
+      "type": "object",
+      "properties": {
+        "metaInfo": {
+          "$ref": "#/definitions/protoResponseMetaInfoV1"
+        },
+        "UserInfo": {
+          "$ref": "#/definitions/protoUserMetaInfoV1"
+        }
+      }
+    },
+    "protoGetUserByUuidRequest": {
+      "type": "object",
+      "properties": {
+        "metaInfo": {
+          "$ref": "#/definitions/protoRequestMetaInfoV1"
+        },
+        "UserVerifyInfo": {
+          "$ref": "#/definitions/protoUserVerifyInfoV1"
+        },
+        "UserUuid": {
+          "type": "string"
+        }
+      }
+    },
+    "protoGetUserByUuidResponse": {
+      "type": "object",
+      "properties": {
+        "metaInfo": {
+          "$ref": "#/definitions/protoResponseMetaInfoV1"
+        },
+        "UserInfo": {
+          "$ref": "#/definitions/protoUserMetaInfoV1"
+        }
+      }
+    },
     "protoGetUserPermissionGroupRequest": {
       "type": "object",
       "properties": {
@@ -2902,31 +2984,6 @@
         },
         "PermissionGroup": {
           "$ref": "#/definitions/protoPermissionGroupMetaInfoV1"
-        }
-      }
-    },
-    "protoGetUserRequest": {
-      "type": "object",
-      "properties": {
-        "metaInfo": {
-          "$ref": "#/definitions/protoRequestMetaInfoV1"
-        },
-        "UserVerifyInfo": {
-          "$ref": "#/definitions/protoUserVerifyInfoV1"
-        },
-        "UserUuid": {
-          "type": "string"
-        }
-      }
-    },
-    "protoGetUserResponse": {
-      "type": "object",
-      "properties": {
-        "metaInfo": {
-          "$ref": "#/definitions/protoResponseMetaInfoV1"
-        },
-        "UserInfo": {
-          "$ref": "#/definitions/protoUserMetaInfoV1"
         }
       }
     },

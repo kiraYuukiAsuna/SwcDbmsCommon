@@ -21,7 +21,12 @@ message UpdateUserResponse{
     UserMetaInfoV1 UserInfo = 2;
 }
 
-message GetUserResponse{
+message GetUserByUuidResponse{
+    ResponseMetaInfoV1 metaInfo = 1;
+    UserMetaInfoV1 UserInfo = 2;
+}
+
+message GetUserByNameResponse{
     ResponseMetaInfoV1 metaInfo = 1;
     UserMetaInfoV1 UserInfo = 2;
 }

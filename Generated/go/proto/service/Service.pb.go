@@ -38,7 +38,7 @@ var file_Service_Service_proto_rawDesc = []byte{
 	0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x1a, 0x15, 0x4d, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65, 0x2f,
 	0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x1a, 0x16, 0x4d,
 	0x65, 0x73, 0x73, 0x61, 0x67, 0x65, 0x2f, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x2e,
-	0x70, 0x72, 0x6f, 0x74, 0x6f, 0x32, 0xe4, 0x26, 0x0a, 0x04, 0x44, 0x42, 0x4d, 0x53, 0x12, 0x43,
+	0x70, 0x72, 0x6f, 0x74, 0x6f, 0x32, 0xc4, 0x27, 0x0a, 0x04, 0x44, 0x42, 0x4d, 0x53, 0x12, 0x43,
 	0x0a, 0x0a, 0x43, 0x72, 0x65, 0x61, 0x74, 0x65, 0x55, 0x73, 0x65, 0x72, 0x12, 0x18, 0x2e, 0x70,
 	0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x43, 0x72, 0x65, 0x61, 0x74, 0x65, 0x55, 0x73, 0x65, 0x72, 0x52,
 	0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x19, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x43,
@@ -51,10 +51,16 @@ var file_Service_Service_proto_rawDesc = []byte{
 	0x74, 0x65, 0x55, 0x73, 0x65, 0x72, 0x12, 0x18, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x55,
 	0x70, 0x64, 0x61, 0x74, 0x65, 0x55, 0x73, 0x65, 0x72, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74,
 	0x1a, 0x19, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x55, 0x70, 0x64, 0x61, 0x74, 0x65, 0x55,
-	0x73, 0x65, 0x72, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x12, 0x3a, 0x0a,
-	0x07, 0x47, 0x65, 0x74, 0x55, 0x73, 0x65, 0x72, 0x12, 0x15, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f,
-	0x2e, 0x47, 0x65, 0x74, 0x55, 0x73, 0x65, 0x72, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a,
-	0x16, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x47, 0x65, 0x74, 0x55, 0x73, 0x65, 0x72, 0x52,
+	0x73, 0x65, 0x72, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x12, 0x4c, 0x0a,
+	0x0d, 0x47, 0x65, 0x74, 0x55, 0x73, 0x65, 0x72, 0x42, 0x79, 0x55, 0x75, 0x69, 0x64, 0x12, 0x1b,
+	0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x47, 0x65, 0x74, 0x55, 0x73, 0x65, 0x72, 0x42, 0x79,
+	0x55, 0x75, 0x69, 0x64, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x1c, 0x2e, 0x70, 0x72,
+	0x6f, 0x74, 0x6f, 0x2e, 0x47, 0x65, 0x74, 0x55, 0x73, 0x65, 0x72, 0x42, 0x79, 0x55, 0x75, 0x69,
+	0x64, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x12, 0x4c, 0x0a, 0x0d, 0x47,
+	0x65, 0x74, 0x55, 0x73, 0x65, 0x72, 0x42, 0x79, 0x4e, 0x61, 0x6d, 0x65, 0x12, 0x1b, 0x2e, 0x70,
+	0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x47, 0x65, 0x74, 0x55, 0x73, 0x65, 0x72, 0x42, 0x79, 0x4e, 0x61,
+	0x6d, 0x65, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x1c, 0x2e, 0x70, 0x72, 0x6f, 0x74,
+	0x6f, 0x2e, 0x47, 0x65, 0x74, 0x55, 0x73, 0x65, 0x72, 0x42, 0x79, 0x4e, 0x61, 0x6d, 0x65, 0x52,
 	0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x12, 0x43, 0x0a, 0x0a, 0x47, 0x65, 0x74,
 	0x41, 0x6c, 0x6c, 0x55, 0x73, 0x65, 0x72, 0x12, 0x18, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e,
 	0x47, 0x65, 0x74, 0x41, 0x6c, 0x6c, 0x55, 0x73, 0x65, 0x72, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73,
@@ -359,223 +365,227 @@ var file_Service_Service_proto_goTypes = []interface{}{
 	(*request.CreateUserRequest)(nil),                         // 0: proto.CreateUserRequest
 	(*request.DeleteUserRequest)(nil),                         // 1: proto.DeleteUserRequest
 	(*request.UpdateUserRequest)(nil),                         // 2: proto.UpdateUserRequest
-	(*request.GetUserRequest)(nil),                            // 3: proto.GetUserRequest
-	(*request.GetAllUserRequest)(nil),                         // 4: proto.GetAllUserRequest
-	(*request.UserLoginRequest)(nil),                          // 5: proto.UserLoginRequest
-	(*request.UserLogoutRequest)(nil),                         // 6: proto.UserLogoutRequest
-	(*request.UserOnlineHeartBeatNotification)(nil),           // 7: proto.UserOnlineHeartBeatNotification
-	(*request.GetUserPermissionGroupRequest)(nil),             // 8: proto.GetUserPermissionGroupRequest
-	(*request.GetPermissionGroupRequest)(nil),                 // 9: proto.GetPermissionGroupRequest
-	(*request.GetAllPermissionGroupRequest)(nil),              // 10: proto.GetAllPermissionGroupRequest
-	(*request.ChangeUserPermissionGroupRequest)(nil),          // 11: proto.ChangeUserPermissionGroupRequest
-	(*request.CreateProjectRequest)(nil),                      // 12: proto.CreateProjectRequest
-	(*request.DeleteProjectRequest)(nil),                      // 13: proto.DeleteProjectRequest
-	(*request.UpdateProjectRequest)(nil),                      // 14: proto.UpdateProjectRequest
-	(*request.GetProjectRequest)(nil),                         // 15: proto.GetProjectRequest
-	(*request.GetAllProjectRequest)(nil),                      // 16: proto.GetAllProjectRequest
-	(*request.CreateSwcRequest)(nil),                          // 17: proto.CreateSwcRequest
-	(*request.DeleteSwcRequest)(nil),                          // 18: proto.DeleteSwcRequest
-	(*request.UpdateSwcRequest)(nil),                          // 19: proto.UpdateSwcRequest
-	(*request.GetSwcMetaInfoRequest)(nil),                     // 20: proto.GetSwcMetaInfoRequest
-	(*request.GetAllSwcMetaInfoRequest)(nil),                  // 21: proto.GetAllSwcMetaInfoRequest
-	(*request.CreateSwcSnapshotRequest)(nil),                  // 22: proto.CreateSwcSnapshotRequest
-	(*request.GetAllSnapshotMetaInfoRequest)(nil),             // 23: proto.GetAllSnapshotMetaInfoRequest
-	(*request.GetSnapshotRequest)(nil),                        // 24: proto.GetSnapshotRequest
-	(*request.GetAllIncrementOperationMetaInfoRequest)(nil),   // 25: proto.GetAllIncrementOperationMetaInfoRequest
-	(*request.GetIncrementOperationRequest)(nil),              // 26: proto.GetIncrementOperationRequest
-	(*request.CreateSwcNodeDataRequest)(nil),                  // 27: proto.CreateSwcNodeDataRequest
-	(*request.DeleteSwcNodeDataRequest)(nil),                  // 28: proto.DeleteSwcNodeDataRequest
-	(*request.UpdateSwcNodeDataRequest)(nil),                  // 29: proto.UpdateSwcNodeDataRequest
-	(*request.GetSwcNodeDataRequest)(nil),                     // 30: proto.GetSwcNodeDataRequest
-	(*request.GetSwcFullNodeDataRequest)(nil),                 // 31: proto.GetSwcFullNodeDataRequest
-	(*request.GetSwcNodeDataListByTimeAndUserRequest)(nil),    // 32: proto.GetSwcNodeDataListByTimeAndUserRequest
-	(*request.CreateDailyStatisticsRequest)(nil),              // 33: proto.CreateDailyStatisticsRequest
-	(*request.DeleteDailyStatisticsRequest)(nil),              // 34: proto.DeleteDailyStatisticsRequest
-	(*request.UpdateDailyStatisticsRequest)(nil),              // 35: proto.UpdateDailyStatisticsRequest
-	(*request.GetDailyStatisticsRequest)(nil),                 // 36: proto.GetDailyStatisticsRequest
-	(*request.GetAllDailyStatisticsRequest)(nil),              // 37: proto.GetAllDailyStatisticsRequest
-	(*request.CreateSwcAttachmentAnoRequest)(nil),             // 38: proto.CreateSwcAttachmentAnoRequest
-	(*request.DeleteSwcAttachmentAnoRequest)(nil),             // 39: proto.DeleteSwcAttachmentAnoRequest
-	(*request.UpdateSwcAttachmentAnoRequest)(nil),             // 40: proto.UpdateSwcAttachmentAnoRequest
-	(*request.GetSwcAttachmentAnoRequest)(nil),                // 41: proto.GetSwcAttachmentAnoRequest
-	(*request.CreateSwcAttachmentApoRequest)(nil),             // 42: proto.CreateSwcAttachmentApoRequest
-	(*request.DeleteSwcAttachmentApoRequest)(nil),             // 43: proto.DeleteSwcAttachmentApoRequest
-	(*request.UpdateSwcAttachmentApoRequest)(nil),             // 44: proto.UpdateSwcAttachmentApoRequest
-	(*request.GetSwcAttachmentApoRequest)(nil),                // 45: proto.GetSwcAttachmentApoRequest
-	(*request.RevertSwcVersionRequest)(nil),                   // 46: proto.RevertSwcVersionRequest
-	(*request.CreateSwcAttachmentSwcRequest)(nil),             // 47: proto.CreateSwcAttachmentSwcRequest
-	(*request.DeleteSwcAttachmentSwcRequest)(nil),             // 48: proto.DeleteSwcAttachmentSwcRequest
-	(*request.UpdateSwcAttachmentSwcRequest)(nil),             // 49: proto.UpdateSwcAttachmentSwcRequest
-	(*request.GetSwcAttachmentSwcRequest)(nil),                // 50: proto.GetSwcAttachmentSwcRequest
-	(*request.CreatePermissionGroupRequest)(nil),              // 51: proto.CreatePermissionGroupRequest
-	(*request.DeletePermissionGroupRequest)(nil),              // 52: proto.DeletePermissionGroupRequest
-	(*request.UpdatePermissionGroupRequest)(nil),              // 53: proto.UpdatePermissionGroupRequest
-	(*response.CreateUserResponse)(nil),                       // 54: proto.CreateUserResponse
-	(*response.DeleteUserResponse)(nil),                       // 55: proto.DeleteUserResponse
-	(*response.UpdateUserResponse)(nil),                       // 56: proto.UpdateUserResponse
-	(*response.GetUserResponse)(nil),                          // 57: proto.GetUserResponse
-	(*response.GetAllUserResponse)(nil),                       // 58: proto.GetAllUserResponse
-	(*response.UserLoginResponse)(nil),                        // 59: proto.UserLoginResponse
-	(*response.UserLogoutResponse)(nil),                       // 60: proto.UserLogoutResponse
-	(*response.UserOnlineHeartBeatResponse)(nil),              // 61: proto.UserOnlineHeartBeatResponse
-	(*response.GetUserPermissionGroupResponse)(nil),           // 62: proto.GetUserPermissionGroupResponse
-	(*response.GetPermissionGroupResponse)(nil),               // 63: proto.GetPermissionGroupResponse
-	(*response.GetAllPermissionGroupResponse)(nil),            // 64: proto.GetAllPermissionGroupResponse
-	(*response.ChangeUserPermissionGroupResponse)(nil),        // 65: proto.ChangeUserPermissionGroupResponse
-	(*response.CreateProjectResponse)(nil),                    // 66: proto.CreateProjectResponse
-	(*response.DeleteProjectResponse)(nil),                    // 67: proto.DeleteProjectResponse
-	(*response.UpdateProjectResponse)(nil),                    // 68: proto.UpdateProjectResponse
-	(*response.GetProjectResponse)(nil),                       // 69: proto.GetProjectResponse
-	(*response.GetAllProjectResponse)(nil),                    // 70: proto.GetAllProjectResponse
-	(*response.CreateSwcResponse)(nil),                        // 71: proto.CreateSwcResponse
-	(*response.DeleteSwcResponse)(nil),                        // 72: proto.DeleteSwcResponse
-	(*response.UpdateSwcResponse)(nil),                        // 73: proto.UpdateSwcResponse
-	(*response.GetSwcMetaInfoResponse)(nil),                   // 74: proto.GetSwcMetaInfoResponse
-	(*response.GetAllSwcMetaInfoResponse)(nil),                // 75: proto.GetAllSwcMetaInfoResponse
-	(*response.CreateSwcSnapshotResponse)(nil),                // 76: proto.CreateSwcSnapshotResponse
-	(*response.GetAllSnapshotMetaInfoResponse)(nil),           // 77: proto.GetAllSnapshotMetaInfoResponse
-	(*response.GetSnapshotResponse)(nil),                      // 78: proto.GetSnapshotResponse
-	(*response.GetAllIncrementOperationMetaInfoResponse)(nil), // 79: proto.GetAllIncrementOperationMetaInfoResponse
-	(*response.GetIncrementOperationResponse)(nil),            // 80: proto.GetIncrementOperationResponse
-	(*response.CreateSwcNodeDataResponse)(nil),                // 81: proto.CreateSwcNodeDataResponse
-	(*response.DeleteSwcNodeDataResponse)(nil),                // 82: proto.DeleteSwcNodeDataResponse
-	(*response.UpdateSwcNodeDataResponse)(nil),                // 83: proto.UpdateSwcNodeDataResponse
-	(*response.GetSwcNodeDataResponse)(nil),                   // 84: proto.GetSwcNodeDataResponse
-	(*response.GetSwcFullNodeDataResponse)(nil),               // 85: proto.GetSwcFullNodeDataResponse
-	(*response.GetSwcNodeDataListByTimeAndUserResponse)(nil),  // 86: proto.GetSwcNodeDataListByTimeAndUserResponse
-	(*response.CreateDailyStatisticsResponse)(nil),            // 87: proto.CreateDailyStatisticsResponse
-	(*response.DeleteDailyStatisticsResponse)(nil),            // 88: proto.DeleteDailyStatisticsResponse
-	(*response.UpdateDailyStatisticsResponse)(nil),            // 89: proto.UpdateDailyStatisticsResponse
-	(*response.GetDailyStatisticsResponse)(nil),               // 90: proto.GetDailyStatisticsResponse
-	(*response.GetAllDailyStatisticsResponse)(nil),            // 91: proto.GetAllDailyStatisticsResponse
-	(*response.CreateSwcAttachmentAnoResponse)(nil),           // 92: proto.CreateSwcAttachmentAnoResponse
-	(*response.DeleteSwcAttachmentAnoResponse)(nil),           // 93: proto.DeleteSwcAttachmentAnoResponse
-	(*response.UpdateSwcAttachmentAnoResponse)(nil),           // 94: proto.UpdateSwcAttachmentAnoResponse
-	(*response.GetSwcAttachmentAnoResponse)(nil),              // 95: proto.GetSwcAttachmentAnoResponse
-	(*response.CreateSwcAttachmentApoResponse)(nil),           // 96: proto.CreateSwcAttachmentApoResponse
-	(*response.DeleteSwcAttachmentApoResponse)(nil),           // 97: proto.DeleteSwcAttachmentApoResponse
-	(*response.UpdateSwcAttachmentApoResponse)(nil),           // 98: proto.UpdateSwcAttachmentApoResponse
-	(*response.GetSwcAttachmentApoResponse)(nil),              // 99: proto.GetSwcAttachmentApoResponse
-	(*response.RevertSwcVersionResponse)(nil),                 // 100: proto.RevertSwcVersionResponse
-	(*response.CreateSwcAttachmentSwcResponse)(nil),           // 101: proto.CreateSwcAttachmentSwcResponse
-	(*response.DeleteSwcAttachmentSwcResponse)(nil),           // 102: proto.DeleteSwcAttachmentSwcResponse
-	(*response.UpdateSwcAttachmentSwcResponse)(nil),           // 103: proto.UpdateSwcAttachmentSwcResponse
-	(*response.GetSwcAttachmentSwcResponse)(nil),              // 104: proto.GetSwcAttachmentSwcResponse
-	(*response.CreatePermissionGroupResponse)(nil),            // 105: proto.CreatePermissionGroupResponse
-	(*response.DeletePermissionGroupResponse)(nil),            // 106: proto.DeletePermissionGroupResponse
-	(*response.UpdatePermissionGroupResponse)(nil),            // 107: proto.UpdatePermissionGroupResponse
+	(*request.GetUserByUuidRequest)(nil),                      // 3: proto.GetUserByUuidRequest
+	(*request.GetUserByNameRequest)(nil),                      // 4: proto.GetUserByNameRequest
+	(*request.GetAllUserRequest)(nil),                         // 5: proto.GetAllUserRequest
+	(*request.UserLoginRequest)(nil),                          // 6: proto.UserLoginRequest
+	(*request.UserLogoutRequest)(nil),                         // 7: proto.UserLogoutRequest
+	(*request.UserOnlineHeartBeatNotification)(nil),           // 8: proto.UserOnlineHeartBeatNotification
+	(*request.GetUserPermissionGroupRequest)(nil),             // 9: proto.GetUserPermissionGroupRequest
+	(*request.GetPermissionGroupRequest)(nil),                 // 10: proto.GetPermissionGroupRequest
+	(*request.GetAllPermissionGroupRequest)(nil),              // 11: proto.GetAllPermissionGroupRequest
+	(*request.ChangeUserPermissionGroupRequest)(nil),          // 12: proto.ChangeUserPermissionGroupRequest
+	(*request.CreateProjectRequest)(nil),                      // 13: proto.CreateProjectRequest
+	(*request.DeleteProjectRequest)(nil),                      // 14: proto.DeleteProjectRequest
+	(*request.UpdateProjectRequest)(nil),                      // 15: proto.UpdateProjectRequest
+	(*request.GetProjectRequest)(nil),                         // 16: proto.GetProjectRequest
+	(*request.GetAllProjectRequest)(nil),                      // 17: proto.GetAllProjectRequest
+	(*request.CreateSwcRequest)(nil),                          // 18: proto.CreateSwcRequest
+	(*request.DeleteSwcRequest)(nil),                          // 19: proto.DeleteSwcRequest
+	(*request.UpdateSwcRequest)(nil),                          // 20: proto.UpdateSwcRequest
+	(*request.GetSwcMetaInfoRequest)(nil),                     // 21: proto.GetSwcMetaInfoRequest
+	(*request.GetAllSwcMetaInfoRequest)(nil),                  // 22: proto.GetAllSwcMetaInfoRequest
+	(*request.CreateSwcSnapshotRequest)(nil),                  // 23: proto.CreateSwcSnapshotRequest
+	(*request.GetAllSnapshotMetaInfoRequest)(nil),             // 24: proto.GetAllSnapshotMetaInfoRequest
+	(*request.GetSnapshotRequest)(nil),                        // 25: proto.GetSnapshotRequest
+	(*request.GetAllIncrementOperationMetaInfoRequest)(nil),   // 26: proto.GetAllIncrementOperationMetaInfoRequest
+	(*request.GetIncrementOperationRequest)(nil),              // 27: proto.GetIncrementOperationRequest
+	(*request.CreateSwcNodeDataRequest)(nil),                  // 28: proto.CreateSwcNodeDataRequest
+	(*request.DeleteSwcNodeDataRequest)(nil),                  // 29: proto.DeleteSwcNodeDataRequest
+	(*request.UpdateSwcNodeDataRequest)(nil),                  // 30: proto.UpdateSwcNodeDataRequest
+	(*request.GetSwcNodeDataRequest)(nil),                     // 31: proto.GetSwcNodeDataRequest
+	(*request.GetSwcFullNodeDataRequest)(nil),                 // 32: proto.GetSwcFullNodeDataRequest
+	(*request.GetSwcNodeDataListByTimeAndUserRequest)(nil),    // 33: proto.GetSwcNodeDataListByTimeAndUserRequest
+	(*request.CreateDailyStatisticsRequest)(nil),              // 34: proto.CreateDailyStatisticsRequest
+	(*request.DeleteDailyStatisticsRequest)(nil),              // 35: proto.DeleteDailyStatisticsRequest
+	(*request.UpdateDailyStatisticsRequest)(nil),              // 36: proto.UpdateDailyStatisticsRequest
+	(*request.GetDailyStatisticsRequest)(nil),                 // 37: proto.GetDailyStatisticsRequest
+	(*request.GetAllDailyStatisticsRequest)(nil),              // 38: proto.GetAllDailyStatisticsRequest
+	(*request.CreateSwcAttachmentAnoRequest)(nil),             // 39: proto.CreateSwcAttachmentAnoRequest
+	(*request.DeleteSwcAttachmentAnoRequest)(nil),             // 40: proto.DeleteSwcAttachmentAnoRequest
+	(*request.UpdateSwcAttachmentAnoRequest)(nil),             // 41: proto.UpdateSwcAttachmentAnoRequest
+	(*request.GetSwcAttachmentAnoRequest)(nil),                // 42: proto.GetSwcAttachmentAnoRequest
+	(*request.CreateSwcAttachmentApoRequest)(nil),             // 43: proto.CreateSwcAttachmentApoRequest
+	(*request.DeleteSwcAttachmentApoRequest)(nil),             // 44: proto.DeleteSwcAttachmentApoRequest
+	(*request.UpdateSwcAttachmentApoRequest)(nil),             // 45: proto.UpdateSwcAttachmentApoRequest
+	(*request.GetSwcAttachmentApoRequest)(nil),                // 46: proto.GetSwcAttachmentApoRequest
+	(*request.RevertSwcVersionRequest)(nil),                   // 47: proto.RevertSwcVersionRequest
+	(*request.CreateSwcAttachmentSwcRequest)(nil),             // 48: proto.CreateSwcAttachmentSwcRequest
+	(*request.DeleteSwcAttachmentSwcRequest)(nil),             // 49: proto.DeleteSwcAttachmentSwcRequest
+	(*request.UpdateSwcAttachmentSwcRequest)(nil),             // 50: proto.UpdateSwcAttachmentSwcRequest
+	(*request.GetSwcAttachmentSwcRequest)(nil),                // 51: proto.GetSwcAttachmentSwcRequest
+	(*request.CreatePermissionGroupRequest)(nil),              // 52: proto.CreatePermissionGroupRequest
+	(*request.DeletePermissionGroupRequest)(nil),              // 53: proto.DeletePermissionGroupRequest
+	(*request.UpdatePermissionGroupRequest)(nil),              // 54: proto.UpdatePermissionGroupRequest
+	(*response.CreateUserResponse)(nil),                       // 55: proto.CreateUserResponse
+	(*response.DeleteUserResponse)(nil),                       // 56: proto.DeleteUserResponse
+	(*response.UpdateUserResponse)(nil),                       // 57: proto.UpdateUserResponse
+	(*response.GetUserByUuidResponse)(nil),                    // 58: proto.GetUserByUuidResponse
+	(*response.GetUserByNameResponse)(nil),                    // 59: proto.GetUserByNameResponse
+	(*response.GetAllUserResponse)(nil),                       // 60: proto.GetAllUserResponse
+	(*response.UserLoginResponse)(nil),                        // 61: proto.UserLoginResponse
+	(*response.UserLogoutResponse)(nil),                       // 62: proto.UserLogoutResponse
+	(*response.UserOnlineHeartBeatResponse)(nil),              // 63: proto.UserOnlineHeartBeatResponse
+	(*response.GetUserPermissionGroupResponse)(nil),           // 64: proto.GetUserPermissionGroupResponse
+	(*response.GetPermissionGroupResponse)(nil),               // 65: proto.GetPermissionGroupResponse
+	(*response.GetAllPermissionGroupResponse)(nil),            // 66: proto.GetAllPermissionGroupResponse
+	(*response.ChangeUserPermissionGroupResponse)(nil),        // 67: proto.ChangeUserPermissionGroupResponse
+	(*response.CreateProjectResponse)(nil),                    // 68: proto.CreateProjectResponse
+	(*response.DeleteProjectResponse)(nil),                    // 69: proto.DeleteProjectResponse
+	(*response.UpdateProjectResponse)(nil),                    // 70: proto.UpdateProjectResponse
+	(*response.GetProjectResponse)(nil),                       // 71: proto.GetProjectResponse
+	(*response.GetAllProjectResponse)(nil),                    // 72: proto.GetAllProjectResponse
+	(*response.CreateSwcResponse)(nil),                        // 73: proto.CreateSwcResponse
+	(*response.DeleteSwcResponse)(nil),                        // 74: proto.DeleteSwcResponse
+	(*response.UpdateSwcResponse)(nil),                        // 75: proto.UpdateSwcResponse
+	(*response.GetSwcMetaInfoResponse)(nil),                   // 76: proto.GetSwcMetaInfoResponse
+	(*response.GetAllSwcMetaInfoResponse)(nil),                // 77: proto.GetAllSwcMetaInfoResponse
+	(*response.CreateSwcSnapshotResponse)(nil),                // 78: proto.CreateSwcSnapshotResponse
+	(*response.GetAllSnapshotMetaInfoResponse)(nil),           // 79: proto.GetAllSnapshotMetaInfoResponse
+	(*response.GetSnapshotResponse)(nil),                      // 80: proto.GetSnapshotResponse
+	(*response.GetAllIncrementOperationMetaInfoResponse)(nil), // 81: proto.GetAllIncrementOperationMetaInfoResponse
+	(*response.GetIncrementOperationResponse)(nil),            // 82: proto.GetIncrementOperationResponse
+	(*response.CreateSwcNodeDataResponse)(nil),                // 83: proto.CreateSwcNodeDataResponse
+	(*response.DeleteSwcNodeDataResponse)(nil),                // 84: proto.DeleteSwcNodeDataResponse
+	(*response.UpdateSwcNodeDataResponse)(nil),                // 85: proto.UpdateSwcNodeDataResponse
+	(*response.GetSwcNodeDataResponse)(nil),                   // 86: proto.GetSwcNodeDataResponse
+	(*response.GetSwcFullNodeDataResponse)(nil),               // 87: proto.GetSwcFullNodeDataResponse
+	(*response.GetSwcNodeDataListByTimeAndUserResponse)(nil),  // 88: proto.GetSwcNodeDataListByTimeAndUserResponse
+	(*response.CreateDailyStatisticsResponse)(nil),            // 89: proto.CreateDailyStatisticsResponse
+	(*response.DeleteDailyStatisticsResponse)(nil),            // 90: proto.DeleteDailyStatisticsResponse
+	(*response.UpdateDailyStatisticsResponse)(nil),            // 91: proto.UpdateDailyStatisticsResponse
+	(*response.GetDailyStatisticsResponse)(nil),               // 92: proto.GetDailyStatisticsResponse
+	(*response.GetAllDailyStatisticsResponse)(nil),            // 93: proto.GetAllDailyStatisticsResponse
+	(*response.CreateSwcAttachmentAnoResponse)(nil),           // 94: proto.CreateSwcAttachmentAnoResponse
+	(*response.DeleteSwcAttachmentAnoResponse)(nil),           // 95: proto.DeleteSwcAttachmentAnoResponse
+	(*response.UpdateSwcAttachmentAnoResponse)(nil),           // 96: proto.UpdateSwcAttachmentAnoResponse
+	(*response.GetSwcAttachmentAnoResponse)(nil),              // 97: proto.GetSwcAttachmentAnoResponse
+	(*response.CreateSwcAttachmentApoResponse)(nil),           // 98: proto.CreateSwcAttachmentApoResponse
+	(*response.DeleteSwcAttachmentApoResponse)(nil),           // 99: proto.DeleteSwcAttachmentApoResponse
+	(*response.UpdateSwcAttachmentApoResponse)(nil),           // 100: proto.UpdateSwcAttachmentApoResponse
+	(*response.GetSwcAttachmentApoResponse)(nil),              // 101: proto.GetSwcAttachmentApoResponse
+	(*response.RevertSwcVersionResponse)(nil),                 // 102: proto.RevertSwcVersionResponse
+	(*response.CreateSwcAttachmentSwcResponse)(nil),           // 103: proto.CreateSwcAttachmentSwcResponse
+	(*response.DeleteSwcAttachmentSwcResponse)(nil),           // 104: proto.DeleteSwcAttachmentSwcResponse
+	(*response.UpdateSwcAttachmentSwcResponse)(nil),           // 105: proto.UpdateSwcAttachmentSwcResponse
+	(*response.GetSwcAttachmentSwcResponse)(nil),              // 106: proto.GetSwcAttachmentSwcResponse
+	(*response.CreatePermissionGroupResponse)(nil),            // 107: proto.CreatePermissionGroupResponse
+	(*response.DeletePermissionGroupResponse)(nil),            // 108: proto.DeletePermissionGroupResponse
+	(*response.UpdatePermissionGroupResponse)(nil),            // 109: proto.UpdatePermissionGroupResponse
 }
 var file_Service_Service_proto_depIdxs = []int32{
 	0,   // 0: proto.DBMS.CreateUser:input_type -> proto.CreateUserRequest
 	1,   // 1: proto.DBMS.DeleteUser:input_type -> proto.DeleteUserRequest
 	2,   // 2: proto.DBMS.UpdateUser:input_type -> proto.UpdateUserRequest
-	3,   // 3: proto.DBMS.GetUser:input_type -> proto.GetUserRequest
-	4,   // 4: proto.DBMS.GetAllUser:input_type -> proto.GetAllUserRequest
-	5,   // 5: proto.DBMS.UserLogin:input_type -> proto.UserLoginRequest
-	6,   // 6: proto.DBMS.UserLogout:input_type -> proto.UserLogoutRequest
-	7,   // 7: proto.DBMS.UserOnlineHeartBeatNotifications:input_type -> proto.UserOnlineHeartBeatNotification
-	8,   // 8: proto.DBMS.GetUserPermissionGroup:input_type -> proto.GetUserPermissionGroupRequest
-	9,   // 9: proto.DBMS.GetPermissionGroup:input_type -> proto.GetPermissionGroupRequest
-	10,  // 10: proto.DBMS.GetAllPermissionGroup:input_type -> proto.GetAllPermissionGroupRequest
-	11,  // 11: proto.DBMS.ChangeUserPermissionGroup:input_type -> proto.ChangeUserPermissionGroupRequest
-	12,  // 12: proto.DBMS.CreateProject:input_type -> proto.CreateProjectRequest
-	13,  // 13: proto.DBMS.DeleteProject:input_type -> proto.DeleteProjectRequest
-	14,  // 14: proto.DBMS.UpdateProject:input_type -> proto.UpdateProjectRequest
-	15,  // 15: proto.DBMS.GetProject:input_type -> proto.GetProjectRequest
-	16,  // 16: proto.DBMS.GetAllProject:input_type -> proto.GetAllProjectRequest
-	17,  // 17: proto.DBMS.CreateSwc:input_type -> proto.CreateSwcRequest
-	18,  // 18: proto.DBMS.DeleteSwc:input_type -> proto.DeleteSwcRequest
-	19,  // 19: proto.DBMS.UpdateSwc:input_type -> proto.UpdateSwcRequest
-	20,  // 20: proto.DBMS.GetSwcMetaInfo:input_type -> proto.GetSwcMetaInfoRequest
-	21,  // 21: proto.DBMS.GetAllSwcMetaInfo:input_type -> proto.GetAllSwcMetaInfoRequest
-	22,  // 22: proto.DBMS.CreateSwcSnapshot:input_type -> proto.CreateSwcSnapshotRequest
-	23,  // 23: proto.DBMS.GetAllSnapshotMetaInfo:input_type -> proto.GetAllSnapshotMetaInfoRequest
-	24,  // 24: proto.DBMS.GetSnapshot:input_type -> proto.GetSnapshotRequest
-	25,  // 25: proto.DBMS.GetAllIncrementOperationMetaInfo:input_type -> proto.GetAllIncrementOperationMetaInfoRequest
-	26,  // 26: proto.DBMS.GetIncrementOperation:input_type -> proto.GetIncrementOperationRequest
-	27,  // 27: proto.DBMS.CreateSwcNodeData:input_type -> proto.CreateSwcNodeDataRequest
-	28,  // 28: proto.DBMS.DeleteSwcNodeData:input_type -> proto.DeleteSwcNodeDataRequest
-	29,  // 29: proto.DBMS.UpdateSwcNodeData:input_type -> proto.UpdateSwcNodeDataRequest
-	30,  // 30: proto.DBMS.GetSwcNodeData:input_type -> proto.GetSwcNodeDataRequest
-	31,  // 31: proto.DBMS.GetSwcFullNodeData:input_type -> proto.GetSwcFullNodeDataRequest
-	32,  // 32: proto.DBMS.GetSwcNodeDataListByTimeAndUser:input_type -> proto.GetSwcNodeDataListByTimeAndUserRequest
-	33,  // 33: proto.DBMS.CreateDailyStatistics:input_type -> proto.CreateDailyStatisticsRequest
-	34,  // 34: proto.DBMS.DeleteDailyStatistics:input_type -> proto.DeleteDailyStatisticsRequest
-	35,  // 35: proto.DBMS.UpdateDailyStatistics:input_type -> proto.UpdateDailyStatisticsRequest
-	36,  // 36: proto.DBMS.GetDailyStatistics:input_type -> proto.GetDailyStatisticsRequest
-	37,  // 37: proto.DBMS.GetAllDailyStatistics:input_type -> proto.GetAllDailyStatisticsRequest
-	38,  // 38: proto.DBMS.CreateSwcAttachmentAno:input_type -> proto.CreateSwcAttachmentAnoRequest
-	39,  // 39: proto.DBMS.DeleteSwcAttachmentAno:input_type -> proto.DeleteSwcAttachmentAnoRequest
-	40,  // 40: proto.DBMS.UpdateSwcAttachmentAno:input_type -> proto.UpdateSwcAttachmentAnoRequest
-	41,  // 41: proto.DBMS.GetSwcAttachmentAno:input_type -> proto.GetSwcAttachmentAnoRequest
-	42,  // 42: proto.DBMS.CreateSwcAttachmentApo:input_type -> proto.CreateSwcAttachmentApoRequest
-	43,  // 43: proto.DBMS.DeleteSwcAttachmentApo:input_type -> proto.DeleteSwcAttachmentApoRequest
-	44,  // 44: proto.DBMS.UpdateSwcAttachmentApo:input_type -> proto.UpdateSwcAttachmentApoRequest
-	45,  // 45: proto.DBMS.GetSwcAttachmentApo:input_type -> proto.GetSwcAttachmentApoRequest
-	46,  // 46: proto.DBMS.RevertSwcVersion:input_type -> proto.RevertSwcVersionRequest
-	47,  // 47: proto.DBMS.CreateSwcAttachmentSwc:input_type -> proto.CreateSwcAttachmentSwcRequest
-	48,  // 48: proto.DBMS.DeleteSwcAttachmentSwc:input_type -> proto.DeleteSwcAttachmentSwcRequest
-	49,  // 49: proto.DBMS.UpdateSwcAttachmentSwc:input_type -> proto.UpdateSwcAttachmentSwcRequest
-	50,  // 50: proto.DBMS.GetSwcAttachmentSwc:input_type -> proto.GetSwcAttachmentSwcRequest
-	51,  // 51: proto.DBMS.CreatePermissionGroup:input_type -> proto.CreatePermissionGroupRequest
-	52,  // 52: proto.DBMS.DeletePermissionGroup:input_type -> proto.DeletePermissionGroupRequest
-	53,  // 53: proto.DBMS.UpdatePermissionGroup:input_type -> proto.UpdatePermissionGroupRequest
-	54,  // 54: proto.DBMS.CreateUser:output_type -> proto.CreateUserResponse
-	55,  // 55: proto.DBMS.DeleteUser:output_type -> proto.DeleteUserResponse
-	56,  // 56: proto.DBMS.UpdateUser:output_type -> proto.UpdateUserResponse
-	57,  // 57: proto.DBMS.GetUser:output_type -> proto.GetUserResponse
-	58,  // 58: proto.DBMS.GetAllUser:output_type -> proto.GetAllUserResponse
-	59,  // 59: proto.DBMS.UserLogin:output_type -> proto.UserLoginResponse
-	60,  // 60: proto.DBMS.UserLogout:output_type -> proto.UserLogoutResponse
-	61,  // 61: proto.DBMS.UserOnlineHeartBeatNotifications:output_type -> proto.UserOnlineHeartBeatResponse
-	62,  // 62: proto.DBMS.GetUserPermissionGroup:output_type -> proto.GetUserPermissionGroupResponse
-	63,  // 63: proto.DBMS.GetPermissionGroup:output_type -> proto.GetPermissionGroupResponse
-	64,  // 64: proto.DBMS.GetAllPermissionGroup:output_type -> proto.GetAllPermissionGroupResponse
-	65,  // 65: proto.DBMS.ChangeUserPermissionGroup:output_type -> proto.ChangeUserPermissionGroupResponse
-	66,  // 66: proto.DBMS.CreateProject:output_type -> proto.CreateProjectResponse
-	67,  // 67: proto.DBMS.DeleteProject:output_type -> proto.DeleteProjectResponse
-	68,  // 68: proto.DBMS.UpdateProject:output_type -> proto.UpdateProjectResponse
-	69,  // 69: proto.DBMS.GetProject:output_type -> proto.GetProjectResponse
-	70,  // 70: proto.DBMS.GetAllProject:output_type -> proto.GetAllProjectResponse
-	71,  // 71: proto.DBMS.CreateSwc:output_type -> proto.CreateSwcResponse
-	72,  // 72: proto.DBMS.DeleteSwc:output_type -> proto.DeleteSwcResponse
-	73,  // 73: proto.DBMS.UpdateSwc:output_type -> proto.UpdateSwcResponse
-	74,  // 74: proto.DBMS.GetSwcMetaInfo:output_type -> proto.GetSwcMetaInfoResponse
-	75,  // 75: proto.DBMS.GetAllSwcMetaInfo:output_type -> proto.GetAllSwcMetaInfoResponse
-	76,  // 76: proto.DBMS.CreateSwcSnapshot:output_type -> proto.CreateSwcSnapshotResponse
-	77,  // 77: proto.DBMS.GetAllSnapshotMetaInfo:output_type -> proto.GetAllSnapshotMetaInfoResponse
-	78,  // 78: proto.DBMS.GetSnapshot:output_type -> proto.GetSnapshotResponse
-	79,  // 79: proto.DBMS.GetAllIncrementOperationMetaInfo:output_type -> proto.GetAllIncrementOperationMetaInfoResponse
-	80,  // 80: proto.DBMS.GetIncrementOperation:output_type -> proto.GetIncrementOperationResponse
-	81,  // 81: proto.DBMS.CreateSwcNodeData:output_type -> proto.CreateSwcNodeDataResponse
-	82,  // 82: proto.DBMS.DeleteSwcNodeData:output_type -> proto.DeleteSwcNodeDataResponse
-	83,  // 83: proto.DBMS.UpdateSwcNodeData:output_type -> proto.UpdateSwcNodeDataResponse
-	84,  // 84: proto.DBMS.GetSwcNodeData:output_type -> proto.GetSwcNodeDataResponse
-	85,  // 85: proto.DBMS.GetSwcFullNodeData:output_type -> proto.GetSwcFullNodeDataResponse
-	86,  // 86: proto.DBMS.GetSwcNodeDataListByTimeAndUser:output_type -> proto.GetSwcNodeDataListByTimeAndUserResponse
-	87,  // 87: proto.DBMS.CreateDailyStatistics:output_type -> proto.CreateDailyStatisticsResponse
-	88,  // 88: proto.DBMS.DeleteDailyStatistics:output_type -> proto.DeleteDailyStatisticsResponse
-	89,  // 89: proto.DBMS.UpdateDailyStatistics:output_type -> proto.UpdateDailyStatisticsResponse
-	90,  // 90: proto.DBMS.GetDailyStatistics:output_type -> proto.GetDailyStatisticsResponse
-	91,  // 91: proto.DBMS.GetAllDailyStatistics:output_type -> proto.GetAllDailyStatisticsResponse
-	92,  // 92: proto.DBMS.CreateSwcAttachmentAno:output_type -> proto.CreateSwcAttachmentAnoResponse
-	93,  // 93: proto.DBMS.DeleteSwcAttachmentAno:output_type -> proto.DeleteSwcAttachmentAnoResponse
-	94,  // 94: proto.DBMS.UpdateSwcAttachmentAno:output_type -> proto.UpdateSwcAttachmentAnoResponse
-	95,  // 95: proto.DBMS.GetSwcAttachmentAno:output_type -> proto.GetSwcAttachmentAnoResponse
-	96,  // 96: proto.DBMS.CreateSwcAttachmentApo:output_type -> proto.CreateSwcAttachmentApoResponse
-	97,  // 97: proto.DBMS.DeleteSwcAttachmentApo:output_type -> proto.DeleteSwcAttachmentApoResponse
-	98,  // 98: proto.DBMS.UpdateSwcAttachmentApo:output_type -> proto.UpdateSwcAttachmentApoResponse
-	99,  // 99: proto.DBMS.GetSwcAttachmentApo:output_type -> proto.GetSwcAttachmentApoResponse
-	100, // 100: proto.DBMS.RevertSwcVersion:output_type -> proto.RevertSwcVersionResponse
-	101, // 101: proto.DBMS.CreateSwcAttachmentSwc:output_type -> proto.CreateSwcAttachmentSwcResponse
-	102, // 102: proto.DBMS.DeleteSwcAttachmentSwc:output_type -> proto.DeleteSwcAttachmentSwcResponse
-	103, // 103: proto.DBMS.UpdateSwcAttachmentSwc:output_type -> proto.UpdateSwcAttachmentSwcResponse
-	104, // 104: proto.DBMS.GetSwcAttachmentSwc:output_type -> proto.GetSwcAttachmentSwcResponse
-	105, // 105: proto.DBMS.CreatePermissionGroup:output_type -> proto.CreatePermissionGroupResponse
-	106, // 106: proto.DBMS.DeletePermissionGroup:output_type -> proto.DeletePermissionGroupResponse
-	107, // 107: proto.DBMS.UpdatePermissionGroup:output_type -> proto.UpdatePermissionGroupResponse
-	54,  // [54:108] is the sub-list for method output_type
-	0,   // [0:54] is the sub-list for method input_type
+	3,   // 3: proto.DBMS.GetUserByUuid:input_type -> proto.GetUserByUuidRequest
+	4,   // 4: proto.DBMS.GetUserByName:input_type -> proto.GetUserByNameRequest
+	5,   // 5: proto.DBMS.GetAllUser:input_type -> proto.GetAllUserRequest
+	6,   // 6: proto.DBMS.UserLogin:input_type -> proto.UserLoginRequest
+	7,   // 7: proto.DBMS.UserLogout:input_type -> proto.UserLogoutRequest
+	8,   // 8: proto.DBMS.UserOnlineHeartBeatNotifications:input_type -> proto.UserOnlineHeartBeatNotification
+	9,   // 9: proto.DBMS.GetUserPermissionGroup:input_type -> proto.GetUserPermissionGroupRequest
+	10,  // 10: proto.DBMS.GetPermissionGroup:input_type -> proto.GetPermissionGroupRequest
+	11,  // 11: proto.DBMS.GetAllPermissionGroup:input_type -> proto.GetAllPermissionGroupRequest
+	12,  // 12: proto.DBMS.ChangeUserPermissionGroup:input_type -> proto.ChangeUserPermissionGroupRequest
+	13,  // 13: proto.DBMS.CreateProject:input_type -> proto.CreateProjectRequest
+	14,  // 14: proto.DBMS.DeleteProject:input_type -> proto.DeleteProjectRequest
+	15,  // 15: proto.DBMS.UpdateProject:input_type -> proto.UpdateProjectRequest
+	16,  // 16: proto.DBMS.GetProject:input_type -> proto.GetProjectRequest
+	17,  // 17: proto.DBMS.GetAllProject:input_type -> proto.GetAllProjectRequest
+	18,  // 18: proto.DBMS.CreateSwc:input_type -> proto.CreateSwcRequest
+	19,  // 19: proto.DBMS.DeleteSwc:input_type -> proto.DeleteSwcRequest
+	20,  // 20: proto.DBMS.UpdateSwc:input_type -> proto.UpdateSwcRequest
+	21,  // 21: proto.DBMS.GetSwcMetaInfo:input_type -> proto.GetSwcMetaInfoRequest
+	22,  // 22: proto.DBMS.GetAllSwcMetaInfo:input_type -> proto.GetAllSwcMetaInfoRequest
+	23,  // 23: proto.DBMS.CreateSwcSnapshot:input_type -> proto.CreateSwcSnapshotRequest
+	24,  // 24: proto.DBMS.GetAllSnapshotMetaInfo:input_type -> proto.GetAllSnapshotMetaInfoRequest
+	25,  // 25: proto.DBMS.GetSnapshot:input_type -> proto.GetSnapshotRequest
+	26,  // 26: proto.DBMS.GetAllIncrementOperationMetaInfo:input_type -> proto.GetAllIncrementOperationMetaInfoRequest
+	27,  // 27: proto.DBMS.GetIncrementOperation:input_type -> proto.GetIncrementOperationRequest
+	28,  // 28: proto.DBMS.CreateSwcNodeData:input_type -> proto.CreateSwcNodeDataRequest
+	29,  // 29: proto.DBMS.DeleteSwcNodeData:input_type -> proto.DeleteSwcNodeDataRequest
+	30,  // 30: proto.DBMS.UpdateSwcNodeData:input_type -> proto.UpdateSwcNodeDataRequest
+	31,  // 31: proto.DBMS.GetSwcNodeData:input_type -> proto.GetSwcNodeDataRequest
+	32,  // 32: proto.DBMS.GetSwcFullNodeData:input_type -> proto.GetSwcFullNodeDataRequest
+	33,  // 33: proto.DBMS.GetSwcNodeDataListByTimeAndUser:input_type -> proto.GetSwcNodeDataListByTimeAndUserRequest
+	34,  // 34: proto.DBMS.CreateDailyStatistics:input_type -> proto.CreateDailyStatisticsRequest
+	35,  // 35: proto.DBMS.DeleteDailyStatistics:input_type -> proto.DeleteDailyStatisticsRequest
+	36,  // 36: proto.DBMS.UpdateDailyStatistics:input_type -> proto.UpdateDailyStatisticsRequest
+	37,  // 37: proto.DBMS.GetDailyStatistics:input_type -> proto.GetDailyStatisticsRequest
+	38,  // 38: proto.DBMS.GetAllDailyStatistics:input_type -> proto.GetAllDailyStatisticsRequest
+	39,  // 39: proto.DBMS.CreateSwcAttachmentAno:input_type -> proto.CreateSwcAttachmentAnoRequest
+	40,  // 40: proto.DBMS.DeleteSwcAttachmentAno:input_type -> proto.DeleteSwcAttachmentAnoRequest
+	41,  // 41: proto.DBMS.UpdateSwcAttachmentAno:input_type -> proto.UpdateSwcAttachmentAnoRequest
+	42,  // 42: proto.DBMS.GetSwcAttachmentAno:input_type -> proto.GetSwcAttachmentAnoRequest
+	43,  // 43: proto.DBMS.CreateSwcAttachmentApo:input_type -> proto.CreateSwcAttachmentApoRequest
+	44,  // 44: proto.DBMS.DeleteSwcAttachmentApo:input_type -> proto.DeleteSwcAttachmentApoRequest
+	45,  // 45: proto.DBMS.UpdateSwcAttachmentApo:input_type -> proto.UpdateSwcAttachmentApoRequest
+	46,  // 46: proto.DBMS.GetSwcAttachmentApo:input_type -> proto.GetSwcAttachmentApoRequest
+	47,  // 47: proto.DBMS.RevertSwcVersion:input_type -> proto.RevertSwcVersionRequest
+	48,  // 48: proto.DBMS.CreateSwcAttachmentSwc:input_type -> proto.CreateSwcAttachmentSwcRequest
+	49,  // 49: proto.DBMS.DeleteSwcAttachmentSwc:input_type -> proto.DeleteSwcAttachmentSwcRequest
+	50,  // 50: proto.DBMS.UpdateSwcAttachmentSwc:input_type -> proto.UpdateSwcAttachmentSwcRequest
+	51,  // 51: proto.DBMS.GetSwcAttachmentSwc:input_type -> proto.GetSwcAttachmentSwcRequest
+	52,  // 52: proto.DBMS.CreatePermissionGroup:input_type -> proto.CreatePermissionGroupRequest
+	53,  // 53: proto.DBMS.DeletePermissionGroup:input_type -> proto.DeletePermissionGroupRequest
+	54,  // 54: proto.DBMS.UpdatePermissionGroup:input_type -> proto.UpdatePermissionGroupRequest
+	55,  // 55: proto.DBMS.CreateUser:output_type -> proto.CreateUserResponse
+	56,  // 56: proto.DBMS.DeleteUser:output_type -> proto.DeleteUserResponse
+	57,  // 57: proto.DBMS.UpdateUser:output_type -> proto.UpdateUserResponse
+	58,  // 58: proto.DBMS.GetUserByUuid:output_type -> proto.GetUserByUuidResponse
+	59,  // 59: proto.DBMS.GetUserByName:output_type -> proto.GetUserByNameResponse
+	60,  // 60: proto.DBMS.GetAllUser:output_type -> proto.GetAllUserResponse
+	61,  // 61: proto.DBMS.UserLogin:output_type -> proto.UserLoginResponse
+	62,  // 62: proto.DBMS.UserLogout:output_type -> proto.UserLogoutResponse
+	63,  // 63: proto.DBMS.UserOnlineHeartBeatNotifications:output_type -> proto.UserOnlineHeartBeatResponse
+	64,  // 64: proto.DBMS.GetUserPermissionGroup:output_type -> proto.GetUserPermissionGroupResponse
+	65,  // 65: proto.DBMS.GetPermissionGroup:output_type -> proto.GetPermissionGroupResponse
+	66,  // 66: proto.DBMS.GetAllPermissionGroup:output_type -> proto.GetAllPermissionGroupResponse
+	67,  // 67: proto.DBMS.ChangeUserPermissionGroup:output_type -> proto.ChangeUserPermissionGroupResponse
+	68,  // 68: proto.DBMS.CreateProject:output_type -> proto.CreateProjectResponse
+	69,  // 69: proto.DBMS.DeleteProject:output_type -> proto.DeleteProjectResponse
+	70,  // 70: proto.DBMS.UpdateProject:output_type -> proto.UpdateProjectResponse
+	71,  // 71: proto.DBMS.GetProject:output_type -> proto.GetProjectResponse
+	72,  // 72: proto.DBMS.GetAllProject:output_type -> proto.GetAllProjectResponse
+	73,  // 73: proto.DBMS.CreateSwc:output_type -> proto.CreateSwcResponse
+	74,  // 74: proto.DBMS.DeleteSwc:output_type -> proto.DeleteSwcResponse
+	75,  // 75: proto.DBMS.UpdateSwc:output_type -> proto.UpdateSwcResponse
+	76,  // 76: proto.DBMS.GetSwcMetaInfo:output_type -> proto.GetSwcMetaInfoResponse
+	77,  // 77: proto.DBMS.GetAllSwcMetaInfo:output_type -> proto.GetAllSwcMetaInfoResponse
+	78,  // 78: proto.DBMS.CreateSwcSnapshot:output_type -> proto.CreateSwcSnapshotResponse
+	79,  // 79: proto.DBMS.GetAllSnapshotMetaInfo:output_type -> proto.GetAllSnapshotMetaInfoResponse
+	80,  // 80: proto.DBMS.GetSnapshot:output_type -> proto.GetSnapshotResponse
+	81,  // 81: proto.DBMS.GetAllIncrementOperationMetaInfo:output_type -> proto.GetAllIncrementOperationMetaInfoResponse
+	82,  // 82: proto.DBMS.GetIncrementOperation:output_type -> proto.GetIncrementOperationResponse
+	83,  // 83: proto.DBMS.CreateSwcNodeData:output_type -> proto.CreateSwcNodeDataResponse
+	84,  // 84: proto.DBMS.DeleteSwcNodeData:output_type -> proto.DeleteSwcNodeDataResponse
+	85,  // 85: proto.DBMS.UpdateSwcNodeData:output_type -> proto.UpdateSwcNodeDataResponse
+	86,  // 86: proto.DBMS.GetSwcNodeData:output_type -> proto.GetSwcNodeDataResponse
+	87,  // 87: proto.DBMS.GetSwcFullNodeData:output_type -> proto.GetSwcFullNodeDataResponse
+	88,  // 88: proto.DBMS.GetSwcNodeDataListByTimeAndUser:output_type -> proto.GetSwcNodeDataListByTimeAndUserResponse
+	89,  // 89: proto.DBMS.CreateDailyStatistics:output_type -> proto.CreateDailyStatisticsResponse
+	90,  // 90: proto.DBMS.DeleteDailyStatistics:output_type -> proto.DeleteDailyStatisticsResponse
+	91,  // 91: proto.DBMS.UpdateDailyStatistics:output_type -> proto.UpdateDailyStatisticsResponse
+	92,  // 92: proto.DBMS.GetDailyStatistics:output_type -> proto.GetDailyStatisticsResponse
+	93,  // 93: proto.DBMS.GetAllDailyStatistics:output_type -> proto.GetAllDailyStatisticsResponse
+	94,  // 94: proto.DBMS.CreateSwcAttachmentAno:output_type -> proto.CreateSwcAttachmentAnoResponse
+	95,  // 95: proto.DBMS.DeleteSwcAttachmentAno:output_type -> proto.DeleteSwcAttachmentAnoResponse
+	96,  // 96: proto.DBMS.UpdateSwcAttachmentAno:output_type -> proto.UpdateSwcAttachmentAnoResponse
+	97,  // 97: proto.DBMS.GetSwcAttachmentAno:output_type -> proto.GetSwcAttachmentAnoResponse
+	98,  // 98: proto.DBMS.CreateSwcAttachmentApo:output_type -> proto.CreateSwcAttachmentApoResponse
+	99,  // 99: proto.DBMS.DeleteSwcAttachmentApo:output_type -> proto.DeleteSwcAttachmentApoResponse
+	100, // 100: proto.DBMS.UpdateSwcAttachmentApo:output_type -> proto.UpdateSwcAttachmentApoResponse
+	101, // 101: proto.DBMS.GetSwcAttachmentApo:output_type -> proto.GetSwcAttachmentApoResponse
+	102, // 102: proto.DBMS.RevertSwcVersion:output_type -> proto.RevertSwcVersionResponse
+	103, // 103: proto.DBMS.CreateSwcAttachmentSwc:output_type -> proto.CreateSwcAttachmentSwcResponse
+	104, // 104: proto.DBMS.DeleteSwcAttachmentSwc:output_type -> proto.DeleteSwcAttachmentSwcResponse
+	105, // 105: proto.DBMS.UpdateSwcAttachmentSwc:output_type -> proto.UpdateSwcAttachmentSwcResponse
+	106, // 106: proto.DBMS.GetSwcAttachmentSwc:output_type -> proto.GetSwcAttachmentSwcResponse
+	107, // 107: proto.DBMS.CreatePermissionGroup:output_type -> proto.CreatePermissionGroupResponse
+	108, // 108: proto.DBMS.DeletePermissionGroup:output_type -> proto.DeletePermissionGroupResponse
+	109, // 109: proto.DBMS.UpdatePermissionGroup:output_type -> proto.UpdatePermissionGroupResponse
+	55,  // [55:110] is the sub-list for method output_type
+	0,   // [0:55] is the sub-list for method input_type
 	0,   // [0:0] is the sub-list for extension type_name
 	0,   // [0:0] is the sub-list for extension extendee
 	0,   // [0:0] is the sub-list for field type_name

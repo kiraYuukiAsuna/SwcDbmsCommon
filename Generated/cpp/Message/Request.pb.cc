@@ -65,21 +65,36 @@ struct UpdateUserRequestDefaultTypeInternal {
   };
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 UpdateUserRequestDefaultTypeInternal _UpdateUserRequest_default_instance_;
-PROTOBUF_CONSTEXPR GetUserRequest::GetUserRequest(
+PROTOBUF_CONSTEXPR GetUserByUuidRequest::GetUserByUuidRequest(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_.useruuid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.metainfo_)*/nullptr
   , /*decltype(_impl_.userverifyinfo_)*/nullptr
   , /*decltype(_impl_._cached_size_)*/{}} {}
-struct GetUserRequestDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR GetUserRequestDefaultTypeInternal()
+struct GetUserByUuidRequestDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR GetUserByUuidRequestDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
-  ~GetUserRequestDefaultTypeInternal() {}
+  ~GetUserByUuidRequestDefaultTypeInternal() {}
   union {
-    GetUserRequest _instance;
+    GetUserByUuidRequest _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetUserRequestDefaultTypeInternal _GetUserRequest_default_instance_;
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetUserByUuidRequestDefaultTypeInternal _GetUserByUuidRequest_default_instance_;
+PROTOBUF_CONSTEXPR GetUserByNameRequest::GetUserByNameRequest(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.username_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.metainfo_)*/nullptr
+  , /*decltype(_impl_.userverifyinfo_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct GetUserByNameRequestDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR GetUserByNameRequestDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~GetUserByNameRequestDefaultTypeInternal() {}
+  union {
+    GetUserByNameRequest _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetUserByNameRequestDefaultTypeInternal _GetUserByNameRequest_default_instance_;
 PROTOBUF_CONSTEXPR GetAllUserRequest::GetAllUserRequest(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_.metainfo_)*/nullptr
@@ -854,7 +869,7 @@ struct UpdatePermissionGroupRequestDefaultTypeInternal {
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 UpdatePermissionGroupRequestDefaultTypeInternal _UpdatePermissionGroupRequest_default_instance_;
 }  // namespace proto
-static ::_pb::Metadata file_level_metadata_Message_2fRequest_2eproto[54];
+static ::_pb::Metadata file_level_metadata_Message_2fRequest_2eproto[55];
 static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_Message_2fRequest_2eproto = nullptr;
 static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_Message_2fRequest_2eproto = nullptr;
 
@@ -886,14 +901,23 @@ const uint32_t TableStruct_Message_2fRequest_2eproto::offsets[] PROTOBUF_SECTION
   PROTOBUF_FIELD_OFFSET(::proto::UpdateUserRequest, _impl_.userverifyinfo_),
   PROTOBUF_FIELD_OFFSET(::proto::UpdateUserRequest, _impl_.userinfo_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::proto::GetUserRequest, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::proto::GetUserByUuidRequest, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::proto::GetUserRequest, _impl_.metainfo_),
-  PROTOBUF_FIELD_OFFSET(::proto::GetUserRequest, _impl_.userverifyinfo_),
-  PROTOBUF_FIELD_OFFSET(::proto::GetUserRequest, _impl_.useruuid_),
+  PROTOBUF_FIELD_OFFSET(::proto::GetUserByUuidRequest, _impl_.metainfo_),
+  PROTOBUF_FIELD_OFFSET(::proto::GetUserByUuidRequest, _impl_.userverifyinfo_),
+  PROTOBUF_FIELD_OFFSET(::proto::GetUserByUuidRequest, _impl_.useruuid_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::proto::GetUserByNameRequest, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::proto::GetUserByNameRequest, _impl_.metainfo_),
+  PROTOBUF_FIELD_OFFSET(::proto::GetUserByNameRequest, _impl_.userverifyinfo_),
+  PROTOBUF_FIELD_OFFSET(::proto::GetUserByNameRequest, _impl_.username_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::proto::GetAllUserRequest, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -1372,64 +1396,66 @@ static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protode
   { 0, -1, -1, sizeof(::proto::CreateUserRequest)},
   { 8, -1, -1, sizeof(::proto::DeleteUserRequest)},
   { 17, -1, -1, sizeof(::proto::UpdateUserRequest)},
-  { 26, -1, -1, sizeof(::proto::GetUserRequest)},
-  { 35, -1, -1, sizeof(::proto::GetAllUserRequest)},
-  { 43, -1, -1, sizeof(::proto::UserLoginRequest)},
-  { 52, -1, -1, sizeof(::proto::UserLogoutRequest)},
-  { 60, -1, -1, sizeof(::proto::UserOnlineHeartBeatNotification)},
-  { 69, -1, -1, sizeof(::proto::GetUserPermissionGroupRequest)},
-  { 77, -1, -1, sizeof(::proto::GetPermissionGroupRequest)},
-  { 86, -1, -1, sizeof(::proto::GetAllPermissionGroupRequest)},
-  { 94, -1, -1, sizeof(::proto::ChangeUserPermissionGroupRequest)},
-  { 104, -1, -1, sizeof(::proto::CreateProjectRequest)},
-  { 113, -1, -1, sizeof(::proto::DeleteProjectRequest)},
-  { 122, -1, -1, sizeof(::proto::UpdateProjectRequest)},
-  { 131, -1, -1, sizeof(::proto::GetProjectRequest)},
-  { 140, -1, -1, sizeof(::proto::GetAllProjectRequest)},
-  { 148, -1, -1, sizeof(::proto::CreateSwcRequest)},
-  { 159, -1, -1, sizeof(::proto::DeleteSwcRequest)},
-  { 168, -1, -1, sizeof(::proto::UpdateSwcRequest)},
-  { 177, -1, -1, sizeof(::proto::GetSwcMetaInfoRequest)},
-  { 186, -1, -1, sizeof(::proto::GetAllSwcMetaInfoRequest)},
-  { 194, -1, -1, sizeof(::proto::CreateSwcSnapshotRequest)},
-  { 203, -1, -1, sizeof(::proto::GetAllSnapshotMetaInfoRequest)},
-  { 212, -1, -1, sizeof(::proto::GetSnapshotRequest)},
-  { 221, -1, -1, sizeof(::proto::GetAllIncrementOperationMetaInfoRequest)},
-  { 230, -1, -1, sizeof(::proto::GetIncrementOperationRequest)},
-  { 239, -1, -1, sizeof(::proto::CreateSwcNodeDataRequest)},
-  { 249, -1, -1, sizeof(::proto::DeleteSwcNodeDataRequest)},
-  { 259, -1, -1, sizeof(::proto::UpdateSwcNodeDataRequest)},
-  { 269, -1, -1, sizeof(::proto::GetSwcNodeDataRequest)},
-  { 279, -1, -1, sizeof(::proto::GetSwcFullNodeDataRequest)},
-  { 288, -1, -1, sizeof(::proto::GetSwcNodeDataListByTimeAndUserRequest)},
-  { 300, -1, -1, sizeof(::proto::CreateDailyStatisticsRequest)},
-  { 309, -1, -1, sizeof(::proto::DeleteDailyStatisticsRequest)},
-  { 318, -1, -1, sizeof(::proto::UpdateDailyStatisticsRequest)},
-  { 327, -1, -1, sizeof(::proto::GetDailyStatisticsRequest)},
-  { 336, -1, -1, sizeof(::proto::GetAllDailyStatisticsRequest)},
-  { 344, -1, -1, sizeof(::proto::CreateSwcAttachmentAnoRequest)},
-  { 354, -1, -1, sizeof(::proto::DeleteSwcAttachmentAnoRequest)},
-  { 364, -1, -1, sizeof(::proto::UpdateSwcAttachmentAnoRequest)},
-  { 375, -1, -1, sizeof(::proto::GetSwcAttachmentAnoRequest)},
-  { 385, -1, -1, sizeof(::proto::CreateSwcAttachmentApoRequest)},
-  { 395, -1, -1, sizeof(::proto::DeleteSwcAttachmentApoRequest)},
-  { 405, -1, -1, sizeof(::proto::UpdateSwcAttachmentApoRequest)},
-  { 416, -1, -1, sizeof(::proto::GetSwcAttachmentApoRequest)},
-  { 426, -1, -1, sizeof(::proto::RevertSwcVersionRequest)},
-  { 436, -1, -1, sizeof(::proto::CreateSwcAttachmentSwcRequest)},
-  { 446, -1, -1, sizeof(::proto::DeleteSwcAttachmentSwcRequest)},
-  { 456, -1, -1, sizeof(::proto::UpdateSwcAttachmentSwcRequest)},
-  { 467, -1, -1, sizeof(::proto::GetSwcAttachmentSwcRequest)},
-  { 477, -1, -1, sizeof(::proto::CreatePermissionGroupRequest)},
-  { 487, -1, -1, sizeof(::proto::DeletePermissionGroupRequest)},
-  { 496, -1, -1, sizeof(::proto::UpdatePermissionGroupRequest)},
+  { 26, -1, -1, sizeof(::proto::GetUserByUuidRequest)},
+  { 35, -1, -1, sizeof(::proto::GetUserByNameRequest)},
+  { 44, -1, -1, sizeof(::proto::GetAllUserRequest)},
+  { 52, -1, -1, sizeof(::proto::UserLoginRequest)},
+  { 61, -1, -1, sizeof(::proto::UserLogoutRequest)},
+  { 69, -1, -1, sizeof(::proto::UserOnlineHeartBeatNotification)},
+  { 78, -1, -1, sizeof(::proto::GetUserPermissionGroupRequest)},
+  { 86, -1, -1, sizeof(::proto::GetPermissionGroupRequest)},
+  { 95, -1, -1, sizeof(::proto::GetAllPermissionGroupRequest)},
+  { 103, -1, -1, sizeof(::proto::ChangeUserPermissionGroupRequest)},
+  { 113, -1, -1, sizeof(::proto::CreateProjectRequest)},
+  { 122, -1, -1, sizeof(::proto::DeleteProjectRequest)},
+  { 131, -1, -1, sizeof(::proto::UpdateProjectRequest)},
+  { 140, -1, -1, sizeof(::proto::GetProjectRequest)},
+  { 149, -1, -1, sizeof(::proto::GetAllProjectRequest)},
+  { 157, -1, -1, sizeof(::proto::CreateSwcRequest)},
+  { 168, -1, -1, sizeof(::proto::DeleteSwcRequest)},
+  { 177, -1, -1, sizeof(::proto::UpdateSwcRequest)},
+  { 186, -1, -1, sizeof(::proto::GetSwcMetaInfoRequest)},
+  { 195, -1, -1, sizeof(::proto::GetAllSwcMetaInfoRequest)},
+  { 203, -1, -1, sizeof(::proto::CreateSwcSnapshotRequest)},
+  { 212, -1, -1, sizeof(::proto::GetAllSnapshotMetaInfoRequest)},
+  { 221, -1, -1, sizeof(::proto::GetSnapshotRequest)},
+  { 230, -1, -1, sizeof(::proto::GetAllIncrementOperationMetaInfoRequest)},
+  { 239, -1, -1, sizeof(::proto::GetIncrementOperationRequest)},
+  { 248, -1, -1, sizeof(::proto::CreateSwcNodeDataRequest)},
+  { 258, -1, -1, sizeof(::proto::DeleteSwcNodeDataRequest)},
+  { 268, -1, -1, sizeof(::proto::UpdateSwcNodeDataRequest)},
+  { 278, -1, -1, sizeof(::proto::GetSwcNodeDataRequest)},
+  { 288, -1, -1, sizeof(::proto::GetSwcFullNodeDataRequest)},
+  { 297, -1, -1, sizeof(::proto::GetSwcNodeDataListByTimeAndUserRequest)},
+  { 309, -1, -1, sizeof(::proto::CreateDailyStatisticsRequest)},
+  { 318, -1, -1, sizeof(::proto::DeleteDailyStatisticsRequest)},
+  { 327, -1, -1, sizeof(::proto::UpdateDailyStatisticsRequest)},
+  { 336, -1, -1, sizeof(::proto::GetDailyStatisticsRequest)},
+  { 345, -1, -1, sizeof(::proto::GetAllDailyStatisticsRequest)},
+  { 353, -1, -1, sizeof(::proto::CreateSwcAttachmentAnoRequest)},
+  { 363, -1, -1, sizeof(::proto::DeleteSwcAttachmentAnoRequest)},
+  { 373, -1, -1, sizeof(::proto::UpdateSwcAttachmentAnoRequest)},
+  { 384, -1, -1, sizeof(::proto::GetSwcAttachmentAnoRequest)},
+  { 394, -1, -1, sizeof(::proto::CreateSwcAttachmentApoRequest)},
+  { 404, -1, -1, sizeof(::proto::DeleteSwcAttachmentApoRequest)},
+  { 414, -1, -1, sizeof(::proto::UpdateSwcAttachmentApoRequest)},
+  { 425, -1, -1, sizeof(::proto::GetSwcAttachmentApoRequest)},
+  { 435, -1, -1, sizeof(::proto::RevertSwcVersionRequest)},
+  { 445, -1, -1, sizeof(::proto::CreateSwcAttachmentSwcRequest)},
+  { 455, -1, -1, sizeof(::proto::DeleteSwcAttachmentSwcRequest)},
+  { 465, -1, -1, sizeof(::proto::UpdateSwcAttachmentSwcRequest)},
+  { 476, -1, -1, sizeof(::proto::GetSwcAttachmentSwcRequest)},
+  { 486, -1, -1, sizeof(::proto::CreatePermissionGroupRequest)},
+  { 496, -1, -1, sizeof(::proto::DeletePermissionGroupRequest)},
+  { 505, -1, -1, sizeof(::proto::UpdatePermissionGroupRequest)},
 };
 
 static const ::_pb::Message* const file_default_instances[] = {
   &::proto::_CreateUserRequest_default_instance_._instance,
   &::proto::_DeleteUserRequest_default_instance_._instance,
   &::proto::_UpdateUserRequest_default_instance_._instance,
-  &::proto::_GetUserRequest_default_instance_._instance,
+  &::proto::_GetUserByUuidRequest_default_instance_._instance,
+  &::proto::_GetUserByNameRequest_default_instance_._instance,
   &::proto::_GetAllUserRequest_default_instance_._instance,
   &::proto::_UserLoginRequest_default_instance_._instance,
   &::proto::_UserLogoutRequest_default_instance_._instance,
@@ -1495,220 +1521,223 @@ const char descriptor_table_protodef_Message_2fRequest_2eproto[] PROTOBUF_SECTIO
   "\001 \001(\0132\030.proto.RequestMetaInfoV1\022/\n\016UserV"
   "erifyInfo\030\002 \001(\0132\027.proto.UserVerifyInfoV1"
   "\022\'\n\010UserInfo\030\003 \001(\0132\025.proto.UserMetaInfoV"
-  "1\"\177\n\016GetUserRequest\022*\n\010metaInfo\030\001 \001(\0132\030."
-  "proto.RequestMetaInfoV1\022/\n\016UserVerifyInf"
-  "o\030\002 \001(\0132\027.proto.UserVerifyInfoV1\022\020\n\010User"
-  "Uuid\030\003 \001(\t\"p\n\021GetAllUserRequest\022*\n\010metaI"
-  "nfo\030\001 \001(\0132\030.proto.RequestMetaInfoV1\022/\n\016U"
-  "serVerifyInfo\030\002 \001(\0132\027.proto.UserVerifyIn"
-  "foV1\"b\n\020UserLoginRequest\022*\n\010metaInfo\030\001 \001"
-  "(\0132\030.proto.RequestMetaInfoV1\022\020\n\010UserName"
-  "\030\002 \001(\t\022\020\n\010Password\030\003 \001(\t\"p\n\021UserLogoutRe"
-  "quest\022*\n\010metaInfo\030\001 \001(\0132\030.proto.RequestM"
-  "etaInfoV1\022/\n\016UserVerifyInfo\030\002 \001(\0132\027.prot"
-  "o.UserVerifyInfoV1\"\225\001\n\037UserOnlineHeartBe"
-  "atNotification\022*\n\010metaInfo\030\001 \001(\0132\030.proto"
+  "1\"\205\001\n\024GetUserByUuidRequest\022*\n\010metaInfo\030\001"
+  " \001(\0132\030.proto.RequestMetaInfoV1\022/\n\016UserVe"
+  "rifyInfo\030\002 \001(\0132\027.proto.UserVerifyInfoV1\022"
+  "\020\n\010UserUuid\030\003 \001(\t\"\205\001\n\024GetUserByNameReque"
+  "st\022*\n\010metaInfo\030\001 \001(\0132\030.proto.RequestMeta"
+  "InfoV1\022/\n\016UserVerifyInfo\030\002 \001(\0132\027.proto.U"
+  "serVerifyInfoV1\022\020\n\010UserName\030\003 \001(\t\"p\n\021Get"
+  "AllUserRequest\022*\n\010metaInfo\030\001 \001(\0132\030.proto"
   ".RequestMetaInfoV1\022/\n\016UserVerifyInfo\030\002 \001"
-  "(\0132\027.proto.UserVerifyInfoV1\022\025\n\rHeartBeat"
-  "Time\030\003 \001(\003\"|\n\035GetUserPermissionGroupRequ"
-  "est\022*\n\010metaInfo\030\001 \001(\0132\030.proto.RequestMet"
-  "aInfoV1\022/\n\016UserVerifyInfo\030\002 \001(\0132\027.proto."
-  "UserVerifyInfoV1\"\263\001\n\031GetPermissionGroupR"
-  "equest\022*\n\010metaInfo\030\001 \001(\0132\030.proto.Request"
-  "MetaInfoV1\022/\n\016UserVerifyInfo\030\002 \001(\0132\027.pro"
-  "to.UserVerifyInfoV1\0229\n\017PermissionGroup\030\003"
-  " \001(\0132 .proto.PermissionGroupMetaInfoV1\"{"
-  "\n\034GetAllPermissionGroupRequest\022*\n\010metaIn"
-  "fo\030\001 \001(\0132\030.proto.RequestMetaInfoV1\022/\n\016Us"
-  "erVerifyInfo\030\002 \001(\0132\027.proto.UserVerifyInf"
-  "oV1\"\264\001\n ChangeUserPermissionGroupRequest"
-  "\022*\n\010metaInfo\030\001 \001(\0132\030.proto.RequestMetaIn"
-  "foV1\022/\n\016UserVerifyInfo\030\002 \001(\0132\027.proto.Use"
-  "rVerifyInfoV1\022\026\n\016TargetUserName\030\003 \001(\t\022\033\n"
-  "\023PermissionGroupName\030\004 \001(\t\"\242\001\n\024CreatePro"
-  "jectRequest\022*\n\010metaInfo\030\001 \001(\0132\030.proto.Re"
-  "questMetaInfoV1\022/\n\016UserVerifyInfo\030\002 \001(\0132"
-  "\027.proto.UserVerifyInfoV1\022-\n\013ProjectInfo\030"
-  "\003 \001(\0132\030.proto.ProjectMetaInfoV1\"\210\001\n\024Dele"
-  "teProjectRequest\022*\n\010metaInfo\030\001 \001(\0132\030.pro"
-  "to.RequestMetaInfoV1\022/\n\016UserVerifyInfo\030\002"
-  " \001(\0132\027.proto.UserVerifyInfoV1\022\023\n\013Project"
-  "Name\030\003 \001(\t\"\242\001\n\024UpdateProjectRequest\022*\n\010m"
-  "etaInfo\030\001 \001(\0132\030.proto.RequestMetaInfoV1\022"
-  "/\n\016UserVerifyInfo\030\002 \001(\0132\027.proto.UserVeri"
-  "fyInfoV1\022-\n\013ProjectInfo\030\003 \001(\0132\030.proto.Pr"
-  "ojectMetaInfoV1\"\205\001\n\021GetProjectRequest\022*\n"
-  "\010metaInfo\030\001 \001(\0132\030.proto.RequestMetaInfoV"
-  "1\022/\n\016UserVerifyInfo\030\002 \001(\0132\027.proto.UserVe"
-  "rifyInfoV1\022\023\n\013ProjectName\030\003 \001(\t\"s\n\024GetAl"
-  "lProjectRequest\022*\n\010metaInfo\030\001 \001(\0132\030.prot"
-  "o.RequestMetaInfoV1\022/\n\016UserVerifyInfo\030\002 "
-  "\001(\0132\027.proto.UserVerifyInfoV1\"\200\002\n\020CreateS"
-  "wcRequest\022*\n\010metaInfo\030\001 \001(\0132\030.proto.Requ"
-  "estMetaInfoV1\022/\n\016UserVerifyInfo\030\002 \001(\0132\027."
-  "proto.UserVerifyInfoV1\022%\n\007SwcInfo\030\003 \001(\0132"
-  "\024.proto.SwcMetaInfoV1\0223\n\020SwcAttachmentAn"
-  "o\030\004 \001(\0132\031.proto.SwcAttachmentAnoV1\0223\n\020Sw"
-  "cAttachmentApo\030\005 \003(\0132\031.proto.SwcAttachme"
-  "ntApoV1\"\200\001\n\020DeleteSwcRequest\022*\n\010metaInfo"
+  "(\0132\027.proto.UserVerifyInfoV1\"b\n\020UserLogin"
+  "Request\022*\n\010metaInfo\030\001 \001(\0132\030.proto.Reques"
+  "tMetaInfoV1\022\020\n\010UserName\030\002 \001(\t\022\020\n\010Passwor"
+  "d\030\003 \001(\t\"p\n\021UserLogoutRequest\022*\n\010metaInfo"
   "\030\001 \001(\0132\030.proto.RequestMetaInfoV1\022/\n\016User"
   "VerifyInfo\030\002 \001(\0132\027.proto.UserVerifyInfoV"
-  "1\022\017\n\007SwcName\030\003 \001(\t\"\226\001\n\020UpdateSwcRequest\022"
+  "1\"\225\001\n\037UserOnlineHeartBeatNotification\022*\n"
+  "\010metaInfo\030\001 \001(\0132\030.proto.RequestMetaInfoV"
+  "1\022/\n\016UserVerifyInfo\030\002 \001(\0132\027.proto.UserVe"
+  "rifyInfoV1\022\025\n\rHeartBeatTime\030\003 \001(\003\"|\n\035Get"
+  "UserPermissionGroupRequest\022*\n\010metaInfo\030\001"
+  " \001(\0132\030.proto.RequestMetaInfoV1\022/\n\016UserVe"
+  "rifyInfo\030\002 \001(\0132\027.proto.UserVerifyInfoV1\""
+  "\263\001\n\031GetPermissionGroupRequest\022*\n\010metaInf"
+  "o\030\001 \001(\0132\030.proto.RequestMetaInfoV1\022/\n\016Use"
+  "rVerifyInfo\030\002 \001(\0132\027.proto.UserVerifyInfo"
+  "V1\0229\n\017PermissionGroup\030\003 \001(\0132 .proto.Perm"
+  "issionGroupMetaInfoV1\"{\n\034GetAllPermissio"
+  "nGroupRequest\022*\n\010metaInfo\030\001 \001(\0132\030.proto."
+  "RequestMetaInfoV1\022/\n\016UserVerifyInfo\030\002 \001("
+  "\0132\027.proto.UserVerifyInfoV1\"\264\001\n ChangeUse"
+  "rPermissionGroupRequest\022*\n\010metaInfo\030\001 \001("
+  "\0132\030.proto.RequestMetaInfoV1\022/\n\016UserVerif"
+  "yInfo\030\002 \001(\0132\027.proto.UserVerifyInfoV1\022\026\n\016"
+  "TargetUserName\030\003 \001(\t\022\033\n\023PermissionGroupN"
+  "ame\030\004 \001(\t\"\242\001\n\024CreateProjectRequest\022*\n\010me"
+  "taInfo\030\001 \001(\0132\030.proto.RequestMetaInfoV1\022/"
+  "\n\016UserVerifyInfo\030\002 \001(\0132\027.proto.UserVerif"
+  "yInfoV1\022-\n\013ProjectInfo\030\003 \001(\0132\030.proto.Pro"
+  "jectMetaInfoV1\"\210\001\n\024DeleteProjectRequest\022"
   "*\n\010metaInfo\030\001 \001(\0132\030.proto.RequestMetaInf"
   "oV1\022/\n\016UserVerifyInfo\030\002 \001(\0132\027.proto.User"
-  "VerifyInfoV1\022%\n\007SwcInfo\030\003 \001(\0132\024.proto.Sw"
-  "cMetaInfoV1\"\205\001\n\025GetSwcMetaInfoRequest\022*\n"
-  "\010metaInfo\030\001 \001(\0132\030.proto.RequestMetaInfoV"
-  "1\022/\n\016UserVerifyInfo\030\002 \001(\0132\027.proto.UserVe"
-  "rifyInfoV1\022\017\n\007SwcName\030\003 \001(\t\"w\n\030GetAllSwc"
-  "MetaInfoRequest\022*\n\010metaInfo\030\001 \001(\0132\030.prot"
-  "o.RequestMetaInfoV1\022/\n\016UserVerifyInfo\030\002 "
-  "\001(\0132\027.proto.UserVerifyInfoV1\"\210\001\n\030CreateS"
-  "wcSnapshotRequest\022*\n\010metaInfo\030\001 \001(\0132\030.pr"
-  "oto.RequestMetaInfoV1\022/\n\016UserVerifyInfo\030"
-  "\002 \001(\0132\027.proto.UserVerifyInfoV1\022\017\n\007SwcNam"
-  "e\030\003 \001(\t\"\215\001\n\035GetAllSnapshotMetaInfoReques"
-  "t\022*\n\010metaInfo\030\001 \001(\0132\030.proto.RequestMetaI"
-  "nfoV1\022/\n\016UserVerifyInfo\030\002 \001(\0132\027.proto.Us"
-  "erVerifyInfoV1\022\017\n\007SwcName\030\003 \001(\t\"\224\001\n\022GetS"
-  "napshotRequest\022*\n\010metaInfo\030\001 \001(\0132\030.proto"
-  ".RequestMetaInfoV1\022/\n\016UserVerifyInfo\030\002 \001"
-  "(\0132\027.proto.UserVerifyInfoV1\022!\n\031SwcSnapsh"
-  "otCollectionName\030\003 \001(\t\"\227\001\n\'GetAllIncreme"
-  "ntOperationMetaInfoRequest\022*\n\010metaInfo\030\001"
-  " \001(\0132\030.proto.RequestMetaInfoV1\022/\n\016UserVe"
-  "rifyInfo\030\002 \001(\0132\027.proto.UserVerifyInfoV1\022"
-  "\017\n\007SwcName\030\003 \001(\t\"\245\001\n\034GetIncrementOperati"
-  "onRequest\022*\n\010metaInfo\030\001 \001(\0132\030.proto.Requ"
-  "estMetaInfoV1\022/\n\016UserVerifyInfo\030\002 \001(\0132\027."
-  "proto.UserVerifyInfoV1\022(\n IncrementOpera"
-  "tionCollectionName\030\003 \001(\t\"\253\001\n\030CreateSwcNo"
-  "deDataRequest\022*\n\010metaInfo\030\001 \001(\0132\030.proto."
-  "RequestMetaInfoV1\022/\n\016UserVerifyInfo\030\002 \001("
-  "\0132\027.proto.UserVerifyInfoV1\022\017\n\007SwcName\030\003 "
-  "\001(\t\022!\n\007SwcData\030\004 \001(\0132\020.proto.SwcDataV1\"\253"
-  "\001\n\030DeleteSwcNodeDataRequest\022*\n\010metaInfo\030"
-  "\001 \001(\0132\030.proto.RequestMetaInfoV1\022/\n\016UserV"
-  "erifyInfo\030\002 \001(\0132\027.proto.UserVerifyInfoV1"
-  "\022\017\n\007SwcName\030\003 \001(\t\022!\n\007SwcData\030\004 \001(\0132\020.pro"
-  "to.SwcDataV1\"\253\001\n\030UpdateSwcNodeDataReques"
-  "t\022*\n\010metaInfo\030\001 \001(\0132\030.proto.RequestMetaI"
-  "nfoV1\022/\n\016UserVerifyInfo\030\002 \001(\0132\027.proto.Us"
-  "erVerifyInfoV1\022\017\n\007SwcName\030\003 \001(\t\022!\n\007SwcDa"
-  "ta\030\004 \001(\0132\020.proto.SwcDataV1\"\254\001\n\025GetSwcNod"
-  "eDataRequest\022*\n\010metaInfo\030\001 \001(\0132\030.proto.R"
-  "equestMetaInfoV1\022/\n\016UserVerifyInfo\030\002 \001(\013"
-  "2\027.proto.UserVerifyInfoV1\022\017\n\007SwcName\030\003 \001"
-  "(\t\022%\n\013SwcNodeData\030\004 \001(\0132\020.proto.SwcDataV"
-  "1\"\211\001\n\031GetSwcFullNodeDataRequest\022*\n\010metaI"
-  "nfo\030\001 \001(\0132\030.proto.RequestMetaInfoV1\022/\n\016U"
-  "serVerifyInfo\030\002 \001(\0132\027.proto.UserVerifyIn"
-  "foV1\022\017\n\007SwcName\030\003 \001(\t\"\204\002\n&GetSwcNodeData"
-  "ListByTimeAndUserRequest\022*\n\010metaInfo\030\001 \001"
-  "(\0132\030.proto.RequestMetaInfoV1\022/\n\016UserVeri"
-  "fyInfo\030\002 \001(\0132\027.proto.UserVerifyInfoV1\022\017\n"
-  "\007SwcName\030\003 \001(\t\022-\n\tStartTime\030\004 \001(\0132\032.goog"
-  "le.protobuf.Timestamp\022+\n\007EndTime\030\005 \001(\0132\032"
-  ".google.protobuf.Timestamp\022\020\n\010UserName\030\006"
-  " \001(\t\"\272\001\n\034CreateDailyStatisticsRequest\022*\n"
-  "\010metaInfo\030\001 \001(\0132\030.proto.RequestMetaInfoV"
-  "1\022/\n\016UserVerifyInfo\030\002 \001(\0132\027.proto.UserVe"
-  "rifyInfoV1\022=\n\023DailyStatisticsInfo\030\003 \001(\0132"
-  " .proto.DailyStatisticsMetaInfoV1\"\230\001\n\034De"
-  "leteDailyStatisticsRequest\022*\n\010metaInfo\030\001"
-  " \001(\0132\030.proto.RequestMetaInfoV1\022/\n\016UserVe"
-  "rifyInfo\030\002 \001(\0132\027.proto.UserVerifyInfoV1\022"
-  "\033\n\023DailyStatisticsName\030\003 \001(\t\"\272\001\n\034UpdateD"
-  "ailyStatisticsRequest\022*\n\010metaInfo\030\001 \001(\0132"
-  "\030.proto.RequestMetaInfoV1\022/\n\016UserVerifyI"
-  "nfo\030\002 \001(\0132\027.proto.UserVerifyInfoV1\022=\n\023Da"
-  "ilyStatisticsInfo\030\003 \001(\0132 .proto.DailySta"
-  "tisticsMetaInfoV1\"\225\001\n\031GetDailyStatistics"
-  "Request\022*\n\010metaInfo\030\001 \001(\0132\030.proto.Reques"
-  "tMetaInfoV1\022/\n\016UserVerifyInfo\030\002 \001(\0132\027.pr"
-  "oto.UserVerifyInfoV1\022\033\n\023DailyStatisticsN"
-  "ame\030\003 \001(\t\"{\n\034GetAllDailyStatisticsReques"
-  "t\022*\n\010metaInfo\030\001 \001(\0132\030.proto.RequestMetaI"
-  "nfoV1\022/\n\016UserVerifyInfo\030\002 \001(\0132\027.proto.Us"
-  "erVerifyInfoV1\"\302\001\n\035CreateSwcAttachmentAn"
-  "oRequest\022*\n\010metaInfo\030\001 \001(\0132\030.proto.Reque"
-  "stMetaInfoV1\022/\n\016UserVerifyInfo\030\002 \001(\0132\027.p"
-  "roto.UserVerifyInfoV1\022\017\n\007SwcName\030\003 \001(\t\0223"
-  "\n\020SwcAttachmentAno\030\004 \001(\0132\031.proto.SwcAtta"
-  "chmentAnoV1\"\250\001\n\035DeleteSwcAttachmentAnoRe"
-  "quest\022*\n\010metaInfo\030\001 \001(\0132\030.proto.RequestM"
-  "etaInfoV1\022/\n\016UserVerifyInfo\030\002 \001(\0132\027.prot"
-  "o.UserVerifyInfoV1\022\017\n\007SwcName\030\003 \001(\t\022\031\n\021A"
-  "noAttachmentUuid\030\004 \001(\t\"\340\001\n\035UpdateSwcAtta"
-  "chmentAnoRequest\022*\n\010metaInfo\030\001 \001(\0132\030.pro"
-  "to.RequestMetaInfoV1\022/\n\016UserVerifyInfo\030\002"
-  " \001(\0132\027.proto.UserVerifyInfoV1\022\017\n\007SwcName"
-  "\030\003 \001(\t\022\031\n\021AnoAttachmentUuid\030\004 \001(\t\0226\n\023New"
-  "SwcAttachmentAno\030\005 \001(\0132\031.proto.SwcAttach"
-  "mentAnoV1\"\245\001\n\032GetSwcAttachmentAnoRequest"
-  "\022*\n\010metaInfo\030\001 \001(\0132\030.proto.RequestMetaIn"
-  "foV1\022/\n\016UserVerifyInfo\030\002 \001(\0132\027.proto.Use"
-  "rVerifyInfoV1\022\017\n\007SwcName\030\003 \001(\t\022\031\n\021AnoAtt"
-  "achmentUuid\030\004 \001(\t\"\302\001\n\035CreateSwcAttachmen"
-  "tApoRequest\022*\n\010metaInfo\030\001 \001(\0132\030.proto.Re"
-  "questMetaInfoV1\022/\n\016UserVerifyInfo\030\002 \001(\0132"
-  "\027.proto.UserVerifyInfoV1\022\017\n\007SwcName\030\003 \001("
-  "\t\0223\n\020SwcAttachmentApo\030\004 \003(\0132\031.proto.SwcA"
-  "ttachmentApoV1\"\250\001\n\035DeleteSwcAttachmentAp"
-  "oRequest\022*\n\010metaInfo\030\001 \001(\0132\030.proto.Reque"
-  "stMetaInfoV1\022/\n\016UserVerifyInfo\030\002 \001(\0132\027.p"
-  "roto.UserVerifyInfoV1\022\017\n\007SwcName\030\003 \001(\t\022\031"
-  "\n\021ApoAttachmentUuid\030\004 \001(\t\"\340\001\n\035UpdateSwcA"
-  "ttachmentApoRequest\022*\n\010metaInfo\030\001 \001(\0132\030."
-  "proto.RequestMetaInfoV1\022/\n\016UserVerifyInf"
-  "o\030\002 \001(\0132\027.proto.UserVerifyInfoV1\022\017\n\007SwcN"
-  "ame\030\003 \001(\t\022\031\n\021ApoAttachmentUuid\030\004 \001(\t\0226\n\023"
-  "NewSwcAttachmentApo\030\005 \003(\0132\031.proto.SwcAtt"
-  "achmentApoV1\"\245\001\n\032GetSwcAttachmentApoRequ"
-  "est\022*\n\010metaInfo\030\001 \001(\0132\030.proto.RequestMet"
-  "aInfoV1\022/\n\016UserVerifyInfo\030\002 \001(\0132\027.proto."
-  "UserVerifyInfoV1\022\017\n\007SwcName\030\003 \001(\t\022\031\n\021Apo"
-  "AttachmentUuid\030\004 \001(\t\"\273\001\n\027RevertSwcVersio"
-  "nRequest\022*\n\010metaInfo\030\001 \001(\0132\030.proto.Reque"
-  "stMetaInfoV1\022/\n\016UserVerifyInfo\030\002 \001(\0132\027.p"
-  "roto.UserVerifyInfoV1\022\017\n\007SwcName\030\003 \001(\t\0222"
-  "\n\016VersionEndTime\030\004 \001(\0132\032.google.protobuf"
-  ".Timestamp\"\264\001\n\035CreateSwcAttachmentSwcReq"
-  "uest\022*\n\010metaInfo\030\001 \001(\0132\030.proto.RequestMe"
-  "taInfoV1\022/\n\016UserVerifyInfo\030\002 \001(\0132\027.proto"
-  ".UserVerifyInfoV1\022\017\n\007SwcName\030\003 \001(\t\022%\n\007Sw"
-  "cData\030\004 \003(\0132\024.proto.SwcNodeDataV1\"\250\001\n\035De"
-  "leteSwcAttachmentSwcRequest\022*\n\010metaInfo\030"
-  "\001 \001(\0132\030.proto.RequestMetaInfoV1\022/\n\016UserV"
-  "erifyInfo\030\002 \001(\0132\027.proto.UserVerifyInfoV1"
-  "\022\017\n\007SwcName\030\003 \001(\t\022\031\n\021SwcAttachmentUuid\030\004"
-  " \001(\t\"\322\001\n\035UpdateSwcAttachmentSwcRequest\022*"
+  "VerifyInfoV1\022\023\n\013ProjectName\030\003 \001(\t\"\242\001\n\024Up"
+  "dateProjectRequest\022*\n\010metaInfo\030\001 \001(\0132\030.p"
+  "roto.RequestMetaInfoV1\022/\n\016UserVerifyInfo"
+  "\030\002 \001(\0132\027.proto.UserVerifyInfoV1\022-\n\013Proje"
+  "ctInfo\030\003 \001(\0132\030.proto.ProjectMetaInfoV1\"\205"
+  "\001\n\021GetProjectRequest\022*\n\010metaInfo\030\001 \001(\0132\030"
+  ".proto.RequestMetaInfoV1\022/\n\016UserVerifyIn"
+  "fo\030\002 \001(\0132\027.proto.UserVerifyInfoV1\022\023\n\013Pro"
+  "jectName\030\003 \001(\t\"s\n\024GetAllProjectRequest\022*"
   "\n\010metaInfo\030\001 \001(\0132\030.proto.RequestMetaInfo"
   "V1\022/\n\016UserVerifyInfo\030\002 \001(\0132\027.proto.UserV"
-  "erifyInfoV1\022\017\n\007SwcName\030\003 \001(\t\022\031\n\021SwcAttac"
-  "hmentUuid\030\004 \001(\t\022(\n\nNewSwcData\030\005 \003(\0132\024.pr"
-  "oto.SwcNodeDataV1\"\245\001\n\032GetSwcAttachmentSw"
-  "cRequest\022*\n\010metaInfo\030\001 \001(\0132\030.proto.Reque"
-  "stMetaInfoV1\022/\n\016UserVerifyInfo\030\002 \001(\0132\027.p"
-  "roto.UserVerifyInfoV1\022\017\n\007SwcName\030\003 \001(\t\022\031"
-  "\n\021SwcAttachmentUuid\030\004 \001(\t\"\274\001\n\034CreatePerm"
-  "issionGroupRequest\022*\n\010metaInfo\030\001 \001(\0132\030.p"
-  "roto.RequestMetaInfoV1\022/\n\016UserVerifyInfo"
-  "\030\002 \001(\0132\027.proto.UserVerifyInfoV1\022\033\n\023Permi"
-  "ssionGroupName\030\003 \001(\t\022\"\n\032PermissionGroupD"
-  "escription\030\004 \001(\t\"\230\001\n\034DeletePermissionGro"
-  "upRequest\022*\n\010metaInfo\030\001 \001(\0132\030.proto.Requ"
+  "erifyInfoV1\"\200\002\n\020CreateSwcRequest\022*\n\010meta"
+  "Info\030\001 \001(\0132\030.proto.RequestMetaInfoV1\022/\n\016"
+  "UserVerifyInfo\030\002 \001(\0132\027.proto.UserVerifyI"
+  "nfoV1\022%\n\007SwcInfo\030\003 \001(\0132\024.proto.SwcMetaIn"
+  "foV1\0223\n\020SwcAttachmentAno\030\004 \001(\0132\031.proto.S"
+  "wcAttachmentAnoV1\0223\n\020SwcAttachmentApo\030\005 "
+  "\003(\0132\031.proto.SwcAttachmentApoV1\"\200\001\n\020Delet"
+  "eSwcRequest\022*\n\010metaInfo\030\001 \001(\0132\030.proto.Re"
+  "questMetaInfoV1\022/\n\016UserVerifyInfo\030\002 \001(\0132"
+  "\027.proto.UserVerifyInfoV1\022\017\n\007SwcName\030\003 \001("
+  "\t\"\226\001\n\020UpdateSwcRequest\022*\n\010metaInfo\030\001 \001(\013"
+  "2\030.proto.RequestMetaInfoV1\022/\n\016UserVerify"
+  "Info\030\002 \001(\0132\027.proto.UserVerifyInfoV1\022%\n\007S"
+  "wcInfo\030\003 \001(\0132\024.proto.SwcMetaInfoV1\"\205\001\n\025G"
+  "etSwcMetaInfoRequest\022*\n\010metaInfo\030\001 \001(\0132\030"
+  ".proto.RequestMetaInfoV1\022/\n\016UserVerifyIn"
+  "fo\030\002 \001(\0132\027.proto.UserVerifyInfoV1\022\017\n\007Swc"
+  "Name\030\003 \001(\t\"w\n\030GetAllSwcMetaInfoRequest\022*"
+  "\n\010metaInfo\030\001 \001(\0132\030.proto.RequestMetaInfo"
+  "V1\022/\n\016UserVerifyInfo\030\002 \001(\0132\027.proto.UserV"
+  "erifyInfoV1\"\210\001\n\030CreateSwcSnapshotRequest"
+  "\022*\n\010metaInfo\030\001 \001(\0132\030.proto.RequestMetaIn"
+  "foV1\022/\n\016UserVerifyInfo\030\002 \001(\0132\027.proto.Use"
+  "rVerifyInfoV1\022\017\n\007SwcName\030\003 \001(\t\"\215\001\n\035GetAl"
+  "lSnapshotMetaInfoRequest\022*\n\010metaInfo\030\001 \001"
+  "(\0132\030.proto.RequestMetaInfoV1\022/\n\016UserVeri"
+  "fyInfo\030\002 \001(\0132\027.proto.UserVerifyInfoV1\022\017\n"
+  "\007SwcName\030\003 \001(\t\"\224\001\n\022GetSnapshotRequest\022*\n"
+  "\010metaInfo\030\001 \001(\0132\030.proto.RequestMetaInfoV"
+  "1\022/\n\016UserVerifyInfo\030\002 \001(\0132\027.proto.UserVe"
+  "rifyInfoV1\022!\n\031SwcSnapshotCollectionName\030"
+  "\003 \001(\t\"\227\001\n\'GetAllIncrementOperationMetaIn"
+  "foRequest\022*\n\010metaInfo\030\001 \001(\0132\030.proto.Requ"
   "estMetaInfoV1\022/\n\016UserVerifyInfo\030\002 \001(\0132\027."
-  "proto.UserVerifyInfoV1\022\033\n\023PermissionGrou"
-  "pUuid\030\003 \001(\t\"\203\002\n\034UpdatePermissionGroupReq"
+  "proto.UserVerifyInfoV1\022\017\n\007SwcName\030\003 \001(\t\""
+  "\245\001\n\034GetIncrementOperationRequest\022*\n\010meta"
+  "Info\030\001 \001(\0132\030.proto.RequestMetaInfoV1\022/\n\016"
+  "UserVerifyInfo\030\002 \001(\0132\027.proto.UserVerifyI"
+  "nfoV1\022(\n IncrementOperationCollectionNam"
+  "e\030\003 \001(\t\"\253\001\n\030CreateSwcNodeDataRequest\022*\n\010"
+  "metaInfo\030\001 \001(\0132\030.proto.RequestMetaInfoV1"
+  "\022/\n\016UserVerifyInfo\030\002 \001(\0132\027.proto.UserVer"
+  "ifyInfoV1\022\017\n\007SwcName\030\003 \001(\t\022!\n\007SwcData\030\004 "
+  "\001(\0132\020.proto.SwcDataV1\"\253\001\n\030DeleteSwcNodeD"
+  "ataRequest\022*\n\010metaInfo\030\001 \001(\0132\030.proto.Req"
+  "uestMetaInfoV1\022/\n\016UserVerifyInfo\030\002 \001(\0132\027"
+  ".proto.UserVerifyInfoV1\022\017\n\007SwcName\030\003 \001(\t"
+  "\022!\n\007SwcData\030\004 \001(\0132\020.proto.SwcDataV1\"\253\001\n\030"
+  "UpdateSwcNodeDataRequest\022*\n\010metaInfo\030\001 \001"
+  "(\0132\030.proto.RequestMetaInfoV1\022/\n\016UserVeri"
+  "fyInfo\030\002 \001(\0132\027.proto.UserVerifyInfoV1\022\017\n"
+  "\007SwcName\030\003 \001(\t\022!\n\007SwcData\030\004 \001(\0132\020.proto."
+  "SwcDataV1\"\254\001\n\025GetSwcNodeDataRequest\022*\n\010m"
+  "etaInfo\030\001 \001(\0132\030.proto.RequestMetaInfoV1\022"
+  "/\n\016UserVerifyInfo\030\002 \001(\0132\027.proto.UserVeri"
+  "fyInfoV1\022\017\n\007SwcName\030\003 \001(\t\022%\n\013SwcNodeData"
+  "\030\004 \001(\0132\020.proto.SwcDataV1\"\211\001\n\031GetSwcFullN"
+  "odeDataRequest\022*\n\010metaInfo\030\001 \001(\0132\030.proto"
+  ".RequestMetaInfoV1\022/\n\016UserVerifyInfo\030\002 \001"
+  "(\0132\027.proto.UserVerifyInfoV1\022\017\n\007SwcName\030\003"
+  " \001(\t\"\204\002\n&GetSwcNodeDataListByTimeAndUser"
+  "Request\022*\n\010metaInfo\030\001 \001(\0132\030.proto.Reques"
+  "tMetaInfoV1\022/\n\016UserVerifyInfo\030\002 \001(\0132\027.pr"
+  "oto.UserVerifyInfoV1\022\017\n\007SwcName\030\003 \001(\t\022-\n"
+  "\tStartTime\030\004 \001(\0132\032.google.protobuf.Times"
+  "tamp\022+\n\007EndTime\030\005 \001(\0132\032.google.protobuf."
+  "Timestamp\022\020\n\010UserName\030\006 \001(\t\"\272\001\n\034CreateDa"
+  "ilyStatisticsRequest\022*\n\010metaInfo\030\001 \001(\0132\030"
+  ".proto.RequestMetaInfoV1\022/\n\016UserVerifyIn"
+  "fo\030\002 \001(\0132\027.proto.UserVerifyInfoV1\022=\n\023Dai"
+  "lyStatisticsInfo\030\003 \001(\0132 .proto.DailyStat"
+  "isticsMetaInfoV1\"\230\001\n\034DeleteDailyStatisti"
+  "csRequest\022*\n\010metaInfo\030\001 \001(\0132\030.proto.Requ"
+  "estMetaInfoV1\022/\n\016UserVerifyInfo\030\002 \001(\0132\027."
+  "proto.UserVerifyInfoV1\022\033\n\023DailyStatistic"
+  "sName\030\003 \001(\t\"\272\001\n\034UpdateDailyStatisticsReq"
   "uest\022*\n\010metaInfo\030\001 \001(\0132\030.proto.RequestMe"
   "taInfoV1\022/\n\016UserVerifyInfo\030\002 \001(\0132\027.proto"
-  ".UserVerifyInfoV1\022\033\n\023PermissionGroupUuid"
-  "\030\003 \001(\t\022\033\n\023PermissionGroupName\030\004 \001(\t\022\"\n\032P"
-  "ermissionGroupDescription\030\005 \001(\t\022(\n\003Ace\030\006"
-  " \001(\0132\033.proto.PermissionGroupAceV1B/Z-DBM"
-  "S/SwcDbmsCommon/Generated/go/proto/reque"
-  "stP\000b\006proto3"
+  ".UserVerifyInfoV1\022=\n\023DailyStatisticsInfo"
+  "\030\003 \001(\0132 .proto.DailyStatisticsMetaInfoV1"
+  "\"\225\001\n\031GetDailyStatisticsRequest\022*\n\010metaIn"
+  "fo\030\001 \001(\0132\030.proto.RequestMetaInfoV1\022/\n\016Us"
+  "erVerifyInfo\030\002 \001(\0132\027.proto.UserVerifyInf"
+  "oV1\022\033\n\023DailyStatisticsName\030\003 \001(\t\"{\n\034GetA"
+  "llDailyStatisticsRequest\022*\n\010metaInfo\030\001 \001"
+  "(\0132\030.proto.RequestMetaInfoV1\022/\n\016UserVeri"
+  "fyInfo\030\002 \001(\0132\027.proto.UserVerifyInfoV1\"\302\001"
+  "\n\035CreateSwcAttachmentAnoRequest\022*\n\010metaI"
+  "nfo\030\001 \001(\0132\030.proto.RequestMetaInfoV1\022/\n\016U"
+  "serVerifyInfo\030\002 \001(\0132\027.proto.UserVerifyIn"
+  "foV1\022\017\n\007SwcName\030\003 \001(\t\0223\n\020SwcAttachmentAn"
+  "o\030\004 \001(\0132\031.proto.SwcAttachmentAnoV1\"\250\001\n\035D"
+  "eleteSwcAttachmentAnoRequest\022*\n\010metaInfo"
+  "\030\001 \001(\0132\030.proto.RequestMetaInfoV1\022/\n\016User"
+  "VerifyInfo\030\002 \001(\0132\027.proto.UserVerifyInfoV"
+  "1\022\017\n\007SwcName\030\003 \001(\t\022\031\n\021AnoAttachmentUuid\030"
+  "\004 \001(\t\"\340\001\n\035UpdateSwcAttachmentAnoRequest\022"
+  "*\n\010metaInfo\030\001 \001(\0132\030.proto.RequestMetaInf"
+  "oV1\022/\n\016UserVerifyInfo\030\002 \001(\0132\027.proto.User"
+  "VerifyInfoV1\022\017\n\007SwcName\030\003 \001(\t\022\031\n\021AnoAtta"
+  "chmentUuid\030\004 \001(\t\0226\n\023NewSwcAttachmentAno\030"
+  "\005 \001(\0132\031.proto.SwcAttachmentAnoV1\"\245\001\n\032Get"
+  "SwcAttachmentAnoRequest\022*\n\010metaInfo\030\001 \001("
+  "\0132\030.proto.RequestMetaInfoV1\022/\n\016UserVerif"
+  "yInfo\030\002 \001(\0132\027.proto.UserVerifyInfoV1\022\017\n\007"
+  "SwcName\030\003 \001(\t\022\031\n\021AnoAttachmentUuid\030\004 \001(\t"
+  "\"\302\001\n\035CreateSwcAttachmentApoRequest\022*\n\010me"
+  "taInfo\030\001 \001(\0132\030.proto.RequestMetaInfoV1\022/"
+  "\n\016UserVerifyInfo\030\002 \001(\0132\027.proto.UserVerif"
+  "yInfoV1\022\017\n\007SwcName\030\003 \001(\t\0223\n\020SwcAttachmen"
+  "tApo\030\004 \003(\0132\031.proto.SwcAttachmentApoV1\"\250\001"
+  "\n\035DeleteSwcAttachmentApoRequest\022*\n\010metaI"
+  "nfo\030\001 \001(\0132\030.proto.RequestMetaInfoV1\022/\n\016U"
+  "serVerifyInfo\030\002 \001(\0132\027.proto.UserVerifyIn"
+  "foV1\022\017\n\007SwcName\030\003 \001(\t\022\031\n\021ApoAttachmentUu"
+  "id\030\004 \001(\t\"\340\001\n\035UpdateSwcAttachmentApoReque"
+  "st\022*\n\010metaInfo\030\001 \001(\0132\030.proto.RequestMeta"
+  "InfoV1\022/\n\016UserVerifyInfo\030\002 \001(\0132\027.proto.U"
+  "serVerifyInfoV1\022\017\n\007SwcName\030\003 \001(\t\022\031\n\021ApoA"
+  "ttachmentUuid\030\004 \001(\t\0226\n\023NewSwcAttachmentA"
+  "po\030\005 \003(\0132\031.proto.SwcAttachmentApoV1\"\245\001\n\032"
+  "GetSwcAttachmentApoRequest\022*\n\010metaInfo\030\001"
+  " \001(\0132\030.proto.RequestMetaInfoV1\022/\n\016UserVe"
+  "rifyInfo\030\002 \001(\0132\027.proto.UserVerifyInfoV1\022"
+  "\017\n\007SwcName\030\003 \001(\t\022\031\n\021ApoAttachmentUuid\030\004 "
+  "\001(\t\"\273\001\n\027RevertSwcVersionRequest\022*\n\010metaI"
+  "nfo\030\001 \001(\0132\030.proto.RequestMetaInfoV1\022/\n\016U"
+  "serVerifyInfo\030\002 \001(\0132\027.proto.UserVerifyIn"
+  "foV1\022\017\n\007SwcName\030\003 \001(\t\0222\n\016VersionEndTime\030"
+  "\004 \001(\0132\032.google.protobuf.Timestamp\"\264\001\n\035Cr"
+  "eateSwcAttachmentSwcRequest\022*\n\010metaInfo\030"
+  "\001 \001(\0132\030.proto.RequestMetaInfoV1\022/\n\016UserV"
+  "erifyInfo\030\002 \001(\0132\027.proto.UserVerifyInfoV1"
+  "\022\017\n\007SwcName\030\003 \001(\t\022%\n\007SwcData\030\004 \003(\0132\024.pro"
+  "to.SwcNodeDataV1\"\250\001\n\035DeleteSwcAttachment"
+  "SwcRequest\022*\n\010metaInfo\030\001 \001(\0132\030.proto.Req"
+  "uestMetaInfoV1\022/\n\016UserVerifyInfo\030\002 \001(\0132\027"
+  ".proto.UserVerifyInfoV1\022\017\n\007SwcName\030\003 \001(\t"
+  "\022\031\n\021SwcAttachmentUuid\030\004 \001(\t\"\322\001\n\035UpdateSw"
+  "cAttachmentSwcRequest\022*\n\010metaInfo\030\001 \001(\0132"
+  "\030.proto.RequestMetaInfoV1\022/\n\016UserVerifyI"
+  "nfo\030\002 \001(\0132\027.proto.UserVerifyInfoV1\022\017\n\007Sw"
+  "cName\030\003 \001(\t\022\031\n\021SwcAttachmentUuid\030\004 \001(\t\022("
+  "\n\nNewSwcData\030\005 \003(\0132\024.proto.SwcNodeDataV1"
+  "\"\245\001\n\032GetSwcAttachmentSwcRequest\022*\n\010metaI"
+  "nfo\030\001 \001(\0132\030.proto.RequestMetaInfoV1\022/\n\016U"
+  "serVerifyInfo\030\002 \001(\0132\027.proto.UserVerifyIn"
+  "foV1\022\017\n\007SwcName\030\003 \001(\t\022\031\n\021SwcAttachmentUu"
+  "id\030\004 \001(\t\"\274\001\n\034CreatePermissionGroupReques"
+  "t\022*\n\010metaInfo\030\001 \001(\0132\030.proto.RequestMetaI"
+  "nfoV1\022/\n\016UserVerifyInfo\030\002 \001(\0132\027.proto.Us"
+  "erVerifyInfoV1\022\033\n\023PermissionGroupName\030\003 "
+  "\001(\t\022\"\n\032PermissionGroupDescription\030\004 \001(\t\""
+  "\230\001\n\034DeletePermissionGroupRequest\022*\n\010meta"
+  "Info\030\001 \001(\0132\030.proto.RequestMetaInfoV1\022/\n\016"
+  "UserVerifyInfo\030\002 \001(\0132\027.proto.UserVerifyI"
+  "nfoV1\022\033\n\023PermissionGroupUuid\030\003 \001(\t\"\203\002\n\034U"
+  "pdatePermissionGroupRequest\022*\n\010metaInfo\030"
+  "\001 \001(\0132\030.proto.RequestMetaInfoV1\022/\n\016UserV"
+  "erifyInfo\030\002 \001(\0132\027.proto.UserVerifyInfoV1"
+  "\022\033\n\023PermissionGroupUuid\030\003 \001(\t\022\033\n\023Permiss"
+  "ionGroupName\030\004 \001(\t\022\"\n\032PermissionGroupDes"
+  "cription\030\005 \001(\t\022(\n\003Ace\030\006 \001(\0132\033.proto.Perm"
+  "issionGroupAceV1B/Z-DBMS/SwcDbmsCommon/G"
+  "enerated/go/proto/requestP\000b\006proto3"
   ;
 static const ::_pbi::DescriptorTable* const descriptor_table_Message_2fRequest_2eproto_deps[2] = {
   &::descriptor_table_Message_2fMessage_2eproto,
@@ -1716,9 +1745,9 @@ static const ::_pbi::DescriptorTable* const descriptor_table_Message_2fRequest_2
 };
 static ::_pbi::once_flag descriptor_table_Message_2fRequest_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_Message_2fRequest_2eproto = {
-    false, false, 9012, descriptor_table_protodef_Message_2fRequest_2eproto,
+    false, false, 9155, descriptor_table_protodef_Message_2fRequest_2eproto,
     "Message/Request.proto",
-    &descriptor_table_Message_2fRequest_2eproto_once, descriptor_table_Message_2fRequest_2eproto_deps, 2, 54,
+    &descriptor_table_Message_2fRequest_2eproto_once, descriptor_table_Message_2fRequest_2eproto_deps, 2, 55,
     schemas, file_default_instances, TableStruct_Message_2fRequest_2eproto::offsets,
     file_level_metadata_Message_2fRequest_2eproto, file_level_enum_descriptors_Message_2fRequest_2eproto,
     file_level_service_descriptors_Message_2fRequest_2eproto,
@@ -2585,41 +2614,41 @@ void UpdateUserRequest::InternalSwap(UpdateUserRequest* other) {
 
 // ===================================================================
 
-class GetUserRequest::_Internal {
+class GetUserByUuidRequest::_Internal {
  public:
-  static const ::proto::RequestMetaInfoV1& metainfo(const GetUserRequest* msg);
-  static const ::proto::UserVerifyInfoV1& userverifyinfo(const GetUserRequest* msg);
+  static const ::proto::RequestMetaInfoV1& metainfo(const GetUserByUuidRequest* msg);
+  static const ::proto::UserVerifyInfoV1& userverifyinfo(const GetUserByUuidRequest* msg);
 };
 
 const ::proto::RequestMetaInfoV1&
-GetUserRequest::_Internal::metainfo(const GetUserRequest* msg) {
+GetUserByUuidRequest::_Internal::metainfo(const GetUserByUuidRequest* msg) {
   return *msg->_impl_.metainfo_;
 }
 const ::proto::UserVerifyInfoV1&
-GetUserRequest::_Internal::userverifyinfo(const GetUserRequest* msg) {
+GetUserByUuidRequest::_Internal::userverifyinfo(const GetUserByUuidRequest* msg) {
   return *msg->_impl_.userverifyinfo_;
 }
-void GetUserRequest::clear_metainfo() {
+void GetUserByUuidRequest::clear_metainfo() {
   if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
     delete _impl_.metainfo_;
   }
   _impl_.metainfo_ = nullptr;
 }
-void GetUserRequest::clear_userverifyinfo() {
+void GetUserByUuidRequest::clear_userverifyinfo() {
   if (GetArenaForAllocation() == nullptr && _impl_.userverifyinfo_ != nullptr) {
     delete _impl_.userverifyinfo_;
   }
   _impl_.userverifyinfo_ = nullptr;
 }
-GetUserRequest::GetUserRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+GetUserByUuidRequest::GetUserByUuidRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:proto.GetUserRequest)
+  // @@protoc_insertion_point(arena_constructor:proto.GetUserByUuidRequest)
 }
-GetUserRequest::GetUserRequest(const GetUserRequest& from)
+GetUserByUuidRequest::GetUserByUuidRequest(const GetUserByUuidRequest& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
-  GetUserRequest* const _this = this; (void)_this;
+  GetUserByUuidRequest* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.useruuid_){}
     , decltype(_impl_.metainfo_){nullptr}
@@ -2641,10 +2670,10 @@ GetUserRequest::GetUserRequest(const GetUserRequest& from)
   if (from._internal_has_userverifyinfo()) {
     _this->_impl_.userverifyinfo_ = new ::proto::UserVerifyInfoV1(*from._impl_.userverifyinfo_);
   }
-  // @@protoc_insertion_point(copy_constructor:proto.GetUserRequest)
+  // @@protoc_insertion_point(copy_constructor:proto.GetUserByUuidRequest)
 }
 
-inline void GetUserRequest::SharedCtor(
+inline void GetUserByUuidRequest::SharedCtor(
     ::_pb::Arena* arena, bool is_message_owned) {
   (void)arena;
   (void)is_message_owned;
@@ -2660,8 +2689,8 @@ inline void GetUserRequest::SharedCtor(
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
-GetUserRequest::~GetUserRequest() {
-  // @@protoc_insertion_point(destructor:proto.GetUserRequest)
+GetUserByUuidRequest::~GetUserByUuidRequest() {
+  // @@protoc_insertion_point(destructor:proto.GetUserByUuidRequest)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -2669,19 +2698,19 @@ GetUserRequest::~GetUserRequest() {
   SharedDtor();
 }
 
-inline void GetUserRequest::SharedDtor() {
+inline void GetUserByUuidRequest::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   _impl_.useruuid_.Destroy();
   if (this != internal_default_instance()) delete _impl_.metainfo_;
   if (this != internal_default_instance()) delete _impl_.userverifyinfo_;
 }
 
-void GetUserRequest::SetCachedSize(int size) const {
+void GetUserByUuidRequest::SetCachedSize(int size) const {
   _impl_._cached_size_.Set(size);
 }
 
-void GetUserRequest::Clear() {
-// @@protoc_insertion_point(message_clear_start:proto.GetUserRequest)
+void GetUserByUuidRequest::Clear() {
+// @@protoc_insertion_point(message_clear_start:proto.GetUserByUuidRequest)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -2698,7 +2727,7 @@ void GetUserRequest::Clear() {
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* GetUserRequest::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+const char* GetUserByUuidRequest::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
@@ -2726,7 +2755,7 @@ const char* GetUserRequest::_InternalParse(const char* ptr, ::_pbi::ParseContext
           auto str = _internal_mutable_useruuid();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "proto.GetUserRequest.UserUuid"));
+          CHK_(::_pbi::VerifyUTF8(str, "proto.GetUserByUuidRequest.UserUuid"));
         } else
           goto handle_unusual;
         continue;
@@ -2753,9 +2782,9 @@ failure:
 #undef CHK_
 }
 
-uint8_t* GetUserRequest::_InternalSerialize(
+uint8_t* GetUserByUuidRequest::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:proto.GetUserRequest)
+  // @@protoc_insertion_point(serialize_to_array_start:proto.GetUserByUuidRequest)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -2778,7 +2807,7 @@ uint8_t* GetUserRequest::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_useruuid().data(), static_cast<int>(this->_internal_useruuid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "proto.GetUserRequest.UserUuid");
+      "proto.GetUserByUuidRequest.UserUuid");
     target = stream->WriteStringMaybeAliased(
         3, this->_internal_useruuid(), target);
   }
@@ -2787,12 +2816,12 @@ uint8_t* GetUserRequest::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:proto.GetUserRequest)
+  // @@protoc_insertion_point(serialize_to_array_end:proto.GetUserByUuidRequest)
   return target;
 }
 
-size_t GetUserRequest::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:proto.GetUserRequest)
+size_t GetUserByUuidRequest::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:proto.GetUserByUuidRequest)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -2823,17 +2852,17 @@ size_t GetUserRequest::ByteSizeLong() const {
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData GetUserRequest::_class_data_ = {
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData GetUserByUuidRequest::_class_data_ = {
     ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    GetUserRequest::MergeImpl
+    GetUserByUuidRequest::MergeImpl
 };
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetUserRequest::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetUserByUuidRequest::GetClassData() const { return &_class_data_; }
 
 
-void GetUserRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<GetUserRequest*>(&to_msg);
-  auto& from = static_cast<const GetUserRequest&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:proto.GetUserRequest)
+void GetUserByUuidRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<GetUserByUuidRequest*>(&to_msg);
+  auto& from = static_cast<const GetUserByUuidRequest&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:proto.GetUserByUuidRequest)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -2852,18 +2881,18 @@ void GetUserRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const :
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void GetUserRequest::CopyFrom(const GetUserRequest& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:proto.GetUserRequest)
+void GetUserByUuidRequest::CopyFrom(const GetUserByUuidRequest& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:proto.GetUserByUuidRequest)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool GetUserRequest::IsInitialized() const {
+bool GetUserByUuidRequest::IsInitialized() const {
   return true;
 }
 
-void GetUserRequest::InternalSwap(GetUserRequest* other) {
+void GetUserByUuidRequest::InternalSwap(GetUserByUuidRequest* other) {
   using std::swap;
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
@@ -2873,17 +2902,320 @@ void GetUserRequest::InternalSwap(GetUserRequest* other) {
       &other->_impl_.useruuid_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(GetUserRequest, _impl_.userverifyinfo_)
-      + sizeof(GetUserRequest::_impl_.userverifyinfo_)
-      - PROTOBUF_FIELD_OFFSET(GetUserRequest, _impl_.metainfo_)>(
+      PROTOBUF_FIELD_OFFSET(GetUserByUuidRequest, _impl_.userverifyinfo_)
+      + sizeof(GetUserByUuidRequest::_impl_.userverifyinfo_)
+      - PROTOBUF_FIELD_OFFSET(GetUserByUuidRequest, _impl_.metainfo_)>(
           reinterpret_cast<char*>(&_impl_.metainfo_),
           reinterpret_cast<char*>(&other->_impl_.metainfo_));
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata GetUserRequest::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata GetUserByUuidRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fRequest_2eproto_getter, &descriptor_table_Message_2fRequest_2eproto_once,
       file_level_metadata_Message_2fRequest_2eproto[3]);
+}
+
+// ===================================================================
+
+class GetUserByNameRequest::_Internal {
+ public:
+  static const ::proto::RequestMetaInfoV1& metainfo(const GetUserByNameRequest* msg);
+  static const ::proto::UserVerifyInfoV1& userverifyinfo(const GetUserByNameRequest* msg);
+};
+
+const ::proto::RequestMetaInfoV1&
+GetUserByNameRequest::_Internal::metainfo(const GetUserByNameRequest* msg) {
+  return *msg->_impl_.metainfo_;
+}
+const ::proto::UserVerifyInfoV1&
+GetUserByNameRequest::_Internal::userverifyinfo(const GetUserByNameRequest* msg) {
+  return *msg->_impl_.userverifyinfo_;
+}
+void GetUserByNameRequest::clear_metainfo() {
+  if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
+    delete _impl_.metainfo_;
+  }
+  _impl_.metainfo_ = nullptr;
+}
+void GetUserByNameRequest::clear_userverifyinfo() {
+  if (GetArenaForAllocation() == nullptr && _impl_.userverifyinfo_ != nullptr) {
+    delete _impl_.userverifyinfo_;
+  }
+  _impl_.userverifyinfo_ = nullptr;
+}
+GetUserByNameRequest::GetUserByNameRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:proto.GetUserByNameRequest)
+}
+GetUserByNameRequest::GetUserByNameRequest(const GetUserByNameRequest& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  GetUserByNameRequest* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.username_){}
+    , decltype(_impl_.metainfo_){nullptr}
+    , decltype(_impl_.userverifyinfo_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _impl_.username_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.username_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (!from._internal_username().empty()) {
+    _this->_impl_.username_.Set(from._internal_username(), 
+      _this->GetArenaForAllocation());
+  }
+  if (from._internal_has_metainfo()) {
+    _this->_impl_.metainfo_ = new ::proto::RequestMetaInfoV1(*from._impl_.metainfo_);
+  }
+  if (from._internal_has_userverifyinfo()) {
+    _this->_impl_.userverifyinfo_ = new ::proto::UserVerifyInfoV1(*from._impl_.userverifyinfo_);
+  }
+  // @@protoc_insertion_point(copy_constructor:proto.GetUserByNameRequest)
+}
+
+inline void GetUserByNameRequest::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.username_){}
+    , decltype(_impl_.metainfo_){nullptr}
+    , decltype(_impl_.userverifyinfo_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+  _impl_.username_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.username_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+}
+
+GetUserByNameRequest::~GetUserByNameRequest() {
+  // @@protoc_insertion_point(destructor:proto.GetUserByNameRequest)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void GetUserByNameRequest::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.username_.Destroy();
+  if (this != internal_default_instance()) delete _impl_.metainfo_;
+  if (this != internal_default_instance()) delete _impl_.userverifyinfo_;
+}
+
+void GetUserByNameRequest::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void GetUserByNameRequest::Clear() {
+// @@protoc_insertion_point(message_clear_start:proto.GetUserByNameRequest)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _impl_.username_.ClearToEmpty();
+  if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
+    delete _impl_.metainfo_;
+  }
+  _impl_.metainfo_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.userverifyinfo_ != nullptr) {
+    delete _impl_.userverifyinfo_;
+  }
+  _impl_.userverifyinfo_ = nullptr;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* GetUserByNameRequest::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // .proto.RequestMetaInfoV1 metaInfo = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_metainfo(), ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_userverifyinfo(), ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // string UserName = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
+          auto str = _internal_mutable_username();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "proto.GetUserByNameRequest.UserName"));
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* GetUserByNameRequest::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:proto.GetUserByNameRequest)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .proto.RequestMetaInfoV1 metaInfo = 1;
+  if (this->_internal_has_metainfo()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::metainfo(this),
+        _Internal::metainfo(this).GetCachedSize(), target, stream);
+  }
+
+  // .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
+  if (this->_internal_has_userverifyinfo()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(2, _Internal::userverifyinfo(this),
+        _Internal::userverifyinfo(this).GetCachedSize(), target, stream);
+  }
+
+  // string UserName = 3;
+  if (!this->_internal_username().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_username().data(), static_cast<int>(this->_internal_username().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "proto.GetUserByNameRequest.UserName");
+    target = stream->WriteStringMaybeAliased(
+        3, this->_internal_username(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:proto.GetUserByNameRequest)
+  return target;
+}
+
+size_t GetUserByNameRequest::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:proto.GetUserByNameRequest)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // string UserName = 3;
+  if (!this->_internal_username().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_username());
+  }
+
+  // .proto.RequestMetaInfoV1 metaInfo = 1;
+  if (this->_internal_has_metainfo()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.metainfo_);
+  }
+
+  // .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
+  if (this->_internal_has_userverifyinfo()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.userverifyinfo_);
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData GetUserByNameRequest::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    GetUserByNameRequest::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetUserByNameRequest::GetClassData() const { return &_class_data_; }
+
+
+void GetUserByNameRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<GetUserByNameRequest*>(&to_msg);
+  auto& from = static_cast<const GetUserByNameRequest&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:proto.GetUserByNameRequest)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (!from._internal_username().empty()) {
+    _this->_internal_set_username(from._internal_username());
+  }
+  if (from._internal_has_metainfo()) {
+    _this->_internal_mutable_metainfo()->::proto::RequestMetaInfoV1::MergeFrom(
+        from._internal_metainfo());
+  }
+  if (from._internal_has_userverifyinfo()) {
+    _this->_internal_mutable_userverifyinfo()->::proto::UserVerifyInfoV1::MergeFrom(
+        from._internal_userverifyinfo());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void GetUserByNameRequest::CopyFrom(const GetUserByNameRequest& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:proto.GetUserByNameRequest)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool GetUserByNameRequest::IsInitialized() const {
+  return true;
+}
+
+void GetUserByNameRequest::InternalSwap(GetUserByNameRequest* other) {
+  using std::swap;
+  auto* lhs_arena = GetArenaForAllocation();
+  auto* rhs_arena = other->GetArenaForAllocation();
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.username_, lhs_arena,
+      &other->_impl_.username_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(GetUserByNameRequest, _impl_.userverifyinfo_)
+      + sizeof(GetUserByNameRequest::_impl_.userverifyinfo_)
+      - PROTOBUF_FIELD_OFFSET(GetUserByNameRequest, _impl_.metainfo_)>(
+          reinterpret_cast<char*>(&_impl_.metainfo_),
+          reinterpret_cast<char*>(&other->_impl_.metainfo_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata GetUserByNameRequest::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_Message_2fRequest_2eproto_getter, &descriptor_table_Message_2fRequest_2eproto_once,
+      file_level_metadata_Message_2fRequest_2eproto[4]);
 }
 
 // ===================================================================
@@ -3134,7 +3466,7 @@ void GetAllUserRequest::InternalSwap(GetAllUserRequest* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata GetAllUserRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fRequest_2eproto_getter, &descriptor_table_Message_2fRequest_2eproto_once,
-      file_level_metadata_Message_2fRequest_2eproto[4]);
+      file_level_metadata_Message_2fRequest_2eproto[5]);
 }
 
 // ===================================================================
@@ -3435,7 +3767,7 @@ void UserLoginRequest::InternalSwap(UserLoginRequest* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata UserLoginRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fRequest_2eproto_getter, &descriptor_table_Message_2fRequest_2eproto_once,
-      file_level_metadata_Message_2fRequest_2eproto[5]);
+      file_level_metadata_Message_2fRequest_2eproto[6]);
 }
 
 // ===================================================================
@@ -3686,7 +4018,7 @@ void UserLogoutRequest::InternalSwap(UserLogoutRequest* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata UserLogoutRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fRequest_2eproto_getter, &descriptor_table_Message_2fRequest_2eproto_once,
-      file_level_metadata_Message_2fRequest_2eproto[6]);
+      file_level_metadata_Message_2fRequest_2eproto[7]);
 }
 
 // ===================================================================
@@ -3963,7 +4295,7 @@ void UserOnlineHeartBeatNotification::InternalSwap(UserOnlineHeartBeatNotificati
 ::PROTOBUF_NAMESPACE_ID::Metadata UserOnlineHeartBeatNotification::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fRequest_2eproto_getter, &descriptor_table_Message_2fRequest_2eproto_once,
-      file_level_metadata_Message_2fRequest_2eproto[7]);
+      file_level_metadata_Message_2fRequest_2eproto[8]);
 }
 
 // ===================================================================
@@ -4214,7 +4546,7 @@ void GetUserPermissionGroupRequest::InternalSwap(GetUserPermissionGroupRequest* 
 ::PROTOBUF_NAMESPACE_ID::Metadata GetUserPermissionGroupRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fRequest_2eproto_getter, &descriptor_table_Message_2fRequest_2eproto_once,
-      file_level_metadata_Message_2fRequest_2eproto[8]);
+      file_level_metadata_Message_2fRequest_2eproto[9]);
 }
 
 // ===================================================================
@@ -4512,7 +4844,7 @@ void GetPermissionGroupRequest::InternalSwap(GetPermissionGroupRequest* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata GetPermissionGroupRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fRequest_2eproto_getter, &descriptor_table_Message_2fRequest_2eproto_once,
-      file_level_metadata_Message_2fRequest_2eproto[9]);
+      file_level_metadata_Message_2fRequest_2eproto[10]);
 }
 
 // ===================================================================
@@ -4763,7 +5095,7 @@ void GetAllPermissionGroupRequest::InternalSwap(GetAllPermissionGroupRequest* ot
 ::PROTOBUF_NAMESPACE_ID::Metadata GetAllPermissionGroupRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fRequest_2eproto_getter, &descriptor_table_Message_2fRequest_2eproto_once,
-      file_level_metadata_Message_2fRequest_2eproto[10]);
+      file_level_metadata_Message_2fRequest_2eproto[11]);
 }
 
 // ===================================================================
@@ -5116,7 +5448,7 @@ void ChangeUserPermissionGroupRequest::InternalSwap(ChangeUserPermissionGroupReq
 ::PROTOBUF_NAMESPACE_ID::Metadata ChangeUserPermissionGroupRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fRequest_2eproto_getter, &descriptor_table_Message_2fRequest_2eproto_once,
-      file_level_metadata_Message_2fRequest_2eproto[11]);
+      file_level_metadata_Message_2fRequest_2eproto[12]);
 }
 
 // ===================================================================
@@ -5414,7 +5746,7 @@ void CreateProjectRequest::InternalSwap(CreateProjectRequest* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata CreateProjectRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fRequest_2eproto_getter, &descriptor_table_Message_2fRequest_2eproto_once,
-      file_level_metadata_Message_2fRequest_2eproto[12]);
+      file_level_metadata_Message_2fRequest_2eproto[13]);
 }
 
 // ===================================================================
@@ -5717,7 +6049,7 @@ void DeleteProjectRequest::InternalSwap(DeleteProjectRequest* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata DeleteProjectRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fRequest_2eproto_getter, &descriptor_table_Message_2fRequest_2eproto_once,
-      file_level_metadata_Message_2fRequest_2eproto[13]);
+      file_level_metadata_Message_2fRequest_2eproto[14]);
 }
 
 // ===================================================================
@@ -6015,7 +6347,7 @@ void UpdateProjectRequest::InternalSwap(UpdateProjectRequest* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata UpdateProjectRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fRequest_2eproto_getter, &descriptor_table_Message_2fRequest_2eproto_once,
-      file_level_metadata_Message_2fRequest_2eproto[14]);
+      file_level_metadata_Message_2fRequest_2eproto[15]);
 }
 
 // ===================================================================
@@ -6318,7 +6650,7 @@ void GetProjectRequest::InternalSwap(GetProjectRequest* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata GetProjectRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fRequest_2eproto_getter, &descriptor_table_Message_2fRequest_2eproto_once,
-      file_level_metadata_Message_2fRequest_2eproto[15]);
+      file_level_metadata_Message_2fRequest_2eproto[16]);
 }
 
 // ===================================================================
@@ -6569,7 +6901,7 @@ void GetAllProjectRequest::InternalSwap(GetAllProjectRequest* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata GetAllProjectRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fRequest_2eproto_getter, &descriptor_table_Message_2fRequest_2eproto_once,
-      file_level_metadata_Message_2fRequest_2eproto[16]);
+      file_level_metadata_Message_2fRequest_2eproto[17]);
 }
 
 // ===================================================================
@@ -6951,7 +7283,7 @@ void CreateSwcRequest::InternalSwap(CreateSwcRequest* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata CreateSwcRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fRequest_2eproto_getter, &descriptor_table_Message_2fRequest_2eproto_once,
-      file_level_metadata_Message_2fRequest_2eproto[17]);
+      file_level_metadata_Message_2fRequest_2eproto[18]);
 }
 
 // ===================================================================
@@ -7254,7 +7586,7 @@ void DeleteSwcRequest::InternalSwap(DeleteSwcRequest* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata DeleteSwcRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fRequest_2eproto_getter, &descriptor_table_Message_2fRequest_2eproto_once,
-      file_level_metadata_Message_2fRequest_2eproto[18]);
+      file_level_metadata_Message_2fRequest_2eproto[19]);
 }
 
 // ===================================================================
@@ -7552,7 +7884,7 @@ void UpdateSwcRequest::InternalSwap(UpdateSwcRequest* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata UpdateSwcRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fRequest_2eproto_getter, &descriptor_table_Message_2fRequest_2eproto_once,
-      file_level_metadata_Message_2fRequest_2eproto[19]);
+      file_level_metadata_Message_2fRequest_2eproto[20]);
 }
 
 // ===================================================================
@@ -7855,7 +8187,7 @@ void GetSwcMetaInfoRequest::InternalSwap(GetSwcMetaInfoRequest* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata GetSwcMetaInfoRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fRequest_2eproto_getter, &descriptor_table_Message_2fRequest_2eproto_once,
-      file_level_metadata_Message_2fRequest_2eproto[20]);
+      file_level_metadata_Message_2fRequest_2eproto[21]);
 }
 
 // ===================================================================
@@ -8106,7 +8438,7 @@ void GetAllSwcMetaInfoRequest::InternalSwap(GetAllSwcMetaInfoRequest* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata GetAllSwcMetaInfoRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fRequest_2eproto_getter, &descriptor_table_Message_2fRequest_2eproto_once,
-      file_level_metadata_Message_2fRequest_2eproto[21]);
+      file_level_metadata_Message_2fRequest_2eproto[22]);
 }
 
 // ===================================================================
@@ -8409,7 +8741,7 @@ void CreateSwcSnapshotRequest::InternalSwap(CreateSwcSnapshotRequest* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata CreateSwcSnapshotRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fRequest_2eproto_getter, &descriptor_table_Message_2fRequest_2eproto_once,
-      file_level_metadata_Message_2fRequest_2eproto[22]);
+      file_level_metadata_Message_2fRequest_2eproto[23]);
 }
 
 // ===================================================================
@@ -8712,7 +9044,7 @@ void GetAllSnapshotMetaInfoRequest::InternalSwap(GetAllSnapshotMetaInfoRequest* 
 ::PROTOBUF_NAMESPACE_ID::Metadata GetAllSnapshotMetaInfoRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fRequest_2eproto_getter, &descriptor_table_Message_2fRequest_2eproto_once,
-      file_level_metadata_Message_2fRequest_2eproto[23]);
+      file_level_metadata_Message_2fRequest_2eproto[24]);
 }
 
 // ===================================================================
@@ -9015,7 +9347,7 @@ void GetSnapshotRequest::InternalSwap(GetSnapshotRequest* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata GetSnapshotRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fRequest_2eproto_getter, &descriptor_table_Message_2fRequest_2eproto_once,
-      file_level_metadata_Message_2fRequest_2eproto[24]);
+      file_level_metadata_Message_2fRequest_2eproto[25]);
 }
 
 // ===================================================================
@@ -9318,7 +9650,7 @@ void GetAllIncrementOperationMetaInfoRequest::InternalSwap(GetAllIncrementOperat
 ::PROTOBUF_NAMESPACE_ID::Metadata GetAllIncrementOperationMetaInfoRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fRequest_2eproto_getter, &descriptor_table_Message_2fRequest_2eproto_once,
-      file_level_metadata_Message_2fRequest_2eproto[25]);
+      file_level_metadata_Message_2fRequest_2eproto[26]);
 }
 
 // ===================================================================
@@ -9621,7 +9953,7 @@ void GetIncrementOperationRequest::InternalSwap(GetIncrementOperationRequest* ot
 ::PROTOBUF_NAMESPACE_ID::Metadata GetIncrementOperationRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fRequest_2eproto_getter, &descriptor_table_Message_2fRequest_2eproto_once,
-      file_level_metadata_Message_2fRequest_2eproto[26]);
+      file_level_metadata_Message_2fRequest_2eproto[27]);
 }
 
 // ===================================================================
@@ -9971,7 +10303,7 @@ void CreateSwcNodeDataRequest::InternalSwap(CreateSwcNodeDataRequest* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata CreateSwcNodeDataRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fRequest_2eproto_getter, &descriptor_table_Message_2fRequest_2eproto_once,
-      file_level_metadata_Message_2fRequest_2eproto[27]);
+      file_level_metadata_Message_2fRequest_2eproto[28]);
 }
 
 // ===================================================================
@@ -10321,7 +10653,7 @@ void DeleteSwcNodeDataRequest::InternalSwap(DeleteSwcNodeDataRequest* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata DeleteSwcNodeDataRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fRequest_2eproto_getter, &descriptor_table_Message_2fRequest_2eproto_once,
-      file_level_metadata_Message_2fRequest_2eproto[28]);
+      file_level_metadata_Message_2fRequest_2eproto[29]);
 }
 
 // ===================================================================
@@ -10671,7 +11003,7 @@ void UpdateSwcNodeDataRequest::InternalSwap(UpdateSwcNodeDataRequest* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata UpdateSwcNodeDataRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fRequest_2eproto_getter, &descriptor_table_Message_2fRequest_2eproto_once,
-      file_level_metadata_Message_2fRequest_2eproto[29]);
+      file_level_metadata_Message_2fRequest_2eproto[30]);
 }
 
 // ===================================================================
@@ -11021,7 +11353,7 @@ void GetSwcNodeDataRequest::InternalSwap(GetSwcNodeDataRequest* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata GetSwcNodeDataRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fRequest_2eproto_getter, &descriptor_table_Message_2fRequest_2eproto_once,
-      file_level_metadata_Message_2fRequest_2eproto[30]);
+      file_level_metadata_Message_2fRequest_2eproto[31]);
 }
 
 // ===================================================================
@@ -11324,7 +11656,7 @@ void GetSwcFullNodeDataRequest::InternalSwap(GetSwcFullNodeDataRequest* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata GetSwcFullNodeDataRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fRequest_2eproto_getter, &descriptor_table_Message_2fRequest_2eproto_once,
-      file_level_metadata_Message_2fRequest_2eproto[31]);
+      file_level_metadata_Message_2fRequest_2eproto[32]);
 }
 
 // ===================================================================
@@ -11771,7 +12103,7 @@ void GetSwcNodeDataListByTimeAndUserRequest::InternalSwap(GetSwcNodeDataListByTi
 ::PROTOBUF_NAMESPACE_ID::Metadata GetSwcNodeDataListByTimeAndUserRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fRequest_2eproto_getter, &descriptor_table_Message_2fRequest_2eproto_once,
-      file_level_metadata_Message_2fRequest_2eproto[32]);
+      file_level_metadata_Message_2fRequest_2eproto[33]);
 }
 
 // ===================================================================
@@ -12069,7 +12401,7 @@ void CreateDailyStatisticsRequest::InternalSwap(CreateDailyStatisticsRequest* ot
 ::PROTOBUF_NAMESPACE_ID::Metadata CreateDailyStatisticsRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fRequest_2eproto_getter, &descriptor_table_Message_2fRequest_2eproto_once,
-      file_level_metadata_Message_2fRequest_2eproto[33]);
+      file_level_metadata_Message_2fRequest_2eproto[34]);
 }
 
 // ===================================================================
@@ -12372,7 +12704,7 @@ void DeleteDailyStatisticsRequest::InternalSwap(DeleteDailyStatisticsRequest* ot
 ::PROTOBUF_NAMESPACE_ID::Metadata DeleteDailyStatisticsRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fRequest_2eproto_getter, &descriptor_table_Message_2fRequest_2eproto_once,
-      file_level_metadata_Message_2fRequest_2eproto[34]);
+      file_level_metadata_Message_2fRequest_2eproto[35]);
 }
 
 // ===================================================================
@@ -12670,7 +13002,7 @@ void UpdateDailyStatisticsRequest::InternalSwap(UpdateDailyStatisticsRequest* ot
 ::PROTOBUF_NAMESPACE_ID::Metadata UpdateDailyStatisticsRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fRequest_2eproto_getter, &descriptor_table_Message_2fRequest_2eproto_once,
-      file_level_metadata_Message_2fRequest_2eproto[35]);
+      file_level_metadata_Message_2fRequest_2eproto[36]);
 }
 
 // ===================================================================
@@ -12973,7 +13305,7 @@ void GetDailyStatisticsRequest::InternalSwap(GetDailyStatisticsRequest* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata GetDailyStatisticsRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fRequest_2eproto_getter, &descriptor_table_Message_2fRequest_2eproto_once,
-      file_level_metadata_Message_2fRequest_2eproto[36]);
+      file_level_metadata_Message_2fRequest_2eproto[37]);
 }
 
 // ===================================================================
@@ -13224,7 +13556,7 @@ void GetAllDailyStatisticsRequest::InternalSwap(GetAllDailyStatisticsRequest* ot
 ::PROTOBUF_NAMESPACE_ID::Metadata GetAllDailyStatisticsRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fRequest_2eproto_getter, &descriptor_table_Message_2fRequest_2eproto_once,
-      file_level_metadata_Message_2fRequest_2eproto[37]);
+      file_level_metadata_Message_2fRequest_2eproto[38]);
 }
 
 // ===================================================================
@@ -13574,7 +13906,7 @@ void CreateSwcAttachmentAnoRequest::InternalSwap(CreateSwcAttachmentAnoRequest* 
 ::PROTOBUF_NAMESPACE_ID::Metadata CreateSwcAttachmentAnoRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fRequest_2eproto_getter, &descriptor_table_Message_2fRequest_2eproto_once,
-      file_level_metadata_Message_2fRequest_2eproto[38]);
+      file_level_metadata_Message_2fRequest_2eproto[39]);
 }
 
 // ===================================================================
@@ -13927,7 +14259,7 @@ void DeleteSwcAttachmentAnoRequest::InternalSwap(DeleteSwcAttachmentAnoRequest* 
 ::PROTOBUF_NAMESPACE_ID::Metadata DeleteSwcAttachmentAnoRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fRequest_2eproto_getter, &descriptor_table_Message_2fRequest_2eproto_once,
-      file_level_metadata_Message_2fRequest_2eproto[39]);
+      file_level_metadata_Message_2fRequest_2eproto[40]);
 }
 
 // ===================================================================
@@ -14327,7 +14659,7 @@ void UpdateSwcAttachmentAnoRequest::InternalSwap(UpdateSwcAttachmentAnoRequest* 
 ::PROTOBUF_NAMESPACE_ID::Metadata UpdateSwcAttachmentAnoRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fRequest_2eproto_getter, &descriptor_table_Message_2fRequest_2eproto_once,
-      file_level_metadata_Message_2fRequest_2eproto[40]);
+      file_level_metadata_Message_2fRequest_2eproto[41]);
 }
 
 // ===================================================================
@@ -14680,7 +15012,7 @@ void GetSwcAttachmentAnoRequest::InternalSwap(GetSwcAttachmentAnoRequest* other)
 ::PROTOBUF_NAMESPACE_ID::Metadata GetSwcAttachmentAnoRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fRequest_2eproto_getter, &descriptor_table_Message_2fRequest_2eproto_once,
-      file_level_metadata_Message_2fRequest_2eproto[41]);
+      file_level_metadata_Message_2fRequest_2eproto[42]);
 }
 
 // ===================================================================
@@ -15020,7 +15352,7 @@ void CreateSwcAttachmentApoRequest::InternalSwap(CreateSwcAttachmentApoRequest* 
 ::PROTOBUF_NAMESPACE_ID::Metadata CreateSwcAttachmentApoRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fRequest_2eproto_getter, &descriptor_table_Message_2fRequest_2eproto_once,
-      file_level_metadata_Message_2fRequest_2eproto[42]);
+      file_level_metadata_Message_2fRequest_2eproto[43]);
 }
 
 // ===================================================================
@@ -15373,7 +15705,7 @@ void DeleteSwcAttachmentApoRequest::InternalSwap(DeleteSwcAttachmentApoRequest* 
 ::PROTOBUF_NAMESPACE_ID::Metadata DeleteSwcAttachmentApoRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fRequest_2eproto_getter, &descriptor_table_Message_2fRequest_2eproto_once,
-      file_level_metadata_Message_2fRequest_2eproto[43]);
+      file_level_metadata_Message_2fRequest_2eproto[44]);
 }
 
 // ===================================================================
@@ -15763,7 +16095,7 @@ void UpdateSwcAttachmentApoRequest::InternalSwap(UpdateSwcAttachmentApoRequest* 
 ::PROTOBUF_NAMESPACE_ID::Metadata UpdateSwcAttachmentApoRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fRequest_2eproto_getter, &descriptor_table_Message_2fRequest_2eproto_once,
-      file_level_metadata_Message_2fRequest_2eproto[44]);
+      file_level_metadata_Message_2fRequest_2eproto[45]);
 }
 
 // ===================================================================
@@ -16116,7 +16448,7 @@ void GetSwcAttachmentApoRequest::InternalSwap(GetSwcAttachmentApoRequest* other)
 ::PROTOBUF_NAMESPACE_ID::Metadata GetSwcAttachmentApoRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fRequest_2eproto_getter, &descriptor_table_Message_2fRequest_2eproto_once,
-      file_level_metadata_Message_2fRequest_2eproto[45]);
+      file_level_metadata_Message_2fRequest_2eproto[46]);
 }
 
 // ===================================================================
@@ -16466,7 +16798,7 @@ void RevertSwcVersionRequest::InternalSwap(RevertSwcVersionRequest* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata RevertSwcVersionRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fRequest_2eproto_getter, &descriptor_table_Message_2fRequest_2eproto_once,
-      file_level_metadata_Message_2fRequest_2eproto[46]);
+      file_level_metadata_Message_2fRequest_2eproto[47]);
 }
 
 // ===================================================================
@@ -16806,7 +17138,7 @@ void CreateSwcAttachmentSwcRequest::InternalSwap(CreateSwcAttachmentSwcRequest* 
 ::PROTOBUF_NAMESPACE_ID::Metadata CreateSwcAttachmentSwcRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fRequest_2eproto_getter, &descriptor_table_Message_2fRequest_2eproto_once,
-      file_level_metadata_Message_2fRequest_2eproto[47]);
+      file_level_metadata_Message_2fRequest_2eproto[48]);
 }
 
 // ===================================================================
@@ -17159,7 +17491,7 @@ void DeleteSwcAttachmentSwcRequest::InternalSwap(DeleteSwcAttachmentSwcRequest* 
 ::PROTOBUF_NAMESPACE_ID::Metadata DeleteSwcAttachmentSwcRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fRequest_2eproto_getter, &descriptor_table_Message_2fRequest_2eproto_once,
-      file_level_metadata_Message_2fRequest_2eproto[48]);
+      file_level_metadata_Message_2fRequest_2eproto[49]);
 }
 
 // ===================================================================
@@ -17549,7 +17881,7 @@ void UpdateSwcAttachmentSwcRequest::InternalSwap(UpdateSwcAttachmentSwcRequest* 
 ::PROTOBUF_NAMESPACE_ID::Metadata UpdateSwcAttachmentSwcRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fRequest_2eproto_getter, &descriptor_table_Message_2fRequest_2eproto_once,
-      file_level_metadata_Message_2fRequest_2eproto[49]);
+      file_level_metadata_Message_2fRequest_2eproto[50]);
 }
 
 // ===================================================================
@@ -17902,7 +18234,7 @@ void GetSwcAttachmentSwcRequest::InternalSwap(GetSwcAttachmentSwcRequest* other)
 ::PROTOBUF_NAMESPACE_ID::Metadata GetSwcAttachmentSwcRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fRequest_2eproto_getter, &descriptor_table_Message_2fRequest_2eproto_once,
-      file_level_metadata_Message_2fRequest_2eproto[50]);
+      file_level_metadata_Message_2fRequest_2eproto[51]);
 }
 
 // ===================================================================
@@ -18255,7 +18587,7 @@ void CreatePermissionGroupRequest::InternalSwap(CreatePermissionGroupRequest* ot
 ::PROTOBUF_NAMESPACE_ID::Metadata CreatePermissionGroupRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fRequest_2eproto_getter, &descriptor_table_Message_2fRequest_2eproto_once,
-      file_level_metadata_Message_2fRequest_2eproto[51]);
+      file_level_metadata_Message_2fRequest_2eproto[52]);
 }
 
 // ===================================================================
@@ -18558,7 +18890,7 @@ void DeletePermissionGroupRequest::InternalSwap(DeletePermissionGroupRequest* ot
 ::PROTOBUF_NAMESPACE_ID::Metadata DeletePermissionGroupRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fRequest_2eproto_getter, &descriptor_table_Message_2fRequest_2eproto_once,
-      file_level_metadata_Message_2fRequest_2eproto[52]);
+      file_level_metadata_Message_2fRequest_2eproto[53]);
 }
 
 // ===================================================================
@@ -19008,7 +19340,7 @@ void UpdatePermissionGroupRequest::InternalSwap(UpdatePermissionGroupRequest* ot
 ::PROTOBUF_NAMESPACE_ID::Metadata UpdatePermissionGroupRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fRequest_2eproto_getter, &descriptor_table_Message_2fRequest_2eproto_once,
-      file_level_metadata_Message_2fRequest_2eproto[53]);
+      file_level_metadata_Message_2fRequest_2eproto[54]);
 }
 
 // @@protoc_insertion_point(namespace_scope)
@@ -19026,9 +19358,13 @@ template<> PROTOBUF_NOINLINE ::proto::UpdateUserRequest*
 Arena::CreateMaybeMessage< ::proto::UpdateUserRequest >(Arena* arena) {
   return Arena::CreateMessageInternal< ::proto::UpdateUserRequest >(arena);
 }
-template<> PROTOBUF_NOINLINE ::proto::GetUserRequest*
-Arena::CreateMaybeMessage< ::proto::GetUserRequest >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::proto::GetUserRequest >(arena);
+template<> PROTOBUF_NOINLINE ::proto::GetUserByUuidRequest*
+Arena::CreateMaybeMessage< ::proto::GetUserByUuidRequest >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::proto::GetUserByUuidRequest >(arena);
+}
+template<> PROTOBUF_NOINLINE ::proto::GetUserByNameRequest*
+Arena::CreateMaybeMessage< ::proto::GetUserByNameRequest >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::proto::GetUserByNameRequest >(arena);
 }
 template<> PROTOBUF_NOINLINE ::proto::GetAllUserRequest*
 Arena::CreateMaybeMessage< ::proto::GetAllUserRequest >(Arena* arena) {

@@ -24,10 +24,16 @@ message UpdateUserRequest{
     UserMetaInfoV1 UserInfo = 3;
 }
 
-message GetUserRequest{
+message GetUserByUuidRequest{
     RequestMetaInfoV1 metaInfo = 1;
     UserVerifyInfoV1 UserVerifyInfo = 2;
     string UserUuid = 3;
+}
+
+message GetUserByNameRequest{
+    RequestMetaInfoV1 metaInfo = 1;
+    UserVerifyInfoV1 UserVerifyInfo = 2;
+    string UserName= 3;
 }
 
 message GetAllUserRequest{

@@ -24,7 +24,8 @@ const (
 	DBMS_CreateUser_FullMethodName                       = "/proto.DBMS/CreateUser"
 	DBMS_DeleteUser_FullMethodName                       = "/proto.DBMS/DeleteUser"
 	DBMS_UpdateUser_FullMethodName                       = "/proto.DBMS/UpdateUser"
-	DBMS_GetUser_FullMethodName                          = "/proto.DBMS/GetUser"
+	DBMS_GetUserByUuid_FullMethodName                    = "/proto.DBMS/GetUserByUuid"
+	DBMS_GetUserByName_FullMethodName                    = "/proto.DBMS/GetUserByName"
 	DBMS_GetAllUser_FullMethodName                       = "/proto.DBMS/GetAllUser"
 	DBMS_UserLogin_FullMethodName                        = "/proto.DBMS/UserLogin"
 	DBMS_UserLogout_FullMethodName                       = "/proto.DBMS/UserLogout"
@@ -84,7 +85,8 @@ type DBMSClient interface {
 	CreateUser(ctx context.Context, in *request.CreateUserRequest, opts ...grpc.CallOption) (*response.CreateUserResponse, error)
 	DeleteUser(ctx context.Context, in *request.DeleteUserRequest, opts ...grpc.CallOption) (*response.DeleteUserResponse, error)
 	UpdateUser(ctx context.Context, in *request.UpdateUserRequest, opts ...grpc.CallOption) (*response.UpdateUserResponse, error)
-	GetUser(ctx context.Context, in *request.GetUserRequest, opts ...grpc.CallOption) (*response.GetUserResponse, error)
+	GetUserByUuid(ctx context.Context, in *request.GetUserByUuidRequest, opts ...grpc.CallOption) (*response.GetUserByUuidResponse, error)
+	GetUserByName(ctx context.Context, in *request.GetUserByNameRequest, opts ...grpc.CallOption) (*response.GetUserByNameResponse, error)
 	GetAllUser(ctx context.Context, in *request.GetAllUserRequest, opts ...grpc.CallOption) (*response.GetAllUserResponse, error)
 	UserLogin(ctx context.Context, in *request.UserLoginRequest, opts ...grpc.CallOption) (*response.UserLoginResponse, error)
 	UserLogout(ctx context.Context, in *request.UserLogoutRequest, opts ...grpc.CallOption) (*response.UserLogoutResponse, error)
@@ -172,9 +174,18 @@ func (c *dBMSClient) UpdateUser(ctx context.Context, in *request.UpdateUserReque
 	return out, nil
 }
 
-func (c *dBMSClient) GetUser(ctx context.Context, in *request.GetUserRequest, opts ...grpc.CallOption) (*response.GetUserResponse, error) {
-	out := new(response.GetUserResponse)
-	err := c.cc.Invoke(ctx, DBMS_GetUser_FullMethodName, in, out, opts...)
+func (c *dBMSClient) GetUserByUuid(ctx context.Context, in *request.GetUserByUuidRequest, opts ...grpc.CallOption) (*response.GetUserByUuidResponse, error) {
+	out := new(response.GetUserByUuidResponse)
+	err := c.cc.Invoke(ctx, DBMS_GetUserByUuid_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *dBMSClient) GetUserByName(ctx context.Context, in *request.GetUserByNameRequest, opts ...grpc.CallOption) (*response.GetUserByNameResponse, error) {
+	out := new(response.GetUserByNameResponse)
+	err := c.cc.Invoke(ctx, DBMS_GetUserByName_FullMethodName, in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -638,7 +649,8 @@ type DBMSServer interface {
 	CreateUser(context.Context, *request.CreateUserRequest) (*response.CreateUserResponse, error)
 	DeleteUser(context.Context, *request.DeleteUserRequest) (*response.DeleteUserResponse, error)
 	UpdateUser(context.Context, *request.UpdateUserRequest) (*response.UpdateUserResponse, error)
-	GetUser(context.Context, *request.GetUserRequest) (*response.GetUserResponse, error)
+	GetUserByUuid(context.Context, *request.GetUserByUuidRequest) (*response.GetUserByUuidResponse, error)
+	GetUserByName(context.Context, *request.GetUserByNameRequest) (*response.GetUserByNameResponse, error)
 	GetAllUser(context.Context, *request.GetAllUserRequest) (*response.GetAllUserResponse, error)
 	UserLogin(context.Context, *request.UserLoginRequest) (*response.UserLoginResponse, error)
 	UserLogout(context.Context, *request.UserLogoutRequest) (*response.UserLogoutResponse, error)
@@ -705,8 +717,11 @@ func (UnimplementedDBMSServer) DeleteUser(context.Context, *request.DeleteUserRe
 func (UnimplementedDBMSServer) UpdateUser(context.Context, *request.UpdateUserRequest) (*response.UpdateUserResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method UpdateUser not implemented")
 }
-func (UnimplementedDBMSServer) GetUser(context.Context, *request.GetUserRequest) (*response.GetUserResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method GetUser not implemented")
+func (UnimplementedDBMSServer) GetUserByUuid(context.Context, *request.GetUserByUuidRequest) (*response.GetUserByUuidResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetUserByUuid not implemented")
+}
+func (UnimplementedDBMSServer) GetUserByName(context.Context, *request.GetUserByNameRequest) (*response.GetUserByNameResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetUserByName not implemented")
 }
 func (UnimplementedDBMSServer) GetAllUser(context.Context, *request.GetAllUserRequest) (*response.GetAllUserResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetAllUser not implemented")
@@ -925,20 +940,38 @@ func _DBMS_UpdateUser_Handler(srv interface{}, ctx context.Context, dec func(int
 	return interceptor(ctx, in, info, handler)
 }
 
-func _DBMS_GetUser_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(request.GetUserRequest)
+func _DBMS_GetUserByUuid_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(request.GetUserByUuidRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(DBMSServer).GetUser(ctx, in)
+		return srv.(DBMSServer).GetUserByUuid(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: DBMS_GetUser_FullMethodName,
+		FullMethod: DBMS_GetUserByUuid_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(DBMSServer).GetUser(ctx, req.(*request.GetUserRequest))
+		return srv.(DBMSServer).GetUserByUuid(ctx, req.(*request.GetUserByUuidRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _DBMS_GetUserByName_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(request.GetUserByNameRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(DBMSServer).GetUserByName(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: DBMS_GetUserByName_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(DBMSServer).GetUserByName(ctx, req.(*request.GetUserByNameRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -1863,8 +1896,12 @@ var DBMS_ServiceDesc = grpc.ServiceDesc{
 			Handler:    _DBMS_UpdateUser_Handler,
 		},
 		{
-			MethodName: "GetUser",
-			Handler:    _DBMS_GetUser_Handler,
+			MethodName: "GetUserByUuid",
+			Handler:    _DBMS_GetUserByUuid_Handler,
+		},
+		{
+			MethodName: "GetUserByName",
+			Handler:    _DBMS_GetUserByName_Handler,
 		},
 		{
 			MethodName: "GetAllUser",
