@@ -958,22 +958,22 @@ class GetUserRequest final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kUserNameFieldNumber = 3,
+    kUserUuidFieldNumber = 3,
     kMetaInfoFieldNumber = 1,
     kUserVerifyInfoFieldNumber = 2,
   };
-  // string UserName = 3;
-  void clear_username();
-  const std::string& username() const;
+  // string UserUuid = 3;
+  void clear_useruuid();
+  const std::string& useruuid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_username(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_username();
-  PROTOBUF_NODISCARD std::string* release_username();
-  void set_allocated_username(std::string* username);
+  void set_useruuid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_useruuid();
+  PROTOBUF_NODISCARD std::string* release_useruuid();
+  void set_allocated_useruuid(std::string* useruuid);
   private:
-  const std::string& _internal_username() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_username(const std::string& value);
-  std::string* _internal_mutable_username();
+  const std::string& _internal_useruuid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_useruuid(const std::string& value);
+  std::string* _internal_mutable_useruuid();
   public:
 
   // .proto.RequestMetaInfoV1 metaInfo = 1;
@@ -1020,7 +1020,7 @@ class GetUserRequest final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr username_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr useruuid_;
     ::proto::RequestMetaInfoV1* metainfo_;
     ::proto::UserVerifyInfoV1* userverifyinfo_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
@@ -11967,54 +11967,54 @@ inline void GetUserRequest::set_allocated_userverifyinfo(::proto::UserVerifyInfo
   // @@protoc_insertion_point(field_set_allocated:proto.GetUserRequest.UserVerifyInfo)
 }
 
-// string UserName = 3;
-inline void GetUserRequest::clear_username() {
-  _impl_.username_.ClearToEmpty();
+// string UserUuid = 3;
+inline void GetUserRequest::clear_useruuid() {
+  _impl_.useruuid_.ClearToEmpty();
 }
-inline const std::string& GetUserRequest::username() const {
-  // @@protoc_insertion_point(field_get:proto.GetUserRequest.UserName)
-  return _internal_username();
+inline const std::string& GetUserRequest::useruuid() const {
+  // @@protoc_insertion_point(field_get:proto.GetUserRequest.UserUuid)
+  return _internal_useruuid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void GetUserRequest::set_username(ArgT0&& arg0, ArgT... args) {
+void GetUserRequest::set_useruuid(ArgT0&& arg0, ArgT... args) {
  
- _impl_.username_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:proto.GetUserRequest.UserName)
+ _impl_.useruuid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:proto.GetUserRequest.UserUuid)
 }
-inline std::string* GetUserRequest::mutable_username() {
-  std::string* _s = _internal_mutable_username();
-  // @@protoc_insertion_point(field_mutable:proto.GetUserRequest.UserName)
+inline std::string* GetUserRequest::mutable_useruuid() {
+  std::string* _s = _internal_mutable_useruuid();
+  // @@protoc_insertion_point(field_mutable:proto.GetUserRequest.UserUuid)
   return _s;
 }
-inline const std::string& GetUserRequest::_internal_username() const {
-  return _impl_.username_.Get();
+inline const std::string& GetUserRequest::_internal_useruuid() const {
+  return _impl_.useruuid_.Get();
 }
-inline void GetUserRequest::_internal_set_username(const std::string& value) {
+inline void GetUserRequest::_internal_set_useruuid(const std::string& value) {
   
-  _impl_.username_.Set(value, GetArenaForAllocation());
+  _impl_.useruuid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* GetUserRequest::_internal_mutable_username() {
+inline std::string* GetUserRequest::_internal_mutable_useruuid() {
   
-  return _impl_.username_.Mutable(GetArenaForAllocation());
+  return _impl_.useruuid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* GetUserRequest::release_username() {
-  // @@protoc_insertion_point(field_release:proto.GetUserRequest.UserName)
-  return _impl_.username_.Release();
+inline std::string* GetUserRequest::release_useruuid() {
+  // @@protoc_insertion_point(field_release:proto.GetUserRequest.UserUuid)
+  return _impl_.useruuid_.Release();
 }
-inline void GetUserRequest::set_allocated_username(std::string* username) {
-  if (username != nullptr) {
+inline void GetUserRequest::set_allocated_useruuid(std::string* useruuid) {
+  if (useruuid != nullptr) {
     
   } else {
     
   }
-  _impl_.username_.SetAllocated(username, GetArenaForAllocation());
+  _impl_.useruuid_.SetAllocated(useruuid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.username_.IsDefault()) {
-    _impl_.username_.Set("", GetArenaForAllocation());
+  if (_impl_.useruuid_.IsDefault()) {
+    _impl_.useruuid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:proto.GetUserRequest.UserName)
+  // @@protoc_insertion_point(field_set_allocated:proto.GetUserRequest.UserUuid)
 }
 
 // -------------------------------------------------------------------

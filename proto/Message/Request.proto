@@ -27,7 +27,7 @@ message UpdateUserRequest{
 message GetUserRequest{
     RequestMetaInfoV1 metaInfo = 1;
     UserVerifyInfoV1 UserVerifyInfo = 2;
-    string UserName = 3;
+    string UserUuid = 3;
 }
 
 message GetAllUserRequest{
