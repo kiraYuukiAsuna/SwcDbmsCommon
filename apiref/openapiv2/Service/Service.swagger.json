@@ -944,14 +944,14 @@
         ]
       }
     },
-    "/proto.DBMS/GetPermissionGroup": {
+    "/proto.DBMS/GetPermissionGroupByName": {
       "post": {
-        "operationId": "DBMS_GetPermissionGroup",
+        "operationId": "DBMS_GetPermissionGroupByName",
         "responses": {
           "200": {
             "description": "A successful response.",
             "schema": {
-              "$ref": "#/definitions/protoGetPermissionGroupResponse"
+              "$ref": "#/definitions/protoGetPermissionGroupByNameResponse"
             }
           },
           "default": {
@@ -967,7 +967,39 @@
             "in": "body",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/protoGetPermissionGroupRequest"
+              "$ref": "#/definitions/protoGetPermissionGroupByNameRequest"
+            }
+          }
+        ],
+        "tags": [
+          "DBMS"
+        ]
+      }
+    },
+    "/proto.DBMS/GetPermissionGroupByUuid": {
+      "post": {
+        "operationId": "DBMS_GetPermissionGroupByUuid",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/protoGetPermissionGroupByUuidResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/protoGetPermissionGroupByUuidRequest"
             }
           }
         ],
@@ -2634,7 +2666,7 @@
         }
       }
     },
-    "protoGetPermissionGroupRequest": {
+    "protoGetPermissionGroupByNameRequest": {
       "type": "object",
       "properties": {
         "metaInfo": {
@@ -2643,12 +2675,37 @@
         "UserVerifyInfo": {
           "$ref": "#/definitions/protoUserVerifyInfoV1"
         },
+        "PermissionGroupName": {
+          "type": "string"
+        }
+      }
+    },
+    "protoGetPermissionGroupByNameResponse": {
+      "type": "object",
+      "properties": {
+        "metaInfo": {
+          "$ref": "#/definitions/protoResponseMetaInfoV1"
+        },
         "PermissionGroup": {
           "$ref": "#/definitions/protoPermissionGroupMetaInfoV1"
         }
       }
     },
-    "protoGetPermissionGroupResponse": {
+    "protoGetPermissionGroupByUuidRequest": {
+      "type": "object",
+      "properties": {
+        "metaInfo": {
+          "$ref": "#/definitions/protoRequestMetaInfoV1"
+        },
+        "UserVerifyInfo": {
+          "$ref": "#/definitions/protoUserVerifyInfoV1"
+        },
+        "PermissionGroupUuid": {
+          "type": "string"
+        }
+      }
+    },
+    "protoGetPermissionGroupByUuidResponse": {
       "type": "object",
       "properties": {
         "metaInfo": {

@@ -56,7 +56,12 @@ message GetUserPermissionGroupResponse{
     PermissionGroupMetaInfoV1 PermissionGroup = 2;
 }
 
-message GetPermissionGroupResponse{
+message GetPermissionGroupByUuidResponse{
+    ResponseMetaInfoV1 metaInfo = 1;
+    PermissionGroupMetaInfoV1 PermissionGroup = 2;
+}
+
+message GetPermissionGroupByNameResponse{
     ResponseMetaInfoV1 metaInfo = 1;
     PermissionGroupMetaInfoV1 PermissionGroup = 2;
 }

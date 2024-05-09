@@ -63,10 +63,16 @@ message GetUserPermissionGroupRequest{
     UserVerifyInfoV1 UserVerifyInfo = 2;
 }
 
-message GetPermissionGroupRequest{
+message GetPermissionGroupByUuidRequest{
     RequestMetaInfoV1 metaInfo = 1;
     UserVerifyInfoV1 UserVerifyInfo = 2;
-    PermissionGroupMetaInfoV1 PermissionGroup = 3;
+    string PermissionGroupUuid = 3;
+}
+
+message GetPermissionGroupByNameRequest{
+    RequestMetaInfoV1 metaInfo = 1;
+    UserVerifyInfoV1 UserVerifyInfo = 2;
+    string PermissionGroupName = 3;
 }
 
 message GetAllPermissionGroupRequest{

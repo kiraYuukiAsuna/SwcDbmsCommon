@@ -23,7 +23,9 @@ service DBMS {
     rpc UserOnlineHeartBeatNotifications(UserOnlineHeartBeatNotification) returns (UserOnlineHeartBeatResponse){}       
 
     rpc GetUserPermissionGroup(GetUserPermissionGroupRequest) returns (GetUserPermissionGroupResponse){}
-    rpc GetPermissionGroup(GetPermissionGroupRequest) returns (GetPermissionGroupResponse){}
+    rpc GetPermissionGroupByUuid(GetPermissionGroupByUuidRequest) returns (GetPermissionGroupByUuidResponse){}
+    rpc GetPermissionGroupByName(GetPermissionGroupByNameRequest) returns (GetPermissionGroupByNameResponse){}
+
     rpc GetAllPermissionGroup(GetAllPermissionGroupRequest) returns (GetAllPermissionGroupResponse){}
     rpc ChangeUserPermissionGroup(ChangeUserPermissionGroupRequest) returns (ChangeUserPermissionGroupResponse){}
     

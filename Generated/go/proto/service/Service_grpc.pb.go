@@ -31,7 +31,8 @@ const (
 	DBMS_UserLogout_FullMethodName                       = "/proto.DBMS/UserLogout"
 	DBMS_UserOnlineHeartBeatNotifications_FullMethodName = "/proto.DBMS/UserOnlineHeartBeatNotifications"
 	DBMS_GetUserPermissionGroup_FullMethodName           = "/proto.DBMS/GetUserPermissionGroup"
-	DBMS_GetPermissionGroup_FullMethodName               = "/proto.DBMS/GetPermissionGroup"
+	DBMS_GetPermissionGroupByUuid_FullMethodName         = "/proto.DBMS/GetPermissionGroupByUuid"
+	DBMS_GetPermissionGroupByName_FullMethodName         = "/proto.DBMS/GetPermissionGroupByName"
 	DBMS_GetAllPermissionGroup_FullMethodName            = "/proto.DBMS/GetAllPermissionGroup"
 	DBMS_ChangeUserPermissionGroup_FullMethodName        = "/proto.DBMS/ChangeUserPermissionGroup"
 	DBMS_CreateProject_FullMethodName                    = "/proto.DBMS/CreateProject"
@@ -92,7 +93,8 @@ type DBMSClient interface {
 	UserLogout(ctx context.Context, in *request.UserLogoutRequest, opts ...grpc.CallOption) (*response.UserLogoutResponse, error)
 	UserOnlineHeartBeatNotifications(ctx context.Context, in *request.UserOnlineHeartBeatNotification, opts ...grpc.CallOption) (*response.UserOnlineHeartBeatResponse, error)
 	GetUserPermissionGroup(ctx context.Context, in *request.GetUserPermissionGroupRequest, opts ...grpc.CallOption) (*response.GetUserPermissionGroupResponse, error)
-	GetPermissionGroup(ctx context.Context, in *request.GetPermissionGroupRequest, opts ...grpc.CallOption) (*response.GetPermissionGroupResponse, error)
+	GetPermissionGroupByUuid(ctx context.Context, in *request.GetPermissionGroupByUuidRequest, opts ...grpc.CallOption) (*response.GetPermissionGroupByUuidResponse, error)
+	GetPermissionGroupByName(ctx context.Context, in *request.GetPermissionGroupByNameRequest, opts ...grpc.CallOption) (*response.GetPermissionGroupByNameResponse, error)
 	GetAllPermissionGroup(ctx context.Context, in *request.GetAllPermissionGroupRequest, opts ...grpc.CallOption) (*response.GetAllPermissionGroupResponse, error)
 	ChangeUserPermissionGroup(ctx context.Context, in *request.ChangeUserPermissionGroupRequest, opts ...grpc.CallOption) (*response.ChangeUserPermissionGroupResponse, error)
 	CreateProject(ctx context.Context, in *request.CreateProjectRequest, opts ...grpc.CallOption) (*response.CreateProjectResponse, error)
@@ -237,9 +239,18 @@ func (c *dBMSClient) GetUserPermissionGroup(ctx context.Context, in *request.Get
 	return out, nil
 }
 
-func (c *dBMSClient) GetPermissionGroup(ctx context.Context, in *request.GetPermissionGroupRequest, opts ...grpc.CallOption) (*response.GetPermissionGroupResponse, error) {
-	out := new(response.GetPermissionGroupResponse)
-	err := c.cc.Invoke(ctx, DBMS_GetPermissionGroup_FullMethodName, in, out, opts...)
+func (c *dBMSClient) GetPermissionGroupByUuid(ctx context.Context, in *request.GetPermissionGroupByUuidRequest, opts ...grpc.CallOption) (*response.GetPermissionGroupByUuidResponse, error) {
+	out := new(response.GetPermissionGroupByUuidResponse)
+	err := c.cc.Invoke(ctx, DBMS_GetPermissionGroupByUuid_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *dBMSClient) GetPermissionGroupByName(ctx context.Context, in *request.GetPermissionGroupByNameRequest, opts ...grpc.CallOption) (*response.GetPermissionGroupByNameResponse, error) {
+	out := new(response.GetPermissionGroupByNameResponse)
+	err := c.cc.Invoke(ctx, DBMS_GetPermissionGroupByName_FullMethodName, in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -656,7 +667,8 @@ type DBMSServer interface {
 	UserLogout(context.Context, *request.UserLogoutRequest) (*response.UserLogoutResponse, error)
 	UserOnlineHeartBeatNotifications(context.Context, *request.UserOnlineHeartBeatNotification) (*response.UserOnlineHeartBeatResponse, error)
 	GetUserPermissionGroup(context.Context, *request.GetUserPermissionGroupRequest) (*response.GetUserPermissionGroupResponse, error)
-	GetPermissionGroup(context.Context, *request.GetPermissionGroupRequest) (*response.GetPermissionGroupResponse, error)
+	GetPermissionGroupByUuid(context.Context, *request.GetPermissionGroupByUuidRequest) (*response.GetPermissionGroupByUuidResponse, error)
+	GetPermissionGroupByName(context.Context, *request.GetPermissionGroupByNameRequest) (*response.GetPermissionGroupByNameResponse, error)
 	GetAllPermissionGroup(context.Context, *request.GetAllPermissionGroupRequest) (*response.GetAllPermissionGroupResponse, error)
 	ChangeUserPermissionGroup(context.Context, *request.ChangeUserPermissionGroupRequest) (*response.ChangeUserPermissionGroupResponse, error)
 	CreateProject(context.Context, *request.CreateProjectRequest) (*response.CreateProjectResponse, error)
@@ -738,8 +750,11 @@ func (UnimplementedDBMSServer) UserOnlineHeartBeatNotifications(context.Context,
 func (UnimplementedDBMSServer) GetUserPermissionGroup(context.Context, *request.GetUserPermissionGroupRequest) (*response.GetUserPermissionGroupResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetUserPermissionGroup not implemented")
 }
-func (UnimplementedDBMSServer) GetPermissionGroup(context.Context, *request.GetPermissionGroupRequest) (*response.GetPermissionGroupResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method GetPermissionGroup not implemented")
+func (UnimplementedDBMSServer) GetPermissionGroupByUuid(context.Context, *request.GetPermissionGroupByUuidRequest) (*response.GetPermissionGroupByUuidResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetPermissionGroupByUuid not implemented")
+}
+func (UnimplementedDBMSServer) GetPermissionGroupByName(context.Context, *request.GetPermissionGroupByNameRequest) (*response.GetPermissionGroupByNameResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetPermissionGroupByName not implemented")
 }
 func (UnimplementedDBMSServer) GetAllPermissionGroup(context.Context, *request.GetAllPermissionGroupRequest) (*response.GetAllPermissionGroupResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetAllPermissionGroup not implemented")
@@ -1066,20 +1081,38 @@ func _DBMS_GetUserPermissionGroup_Handler(srv interface{}, ctx context.Context, 
 	return interceptor(ctx, in, info, handler)
 }
 
-func _DBMS_GetPermissionGroup_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(request.GetPermissionGroupRequest)
+func _DBMS_GetPermissionGroupByUuid_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(request.GetPermissionGroupByUuidRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(DBMSServer).GetPermissionGroup(ctx, in)
+		return srv.(DBMSServer).GetPermissionGroupByUuid(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: DBMS_GetPermissionGroup_FullMethodName,
+		FullMethod: DBMS_GetPermissionGroupByUuid_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(DBMSServer).GetPermissionGroup(ctx, req.(*request.GetPermissionGroupRequest))
+		return srv.(DBMSServer).GetPermissionGroupByUuid(ctx, req.(*request.GetPermissionGroupByUuidRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _DBMS_GetPermissionGroupByName_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(request.GetPermissionGroupByNameRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(DBMSServer).GetPermissionGroupByName(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: DBMS_GetPermissionGroupByName_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(DBMSServer).GetPermissionGroupByName(ctx, req.(*request.GetPermissionGroupByNameRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -1924,8 +1957,12 @@ var DBMS_ServiceDesc = grpc.ServiceDesc{
 			Handler:    _DBMS_GetUserPermissionGroup_Handler,
 		},
 		{
-			MethodName: "GetPermissionGroup",
-			Handler:    _DBMS_GetPermissionGroup_Handler,
+			MethodName: "GetPermissionGroupByUuid",
+			Handler:    _DBMS_GetPermissionGroupByUuid_Handler,
+		},
+		{
+			MethodName: "GetPermissionGroupByName",
+			Handler:    _DBMS_GetPermissionGroupByName_Handler,
 		},
 		{
 			MethodName: "GetAllPermissionGroup",
