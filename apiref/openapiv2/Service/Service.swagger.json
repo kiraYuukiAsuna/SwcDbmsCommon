@@ -3082,9 +3082,6 @@
     "protoPermissionAceV1": {
       "type": "object",
       "properties": {
-        "WritePermissionCreateProject": {
-          "type": "boolean"
-        },
         "WritePermissionModifyProject": {
           "type": "boolean"
         },
@@ -3092,6 +3089,15 @@
           "type": "boolean"
         },
         "ReadPerimissionQueryProject": {
+          "type": "boolean"
+        },
+        "WritePermissionUpdateSwc": {
+          "type": "boolean"
+        },
+        "WritePermissionDeleteSwc": {
+          "type": "boolean"
+        },
+        "ReadPerimissionQuerySwc": {
           "type": "boolean"
         },
         "WritePermissionAddSwcData": {
@@ -3104,6 +3110,51 @@
           "type": "boolean"
         },
         "ReadPerimissionQuerySwcData": {
+          "type": "boolean"
+        },
+        "CreateSnapshotAndIncrementPermission": {
+          "type": "boolean"
+        },
+        "DeleteSnapshotAndIncrementPermission": {
+          "type": "boolean"
+        },
+        "QuerySnapshotAndIncrementPermission": {
+          "type": "boolean"
+        },
+        "CreateAnoAttachmentPermission": {
+          "type": "boolean"
+        },
+        "DeleteAnoAttachmentPermission": {
+          "type": "boolean"
+        },
+        "UpdateAnoAttachmentPermission": {
+          "type": "boolean"
+        },
+        "QueryAnoAttachmentPermission": {
+          "type": "boolean"
+        },
+        "CreateApoAttachmentPermission": {
+          "type": "boolean"
+        },
+        "DeleteApoAttachmentPermission": {
+          "type": "boolean"
+        },
+        "UpdateApoAttachmentPermission": {
+          "type": "boolean"
+        },
+        "QueryApoAttachmentPermission": {
+          "type": "boolean"
+        },
+        "CreateSwcAttachmentPermission": {
+          "type": "boolean"
+        },
+        "DeleteSwcAttachmentPermission": {
+          "type": "boolean"
+        },
+        "UpdateSwcAttachmentPermission": {
+          "type": "boolean"
+        },
+        "QuerySwcAttachmentPermission": {
           "type": "boolean"
         }
       }
@@ -3124,6 +3175,12 @@
           "type": "boolean"
         },
         "AllDailyStatisticsManagementPermission": {
+          "type": "boolean"
+        },
+        "CreateProjectPermission": {
+          "type": "boolean"
+        },
+        "CreateSwcPermission": {
           "type": "boolean"
         }
       }

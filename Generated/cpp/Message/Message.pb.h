@@ -995,6 +995,8 @@ class PermissionGroupAceV1 final :
     kAllProjectManagementPermissionFieldNumber = 3,
     kAllSwcManagementPermissionFieldNumber = 4,
     kAllDailyStatisticsManagementPermissionFieldNumber = 5,
+    kCreateProjectPermissionFieldNumber = 6,
+    kCreateSwcPermissionFieldNumber = 7,
   };
   // bool AllPermissionGroupManagementPermission = 1;
   void clear_allpermissiongroupmanagementpermission();
@@ -1041,6 +1043,24 @@ class PermissionGroupAceV1 final :
   void _internal_set_alldailystatisticsmanagementpermission(bool value);
   public:
 
+  // bool CreateProjectPermission = 6;
+  void clear_createprojectpermission();
+  bool createprojectpermission() const;
+  void set_createprojectpermission(bool value);
+  private:
+  bool _internal_createprojectpermission() const;
+  void _internal_set_createprojectpermission(bool value);
+  public:
+
+  // bool CreateSwcPermission = 7;
+  void clear_createswcpermission();
+  bool createswcpermission() const;
+  void set_createswcpermission(bool value);
+  private:
+  bool _internal_createswcpermission() const;
+  void _internal_set_createswcpermission(bool value);
+  public:
+
   // @@protoc_insertion_point(class_scope:proto.PermissionGroupAceV1)
  private:
   class _Internal;
@@ -1054,6 +1074,8 @@ class PermissionGroupAceV1 final :
     bool allprojectmanagementpermission_;
     bool allswcmanagementpermission_;
     bool alldailystatisticsmanagementpermission_;
+    bool createprojectpermission_;
+    bool createswcpermission_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -1355,25 +1377,33 @@ class PermissionAceV1 final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kWritePermissionCreateProjectFieldNumber = 1,
-    kWritePermissionModifyProjectFieldNumber = 2,
-    kWritePermissionDeleteProjectFieldNumber = 3,
-    kReadPerimissionQueryProjectFieldNumber = 4,
-    kWritePermissionAddSwcDataFieldNumber = 5,
-    kWritePermissionModifySwcDataFieldNumber = 6,
-    kWritePermissionDeleteSwcDataFieldNumber = 7,
-    kReadPerimissionQuerySwcDataFieldNumber = 8,
+    kWritePermissionModifyProjectFieldNumber = 1,
+    kWritePermissionDeleteProjectFieldNumber = 2,
+    kReadPerimissionQueryProjectFieldNumber = 3,
+    kWritePermissionUpdateSwcFieldNumber = 4,
+    kWritePermissionDeleteSwcFieldNumber = 5,
+    kReadPerimissionQuerySwcFieldNumber = 6,
+    kWritePermissionAddSwcDataFieldNumber = 7,
+    kWritePermissionModifySwcDataFieldNumber = 8,
+    kWritePermissionDeleteSwcDataFieldNumber = 9,
+    kReadPerimissionQuerySwcDataFieldNumber = 10,
+    kCreateSnapshotAndIncrementPermissionFieldNumber = 11,
+    kDeleteSnapshotAndIncrementPermissionFieldNumber = 12,
+    kQuerySnapshotAndIncrementPermissionFieldNumber = 13,
+    kCreateAnoAttachmentPermissionFieldNumber = 14,
+    kDeleteAnoAttachmentPermissionFieldNumber = 15,
+    kUpdateAnoAttachmentPermissionFieldNumber = 16,
+    kQueryAnoAttachmentPermissionFieldNumber = 17,
+    kCreateApoAttachmentPermissionFieldNumber = 18,
+    kDeleteApoAttachmentPermissionFieldNumber = 19,
+    kUpdateApoAttachmentPermissionFieldNumber = 20,
+    kQueryApoAttachmentPermissionFieldNumber = 21,
+    kCreateSwcAttachmentPermissionFieldNumber = 22,
+    kDeleteSwcAttachmentPermissionFieldNumber = 23,
+    kUpdateSwcAttachmentPermissionFieldNumber = 24,
+    kQuerySwcAttachmentPermissionFieldNumber = 25,
   };
-  // bool WritePermissionCreateProject = 1;
-  void clear_writepermissioncreateproject();
-  bool writepermissioncreateproject() const;
-  void set_writepermissioncreateproject(bool value);
-  private:
-  bool _internal_writepermissioncreateproject() const;
-  void _internal_set_writepermissioncreateproject(bool value);
-  public:
-
-  // bool WritePermissionModifyProject = 2;
+  // bool WritePermissionModifyProject = 1;
   void clear_writepermissionmodifyproject();
   bool writepermissionmodifyproject() const;
   void set_writepermissionmodifyproject(bool value);
@@ -1382,7 +1412,7 @@ class PermissionAceV1 final :
   void _internal_set_writepermissionmodifyproject(bool value);
   public:
 
-  // bool WritePermissionDeleteProject = 3;
+  // bool WritePermissionDeleteProject = 2;
   void clear_writepermissiondeleteproject();
   bool writepermissiondeleteproject() const;
   void set_writepermissiondeleteproject(bool value);
@@ -1391,7 +1421,7 @@ class PermissionAceV1 final :
   void _internal_set_writepermissiondeleteproject(bool value);
   public:
 
-  // bool ReadPerimissionQueryProject = 4;
+  // bool ReadPerimissionQueryProject = 3;
   void clear_readperimissionqueryproject();
   bool readperimissionqueryproject() const;
   void set_readperimissionqueryproject(bool value);
@@ -1400,7 +1430,34 @@ class PermissionAceV1 final :
   void _internal_set_readperimissionqueryproject(bool value);
   public:
 
-  // bool WritePermissionAddSwcData = 5;
+  // bool WritePermissionUpdateSwc = 4;
+  void clear_writepermissionupdateswc();
+  bool writepermissionupdateswc() const;
+  void set_writepermissionupdateswc(bool value);
+  private:
+  bool _internal_writepermissionupdateswc() const;
+  void _internal_set_writepermissionupdateswc(bool value);
+  public:
+
+  // bool WritePermissionDeleteSwc = 5;
+  void clear_writepermissiondeleteswc();
+  bool writepermissiondeleteswc() const;
+  void set_writepermissiondeleteswc(bool value);
+  private:
+  bool _internal_writepermissiondeleteswc() const;
+  void _internal_set_writepermissiondeleteswc(bool value);
+  public:
+
+  // bool ReadPerimissionQuerySwc = 6;
+  void clear_readperimissionqueryswc();
+  bool readperimissionqueryswc() const;
+  void set_readperimissionqueryswc(bool value);
+  private:
+  bool _internal_readperimissionqueryswc() const;
+  void _internal_set_readperimissionqueryswc(bool value);
+  public:
+
+  // bool WritePermissionAddSwcData = 7;
   void clear_writepermissionaddswcdata();
   bool writepermissionaddswcdata() const;
   void set_writepermissionaddswcdata(bool value);
@@ -1409,7 +1466,7 @@ class PermissionAceV1 final :
   void _internal_set_writepermissionaddswcdata(bool value);
   public:
 
-  // bool WritePermissionModifySwcData = 6;
+  // bool WritePermissionModifySwcData = 8;
   void clear_writepermissionmodifyswcdata();
   bool writepermissionmodifyswcdata() const;
   void set_writepermissionmodifyswcdata(bool value);
@@ -1418,7 +1475,7 @@ class PermissionAceV1 final :
   void _internal_set_writepermissionmodifyswcdata(bool value);
   public:
 
-  // bool WritePermissionDeleteSwcData = 7;
+  // bool WritePermissionDeleteSwcData = 9;
   void clear_writepermissiondeleteswcdata();
   bool writepermissiondeleteswcdata() const;
   void set_writepermissiondeleteswcdata(bool value);
@@ -1427,13 +1484,148 @@ class PermissionAceV1 final :
   void _internal_set_writepermissiondeleteswcdata(bool value);
   public:
 
-  // bool ReadPerimissionQuerySwcData = 8;
+  // bool ReadPerimissionQuerySwcData = 10;
   void clear_readperimissionqueryswcdata();
   bool readperimissionqueryswcdata() const;
   void set_readperimissionqueryswcdata(bool value);
   private:
   bool _internal_readperimissionqueryswcdata() const;
   void _internal_set_readperimissionqueryswcdata(bool value);
+  public:
+
+  // bool CreateSnapshotAndIncrementPermission = 11;
+  void clear_createsnapshotandincrementpermission();
+  bool createsnapshotandincrementpermission() const;
+  void set_createsnapshotandincrementpermission(bool value);
+  private:
+  bool _internal_createsnapshotandincrementpermission() const;
+  void _internal_set_createsnapshotandincrementpermission(bool value);
+  public:
+
+  // bool DeleteSnapshotAndIncrementPermission = 12;
+  void clear_deletesnapshotandincrementpermission();
+  bool deletesnapshotandincrementpermission() const;
+  void set_deletesnapshotandincrementpermission(bool value);
+  private:
+  bool _internal_deletesnapshotandincrementpermission() const;
+  void _internal_set_deletesnapshotandincrementpermission(bool value);
+  public:
+
+  // bool QuerySnapshotAndIncrementPermission = 13;
+  void clear_querysnapshotandincrementpermission();
+  bool querysnapshotandincrementpermission() const;
+  void set_querysnapshotandincrementpermission(bool value);
+  private:
+  bool _internal_querysnapshotandincrementpermission() const;
+  void _internal_set_querysnapshotandincrementpermission(bool value);
+  public:
+
+  // bool CreateAnoAttachmentPermission = 14;
+  void clear_createanoattachmentpermission();
+  bool createanoattachmentpermission() const;
+  void set_createanoattachmentpermission(bool value);
+  private:
+  bool _internal_createanoattachmentpermission() const;
+  void _internal_set_createanoattachmentpermission(bool value);
+  public:
+
+  // bool DeleteAnoAttachmentPermission = 15;
+  void clear_deleteanoattachmentpermission();
+  bool deleteanoattachmentpermission() const;
+  void set_deleteanoattachmentpermission(bool value);
+  private:
+  bool _internal_deleteanoattachmentpermission() const;
+  void _internal_set_deleteanoattachmentpermission(bool value);
+  public:
+
+  // bool UpdateAnoAttachmentPermission = 16;
+  void clear_updateanoattachmentpermission();
+  bool updateanoattachmentpermission() const;
+  void set_updateanoattachmentpermission(bool value);
+  private:
+  bool _internal_updateanoattachmentpermission() const;
+  void _internal_set_updateanoattachmentpermission(bool value);
+  public:
+
+  // bool QueryAnoAttachmentPermission = 17;
+  void clear_queryanoattachmentpermission();
+  bool queryanoattachmentpermission() const;
+  void set_queryanoattachmentpermission(bool value);
+  private:
+  bool _internal_queryanoattachmentpermission() const;
+  void _internal_set_queryanoattachmentpermission(bool value);
+  public:
+
+  // bool CreateApoAttachmentPermission = 18;
+  void clear_createapoattachmentpermission();
+  bool createapoattachmentpermission() const;
+  void set_createapoattachmentpermission(bool value);
+  private:
+  bool _internal_createapoattachmentpermission() const;
+  void _internal_set_createapoattachmentpermission(bool value);
+  public:
+
+  // bool DeleteApoAttachmentPermission = 19;
+  void clear_deleteapoattachmentpermission();
+  bool deleteapoattachmentpermission() const;
+  void set_deleteapoattachmentpermission(bool value);
+  private:
+  bool _internal_deleteapoattachmentpermission() const;
+  void _internal_set_deleteapoattachmentpermission(bool value);
+  public:
+
+  // bool UpdateApoAttachmentPermission = 20;
+  void clear_updateapoattachmentpermission();
+  bool updateapoattachmentpermission() const;
+  void set_updateapoattachmentpermission(bool value);
+  private:
+  bool _internal_updateapoattachmentpermission() const;
+  void _internal_set_updateapoattachmentpermission(bool value);
+  public:
+
+  // bool QueryApoAttachmentPermission = 21;
+  void clear_queryapoattachmentpermission();
+  bool queryapoattachmentpermission() const;
+  void set_queryapoattachmentpermission(bool value);
+  private:
+  bool _internal_queryapoattachmentpermission() const;
+  void _internal_set_queryapoattachmentpermission(bool value);
+  public:
+
+  // bool CreateSwcAttachmentPermission = 22;
+  void clear_createswcattachmentpermission();
+  bool createswcattachmentpermission() const;
+  void set_createswcattachmentpermission(bool value);
+  private:
+  bool _internal_createswcattachmentpermission() const;
+  void _internal_set_createswcattachmentpermission(bool value);
+  public:
+
+  // bool DeleteSwcAttachmentPermission = 23;
+  void clear_deleteswcattachmentpermission();
+  bool deleteswcattachmentpermission() const;
+  void set_deleteswcattachmentpermission(bool value);
+  private:
+  bool _internal_deleteswcattachmentpermission() const;
+  void _internal_set_deleteswcattachmentpermission(bool value);
+  public:
+
+  // bool UpdateSwcAttachmentPermission = 24;
+  void clear_updateswcattachmentpermission();
+  bool updateswcattachmentpermission() const;
+  void set_updateswcattachmentpermission(bool value);
+  private:
+  bool _internal_updateswcattachmentpermission() const;
+  void _internal_set_updateswcattachmentpermission(bool value);
+  public:
+
+  // bool QuerySwcAttachmentPermission = 25;
+  void clear_queryswcattachmentpermission();
+  bool queryswcattachmentpermission() const;
+  void set_queryswcattachmentpermission(bool value);
+  private:
+  bool _internal_queryswcattachmentpermission() const;
+  void _internal_set_queryswcattachmentpermission(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:proto.PermissionAceV1)
@@ -1444,14 +1636,31 @@ class PermissionAceV1 final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    bool writepermissioncreateproject_;
     bool writepermissionmodifyproject_;
     bool writepermissiondeleteproject_;
     bool readperimissionqueryproject_;
+    bool writepermissionupdateswc_;
+    bool writepermissiondeleteswc_;
+    bool readperimissionqueryswc_;
     bool writepermissionaddswcdata_;
     bool writepermissionmodifyswcdata_;
     bool writepermissiondeleteswcdata_;
     bool readperimissionqueryswcdata_;
+    bool createsnapshotandincrementpermission_;
+    bool deletesnapshotandincrementpermission_;
+    bool querysnapshotandincrementpermission_;
+    bool createanoattachmentpermission_;
+    bool deleteanoattachmentpermission_;
+    bool updateanoattachmentpermission_;
+    bool queryanoattachmentpermission_;
+    bool createapoattachmentpermission_;
+    bool deleteapoattachmentpermission_;
+    bool updateapoattachmentpermission_;
+    bool queryapoattachmentpermission_;
+    bool createswcattachmentpermission_;
+    bool deleteswcattachmentpermission_;
+    bool updateswcattachmentpermission_;
+    bool queryswcattachmentpermission_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -7063,6 +7272,46 @@ inline void PermissionGroupAceV1::set_alldailystatisticsmanagementpermission(boo
   // @@protoc_insertion_point(field_set:proto.PermissionGroupAceV1.AllDailyStatisticsManagementPermission)
 }
 
+// bool CreateProjectPermission = 6;
+inline void PermissionGroupAceV1::clear_createprojectpermission() {
+  _impl_.createprojectpermission_ = false;
+}
+inline bool PermissionGroupAceV1::_internal_createprojectpermission() const {
+  return _impl_.createprojectpermission_;
+}
+inline bool PermissionGroupAceV1::createprojectpermission() const {
+  // @@protoc_insertion_point(field_get:proto.PermissionGroupAceV1.CreateProjectPermission)
+  return _internal_createprojectpermission();
+}
+inline void PermissionGroupAceV1::_internal_set_createprojectpermission(bool value) {
+  
+  _impl_.createprojectpermission_ = value;
+}
+inline void PermissionGroupAceV1::set_createprojectpermission(bool value) {
+  _internal_set_createprojectpermission(value);
+  // @@protoc_insertion_point(field_set:proto.PermissionGroupAceV1.CreateProjectPermission)
+}
+
+// bool CreateSwcPermission = 7;
+inline void PermissionGroupAceV1::clear_createswcpermission() {
+  _impl_.createswcpermission_ = false;
+}
+inline bool PermissionGroupAceV1::_internal_createswcpermission() const {
+  return _impl_.createswcpermission_;
+}
+inline bool PermissionGroupAceV1::createswcpermission() const {
+  // @@protoc_insertion_point(field_get:proto.PermissionGroupAceV1.CreateSwcPermission)
+  return _internal_createswcpermission();
+}
+inline void PermissionGroupAceV1::_internal_set_createswcpermission(bool value) {
+  
+  _impl_.createswcpermission_ = value;
+}
+inline void PermissionGroupAceV1::set_createswcpermission(bool value) {
+  _internal_set_createswcpermission(value);
+  // @@protoc_insertion_point(field_set:proto.PermissionGroupAceV1.CreateSwcPermission)
+}
+
 // -------------------------------------------------------------------
 
 // PermissionGroupAclV1
@@ -7211,27 +7460,7 @@ inline void PermissionGroupAclV1::set_allocated_permissiongroupace(::proto::Perm
 
 // PermissionAceV1
 
-// bool WritePermissionCreateProject = 1;
-inline void PermissionAceV1::clear_writepermissioncreateproject() {
-  _impl_.writepermissioncreateproject_ = false;
-}
-inline bool PermissionAceV1::_internal_writepermissioncreateproject() const {
-  return _impl_.writepermissioncreateproject_;
-}
-inline bool PermissionAceV1::writepermissioncreateproject() const {
-  // @@protoc_insertion_point(field_get:proto.PermissionAceV1.WritePermissionCreateProject)
-  return _internal_writepermissioncreateproject();
-}
-inline void PermissionAceV1::_internal_set_writepermissioncreateproject(bool value) {
-  
-  _impl_.writepermissioncreateproject_ = value;
-}
-inline void PermissionAceV1::set_writepermissioncreateproject(bool value) {
-  _internal_set_writepermissioncreateproject(value);
-  // @@protoc_insertion_point(field_set:proto.PermissionAceV1.WritePermissionCreateProject)
-}
-
-// bool WritePermissionModifyProject = 2;
+// bool WritePermissionModifyProject = 1;
 inline void PermissionAceV1::clear_writepermissionmodifyproject() {
   _impl_.writepermissionmodifyproject_ = false;
 }
@@ -7251,7 +7480,7 @@ inline void PermissionAceV1::set_writepermissionmodifyproject(bool value) {
   // @@protoc_insertion_point(field_set:proto.PermissionAceV1.WritePermissionModifyProject)
 }
 
-// bool WritePermissionDeleteProject = 3;
+// bool WritePermissionDeleteProject = 2;
 inline void PermissionAceV1::clear_writepermissiondeleteproject() {
   _impl_.writepermissiondeleteproject_ = false;
 }
@@ -7271,7 +7500,7 @@ inline void PermissionAceV1::set_writepermissiondeleteproject(bool value) {
   // @@protoc_insertion_point(field_set:proto.PermissionAceV1.WritePermissionDeleteProject)
 }
 
-// bool ReadPerimissionQueryProject = 4;
+// bool ReadPerimissionQueryProject = 3;
 inline void PermissionAceV1::clear_readperimissionqueryproject() {
   _impl_.readperimissionqueryproject_ = false;
 }
@@ -7291,7 +7520,67 @@ inline void PermissionAceV1::set_readperimissionqueryproject(bool value) {
   // @@protoc_insertion_point(field_set:proto.PermissionAceV1.ReadPerimissionQueryProject)
 }
 
-// bool WritePermissionAddSwcData = 5;
+// bool WritePermissionUpdateSwc = 4;
+inline void PermissionAceV1::clear_writepermissionupdateswc() {
+  _impl_.writepermissionupdateswc_ = false;
+}
+inline bool PermissionAceV1::_internal_writepermissionupdateswc() const {
+  return _impl_.writepermissionupdateswc_;
+}
+inline bool PermissionAceV1::writepermissionupdateswc() const {
+  // @@protoc_insertion_point(field_get:proto.PermissionAceV1.WritePermissionUpdateSwc)
+  return _internal_writepermissionupdateswc();
+}
+inline void PermissionAceV1::_internal_set_writepermissionupdateswc(bool value) {
+  
+  _impl_.writepermissionupdateswc_ = value;
+}
+inline void PermissionAceV1::set_writepermissionupdateswc(bool value) {
+  _internal_set_writepermissionupdateswc(value);
+  // @@protoc_insertion_point(field_set:proto.PermissionAceV1.WritePermissionUpdateSwc)
+}
+
+// bool WritePermissionDeleteSwc = 5;
+inline void PermissionAceV1::clear_writepermissiondeleteswc() {
+  _impl_.writepermissiondeleteswc_ = false;
+}
+inline bool PermissionAceV1::_internal_writepermissiondeleteswc() const {
+  return _impl_.writepermissiondeleteswc_;
+}
+inline bool PermissionAceV1::writepermissiondeleteswc() const {
+  // @@protoc_insertion_point(field_get:proto.PermissionAceV1.WritePermissionDeleteSwc)
+  return _internal_writepermissiondeleteswc();
+}
+inline void PermissionAceV1::_internal_set_writepermissiondeleteswc(bool value) {
+  
+  _impl_.writepermissiondeleteswc_ = value;
+}
+inline void PermissionAceV1::set_writepermissiondeleteswc(bool value) {
+  _internal_set_writepermissiondeleteswc(value);
+  // @@protoc_insertion_point(field_set:proto.PermissionAceV1.WritePermissionDeleteSwc)
+}
+
+// bool ReadPerimissionQuerySwc = 6;
+inline void PermissionAceV1::clear_readperimissionqueryswc() {
+  _impl_.readperimissionqueryswc_ = false;
+}
+inline bool PermissionAceV1::_internal_readperimissionqueryswc() const {
+  return _impl_.readperimissionqueryswc_;
+}
+inline bool PermissionAceV1::readperimissionqueryswc() const {
+  // @@protoc_insertion_point(field_get:proto.PermissionAceV1.ReadPerimissionQuerySwc)
+  return _internal_readperimissionqueryswc();
+}
+inline void PermissionAceV1::_internal_set_readperimissionqueryswc(bool value) {
+  
+  _impl_.readperimissionqueryswc_ = value;
+}
+inline void PermissionAceV1::set_readperimissionqueryswc(bool value) {
+  _internal_set_readperimissionqueryswc(value);
+  // @@protoc_insertion_point(field_set:proto.PermissionAceV1.ReadPerimissionQuerySwc)
+}
+
+// bool WritePermissionAddSwcData = 7;
 inline void PermissionAceV1::clear_writepermissionaddswcdata() {
   _impl_.writepermissionaddswcdata_ = false;
 }
@@ -7311,7 +7600,7 @@ inline void PermissionAceV1::set_writepermissionaddswcdata(bool value) {
   // @@protoc_insertion_point(field_set:proto.PermissionAceV1.WritePermissionAddSwcData)
 }
 
-// bool WritePermissionModifySwcData = 6;
+// bool WritePermissionModifySwcData = 8;
 inline void PermissionAceV1::clear_writepermissionmodifyswcdata() {
   _impl_.writepermissionmodifyswcdata_ = false;
 }
@@ -7331,7 +7620,7 @@ inline void PermissionAceV1::set_writepermissionmodifyswcdata(bool value) {
   // @@protoc_insertion_point(field_set:proto.PermissionAceV1.WritePermissionModifySwcData)
 }
 
-// bool WritePermissionDeleteSwcData = 7;
+// bool WritePermissionDeleteSwcData = 9;
 inline void PermissionAceV1::clear_writepermissiondeleteswcdata() {
   _impl_.writepermissiondeleteswcdata_ = false;
 }
@@ -7351,7 +7640,7 @@ inline void PermissionAceV1::set_writepermissiondeleteswcdata(bool value) {
   // @@protoc_insertion_point(field_set:proto.PermissionAceV1.WritePermissionDeleteSwcData)
 }
 
-// bool ReadPerimissionQuerySwcData = 8;
+// bool ReadPerimissionQuerySwcData = 10;
 inline void PermissionAceV1::clear_readperimissionqueryswcdata() {
   _impl_.readperimissionqueryswcdata_ = false;
 }
@@ -7369,6 +7658,306 @@ inline void PermissionAceV1::_internal_set_readperimissionqueryswcdata(bool valu
 inline void PermissionAceV1::set_readperimissionqueryswcdata(bool value) {
   _internal_set_readperimissionqueryswcdata(value);
   // @@protoc_insertion_point(field_set:proto.PermissionAceV1.ReadPerimissionQuerySwcData)
+}
+
+// bool CreateSnapshotAndIncrementPermission = 11;
+inline void PermissionAceV1::clear_createsnapshotandincrementpermission() {
+  _impl_.createsnapshotandincrementpermission_ = false;
+}
+inline bool PermissionAceV1::_internal_createsnapshotandincrementpermission() const {
+  return _impl_.createsnapshotandincrementpermission_;
+}
+inline bool PermissionAceV1::createsnapshotandincrementpermission() const {
+  // @@protoc_insertion_point(field_get:proto.PermissionAceV1.CreateSnapshotAndIncrementPermission)
+  return _internal_createsnapshotandincrementpermission();
+}
+inline void PermissionAceV1::_internal_set_createsnapshotandincrementpermission(bool value) {
+  
+  _impl_.createsnapshotandincrementpermission_ = value;
+}
+inline void PermissionAceV1::set_createsnapshotandincrementpermission(bool value) {
+  _internal_set_createsnapshotandincrementpermission(value);
+  // @@protoc_insertion_point(field_set:proto.PermissionAceV1.CreateSnapshotAndIncrementPermission)
+}
+
+// bool DeleteSnapshotAndIncrementPermission = 12;
+inline void PermissionAceV1::clear_deletesnapshotandincrementpermission() {
+  _impl_.deletesnapshotandincrementpermission_ = false;
+}
+inline bool PermissionAceV1::_internal_deletesnapshotandincrementpermission() const {
+  return _impl_.deletesnapshotandincrementpermission_;
+}
+inline bool PermissionAceV1::deletesnapshotandincrementpermission() const {
+  // @@protoc_insertion_point(field_get:proto.PermissionAceV1.DeleteSnapshotAndIncrementPermission)
+  return _internal_deletesnapshotandincrementpermission();
+}
+inline void PermissionAceV1::_internal_set_deletesnapshotandincrementpermission(bool value) {
+  
+  _impl_.deletesnapshotandincrementpermission_ = value;
+}
+inline void PermissionAceV1::set_deletesnapshotandincrementpermission(bool value) {
+  _internal_set_deletesnapshotandincrementpermission(value);
+  // @@protoc_insertion_point(field_set:proto.PermissionAceV1.DeleteSnapshotAndIncrementPermission)
+}
+
+// bool QuerySnapshotAndIncrementPermission = 13;
+inline void PermissionAceV1::clear_querysnapshotandincrementpermission() {
+  _impl_.querysnapshotandincrementpermission_ = false;
+}
+inline bool PermissionAceV1::_internal_querysnapshotandincrementpermission() const {
+  return _impl_.querysnapshotandincrementpermission_;
+}
+inline bool PermissionAceV1::querysnapshotandincrementpermission() const {
+  // @@protoc_insertion_point(field_get:proto.PermissionAceV1.QuerySnapshotAndIncrementPermission)
+  return _internal_querysnapshotandincrementpermission();
+}
+inline void PermissionAceV1::_internal_set_querysnapshotandincrementpermission(bool value) {
+  
+  _impl_.querysnapshotandincrementpermission_ = value;
+}
+inline void PermissionAceV1::set_querysnapshotandincrementpermission(bool value) {
+  _internal_set_querysnapshotandincrementpermission(value);
+  // @@protoc_insertion_point(field_set:proto.PermissionAceV1.QuerySnapshotAndIncrementPermission)
+}
+
+// bool CreateAnoAttachmentPermission = 14;
+inline void PermissionAceV1::clear_createanoattachmentpermission() {
+  _impl_.createanoattachmentpermission_ = false;
+}
+inline bool PermissionAceV1::_internal_createanoattachmentpermission() const {
+  return _impl_.createanoattachmentpermission_;
+}
+inline bool PermissionAceV1::createanoattachmentpermission() const {
+  // @@protoc_insertion_point(field_get:proto.PermissionAceV1.CreateAnoAttachmentPermission)
+  return _internal_createanoattachmentpermission();
+}
+inline void PermissionAceV1::_internal_set_createanoattachmentpermission(bool value) {
+  
+  _impl_.createanoattachmentpermission_ = value;
+}
+inline void PermissionAceV1::set_createanoattachmentpermission(bool value) {
+  _internal_set_createanoattachmentpermission(value);
+  // @@protoc_insertion_point(field_set:proto.PermissionAceV1.CreateAnoAttachmentPermission)
+}
+
+// bool DeleteAnoAttachmentPermission = 15;
+inline void PermissionAceV1::clear_deleteanoattachmentpermission() {
+  _impl_.deleteanoattachmentpermission_ = false;
+}
+inline bool PermissionAceV1::_internal_deleteanoattachmentpermission() const {
+  return _impl_.deleteanoattachmentpermission_;
+}
+inline bool PermissionAceV1::deleteanoattachmentpermission() const {
+  // @@protoc_insertion_point(field_get:proto.PermissionAceV1.DeleteAnoAttachmentPermission)
+  return _internal_deleteanoattachmentpermission();
+}
+inline void PermissionAceV1::_internal_set_deleteanoattachmentpermission(bool value) {
+  
+  _impl_.deleteanoattachmentpermission_ = value;
+}
+inline void PermissionAceV1::set_deleteanoattachmentpermission(bool value) {
+  _internal_set_deleteanoattachmentpermission(value);
+  // @@protoc_insertion_point(field_set:proto.PermissionAceV1.DeleteAnoAttachmentPermission)
+}
+
+// bool UpdateAnoAttachmentPermission = 16;
+inline void PermissionAceV1::clear_updateanoattachmentpermission() {
+  _impl_.updateanoattachmentpermission_ = false;
+}
+inline bool PermissionAceV1::_internal_updateanoattachmentpermission() const {
+  return _impl_.updateanoattachmentpermission_;
+}
+inline bool PermissionAceV1::updateanoattachmentpermission() const {
+  // @@protoc_insertion_point(field_get:proto.PermissionAceV1.UpdateAnoAttachmentPermission)
+  return _internal_updateanoattachmentpermission();
+}
+inline void PermissionAceV1::_internal_set_updateanoattachmentpermission(bool value) {
+  
+  _impl_.updateanoattachmentpermission_ = value;
+}
+inline void PermissionAceV1::set_updateanoattachmentpermission(bool value) {
+  _internal_set_updateanoattachmentpermission(value);
+  // @@protoc_insertion_point(field_set:proto.PermissionAceV1.UpdateAnoAttachmentPermission)
+}
+
+// bool QueryAnoAttachmentPermission = 17;
+inline void PermissionAceV1::clear_queryanoattachmentpermission() {
+  _impl_.queryanoattachmentpermission_ = false;
+}
+inline bool PermissionAceV1::_internal_queryanoattachmentpermission() const {
+  return _impl_.queryanoattachmentpermission_;
+}
+inline bool PermissionAceV1::queryanoattachmentpermission() const {
+  // @@protoc_insertion_point(field_get:proto.PermissionAceV1.QueryAnoAttachmentPermission)
+  return _internal_queryanoattachmentpermission();
+}
+inline void PermissionAceV1::_internal_set_queryanoattachmentpermission(bool value) {
+  
+  _impl_.queryanoattachmentpermission_ = value;
+}
+inline void PermissionAceV1::set_queryanoattachmentpermission(bool value) {
+  _internal_set_queryanoattachmentpermission(value);
+  // @@protoc_insertion_point(field_set:proto.PermissionAceV1.QueryAnoAttachmentPermission)
+}
+
+// bool CreateApoAttachmentPermission = 18;
+inline void PermissionAceV1::clear_createapoattachmentpermission() {
+  _impl_.createapoattachmentpermission_ = false;
+}
+inline bool PermissionAceV1::_internal_createapoattachmentpermission() const {
+  return _impl_.createapoattachmentpermission_;
+}
+inline bool PermissionAceV1::createapoattachmentpermission() const {
+  // @@protoc_insertion_point(field_get:proto.PermissionAceV1.CreateApoAttachmentPermission)
+  return _internal_createapoattachmentpermission();
+}
+inline void PermissionAceV1::_internal_set_createapoattachmentpermission(bool value) {
+  
+  _impl_.createapoattachmentpermission_ = value;
+}
+inline void PermissionAceV1::set_createapoattachmentpermission(bool value) {
+  _internal_set_createapoattachmentpermission(value);
+  // @@protoc_insertion_point(field_set:proto.PermissionAceV1.CreateApoAttachmentPermission)
+}
+
+// bool DeleteApoAttachmentPermission = 19;
+inline void PermissionAceV1::clear_deleteapoattachmentpermission() {
+  _impl_.deleteapoattachmentpermission_ = false;
+}
+inline bool PermissionAceV1::_internal_deleteapoattachmentpermission() const {
+  return _impl_.deleteapoattachmentpermission_;
+}
+inline bool PermissionAceV1::deleteapoattachmentpermission() const {
+  // @@protoc_insertion_point(field_get:proto.PermissionAceV1.DeleteApoAttachmentPermission)
+  return _internal_deleteapoattachmentpermission();
+}
+inline void PermissionAceV1::_internal_set_deleteapoattachmentpermission(bool value) {
+  
+  _impl_.deleteapoattachmentpermission_ = value;
+}
+inline void PermissionAceV1::set_deleteapoattachmentpermission(bool value) {
+  _internal_set_deleteapoattachmentpermission(value);
+  // @@protoc_insertion_point(field_set:proto.PermissionAceV1.DeleteApoAttachmentPermission)
+}
+
+// bool UpdateApoAttachmentPermission = 20;
+inline void PermissionAceV1::clear_updateapoattachmentpermission() {
+  _impl_.updateapoattachmentpermission_ = false;
+}
+inline bool PermissionAceV1::_internal_updateapoattachmentpermission() const {
+  return _impl_.updateapoattachmentpermission_;
+}
+inline bool PermissionAceV1::updateapoattachmentpermission() const {
+  // @@protoc_insertion_point(field_get:proto.PermissionAceV1.UpdateApoAttachmentPermission)
+  return _internal_updateapoattachmentpermission();
+}
+inline void PermissionAceV1::_internal_set_updateapoattachmentpermission(bool value) {
+  
+  _impl_.updateapoattachmentpermission_ = value;
+}
+inline void PermissionAceV1::set_updateapoattachmentpermission(bool value) {
+  _internal_set_updateapoattachmentpermission(value);
+  // @@protoc_insertion_point(field_set:proto.PermissionAceV1.UpdateApoAttachmentPermission)
+}
+
+// bool QueryApoAttachmentPermission = 21;
+inline void PermissionAceV1::clear_queryapoattachmentpermission() {
+  _impl_.queryapoattachmentpermission_ = false;
+}
+inline bool PermissionAceV1::_internal_queryapoattachmentpermission() const {
+  return _impl_.queryapoattachmentpermission_;
+}
+inline bool PermissionAceV1::queryapoattachmentpermission() const {
+  // @@protoc_insertion_point(field_get:proto.PermissionAceV1.QueryApoAttachmentPermission)
+  return _internal_queryapoattachmentpermission();
+}
+inline void PermissionAceV1::_internal_set_queryapoattachmentpermission(bool value) {
+  
+  _impl_.queryapoattachmentpermission_ = value;
+}
+inline void PermissionAceV1::set_queryapoattachmentpermission(bool value) {
+  _internal_set_queryapoattachmentpermission(value);
+  // @@protoc_insertion_point(field_set:proto.PermissionAceV1.QueryApoAttachmentPermission)
+}
+
+// bool CreateSwcAttachmentPermission = 22;
+inline void PermissionAceV1::clear_createswcattachmentpermission() {
+  _impl_.createswcattachmentpermission_ = false;
+}
+inline bool PermissionAceV1::_internal_createswcattachmentpermission() const {
+  return _impl_.createswcattachmentpermission_;
+}
+inline bool PermissionAceV1::createswcattachmentpermission() const {
+  // @@protoc_insertion_point(field_get:proto.PermissionAceV1.CreateSwcAttachmentPermission)
+  return _internal_createswcattachmentpermission();
+}
+inline void PermissionAceV1::_internal_set_createswcattachmentpermission(bool value) {
+  
+  _impl_.createswcattachmentpermission_ = value;
+}
+inline void PermissionAceV1::set_createswcattachmentpermission(bool value) {
+  _internal_set_createswcattachmentpermission(value);
+  // @@protoc_insertion_point(field_set:proto.PermissionAceV1.CreateSwcAttachmentPermission)
+}
+
+// bool DeleteSwcAttachmentPermission = 23;
+inline void PermissionAceV1::clear_deleteswcattachmentpermission() {
+  _impl_.deleteswcattachmentpermission_ = false;
+}
+inline bool PermissionAceV1::_internal_deleteswcattachmentpermission() const {
+  return _impl_.deleteswcattachmentpermission_;
+}
+inline bool PermissionAceV1::deleteswcattachmentpermission() const {
+  // @@protoc_insertion_point(field_get:proto.PermissionAceV1.DeleteSwcAttachmentPermission)
+  return _internal_deleteswcattachmentpermission();
+}
+inline void PermissionAceV1::_internal_set_deleteswcattachmentpermission(bool value) {
+  
+  _impl_.deleteswcattachmentpermission_ = value;
+}
+inline void PermissionAceV1::set_deleteswcattachmentpermission(bool value) {
+  _internal_set_deleteswcattachmentpermission(value);
+  // @@protoc_insertion_point(field_set:proto.PermissionAceV1.DeleteSwcAttachmentPermission)
+}
+
+// bool UpdateSwcAttachmentPermission = 24;
+inline void PermissionAceV1::clear_updateswcattachmentpermission() {
+  _impl_.updateswcattachmentpermission_ = false;
+}
+inline bool PermissionAceV1::_internal_updateswcattachmentpermission() const {
+  return _impl_.updateswcattachmentpermission_;
+}
+inline bool PermissionAceV1::updateswcattachmentpermission() const {
+  // @@protoc_insertion_point(field_get:proto.PermissionAceV1.UpdateSwcAttachmentPermission)
+  return _internal_updateswcattachmentpermission();
+}
+inline void PermissionAceV1::_internal_set_updateswcattachmentpermission(bool value) {
+  
+  _impl_.updateswcattachmentpermission_ = value;
+}
+inline void PermissionAceV1::set_updateswcattachmentpermission(bool value) {
+  _internal_set_updateswcattachmentpermission(value);
+  // @@protoc_insertion_point(field_set:proto.PermissionAceV1.UpdateSwcAttachmentPermission)
+}
+
+// bool QuerySwcAttachmentPermission = 25;
+inline void PermissionAceV1::clear_queryswcattachmentpermission() {
+  _impl_.queryswcattachmentpermission_ = false;
+}
+inline bool PermissionAceV1::_internal_queryswcattachmentpermission() const {
+  return _impl_.queryswcattachmentpermission_;
+}
+inline bool PermissionAceV1::queryswcattachmentpermission() const {
+  // @@protoc_insertion_point(field_get:proto.PermissionAceV1.QuerySwcAttachmentPermission)
+  return _internal_queryswcattachmentpermission();
+}
+inline void PermissionAceV1::_internal_set_queryswcattachmentpermission(bool value) {
+  
+  _impl_.queryswcattachmentpermission_ = value;
+}
+inline void PermissionAceV1::set_queryswcattachmentpermission(bool value) {
+  _internal_set_queryswcattachmentpermission(value);
+  // @@protoc_insertion_point(field_set:proto.PermissionAceV1.QuerySwcAttachmentPermission)
 }
 
 // -------------------------------------------------------------------
