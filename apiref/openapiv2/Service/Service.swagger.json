@@ -2265,7 +2265,7 @@
         "UserVerifyInfo": {
           "$ref": "#/definitions/protoUserVerifyInfoV1"
         },
-        "ProjectName": {
+        "ProjectUuid": {
           "type": "string"
         }
       }
@@ -2725,7 +2725,7 @@
         "UserVerifyInfo": {
           "$ref": "#/definitions/protoUserVerifyInfoV1"
         },
-        "ProjectName": {
+        "ProjectUuid": {
           "type": "string"
         }
       }

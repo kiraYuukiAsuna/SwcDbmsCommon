@@ -244,7 +244,7 @@ struct CreateProjectRequestDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CreateProjectRequestDefaultTypeInternal _CreateProjectRequest_default_instance_;
 PROTOBUF_CONSTEXPR DeleteProjectRequest::DeleteProjectRequest(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.projectname_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.projectuuid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.metainfo_)*/nullptr
   , /*decltype(_impl_.userverifyinfo_)*/nullptr
   , /*decltype(_impl_._cached_size_)*/{}} {}
@@ -274,7 +274,7 @@ struct UpdateProjectRequestDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 UpdateProjectRequestDefaultTypeInternal _UpdateProjectRequest_default_instance_;
 PROTOBUF_CONSTEXPR GetProjectRequest::GetProjectRequest(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.projectname_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.projectuuid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.metainfo_)*/nullptr
   , /*decltype(_impl_.userverifyinfo_)*/nullptr
   , /*decltype(_impl_._cached_size_)*/{}} {}
@@ -1028,7 +1028,7 @@ const uint32_t TableStruct_Message_2fRequest_2eproto::offsets[] PROTOBUF_SECTION
   ~0u,  // no _inlined_string_donated_
   PROTOBUF_FIELD_OFFSET(::proto::DeleteProjectRequest, _impl_.metainfo_),
   PROTOBUF_FIELD_OFFSET(::proto::DeleteProjectRequest, _impl_.userverifyinfo_),
-  PROTOBUF_FIELD_OFFSET(::proto::DeleteProjectRequest, _impl_.projectname_),
+  PROTOBUF_FIELD_OFFSET(::proto::DeleteProjectRequest, _impl_.projectuuid_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::proto::UpdateProjectRequest, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -1046,7 +1046,7 @@ const uint32_t TableStruct_Message_2fRequest_2eproto::offsets[] PROTOBUF_SECTION
   ~0u,  // no _inlined_string_donated_
   PROTOBUF_FIELD_OFFSET(::proto::GetProjectRequest, _impl_.metainfo_),
   PROTOBUF_FIELD_OFFSET(::proto::GetProjectRequest, _impl_.userverifyinfo_),
-  PROTOBUF_FIELD_OFFSET(::proto::GetProjectRequest, _impl_.projectname_),
+  PROTOBUF_FIELD_OFFSET(::proto::GetProjectRequest, _impl_.projectuuid_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::proto::GetAllProjectRequest, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -1591,15 +1591,15 @@ const char descriptor_table_protodef_Message_2fRequest_2eproto[] PROTOBUF_SECTIO
   "(\0132\030.proto.ProjectMetaInfoV1\"\210\001\n\024DeleteP"
   "rojectRequest\022*\n\010metaInfo\030\001 \001(\0132\030.proto."
   "RequestMetaInfoV1\022/\n\016UserVerifyInfo\030\002 \001("
-  "\0132\027.proto.UserVerifyInfoV1\022\023\n\013ProjectNam"
-  "e\030\003 \001(\t\"\242\001\n\024UpdateProjectRequest\022*\n\010meta"
+  "\0132\027.proto.UserVerifyInfoV1\022\023\n\013ProjectUui"
+  "d\030\003 \001(\t\"\242\001\n\024UpdateProjectRequest\022*\n\010meta"
   "Info\030\001 \001(\0132\030.proto.RequestMetaInfoV1\022/\n\016"
   "UserVerifyInfo\030\002 \001(\0132\027.proto.UserVerifyI"
   "nfoV1\022-\n\013ProjectInfo\030\003 \001(\0132\030.proto.Proje"
   "ctMetaInfoV1\"\205\001\n\021GetProjectRequest\022*\n\010me"
   "taInfo\030\001 \001(\0132\030.proto.RequestMetaInfoV1\022/"
   "\n\016UserVerifyInfo\030\002 \001(\0132\027.proto.UserVerif"
-  "yInfoV1\022\023\n\013ProjectName\030\003 \001(\t\"s\n\024GetAllPr"
+  "yInfoV1\022\023\n\013ProjectUuid\030\003 \001(\t\"s\n\024GetAllPr"
   "ojectRequest\022*\n\010metaInfo\030\001 \001(\0132\030.proto.R"
   "equestMetaInfoV1\022/\n\016UserVerifyInfo\030\002 \001(\013"
   "2\027.proto.UserVerifyInfoV1\"\200\002\n\020CreateSwcR"
@@ -6125,18 +6125,18 @@ DeleteProjectRequest::DeleteProjectRequest(const DeleteProjectRequest& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   DeleteProjectRequest* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.projectname_){}
+      decltype(_impl_.projectuuid_){}
     , decltype(_impl_.metainfo_){nullptr}
     , decltype(_impl_.userverifyinfo_){nullptr}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.projectname_.InitDefault();
+  _impl_.projectuuid_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.projectname_.Set("", GetArenaForAllocation());
+    _impl_.projectuuid_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_projectname().empty()) {
-    _this->_impl_.projectname_.Set(from._internal_projectname(), 
+  if (!from._internal_projectuuid().empty()) {
+    _this->_impl_.projectuuid_.Set(from._internal_projectuuid(), 
       _this->GetArenaForAllocation());
   }
   if (from._internal_has_metainfo()) {
@@ -6153,14 +6153,14 @@ inline void DeleteProjectRequest::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.projectname_){}
+      decltype(_impl_.projectuuid_){}
     , decltype(_impl_.metainfo_){nullptr}
     , decltype(_impl_.userverifyinfo_){nullptr}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.projectname_.InitDefault();
+  _impl_.projectuuid_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.projectname_.Set("", GetArenaForAllocation());
+    _impl_.projectuuid_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -6175,7 +6175,7 @@ DeleteProjectRequest::~DeleteProjectRequest() {
 
 inline void DeleteProjectRequest::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.projectname_.Destroy();
+  _impl_.projectuuid_.Destroy();
   if (this != internal_default_instance()) delete _impl_.metainfo_;
   if (this != internal_default_instance()) delete _impl_.userverifyinfo_;
 }
@@ -6190,7 +6190,7 @@ void DeleteProjectRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.projectname_.ClearToEmpty();
+  _impl_.projectuuid_.ClearToEmpty();
   if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
     delete _impl_.metainfo_;
   }
@@ -6224,13 +6224,13 @@ const char* DeleteProjectRequest::_InternalParse(const char* ptr, ::_pbi::ParseC
         } else
           goto handle_unusual;
         continue;
-      // string ProjectName = 3;
+      // string ProjectUuid = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
-          auto str = _internal_mutable_projectname();
+          auto str = _internal_mutable_projectuuid();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "proto.DeleteProjectRequest.ProjectName"));
+          CHK_(::_pbi::VerifyUTF8(str, "proto.DeleteProjectRequest.ProjectUuid"));
         } else
           goto handle_unusual;
         continue;
@@ -6277,14 +6277,14 @@ uint8_t* DeleteProjectRequest::_InternalSerialize(
         _Internal::userverifyinfo(this).GetCachedSize(), target, stream);
   }
 
-  // string ProjectName = 3;
-  if (!this->_internal_projectname().empty()) {
+  // string ProjectUuid = 3;
+  if (!this->_internal_projectuuid().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_projectname().data(), static_cast<int>(this->_internal_projectname().length()),
+      this->_internal_projectuuid().data(), static_cast<int>(this->_internal_projectuuid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "proto.DeleteProjectRequest.ProjectName");
+      "proto.DeleteProjectRequest.ProjectUuid");
     target = stream->WriteStringMaybeAliased(
-        3, this->_internal_projectname(), target);
+        3, this->_internal_projectuuid(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -6303,11 +6303,11 @@ size_t DeleteProjectRequest::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string ProjectName = 3;
-  if (!this->_internal_projectname().empty()) {
+  // string ProjectUuid = 3;
+  if (!this->_internal_projectuuid().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_projectname());
+        this->_internal_projectuuid());
   }
 
   // .proto.RequestMetaInfoV1 metaInfo = 1;
@@ -6342,8 +6342,8 @@ void DeleteProjectRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, c
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_projectname().empty()) {
-    _this->_internal_set_projectname(from._internal_projectname());
+  if (!from._internal_projectuuid().empty()) {
+    _this->_internal_set_projectuuid(from._internal_projectuuid());
   }
   if (from._internal_has_metainfo()) {
     _this->_internal_mutable_metainfo()->::proto::RequestMetaInfoV1::MergeFrom(
@@ -6373,8 +6373,8 @@ void DeleteProjectRequest::InternalSwap(DeleteProjectRequest* other) {
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.projectname_, lhs_arena,
-      &other->_impl_.projectname_, rhs_arena
+      &_impl_.projectuuid_, lhs_arena,
+      &other->_impl_.projectuuid_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(DeleteProjectRequest, _impl_.userverifyinfo_)
@@ -6726,18 +6726,18 @@ GetProjectRequest::GetProjectRequest(const GetProjectRequest& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   GetProjectRequest* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.projectname_){}
+      decltype(_impl_.projectuuid_){}
     , decltype(_impl_.metainfo_){nullptr}
     , decltype(_impl_.userverifyinfo_){nullptr}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.projectname_.InitDefault();
+  _impl_.projectuuid_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.projectname_.Set("", GetArenaForAllocation());
+    _impl_.projectuuid_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_projectname().empty()) {
-    _this->_impl_.projectname_.Set(from._internal_projectname(), 
+  if (!from._internal_projectuuid().empty()) {
+    _this->_impl_.projectuuid_.Set(from._internal_projectuuid(), 
       _this->GetArenaForAllocation());
   }
   if (from._internal_has_metainfo()) {
@@ -6754,14 +6754,14 @@ inline void GetProjectRequest::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.projectname_){}
+      decltype(_impl_.projectuuid_){}
     , decltype(_impl_.metainfo_){nullptr}
     , decltype(_impl_.userverifyinfo_){nullptr}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.projectname_.InitDefault();
+  _impl_.projectuuid_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.projectname_.Set("", GetArenaForAllocation());
+    _impl_.projectuuid_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -6776,7 +6776,7 @@ GetProjectRequest::~GetProjectRequest() {
 
 inline void GetProjectRequest::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.projectname_.Destroy();
+  _impl_.projectuuid_.Destroy();
   if (this != internal_default_instance()) delete _impl_.metainfo_;
   if (this != internal_default_instance()) delete _impl_.userverifyinfo_;
 }
@@ -6791,7 +6791,7 @@ void GetProjectRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.projectname_.ClearToEmpty();
+  _impl_.projectuuid_.ClearToEmpty();
   if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
     delete _impl_.metainfo_;
   }
@@ -6825,13 +6825,13 @@ const char* GetProjectRequest::_InternalParse(const char* ptr, ::_pbi::ParseCont
         } else
           goto handle_unusual;
         continue;
-      // string ProjectName = 3;
+      // string ProjectUuid = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
-          auto str = _internal_mutable_projectname();
+          auto str = _internal_mutable_projectuuid();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "proto.GetProjectRequest.ProjectName"));
+          CHK_(::_pbi::VerifyUTF8(str, "proto.GetProjectRequest.ProjectUuid"));
         } else
           goto handle_unusual;
         continue;
@@ -6878,14 +6878,14 @@ uint8_t* GetProjectRequest::_InternalSerialize(
         _Internal::userverifyinfo(this).GetCachedSize(), target, stream);
   }
 
-  // string ProjectName = 3;
-  if (!this->_internal_projectname().empty()) {
+  // string ProjectUuid = 3;
+  if (!this->_internal_projectuuid().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_projectname().data(), static_cast<int>(this->_internal_projectname().length()),
+      this->_internal_projectuuid().data(), static_cast<int>(this->_internal_projectuuid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "proto.GetProjectRequest.ProjectName");
+      "proto.GetProjectRequest.ProjectUuid");
     target = stream->WriteStringMaybeAliased(
-        3, this->_internal_projectname(), target);
+        3, this->_internal_projectuuid(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -6904,11 +6904,11 @@ size_t GetProjectRequest::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string ProjectName = 3;
-  if (!this->_internal_projectname().empty()) {
+  // string ProjectUuid = 3;
+  if (!this->_internal_projectuuid().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_projectname());
+        this->_internal_projectuuid());
   }
 
   // .proto.RequestMetaInfoV1 metaInfo = 1;
@@ -6943,8 +6943,8 @@ void GetProjectRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, cons
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_projectname().empty()) {
-    _this->_internal_set_projectname(from._internal_projectname());
+  if (!from._internal_projectuuid().empty()) {
+    _this->_internal_set_projectuuid(from._internal_projectuuid());
   }
   if (from._internal_has_metainfo()) {
     _this->_internal_mutable_metainfo()->::proto::RequestMetaInfoV1::MergeFrom(
@@ -6974,8 +6974,8 @@ void GetProjectRequest::InternalSwap(GetProjectRequest* other) {
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.projectname_, lhs_arena,
-      &other->_impl_.projectname_, rhs_arena
+      &_impl_.projectuuid_, lhs_arena,
+      &other->_impl_.projectuuid_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(GetProjectRequest, _impl_.userverifyinfo_)

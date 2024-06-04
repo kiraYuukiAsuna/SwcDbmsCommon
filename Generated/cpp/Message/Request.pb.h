@@ -3229,22 +3229,22 @@ class DeleteProjectRequest final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kProjectNameFieldNumber = 3,
+    kProjectUuidFieldNumber = 3,
     kMetaInfoFieldNumber = 1,
     kUserVerifyInfoFieldNumber = 2,
   };
-  // string ProjectName = 3;
-  void clear_projectname();
-  const std::string& projectname() const;
+  // string ProjectUuid = 3;
+  void clear_projectuuid();
+  const std::string& projectuuid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_projectname(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_projectname();
-  PROTOBUF_NODISCARD std::string* release_projectname();
-  void set_allocated_projectname(std::string* projectname);
+  void set_projectuuid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_projectuuid();
+  PROTOBUF_NODISCARD std::string* release_projectuuid();
+  void set_allocated_projectuuid(std::string* projectuuid);
   private:
-  const std::string& _internal_projectname() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_projectname(const std::string& value);
-  std::string* _internal_mutable_projectname();
+  const std::string& _internal_projectuuid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_projectuuid(const std::string& value);
+  std::string* _internal_mutable_projectuuid();
   public:
 
   // .proto.RequestMetaInfoV1 metaInfo = 1;
@@ -3291,7 +3291,7 @@ class DeleteProjectRequest final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr projectname_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr projectuuid_;
     ::proto::RequestMetaInfoV1* metainfo_;
     ::proto::UserVerifyInfoV1* userverifyinfo_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
@@ -3619,22 +3619,22 @@ class GetProjectRequest final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kProjectNameFieldNumber = 3,
+    kProjectUuidFieldNumber = 3,
     kMetaInfoFieldNumber = 1,
     kUserVerifyInfoFieldNumber = 2,
   };
-  // string ProjectName = 3;
-  void clear_projectname();
-  const std::string& projectname() const;
+  // string ProjectUuid = 3;
+  void clear_projectuuid();
+  const std::string& projectuuid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_projectname(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_projectname();
-  PROTOBUF_NODISCARD std::string* release_projectname();
-  void set_allocated_projectname(std::string* projectname);
+  void set_projectuuid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_projectuuid();
+  PROTOBUF_NODISCARD std::string* release_projectuuid();
+  void set_allocated_projectuuid(std::string* projectuuid);
   private:
-  const std::string& _internal_projectname() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_projectname(const std::string& value);
-  std::string* _internal_mutable_projectname();
+  const std::string& _internal_projectuuid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_projectuuid(const std::string& value);
+  std::string* _internal_mutable_projectuuid();
   public:
 
   // .proto.RequestMetaInfoV1 metaInfo = 1;
@@ -3681,7 +3681,7 @@ class GetProjectRequest final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr projectname_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr projectuuid_;
     ::proto::RequestMetaInfoV1* metainfo_;
     ::proto::UserVerifyInfoV1* userverifyinfo_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
@@ -14865,54 +14865,54 @@ inline void DeleteProjectRequest::set_allocated_userverifyinfo(::proto::UserVeri
   // @@protoc_insertion_point(field_set_allocated:proto.DeleteProjectRequest.UserVerifyInfo)
 }
 
-// string ProjectName = 3;
-inline void DeleteProjectRequest::clear_projectname() {
-  _impl_.projectname_.ClearToEmpty();
+// string ProjectUuid = 3;
+inline void DeleteProjectRequest::clear_projectuuid() {
+  _impl_.projectuuid_.ClearToEmpty();
 }
-inline const std::string& DeleteProjectRequest::projectname() const {
-  // @@protoc_insertion_point(field_get:proto.DeleteProjectRequest.ProjectName)
-  return _internal_projectname();
+inline const std::string& DeleteProjectRequest::projectuuid() const {
+  // @@protoc_insertion_point(field_get:proto.DeleteProjectRequest.ProjectUuid)
+  return _internal_projectuuid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void DeleteProjectRequest::set_projectname(ArgT0&& arg0, ArgT... args) {
+void DeleteProjectRequest::set_projectuuid(ArgT0&& arg0, ArgT... args) {
  
- _impl_.projectname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:proto.DeleteProjectRequest.ProjectName)
+ _impl_.projectuuid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:proto.DeleteProjectRequest.ProjectUuid)
 }
-inline std::string* DeleteProjectRequest::mutable_projectname() {
-  std::string* _s = _internal_mutable_projectname();
-  // @@protoc_insertion_point(field_mutable:proto.DeleteProjectRequest.ProjectName)
+inline std::string* DeleteProjectRequest::mutable_projectuuid() {
+  std::string* _s = _internal_mutable_projectuuid();
+  // @@protoc_insertion_point(field_mutable:proto.DeleteProjectRequest.ProjectUuid)
   return _s;
 }
-inline const std::string& DeleteProjectRequest::_internal_projectname() const {
-  return _impl_.projectname_.Get();
+inline const std::string& DeleteProjectRequest::_internal_projectuuid() const {
+  return _impl_.projectuuid_.Get();
 }
-inline void DeleteProjectRequest::_internal_set_projectname(const std::string& value) {
+inline void DeleteProjectRequest::_internal_set_projectuuid(const std::string& value) {
   
-  _impl_.projectname_.Set(value, GetArenaForAllocation());
+  _impl_.projectuuid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* DeleteProjectRequest::_internal_mutable_projectname() {
+inline std::string* DeleteProjectRequest::_internal_mutable_projectuuid() {
   
-  return _impl_.projectname_.Mutable(GetArenaForAllocation());
+  return _impl_.projectuuid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* DeleteProjectRequest::release_projectname() {
-  // @@protoc_insertion_point(field_release:proto.DeleteProjectRequest.ProjectName)
-  return _impl_.projectname_.Release();
+inline std::string* DeleteProjectRequest::release_projectuuid() {
+  // @@protoc_insertion_point(field_release:proto.DeleteProjectRequest.ProjectUuid)
+  return _impl_.projectuuid_.Release();
 }
-inline void DeleteProjectRequest::set_allocated_projectname(std::string* projectname) {
-  if (projectname != nullptr) {
+inline void DeleteProjectRequest::set_allocated_projectuuid(std::string* projectuuid) {
+  if (projectuuid != nullptr) {
     
   } else {
     
   }
-  _impl_.projectname_.SetAllocated(projectname, GetArenaForAllocation());
+  _impl_.projectuuid_.SetAllocated(projectuuid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.projectname_.IsDefault()) {
-    _impl_.projectname_.Set("", GetArenaForAllocation());
+  if (_impl_.projectuuid_.IsDefault()) {
+    _impl_.projectuuid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:proto.DeleteProjectRequest.ProjectName)
+  // @@protoc_insertion_point(field_set_allocated:proto.DeleteProjectRequest.ProjectUuid)
 }
 
 // -------------------------------------------------------------------
@@ -15348,54 +15348,54 @@ inline void GetProjectRequest::set_allocated_userverifyinfo(::proto::UserVerifyI
   // @@protoc_insertion_point(field_set_allocated:proto.GetProjectRequest.UserVerifyInfo)
 }
 
-// string ProjectName = 3;
-inline void GetProjectRequest::clear_projectname() {
-  _impl_.projectname_.ClearToEmpty();
+// string ProjectUuid = 3;
+inline void GetProjectRequest::clear_projectuuid() {
+  _impl_.projectuuid_.ClearToEmpty();
 }
-inline const std::string& GetProjectRequest::projectname() const {
-  // @@protoc_insertion_point(field_get:proto.GetProjectRequest.ProjectName)
-  return _internal_projectname();
+inline const std::string& GetProjectRequest::projectuuid() const {
+  // @@protoc_insertion_point(field_get:proto.GetProjectRequest.ProjectUuid)
+  return _internal_projectuuid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void GetProjectRequest::set_projectname(ArgT0&& arg0, ArgT... args) {
+void GetProjectRequest::set_projectuuid(ArgT0&& arg0, ArgT... args) {
  
- _impl_.projectname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:proto.GetProjectRequest.ProjectName)
+ _impl_.projectuuid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:proto.GetProjectRequest.ProjectUuid)
 }
-inline std::string* GetProjectRequest::mutable_projectname() {
-  std::string* _s = _internal_mutable_projectname();
-  // @@protoc_insertion_point(field_mutable:proto.GetProjectRequest.ProjectName)
+inline std::string* GetProjectRequest::mutable_projectuuid() {
+  std::string* _s = _internal_mutable_projectuuid();
+  // @@protoc_insertion_point(field_mutable:proto.GetProjectRequest.ProjectUuid)
   return _s;
 }
-inline const std::string& GetProjectRequest::_internal_projectname() const {
-  return _impl_.projectname_.Get();
+inline const std::string& GetProjectRequest::_internal_projectuuid() const {
+  return _impl_.projectuuid_.Get();
 }
-inline void GetProjectRequest::_internal_set_projectname(const std::string& value) {
+inline void GetProjectRequest::_internal_set_projectuuid(const std::string& value) {
   
-  _impl_.projectname_.Set(value, GetArenaForAllocation());
+  _impl_.projectuuid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* GetProjectRequest::_internal_mutable_projectname() {
+inline std::string* GetProjectRequest::_internal_mutable_projectuuid() {
   
-  return _impl_.projectname_.Mutable(GetArenaForAllocation());
+  return _impl_.projectuuid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* GetProjectRequest::release_projectname() {
-  // @@protoc_insertion_point(field_release:proto.GetProjectRequest.ProjectName)
-  return _impl_.projectname_.Release();
+inline std::string* GetProjectRequest::release_projectuuid() {
+  // @@protoc_insertion_point(field_release:proto.GetProjectRequest.ProjectUuid)
+  return _impl_.projectuuid_.Release();
 }
-inline void GetProjectRequest::set_allocated_projectname(std::string* projectname) {
-  if (projectname != nullptr) {
+inline void GetProjectRequest::set_allocated_projectuuid(std::string* projectuuid) {
+  if (projectuuid != nullptr) {
     
   } else {
     
   }
-  _impl_.projectname_.SetAllocated(projectname, GetArenaForAllocation());
+  _impl_.projectuuid_.SetAllocated(projectuuid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.projectname_.IsDefault()) {
-    _impl_.projectname_.Set("", GetArenaForAllocation());
+  if (_impl_.projectuuid_.IsDefault()) {
+    _impl_.projectuuid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:proto.GetProjectRequest.ProjectName)
+  // @@protoc_insertion_point(field_set_allocated:proto.GetProjectRequest.ProjectUuid)
 }
 
 // -------------------------------------------------------------------

@@ -96,7 +96,7 @@ message CreateProjectRequest{
 message DeleteProjectRequest{
     RequestMetaInfoV1 metaInfo = 1;
     UserVerifyInfoV1 UserVerifyInfo = 2;
-    string ProjectName = 3;
+    string ProjectUuid = 3;
 }
 
 message UpdateProjectRequest{
@@ -108,7 +108,7 @@ message UpdateProjectRequest{
 message GetProjectRequest{
     RequestMetaInfoV1 metaInfo = 1;
     UserVerifyInfoV1 UserVerifyInfo = 2;
-    string ProjectName = 3;
+    string ProjectUuid = 3;
 }
 
 message GetAllProjectRequest{
