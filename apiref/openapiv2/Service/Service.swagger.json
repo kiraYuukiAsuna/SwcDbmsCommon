@@ -1040,6 +1040,38 @@
         ]
       }
     },
+    "/proto.DBMS/GetProjectSwcNamesByProjectUuid": {
+      "post": {
+        "operationId": "DBMS_GetProjectSwcNamesByProjectUuid",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/protoGetProjectSwcNamesByProjectUuidResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/protoGetProjectSwcNamesByProjectUuidRequest"
+            }
+          }
+        ],
+        "tags": [
+          "DBMS"
+        ]
+      }
+    },
     "/proto.DBMS/GetSnapshot": {
       "post": {
         "operationId": "DBMS_GetSnapshot",
@@ -2741,6 +2773,35 @@
         }
       }
     },
+    "protoGetProjectSwcNamesByProjectUuidRequest": {
+      "type": "object",
+      "properties": {
+        "metaInfo": {
+          "$ref": "#/definitions/protoRequestMetaInfoV1"
+        },
+        "UserVerifyInfo": {
+          "$ref": "#/definitions/protoUserVerifyInfoV1"
+        },
+        "ProjectUuid": {
+          "type": "string"
+        }
+      }
+    },
+    "protoGetProjectSwcNamesByProjectUuidResponse": {
+      "type": "object",
+      "properties": {
+        "metaInfo": {
+          "$ref": "#/definitions/protoResponseMetaInfoV1"
+        },
+        "swcUuidName": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/protoSwcUuidName"
+          }
+        }
+      }
+    },
     "protoGetSnapshotRequest": {
       "type": "object",
       "properties": {
@@ -3616,6 +3677,17 @@
           "format": "date-time"
         },
         "Creator": {
+          "type": "string"
+        }
+      }
+    },
+    "protoSwcUuidName": {
+      "type": "object",
+      "properties": {
+        "SwcUuid": {
+          "type": "string"
+        },
+        "SwcName": {
           "type": "string"
         }
       }

@@ -364,3 +364,9 @@ message UpdatePermissionGroupRequest{
     string PermissionGroupDescription = 5;
     PermissionGroupAceV1 Ace = 6;
 }
+
+message GetProjectSwcNamesByProjectUuidRequest{
+    RequestMetaInfoV1 metaInfo = 1;
+    UserVerifyInfoV1 UserVerifyInfo = 2;
+    string ProjectUuid = 3;
+}

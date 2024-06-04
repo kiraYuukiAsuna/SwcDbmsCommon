@@ -79,4 +79,6 @@ service DBMS {
     rpc CreatePermissionGroup(CreatePermissionGroupRequest) returns (CreatePermissionGroupResponse){}
     rpc DeletePermissionGroup(DeletePermissionGroupRequest) returns (DeletePermissionGroupResponse){}
     rpc UpdatePermissionGroup(UpdatePermissionGroupRequest) returns (UpdatePermissionGroupResponse){}
+
+    rpc GetProjectSwcNamesByProjectUuid(GetProjectSwcNamesByProjectUuidRequest) returns (GetProjectSwcNamesByProjectUuidResponse){}
 }

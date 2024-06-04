@@ -77,6 +77,7 @@ const (
 	DBMS_CreatePermissionGroup_FullMethodName            = "/proto.DBMS/CreatePermissionGroup"
 	DBMS_DeletePermissionGroup_FullMethodName            = "/proto.DBMS/DeletePermissionGroup"
 	DBMS_UpdatePermissionGroup_FullMethodName            = "/proto.DBMS/UpdatePermissionGroup"
+	DBMS_GetProjectSwcNamesByProjectUuid_FullMethodName  = "/proto.DBMS/GetProjectSwcNamesByProjectUuid"
 )
 
 // DBMSClient is the client API for DBMS service.
@@ -139,6 +140,7 @@ type DBMSClient interface {
 	CreatePermissionGroup(ctx context.Context, in *request.CreatePermissionGroupRequest, opts ...grpc.CallOption) (*response.CreatePermissionGroupResponse, error)
 	DeletePermissionGroup(ctx context.Context, in *request.DeletePermissionGroupRequest, opts ...grpc.CallOption) (*response.DeletePermissionGroupResponse, error)
 	UpdatePermissionGroup(ctx context.Context, in *request.UpdatePermissionGroupRequest, opts ...grpc.CallOption) (*response.UpdatePermissionGroupResponse, error)
+	GetProjectSwcNamesByProjectUuid(ctx context.Context, in *request.GetProjectSwcNamesByProjectUuidRequest, opts ...grpc.CallOption) (*response.GetProjectSwcNamesByProjectUuidResponse, error)
 }
 
 type dBMSClient struct {
@@ -653,6 +655,15 @@ func (c *dBMSClient) UpdatePermissionGroup(ctx context.Context, in *request.Upda
 	return out, nil
 }
 
+func (c *dBMSClient) GetProjectSwcNamesByProjectUuid(ctx context.Context, in *request.GetProjectSwcNamesByProjectUuidRequest, opts ...grpc.CallOption) (*response.GetProjectSwcNamesByProjectUuidResponse, error) {
+	out := new(response.GetProjectSwcNamesByProjectUuidResponse)
+	err := c.cc.Invoke(ctx, DBMS_GetProjectSwcNamesByProjectUuid_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // DBMSServer is the server API for DBMS service.
 // All implementations must embed UnimplementedDBMSServer
 // for forward compatibility
@@ -713,6 +724,7 @@ type DBMSServer interface {
 	CreatePermissionGroup(context.Context, *request.CreatePermissionGroupRequest) (*response.CreatePermissionGroupResponse, error)
 	DeletePermissionGroup(context.Context, *request.DeletePermissionGroupRequest) (*response.DeletePermissionGroupResponse, error)
 	UpdatePermissionGroup(context.Context, *request.UpdatePermissionGroupRequest) (*response.UpdatePermissionGroupResponse, error)
+	GetProjectSwcNamesByProjectUuid(context.Context, *request.GetProjectSwcNamesByProjectUuidRequest) (*response.GetProjectSwcNamesByProjectUuidResponse, error)
 	mustEmbedUnimplementedDBMSServer()
 }
 
@@ -887,6 +899,9 @@ func (UnimplementedDBMSServer) DeletePermissionGroup(context.Context, *request.D
 }
 func (UnimplementedDBMSServer) UpdatePermissionGroup(context.Context, *request.UpdatePermissionGroupRequest) (*response.UpdatePermissionGroupResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method UpdatePermissionGroup not implemented")
+}
+func (UnimplementedDBMSServer) GetProjectSwcNamesByProjectUuid(context.Context, *request.GetProjectSwcNamesByProjectUuidRequest) (*response.GetProjectSwcNamesByProjectUuidResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetProjectSwcNamesByProjectUuid not implemented")
 }
 func (UnimplementedDBMSServer) mustEmbedUnimplementedDBMSServer() {}
 
@@ -1909,6 +1924,24 @@ func _DBMS_UpdatePermissionGroup_Handler(srv interface{}, ctx context.Context, d
 	return interceptor(ctx, in, info, handler)
 }
 
+func _DBMS_GetProjectSwcNamesByProjectUuid_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(request.GetProjectSwcNamesByProjectUuidRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(DBMSServer).GetProjectSwcNamesByProjectUuid(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: DBMS_GetProjectSwcNamesByProjectUuid_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(DBMSServer).GetProjectSwcNamesByProjectUuid(ctx, req.(*request.GetProjectSwcNamesByProjectUuidRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // DBMS_ServiceDesc is the grpc.ServiceDesc for DBMS service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -2139,6 +2172,10 @@ var DBMS_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "UpdatePermissionGroup",
 			Handler:    _DBMS_UpdatePermissionGroup_Handler,
+		},
+		{
+			MethodName: "GetProjectSwcNamesByProjectUuid",
+			Handler:    _DBMS_GetProjectSwcNamesByProjectUuid_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

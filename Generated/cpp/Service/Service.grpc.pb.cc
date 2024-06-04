@@ -78,6 +78,7 @@ static const char* DBMS_method_names[] = {
   "/proto.DBMS/CreatePermissionGroup",
   "/proto.DBMS/DeletePermissionGroup",
   "/proto.DBMS/UpdatePermissionGroup",
+  "/proto.DBMS/GetProjectSwcNamesByProjectUuid",
 };
 
 std::unique_ptr< DBMS::Stub> DBMS::NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options) {
@@ -143,6 +144,7 @@ DBMS::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, cons
   , rpcmethod_CreatePermissionGroup_(DBMS_method_names[53], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   , rpcmethod_DeletePermissionGroup_(DBMS_method_names[54], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   , rpcmethod_UpdatePermissionGroup_(DBMS_method_names[55], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_GetProjectSwcNamesByProjectUuid_(DBMS_method_names[56], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   {}
 
 ::grpc::Status DBMS::Stub::CreateUser(::grpc::ClientContext* context, const ::proto::CreateUserRequest& request, ::proto::CreateUserResponse* response) {
@@ -1433,6 +1435,29 @@ void DBMS::Stub::async::UpdatePermissionGroup(::grpc::ClientContext* context, co
   return result;
 }
 
+::grpc::Status DBMS::Stub::GetProjectSwcNamesByProjectUuid(::grpc::ClientContext* context, const ::proto::GetProjectSwcNamesByProjectUuidRequest& request, ::proto::GetProjectSwcNamesByProjectUuidResponse* response) {
+  return ::grpc::internal::BlockingUnaryCall< ::proto::GetProjectSwcNamesByProjectUuidRequest, ::proto::GetProjectSwcNamesByProjectUuidResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_GetProjectSwcNamesByProjectUuid_, context, request, response);
+}
+
+void DBMS::Stub::async::GetProjectSwcNamesByProjectUuid(::grpc::ClientContext* context, const ::proto::GetProjectSwcNamesByProjectUuidRequest* request, ::proto::GetProjectSwcNamesByProjectUuidResponse* response, std::function<void(::grpc::Status)> f) {
+  ::grpc::internal::CallbackUnaryCall< ::proto::GetProjectSwcNamesByProjectUuidRequest, ::proto::GetProjectSwcNamesByProjectUuidResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetProjectSwcNamesByProjectUuid_, context, request, response, std::move(f));
+}
+
+void DBMS::Stub::async::GetProjectSwcNamesByProjectUuid(::grpc::ClientContext* context, const ::proto::GetProjectSwcNamesByProjectUuidRequest* request, ::proto::GetProjectSwcNamesByProjectUuidResponse* response, ::grpc::ClientUnaryReactor* reactor) {
+  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetProjectSwcNamesByProjectUuid_, context, request, response, reactor);
+}
+
+::grpc::ClientAsyncResponseReader< ::proto::GetProjectSwcNamesByProjectUuidResponse>* DBMS::Stub::PrepareAsyncGetProjectSwcNamesByProjectUuidRaw(::grpc::ClientContext* context, const ::proto::GetProjectSwcNamesByProjectUuidRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::proto::GetProjectSwcNamesByProjectUuidResponse, ::proto::GetProjectSwcNamesByProjectUuidRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_GetProjectSwcNamesByProjectUuid_, context, request);
+}
+
+::grpc::ClientAsyncResponseReader< ::proto::GetProjectSwcNamesByProjectUuidResponse>* DBMS::Stub::AsyncGetProjectSwcNamesByProjectUuidRaw(::grpc::ClientContext* context, const ::proto::GetProjectSwcNamesByProjectUuidRequest& request, ::grpc::CompletionQueue* cq) {
+  auto* result =
+    this->PrepareAsyncGetProjectSwcNamesByProjectUuidRaw(context, request, cq);
+  result->StartCall();
+  return result;
+}
+
 DBMS::Service::Service() {
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       DBMS_method_names[0],
@@ -1994,6 +2019,16 @@ DBMS::Service::Service() {
              ::proto::UpdatePermissionGroupResponse* resp) {
                return service->UpdatePermissionGroup(ctx, req, resp);
              }, this)));
+  AddMethod(new ::grpc::internal::RpcServiceMethod(
+      DBMS_method_names[56],
+      ::grpc::internal::RpcMethod::NORMAL_RPC,
+      new ::grpc::internal::RpcMethodHandler< DBMS::Service, ::proto::GetProjectSwcNamesByProjectUuidRequest, ::proto::GetProjectSwcNamesByProjectUuidResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
+          [](DBMS::Service* service,
+             ::grpc::ServerContext* ctx,
+             const ::proto::GetProjectSwcNamesByProjectUuidRequest* req,
+             ::proto::GetProjectSwcNamesByProjectUuidResponse* resp) {
+               return service->GetProjectSwcNamesByProjectUuid(ctx, req, resp);
+             }, this)));
 }
 
 DBMS::Service::~Service() {
@@ -2385,6 +2420,13 @@ DBMS::Service::~Service() {
 }
 
 ::grpc::Status DBMS::Service::UpdatePermissionGroup(::grpc::ServerContext* context, const ::proto::UpdatePermissionGroupRequest* request, ::proto::UpdatePermissionGroupResponse* response) {
+  (void) context;
+  (void) request;
+  (void) response;
+  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+}
+
+::grpc::Status DBMS::Service::GetProjectSwcNamesByProjectUuid(::grpc::ServerContext* context, const ::proto::GetProjectSwcNamesByProjectUuidRequest* request, ::proto::GetProjectSwcNamesByProjectUuidResponse* response) {
   (void) context;
   (void) request;
   (void) response;

@@ -143,6 +143,9 @@ extern GetPermissionGroupByUuidRequestDefaultTypeInternal _GetPermissionGroupByU
 class GetProjectRequest;
 struct GetProjectRequestDefaultTypeInternal;
 extern GetProjectRequestDefaultTypeInternal _GetProjectRequest_default_instance_;
+class GetProjectSwcNamesByProjectUuidRequest;
+struct GetProjectSwcNamesByProjectUuidRequestDefaultTypeInternal;
+extern GetProjectSwcNamesByProjectUuidRequestDefaultTypeInternal _GetProjectSwcNamesByProjectUuidRequest_default_instance_;
 class GetSnapshotRequest;
 struct GetSnapshotRequestDefaultTypeInternal;
 extern GetSnapshotRequestDefaultTypeInternal _GetSnapshotRequest_default_instance_;
@@ -249,6 +252,7 @@ template<> ::proto::GetIncrementOperationRequest* Arena::CreateMaybeMessage<::pr
 template<> ::proto::GetPermissionGroupByNameRequest* Arena::CreateMaybeMessage<::proto::GetPermissionGroupByNameRequest>(Arena*);
 template<> ::proto::GetPermissionGroupByUuidRequest* Arena::CreateMaybeMessage<::proto::GetPermissionGroupByUuidRequest>(Arena*);
 template<> ::proto::GetProjectRequest* Arena::CreateMaybeMessage<::proto::GetProjectRequest>(Arena*);
+template<> ::proto::GetProjectSwcNamesByProjectUuidRequest* Arena::CreateMaybeMessage<::proto::GetProjectSwcNamesByProjectUuidRequest>(Arena*);
 template<> ::proto::GetSnapshotRequest* Arena::CreateMaybeMessage<::proto::GetSnapshotRequest>(Arena*);
 template<> ::proto::GetSwcAttachmentAnoRequest* Arena::CreateMaybeMessage<::proto::GetSwcAttachmentAnoRequest>(Arena*);
 template<> ::proto::GetSwcAttachmentApoRequest* Arena::CreateMaybeMessage<::proto::GetSwcAttachmentApoRequest>(Arena*);
@@ -11514,6 +11518,199 @@ class UpdatePermissionGroupRequest final :
     ::proto::RequestMetaInfoV1* metainfo_;
     ::proto::UserVerifyInfoV1* userverifyinfo_;
     ::proto::PermissionGroupAceV1* ace_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_Message_2fRequest_2eproto;
+};
+// -------------------------------------------------------------------
+
+class GetProjectSwcNamesByProjectUuidRequest final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:proto.GetProjectSwcNamesByProjectUuidRequest) */ {
+ public:
+  inline GetProjectSwcNamesByProjectUuidRequest() : GetProjectSwcNamesByProjectUuidRequest(nullptr) {}
+  ~GetProjectSwcNamesByProjectUuidRequest() override;
+  explicit PROTOBUF_CONSTEXPR GetProjectSwcNamesByProjectUuidRequest(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  GetProjectSwcNamesByProjectUuidRequest(const GetProjectSwcNamesByProjectUuidRequest& from);
+  GetProjectSwcNamesByProjectUuidRequest(GetProjectSwcNamesByProjectUuidRequest&& from) noexcept
+    : GetProjectSwcNamesByProjectUuidRequest() {
+    *this = ::std::move(from);
+  }
+
+  inline GetProjectSwcNamesByProjectUuidRequest& operator=(const GetProjectSwcNamesByProjectUuidRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline GetProjectSwcNamesByProjectUuidRequest& operator=(GetProjectSwcNamesByProjectUuidRequest&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const GetProjectSwcNamesByProjectUuidRequest& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const GetProjectSwcNamesByProjectUuidRequest* internal_default_instance() {
+    return reinterpret_cast<const GetProjectSwcNamesByProjectUuidRequest*>(
+               &_GetProjectSwcNamesByProjectUuidRequest_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    56;
+
+  friend void swap(GetProjectSwcNamesByProjectUuidRequest& a, GetProjectSwcNamesByProjectUuidRequest& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(GetProjectSwcNamesByProjectUuidRequest* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() != nullptr &&
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(GetProjectSwcNamesByProjectUuidRequest* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  GetProjectSwcNamesByProjectUuidRequest* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<GetProjectSwcNamesByProjectUuidRequest>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const GetProjectSwcNamesByProjectUuidRequest& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const GetProjectSwcNamesByProjectUuidRequest& from) {
+    GetProjectSwcNamesByProjectUuidRequest::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
+
+  private:
+  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(GetProjectSwcNamesByProjectUuidRequest* other);
+
+  private:
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "proto.GetProjectSwcNamesByProjectUuidRequest";
+  }
+  protected:
+  explicit GetProjectSwcNamesByProjectUuidRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kProjectUuidFieldNumber = 3,
+    kMetaInfoFieldNumber = 1,
+    kUserVerifyInfoFieldNumber = 2,
+  };
+  // string ProjectUuid = 3;
+  void clear_projectuuid();
+  const std::string& projectuuid() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_projectuuid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_projectuuid();
+  PROTOBUF_NODISCARD std::string* release_projectuuid();
+  void set_allocated_projectuuid(std::string* projectuuid);
+  private:
+  const std::string& _internal_projectuuid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_projectuuid(const std::string& value);
+  std::string* _internal_mutable_projectuuid();
+  public:
+
+  // .proto.RequestMetaInfoV1 metaInfo = 1;
+  bool has_metainfo() const;
+  private:
+  bool _internal_has_metainfo() const;
+  public:
+  void clear_metainfo();
+  const ::proto::RequestMetaInfoV1& metainfo() const;
+  PROTOBUF_NODISCARD ::proto::RequestMetaInfoV1* release_metainfo();
+  ::proto::RequestMetaInfoV1* mutable_metainfo();
+  void set_allocated_metainfo(::proto::RequestMetaInfoV1* metainfo);
+  private:
+  const ::proto::RequestMetaInfoV1& _internal_metainfo() const;
+  ::proto::RequestMetaInfoV1* _internal_mutable_metainfo();
+  public:
+  void unsafe_arena_set_allocated_metainfo(
+      ::proto::RequestMetaInfoV1* metainfo);
+  ::proto::RequestMetaInfoV1* unsafe_arena_release_metainfo();
+
+  // .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
+  bool has_userverifyinfo() const;
+  private:
+  bool _internal_has_userverifyinfo() const;
+  public:
+  void clear_userverifyinfo();
+  const ::proto::UserVerifyInfoV1& userverifyinfo() const;
+  PROTOBUF_NODISCARD ::proto::UserVerifyInfoV1* release_userverifyinfo();
+  ::proto::UserVerifyInfoV1* mutable_userverifyinfo();
+  void set_allocated_userverifyinfo(::proto::UserVerifyInfoV1* userverifyinfo);
+  private:
+  const ::proto::UserVerifyInfoV1& _internal_userverifyinfo() const;
+  ::proto::UserVerifyInfoV1* _internal_mutable_userverifyinfo();
+  public:
+  void unsafe_arena_set_allocated_userverifyinfo(
+      ::proto::UserVerifyInfoV1* userverifyinfo);
+  ::proto::UserVerifyInfoV1* unsafe_arena_release_userverifyinfo();
+
+  // @@protoc_insertion_point(class_scope:proto.GetProjectSwcNamesByProjectUuidRequest)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr projectuuid_;
+    ::proto::RequestMetaInfoV1* metainfo_;
+    ::proto::UserVerifyInfoV1* userverifyinfo_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -25670,9 +25867,235 @@ inline void UpdatePermissionGroupRequest::set_allocated_ace(::proto::PermissionG
   // @@protoc_insertion_point(field_set_allocated:proto.UpdatePermissionGroupRequest.Ace)
 }
 
+// -------------------------------------------------------------------
+
+// GetProjectSwcNamesByProjectUuidRequest
+
+// .proto.RequestMetaInfoV1 metaInfo = 1;
+inline bool GetProjectSwcNamesByProjectUuidRequest::_internal_has_metainfo() const {
+  return this != internal_default_instance() && _impl_.metainfo_ != nullptr;
+}
+inline bool GetProjectSwcNamesByProjectUuidRequest::has_metainfo() const {
+  return _internal_has_metainfo();
+}
+inline const ::proto::RequestMetaInfoV1& GetProjectSwcNamesByProjectUuidRequest::_internal_metainfo() const {
+  const ::proto::RequestMetaInfoV1* p = _impl_.metainfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::RequestMetaInfoV1&>(
+      ::proto::_RequestMetaInfoV1_default_instance_);
+}
+inline const ::proto::RequestMetaInfoV1& GetProjectSwcNamesByProjectUuidRequest::metainfo() const {
+  // @@protoc_insertion_point(field_get:proto.GetProjectSwcNamesByProjectUuidRequest.metaInfo)
+  return _internal_metainfo();
+}
+inline void GetProjectSwcNamesByProjectUuidRequest::unsafe_arena_set_allocated_metainfo(
+    ::proto::RequestMetaInfoV1* metainfo) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.metainfo_);
+  }
+  _impl_.metainfo_ = metainfo;
+  if (metainfo) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.GetProjectSwcNamesByProjectUuidRequest.metaInfo)
+}
+inline ::proto::RequestMetaInfoV1* GetProjectSwcNamesByProjectUuidRequest::release_metainfo() {
+  
+  ::proto::RequestMetaInfoV1* temp = _impl_.metainfo_;
+  _impl_.metainfo_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::proto::RequestMetaInfoV1* GetProjectSwcNamesByProjectUuidRequest::unsafe_arena_release_metainfo() {
+  // @@protoc_insertion_point(field_release:proto.GetProjectSwcNamesByProjectUuidRequest.metaInfo)
+  
+  ::proto::RequestMetaInfoV1* temp = _impl_.metainfo_;
+  _impl_.metainfo_ = nullptr;
+  return temp;
+}
+inline ::proto::RequestMetaInfoV1* GetProjectSwcNamesByProjectUuidRequest::_internal_mutable_metainfo() {
+  
+  if (_impl_.metainfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::RequestMetaInfoV1>(GetArenaForAllocation());
+    _impl_.metainfo_ = p;
+  }
+  return _impl_.metainfo_;
+}
+inline ::proto::RequestMetaInfoV1* GetProjectSwcNamesByProjectUuidRequest::mutable_metainfo() {
+  ::proto::RequestMetaInfoV1* _msg = _internal_mutable_metainfo();
+  // @@protoc_insertion_point(field_mutable:proto.GetProjectSwcNamesByProjectUuidRequest.metaInfo)
+  return _msg;
+}
+inline void GetProjectSwcNamesByProjectUuidRequest::set_allocated_metainfo(::proto::RequestMetaInfoV1* metainfo) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.metainfo_);
+  }
+  if (metainfo) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(metainfo));
+    if (message_arena != submessage_arena) {
+      metainfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, metainfo, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  _impl_.metainfo_ = metainfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.GetProjectSwcNamesByProjectUuidRequest.metaInfo)
+}
+
+// .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
+inline bool GetProjectSwcNamesByProjectUuidRequest::_internal_has_userverifyinfo() const {
+  return this != internal_default_instance() && _impl_.userverifyinfo_ != nullptr;
+}
+inline bool GetProjectSwcNamesByProjectUuidRequest::has_userverifyinfo() const {
+  return _internal_has_userverifyinfo();
+}
+inline const ::proto::UserVerifyInfoV1& GetProjectSwcNamesByProjectUuidRequest::_internal_userverifyinfo() const {
+  const ::proto::UserVerifyInfoV1* p = _impl_.userverifyinfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::UserVerifyInfoV1&>(
+      ::proto::_UserVerifyInfoV1_default_instance_);
+}
+inline const ::proto::UserVerifyInfoV1& GetProjectSwcNamesByProjectUuidRequest::userverifyinfo() const {
+  // @@protoc_insertion_point(field_get:proto.GetProjectSwcNamesByProjectUuidRequest.UserVerifyInfo)
+  return _internal_userverifyinfo();
+}
+inline void GetProjectSwcNamesByProjectUuidRequest::unsafe_arena_set_allocated_userverifyinfo(
+    ::proto::UserVerifyInfoV1* userverifyinfo) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userverifyinfo_);
+  }
+  _impl_.userverifyinfo_ = userverifyinfo;
+  if (userverifyinfo) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.GetProjectSwcNamesByProjectUuidRequest.UserVerifyInfo)
+}
+inline ::proto::UserVerifyInfoV1* GetProjectSwcNamesByProjectUuidRequest::release_userverifyinfo() {
+  
+  ::proto::UserVerifyInfoV1* temp = _impl_.userverifyinfo_;
+  _impl_.userverifyinfo_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::proto::UserVerifyInfoV1* GetProjectSwcNamesByProjectUuidRequest::unsafe_arena_release_userverifyinfo() {
+  // @@protoc_insertion_point(field_release:proto.GetProjectSwcNamesByProjectUuidRequest.UserVerifyInfo)
+  
+  ::proto::UserVerifyInfoV1* temp = _impl_.userverifyinfo_;
+  _impl_.userverifyinfo_ = nullptr;
+  return temp;
+}
+inline ::proto::UserVerifyInfoV1* GetProjectSwcNamesByProjectUuidRequest::_internal_mutable_userverifyinfo() {
+  
+  if (_impl_.userverifyinfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::UserVerifyInfoV1>(GetArenaForAllocation());
+    _impl_.userverifyinfo_ = p;
+  }
+  return _impl_.userverifyinfo_;
+}
+inline ::proto::UserVerifyInfoV1* GetProjectSwcNamesByProjectUuidRequest::mutable_userverifyinfo() {
+  ::proto::UserVerifyInfoV1* _msg = _internal_mutable_userverifyinfo();
+  // @@protoc_insertion_point(field_mutable:proto.GetProjectSwcNamesByProjectUuidRequest.UserVerifyInfo)
+  return _msg;
+}
+inline void GetProjectSwcNamesByProjectUuidRequest::set_allocated_userverifyinfo(::proto::UserVerifyInfoV1* userverifyinfo) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.userverifyinfo_);
+  }
+  if (userverifyinfo) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(userverifyinfo));
+    if (message_arena != submessage_arena) {
+      userverifyinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, userverifyinfo, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  _impl_.userverifyinfo_ = userverifyinfo;
+  // @@protoc_insertion_point(field_set_allocated:proto.GetProjectSwcNamesByProjectUuidRequest.UserVerifyInfo)
+}
+
+// string ProjectUuid = 3;
+inline void GetProjectSwcNamesByProjectUuidRequest::clear_projectuuid() {
+  _impl_.projectuuid_.ClearToEmpty();
+}
+inline const std::string& GetProjectSwcNamesByProjectUuidRequest::projectuuid() const {
+  // @@protoc_insertion_point(field_get:proto.GetProjectSwcNamesByProjectUuidRequest.ProjectUuid)
+  return _internal_projectuuid();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void GetProjectSwcNamesByProjectUuidRequest::set_projectuuid(ArgT0&& arg0, ArgT... args) {
+ 
+ _impl_.projectuuid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:proto.GetProjectSwcNamesByProjectUuidRequest.ProjectUuid)
+}
+inline std::string* GetProjectSwcNamesByProjectUuidRequest::mutable_projectuuid() {
+  std::string* _s = _internal_mutable_projectuuid();
+  // @@protoc_insertion_point(field_mutable:proto.GetProjectSwcNamesByProjectUuidRequest.ProjectUuid)
+  return _s;
+}
+inline const std::string& GetProjectSwcNamesByProjectUuidRequest::_internal_projectuuid() const {
+  return _impl_.projectuuid_.Get();
+}
+inline void GetProjectSwcNamesByProjectUuidRequest::_internal_set_projectuuid(const std::string& value) {
+  
+  _impl_.projectuuid_.Set(value, GetArenaForAllocation());
+}
+inline std::string* GetProjectSwcNamesByProjectUuidRequest::_internal_mutable_projectuuid() {
+  
+  return _impl_.projectuuid_.Mutable(GetArenaForAllocation());
+}
+inline std::string* GetProjectSwcNamesByProjectUuidRequest::release_projectuuid() {
+  // @@protoc_insertion_point(field_release:proto.GetProjectSwcNamesByProjectUuidRequest.ProjectUuid)
+  return _impl_.projectuuid_.Release();
+}
+inline void GetProjectSwcNamesByProjectUuidRequest::set_allocated_projectuuid(std::string* projectuuid) {
+  if (projectuuid != nullptr) {
+    
+  } else {
+    
+  }
+  _impl_.projectuuid_.SetAllocated(projectuuid, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.projectuuid_.IsDefault()) {
+    _impl_.projectuuid_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:proto.GetProjectSwcNamesByProjectUuidRequest.ProjectUuid)
+}
+
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------

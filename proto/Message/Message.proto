@@ -262,3 +262,8 @@ message SwcAttachmentApoV1{
     int32 ColorG = 15;
     int32 ColorB = 16;
 }
+
+message SwcUuidName{
+    string SwcUuid = 1;
+    string SwcName = 2;
+}

@@ -273,3 +273,8 @@ message DeletePermissionGroupResponse{
 message UpdatePermissionGroupResponse{
     ResponseMetaInfoV1 metaInfo = 1;
 }
+
+message GetProjectSwcNamesByProjectUuidResponse{
+    ResponseMetaInfoV1 metaInfo = 1;
+    repeated SwcUuidName swcUuidName = 2;
+}

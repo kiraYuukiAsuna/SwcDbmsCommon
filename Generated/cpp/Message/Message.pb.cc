@@ -508,8 +508,22 @@ struct SwcAttachmentApoV1DefaultTypeInternal {
   };
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SwcAttachmentApoV1DefaultTypeInternal _SwcAttachmentApoV1_default_instance_;
+PROTOBUF_CONSTEXPR SwcUuidName::SwcUuidName(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.swcuuid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.swcname_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct SwcUuidNameDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR SwcUuidNameDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~SwcUuidNameDefaultTypeInternal() {}
+  union {
+    SwcUuidName _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SwcUuidNameDefaultTypeInternal _SwcUuidName_default_instance_;
 }  // namespace proto
-static ::_pb::Metadata file_level_metadata_Message_2fMessage_2eproto[27];
+static ::_pb::Metadata file_level_metadata_Message_2fMessage_2eproto[28];
 static const ::_pb::EnumDescriptor* file_level_enum_descriptors_Message_2fMessage_2eproto[1];
 static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_Message_2fMessage_2eproto = nullptr;
 
@@ -839,6 +853,14 @@ const uint32_t TableStruct_Message_2fMessage_2eproto::offsets[] PROTOBUF_SECTION
   PROTOBUF_FIELD_OFFSET(::proto::SwcAttachmentApoV1, _impl_.colorr_),
   PROTOBUF_FIELD_OFFSET(::proto::SwcAttachmentApoV1, _impl_.colorg_),
   PROTOBUF_FIELD_OFFSET(::proto::SwcAttachmentApoV1, _impl_.colorb_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::proto::SwcUuidName, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::proto::SwcUuidName, _impl_.swcuuid_),
+  PROTOBUF_FIELD_OFFSET(::proto::SwcUuidName, _impl_.swcname_),
 };
 static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, -1, sizeof(::proto::MetaInfoBase)},
@@ -868,6 +890,7 @@ static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protode
   { 285, -1, -1, sizeof(::proto::ResponseMetaInfoV1)},
   { 294, -1, -1, sizeof(::proto::SwcAttachmentAnoV1)},
   { 303, -1, -1, sizeof(::proto::SwcAttachmentApoV1)},
+  { 325, -1, -1, sizeof(::proto::SwcUuidName)},
 };
 
 static const ::_pb::Message* const file_default_instances[] = {
@@ -898,6 +921,7 @@ static const ::_pb::Message* const file_default_instances[] = {
   &::proto::_ResponseMetaInfoV1_default_instance_._instance,
   &::proto::_SwcAttachmentAnoV1_default_instance_._instance,
   &::proto::_SwcAttachmentApoV1_default_instance_._instance,
+  &::proto::_SwcUuidName_default_instance_._instance,
 };
 
 const char descriptor_table_protodef_Message_2fMessage_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
@@ -1042,19 +1066,20 @@ const char descriptor_table_protodef_Message_2fMessage_2eproto[] PROTOBUF_SECTIO
   "\t\n\001Y\030\010 \001(\002\022\016\n\006Pixmax\030\t \001(\002\022\021\n\tIntensity\030"
   "\n \001(\002\022\014\n\004Sdev\030\013 \001(\002\022\017\n\007Volsize\030\014 \001(\002\022\014\n\004"
   "Mass\030\r \001(\002\022\016\n\006ColorR\030\016 \001(\005\022\016\n\006ColorG\030\017 \001"
-  "(\005\022\016\n\006ColorB\030\020 \001(\005*G\n\024IncrementOperation"
-  "V1\022\013\n\007Unknown\020\000\022\n\n\006Create\020\001\022\n\n\006Delete\020\002\022"
-  "\n\n\006Update\020\003B/Z-DBMS/SwcDbmsCommon/Genera"
-  "ted/go/proto/messageP\000b\006proto3"
+  "(\005\022\016\n\006ColorB\030\020 \001(\005\"/\n\013SwcUuidName\022\017\n\007Swc"
+  "Uuid\030\001 \001(\t\022\017\n\007SwcName\030\002 \001(\t*G\n\024Increment"
+  "OperationV1\022\013\n\007Unknown\020\000\022\n\n\006Create\020\001\022\n\n\006"
+  "Delete\020\002\022\n\n\006Update\020\003B/Z-DBMS/SwcDbmsComm"
+  "on/Generated/go/proto/messageP\000b\006proto3"
   ;
 static const ::_pbi::DescriptorTable* const descriptor_table_Message_2fMessage_2eproto_deps[1] = {
   &::descriptor_table_google_2fprotobuf_2ftimestamp_2eproto,
 };
 static ::_pbi::once_flag descriptor_table_Message_2fMessage_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_Message_2fMessage_2eproto = {
-    false, false, 5790, descriptor_table_protodef_Message_2fMessage_2eproto,
+    false, false, 5839, descriptor_table_protodef_Message_2fMessage_2eproto,
     "Message/Message.proto",
-    &descriptor_table_Message_2fMessage_2eproto_once, descriptor_table_Message_2fMessage_2eproto_deps, 1, 27,
+    &descriptor_table_Message_2fMessage_2eproto_once, descriptor_table_Message_2fMessage_2eproto_deps, 1, 28,
     schemas, file_default_instances, TableStruct_Message_2fMessage_2eproto::offsets,
     file_level_metadata_Message_2fMessage_2eproto, file_level_enum_descriptors_Message_2fMessage_2eproto,
     file_level_service_descriptors_Message_2fMessage_2eproto,
@@ -11362,6 +11387,259 @@ void SwcAttachmentApoV1::InternalSwap(SwcAttachmentApoV1* other) {
       file_level_metadata_Message_2fMessage_2eproto[26]);
 }
 
+// ===================================================================
+
+class SwcUuidName::_Internal {
+ public:
+};
+
+SwcUuidName::SwcUuidName(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:proto.SwcUuidName)
+}
+SwcUuidName::SwcUuidName(const SwcUuidName& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  SwcUuidName* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.swcuuid_){}
+    , decltype(_impl_.swcname_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _impl_.swcuuid_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.swcuuid_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (!from._internal_swcuuid().empty()) {
+    _this->_impl_.swcuuid_.Set(from._internal_swcuuid(), 
+      _this->GetArenaForAllocation());
+  }
+  _impl_.swcname_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.swcname_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (!from._internal_swcname().empty()) {
+    _this->_impl_.swcname_.Set(from._internal_swcname(), 
+      _this->GetArenaForAllocation());
+  }
+  // @@protoc_insertion_point(copy_constructor:proto.SwcUuidName)
+}
+
+inline void SwcUuidName::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.swcuuid_){}
+    , decltype(_impl_.swcname_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+  _impl_.swcuuid_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.swcuuid_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  _impl_.swcname_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.swcname_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+}
+
+SwcUuidName::~SwcUuidName() {
+  // @@protoc_insertion_point(destructor:proto.SwcUuidName)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void SwcUuidName::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.swcuuid_.Destroy();
+  _impl_.swcname_.Destroy();
+}
+
+void SwcUuidName::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void SwcUuidName::Clear() {
+// @@protoc_insertion_point(message_clear_start:proto.SwcUuidName)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _impl_.swcuuid_.ClearToEmpty();
+  _impl_.swcname_.ClearToEmpty();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* SwcUuidName::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // string SwcUuid = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          auto str = _internal_mutable_swcuuid();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "proto.SwcUuidName.SwcUuid"));
+        } else
+          goto handle_unusual;
+        continue;
+      // string SwcName = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
+          auto str = _internal_mutable_swcname();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "proto.SwcUuidName.SwcName"));
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* SwcUuidName::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:proto.SwcUuidName)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // string SwcUuid = 1;
+  if (!this->_internal_swcuuid().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_swcuuid().data(), static_cast<int>(this->_internal_swcuuid().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "proto.SwcUuidName.SwcUuid");
+    target = stream->WriteStringMaybeAliased(
+        1, this->_internal_swcuuid(), target);
+  }
+
+  // string SwcName = 2;
+  if (!this->_internal_swcname().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_swcname().data(), static_cast<int>(this->_internal_swcname().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "proto.SwcUuidName.SwcName");
+    target = stream->WriteStringMaybeAliased(
+        2, this->_internal_swcname(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:proto.SwcUuidName)
+  return target;
+}
+
+size_t SwcUuidName::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:proto.SwcUuidName)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // string SwcUuid = 1;
+  if (!this->_internal_swcuuid().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_swcuuid());
+  }
+
+  // string SwcName = 2;
+  if (!this->_internal_swcname().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_swcname());
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData SwcUuidName::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    SwcUuidName::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SwcUuidName::GetClassData() const { return &_class_data_; }
+
+
+void SwcUuidName::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<SwcUuidName*>(&to_msg);
+  auto& from = static_cast<const SwcUuidName&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:proto.SwcUuidName)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (!from._internal_swcuuid().empty()) {
+    _this->_internal_set_swcuuid(from._internal_swcuuid());
+  }
+  if (!from._internal_swcname().empty()) {
+    _this->_internal_set_swcname(from._internal_swcname());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void SwcUuidName::CopyFrom(const SwcUuidName& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:proto.SwcUuidName)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool SwcUuidName::IsInitialized() const {
+  return true;
+}
+
+void SwcUuidName::InternalSwap(SwcUuidName* other) {
+  using std::swap;
+  auto* lhs_arena = GetArenaForAllocation();
+  auto* rhs_arena = other->GetArenaForAllocation();
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.swcuuid_, lhs_arena,
+      &other->_impl_.swcuuid_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.swcname_, lhs_arena,
+      &other->_impl_.swcname_, rhs_arena
+  );
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata SwcUuidName::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_Message_2fMessage_2eproto_getter, &descriptor_table_Message_2fMessage_2eproto_once,
+      file_level_metadata_Message_2fMessage_2eproto[27]);
+}
+
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace proto
 PROTOBUF_NAMESPACE_OPEN
@@ -11472,6 +11750,10 @@ Arena::CreateMaybeMessage< ::proto::SwcAttachmentAnoV1 >(Arena* arena) {
 template<> PROTOBUF_NOINLINE ::proto::SwcAttachmentApoV1*
 Arena::CreateMaybeMessage< ::proto::SwcAttachmentApoV1 >(Arena* arena) {
   return Arena::CreateMessageInternal< ::proto::SwcAttachmentApoV1 >(arena);
+}
+template<> PROTOBUF_NOINLINE ::proto::SwcUuidName*
+Arena::CreateMaybeMessage< ::proto::SwcUuidName >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::proto::SwcUuidName >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE
 

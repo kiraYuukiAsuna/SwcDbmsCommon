@@ -3002,6 +3002,61 @@ func (x *UpdatePermissionGroupResponse) GetMetaInfo() *message.ResponseMetaInfoV
 	return nil
 }
 
+type GetProjectSwcNamesByProjectUuidResponse struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	MetaInfo    *message.ResponseMetaInfoV1 `protobuf:"bytes,1,opt,name=metaInfo,proto3" json:"metaInfo,omitempty"`
+	SwcUuidName []*message.SwcUuidName      `protobuf:"bytes,2,rep,name=swcUuidName,proto3" json:"swcUuidName,omitempty"`
+}
+
+func (x *GetProjectSwcNamesByProjectUuidResponse) Reset() {
+	*x = GetProjectSwcNamesByProjectUuidResponse{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_Message_Response_proto_msgTypes[56]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *GetProjectSwcNamesByProjectUuidResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*GetProjectSwcNamesByProjectUuidResponse) ProtoMessage() {}
+
+func (x *GetProjectSwcNamesByProjectUuidResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_Message_Response_proto_msgTypes[56]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use GetProjectSwcNamesByProjectUuidResponse.ProtoReflect.Descriptor instead.
+func (*GetProjectSwcNamesByProjectUuidResponse) Descriptor() ([]byte, []int) {
+	return file_Message_Response_proto_rawDescGZIP(), []int{56}
+}
+
+func (x *GetProjectSwcNamesByProjectUuidResponse) GetMetaInfo() *message.ResponseMetaInfoV1 {
+	if x != nil {
+		return x.MetaInfo
+	}
+	return nil
+}
+
+func (x *GetProjectSwcNamesByProjectUuidResponse) GetSwcUuidName() []*message.SwcUuidName {
+	if x != nil {
+		return x.SwcUuidName
+	}
+	return nil
+}
+
 var File_Message_Response_proto protoreflect.FileDescriptor
 
 var file_Message_Response_proto_rawDesc = []byte{
@@ -3475,11 +3530,20 @@ var file_Message_Response_proto_rawDesc = []byte{
 	0x0a, 0x08, 0x6d, 0x65, 0x74, 0x61, 0x49, 0x6e, 0x66, 0x6f, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0b,
 	0x32, 0x19, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73,
 	0x65, 0x4d, 0x65, 0x74, 0x61, 0x49, 0x6e, 0x66, 0x6f, 0x56, 0x31, 0x52, 0x08, 0x6d, 0x65, 0x74,
-	0x61, 0x49, 0x6e, 0x66, 0x6f, 0x42, 0x30, 0x5a, 0x2e, 0x44, 0x42, 0x4d, 0x53, 0x2f, 0x53, 0x77,
-	0x63, 0x44, 0x62, 0x6d, 0x73, 0x43, 0x6f, 0x6d, 0x6d, 0x6f, 0x6e, 0x2f, 0x47, 0x65, 0x6e, 0x65,
-	0x72, 0x61, 0x74, 0x65, 0x64, 0x2f, 0x67, 0x6f, 0x2f, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2f, 0x72,
-	0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x50, 0x00, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f,
-	0x33,
+	0x61, 0x49, 0x6e, 0x66, 0x6f, 0x22, 0x96, 0x01, 0x0a, 0x27, 0x47, 0x65, 0x74, 0x50, 0x72, 0x6f,
+	0x6a, 0x65, 0x63, 0x74, 0x53, 0x77, 0x63, 0x4e, 0x61, 0x6d, 0x65, 0x73, 0x42, 0x79, 0x50, 0x72,
+	0x6f, 0x6a, 0x65, 0x63, 0x74, 0x55, 0x75, 0x69, 0x64, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73,
+	0x65, 0x12, 0x35, 0x0a, 0x08, 0x6d, 0x65, 0x74, 0x61, 0x49, 0x6e, 0x66, 0x6f, 0x18, 0x01, 0x20,
+	0x01, 0x28, 0x0b, 0x32, 0x19, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x52, 0x65, 0x73, 0x70,
+	0x6f, 0x6e, 0x73, 0x65, 0x4d, 0x65, 0x74, 0x61, 0x49, 0x6e, 0x66, 0x6f, 0x56, 0x31, 0x52, 0x08,
+	0x6d, 0x65, 0x74, 0x61, 0x49, 0x6e, 0x66, 0x6f, 0x12, 0x34, 0x0a, 0x0b, 0x73, 0x77, 0x63, 0x55,
+	0x75, 0x69, 0x64, 0x4e, 0x61, 0x6d, 0x65, 0x18, 0x02, 0x20, 0x03, 0x28, 0x0b, 0x32, 0x12, 0x2e,
+	0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x53, 0x77, 0x63, 0x55, 0x75, 0x69, 0x64, 0x4e, 0x61, 0x6d,
+	0x65, 0x52, 0x0b, 0x73, 0x77, 0x63, 0x55, 0x75, 0x69, 0x64, 0x4e, 0x61, 0x6d, 0x65, 0x42, 0x30,
+	0x5a, 0x2e, 0x44, 0x42, 0x4d, 0x53, 0x2f, 0x53, 0x77, 0x63, 0x44, 0x62, 0x6d, 0x73, 0x43, 0x6f,
+	0x6d, 0x6d, 0x6f, 0x6e, 0x2f, 0x47, 0x65, 0x6e, 0x65, 0x72, 0x61, 0x74, 0x65, 0x64, 0x2f, 0x67,
+	0x6f, 0x2f, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2f, 0x72, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65,
+	0x50, 0x00, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -3494,7 +3558,7 @@ func file_Message_Response_proto_rawDescGZIP() []byte {
 	return file_Message_Response_proto_rawDescData
 }
 
-var file_Message_Response_proto_msgTypes = make([]protoimpl.MessageInfo, 56)
+var file_Message_Response_proto_msgTypes = make([]protoimpl.MessageInfo, 57)
 var file_Message_Response_proto_goTypes = []interface{}{
 	(*CreateUserResponse)(nil),                       // 0: proto.CreateUserResponse
 	(*DeleteUserResponse)(nil),                       // 1: proto.DeleteUserResponse
@@ -3552,120 +3616,124 @@ var file_Message_Response_proto_goTypes = []interface{}{
 	(*CreatePermissionGroupResponse)(nil),            // 53: proto.CreatePermissionGroupResponse
 	(*DeletePermissionGroupResponse)(nil),            // 54: proto.DeletePermissionGroupResponse
 	(*UpdatePermissionGroupResponse)(nil),            // 55: proto.UpdatePermissionGroupResponse
-	(*message.ResponseMetaInfoV1)(nil),               // 56: proto.ResponseMetaInfoV1
-	(*message.UserMetaInfoV1)(nil),                   // 57: proto.UserMetaInfoV1
-	(*message.UserVerifyInfoV1)(nil),                 // 58: proto.UserVerifyInfoV1
-	(*message.PermissionGroupMetaInfoV1)(nil),        // 59: proto.PermissionGroupMetaInfoV1
-	(*message.ProjectMetaInfoV1)(nil),                // 60: proto.ProjectMetaInfoV1
-	(*message.SwcMetaInfoV1)(nil),                    // 61: proto.SwcMetaInfoV1
-	(*message.SwcSnapshotMetaInfoV1)(nil),            // 62: proto.SwcSnapshotMetaInfoV1
-	(*message.SwcDataV1)(nil),                        // 63: proto.SwcDataV1
-	(*message.SwcIncrementOperationMetaInfoV1)(nil),  // 64: proto.SwcIncrementOperationMetaInfoV1
-	(*message.SwcIncrementOperationListV1)(nil),      // 65: proto.SwcIncrementOperationListV1
-	(*message.DailyStatisticsMetaInfoV1)(nil),        // 66: proto.DailyStatisticsMetaInfoV1
-	(*message.SwcAttachmentAnoV1)(nil),               // 67: proto.SwcAttachmentAnoV1
-	(*message.SwcAttachmentApoV1)(nil),               // 68: proto.SwcAttachmentApoV1
-	(*message.SwcNodeDataV1)(nil),                    // 69: proto.SwcNodeDataV1
+	(*GetProjectSwcNamesByProjectUuidResponse)(nil),  // 56: proto.GetProjectSwcNamesByProjectUuidResponse
+	(*message.ResponseMetaInfoV1)(nil),               // 57: proto.ResponseMetaInfoV1
+	(*message.UserMetaInfoV1)(nil),                   // 58: proto.UserMetaInfoV1
+	(*message.UserVerifyInfoV1)(nil),                 // 59: proto.UserVerifyInfoV1
+	(*message.PermissionGroupMetaInfoV1)(nil),        // 60: proto.PermissionGroupMetaInfoV1
+	(*message.ProjectMetaInfoV1)(nil),                // 61: proto.ProjectMetaInfoV1
+	(*message.SwcMetaInfoV1)(nil),                    // 62: proto.SwcMetaInfoV1
+	(*message.SwcSnapshotMetaInfoV1)(nil),            // 63: proto.SwcSnapshotMetaInfoV1
+	(*message.SwcDataV1)(nil),                        // 64: proto.SwcDataV1
+	(*message.SwcIncrementOperationMetaInfoV1)(nil),  // 65: proto.SwcIncrementOperationMetaInfoV1
+	(*message.SwcIncrementOperationListV1)(nil),      // 66: proto.SwcIncrementOperationListV1
+	(*message.DailyStatisticsMetaInfoV1)(nil),        // 67: proto.DailyStatisticsMetaInfoV1
+	(*message.SwcAttachmentAnoV1)(nil),               // 68: proto.SwcAttachmentAnoV1
+	(*message.SwcAttachmentApoV1)(nil),               // 69: proto.SwcAttachmentApoV1
+	(*message.SwcNodeDataV1)(nil),                    // 70: proto.SwcNodeDataV1
+	(*message.SwcUuidName)(nil),                      // 71: proto.SwcUuidName
 }
 var file_Message_Response_proto_depIdxs = []int32{
-	56, // 0: proto.CreateUserResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
-	57, // 1: proto.CreateUserResponse.UserInfo:type_name -> proto.UserMetaInfoV1
-	56, // 2: proto.DeleteUserResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
-	56, // 3: proto.UpdateUserResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
-	57, // 4: proto.UpdateUserResponse.UserInfo:type_name -> proto.UserMetaInfoV1
-	56, // 5: proto.GetUserByUuidResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
-	57, // 6: proto.GetUserByUuidResponse.UserInfo:type_name -> proto.UserMetaInfoV1
-	56, // 7: proto.GetUserByNameResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
-	57, // 8: proto.GetUserByNameResponse.UserInfo:type_name -> proto.UserMetaInfoV1
-	56, // 9: proto.GetAllUserResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
-	57, // 10: proto.GetAllUserResponse.UserInfo:type_name -> proto.UserMetaInfoV1
-	56, // 11: proto.UserLoginResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
-	57, // 12: proto.UserLoginResponse.UserInfo:type_name -> proto.UserMetaInfoV1
-	58, // 13: proto.UserLoginResponse.UserVerifyInfo:type_name -> proto.UserVerifyInfoV1
-	56, // 14: proto.UserLogoutResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
-	56, // 15: proto.UserOnlineHeartBeatResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
-	58, // 16: proto.UserOnlineHeartBeatResponse.UserVerifyInfo:type_name -> proto.UserVerifyInfoV1
-	56, // 17: proto.GetUserPermissionGroupResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
-	59, // 18: proto.GetUserPermissionGroupResponse.PermissionGroup:type_name -> proto.PermissionGroupMetaInfoV1
-	56, // 19: proto.GetPermissionGroupByUuidResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
-	59, // 20: proto.GetPermissionGroupByUuidResponse.PermissionGroup:type_name -> proto.PermissionGroupMetaInfoV1
-	56, // 21: proto.GetPermissionGroupByNameResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
-	59, // 22: proto.GetPermissionGroupByNameResponse.PermissionGroup:type_name -> proto.PermissionGroupMetaInfoV1
-	56, // 23: proto.GetAllPermissionGroupResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
-	59, // 24: proto.GetAllPermissionGroupResponse.PermissionGroupList:type_name -> proto.PermissionGroupMetaInfoV1
-	56, // 25: proto.ChangeUserPermissionGroupResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
-	56, // 26: proto.CreateProjectResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
-	60, // 27: proto.CreateProjectResponse.ProjectInfo:type_name -> proto.ProjectMetaInfoV1
-	56, // 28: proto.DeleteProjectResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
-	60, // 29: proto.DeleteProjectResponse.ProjectInfo:type_name -> proto.ProjectMetaInfoV1
-	56, // 30: proto.UpdateProjectResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
-	60, // 31: proto.UpdateProjectResponse.ProjectInfo:type_name -> proto.ProjectMetaInfoV1
-	56, // 32: proto.GetProjectResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
-	60, // 33: proto.GetProjectResponse.ProjectInfo:type_name -> proto.ProjectMetaInfoV1
-	56, // 34: proto.GetAllProjectResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
-	60, // 35: proto.GetAllProjectResponse.ProjectInfo:type_name -> proto.ProjectMetaInfoV1
-	56, // 36: proto.CreateSwcResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
-	61, // 37: proto.CreateSwcResponse.SwcInfo:type_name -> proto.SwcMetaInfoV1
-	56, // 38: proto.DeleteSwcResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
-	61, // 39: proto.DeleteSwcResponse.SwcInfo:type_name -> proto.SwcMetaInfoV1
-	56, // 40: proto.UpdateSwcResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
-	61, // 41: proto.UpdateSwcResponse.SwcInfo:type_name -> proto.SwcMetaInfoV1
-	56, // 42: proto.GetSwcMetaInfoResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
-	61, // 43: proto.GetSwcMetaInfoResponse.SwcInfo:type_name -> proto.SwcMetaInfoV1
-	56, // 44: proto.GetAllSwcMetaInfoResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
-	61, // 45: proto.GetAllSwcMetaInfoResponse.SwcInfo:type_name -> proto.SwcMetaInfoV1
-	56, // 46: proto.CreateSwcSnapshotResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
-	56, // 47: proto.GetAllSnapshotMetaInfoResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
-	62, // 48: proto.GetAllSnapshotMetaInfoResponse.SwcSnapshotList:type_name -> proto.SwcSnapshotMetaInfoV1
-	56, // 49: proto.GetSnapshotResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
-	63, // 50: proto.GetSnapshotResponse.SwcNodeData:type_name -> proto.SwcDataV1
-	56, // 51: proto.GetAllIncrementOperationMetaInfoResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
-	64, // 52: proto.GetAllIncrementOperationMetaInfoResponse.SwcIncrementOperationMetaInfo:type_name -> proto.SwcIncrementOperationMetaInfoV1
-	56, // 53: proto.GetIncrementOperationResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
-	65, // 54: proto.GetIncrementOperationResponse.SwcIncrementOperationList:type_name -> proto.SwcIncrementOperationListV1
-	56, // 55: proto.CreateSwcNodeDataResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
-	56, // 56: proto.DeleteSwcNodeDataResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
-	56, // 57: proto.UpdateSwcNodeDataResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
-	56, // 58: proto.GetSwcNodeDataResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
-	63, // 59: proto.GetSwcNodeDataResponse.SwcNodeData:type_name -> proto.SwcDataV1
-	56, // 60: proto.GetSwcFullNodeDataResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
-	63, // 61: proto.GetSwcFullNodeDataResponse.SwcNodeData:type_name -> proto.SwcDataV1
-	56, // 62: proto.GetSwcNodeDataListByTimeAndUserResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
-	63, // 63: proto.GetSwcNodeDataListByTimeAndUserResponse.SwcNodeData:type_name -> proto.SwcDataV1
-	56, // 64: proto.CreateDailyStatisticsResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
-	66, // 65: proto.CreateDailyStatisticsResponse.DailyStatisticsInfo:type_name -> proto.DailyStatisticsMetaInfoV1
-	56, // 66: proto.DeleteDailyStatisticsResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
-	66, // 67: proto.DeleteDailyStatisticsResponse.DailyStatisticsInfo:type_name -> proto.DailyStatisticsMetaInfoV1
-	56, // 68: proto.UpdateDailyStatisticsResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
-	66, // 69: proto.UpdateDailyStatisticsResponse.DailyStatisticsInfo:type_name -> proto.DailyStatisticsMetaInfoV1
-	56, // 70: proto.GetDailyStatisticsResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
-	66, // 71: proto.GetDailyStatisticsResponse.DailyStatisticsInfo:type_name -> proto.DailyStatisticsMetaInfoV1
-	56, // 72: proto.GetAllDailyStatisticsResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
-	66, // 73: proto.GetAllDailyStatisticsResponse.DailyStatisticsInfo:type_name -> proto.DailyStatisticsMetaInfoV1
-	56, // 74: proto.CreateSwcAttachmentAnoResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
-	56, // 75: proto.DeleteSwcAttachmentAnoResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
-	56, // 76: proto.UpdateSwcAttachmentAnoResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
-	56, // 77: proto.GetSwcAttachmentAnoResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
-	67, // 78: proto.GetSwcAttachmentAnoResponse.SwcAttachmentAno:type_name -> proto.SwcAttachmentAnoV1
-	56, // 79: proto.CreateSwcAttachmentApoResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
-	56, // 80: proto.DeleteSwcAttachmentApoResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
-	56, // 81: proto.UpdateSwcAttachmentApoResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
-	56, // 82: proto.GetSwcAttachmentApoResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
-	68, // 83: proto.GetSwcAttachmentApoResponse.SwcAttachmentApo:type_name -> proto.SwcAttachmentApoV1
-	56, // 84: proto.RevertSwcVersionResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
-	56, // 85: proto.CreateSwcAttachmentSwcResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
-	56, // 86: proto.DeleteSwcAttachmentSwcResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
-	56, // 87: proto.UpdateSwcAttachmentSwcResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
-	56, // 88: proto.GetSwcAttachmentSwcResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
-	69, // 89: proto.GetSwcAttachmentSwcResponse.SwcData:type_name -> proto.SwcNodeDataV1
-	56, // 90: proto.CreatePermissionGroupResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
-	56, // 91: proto.DeletePermissionGroupResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
-	56, // 92: proto.UpdatePermissionGroupResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
-	93, // [93:93] is the sub-list for method output_type
-	93, // [93:93] is the sub-list for method input_type
-	93, // [93:93] is the sub-list for extension type_name
-	93, // [93:93] is the sub-list for extension extendee
-	0,  // [0:93] is the sub-list for field type_name
+	57, // 0: proto.CreateUserResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
+	58, // 1: proto.CreateUserResponse.UserInfo:type_name -> proto.UserMetaInfoV1
+	57, // 2: proto.DeleteUserResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
+	57, // 3: proto.UpdateUserResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
+	58, // 4: proto.UpdateUserResponse.UserInfo:type_name -> proto.UserMetaInfoV1
+	57, // 5: proto.GetUserByUuidResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
+	58, // 6: proto.GetUserByUuidResponse.UserInfo:type_name -> proto.UserMetaInfoV1
+	57, // 7: proto.GetUserByNameResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
+	58, // 8: proto.GetUserByNameResponse.UserInfo:type_name -> proto.UserMetaInfoV1
+	57, // 9: proto.GetAllUserResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
+	58, // 10: proto.GetAllUserResponse.UserInfo:type_name -> proto.UserMetaInfoV1
+	57, // 11: proto.UserLoginResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
+	58, // 12: proto.UserLoginResponse.UserInfo:type_name -> proto.UserMetaInfoV1
+	59, // 13: proto.UserLoginResponse.UserVerifyInfo:type_name -> proto.UserVerifyInfoV1
+	57, // 14: proto.UserLogoutResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
+	57, // 15: proto.UserOnlineHeartBeatResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
+	59, // 16: proto.UserOnlineHeartBeatResponse.UserVerifyInfo:type_name -> proto.UserVerifyInfoV1
+	57, // 17: proto.GetUserPermissionGroupResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
+	60, // 18: proto.GetUserPermissionGroupResponse.PermissionGroup:type_name -> proto.PermissionGroupMetaInfoV1
+	57, // 19: proto.GetPermissionGroupByUuidResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
+	60, // 20: proto.GetPermissionGroupByUuidResponse.PermissionGroup:type_name -> proto.PermissionGroupMetaInfoV1
+	57, // 21: proto.GetPermissionGroupByNameResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
+	60, // 22: proto.GetPermissionGroupByNameResponse.PermissionGroup:type_name -> proto.PermissionGroupMetaInfoV1
+	57, // 23: proto.GetAllPermissionGroupResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
+	60, // 24: proto.GetAllPermissionGroupResponse.PermissionGroupList:type_name -> proto.PermissionGroupMetaInfoV1
+	57, // 25: proto.ChangeUserPermissionGroupResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
+	57, // 26: proto.CreateProjectResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
+	61, // 27: proto.CreateProjectResponse.ProjectInfo:type_name -> proto.ProjectMetaInfoV1
+	57, // 28: proto.DeleteProjectResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
+	61, // 29: proto.DeleteProjectResponse.ProjectInfo:type_name -> proto.ProjectMetaInfoV1
+	57, // 30: proto.UpdateProjectResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
+	61, // 31: proto.UpdateProjectResponse.ProjectInfo:type_name -> proto.ProjectMetaInfoV1
+	57, // 32: proto.GetProjectResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
+	61, // 33: proto.GetProjectResponse.ProjectInfo:type_name -> proto.ProjectMetaInfoV1
+	57, // 34: proto.GetAllProjectResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
+	61, // 35: proto.GetAllProjectResponse.ProjectInfo:type_name -> proto.ProjectMetaInfoV1
+	57, // 36: proto.CreateSwcResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
+	62, // 37: proto.CreateSwcResponse.SwcInfo:type_name -> proto.SwcMetaInfoV1
+	57, // 38: proto.DeleteSwcResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
+	62, // 39: proto.DeleteSwcResponse.SwcInfo:type_name -> proto.SwcMetaInfoV1
+	57, // 40: proto.UpdateSwcResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
+	62, // 41: proto.UpdateSwcResponse.SwcInfo:type_name -> proto.SwcMetaInfoV1
+	57, // 42: proto.GetSwcMetaInfoResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
+	62, // 43: proto.GetSwcMetaInfoResponse.SwcInfo:type_name -> proto.SwcMetaInfoV1
+	57, // 44: proto.GetAllSwcMetaInfoResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
+	62, // 45: proto.GetAllSwcMetaInfoResponse.SwcInfo:type_name -> proto.SwcMetaInfoV1
+	57, // 46: proto.CreateSwcSnapshotResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
+	57, // 47: proto.GetAllSnapshotMetaInfoResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
+	63, // 48: proto.GetAllSnapshotMetaInfoResponse.SwcSnapshotList:type_name -> proto.SwcSnapshotMetaInfoV1
+	57, // 49: proto.GetSnapshotResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
+	64, // 50: proto.GetSnapshotResponse.SwcNodeData:type_name -> proto.SwcDataV1
+	57, // 51: proto.GetAllIncrementOperationMetaInfoResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
+	65, // 52: proto.GetAllIncrementOperationMetaInfoResponse.SwcIncrementOperationMetaInfo:type_name -> proto.SwcIncrementOperationMetaInfoV1
+	57, // 53: proto.GetIncrementOperationResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
+	66, // 54: proto.GetIncrementOperationResponse.SwcIncrementOperationList:type_name -> proto.SwcIncrementOperationListV1
+	57, // 55: proto.CreateSwcNodeDataResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
+	57, // 56: proto.DeleteSwcNodeDataResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
+	57, // 57: proto.UpdateSwcNodeDataResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
+	57, // 58: proto.GetSwcNodeDataResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
+	64, // 59: proto.GetSwcNodeDataResponse.SwcNodeData:type_name -> proto.SwcDataV1
+	57, // 60: proto.GetSwcFullNodeDataResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
+	64, // 61: proto.GetSwcFullNodeDataResponse.SwcNodeData:type_name -> proto.SwcDataV1
+	57, // 62: proto.GetSwcNodeDataListByTimeAndUserResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
+	64, // 63: proto.GetSwcNodeDataListByTimeAndUserResponse.SwcNodeData:type_name -> proto.SwcDataV1
+	57, // 64: proto.CreateDailyStatisticsResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
+	67, // 65: proto.CreateDailyStatisticsResponse.DailyStatisticsInfo:type_name -> proto.DailyStatisticsMetaInfoV1
+	57, // 66: proto.DeleteDailyStatisticsResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
+	67, // 67: proto.DeleteDailyStatisticsResponse.DailyStatisticsInfo:type_name -> proto.DailyStatisticsMetaInfoV1
+	57, // 68: proto.UpdateDailyStatisticsResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
+	67, // 69: proto.UpdateDailyStatisticsResponse.DailyStatisticsInfo:type_name -> proto.DailyStatisticsMetaInfoV1
+	57, // 70: proto.GetDailyStatisticsResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
+	67, // 71: proto.GetDailyStatisticsResponse.DailyStatisticsInfo:type_name -> proto.DailyStatisticsMetaInfoV1
+	57, // 72: proto.GetAllDailyStatisticsResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
+	67, // 73: proto.GetAllDailyStatisticsResponse.DailyStatisticsInfo:type_name -> proto.DailyStatisticsMetaInfoV1
+	57, // 74: proto.CreateSwcAttachmentAnoResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
+	57, // 75: proto.DeleteSwcAttachmentAnoResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
+	57, // 76: proto.UpdateSwcAttachmentAnoResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
+	57, // 77: proto.GetSwcAttachmentAnoResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
+	68, // 78: proto.GetSwcAttachmentAnoResponse.SwcAttachmentAno:type_name -> proto.SwcAttachmentAnoV1
+	57, // 79: proto.CreateSwcAttachmentApoResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
+	57, // 80: proto.DeleteSwcAttachmentApoResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
+	57, // 81: proto.UpdateSwcAttachmentApoResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
+	57, // 82: proto.GetSwcAttachmentApoResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
+	69, // 83: proto.GetSwcAttachmentApoResponse.SwcAttachmentApo:type_name -> proto.SwcAttachmentApoV1
+	57, // 84: proto.RevertSwcVersionResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
+	57, // 85: proto.CreateSwcAttachmentSwcResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
+	57, // 86: proto.DeleteSwcAttachmentSwcResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
+	57, // 87: proto.UpdateSwcAttachmentSwcResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
+	57, // 88: proto.GetSwcAttachmentSwcResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
+	70, // 89: proto.GetSwcAttachmentSwcResponse.SwcData:type_name -> proto.SwcNodeDataV1
+	57, // 90: proto.CreatePermissionGroupResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
+	57, // 91: proto.DeletePermissionGroupResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
+	57, // 92: proto.UpdatePermissionGroupResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
+	57, // 93: proto.GetProjectSwcNamesByProjectUuidResponse.metaInfo:type_name -> proto.ResponseMetaInfoV1
+	71, // 94: proto.GetProjectSwcNamesByProjectUuidResponse.swcUuidName:type_name -> proto.SwcUuidName
+	95, // [95:95] is the sub-list for method output_type
+	95, // [95:95] is the sub-list for method input_type
+	95, // [95:95] is the sub-list for extension type_name
+	95, // [95:95] is the sub-list for extension extendee
+	0,  // [0:95] is the sub-list for field type_name
 }
 
 func init() { file_Message_Response_proto_init() }
@@ -4346,6 +4414,18 @@ func file_Message_Response_proto_init() {
 				return nil
 			}
 		}
+		file_Message_Response_proto_msgTypes[56].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*GetProjectSwcNamesByProjectUuidResponse); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
 	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
@@ -4353,7 +4433,7 @@ func file_Message_Response_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_Message_Response_proto_rawDesc,
 			NumEnums:      0,
-			NumMessages:   56,
+			NumMessages:   57,
 			NumExtensions: 0,
 			NumServices:   0,
 		},

@@ -427,6 +427,13 @@ class DBMS final {
     std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::proto::UpdatePermissionGroupResponse>> PrepareAsyncUpdatePermissionGroup(::grpc::ClientContext* context, const ::proto::UpdatePermissionGroupRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::proto::UpdatePermissionGroupResponse>>(PrepareAsyncUpdatePermissionGroupRaw(context, request, cq));
     }
+    virtual ::grpc::Status GetProjectSwcNamesByProjectUuid(::grpc::ClientContext* context, const ::proto::GetProjectSwcNamesByProjectUuidRequest& request, ::proto::GetProjectSwcNamesByProjectUuidResponse* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::proto::GetProjectSwcNamesByProjectUuidResponse>> AsyncGetProjectSwcNamesByProjectUuid(::grpc::ClientContext* context, const ::proto::GetProjectSwcNamesByProjectUuidRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::proto::GetProjectSwcNamesByProjectUuidResponse>>(AsyncGetProjectSwcNamesByProjectUuidRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::proto::GetProjectSwcNamesByProjectUuidResponse>> PrepareAsyncGetProjectSwcNamesByProjectUuid(::grpc::ClientContext* context, const ::proto::GetProjectSwcNamesByProjectUuidRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::proto::GetProjectSwcNamesByProjectUuidResponse>>(PrepareAsyncGetProjectSwcNamesByProjectUuidRaw(context, request, cq));
+    }
     class async_interface {
      public:
       virtual ~async_interface() {}
@@ -542,6 +549,8 @@ class DBMS final {
       virtual void DeletePermissionGroup(::grpc::ClientContext* context, const ::proto::DeletePermissionGroupRequest* request, ::proto::DeletePermissionGroupResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
       virtual void UpdatePermissionGroup(::grpc::ClientContext* context, const ::proto::UpdatePermissionGroupRequest* request, ::proto::UpdatePermissionGroupResponse* response, std::function<void(::grpc::Status)>) = 0;
       virtual void UpdatePermissionGroup(::grpc::ClientContext* context, const ::proto::UpdatePermissionGroupRequest* request, ::proto::UpdatePermissionGroupResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      virtual void GetProjectSwcNamesByProjectUuid(::grpc::ClientContext* context, const ::proto::GetProjectSwcNamesByProjectUuidRequest* request, ::proto::GetProjectSwcNamesByProjectUuidResponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void GetProjectSwcNamesByProjectUuid(::grpc::ClientContext* context, const ::proto::GetProjectSwcNamesByProjectUuidRequest* request, ::proto::GetProjectSwcNamesByProjectUuidResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
     };
     typedef class async_interface experimental_async_interface;
     virtual class async_interface* async() { return nullptr; }
@@ -659,6 +668,8 @@ class DBMS final {
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::proto::DeletePermissionGroupResponse>* PrepareAsyncDeletePermissionGroupRaw(::grpc::ClientContext* context, const ::proto::DeletePermissionGroupRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::proto::UpdatePermissionGroupResponse>* AsyncUpdatePermissionGroupRaw(::grpc::ClientContext* context, const ::proto::UpdatePermissionGroupRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::proto::UpdatePermissionGroupResponse>* PrepareAsyncUpdatePermissionGroupRaw(::grpc::ClientContext* context, const ::proto::UpdatePermissionGroupRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::proto::GetProjectSwcNamesByProjectUuidResponse>* AsyncGetProjectSwcNamesByProjectUuidRaw(::grpc::ClientContext* context, const ::proto::GetProjectSwcNamesByProjectUuidRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::proto::GetProjectSwcNamesByProjectUuidResponse>* PrepareAsyncGetProjectSwcNamesByProjectUuidRaw(::grpc::ClientContext* context, const ::proto::GetProjectSwcNamesByProjectUuidRequest& request, ::grpc::CompletionQueue* cq) = 0;
   };
   class Stub final : public StubInterface {
    public:
@@ -1055,6 +1066,13 @@ class DBMS final {
     std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::proto::UpdatePermissionGroupResponse>> PrepareAsyncUpdatePermissionGroup(::grpc::ClientContext* context, const ::proto::UpdatePermissionGroupRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::proto::UpdatePermissionGroupResponse>>(PrepareAsyncUpdatePermissionGroupRaw(context, request, cq));
     }
+    ::grpc::Status GetProjectSwcNamesByProjectUuid(::grpc::ClientContext* context, const ::proto::GetProjectSwcNamesByProjectUuidRequest& request, ::proto::GetProjectSwcNamesByProjectUuidResponse* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::proto::GetProjectSwcNamesByProjectUuidResponse>> AsyncGetProjectSwcNamesByProjectUuid(::grpc::ClientContext* context, const ::proto::GetProjectSwcNamesByProjectUuidRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::proto::GetProjectSwcNamesByProjectUuidResponse>>(AsyncGetProjectSwcNamesByProjectUuidRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::proto::GetProjectSwcNamesByProjectUuidResponse>> PrepareAsyncGetProjectSwcNamesByProjectUuid(::grpc::ClientContext* context, const ::proto::GetProjectSwcNamesByProjectUuidRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::proto::GetProjectSwcNamesByProjectUuidResponse>>(PrepareAsyncGetProjectSwcNamesByProjectUuidRaw(context, request, cq));
+    }
     class async final :
       public StubInterface::async_interface {
      public:
@@ -1170,6 +1188,8 @@ class DBMS final {
       void DeletePermissionGroup(::grpc::ClientContext* context, const ::proto::DeletePermissionGroupRequest* request, ::proto::DeletePermissionGroupResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
       void UpdatePermissionGroup(::grpc::ClientContext* context, const ::proto::UpdatePermissionGroupRequest* request, ::proto::UpdatePermissionGroupResponse* response, std::function<void(::grpc::Status)>) override;
       void UpdatePermissionGroup(::grpc::ClientContext* context, const ::proto::UpdatePermissionGroupRequest* request, ::proto::UpdatePermissionGroupResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      void GetProjectSwcNamesByProjectUuid(::grpc::ClientContext* context, const ::proto::GetProjectSwcNamesByProjectUuidRequest* request, ::proto::GetProjectSwcNamesByProjectUuidResponse* response, std::function<void(::grpc::Status)>) override;
+      void GetProjectSwcNamesByProjectUuid(::grpc::ClientContext* context, const ::proto::GetProjectSwcNamesByProjectUuidRequest* request, ::proto::GetProjectSwcNamesByProjectUuidResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
      private:
       friend class Stub;
       explicit async(Stub* stub): stub_(stub) { }
@@ -1293,6 +1313,8 @@ class DBMS final {
     ::grpc::ClientAsyncResponseReader< ::proto::DeletePermissionGroupResponse>* PrepareAsyncDeletePermissionGroupRaw(::grpc::ClientContext* context, const ::proto::DeletePermissionGroupRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::proto::UpdatePermissionGroupResponse>* AsyncUpdatePermissionGroupRaw(::grpc::ClientContext* context, const ::proto::UpdatePermissionGroupRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::proto::UpdatePermissionGroupResponse>* PrepareAsyncUpdatePermissionGroupRaw(::grpc::ClientContext* context, const ::proto::UpdatePermissionGroupRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::proto::GetProjectSwcNamesByProjectUuidResponse>* AsyncGetProjectSwcNamesByProjectUuidRaw(::grpc::ClientContext* context, const ::proto::GetProjectSwcNamesByProjectUuidRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::proto::GetProjectSwcNamesByProjectUuidResponse>* PrepareAsyncGetProjectSwcNamesByProjectUuidRaw(::grpc::ClientContext* context, const ::proto::GetProjectSwcNamesByProjectUuidRequest& request, ::grpc::CompletionQueue* cq) override;
     const ::grpc::internal::RpcMethod rpcmethod_CreateUser_;
     const ::grpc::internal::RpcMethod rpcmethod_DeleteUser_;
     const ::grpc::internal::RpcMethod rpcmethod_UpdateUser_;
@@ -1349,6 +1371,7 @@ class DBMS final {
     const ::grpc::internal::RpcMethod rpcmethod_CreatePermissionGroup_;
     const ::grpc::internal::RpcMethod rpcmethod_DeletePermissionGroup_;
     const ::grpc::internal::RpcMethod rpcmethod_UpdatePermissionGroup_;
+    const ::grpc::internal::RpcMethod rpcmethod_GetProjectSwcNamesByProjectUuid_;
   };
   static std::unique_ptr<Stub> NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options = ::grpc::StubOptions());
 
@@ -1412,6 +1435,7 @@ class DBMS final {
     virtual ::grpc::Status CreatePermissionGroup(::grpc::ServerContext* context, const ::proto::CreatePermissionGroupRequest* request, ::proto::CreatePermissionGroupResponse* response);
     virtual ::grpc::Status DeletePermissionGroup(::grpc::ServerContext* context, const ::proto::DeletePermissionGroupRequest* request, ::proto::DeletePermissionGroupResponse* response);
     virtual ::grpc::Status UpdatePermissionGroup(::grpc::ServerContext* context, const ::proto::UpdatePermissionGroupRequest* request, ::proto::UpdatePermissionGroupResponse* response);
+    virtual ::grpc::Status GetProjectSwcNamesByProjectUuid(::grpc::ServerContext* context, const ::proto::GetProjectSwcNamesByProjectUuidRequest* request, ::proto::GetProjectSwcNamesByProjectUuidResponse* response);
   };
   template <class BaseClass>
   class WithAsyncMethod_CreateUser : public BaseClass {
@@ -2533,7 +2557,27 @@ class DBMS final {
       ::grpc::Service::RequestAsyncUnary(55, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
-  typedef WithAsyncMethod_CreateUser<WithAsyncMethod_DeleteUser<WithAsyncMethod_UpdateUser<WithAsyncMethod_GetUserByUuid<WithAsyncMethod_GetUserByName<WithAsyncMethod_GetAllUser<WithAsyncMethod_UserLogin<WithAsyncMethod_UserLogout<WithAsyncMethod_UserOnlineHeartBeatNotifications<WithAsyncMethod_GetUserPermissionGroup<WithAsyncMethod_GetPermissionGroupByUuid<WithAsyncMethod_GetPermissionGroupByName<WithAsyncMethod_GetAllPermissionGroup<WithAsyncMethod_ChangeUserPermissionGroup<WithAsyncMethod_CreateProject<WithAsyncMethod_DeleteProject<WithAsyncMethod_UpdateProject<WithAsyncMethod_GetProject<WithAsyncMethod_GetAllProject<WithAsyncMethod_CreateSwc<WithAsyncMethod_DeleteSwc<WithAsyncMethod_UpdateSwc<WithAsyncMethod_GetSwcMetaInfo<WithAsyncMethod_GetAllSwcMetaInfo<WithAsyncMethod_CreateSwcSnapshot<WithAsyncMethod_GetAllSnapshotMetaInfo<WithAsyncMethod_GetSnapshot<WithAsyncMethod_GetAllIncrementOperationMetaInfo<WithAsyncMethod_GetIncrementOperation<WithAsyncMethod_CreateSwcNodeData<WithAsyncMethod_DeleteSwcNodeData<WithAsyncMethod_UpdateSwcNodeData<WithAsyncMethod_GetSwcNodeData<WithAsyncMethod_GetSwcFullNodeData<WithAsyncMethod_GetSwcNodeDataListByTimeAndUser<WithAsyncMethod_CreateDailyStatistics<WithAsyncMethod_DeleteDailyStatistics<WithAsyncMethod_UpdateDailyStatistics<WithAsyncMethod_GetDailyStatistics<WithAsyncMethod_GetAllDailyStatistics<WithAsyncMethod_CreateSwcAttachmentAno<WithAsyncMethod_DeleteSwcAttachmentAno<WithAsyncMethod_UpdateSwcAttachmentAno<WithAsyncMethod_GetSwcAttachmentAno<WithAsyncMethod_CreateSwcAttachmentApo<WithAsyncMethod_DeleteSwcAttachmentApo<WithAsyncMethod_UpdateSwcAttachmentApo<WithAsyncMethod_GetSwcAttachmentApo<WithAsyncMethod_RevertSwcVersion<WithAsyncMethod_CreateSwcAttachmentSwc<WithAsyncMethod_DeleteSwcAttachmentSwc<WithAsyncMethod_UpdateSwcAttachmentSwc<WithAsyncMethod_GetSwcAttachmentSwc<WithAsyncMethod_CreatePermissionGroup<WithAsyncMethod_DeletePermissionGroup<WithAsyncMethod_UpdatePermissionGroup<Service > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > AsyncService;
+  template <class BaseClass>
+  class WithAsyncMethod_GetProjectSwcNamesByProjectUuid : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithAsyncMethod_GetProjectSwcNamesByProjectUuid() {
+      ::grpc::Service::MarkMethodAsync(56);
+    }
+    ~WithAsyncMethod_GetProjectSwcNamesByProjectUuid() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetProjectSwcNamesByProjectUuid(::grpc::ServerContext* /*context*/, const ::proto::GetProjectSwcNamesByProjectUuidRequest* /*request*/, ::proto::GetProjectSwcNamesByProjectUuidResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestGetProjectSwcNamesByProjectUuid(::grpc::ServerContext* context, ::proto::GetProjectSwcNamesByProjectUuidRequest* request, ::grpc::ServerAsyncResponseWriter< ::proto::GetProjectSwcNamesByProjectUuidResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(56, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  typedef WithAsyncMethod_CreateUser<WithAsyncMethod_DeleteUser<WithAsyncMethod_UpdateUser<WithAsyncMethod_GetUserByUuid<WithAsyncMethod_GetUserByName<WithAsyncMethod_GetAllUser<WithAsyncMethod_UserLogin<WithAsyncMethod_UserLogout<WithAsyncMethod_UserOnlineHeartBeatNotifications<WithAsyncMethod_GetUserPermissionGroup<WithAsyncMethod_GetPermissionGroupByUuid<WithAsyncMethod_GetPermissionGroupByName<WithAsyncMethod_GetAllPermissionGroup<WithAsyncMethod_ChangeUserPermissionGroup<WithAsyncMethod_CreateProject<WithAsyncMethod_DeleteProject<WithAsyncMethod_UpdateProject<WithAsyncMethod_GetProject<WithAsyncMethod_GetAllProject<WithAsyncMethod_CreateSwc<WithAsyncMethod_DeleteSwc<WithAsyncMethod_UpdateSwc<WithAsyncMethod_GetSwcMetaInfo<WithAsyncMethod_GetAllSwcMetaInfo<WithAsyncMethod_CreateSwcSnapshot<WithAsyncMethod_GetAllSnapshotMetaInfo<WithAsyncMethod_GetSnapshot<WithAsyncMethod_GetAllIncrementOperationMetaInfo<WithAsyncMethod_GetIncrementOperation<WithAsyncMethod_CreateSwcNodeData<WithAsyncMethod_DeleteSwcNodeData<WithAsyncMethod_UpdateSwcNodeData<WithAsyncMethod_GetSwcNodeData<WithAsyncMethod_GetSwcFullNodeData<WithAsyncMethod_GetSwcNodeDataListByTimeAndUser<WithAsyncMethod_CreateDailyStatistics<WithAsyncMethod_DeleteDailyStatistics<WithAsyncMethod_UpdateDailyStatistics<WithAsyncMethod_GetDailyStatistics<WithAsyncMethod_GetAllDailyStatistics<WithAsyncMethod_CreateSwcAttachmentAno<WithAsyncMethod_DeleteSwcAttachmentAno<WithAsyncMethod_UpdateSwcAttachmentAno<WithAsyncMethod_GetSwcAttachmentAno<WithAsyncMethod_CreateSwcAttachmentApo<WithAsyncMethod_DeleteSwcAttachmentApo<WithAsyncMethod_UpdateSwcAttachmentApo<WithAsyncMethod_GetSwcAttachmentApo<WithAsyncMethod_RevertSwcVersion<WithAsyncMethod_CreateSwcAttachmentSwc<WithAsyncMethod_DeleteSwcAttachmentSwc<WithAsyncMethod_UpdateSwcAttachmentSwc<WithAsyncMethod_GetSwcAttachmentSwc<WithAsyncMethod_CreatePermissionGroup<WithAsyncMethod_DeletePermissionGroup<WithAsyncMethod_UpdatePermissionGroup<WithAsyncMethod_GetProjectSwcNamesByProjectUuid<Service > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > AsyncService;
   template <class BaseClass>
   class WithCallbackMethod_CreateUser : public BaseClass {
    private:
@@ -4046,7 +4090,34 @@ class DBMS final {
     virtual ::grpc::ServerUnaryReactor* UpdatePermissionGroup(
       ::grpc::CallbackServerContext* /*context*/, const ::proto::UpdatePermissionGroupRequest* /*request*/, ::proto::UpdatePermissionGroupResponse* /*response*/)  { return nullptr; }
   };
-  typedef WithCallbackMethod_CreateUser<WithCallbackMethod_DeleteUser<WithCallbackMethod_UpdateUser<WithCallbackMethod_GetUserByUuid<WithCallbackMethod_GetUserByName<WithCallbackMethod_GetAllUser<WithCallbackMethod_UserLogin<WithCallbackMethod_UserLogout<WithCallbackMethod_UserOnlineHeartBeatNotifications<WithCallbackMethod_GetUserPermissionGroup<WithCallbackMethod_GetPermissionGroupByUuid<WithCallbackMethod_GetPermissionGroupByName<WithCallbackMethod_GetAllPermissionGroup<WithCallbackMethod_ChangeUserPermissionGroup<WithCallbackMethod_CreateProject<WithCallbackMethod_DeleteProject<WithCallbackMethod_UpdateProject<WithCallbackMethod_GetProject<WithCallbackMethod_GetAllProject<WithCallbackMethod_CreateSwc<WithCallbackMethod_DeleteSwc<WithCallbackMethod_UpdateSwc<WithCallbackMethod_GetSwcMetaInfo<WithCallbackMethod_GetAllSwcMetaInfo<WithCallbackMethod_CreateSwcSnapshot<WithCallbackMethod_GetAllSnapshotMetaInfo<WithCallbackMethod_GetSnapshot<WithCallbackMethod_GetAllIncrementOperationMetaInfo<WithCallbackMethod_GetIncrementOperation<WithCallbackMethod_CreateSwcNodeData<WithCallbackMethod_DeleteSwcNodeData<WithCallbackMethod_UpdateSwcNodeData<WithCallbackMethod_GetSwcNodeData<WithCallbackMethod_GetSwcFullNodeData<WithCallbackMethod_GetSwcNodeDataListByTimeAndUser<WithCallbackMethod_CreateDailyStatistics<WithCallbackMethod_DeleteDailyStatistics<WithCallbackMethod_UpdateDailyStatistics<WithCallbackMethod_GetDailyStatistics<WithCallbackMethod_GetAllDailyStatistics<WithCallbackMethod_CreateSwcAttachmentAno<WithCallbackMethod_DeleteSwcAttachmentAno<WithCallbackMethod_UpdateSwcAttachmentAno<WithCallbackMethod_GetSwcAttachmentAno<WithCallbackMethod_CreateSwcAttachmentApo<WithCallbackMethod_DeleteSwcAttachmentApo<WithCallbackMethod_UpdateSwcAttachmentApo<WithCallbackMethod_GetSwcAttachmentApo<WithCallbackMethod_RevertSwcVersion<WithCallbackMethod_CreateSwcAttachmentSwc<WithCallbackMethod_DeleteSwcAttachmentSwc<WithCallbackMethod_UpdateSwcAttachmentSwc<WithCallbackMethod_GetSwcAttachmentSwc<WithCallbackMethod_CreatePermissionGroup<WithCallbackMethod_DeletePermissionGroup<WithCallbackMethod_UpdatePermissionGroup<Service > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > CallbackService;
+  template <class BaseClass>
+  class WithCallbackMethod_GetProjectSwcNamesByProjectUuid : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithCallbackMethod_GetProjectSwcNamesByProjectUuid() {
+      ::grpc::Service::MarkMethodCallback(56,
+          new ::grpc::internal::CallbackUnaryHandler< ::proto::GetProjectSwcNamesByProjectUuidRequest, ::proto::GetProjectSwcNamesByProjectUuidResponse>(
+            [this](
+                   ::grpc::CallbackServerContext* context, const ::proto::GetProjectSwcNamesByProjectUuidRequest* request, ::proto::GetProjectSwcNamesByProjectUuidResponse* response) { return this->GetProjectSwcNamesByProjectUuid(context, request, response); }));}
+    void SetMessageAllocatorFor_GetProjectSwcNamesByProjectUuid(
+        ::grpc::MessageAllocator< ::proto::GetProjectSwcNamesByProjectUuidRequest, ::proto::GetProjectSwcNamesByProjectUuidResponse>* allocator) {
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(56);
+      static_cast<::grpc::internal::CallbackUnaryHandler< ::proto::GetProjectSwcNamesByProjectUuidRequest, ::proto::GetProjectSwcNamesByProjectUuidResponse>*>(handler)
+              ->SetMessageAllocator(allocator);
+    }
+    ~WithCallbackMethod_GetProjectSwcNamesByProjectUuid() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetProjectSwcNamesByProjectUuid(::grpc::ServerContext* /*context*/, const ::proto::GetProjectSwcNamesByProjectUuidRequest* /*request*/, ::proto::GetProjectSwcNamesByProjectUuidResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerUnaryReactor* GetProjectSwcNamesByProjectUuid(
+      ::grpc::CallbackServerContext* /*context*/, const ::proto::GetProjectSwcNamesByProjectUuidRequest* /*request*/, ::proto::GetProjectSwcNamesByProjectUuidResponse* /*response*/)  { return nullptr; }
+  };
+  typedef WithCallbackMethod_CreateUser<WithCallbackMethod_DeleteUser<WithCallbackMethod_UpdateUser<WithCallbackMethod_GetUserByUuid<WithCallbackMethod_GetUserByName<WithCallbackMethod_GetAllUser<WithCallbackMethod_UserLogin<WithCallbackMethod_UserLogout<WithCallbackMethod_UserOnlineHeartBeatNotifications<WithCallbackMethod_GetUserPermissionGroup<WithCallbackMethod_GetPermissionGroupByUuid<WithCallbackMethod_GetPermissionGroupByName<WithCallbackMethod_GetAllPermissionGroup<WithCallbackMethod_ChangeUserPermissionGroup<WithCallbackMethod_CreateProject<WithCallbackMethod_DeleteProject<WithCallbackMethod_UpdateProject<WithCallbackMethod_GetProject<WithCallbackMethod_GetAllProject<WithCallbackMethod_CreateSwc<WithCallbackMethod_DeleteSwc<WithCallbackMethod_UpdateSwc<WithCallbackMethod_GetSwcMetaInfo<WithCallbackMethod_GetAllSwcMetaInfo<WithCallbackMethod_CreateSwcSnapshot<WithCallbackMethod_GetAllSnapshotMetaInfo<WithCallbackMethod_GetSnapshot<WithCallbackMethod_GetAllIncrementOperationMetaInfo<WithCallbackMethod_GetIncrementOperation<WithCallbackMethod_CreateSwcNodeData<WithCallbackMethod_DeleteSwcNodeData<WithCallbackMethod_UpdateSwcNodeData<WithCallbackMethod_GetSwcNodeData<WithCallbackMethod_GetSwcFullNodeData<WithCallbackMethod_GetSwcNodeDataListByTimeAndUser<WithCallbackMethod_CreateDailyStatistics<WithCallbackMethod_DeleteDailyStatistics<WithCallbackMethod_UpdateDailyStatistics<WithCallbackMethod_GetDailyStatistics<WithCallbackMethod_GetAllDailyStatistics<WithCallbackMethod_CreateSwcAttachmentAno<WithCallbackMethod_DeleteSwcAttachmentAno<WithCallbackMethod_UpdateSwcAttachmentAno<WithCallbackMethod_GetSwcAttachmentAno<WithCallbackMethod_CreateSwcAttachmentApo<WithCallbackMethod_DeleteSwcAttachmentApo<WithCallbackMethod_UpdateSwcAttachmentApo<WithCallbackMethod_GetSwcAttachmentApo<WithCallbackMethod_RevertSwcVersion<WithCallbackMethod_CreateSwcAttachmentSwc<WithCallbackMethod_DeleteSwcAttachmentSwc<WithCallbackMethod_UpdateSwcAttachmentSwc<WithCallbackMethod_GetSwcAttachmentSwc<WithCallbackMethod_CreatePermissionGroup<WithCallbackMethod_DeletePermissionGroup<WithCallbackMethod_UpdatePermissionGroup<WithCallbackMethod_GetProjectSwcNamesByProjectUuid<Service > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > CallbackService;
   typedef CallbackService ExperimentalCallbackService;
   template <class BaseClass>
   class WithGenericMethod_CreateUser : public BaseClass {
@@ -4996,6 +5067,23 @@ class DBMS final {
     }
     // disable synchronous version of this method
     ::grpc::Status UpdatePermissionGroup(::grpc::ServerContext* /*context*/, const ::proto::UpdatePermissionGroupRequest* /*request*/, ::proto::UpdatePermissionGroupResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+  };
+  template <class BaseClass>
+  class WithGenericMethod_GetProjectSwcNamesByProjectUuid : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithGenericMethod_GetProjectSwcNamesByProjectUuid() {
+      ::grpc::Service::MarkMethodGeneric(56);
+    }
+    ~WithGenericMethod_GetProjectSwcNamesByProjectUuid() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetProjectSwcNamesByProjectUuid(::grpc::ServerContext* /*context*/, const ::proto::GetProjectSwcNamesByProjectUuidRequest* /*request*/, ::proto::GetProjectSwcNamesByProjectUuidResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -6118,6 +6206,26 @@ class DBMS final {
     }
     void RequestUpdatePermissionGroup(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(55, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_GetProjectSwcNamesByProjectUuid : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawMethod_GetProjectSwcNamesByProjectUuid() {
+      ::grpc::Service::MarkMethodRaw(56);
+    }
+    ~WithRawMethod_GetProjectSwcNamesByProjectUuid() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetProjectSwcNamesByProjectUuid(::grpc::ServerContext* /*context*/, const ::proto::GetProjectSwcNamesByProjectUuidRequest* /*request*/, ::proto::GetProjectSwcNamesByProjectUuidResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestGetProjectSwcNamesByProjectUuid(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(56, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -7350,6 +7458,28 @@ class DBMS final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     virtual ::grpc::ServerUnaryReactor* UpdatePermissionGroup(
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
+  };
+  template <class BaseClass>
+  class WithRawCallbackMethod_GetProjectSwcNamesByProjectUuid : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawCallbackMethod_GetProjectSwcNamesByProjectUuid() {
+      ::grpc::Service::MarkMethodRawCallback(56,
+          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->GetProjectSwcNamesByProjectUuid(context, request, response); }));
+    }
+    ~WithRawCallbackMethod_GetProjectSwcNamesByProjectUuid() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetProjectSwcNamesByProjectUuid(::grpc::ServerContext* /*context*/, const ::proto::GetProjectSwcNamesByProjectUuidRequest* /*request*/, ::proto::GetProjectSwcNamesByProjectUuidResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerUnaryReactor* GetProjectSwcNamesByProjectUuid(
       ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
   };
   template <class BaseClass>
@@ -8864,9 +8994,36 @@ class DBMS final {
     // replace default version of method with streamed unary
     virtual ::grpc::Status StreamedUpdatePermissionGroup(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::proto::UpdatePermissionGroupRequest,::proto::UpdatePermissionGroupResponse>* server_unary_streamer) = 0;
   };
-  typedef WithStreamedUnaryMethod_CreateUser<WithStreamedUnaryMethod_DeleteUser<WithStreamedUnaryMethod_UpdateUser<WithStreamedUnaryMethod_GetUserByUuid<WithStreamedUnaryMethod_GetUserByName<WithStreamedUnaryMethod_GetAllUser<WithStreamedUnaryMethod_UserLogin<WithStreamedUnaryMethod_UserLogout<WithStreamedUnaryMethod_UserOnlineHeartBeatNotifications<WithStreamedUnaryMethod_GetUserPermissionGroup<WithStreamedUnaryMethod_GetPermissionGroupByUuid<WithStreamedUnaryMethod_GetPermissionGroupByName<WithStreamedUnaryMethod_GetAllPermissionGroup<WithStreamedUnaryMethod_ChangeUserPermissionGroup<WithStreamedUnaryMethod_CreateProject<WithStreamedUnaryMethod_DeleteProject<WithStreamedUnaryMethod_UpdateProject<WithStreamedUnaryMethod_GetProject<WithStreamedUnaryMethod_GetAllProject<WithStreamedUnaryMethod_CreateSwc<WithStreamedUnaryMethod_DeleteSwc<WithStreamedUnaryMethod_UpdateSwc<WithStreamedUnaryMethod_GetSwcMetaInfo<WithStreamedUnaryMethod_GetAllSwcMetaInfo<WithStreamedUnaryMethod_CreateSwcSnapshot<WithStreamedUnaryMethod_GetAllSnapshotMetaInfo<WithStreamedUnaryMethod_GetSnapshot<WithStreamedUnaryMethod_GetAllIncrementOperationMetaInfo<WithStreamedUnaryMethod_GetIncrementOperation<WithStreamedUnaryMethod_CreateSwcNodeData<WithStreamedUnaryMethod_DeleteSwcNodeData<WithStreamedUnaryMethod_UpdateSwcNodeData<WithStreamedUnaryMethod_GetSwcNodeData<WithStreamedUnaryMethod_GetSwcFullNodeData<WithStreamedUnaryMethod_GetSwcNodeDataListByTimeAndUser<WithStreamedUnaryMethod_CreateDailyStatistics<WithStreamedUnaryMethod_DeleteDailyStatistics<WithStreamedUnaryMethod_UpdateDailyStatistics<WithStreamedUnaryMethod_GetDailyStatistics<WithStreamedUnaryMethod_GetAllDailyStatistics<WithStreamedUnaryMethod_CreateSwcAttachmentAno<WithStreamedUnaryMethod_DeleteSwcAttachmentAno<WithStreamedUnaryMethod_UpdateSwcAttachmentAno<WithStreamedUnaryMethod_GetSwcAttachmentAno<WithStreamedUnaryMethod_CreateSwcAttachmentApo<WithStreamedUnaryMethod_DeleteSwcAttachmentApo<WithStreamedUnaryMethod_UpdateSwcAttachmentApo<WithStreamedUnaryMethod_GetSwcAttachmentApo<WithStreamedUnaryMethod_RevertSwcVersion<WithStreamedUnaryMethod_CreateSwcAttachmentSwc<WithStreamedUnaryMethod_DeleteSwcAttachmentSwc<WithStreamedUnaryMethod_UpdateSwcAttachmentSwc<WithStreamedUnaryMethod_GetSwcAttachmentSwc<WithStreamedUnaryMethod_CreatePermissionGroup<WithStreamedUnaryMethod_DeletePermissionGroup<WithStreamedUnaryMethod_UpdatePermissionGroup<Service > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > StreamedUnaryService;
+  template <class BaseClass>
+  class WithStreamedUnaryMethod_GetProjectSwcNamesByProjectUuid : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithStreamedUnaryMethod_GetProjectSwcNamesByProjectUuid() {
+      ::grpc::Service::MarkMethodStreamed(56,
+        new ::grpc::internal::StreamedUnaryHandler<
+          ::proto::GetProjectSwcNamesByProjectUuidRequest, ::proto::GetProjectSwcNamesByProjectUuidResponse>(
+            [this](::grpc::ServerContext* context,
+                   ::grpc::ServerUnaryStreamer<
+                     ::proto::GetProjectSwcNamesByProjectUuidRequest, ::proto::GetProjectSwcNamesByProjectUuidResponse>* streamer) {
+                       return this->StreamedGetProjectSwcNamesByProjectUuid(context,
+                         streamer);
+                  }));
+    }
+    ~WithStreamedUnaryMethod_GetProjectSwcNamesByProjectUuid() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable regular version of this method
+    ::grpc::Status GetProjectSwcNamesByProjectUuid(::grpc::ServerContext* /*context*/, const ::proto::GetProjectSwcNamesByProjectUuidRequest* /*request*/, ::proto::GetProjectSwcNamesByProjectUuidResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    // replace default version of method with streamed unary
+    virtual ::grpc::Status StreamedGetProjectSwcNamesByProjectUuid(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::proto::GetProjectSwcNamesByProjectUuidRequest,::proto::GetProjectSwcNamesByProjectUuidResponse>* server_unary_streamer) = 0;
+  };
+  typedef WithStreamedUnaryMethod_CreateUser<WithStreamedUnaryMethod_DeleteUser<WithStreamedUnaryMethod_UpdateUser<WithStreamedUnaryMethod_GetUserByUuid<WithStreamedUnaryMethod_GetUserByName<WithStreamedUnaryMethod_GetAllUser<WithStreamedUnaryMethod_UserLogin<WithStreamedUnaryMethod_UserLogout<WithStreamedUnaryMethod_UserOnlineHeartBeatNotifications<WithStreamedUnaryMethod_GetUserPermissionGroup<WithStreamedUnaryMethod_GetPermissionGroupByUuid<WithStreamedUnaryMethod_GetPermissionGroupByName<WithStreamedUnaryMethod_GetAllPermissionGroup<WithStreamedUnaryMethod_ChangeUserPermissionGroup<WithStreamedUnaryMethod_CreateProject<WithStreamedUnaryMethod_DeleteProject<WithStreamedUnaryMethod_UpdateProject<WithStreamedUnaryMethod_GetProject<WithStreamedUnaryMethod_GetAllProject<WithStreamedUnaryMethod_CreateSwc<WithStreamedUnaryMethod_DeleteSwc<WithStreamedUnaryMethod_UpdateSwc<WithStreamedUnaryMethod_GetSwcMetaInfo<WithStreamedUnaryMethod_GetAllSwcMetaInfo<WithStreamedUnaryMethod_CreateSwcSnapshot<WithStreamedUnaryMethod_GetAllSnapshotMetaInfo<WithStreamedUnaryMethod_GetSnapshot<WithStreamedUnaryMethod_GetAllIncrementOperationMetaInfo<WithStreamedUnaryMethod_GetIncrementOperation<WithStreamedUnaryMethod_CreateSwcNodeData<WithStreamedUnaryMethod_DeleteSwcNodeData<WithStreamedUnaryMethod_UpdateSwcNodeData<WithStreamedUnaryMethod_GetSwcNodeData<WithStreamedUnaryMethod_GetSwcFullNodeData<WithStreamedUnaryMethod_GetSwcNodeDataListByTimeAndUser<WithStreamedUnaryMethod_CreateDailyStatistics<WithStreamedUnaryMethod_DeleteDailyStatistics<WithStreamedUnaryMethod_UpdateDailyStatistics<WithStreamedUnaryMethod_GetDailyStatistics<WithStreamedUnaryMethod_GetAllDailyStatistics<WithStreamedUnaryMethod_CreateSwcAttachmentAno<WithStreamedUnaryMethod_DeleteSwcAttachmentAno<WithStreamedUnaryMethod_UpdateSwcAttachmentAno<WithStreamedUnaryMethod_GetSwcAttachmentAno<WithStreamedUnaryMethod_CreateSwcAttachmentApo<WithStreamedUnaryMethod_DeleteSwcAttachmentApo<WithStreamedUnaryMethod_UpdateSwcAttachmentApo<WithStreamedUnaryMethod_GetSwcAttachmentApo<WithStreamedUnaryMethod_RevertSwcVersion<WithStreamedUnaryMethod_CreateSwcAttachmentSwc<WithStreamedUnaryMethod_DeleteSwcAttachmentSwc<WithStreamedUnaryMethod_UpdateSwcAttachmentSwc<WithStreamedUnaryMethod_GetSwcAttachmentSwc<WithStreamedUnaryMethod_CreatePermissionGroup<WithStreamedUnaryMethod_DeletePermissionGroup<WithStreamedUnaryMethod_UpdatePermissionGroup<WithStreamedUnaryMethod_GetProjectSwcNamesByProjectUuid<Service > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > StreamedUnaryService;
   typedef Service SplitStreamedService;
-  typedef WithStreamedUnaryMethod_CreateUser<WithStreamedUnaryMethod_DeleteUser<WithStreamedUnaryMethod_UpdateUser<WithStreamedUnaryMethod_GetUserByUuid<WithStreamedUnaryMethod_GetUserByName<WithStreamedUnaryMethod_GetAllUser<WithStreamedUnaryMethod_UserLogin<WithStreamedUnaryMethod_UserLogout<WithStreamedUnaryMethod_UserOnlineHeartBeatNotifications<WithStreamedUnaryMethod_GetUserPermissionGroup<WithStreamedUnaryMethod_GetPermissionGroupByUuid<WithStreamedUnaryMethod_GetPermissionGroupByName<WithStreamedUnaryMethod_GetAllPermissionGroup<WithStreamedUnaryMethod_ChangeUserPermissionGroup<WithStreamedUnaryMethod_CreateProject<WithStreamedUnaryMethod_DeleteProject<WithStreamedUnaryMethod_UpdateProject<WithStreamedUnaryMethod_GetProject<WithStreamedUnaryMethod_GetAllProject<WithStreamedUnaryMethod_CreateSwc<WithStreamedUnaryMethod_DeleteSwc<WithStreamedUnaryMethod_UpdateSwc<WithStreamedUnaryMethod_GetSwcMetaInfo<WithStreamedUnaryMethod_GetAllSwcMetaInfo<WithStreamedUnaryMethod_CreateSwcSnapshot<WithStreamedUnaryMethod_GetAllSnapshotMetaInfo<WithStreamedUnaryMethod_GetSnapshot<WithStreamedUnaryMethod_GetAllIncrementOperationMetaInfo<WithStreamedUnaryMethod_GetIncrementOperation<WithStreamedUnaryMethod_CreateSwcNodeData<WithStreamedUnaryMethod_DeleteSwcNodeData<WithStreamedUnaryMethod_UpdateSwcNodeData<WithStreamedUnaryMethod_GetSwcNodeData<WithStreamedUnaryMethod_GetSwcFullNodeData<WithStreamedUnaryMethod_GetSwcNodeDataListByTimeAndUser<WithStreamedUnaryMethod_CreateDailyStatistics<WithStreamedUnaryMethod_DeleteDailyStatistics<WithStreamedUnaryMethod_UpdateDailyStatistics<WithStreamedUnaryMethod_GetDailyStatistics<WithStreamedUnaryMethod_GetAllDailyStatistics<WithStreamedUnaryMethod_CreateSwcAttachmentAno<WithStreamedUnaryMethod_DeleteSwcAttachmentAno<WithStreamedUnaryMethod_UpdateSwcAttachmentAno<WithStreamedUnaryMethod_GetSwcAttachmentAno<WithStreamedUnaryMethod_CreateSwcAttachmentApo<WithStreamedUnaryMethod_DeleteSwcAttachmentApo<WithStreamedUnaryMethod_UpdateSwcAttachmentApo<WithStreamedUnaryMethod_GetSwcAttachmentApo<WithStreamedUnaryMethod_RevertSwcVersion<WithStreamedUnaryMethod_CreateSwcAttachmentSwc<WithStreamedUnaryMethod_DeleteSwcAttachmentSwc<WithStreamedUnaryMethod_UpdateSwcAttachmentSwc<WithStreamedUnaryMethod_GetSwcAttachmentSwc<WithStreamedUnaryMethod_CreatePermissionGroup<WithStreamedUnaryMethod_DeletePermissionGroup<WithStreamedUnaryMethod_UpdatePermissionGroup<Service > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > StreamedService;
+  typedef WithStreamedUnaryMethod_CreateUser<WithStreamedUnaryMethod_DeleteUser<WithStreamedUnaryMethod_UpdateUser<WithStreamedUnaryMethod_GetUserByUuid<WithStreamedUnaryMethod_GetUserByName<WithStreamedUnaryMethod_GetAllUser<WithStreamedUnaryMethod_UserLogin<WithStreamedUnaryMethod_UserLogout<WithStreamedUnaryMethod_UserOnlineHeartBeatNotifications<WithStreamedUnaryMethod_GetUserPermissionGroup<WithStreamedUnaryMethod_GetPermissionGroupByUuid<WithStreamedUnaryMethod_GetPermissionGroupByName<WithStreamedUnaryMethod_GetAllPermissionGroup<WithStreamedUnaryMethod_ChangeUserPermissionGroup<WithStreamedUnaryMethod_CreateProject<WithStreamedUnaryMethod_DeleteProject<WithStreamedUnaryMethod_UpdateProject<WithStreamedUnaryMethod_GetProject<WithStreamedUnaryMethod_GetAllProject<WithStreamedUnaryMethod_CreateSwc<WithStreamedUnaryMethod_DeleteSwc<WithStreamedUnaryMethod_UpdateSwc<WithStreamedUnaryMethod_GetSwcMetaInfo<WithStreamedUnaryMethod_GetAllSwcMetaInfo<WithStreamedUnaryMethod_CreateSwcSnapshot<WithStreamedUnaryMethod_GetAllSnapshotMetaInfo<WithStreamedUnaryMethod_GetSnapshot<WithStreamedUnaryMethod_GetAllIncrementOperationMetaInfo<WithStreamedUnaryMethod_GetIncrementOperation<WithStreamedUnaryMethod_CreateSwcNodeData<WithStreamedUnaryMethod_DeleteSwcNodeData<WithStreamedUnaryMethod_UpdateSwcNodeData<WithStreamedUnaryMethod_GetSwcNodeData<WithStreamedUnaryMethod_GetSwcFullNodeData<WithStreamedUnaryMethod_GetSwcNodeDataListByTimeAndUser<WithStreamedUnaryMethod_CreateDailyStatistics<WithStreamedUnaryMethod_DeleteDailyStatistics<WithStreamedUnaryMethod_UpdateDailyStatistics<WithStreamedUnaryMethod_GetDailyStatistics<WithStreamedUnaryMethod_GetAllDailyStatistics<WithStreamedUnaryMethod_CreateSwcAttachmentAno<WithStreamedUnaryMethod_DeleteSwcAttachmentAno<WithStreamedUnaryMethod_UpdateSwcAttachmentAno<WithStreamedUnaryMethod_GetSwcAttachmentAno<WithStreamedUnaryMethod_CreateSwcAttachmentApo<WithStreamedUnaryMethod_DeleteSwcAttachmentApo<WithStreamedUnaryMethod_UpdateSwcAttachmentApo<WithStreamedUnaryMethod_GetSwcAttachmentApo<WithStreamedUnaryMethod_RevertSwcVersion<WithStreamedUnaryMethod_CreateSwcAttachmentSwc<WithStreamedUnaryMethod_DeleteSwcAttachmentSwc<WithStreamedUnaryMethod_UpdateSwcAttachmentSwc<WithStreamedUnaryMethod_GetSwcAttachmentSwc<WithStreamedUnaryMethod_CreatePermissionGroup<WithStreamedUnaryMethod_DeletePermissionGroup<WithStreamedUnaryMethod_UpdatePermissionGroup<WithStreamedUnaryMethod_GetProjectSwcNamesByProjectUuid<Service > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > StreamedService;
 };
 
 }  // namespace proto
