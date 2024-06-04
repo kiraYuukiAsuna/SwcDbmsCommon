@@ -1941,7 +1941,7 @@
         "UserVerifyInfo": {
           "$ref": "#/definitions/protoUserVerifyInfoV1"
         },
-        "SwcName": {
+        "SwcUuid": {
           "type": "string"
         },
         "SwcAttachmentAno": {
@@ -1969,7 +1969,7 @@
         "UserVerifyInfo": {
           "$ref": "#/definitions/protoUserVerifyInfoV1"
         },
-        "SwcName": {
+        "SwcUuid": {
           "type": "string"
         },
         "SwcAttachmentApo": {
@@ -2001,7 +2001,7 @@
         "UserVerifyInfo": {
           "$ref": "#/definitions/protoUserVerifyInfoV1"
         },
-        "SwcName": {
+        "SwcUuid": {
           "type": "string"
         },
         "SwcData": {
@@ -2033,7 +2033,7 @@
         "UserVerifyInfo": {
           "$ref": "#/definitions/protoUserVerifyInfoV1"
         },
-        "SwcName": {
+        "SwcUuid": {
           "type": "string"
         },
         "SwcData": {
@@ -2105,7 +2105,7 @@
         "UserVerifyInfo": {
           "$ref": "#/definitions/protoUserVerifyInfoV1"
         },
-        "SwcName": {
+        "SwcUuid": {
           "type": "string"
         }
       }
@@ -2290,7 +2290,7 @@
         "UserVerifyInfo": {
           "$ref": "#/definitions/protoUserVerifyInfoV1"
         },
-        "SwcName": {
+        "SwcUuid": {
           "type": "string"
         },
         "AnoAttachmentUuid": {
@@ -2315,7 +2315,7 @@
         "UserVerifyInfo": {
           "$ref": "#/definitions/protoUserVerifyInfoV1"
         },
-        "SwcName": {
+        "SwcUuid": {
           "type": "string"
         },
         "ApoAttachmentUuid": {
@@ -2340,7 +2340,7 @@
         "UserVerifyInfo": {
           "$ref": "#/definitions/protoUserVerifyInfoV1"
         },
-        "SwcName": {
+        "SwcUuid": {
           "type": "string"
         },
         "SwcAttachmentUuid": {
@@ -2365,7 +2365,7 @@
         "UserVerifyInfo": {
           "$ref": "#/definitions/protoUserVerifyInfoV1"
         },
-        "SwcName": {
+        "SwcUuid": {
           "type": "string"
         },
         "SwcData": {
@@ -2390,7 +2390,7 @@
         "UserVerifyInfo": {
           "$ref": "#/definitions/protoUserVerifyInfoV1"
         },
-        "SwcName": {
+        "SwcUuid": {
           "type": "string"
         }
       }
@@ -2463,7 +2463,7 @@
         "UserVerifyInfo": {
           "$ref": "#/definitions/protoUserVerifyInfoV1"
         },
-        "SwcName": {
+        "SwcUuid": {
           "type": "string"
         }
       }
@@ -2544,7 +2544,7 @@
         "UserVerifyInfo": {
           "$ref": "#/definitions/protoUserVerifyInfoV1"
         },
-        "SwcName": {
+        "SwcUuid": {
           "type": "string"
         }
       }
@@ -2775,7 +2775,7 @@
         "UserVerifyInfo": {
           "$ref": "#/definitions/protoUserVerifyInfoV1"
         },
-        "SwcName": {
+        "SwcUuid": {
           "type": "string"
         },
         "AnoAttachmentUuid": {
@@ -2803,7 +2803,7 @@
         "UserVerifyInfo": {
           "$ref": "#/definitions/protoUserVerifyInfoV1"
         },
-        "SwcName": {
+        "SwcUuid": {
           "type": "string"
         },
         "ApoAttachmentUuid": {
@@ -2835,7 +2835,7 @@
         "UserVerifyInfo": {
           "$ref": "#/definitions/protoUserVerifyInfoV1"
         },
-        "SwcName": {
+        "SwcUuid": {
           "type": "string"
         },
         "SwcAttachmentUuid": {
@@ -2867,7 +2867,7 @@
         "UserVerifyInfo": {
           "$ref": "#/definitions/protoUserVerifyInfoV1"
         },
-        "SwcName": {
+        "SwcUuid": {
           "type": "string"
         }
       }
@@ -2892,7 +2892,7 @@
         "UserVerifyInfo": {
           "$ref": "#/definitions/protoUserVerifyInfoV1"
         },
-        "SwcName": {
+        "SwcUuid": {
           "type": "string"
         }
       }
@@ -2917,7 +2917,7 @@
         "UserVerifyInfo": {
           "$ref": "#/definitions/protoUserVerifyInfoV1"
         },
-        "SwcName": {
+        "SwcUuid": {
           "type": "string"
         },
         "StartTime": {
@@ -2953,7 +2953,7 @@
         "UserVerifyInfo": {
           "$ref": "#/definitions/protoUserVerifyInfoV1"
         },
-        "SwcName": {
+        "SwcUuid": {
           "type": "string"
         },
         "SwcNodeData": {
@@ -3292,7 +3292,7 @@
         "UserVerifyInfo": {
           "$ref": "#/definitions/protoUserVerifyInfoV1"
         },
-        "SwcName": {
+        "SwcUuid": {
           "type": "string"
         },
         "VersionEndTime": {
@@ -3710,7 +3710,7 @@
         "UserVerifyInfo": {
           "$ref": "#/definitions/protoUserVerifyInfoV1"
         },
-        "SwcName": {
+        "SwcUuid": {
           "type": "string"
         },
         "AnoAttachmentUuid": {
@@ -3738,7 +3738,7 @@
         "UserVerifyInfo": {
           "$ref": "#/definitions/protoUserVerifyInfoV1"
         },
-        "SwcName": {
+        "SwcUuid": {
           "type": "string"
         },
         "ApoAttachmentUuid": {
@@ -3770,7 +3770,7 @@
         "UserVerifyInfo": {
           "$ref": "#/definitions/protoUserVerifyInfoV1"
         },
-        "SwcName": {
+        "SwcUuid": {
           "type": "string"
         },
         "SwcAttachmentUuid": {
@@ -3802,7 +3802,7 @@
         "UserVerifyInfo": {
           "$ref": "#/definitions/protoUserVerifyInfoV1"
         },
-        "SwcName": {
+        "SwcUuid": {
           "type": "string"
         },
         "SwcData": {

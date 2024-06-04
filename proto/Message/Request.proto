@@ -127,7 +127,7 @@ message CreateSwcRequest{
 message DeleteSwcRequest{
     RequestMetaInfoV1 metaInfo = 1;
     UserVerifyInfoV1 UserVerifyInfo = 2;
-    string SwcName = 3;
+    string SwcUuid = 3;
 }
 
 message UpdateSwcRequest{
@@ -139,7 +139,7 @@ message UpdateSwcRequest{
 message GetSwcMetaInfoRequest{
     RequestMetaInfoV1 metaInfo = 1;
     UserVerifyInfoV1 UserVerifyInfo = 2;
-    string SwcName = 3;
+    string SwcUuid = 3;
 }
 
 message GetAllSwcMetaInfoRequest{
@@ -150,13 +150,13 @@ message GetAllSwcMetaInfoRequest{
 message CreateSwcSnapshotRequest{
     RequestMetaInfoV1 metaInfo = 1;
     UserVerifyInfoV1 UserVerifyInfo = 2;
-    string SwcName = 3;
+    string SwcUuid = 3;
 }
 
 message GetAllSnapshotMetaInfoRequest{
     RequestMetaInfoV1 metaInfo = 1;
     UserVerifyInfoV1 UserVerifyInfo = 2;
-    string SwcName = 3;
+    string SwcUuid = 3;
 }
 
 message GetSnapshotRequest{
@@ -168,7 +168,7 @@ message GetSnapshotRequest{
 message GetAllIncrementOperationMetaInfoRequest{
     RequestMetaInfoV1 metaInfo = 1;
     UserVerifyInfoV1 UserVerifyInfo = 2;
-    string SwcName = 3;
+    string SwcUuid = 3;
 }
 
 message GetIncrementOperationRequest{
@@ -180,41 +180,41 @@ message GetIncrementOperationRequest{
 message CreateSwcNodeDataRequest{
     RequestMetaInfoV1 metaInfo = 1;
     UserVerifyInfoV1 UserVerifyInfo = 2;
-    string SwcName = 3;
+    string SwcUuid = 3;
     SwcDataV1 SwcData = 4;
 }
 
 message DeleteSwcNodeDataRequest{
     RequestMetaInfoV1 metaInfo = 1;
     UserVerifyInfoV1 UserVerifyInfo = 2;
-    string SwcName = 3;
+    string SwcUuid = 3;
     SwcDataV1 SwcData = 4;
 }
 
 message UpdateSwcNodeDataRequest{
     RequestMetaInfoV1 metaInfo = 1;
     UserVerifyInfoV1 UserVerifyInfo = 2;
-    string SwcName = 3;
+    string SwcUuid = 3;
     SwcDataV1 SwcData = 4;
 }
 
 message GetSwcNodeDataRequest{
     RequestMetaInfoV1 metaInfo = 1;
     UserVerifyInfoV1 UserVerifyInfo = 2;
-    string SwcName = 3;
+    string SwcUuid = 3;
     SwcDataV1 SwcNodeData = 4;
 }
 
 message GetSwcFullNodeDataRequest{
     RequestMetaInfoV1 metaInfo = 1;
     UserVerifyInfoV1 UserVerifyInfo = 2;
-    string SwcName = 3;
+    string SwcUuid = 3;
 }
 
 message GetSwcNodeDataListByTimeAndUserRequest{
     RequestMetaInfoV1 metaInfo = 1;
     UserVerifyInfoV1 UserVerifyInfo = 2;
-    string SwcName = 3;
+    string SwcUuid = 3;
     google.protobuf.Timestamp StartTime = 4;
     google.protobuf.Timestamp EndTime = 5;
     string UserName = 6;
@@ -252,21 +252,21 @@ message GetAllDailyStatisticsRequest{
 message CreateSwcAttachmentAnoRequest{
     RequestMetaInfoV1 metaInfo = 1;
     UserVerifyInfoV1 UserVerifyInfo = 2;
-    string SwcName = 3;
+    string SwcUuid = 3;
     SwcAttachmentAnoV1 SwcAttachmentAno = 4;
 }
 
 message DeleteSwcAttachmentAnoRequest{
     RequestMetaInfoV1 metaInfo = 1;
     UserVerifyInfoV1 UserVerifyInfo = 2;
-    string SwcName = 3;
+    string SwcUuid = 3;
     string AnoAttachmentUuid = 4;
 }
 
 message UpdateSwcAttachmentAnoRequest{
     RequestMetaInfoV1 metaInfo = 1;
     UserVerifyInfoV1 UserVerifyInfo = 2;
-    string SwcName = 3;
+    string SwcUuid = 3;
     string AnoAttachmentUuid = 4;
     SwcAttachmentAnoV1 NewSwcAttachmentAno = 5;
 }
@@ -274,28 +274,28 @@ message UpdateSwcAttachmentAnoRequest{
 message GetSwcAttachmentAnoRequest{
     RequestMetaInfoV1 metaInfo = 1;
     UserVerifyInfoV1 UserVerifyInfo = 2;
-    string SwcName = 3;
+    string SwcUuid = 3;
     string AnoAttachmentUuid = 4;
 }
 
 message CreateSwcAttachmentApoRequest{
     RequestMetaInfoV1 metaInfo = 1;
     UserVerifyInfoV1 UserVerifyInfo = 2;
-    string SwcName = 3;
+    string SwcUuid = 3;
     repeated SwcAttachmentApoV1 SwcAttachmentApo = 4;
 }
 
 message DeleteSwcAttachmentApoRequest{
     RequestMetaInfoV1 metaInfo = 1;
     UserVerifyInfoV1 UserVerifyInfo = 2;
-    string SwcName = 3;
+    string SwcUuid = 3;
     string ApoAttachmentUuid = 4;
 }
 
 message UpdateSwcAttachmentApoRequest{
     RequestMetaInfoV1 metaInfo = 1;
     UserVerifyInfoV1 UserVerifyInfo = 2;
-    string SwcName = 3;
+    string SwcUuid = 3;
     string ApoAttachmentUuid = 4;
     repeated SwcAttachmentApoV1 NewSwcAttachmentApo = 5;
 }
@@ -303,35 +303,35 @@ message UpdateSwcAttachmentApoRequest{
 message GetSwcAttachmentApoRequest{
     RequestMetaInfoV1 metaInfo = 1;
     UserVerifyInfoV1 UserVerifyInfo = 2;
-    string SwcName = 3;
+    string SwcUuid = 3;
     string ApoAttachmentUuid = 4;
 }
 
 message RevertSwcVersionRequest{
     RequestMetaInfoV1 metaInfo = 1;
     UserVerifyInfoV1 UserVerifyInfo = 2;
-    string SwcName = 3;
+    string SwcUuid = 3;
     google.protobuf.Timestamp VersionEndTime = 4;
 }
 
 message CreateSwcAttachmentSwcRequest{
     RequestMetaInfoV1 metaInfo = 1;
     UserVerifyInfoV1 UserVerifyInfo = 2;
-    string SwcName = 3;
+    string SwcUuid = 3;
     repeated SwcNodeDataV1 SwcData = 4;
 }
 
 message DeleteSwcAttachmentSwcRequest{
     RequestMetaInfoV1 metaInfo = 1;
     UserVerifyInfoV1 UserVerifyInfo = 2;
-    string SwcName = 3;
+    string SwcUuid = 3;
     string SwcAttachmentUuid = 4;
 }
 
 message UpdateSwcAttachmentSwcRequest{
     RequestMetaInfoV1 metaInfo = 1;
     UserVerifyInfoV1 UserVerifyInfo = 2;
-    string SwcName = 3;
+    string SwcUuid = 3;
     string SwcAttachmentUuid = 4;
     repeated SwcNodeDataV1 NewSwcData = 5;
 }
@@ -339,7 +339,7 @@ message UpdateSwcAttachmentSwcRequest{
 message GetSwcAttachmentSwcRequest{
     RequestMetaInfoV1 metaInfo = 1;
     UserVerifyInfoV1 UserVerifyInfo = 2;
-    string SwcName = 3;
+    string SwcUuid = 3;
     string SwcAttachmentUuid = 4;
 }
 
