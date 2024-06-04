@@ -321,6 +321,7 @@ PROTOBUF_CONSTEXPR SwcMetaInfoV1::SwcMetaInfoV1(
   , /*decltype(_impl_.swctype_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.currentincrementoperationcollectionname_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.swcattachmentswcuuid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.belongingprojectuuid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.base_)*/nullptr
   , /*decltype(_impl_.createtime_)*/nullptr
   , /*decltype(_impl_.lastmodifiedtime_)*/nullptr
@@ -721,6 +722,7 @@ const uint32_t TableStruct_Message_2fMessage_2eproto::offsets[] PROTOBUF_SECTION
   PROTOBUF_FIELD_OFFSET(::proto::SwcMetaInfoV1, _impl_.swcattachmentapometainfo_),
   PROTOBUF_FIELD_OFFSET(::proto::SwcMetaInfoV1, _impl_.swcattachmentswcuuid_),
   PROTOBUF_FIELD_OFFSET(::proto::SwcMetaInfoV1, _impl_.permission_),
+  PROTOBUF_FIELD_OFFSET(::proto::SwcMetaInfoV1, _impl_.belongingprojectuuid_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::proto::SwcNodeInternalDataV1, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -857,15 +859,15 @@ static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protode
   { 174, -1, -1, sizeof(::proto::SwcAttachmentAnoMetaInfoV1)},
   { 181, -1, -1, sizeof(::proto::SwcAttachmentApoMetaInfoV1)},
   { 188, -1, -1, sizeof(::proto::SwcMetaInfoV1)},
-  { 208, -1, -1, sizeof(::proto::SwcNodeInternalDataV1)},
-  { 226, -1, -1, sizeof(::proto::SwcNodeDataV1)},
-  { 238, -1, -1, sizeof(::proto::SwcDataV1)},
-  { 245, -1, -1, sizeof(::proto::DailyStatisticsMetaInfoV1)},
-  { 268, -1, -1, sizeof(::proto::UserVerifyInfoV1)},
-  { 277, -1, -1, sizeof(::proto::RequestMetaInfoV1)},
-  { 284, -1, -1, sizeof(::proto::ResponseMetaInfoV1)},
-  { 293, -1, -1, sizeof(::proto::SwcAttachmentAnoV1)},
-  { 302, -1, -1, sizeof(::proto::SwcAttachmentApoV1)},
+  { 209, -1, -1, sizeof(::proto::SwcNodeInternalDataV1)},
+  { 227, -1, -1, sizeof(::proto::SwcNodeDataV1)},
+  { 239, -1, -1, sizeof(::proto::SwcDataV1)},
+  { 246, -1, -1, sizeof(::proto::DailyStatisticsMetaInfoV1)},
+  { 269, -1, -1, sizeof(::proto::UserVerifyInfoV1)},
+  { 278, -1, -1, sizeof(::proto::RequestMetaInfoV1)},
+  { 285, -1, -1, sizeof(::proto::ResponseMetaInfoV1)},
+  { 294, -1, -1, sizeof(::proto::SwcAttachmentAnoV1)},
+  { 303, -1, -1, sizeof(::proto::SwcAttachmentApoV1)},
 };
 
 static const ::_pb::Message* const file_default_instances[] = {
@@ -985,7 +987,7 @@ const char descriptor_table_protodef_Message_2fMessage_2eproto[] PROTOBUF_SECTIO
   "ncrementOperationV1\"4\n\032SwcAttachmentAnoM"
   "etaInfoV1\022\026\n\016AttachmentUuid\030\001 \001(\t\"4\n\032Swc"
   "AttachmentApoMetaInfoV1\022\026\n\016AttachmentUui"
-  "d\030\001 \001(\t\"\371\004\n\rSwcMetaInfoV1\022!\n\004Base\030\001 \001(\0132"
+  "d\030\001 \001(\t\"\227\005\n\rSwcMetaInfoV1\022!\n\004Base\030\001 \001(\0132"
   "\023.proto.MetaInfoBase\022\014\n\004Name\030\002 \001(\t\022\023\n\013De"
   "scription\030\003 \001(\t\022\017\n\007Creator\030\004 \001(\t\022\017\n\007SwcT"
   "ype\030\005 \001(\t\022.\n\nCreateTime\030\006 \001(\0132\032.google.p"
@@ -1001,55 +1003,56 @@ const char descriptor_table_protodef_Message_2fMessage_2eproto[] PROTOBUF_SECTIO
   "nfo\030\014 \001(\0132!.proto.SwcAttachmentApoMetaIn"
   "foV1\022\034\n\024SwcAttachmentSwcUuid\030\r \001(\t\022/\n\nPe"
   "rmission\030\016 \001(\0132\033.proto.PermissionMetaInf"
-  "oV1\"\310\001\n\025SwcNodeInternalDataV1\022\t\n\001N\030\001 \001(\005"
-  "\022\014\n\004Type\030\002 \001(\005\022\t\n\001X\030\003 \001(\002\022\t\n\001Y\030\004 \001(\002\022\t\n\001"
-  "Z\030\005 \001(\002\022\016\n\006Radius\030\006 \001(\002\022\016\n\006Parent\030\007 \001(\005\022"
-  "\016\n\006Seg_id\030\010 \001(\005\022\r\n\005Level\030\t \001(\005\022\014\n\004Mode\030\n"
-  " \001(\005\022\021\n\tTimestamp\030\013 \001(\005\022\025\n\rFeature_value"
-  "\030\014 \001(\005\"\375\001\n\rSwcNodeDataV1\022!\n\004Base\030\001 \001(\0132\023"
-  ".proto.MetaInfoBase\0229\n\023SwcNodeInternalDa"
-  "ta\030\002 \001(\0132\034.proto.SwcNodeInternalDataV1\022\017"
-  "\n\007Creator\030\003 \001(\t\022.\n\nCreateTime\030\004 \001(\0132\032.go"
-  "ogle.protobuf.Timestamp\0224\n\020LastModifiedT"
-  "ime\030\005 \001(\0132\032.google.protobuf.Timestamp\022\027\n"
-  "\017CheckerUserUuid\030\006 \001(\t\"2\n\tSwcDataV1\022%\n\007S"
-  "wcData\030\001 \003(\0132\024.proto.SwcNodeDataV1\"\331\003\n\031D"
-  "ailyStatisticsMetaInfoV1\022!\n\004Base\030\001 \001(\0132\023"
-  ".proto.MetaInfoBase\022\014\n\004Name\030\002 \001(\t\022\023\n\013Des"
-  "cription\030\003 \001(\t\022\013\n\003Day\030\004 \001(\t\022\034\n\024CreatedPr"
-  "ojectNumber\030\005 \001(\005\022\030\n\020CreatedSwcNumber\030\006 "
-  "\001(\005\022\033\n\023CreateSwcNodeNumber\030\007 \001(\005\022\034\n\024Dele"
-  "tedProjectNumber\030\010 \001(\005\022\030\n\020DeletedSwcNumb"
-  "er\030\t \001(\005\022\034\n\024DeletedSwcNodeNumber\030\n \001(\005\022\035"
-  "\n\025ModifiedProjectNumber\030\013 \001(\005\022\031\n\021Modifie"
-  "dSwcNumber\030\014 \001(\005\022\035\n\025ModifiedSwcNodeNumbe"
-  "r\030\r \001(\005\022\032\n\022ProjectQueryNumber\030\016 \001(\005\022\026\n\016S"
-  "wcQueryNumber\030\017 \001(\005\022\027\n\017NodeQueryNumber\030\020"
-  " \001(\005\022\030\n\020ActiveUserNumber\030\021 \001(\005\"M\n\020UserVe"
-  "rifyInfoV1\022\020\n\010UserName\030\001 \001(\t\022\021\n\tUserToke"
-  "n\030\002 \001(\t\022\024\n\014UserPassword\030\003 \001(\t\"\'\n\021Request"
-  "MetaInfoV1\022\022\n\nApiVersion\030\001 \001(\t\"A\n\022Respon"
-  "seMetaInfoV1\022\016\n\006Status\030\001 \001(\010\022\n\n\002Id\030\002 \001(\t"
-  "\022\017\n\007Message\030\003 \001(\t\"Y\n\022SwcAttachmentAnoV1\022"
-  "!\n\004Base\030\001 \001(\0132\023.proto.MetaInfoBase\022\017\n\007AP"
-  "OFILE\030\002 \001(\t\022\017\n\007SWCFILE\030\003 \001(\t\"\225\002\n\022SwcAtta"
-  "chmentApoV1\022!\n\004Base\030\001 \001(\0132\023.proto.MetaIn"
-  "foBase\022\t\n\001N\030\002 \001(\005\022\021\n\tOrderinfo\030\003 \001(\t\022\014\n\004"
-  "Name\030\004 \001(\t\022\017\n\007Comment\030\005 \001(\t\022\t\n\001Z\030\006 \001(\002\022\t"
-  "\n\001X\030\007 \001(\002\022\t\n\001Y\030\010 \001(\002\022\016\n\006Pixmax\030\t \001(\002\022\021\n\t"
-  "Intensity\030\n \001(\002\022\014\n\004Sdev\030\013 \001(\002\022\017\n\007Volsize"
-  "\030\014 \001(\002\022\014\n\004Mass\030\r \001(\002\022\016\n\006ColorR\030\016 \001(\005\022\016\n\006"
-  "ColorG\030\017 \001(\005\022\016\n\006ColorB\030\020 \001(\005*G\n\024Incremen"
-  "tOperationV1\022\013\n\007Unknown\020\000\022\n\n\006Create\020\001\022\n\n"
-  "\006Delete\020\002\022\n\n\006Update\020\003B/Z-DBMS/SwcDbmsCom"
-  "mon/Generated/go/proto/messageP\000b\006proto3"
+  "oV1\022\034\n\024BelongingProjectUuid\030\017 \001(\t\"\310\001\n\025Sw"
+  "cNodeInternalDataV1\022\t\n\001N\030\001 \001(\005\022\014\n\004Type\030\002"
+  " \001(\005\022\t\n\001X\030\003 \001(\002\022\t\n\001Y\030\004 \001(\002\022\t\n\001Z\030\005 \001(\002\022\016\n"
+  "\006Radius\030\006 \001(\002\022\016\n\006Parent\030\007 \001(\005\022\016\n\006Seg_id\030"
+  "\010 \001(\005\022\r\n\005Level\030\t \001(\005\022\014\n\004Mode\030\n \001(\005\022\021\n\tTi"
+  "mestamp\030\013 \001(\005\022\025\n\rFeature_value\030\014 \001(\005\"\375\001\n"
+  "\rSwcNodeDataV1\022!\n\004Base\030\001 \001(\0132\023.proto.Met"
+  "aInfoBase\0229\n\023SwcNodeInternalData\030\002 \001(\0132\034"
+  ".proto.SwcNodeInternalDataV1\022\017\n\007Creator\030"
+  "\003 \001(\t\022.\n\nCreateTime\030\004 \001(\0132\032.google.proto"
+  "buf.Timestamp\0224\n\020LastModifiedTime\030\005 \001(\0132"
+  "\032.google.protobuf.Timestamp\022\027\n\017CheckerUs"
+  "erUuid\030\006 \001(\t\"2\n\tSwcDataV1\022%\n\007SwcData\030\001 \003"
+  "(\0132\024.proto.SwcNodeDataV1\"\331\003\n\031DailyStatis"
+  "ticsMetaInfoV1\022!\n\004Base\030\001 \001(\0132\023.proto.Met"
+  "aInfoBase\022\014\n\004Name\030\002 \001(\t\022\023\n\013Description\030\003"
+  " \001(\t\022\013\n\003Day\030\004 \001(\t\022\034\n\024CreatedProjectNumbe"
+  "r\030\005 \001(\005\022\030\n\020CreatedSwcNumber\030\006 \001(\005\022\033\n\023Cre"
+  "ateSwcNodeNumber\030\007 \001(\005\022\034\n\024DeletedProject"
+  "Number\030\010 \001(\005\022\030\n\020DeletedSwcNumber\030\t \001(\005\022\034"
+  "\n\024DeletedSwcNodeNumber\030\n \001(\005\022\035\n\025Modified"
+  "ProjectNumber\030\013 \001(\005\022\031\n\021ModifiedSwcNumber"
+  "\030\014 \001(\005\022\035\n\025ModifiedSwcNodeNumber\030\r \001(\005\022\032\n"
+  "\022ProjectQueryNumber\030\016 \001(\005\022\026\n\016SwcQueryNum"
+  "ber\030\017 \001(\005\022\027\n\017NodeQueryNumber\030\020 \001(\005\022\030\n\020Ac"
+  "tiveUserNumber\030\021 \001(\005\"M\n\020UserVerifyInfoV1"
+  "\022\020\n\010UserName\030\001 \001(\t\022\021\n\tUserToken\030\002 \001(\t\022\024\n"
+  "\014UserPassword\030\003 \001(\t\"\'\n\021RequestMetaInfoV1"
+  "\022\022\n\nApiVersion\030\001 \001(\t\"A\n\022ResponseMetaInfo"
+  "V1\022\016\n\006Status\030\001 \001(\010\022\n\n\002Id\030\002 \001(\t\022\017\n\007Messag"
+  "e\030\003 \001(\t\"Y\n\022SwcAttachmentAnoV1\022!\n\004Base\030\001 "
+  "\001(\0132\023.proto.MetaInfoBase\022\017\n\007APOFILE\030\002 \001("
+  "\t\022\017\n\007SWCFILE\030\003 \001(\t\"\225\002\n\022SwcAttachmentApoV"
+  "1\022!\n\004Base\030\001 \001(\0132\023.proto.MetaInfoBase\022\t\n\001"
+  "N\030\002 \001(\005\022\021\n\tOrderinfo\030\003 \001(\t\022\014\n\004Name\030\004 \001(\t"
+  "\022\017\n\007Comment\030\005 \001(\t\022\t\n\001Z\030\006 \001(\002\022\t\n\001X\030\007 \001(\002\022"
+  "\t\n\001Y\030\010 \001(\002\022\016\n\006Pixmax\030\t \001(\002\022\021\n\tIntensity\030"
+  "\n \001(\002\022\014\n\004Sdev\030\013 \001(\002\022\017\n\007Volsize\030\014 \001(\002\022\014\n\004"
+  "Mass\030\r \001(\002\022\016\n\006ColorR\030\016 \001(\005\022\016\n\006ColorG\030\017 \001"
+  "(\005\022\016\n\006ColorB\030\020 \001(\005*G\n\024IncrementOperation"
+  "V1\022\013\n\007Unknown\020\000\022\n\n\006Create\020\001\022\n\n\006Delete\020\002\022"
+  "\n\n\006Update\020\003B/Z-DBMS/SwcDbmsCommon/Genera"
+  "ted/go/proto/messageP\000b\006proto3"
   ;
 static const ::_pbi::DescriptorTable* const descriptor_table_Message_2fMessage_2eproto_deps[1] = {
   &::descriptor_table_google_2fprotobuf_2ftimestamp_2eproto,
 };
 static ::_pbi::once_flag descriptor_table_Message_2fMessage_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_Message_2fMessage_2eproto = {
-    false, false, 5760, descriptor_table_protodef_Message_2fMessage_2eproto,
+    false, false, 5790, descriptor_table_protodef_Message_2fMessage_2eproto,
     "Message/Message.proto",
     &descriptor_table_Message_2fMessage_2eproto_once, descriptor_table_Message_2fMessage_2eproto_deps, 1, 27,
     schemas, file_default_instances, TableStruct_Message_2fMessage_2eproto::offsets,
@@ -6976,6 +6979,7 @@ SwcMetaInfoV1::SwcMetaInfoV1(const SwcMetaInfoV1& from)
     , decltype(_impl_.swctype_){}
     , decltype(_impl_.currentincrementoperationcollectionname_){}
     , decltype(_impl_.swcattachmentswcuuid_){}
+    , decltype(_impl_.belongingprojectuuid_){}
     , decltype(_impl_.base_){nullptr}
     , decltype(_impl_.createtime_){nullptr}
     , decltype(_impl_.lastmodifiedtime_){nullptr}
@@ -7033,6 +7037,14 @@ SwcMetaInfoV1::SwcMetaInfoV1(const SwcMetaInfoV1& from)
     _this->_impl_.swcattachmentswcuuid_.Set(from._internal_swcattachmentswcuuid(), 
       _this->GetArenaForAllocation());
   }
+  _impl_.belongingprojectuuid_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.belongingprojectuuid_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (!from._internal_belongingprojectuuid().empty()) {
+    _this->_impl_.belongingprojectuuid_.Set(from._internal_belongingprojectuuid(), 
+      _this->GetArenaForAllocation());
+  }
   if (from._internal_has_base()) {
     _this->_impl_.base_ = new ::proto::MetaInfoBase(*from._impl_.base_);
   }
@@ -7067,6 +7079,7 @@ inline void SwcMetaInfoV1::SharedCtor(
     , decltype(_impl_.swctype_){}
     , decltype(_impl_.currentincrementoperationcollectionname_){}
     , decltype(_impl_.swcattachmentswcuuid_){}
+    , decltype(_impl_.belongingprojectuuid_){}
     , decltype(_impl_.base_){nullptr}
     , decltype(_impl_.createtime_){nullptr}
     , decltype(_impl_.lastmodifiedtime_){nullptr}
@@ -7099,6 +7112,10 @@ inline void SwcMetaInfoV1::SharedCtor(
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.swcattachmentswcuuid_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  _impl_.belongingprojectuuid_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.belongingprojectuuid_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 SwcMetaInfoV1::~SwcMetaInfoV1() {
@@ -7120,6 +7137,7 @@ inline void SwcMetaInfoV1::SharedDtor() {
   _impl_.swctype_.Destroy();
   _impl_.currentincrementoperationcollectionname_.Destroy();
   _impl_.swcattachmentswcuuid_.Destroy();
+  _impl_.belongingprojectuuid_.Destroy();
   if (this != internal_default_instance()) delete _impl_.base_;
   if (this != internal_default_instance()) delete _impl_.createtime_;
   if (this != internal_default_instance()) delete _impl_.lastmodifiedtime_;
@@ -7146,6 +7164,7 @@ void SwcMetaInfoV1::Clear() {
   _impl_.swctype_.ClearToEmpty();
   _impl_.currentincrementoperationcollectionname_.ClearToEmpty();
   _impl_.swcattachmentswcuuid_.ClearToEmpty();
+  _impl_.belongingprojectuuid_.ClearToEmpty();
   if (GetArenaForAllocation() == nullptr && _impl_.base_ != nullptr) {
     delete _impl_.base_;
   }
@@ -7313,6 +7332,16 @@ const char* SwcMetaInfoV1::_InternalParse(const char* ptr, ::_pbi::ParseContext*
         } else
           goto handle_unusual;
         continue;
+      // string BelongingProjectUuid = 15;
+      case 15:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 122)) {
+          auto str = _internal_mutable_belongingprojectuuid();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "proto.SwcMetaInfoV1.BelongingProjectUuid"));
+        } else
+          goto handle_unusual;
+        continue;
       default:
         goto handle_unusual;
     }  // switch
@@ -7460,6 +7489,16 @@ uint8_t* SwcMetaInfoV1::_InternalSerialize(
         _Internal::permission(this).GetCachedSize(), target, stream);
   }
 
+  // string BelongingProjectUuid = 15;
+  if (!this->_internal_belongingprojectuuid().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_belongingprojectuuid().data(), static_cast<int>(this->_internal_belongingprojectuuid().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "proto.SwcMetaInfoV1.BelongingProjectUuid");
+    target = stream->WriteStringMaybeAliased(
+        15, this->_internal_belongingprojectuuid(), target);
+  }
+
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
@@ -7530,6 +7569,13 @@ size_t SwcMetaInfoV1::ByteSizeLong() const {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_swcattachmentswcuuid());
+  }
+
+  // string BelongingProjectUuid = 15;
+  if (!this->_internal_belongingprojectuuid().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_belongingprojectuuid());
   }
 
   // .proto.MetaInfoBase Base = 1;
@@ -7612,6 +7658,9 @@ void SwcMetaInfoV1::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::
   if (!from._internal_swcattachmentswcuuid().empty()) {
     _this->_internal_set_swcattachmentswcuuid(from._internal_swcattachmentswcuuid());
   }
+  if (!from._internal_belongingprojectuuid().empty()) {
+    _this->_internal_set_belongingprojectuuid(from._internal_belongingprojectuuid());
+  }
   if (from._internal_has_base()) {
     _this->_internal_mutable_base()->::proto::MetaInfoBase::MergeFrom(
         from._internal_base());
@@ -7680,6 +7729,10 @@ void SwcMetaInfoV1::InternalSwap(SwcMetaInfoV1* other) {
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.swcattachmentswcuuid_, lhs_arena,
       &other->_impl_.swcattachmentswcuuid_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.belongingprojectuuid_, lhs_arena,
+      &other->_impl_.belongingprojectuuid_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(SwcMetaInfoV1, _impl_.permission_)

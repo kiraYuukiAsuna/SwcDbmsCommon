@@ -171,6 +171,7 @@ message SwcMetaInfoV1{
     SwcAttachmentApoMetaInfoV1 SwcAttachmentApoMetaInfo = 12;
     string SwcAttachmentSwcUuid = 13;
 	PermissionMetaInfoV1 Permission = 14;
+    string BelongingProjectUuid = 15;
 }
 
 message SwcNodeInternalDataV1{

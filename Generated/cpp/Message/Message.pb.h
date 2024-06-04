@@ -3945,6 +3945,7 @@ class SwcMetaInfoV1 final :
     kSwcTypeFieldNumber = 5,
     kCurrentIncrementOperationCollectionNameFieldNumber = 10,
     kSwcAttachmentSwcUuidFieldNumber = 13,
+    kBelongingProjectUuidFieldNumber = 15,
     kBaseFieldNumber = 1,
     kCreateTimeFieldNumber = 6,
     kLastModifiedTimeFieldNumber = 7,
@@ -4072,6 +4073,20 @@ class SwcMetaInfoV1 final :
   std::string* _internal_mutable_swcattachmentswcuuid();
   public:
 
+  // string BelongingProjectUuid = 15;
+  void clear_belongingprojectuuid();
+  const std::string& belongingprojectuuid() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_belongingprojectuuid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_belongingprojectuuid();
+  PROTOBUF_NODISCARD std::string* release_belongingprojectuuid();
+  void set_allocated_belongingprojectuuid(std::string* belongingprojectuuid);
+  private:
+  const std::string& _internal_belongingprojectuuid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_belongingprojectuuid(const std::string& value);
+  std::string* _internal_mutable_belongingprojectuuid();
+  public:
+
   // .proto.MetaInfoBase Base = 1;
   bool has_base() const;
   private:
@@ -4196,6 +4211,7 @@ class SwcMetaInfoV1 final :
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr swctype_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr currentincrementoperationcollectionname_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr swcattachmentswcuuid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr belongingprojectuuid_;
     ::proto::MetaInfoBase* base_;
     ::PROTOBUF_NAMESPACE_ID::Timestamp* createtime_;
     ::PROTOBUF_NAMESPACE_ID::Timestamp* lastmodifiedtime_;
@@ -11246,6 +11262,56 @@ inline void SwcMetaInfoV1::set_allocated_permission(::proto::PermissionMetaInfoV
   }
   _impl_.permission_ = permission;
   // @@protoc_insertion_point(field_set_allocated:proto.SwcMetaInfoV1.Permission)
+}
+
+// string BelongingProjectUuid = 15;
+inline void SwcMetaInfoV1::clear_belongingprojectuuid() {
+  _impl_.belongingprojectuuid_.ClearToEmpty();
+}
+inline const std::string& SwcMetaInfoV1::belongingprojectuuid() const {
+  // @@protoc_insertion_point(field_get:proto.SwcMetaInfoV1.BelongingProjectUuid)
+  return _internal_belongingprojectuuid();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void SwcMetaInfoV1::set_belongingprojectuuid(ArgT0&& arg0, ArgT... args) {
+ 
+ _impl_.belongingprojectuuid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:proto.SwcMetaInfoV1.BelongingProjectUuid)
+}
+inline std::string* SwcMetaInfoV1::mutable_belongingprojectuuid() {
+  std::string* _s = _internal_mutable_belongingprojectuuid();
+  // @@protoc_insertion_point(field_mutable:proto.SwcMetaInfoV1.BelongingProjectUuid)
+  return _s;
+}
+inline const std::string& SwcMetaInfoV1::_internal_belongingprojectuuid() const {
+  return _impl_.belongingprojectuuid_.Get();
+}
+inline void SwcMetaInfoV1::_internal_set_belongingprojectuuid(const std::string& value) {
+  
+  _impl_.belongingprojectuuid_.Set(value, GetArenaForAllocation());
+}
+inline std::string* SwcMetaInfoV1::_internal_mutable_belongingprojectuuid() {
+  
+  return _impl_.belongingprojectuuid_.Mutable(GetArenaForAllocation());
+}
+inline std::string* SwcMetaInfoV1::release_belongingprojectuuid() {
+  // @@protoc_insertion_point(field_release:proto.SwcMetaInfoV1.BelongingProjectUuid)
+  return _impl_.belongingprojectuuid_.Release();
+}
+inline void SwcMetaInfoV1::set_allocated_belongingprojectuuid(std::string* belongingprojectuuid) {
+  if (belongingprojectuuid != nullptr) {
+    
+  } else {
+    
+  }
+  _impl_.belongingprojectuuid_.SetAllocated(belongingprojectuuid, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.belongingprojectuuid_.IsDefault()) {
+    _impl_.belongingprojectuuid_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:proto.SwcMetaInfoV1.BelongingProjectUuid)
 }
 
 // -------------------------------------------------------------------

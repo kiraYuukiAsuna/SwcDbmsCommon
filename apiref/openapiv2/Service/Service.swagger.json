@@ -3518,6 +3518,9 @@
         },
         "Permission": {
           "$ref": "#/definitions/protoPermissionMetaInfoV1"
+        },
+        "BelongingProjectUuid": {
+          "type": "string"
         }
       }
     },
