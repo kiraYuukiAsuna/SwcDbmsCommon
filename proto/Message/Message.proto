@@ -267,3 +267,9 @@ message SwcUuidName{
     string SwcUuid = 1;
     string SwcName = 2;
 }
+
+message NodeNParent{
+    string NodeUuid = 1;
+    int32 N = 2;
+    int32 Parent = 3;
+}

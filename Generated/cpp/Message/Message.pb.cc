@@ -522,8 +522,23 @@ struct SwcUuidNameDefaultTypeInternal {
   };
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SwcUuidNameDefaultTypeInternal _SwcUuidName_default_instance_;
+PROTOBUF_CONSTEXPR NodeNParent::NodeNParent(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.nodeuuid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.n_)*/0
+  , /*decltype(_impl_.parent_)*/0
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct NodeNParentDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR NodeNParentDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~NodeNParentDefaultTypeInternal() {}
+  union {
+    NodeNParent _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 NodeNParentDefaultTypeInternal _NodeNParent_default_instance_;
 }  // namespace proto
-static ::_pb::Metadata file_level_metadata_Message_2fMessage_2eproto[28];
+static ::_pb::Metadata file_level_metadata_Message_2fMessage_2eproto[29];
 static const ::_pb::EnumDescriptor* file_level_enum_descriptors_Message_2fMessage_2eproto[1];
 static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_Message_2fMessage_2eproto = nullptr;
 
@@ -861,6 +876,15 @@ const uint32_t TableStruct_Message_2fMessage_2eproto::offsets[] PROTOBUF_SECTION
   ~0u,  // no _inlined_string_donated_
   PROTOBUF_FIELD_OFFSET(::proto::SwcUuidName, _impl_.swcuuid_),
   PROTOBUF_FIELD_OFFSET(::proto::SwcUuidName, _impl_.swcname_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::proto::NodeNParent, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::proto::NodeNParent, _impl_.nodeuuid_),
+  PROTOBUF_FIELD_OFFSET(::proto::NodeNParent, _impl_.n_),
+  PROTOBUF_FIELD_OFFSET(::proto::NodeNParent, _impl_.parent_),
 };
 static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, -1, sizeof(::proto::MetaInfoBase)},
@@ -891,6 +915,7 @@ static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protode
   { 294, -1, -1, sizeof(::proto::SwcAttachmentAnoV1)},
   { 303, -1, -1, sizeof(::proto::SwcAttachmentApoV1)},
   { 325, -1, -1, sizeof(::proto::SwcUuidName)},
+  { 333, -1, -1, sizeof(::proto::NodeNParent)},
 };
 
 static const ::_pb::Message* const file_default_instances[] = {
@@ -922,6 +947,7 @@ static const ::_pb::Message* const file_default_instances[] = {
   &::proto::_SwcAttachmentAnoV1_default_instance_._instance,
   &::proto::_SwcAttachmentApoV1_default_instance_._instance,
   &::proto::_SwcUuidName_default_instance_._instance,
+  &::proto::_NodeNParent_default_instance_._instance,
 };
 
 const char descriptor_table_protodef_Message_2fMessage_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
@@ -1067,19 +1093,21 @@ const char descriptor_table_protodef_Message_2fMessage_2eproto[] PROTOBUF_SECTIO
   "\n \001(\002\022\014\n\004Sdev\030\013 \001(\002\022\017\n\007Volsize\030\014 \001(\002\022\014\n\004"
   "Mass\030\r \001(\002\022\016\n\006ColorR\030\016 \001(\005\022\016\n\006ColorG\030\017 \001"
   "(\005\022\016\n\006ColorB\030\020 \001(\005\"/\n\013SwcUuidName\022\017\n\007Swc"
-  "Uuid\030\001 \001(\t\022\017\n\007SwcName\030\002 \001(\t*G\n\024Increment"
-  "OperationV1\022\013\n\007Unknown\020\000\022\n\n\006Create\020\001\022\n\n\006"
-  "Delete\020\002\022\n\n\006Update\020\003B/Z-DBMS/SwcDbmsComm"
-  "on/Generated/go/proto/messageP\000b\006proto3"
+  "Uuid\030\001 \001(\t\022\017\n\007SwcName\030\002 \001(\t\":\n\013NodeNPare"
+  "nt\022\020\n\010NodeUuid\030\001 \001(\t\022\t\n\001N\030\002 \001(\005\022\016\n\006Paren"
+  "t\030\003 \001(\005*G\n\024IncrementOperationV1\022\013\n\007Unkno"
+  "wn\020\000\022\n\n\006Create\020\001\022\n\n\006Delete\020\002\022\n\n\006Update\020\003"
+  "B/Z-DBMS/SwcDbmsCommon/Generated/go/prot"
+  "o/messageP\000b\006proto3"
   ;
 static const ::_pbi::DescriptorTable* const descriptor_table_Message_2fMessage_2eproto_deps[1] = {
   &::descriptor_table_google_2fprotobuf_2ftimestamp_2eproto,
 };
 static ::_pbi::once_flag descriptor_table_Message_2fMessage_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_Message_2fMessage_2eproto = {
-    false, false, 5839, descriptor_table_protodef_Message_2fMessage_2eproto,
+    false, false, 5899, descriptor_table_protodef_Message_2fMessage_2eproto,
     "Message/Message.proto",
-    &descriptor_table_Message_2fMessage_2eproto_once, descriptor_table_Message_2fMessage_2eproto_deps, 1, 28,
+    &descriptor_table_Message_2fMessage_2eproto_once, descriptor_table_Message_2fMessage_2eproto_deps, 1, 29,
     schemas, file_default_instances, TableStruct_Message_2fMessage_2eproto::offsets,
     file_level_metadata_Message_2fMessage_2eproto, file_level_enum_descriptors_Message_2fMessage_2eproto,
     file_level_service_descriptors_Message_2fMessage_2eproto,
@@ -11640,6 +11668,269 @@ void SwcUuidName::InternalSwap(SwcUuidName* other) {
       file_level_metadata_Message_2fMessage_2eproto[27]);
 }
 
+// ===================================================================
+
+class NodeNParent::_Internal {
+ public:
+};
+
+NodeNParent::NodeNParent(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:proto.NodeNParent)
+}
+NodeNParent::NodeNParent(const NodeNParent& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  NodeNParent* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.nodeuuid_){}
+    , decltype(_impl_.n_){}
+    , decltype(_impl_.parent_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _impl_.nodeuuid_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.nodeuuid_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (!from._internal_nodeuuid().empty()) {
+    _this->_impl_.nodeuuid_.Set(from._internal_nodeuuid(), 
+      _this->GetArenaForAllocation());
+  }
+  ::memcpy(&_impl_.n_, &from._impl_.n_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.parent_) -
+    reinterpret_cast<char*>(&_impl_.n_)) + sizeof(_impl_.parent_));
+  // @@protoc_insertion_point(copy_constructor:proto.NodeNParent)
+}
+
+inline void NodeNParent::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.nodeuuid_){}
+    , decltype(_impl_.n_){0}
+    , decltype(_impl_.parent_){0}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+  _impl_.nodeuuid_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.nodeuuid_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+}
+
+NodeNParent::~NodeNParent() {
+  // @@protoc_insertion_point(destructor:proto.NodeNParent)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void NodeNParent::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.nodeuuid_.Destroy();
+}
+
+void NodeNParent::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void NodeNParent::Clear() {
+// @@protoc_insertion_point(message_clear_start:proto.NodeNParent)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _impl_.nodeuuid_.ClearToEmpty();
+  ::memset(&_impl_.n_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&_impl_.parent_) -
+      reinterpret_cast<char*>(&_impl_.n_)) + sizeof(_impl_.parent_));
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* NodeNParent::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // string NodeUuid = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          auto str = _internal_mutable_nodeuuid();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "proto.NodeNParent.NodeUuid"));
+        } else
+          goto handle_unusual;
+        continue;
+      // int32 N = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          _impl_.n_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // int32 Parent = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
+          _impl_.parent_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* NodeNParent::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:proto.NodeNParent)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // string NodeUuid = 1;
+  if (!this->_internal_nodeuuid().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_nodeuuid().data(), static_cast<int>(this->_internal_nodeuuid().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "proto.NodeNParent.NodeUuid");
+    target = stream->WriteStringMaybeAliased(
+        1, this->_internal_nodeuuid(), target);
+  }
+
+  // int32 N = 2;
+  if (this->_internal_n() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(2, this->_internal_n(), target);
+  }
+
+  // int32 Parent = 3;
+  if (this->_internal_parent() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(3, this->_internal_parent(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:proto.NodeNParent)
+  return target;
+}
+
+size_t NodeNParent::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:proto.NodeNParent)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // string NodeUuid = 1;
+  if (!this->_internal_nodeuuid().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_nodeuuid());
+  }
+
+  // int32 N = 2;
+  if (this->_internal_n() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_n());
+  }
+
+  // int32 Parent = 3;
+  if (this->_internal_parent() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_parent());
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData NodeNParent::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    NodeNParent::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*NodeNParent::GetClassData() const { return &_class_data_; }
+
+
+void NodeNParent::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<NodeNParent*>(&to_msg);
+  auto& from = static_cast<const NodeNParent&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:proto.NodeNParent)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (!from._internal_nodeuuid().empty()) {
+    _this->_internal_set_nodeuuid(from._internal_nodeuuid());
+  }
+  if (from._internal_n() != 0) {
+    _this->_internal_set_n(from._internal_n());
+  }
+  if (from._internal_parent() != 0) {
+    _this->_internal_set_parent(from._internal_parent());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void NodeNParent::CopyFrom(const NodeNParent& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:proto.NodeNParent)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool NodeNParent::IsInitialized() const {
+  return true;
+}
+
+void NodeNParent::InternalSwap(NodeNParent* other) {
+  using std::swap;
+  auto* lhs_arena = GetArenaForAllocation();
+  auto* rhs_arena = other->GetArenaForAllocation();
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.nodeuuid_, lhs_arena,
+      &other->_impl_.nodeuuid_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(NodeNParent, _impl_.parent_)
+      + sizeof(NodeNParent::_impl_.parent_)
+      - PROTOBUF_FIELD_OFFSET(NodeNParent, _impl_.n_)>(
+          reinterpret_cast<char*>(&_impl_.n_),
+          reinterpret_cast<char*>(&other->_impl_.n_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata NodeNParent::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_Message_2fMessage_2eproto_getter, &descriptor_table_Message_2fMessage_2eproto_once,
+      file_level_metadata_Message_2fMessage_2eproto[28]);
+}
+
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace proto
 PROTOBUF_NAMESPACE_OPEN
@@ -11754,6 +12045,10 @@ Arena::CreateMaybeMessage< ::proto::SwcAttachmentApoV1 >(Arena* arena) {
 template<> PROTOBUF_NOINLINE ::proto::SwcUuidName*
 Arena::CreateMaybeMessage< ::proto::SwcUuidName >(Arena* arena) {
   return Arena::CreateMessageInternal< ::proto::SwcUuidName >(arena);
+}
+template<> PROTOBUF_NOINLINE ::proto::NodeNParent*
+Arena::CreateMaybeMessage< ::proto::NodeNParent >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::proto::NodeNParent >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE
 

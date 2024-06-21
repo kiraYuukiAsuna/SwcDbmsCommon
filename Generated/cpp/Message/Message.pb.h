@@ -59,6 +59,9 @@ extern GroupPermissionAclV1DefaultTypeInternal _GroupPermissionAclV1_default_ins
 class MetaInfoBase;
 struct MetaInfoBaseDefaultTypeInternal;
 extern MetaInfoBaseDefaultTypeInternal _MetaInfoBase_default_instance_;
+class NodeNParent;
+struct NodeNParentDefaultTypeInternal;
+extern NodeNParentDefaultTypeInternal _NodeNParent_default_instance_;
 class PermissionAceV1;
 struct PermissionAceV1DefaultTypeInternal;
 extern PermissionAceV1DefaultTypeInternal _PermissionAceV1_default_instance_;
@@ -137,6 +140,7 @@ template<> ::proto::BrainTellServerMysqlDBCompatibleData* Arena::CreateMaybeMess
 template<> ::proto::DailyStatisticsMetaInfoV1* Arena::CreateMaybeMessage<::proto::DailyStatisticsMetaInfoV1>(Arena*);
 template<> ::proto::GroupPermissionAclV1* Arena::CreateMaybeMessage<::proto::GroupPermissionAclV1>(Arena*);
 template<> ::proto::MetaInfoBase* Arena::CreateMaybeMessage<::proto::MetaInfoBase>(Arena*);
+template<> ::proto::NodeNParent* Arena::CreateMaybeMessage<::proto::NodeNParent>(Arena*);
 template<> ::proto::PermissionAceV1* Arena::CreateMaybeMessage<::proto::PermissionAceV1>(Arena*);
 template<> ::proto::PermissionGroupAceV1* Arena::CreateMaybeMessage<::proto::PermissionGroupAceV1>(Arena*);
 template<> ::proto::PermissionGroupAclV1* Arena::CreateMaybeMessage<::proto::PermissionGroupAclV1>(Arena*);
@@ -6458,6 +6462,181 @@ class SwcUuidName final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr swcuuid_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr swcname_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_Message_2fMessage_2eproto;
+};
+// -------------------------------------------------------------------
+
+class NodeNParent final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:proto.NodeNParent) */ {
+ public:
+  inline NodeNParent() : NodeNParent(nullptr) {}
+  ~NodeNParent() override;
+  explicit PROTOBUF_CONSTEXPR NodeNParent(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  NodeNParent(const NodeNParent& from);
+  NodeNParent(NodeNParent&& from) noexcept
+    : NodeNParent() {
+    *this = ::std::move(from);
+  }
+
+  inline NodeNParent& operator=(const NodeNParent& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline NodeNParent& operator=(NodeNParent&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const NodeNParent& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const NodeNParent* internal_default_instance() {
+    return reinterpret_cast<const NodeNParent*>(
+               &_NodeNParent_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    28;
+
+  friend void swap(NodeNParent& a, NodeNParent& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(NodeNParent* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() != nullptr &&
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(NodeNParent* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  NodeNParent* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<NodeNParent>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const NodeNParent& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const NodeNParent& from) {
+    NodeNParent::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
+
+  private:
+  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(NodeNParent* other);
+
+  private:
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "proto.NodeNParent";
+  }
+  protected:
+  explicit NodeNParent(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kNodeUuidFieldNumber = 1,
+    kNFieldNumber = 2,
+    kParentFieldNumber = 3,
+  };
+  // string NodeUuid = 1;
+  void clear_nodeuuid();
+  const std::string& nodeuuid() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_nodeuuid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_nodeuuid();
+  PROTOBUF_NODISCARD std::string* release_nodeuuid();
+  void set_allocated_nodeuuid(std::string* nodeuuid);
+  private:
+  const std::string& _internal_nodeuuid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_nodeuuid(const std::string& value);
+  std::string* _internal_mutable_nodeuuid();
+  public:
+
+  // int32 N = 2;
+  void clear_n();
+  int32_t n() const;
+  void set_n(int32_t value);
+  private:
+  int32_t _internal_n() const;
+  void _internal_set_n(int32_t value);
+  public:
+
+  // int32 Parent = 3;
+  void clear_parent();
+  int32_t parent() const;
+  void set_parent(int32_t value);
+  private:
+  int32_t _internal_parent() const;
+  void _internal_set_parent(int32_t value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:proto.NodeNParent)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr nodeuuid_;
+    int32_t n_;
+    int32_t parent_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -13847,9 +14026,105 @@ inline void SwcUuidName::set_allocated_swcname(std::string* swcname) {
   // @@protoc_insertion_point(field_set_allocated:proto.SwcUuidName.SwcName)
 }
 
+// -------------------------------------------------------------------
+
+// NodeNParent
+
+// string NodeUuid = 1;
+inline void NodeNParent::clear_nodeuuid() {
+  _impl_.nodeuuid_.ClearToEmpty();
+}
+inline const std::string& NodeNParent::nodeuuid() const {
+  // @@protoc_insertion_point(field_get:proto.NodeNParent.NodeUuid)
+  return _internal_nodeuuid();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void NodeNParent::set_nodeuuid(ArgT0&& arg0, ArgT... args) {
+ 
+ _impl_.nodeuuid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:proto.NodeNParent.NodeUuid)
+}
+inline std::string* NodeNParent::mutable_nodeuuid() {
+  std::string* _s = _internal_mutable_nodeuuid();
+  // @@protoc_insertion_point(field_mutable:proto.NodeNParent.NodeUuid)
+  return _s;
+}
+inline const std::string& NodeNParent::_internal_nodeuuid() const {
+  return _impl_.nodeuuid_.Get();
+}
+inline void NodeNParent::_internal_set_nodeuuid(const std::string& value) {
+  
+  _impl_.nodeuuid_.Set(value, GetArenaForAllocation());
+}
+inline std::string* NodeNParent::_internal_mutable_nodeuuid() {
+  
+  return _impl_.nodeuuid_.Mutable(GetArenaForAllocation());
+}
+inline std::string* NodeNParent::release_nodeuuid() {
+  // @@protoc_insertion_point(field_release:proto.NodeNParent.NodeUuid)
+  return _impl_.nodeuuid_.Release();
+}
+inline void NodeNParent::set_allocated_nodeuuid(std::string* nodeuuid) {
+  if (nodeuuid != nullptr) {
+    
+  } else {
+    
+  }
+  _impl_.nodeuuid_.SetAllocated(nodeuuid, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.nodeuuid_.IsDefault()) {
+    _impl_.nodeuuid_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:proto.NodeNParent.NodeUuid)
+}
+
+// int32 N = 2;
+inline void NodeNParent::clear_n() {
+  _impl_.n_ = 0;
+}
+inline int32_t NodeNParent::_internal_n() const {
+  return _impl_.n_;
+}
+inline int32_t NodeNParent::n() const {
+  // @@protoc_insertion_point(field_get:proto.NodeNParent.N)
+  return _internal_n();
+}
+inline void NodeNParent::_internal_set_n(int32_t value) {
+  
+  _impl_.n_ = value;
+}
+inline void NodeNParent::set_n(int32_t value) {
+  _internal_set_n(value);
+  // @@protoc_insertion_point(field_set:proto.NodeNParent.N)
+}
+
+// int32 Parent = 3;
+inline void NodeNParent::clear_parent() {
+  _impl_.parent_ = 0;
+}
+inline int32_t NodeNParent::_internal_parent() const {
+  return _impl_.parent_;
+}
+inline int32_t NodeNParent::parent() const {
+  // @@protoc_insertion_point(field_get:proto.NodeNParent.Parent)
+  return _internal_parent();
+}
+inline void NodeNParent::_internal_set_parent(int32_t value) {
+  
+  _impl_.parent_ = value;
+}
+inline void NodeNParent::set_parent(int32_t value) {
+  _internal_set_parent(value);
+  // @@protoc_insertion_point(field_set:proto.NodeNParent.Parent)
+}
+
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------

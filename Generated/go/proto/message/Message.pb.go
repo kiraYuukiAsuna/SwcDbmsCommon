@@ -2489,6 +2489,69 @@ func (x *SwcUuidName) GetSwcName() string {
 	return ""
 }
 
+type NodeNParent struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	NodeUuid string `protobuf:"bytes,1,opt,name=NodeUuid,proto3" json:"NodeUuid,omitempty"`
+	N        int32  `protobuf:"varint,2,opt,name=N,proto3" json:"N,omitempty"`
+	Parent   int32  `protobuf:"varint,3,opt,name=Parent,proto3" json:"Parent,omitempty"`
+}
+
+func (x *NodeNParent) Reset() {
+	*x = NodeNParent{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_Message_Message_proto_msgTypes[28]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *NodeNParent) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*NodeNParent) ProtoMessage() {}
+
+func (x *NodeNParent) ProtoReflect() protoreflect.Message {
+	mi := &file_Message_Message_proto_msgTypes[28]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use NodeNParent.ProtoReflect.Descriptor instead.
+func (*NodeNParent) Descriptor() ([]byte, []int) {
+	return file_Message_Message_proto_rawDescGZIP(), []int{28}
+}
+
+func (x *NodeNParent) GetNodeUuid() string {
+	if x != nil {
+		return x.NodeUuid
+	}
+	return ""
+}
+
+func (x *NodeNParent) GetN() int32 {
+	if x != nil {
+		return x.N
+	}
+	return 0
+}
+
+func (x *NodeNParent) GetParent() int32 {
+	if x != nil {
+		return x.Parent
+	}
+	return 0
+}
+
 var File_Message_Message_proto protoreflect.FileDescriptor
 
 var file_Message_Message_proto_rawDesc = []byte{
@@ -3009,15 +3072,20 @@ var file_Message_Message_proto_rawDesc = []byte{
 	0x65, 0x12, 0x18, 0x0a, 0x07, 0x53, 0x77, 0x63, 0x55, 0x75, 0x69, 0x64, 0x18, 0x01, 0x20, 0x01,
 	0x28, 0x09, 0x52, 0x07, 0x53, 0x77, 0x63, 0x55, 0x75, 0x69, 0x64, 0x12, 0x18, 0x0a, 0x07, 0x53,
 	0x77, 0x63, 0x4e, 0x61, 0x6d, 0x65, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x07, 0x53, 0x77,
-	0x63, 0x4e, 0x61, 0x6d, 0x65, 0x2a, 0x47, 0x0a, 0x14, 0x49, 0x6e, 0x63, 0x72, 0x65, 0x6d, 0x65,
-	0x6e, 0x74, 0x4f, 0x70, 0x65, 0x72, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x56, 0x31, 0x12, 0x0b, 0x0a,
-	0x07, 0x55, 0x6e, 0x6b, 0x6e, 0x6f, 0x77, 0x6e, 0x10, 0x00, 0x12, 0x0a, 0x0a, 0x06, 0x43, 0x72,
-	0x65, 0x61, 0x74, 0x65, 0x10, 0x01, 0x12, 0x0a, 0x0a, 0x06, 0x44, 0x65, 0x6c, 0x65, 0x74, 0x65,
-	0x10, 0x02, 0x12, 0x0a, 0x0a, 0x06, 0x55, 0x70, 0x64, 0x61, 0x74, 0x65, 0x10, 0x03, 0x42, 0x2f,
-	0x5a, 0x2d, 0x44, 0x42, 0x4d, 0x53, 0x2f, 0x53, 0x77, 0x63, 0x44, 0x62, 0x6d, 0x73, 0x43, 0x6f,
-	0x6d, 0x6d, 0x6f, 0x6e, 0x2f, 0x47, 0x65, 0x6e, 0x65, 0x72, 0x61, 0x74, 0x65, 0x64, 0x2f, 0x67,
-	0x6f, 0x2f, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2f, 0x6d, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65, 0x50,
-	0x00, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x63, 0x4e, 0x61, 0x6d, 0x65, 0x22, 0x4f, 0x0a, 0x0b, 0x4e, 0x6f, 0x64, 0x65, 0x4e, 0x50, 0x61,
+	0x72, 0x65, 0x6e, 0x74, 0x12, 0x1a, 0x0a, 0x08, 0x4e, 0x6f, 0x64, 0x65, 0x55, 0x75, 0x69, 0x64,
+	0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x4e, 0x6f, 0x64, 0x65, 0x55, 0x75, 0x69, 0x64,
+	0x12, 0x0c, 0x0a, 0x01, 0x4e, 0x18, 0x02, 0x20, 0x01, 0x28, 0x05, 0x52, 0x01, 0x4e, 0x12, 0x16,
+	0x0a, 0x06, 0x50, 0x61, 0x72, 0x65, 0x6e, 0x74, 0x18, 0x03, 0x20, 0x01, 0x28, 0x05, 0x52, 0x06,
+	0x50, 0x61, 0x72, 0x65, 0x6e, 0x74, 0x2a, 0x47, 0x0a, 0x14, 0x49, 0x6e, 0x63, 0x72, 0x65, 0x6d,
+	0x65, 0x6e, 0x74, 0x4f, 0x70, 0x65, 0x72, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x56, 0x31, 0x12, 0x0b,
+	0x0a, 0x07, 0x55, 0x6e, 0x6b, 0x6e, 0x6f, 0x77, 0x6e, 0x10, 0x00, 0x12, 0x0a, 0x0a, 0x06, 0x43,
+	0x72, 0x65, 0x61, 0x74, 0x65, 0x10, 0x01, 0x12, 0x0a, 0x0a, 0x06, 0x44, 0x65, 0x6c, 0x65, 0x74,
+	0x65, 0x10, 0x02, 0x12, 0x0a, 0x0a, 0x06, 0x55, 0x70, 0x64, 0x61, 0x74, 0x65, 0x10, 0x03, 0x42,
+	0x2f, 0x5a, 0x2d, 0x44, 0x42, 0x4d, 0x53, 0x2f, 0x53, 0x77, 0x63, 0x44, 0x62, 0x6d, 0x73, 0x43,
+	0x6f, 0x6d, 0x6d, 0x6f, 0x6e, 0x2f, 0x47, 0x65, 0x6e, 0x65, 0x72, 0x61, 0x74, 0x65, 0x64, 0x2f,
+	0x67, 0x6f, 0x2f, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2f, 0x6d, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65,
+	0x50, 0x00, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -3033,7 +3101,7 @@ func file_Message_Message_proto_rawDescGZIP() []byte {
 }
 
 var file_Message_Message_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
-var file_Message_Message_proto_msgTypes = make([]protoimpl.MessageInfo, 28)
+var file_Message_Message_proto_msgTypes = make([]protoimpl.MessageInfo, 29)
 var file_Message_Message_proto_goTypes = []interface{}{
 	(IncrementOperationV1)(0),                    // 0: proto.IncrementOperationV1
 	(*MetaInfoBase)(nil),                         // 1: proto.MetaInfoBase
@@ -3064,11 +3132,12 @@ var file_Message_Message_proto_goTypes = []interface{}{
 	(*SwcAttachmentAnoV1)(nil),                   // 26: proto.SwcAttachmentAnoV1
 	(*SwcAttachmentApoV1)(nil),                   // 27: proto.SwcAttachmentApoV1
 	(*SwcUuidName)(nil),                          // 28: proto.SwcUuidName
-	(*timestamppb.Timestamp)(nil),                // 29: google.protobuf.Timestamp
+	(*NodeNParent)(nil),                          // 29: proto.NodeNParent
+	(*timestamppb.Timestamp)(nil),                // 30: google.protobuf.Timestamp
 }
 var file_Message_Message_proto_depIdxs = []int32{
 	1,  // 0: proto.UserMetaInfoV1.Base:type_name -> proto.MetaInfoBase
-	29, // 1: proto.UserMetaInfoV1.CreateTime:type_name -> google.protobuf.Timestamp
+	30, // 1: proto.UserMetaInfoV1.CreateTime:type_name -> google.protobuf.Timestamp
 	2,  // 2: proto.UserMetaInfoV1.CompatibleData:type_name -> proto.BrainTellServerMysqlDBCompatibleData
 	4,  // 3: proto.PermissionGroupAclV1.PermissionGroupAce:type_name -> proto.PermissionGroupAceV1
 	6,  // 4: proto.UserPermissionAclV1.Ace:type_name -> proto.PermissionAceV1
@@ -3079,21 +3148,21 @@ var file_Message_Message_proto_depIdxs = []int32{
 	1,  // 9: proto.PermissionGroupMetaInfoV1.Base:type_name -> proto.MetaInfoBase
 	4,  // 10: proto.PermissionGroupMetaInfoV1.Ace:type_name -> proto.PermissionGroupAceV1
 	1,  // 11: proto.ProjectMetaInfoV1.Base:type_name -> proto.MetaInfoBase
-	29, // 12: proto.ProjectMetaInfoV1.CreateTime:type_name -> google.protobuf.Timestamp
-	29, // 13: proto.ProjectMetaInfoV1.LastModifiedTime:type_name -> google.protobuf.Timestamp
+	30, // 12: proto.ProjectMetaInfoV1.CreateTime:type_name -> google.protobuf.Timestamp
+	30, // 13: proto.ProjectMetaInfoV1.LastModifiedTime:type_name -> google.protobuf.Timestamp
 	9,  // 14: proto.ProjectMetaInfoV1.Permission:type_name -> proto.PermissionMetaInfoV1
 	1,  // 15: proto.SwcSnapshotMetaInfoV1.Base:type_name -> proto.MetaInfoBase
-	29, // 16: proto.SwcSnapshotMetaInfoV1.CreateTime:type_name -> google.protobuf.Timestamp
+	30, // 16: proto.SwcSnapshotMetaInfoV1.CreateTime:type_name -> google.protobuf.Timestamp
 	1,  // 17: proto.SwcIncrementOperationMetaInfoV1.Base:type_name -> proto.MetaInfoBase
-	29, // 18: proto.SwcIncrementOperationMetaInfoV1.CreateTime:type_name -> google.protobuf.Timestamp
+	30, // 18: proto.SwcIncrementOperationMetaInfoV1.CreateTime:type_name -> google.protobuf.Timestamp
 	1,  // 19: proto.SwcIncrementOperationV1.Base:type_name -> proto.MetaInfoBase
-	29, // 20: proto.SwcIncrementOperationV1.CreateTime:type_name -> google.protobuf.Timestamp
+	30, // 20: proto.SwcIncrementOperationV1.CreateTime:type_name -> google.protobuf.Timestamp
 	0,  // 21: proto.SwcIncrementOperationV1.IncrementOperation:type_name -> proto.IncrementOperationV1
 	21, // 22: proto.SwcIncrementOperationV1.SwcData:type_name -> proto.SwcDataV1
 	14, // 23: proto.SwcIncrementOperationListV1.SwcIncrementOperation:type_name -> proto.SwcIncrementOperationV1
 	1,  // 24: proto.SwcMetaInfoV1.Base:type_name -> proto.MetaInfoBase
-	29, // 25: proto.SwcMetaInfoV1.CreateTime:type_name -> google.protobuf.Timestamp
-	29, // 26: proto.SwcMetaInfoV1.LastModifiedTime:type_name -> google.protobuf.Timestamp
+	30, // 25: proto.SwcMetaInfoV1.CreateTime:type_name -> google.protobuf.Timestamp
+	30, // 26: proto.SwcMetaInfoV1.LastModifiedTime:type_name -> google.protobuf.Timestamp
 	12, // 27: proto.SwcMetaInfoV1.SwcSnapshotMetaInfoList:type_name -> proto.SwcSnapshotMetaInfoV1
 	13, // 28: proto.SwcMetaInfoV1.SwcIncrementOperationMetaInfoList:type_name -> proto.SwcIncrementOperationMetaInfoV1
 	16, // 29: proto.SwcMetaInfoV1.SwcAttachmentAnoMetaInfo:type_name -> proto.SwcAttachmentAnoMetaInfoV1
@@ -3101,8 +3170,8 @@ var file_Message_Message_proto_depIdxs = []int32{
 	9,  // 31: proto.SwcMetaInfoV1.Permission:type_name -> proto.PermissionMetaInfoV1
 	1,  // 32: proto.SwcNodeDataV1.Base:type_name -> proto.MetaInfoBase
 	19, // 33: proto.SwcNodeDataV1.SwcNodeInternalData:type_name -> proto.SwcNodeInternalDataV1
-	29, // 34: proto.SwcNodeDataV1.CreateTime:type_name -> google.protobuf.Timestamp
-	29, // 35: proto.SwcNodeDataV1.LastModifiedTime:type_name -> google.protobuf.Timestamp
+	30, // 34: proto.SwcNodeDataV1.CreateTime:type_name -> google.protobuf.Timestamp
+	30, // 35: proto.SwcNodeDataV1.LastModifiedTime:type_name -> google.protobuf.Timestamp
 	20, // 36: proto.SwcDataV1.SwcData:type_name -> proto.SwcNodeDataV1
 	1,  // 37: proto.DailyStatisticsMetaInfoV1.Base:type_name -> proto.MetaInfoBase
 	1,  // 38: proto.SwcAttachmentAnoV1.Base:type_name -> proto.MetaInfoBase
@@ -3456,6 +3525,18 @@ func file_Message_Message_proto_init() {
 				return nil
 			}
 		}
+		file_Message_Message_proto_msgTypes[28].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*NodeNParent); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
 	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
@@ -3463,7 +3544,7 @@ func file_Message_Message_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_Message_Message_proto_rawDesc,
 			NumEnums:      1,
-			NumMessages:   28,
+			NumMessages:   29,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
