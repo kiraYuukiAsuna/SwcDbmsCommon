@@ -11852,22 +11852,22 @@ class UpdateSwcNParentInfoRequest final :
     kMetaInfoFieldNumber = 1,
     kUserVerifyInfoFieldNumber = 2,
   };
-  // repeated .proto.NodeNParent NodeNParentVec = 4;
+  // repeated .proto.NodeNParentV1 NodeNParentVec = 4;
   int nodenparentvec_size() const;
   private:
   int _internal_nodenparentvec_size() const;
   public:
   void clear_nodenparentvec();
-  ::proto::NodeNParent* mutable_nodenparentvec(int index);
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::proto::NodeNParent >*
+  ::proto::NodeNParentV1* mutable_nodenparentvec(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::proto::NodeNParentV1 >*
       mutable_nodenparentvec();
   private:
-  const ::proto::NodeNParent& _internal_nodenparentvec(int index) const;
-  ::proto::NodeNParent* _internal_add_nodenparentvec();
+  const ::proto::NodeNParentV1& _internal_nodenparentvec(int index) const;
+  ::proto::NodeNParentV1* _internal_add_nodenparentvec();
   public:
-  const ::proto::NodeNParent& nodenparentvec(int index) const;
-  ::proto::NodeNParent* add_nodenparentvec();
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::proto::NodeNParent >&
+  const ::proto::NodeNParentV1& nodenparentvec(int index) const;
+  ::proto::NodeNParentV1* add_nodenparentvec();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::proto::NodeNParentV1 >&
       nodenparentvec() const;
 
   // string SwcUuid = 3;
@@ -11928,7 +11928,7 @@ class UpdateSwcNParentInfoRequest final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::proto::NodeNParent > nodenparentvec_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::proto::NodeNParentV1 > nodenparentvec_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr swcuuid_;
     ::proto::RequestMetaInfoV1* metainfo_;
     ::proto::UserVerifyInfoV1* userverifyinfo_;
@@ -26729,38 +26729,38 @@ inline void UpdateSwcNParentInfoRequest::set_allocated_swcuuid(std::string* swcu
   // @@protoc_insertion_point(field_set_allocated:proto.UpdateSwcNParentInfoRequest.SwcUuid)
 }
 
-// repeated .proto.NodeNParent NodeNParentVec = 4;
+// repeated .proto.NodeNParentV1 NodeNParentVec = 4;
 inline int UpdateSwcNParentInfoRequest::_internal_nodenparentvec_size() const {
   return _impl_.nodenparentvec_.size();
 }
 inline int UpdateSwcNParentInfoRequest::nodenparentvec_size() const {
   return _internal_nodenparentvec_size();
 }
-inline ::proto::NodeNParent* UpdateSwcNParentInfoRequest::mutable_nodenparentvec(int index) {
+inline ::proto::NodeNParentV1* UpdateSwcNParentInfoRequest::mutable_nodenparentvec(int index) {
   // @@protoc_insertion_point(field_mutable:proto.UpdateSwcNParentInfoRequest.NodeNParentVec)
   return _impl_.nodenparentvec_.Mutable(index);
 }
-inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::proto::NodeNParent >*
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::proto::NodeNParentV1 >*
 UpdateSwcNParentInfoRequest::mutable_nodenparentvec() {
   // @@protoc_insertion_point(field_mutable_list:proto.UpdateSwcNParentInfoRequest.NodeNParentVec)
   return &_impl_.nodenparentvec_;
 }
-inline const ::proto::NodeNParent& UpdateSwcNParentInfoRequest::_internal_nodenparentvec(int index) const {
+inline const ::proto::NodeNParentV1& UpdateSwcNParentInfoRequest::_internal_nodenparentvec(int index) const {
   return _impl_.nodenparentvec_.Get(index);
 }
-inline const ::proto::NodeNParent& UpdateSwcNParentInfoRequest::nodenparentvec(int index) const {
+inline const ::proto::NodeNParentV1& UpdateSwcNParentInfoRequest::nodenparentvec(int index) const {
   // @@protoc_insertion_point(field_get:proto.UpdateSwcNParentInfoRequest.NodeNParentVec)
   return _internal_nodenparentvec(index);
 }
-inline ::proto::NodeNParent* UpdateSwcNParentInfoRequest::_internal_add_nodenparentvec() {
+inline ::proto::NodeNParentV1* UpdateSwcNParentInfoRequest::_internal_add_nodenparentvec() {
   return _impl_.nodenparentvec_.Add();
 }
-inline ::proto::NodeNParent* UpdateSwcNParentInfoRequest::add_nodenparentvec() {
-  ::proto::NodeNParent* _add = _internal_add_nodenparentvec();
+inline ::proto::NodeNParentV1* UpdateSwcNParentInfoRequest::add_nodenparentvec() {
+  ::proto::NodeNParentV1* _add = _internal_add_nodenparentvec();
   // @@protoc_insertion_point(field_add:proto.UpdateSwcNParentInfoRequest.NodeNParentVec)
   return _add;
 }
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::proto::NodeNParent >&
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::proto::NodeNParentV1 >&
 UpdateSwcNParentInfoRequest::nodenparentvec() const {
   // @@protoc_insertion_point(field_list:proto.UpdateSwcNParentInfoRequest.NodeNParentVec)
   return _impl_.nodenparentvec_;

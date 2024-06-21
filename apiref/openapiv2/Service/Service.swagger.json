@@ -3232,7 +3232,7 @@
         }
       }
     },
-    "protoNodeNParent": {
+    "protoNodeNParentV1": {
       "type": "object",
       "properties": {
         "NodeUuid": {
@@ -3630,6 +3630,13 @@
         },
         "SwcData": {
           "$ref": "#/definitions/protoSwcDataV1"
+        },
+        "NodeNParent": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/protoNodeNParentV1"
+          }
         }
       }
     },
@@ -3989,7 +3996,7 @@
           "type": "array",
           "items": {
             "type": "object",
-            "$ref": "#/definitions/protoNodeNParent"
+            "$ref": "#/definitions/protoNodeNParentV1"
           }
         }
       }

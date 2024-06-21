@@ -139,11 +139,19 @@ enum IncrementOperationV1{
     ClearAll = 5;
 }
 
+message NodeNParentV1{
+    string NodeUuid = 1;
+    int32 N = 2;
+    int32 Parent = 3;
+}
+
+
 message SwcIncrementOperationV1{
     MetaInfoBase Base = 1;
     google.protobuf.Timestamp CreateTime = 2;
     IncrementOperationV1 IncrementOperation = 3;
     SwcDataV1 SwcData = 4;
+    repeated NodeNParentV1 NodeNParent = 5;
 }
 
 message SwcIncrementOperationListV1{
@@ -268,10 +276,4 @@ message SwcAttachmentApoV1{
 message SwcUuidName{
     string SwcUuid = 1;
     string SwcName = 2;
-}
-
-message NodeNParent{
-    string NodeUuid = 1;
-    int32 N = 2;
-    int32 Parent = 3;
 }

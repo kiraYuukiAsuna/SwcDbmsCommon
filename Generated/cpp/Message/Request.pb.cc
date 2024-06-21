@@ -1849,17 +1849,17 @@ const char descriptor_table_protodef_Message_2fRequest_2eproto[] PROTOBUF_SECTIO
   "ojectSwcNamesByProjectUuidRequest\022*\n\010met"
   "aInfo\030\001 \001(\0132\030.proto.RequestMetaInfoV1\022/\n"
   "\016UserVerifyInfo\030\002 \001(\0132\027.proto.UserVerify"
-  "InfoV1\022\023\n\013ProjectUuid\030\003 \001(\t\"\267\001\n\033UpdateSw"
+  "InfoV1\022\023\n\013ProjectUuid\030\003 \001(\t\"\271\001\n\033UpdateSw"
   "cNParentInfoRequest\022*\n\010metaInfo\030\001 \001(\0132\030."
   "proto.RequestMetaInfoV1\022/\n\016UserVerifyInf"
   "o\030\002 \001(\0132\027.proto.UserVerifyInfoV1\022\017\n\007SwcU"
-  "uid\030\003 \001(\t\022*\n\016NodeNParentVec\030\004 \003(\0132\022.prot"
-  "o.NodeNParent\"\204\001\n\024ClearAllNodesRequest\022*"
-  "\n\010metaInfo\030\001 \001(\0132\030.proto.RequestMetaInfo"
-  "V1\022/\n\016UserVerifyInfo\030\002 \001(\0132\027.proto.UserV"
-  "erifyInfoV1\022\017\n\007SwcUuid\030\003 \001(\tB/Z-DBMS/Swc"
-  "DbmsCommon/Generated/go/proto/requestP\000b"
-  "\006proto3"
+  "uid\030\003 \001(\t\022,\n\016NodeNParentVec\030\004 \003(\0132\024.prot"
+  "o.NodeNParentV1\"\204\001\n\024ClearAllNodesRequest"
+  "\022*\n\010metaInfo\030\001 \001(\0132\030.proto.RequestMetaIn"
+  "foV1\022/\n\016UserVerifyInfo\030\002 \001(\0132\027.proto.Use"
+  "rVerifyInfoV1\022\017\n\007SwcUuid\030\003 \001(\tB/Z-DBMS/S"
+  "wcDbmsCommon/Generated/go/proto/requestP"
+  "\000b\006proto3"
   ;
 static const ::_pbi::DescriptorTable* const descriptor_table_Message_2fRequest_2eproto_deps[2] = {
   &::descriptor_table_Message_2fMessage_2eproto,
@@ -1867,7 +1867,7 @@ static const ::_pbi::DescriptorTable* const descriptor_table_Message_2fRequest_2
 };
 static ::_pbi::once_flag descriptor_table_Message_2fRequest_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_Message_2fRequest_2eproto = {
-    false, false, 9767, descriptor_table_protodef_Message_2fRequest_2eproto,
+    false, false, 9769, descriptor_table_protodef_Message_2fRequest_2eproto,
     "Message/Request.proto",
     &descriptor_table_Message_2fRequest_2eproto_once, descriptor_table_Message_2fRequest_2eproto_deps, 2, 59,
     schemas, file_default_instances, TableStruct_Message_2fRequest_2eproto::offsets,
@@ -20230,7 +20230,7 @@ const char* UpdateSwcNParentInfoRequest::_InternalParse(const char* ptr, ::_pbi:
         } else
           goto handle_unusual;
         continue;
-      // repeated .proto.NodeNParent NodeNParentVec = 4;
+      // repeated .proto.NodeNParentV1 NodeNParentVec = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           ptr -= 1;
@@ -20296,7 +20296,7 @@ uint8_t* UpdateSwcNParentInfoRequest::_InternalSerialize(
         3, this->_internal_swcuuid(), target);
   }
 
-  // repeated .proto.NodeNParent NodeNParentVec = 4;
+  // repeated .proto.NodeNParentV1 NodeNParentVec = 4;
   for (unsigned i = 0,
       n = static_cast<unsigned>(this->_internal_nodenparentvec_size()); i < n; i++) {
     const auto& repfield = this->_internal_nodenparentvec(i);
@@ -20320,7 +20320,7 @@ size_t UpdateSwcNParentInfoRequest::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated .proto.NodeNParent NodeNParentVec = 4;
+  // repeated .proto.NodeNParentV1 NodeNParentVec = 4;
   total_size += 1UL * this->_internal_nodenparentvec_size();
   for (const auto& msg : this->_impl_.nodenparentvec_) {
     total_size +=
