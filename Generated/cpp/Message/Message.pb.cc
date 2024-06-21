@@ -1095,17 +1095,18 @@ const char descriptor_table_protodef_Message_2fMessage_2eproto[] PROTOBUF_SECTIO
   "(\005\022\016\n\006ColorB\030\020 \001(\005\"/\n\013SwcUuidName\022\017\n\007Swc"
   "Uuid\030\001 \001(\t\022\017\n\007SwcName\030\002 \001(\t\":\n\013NodeNPare"
   "nt\022\020\n\010NodeUuid\030\001 \001(\t\022\t\n\001N\030\002 \001(\005\022\016\n\006Paren"
-  "t\030\003 \001(\005*G\n\024IncrementOperationV1\022\013\n\007Unkno"
+  "t\030\003 \001(\005*h\n\024IncrementOperationV1\022\013\n\007Unkno"
   "wn\020\000\022\n\n\006Create\020\001\022\n\n\006Delete\020\002\022\n\n\006Update\020\003"
-  "B/Z-DBMS/SwcDbmsCommon/Generated/go/prot"
-  "o/messageP\000b\006proto3"
+  "\022\021\n\rUpdateNParent\020\004\022\014\n\010ClearAll\020\005B/Z-DBM"
+  "S/SwcDbmsCommon/Generated/go/proto/messa"
+  "geP\000b\006proto3"
   ;
 static const ::_pbi::DescriptorTable* const descriptor_table_Message_2fMessage_2eproto_deps[1] = {
   &::descriptor_table_google_2fprotobuf_2ftimestamp_2eproto,
 };
 static ::_pbi::once_flag descriptor_table_Message_2fMessage_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_Message_2fMessage_2eproto = {
-    false, false, 5899, descriptor_table_protodef_Message_2fMessage_2eproto,
+    false, false, 5932, descriptor_table_protodef_Message_2fMessage_2eproto,
     "Message/Message.proto",
     &descriptor_table_Message_2fMessage_2eproto_once, descriptor_table_Message_2fMessage_2eproto_deps, 1, 29,
     schemas, file_default_instances, TableStruct_Message_2fMessage_2eproto::offsets,
@@ -1129,6 +1130,8 @@ bool IncrementOperationV1_IsValid(int value) {
     case 1:
     case 2:
     case 3:
+    case 4:
+    case 5:
       return true;
     default:
       return false;

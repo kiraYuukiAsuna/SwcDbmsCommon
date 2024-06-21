@@ -173,12 +173,14 @@ enum IncrementOperationV1 : int {
   Create = 1,
   Delete = 2,
   Update = 3,
+  UpdateNParent = 4,
+  ClearAll = 5,
   IncrementOperationV1_INT_MIN_SENTINEL_DO_NOT_USE_ = std::numeric_limits<int32_t>::min(),
   IncrementOperationV1_INT_MAX_SENTINEL_DO_NOT_USE_ = std::numeric_limits<int32_t>::max()
 };
 bool IncrementOperationV1_IsValid(int value);
 constexpr IncrementOperationV1 IncrementOperationV1_MIN = Unknown;
-constexpr IncrementOperationV1 IncrementOperationV1_MAX = Update;
+constexpr IncrementOperationV1 IncrementOperationV1_MAX = ClearAll;
 constexpr int IncrementOperationV1_ARRAYSIZE = IncrementOperationV1_MAX + 1;
 
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* IncrementOperationV1_descriptor();

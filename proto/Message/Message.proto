@@ -135,6 +135,8 @@ enum IncrementOperationV1{
     Create = 1;
     Delete = 2;
     Update = 3;
+    UpdateNParent = 4;
+    ClearAll = 5;
 }
 
 message SwcIncrementOperationV1{

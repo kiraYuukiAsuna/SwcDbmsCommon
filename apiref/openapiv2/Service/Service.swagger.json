@@ -3212,7 +3212,9 @@
         "Unknown",
         "Create",
         "Delete",
-        "Update"
+        "Update",
+        "UpdateNParent",
+        "ClearAll"
       ],
       "default": "Unknown"
     },
