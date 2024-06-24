@@ -137,6 +137,7 @@ enum IncrementOperationV1{
     Update = 3;
     UpdateNParent = 4;
     ClearAll = 5;
+    OverwriteAll = 6;
 }
 
 message NodeNParentV1{

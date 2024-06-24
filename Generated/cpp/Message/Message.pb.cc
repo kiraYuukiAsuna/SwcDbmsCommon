@@ -1098,18 +1098,18 @@ const char descriptor_table_protodef_Message_2fMessage_2eproto[] PROTOBUF_SECTIO
   " \001(\002\022\017\n\007Volsize\030\014 \001(\002\022\014\n\004Mass\030\r \001(\002\022\016\n\006C"
   "olorR\030\016 \001(\005\022\016\n\006ColorG\030\017 \001(\005\022\016\n\006ColorB\030\020 "
   "\001(\005\"/\n\013SwcUuidName\022\017\n\007SwcUuid\030\001 \001(\t\022\017\n\007S"
-  "wcName\030\002 \001(\t*h\n\024IncrementOperationV1\022\013\n\007"
+  "wcName\030\002 \001(\t*z\n\024IncrementOperationV1\022\013\n\007"
   "Unknown\020\000\022\n\n\006Create\020\001\022\n\n\006Delete\020\002\022\n\n\006Upd"
-  "ate\020\003\022\021\n\rUpdateNParent\020\004\022\014\n\010ClearAll\020\005B/"
-  "Z-DBMS/SwcDbmsCommon/Generated/go/proto/"
-  "messageP\000b\006proto3"
+  "ate\020\003\022\021\n\rUpdateNParent\020\004\022\014\n\010ClearAll\020\005\022\020"
+  "\n\014OverwriteAll\020\006B/Z-DBMS/SwcDbmsCommon/G"
+  "enerated/go/proto/messageP\000b\006proto3"
   ;
 static const ::_pbi::DescriptorTable* const descriptor_table_Message_2fMessage_2eproto_deps[1] = {
   &::descriptor_table_google_2fprotobuf_2ftimestamp_2eproto,
 };
 static ::_pbi::once_flag descriptor_table_Message_2fMessage_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_Message_2fMessage_2eproto = {
-    false, false, 5977, descriptor_table_protodef_Message_2fMessage_2eproto,
+    false, false, 5995, descriptor_table_protodef_Message_2fMessage_2eproto,
     "Message/Message.proto",
     &descriptor_table_Message_2fMessage_2eproto_once, descriptor_table_Message_2fMessage_2eproto_deps, 1, 29,
     schemas, file_default_instances, TableStruct_Message_2fMessage_2eproto::offsets,
@@ -1135,6 +1135,7 @@ bool IncrementOperationV1_IsValid(int value) {
     case 3:
     case 4:
     case 5:
+    case 6:
       return true;
     default:
       return false;
