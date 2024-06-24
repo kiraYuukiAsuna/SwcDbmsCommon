@@ -291,3 +291,8 @@ message ClearAllNodesResponse{
     ResponseMetaInfoV1 metaInfo = 1;
     int32 ClearNodesNumber = 2;
 }
+
+message OverwriteSwcNodeDataResponse{
+    ResponseMetaInfoV1 metaInfo = 1;
+    repeated string CreatedNodesUuid = 2;
+}

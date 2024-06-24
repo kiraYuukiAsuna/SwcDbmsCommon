@@ -929,8 +929,24 @@ struct ClearAllNodesRequestDefaultTypeInternal {
   };
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ClearAllNodesRequestDefaultTypeInternal _ClearAllNodesRequest_default_instance_;
+PROTOBUF_CONSTEXPR OverwriteSwcNodeDataRequest::OverwriteSwcNodeDataRequest(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.swcuuid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.metainfo_)*/nullptr
+  , /*decltype(_impl_.userverifyinfo_)*/nullptr
+  , /*decltype(_impl_.swcdata_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct OverwriteSwcNodeDataRequestDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR OverwriteSwcNodeDataRequestDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~OverwriteSwcNodeDataRequestDefaultTypeInternal() {}
+  union {
+    OverwriteSwcNodeDataRequest _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 OverwriteSwcNodeDataRequestDefaultTypeInternal _OverwriteSwcNodeDataRequest_default_instance_;
 }  // namespace proto
-static ::_pb::Metadata file_level_metadata_Message_2fRequest_2eproto[59];
+static ::_pb::Metadata file_level_metadata_Message_2fRequest_2eproto[60];
 static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_Message_2fRequest_2eproto = nullptr;
 static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_Message_2fRequest_2eproto = nullptr;
 
@@ -1489,6 +1505,16 @@ const uint32_t TableStruct_Message_2fRequest_2eproto::offsets[] PROTOBUF_SECTION
   PROTOBUF_FIELD_OFFSET(::proto::ClearAllNodesRequest, _impl_.metainfo_),
   PROTOBUF_FIELD_OFFSET(::proto::ClearAllNodesRequest, _impl_.userverifyinfo_),
   PROTOBUF_FIELD_OFFSET(::proto::ClearAllNodesRequest, _impl_.swcuuid_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::proto::OverwriteSwcNodeDataRequest, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::proto::OverwriteSwcNodeDataRequest, _impl_.metainfo_),
+  PROTOBUF_FIELD_OFFSET(::proto::OverwriteSwcNodeDataRequest, _impl_.userverifyinfo_),
+  PROTOBUF_FIELD_OFFSET(::proto::OverwriteSwcNodeDataRequest, _impl_.swcuuid_),
+  PROTOBUF_FIELD_OFFSET(::proto::OverwriteSwcNodeDataRequest, _impl_.swcdata_),
 };
 static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, -1, sizeof(::proto::CreateUserRequest)},
@@ -1550,6 +1576,7 @@ static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protode
   { 526, -1, -1, sizeof(::proto::GetProjectSwcNamesByProjectUuidRequest)},
   { 535, -1, -1, sizeof(::proto::UpdateSwcNParentInfoRequest)},
   { 545, -1, -1, sizeof(::proto::ClearAllNodesRequest)},
+  { 554, -1, -1, sizeof(::proto::OverwriteSwcNodeDataRequest)},
 };
 
 static const ::_pb::Message* const file_default_instances[] = {
@@ -1612,6 +1639,7 @@ static const ::_pb::Message* const file_default_instances[] = {
   &::proto::_GetProjectSwcNamesByProjectUuidRequest_default_instance_._instance,
   &::proto::_UpdateSwcNParentInfoRequest_default_instance_._instance,
   &::proto::_ClearAllNodesRequest_default_instance_._instance,
+  &::proto::_OverwriteSwcNodeDataRequest_default_instance_._instance,
 };
 
 const char descriptor_table_protodef_Message_2fRequest_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
@@ -1857,9 +1885,13 @@ const char descriptor_table_protodef_Message_2fRequest_2eproto[] PROTOBUF_SECTIO
   "o.NodeNParentV1\"\204\001\n\024ClearAllNodesRequest"
   "\022*\n\010metaInfo\030\001 \001(\0132\030.proto.RequestMetaIn"
   "foV1\022/\n\016UserVerifyInfo\030\002 \001(\0132\027.proto.Use"
-  "rVerifyInfoV1\022\017\n\007SwcUuid\030\003 \001(\tB/Z-DBMS/S"
-  "wcDbmsCommon/Generated/go/proto/requestP"
-  "\000b\006proto3"
+  "rVerifyInfoV1\022\017\n\007SwcUuid\030\003 \001(\t\"\256\001\n\033Overw"
+  "riteSwcNodeDataRequest\022*\n\010metaInfo\030\001 \001(\013"
+  "2\030.proto.RequestMetaInfoV1\022/\n\016UserVerify"
+  "Info\030\002 \001(\0132\027.proto.UserVerifyInfoV1\022\017\n\007S"
+  "wcUuid\030\003 \001(\t\022!\n\007SwcData\030\004 \001(\0132\020.proto.Sw"
+  "cDataV1B/Z-DBMS/SwcDbmsCommon/Generated/"
+  "go/proto/requestP\000b\006proto3"
   ;
 static const ::_pbi::DescriptorTable* const descriptor_table_Message_2fRequest_2eproto_deps[2] = {
   &::descriptor_table_Message_2fMessage_2eproto,
@@ -1867,9 +1899,9 @@ static const ::_pbi::DescriptorTable* const descriptor_table_Message_2fRequest_2
 };
 static ::_pbi::once_flag descriptor_table_Message_2fRequest_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_Message_2fRequest_2eproto = {
-    false, false, 9769, descriptor_table_protodef_Message_2fRequest_2eproto,
+    false, false, 9946, descriptor_table_protodef_Message_2fRequest_2eproto,
     "Message/Request.proto",
-    &descriptor_table_Message_2fRequest_2eproto_once, descriptor_table_Message_2fRequest_2eproto_deps, 2, 59,
+    &descriptor_table_Message_2fRequest_2eproto_once, descriptor_table_Message_2fRequest_2eproto_deps, 2, 60,
     schemas, file_default_instances, TableStruct_Message_2fRequest_2eproto::offsets,
     file_level_metadata_Message_2fRequest_2eproto, file_level_enum_descriptors_Message_2fRequest_2eproto,
     file_level_service_descriptors_Message_2fRequest_2eproto,
@@ -20719,6 +20751,356 @@ void ClearAllNodesRequest::InternalSwap(ClearAllNodesRequest* other) {
       file_level_metadata_Message_2fRequest_2eproto[58]);
 }
 
+// ===================================================================
+
+class OverwriteSwcNodeDataRequest::_Internal {
+ public:
+  static const ::proto::RequestMetaInfoV1& metainfo(const OverwriteSwcNodeDataRequest* msg);
+  static const ::proto::UserVerifyInfoV1& userverifyinfo(const OverwriteSwcNodeDataRequest* msg);
+  static const ::proto::SwcDataV1& swcdata(const OverwriteSwcNodeDataRequest* msg);
+};
+
+const ::proto::RequestMetaInfoV1&
+OverwriteSwcNodeDataRequest::_Internal::metainfo(const OverwriteSwcNodeDataRequest* msg) {
+  return *msg->_impl_.metainfo_;
+}
+const ::proto::UserVerifyInfoV1&
+OverwriteSwcNodeDataRequest::_Internal::userverifyinfo(const OverwriteSwcNodeDataRequest* msg) {
+  return *msg->_impl_.userverifyinfo_;
+}
+const ::proto::SwcDataV1&
+OverwriteSwcNodeDataRequest::_Internal::swcdata(const OverwriteSwcNodeDataRequest* msg) {
+  return *msg->_impl_.swcdata_;
+}
+void OverwriteSwcNodeDataRequest::clear_metainfo() {
+  if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
+    delete _impl_.metainfo_;
+  }
+  _impl_.metainfo_ = nullptr;
+}
+void OverwriteSwcNodeDataRequest::clear_userverifyinfo() {
+  if (GetArenaForAllocation() == nullptr && _impl_.userverifyinfo_ != nullptr) {
+    delete _impl_.userverifyinfo_;
+  }
+  _impl_.userverifyinfo_ = nullptr;
+}
+void OverwriteSwcNodeDataRequest::clear_swcdata() {
+  if (GetArenaForAllocation() == nullptr && _impl_.swcdata_ != nullptr) {
+    delete _impl_.swcdata_;
+  }
+  _impl_.swcdata_ = nullptr;
+}
+OverwriteSwcNodeDataRequest::OverwriteSwcNodeDataRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:proto.OverwriteSwcNodeDataRequest)
+}
+OverwriteSwcNodeDataRequest::OverwriteSwcNodeDataRequest(const OverwriteSwcNodeDataRequest& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  OverwriteSwcNodeDataRequest* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.swcuuid_){}
+    , decltype(_impl_.metainfo_){nullptr}
+    , decltype(_impl_.userverifyinfo_){nullptr}
+    , decltype(_impl_.swcdata_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _impl_.swcuuid_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.swcuuid_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (!from._internal_swcuuid().empty()) {
+    _this->_impl_.swcuuid_.Set(from._internal_swcuuid(), 
+      _this->GetArenaForAllocation());
+  }
+  if (from._internal_has_metainfo()) {
+    _this->_impl_.metainfo_ = new ::proto::RequestMetaInfoV1(*from._impl_.metainfo_);
+  }
+  if (from._internal_has_userverifyinfo()) {
+    _this->_impl_.userverifyinfo_ = new ::proto::UserVerifyInfoV1(*from._impl_.userverifyinfo_);
+  }
+  if (from._internal_has_swcdata()) {
+    _this->_impl_.swcdata_ = new ::proto::SwcDataV1(*from._impl_.swcdata_);
+  }
+  // @@protoc_insertion_point(copy_constructor:proto.OverwriteSwcNodeDataRequest)
+}
+
+inline void OverwriteSwcNodeDataRequest::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.swcuuid_){}
+    , decltype(_impl_.metainfo_){nullptr}
+    , decltype(_impl_.userverifyinfo_){nullptr}
+    , decltype(_impl_.swcdata_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+  _impl_.swcuuid_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.swcuuid_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+}
+
+OverwriteSwcNodeDataRequest::~OverwriteSwcNodeDataRequest() {
+  // @@protoc_insertion_point(destructor:proto.OverwriteSwcNodeDataRequest)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void OverwriteSwcNodeDataRequest::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.swcuuid_.Destroy();
+  if (this != internal_default_instance()) delete _impl_.metainfo_;
+  if (this != internal_default_instance()) delete _impl_.userverifyinfo_;
+  if (this != internal_default_instance()) delete _impl_.swcdata_;
+}
+
+void OverwriteSwcNodeDataRequest::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void OverwriteSwcNodeDataRequest::Clear() {
+// @@protoc_insertion_point(message_clear_start:proto.OverwriteSwcNodeDataRequest)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _impl_.swcuuid_.ClearToEmpty();
+  if (GetArenaForAllocation() == nullptr && _impl_.metainfo_ != nullptr) {
+    delete _impl_.metainfo_;
+  }
+  _impl_.metainfo_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.userverifyinfo_ != nullptr) {
+    delete _impl_.userverifyinfo_;
+  }
+  _impl_.userverifyinfo_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.swcdata_ != nullptr) {
+    delete _impl_.swcdata_;
+  }
+  _impl_.swcdata_ = nullptr;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* OverwriteSwcNodeDataRequest::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // .proto.RequestMetaInfoV1 metaInfo = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_metainfo(), ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_userverifyinfo(), ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // string SwcUuid = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
+          auto str = _internal_mutable_swcuuid();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "proto.OverwriteSwcNodeDataRequest.SwcUuid"));
+        } else
+          goto handle_unusual;
+        continue;
+      // .proto.SwcDataV1 SwcData = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
+          ptr = ctx->ParseMessage(_internal_mutable_swcdata(), ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* OverwriteSwcNodeDataRequest::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:proto.OverwriteSwcNodeDataRequest)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .proto.RequestMetaInfoV1 metaInfo = 1;
+  if (this->_internal_has_metainfo()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::metainfo(this),
+        _Internal::metainfo(this).GetCachedSize(), target, stream);
+  }
+
+  // .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
+  if (this->_internal_has_userverifyinfo()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(2, _Internal::userverifyinfo(this),
+        _Internal::userverifyinfo(this).GetCachedSize(), target, stream);
+  }
+
+  // string SwcUuid = 3;
+  if (!this->_internal_swcuuid().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_swcuuid().data(), static_cast<int>(this->_internal_swcuuid().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "proto.OverwriteSwcNodeDataRequest.SwcUuid");
+    target = stream->WriteStringMaybeAliased(
+        3, this->_internal_swcuuid(), target);
+  }
+
+  // .proto.SwcDataV1 SwcData = 4;
+  if (this->_internal_has_swcdata()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(4, _Internal::swcdata(this),
+        _Internal::swcdata(this).GetCachedSize(), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:proto.OverwriteSwcNodeDataRequest)
+  return target;
+}
+
+size_t OverwriteSwcNodeDataRequest::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:proto.OverwriteSwcNodeDataRequest)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // string SwcUuid = 3;
+  if (!this->_internal_swcuuid().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_swcuuid());
+  }
+
+  // .proto.RequestMetaInfoV1 metaInfo = 1;
+  if (this->_internal_has_metainfo()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.metainfo_);
+  }
+
+  // .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
+  if (this->_internal_has_userverifyinfo()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.userverifyinfo_);
+  }
+
+  // .proto.SwcDataV1 SwcData = 4;
+  if (this->_internal_has_swcdata()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.swcdata_);
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData OverwriteSwcNodeDataRequest::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    OverwriteSwcNodeDataRequest::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*OverwriteSwcNodeDataRequest::GetClassData() const { return &_class_data_; }
+
+
+void OverwriteSwcNodeDataRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<OverwriteSwcNodeDataRequest*>(&to_msg);
+  auto& from = static_cast<const OverwriteSwcNodeDataRequest&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:proto.OverwriteSwcNodeDataRequest)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (!from._internal_swcuuid().empty()) {
+    _this->_internal_set_swcuuid(from._internal_swcuuid());
+  }
+  if (from._internal_has_metainfo()) {
+    _this->_internal_mutable_metainfo()->::proto::RequestMetaInfoV1::MergeFrom(
+        from._internal_metainfo());
+  }
+  if (from._internal_has_userverifyinfo()) {
+    _this->_internal_mutable_userverifyinfo()->::proto::UserVerifyInfoV1::MergeFrom(
+        from._internal_userverifyinfo());
+  }
+  if (from._internal_has_swcdata()) {
+    _this->_internal_mutable_swcdata()->::proto::SwcDataV1::MergeFrom(
+        from._internal_swcdata());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void OverwriteSwcNodeDataRequest::CopyFrom(const OverwriteSwcNodeDataRequest& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:proto.OverwriteSwcNodeDataRequest)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool OverwriteSwcNodeDataRequest::IsInitialized() const {
+  return true;
+}
+
+void OverwriteSwcNodeDataRequest::InternalSwap(OverwriteSwcNodeDataRequest* other) {
+  using std::swap;
+  auto* lhs_arena = GetArenaForAllocation();
+  auto* rhs_arena = other->GetArenaForAllocation();
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.swcuuid_, lhs_arena,
+      &other->_impl_.swcuuid_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(OverwriteSwcNodeDataRequest, _impl_.swcdata_)
+      + sizeof(OverwriteSwcNodeDataRequest::_impl_.swcdata_)
+      - PROTOBUF_FIELD_OFFSET(OverwriteSwcNodeDataRequest, _impl_.metainfo_)>(
+          reinterpret_cast<char*>(&_impl_.metainfo_),
+          reinterpret_cast<char*>(&other->_impl_.metainfo_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata OverwriteSwcNodeDataRequest::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_Message_2fRequest_2eproto_getter, &descriptor_table_Message_2fRequest_2eproto_once,
+      file_level_metadata_Message_2fRequest_2eproto[59]);
+}
+
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace proto
 PROTOBUF_NAMESPACE_OPEN
@@ -20957,6 +21339,10 @@ Arena::CreateMaybeMessage< ::proto::UpdateSwcNParentInfoRequest >(Arena* arena) 
 template<> PROTOBUF_NOINLINE ::proto::ClearAllNodesRequest*
 Arena::CreateMaybeMessage< ::proto::ClearAllNodesRequest >(Arena* arena) {
   return Arena::CreateMessageInternal< ::proto::ClearAllNodesRequest >(arena);
+}
+template<> PROTOBUF_NOINLINE ::proto::OverwriteSwcNodeDataRequest*
+Arena::CreateMaybeMessage< ::proto::OverwriteSwcNodeDataRequest >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::proto::OverwriteSwcNodeDataRequest >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE
 

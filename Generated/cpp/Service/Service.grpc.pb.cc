@@ -81,6 +81,7 @@ static const char* DBMS_method_names[] = {
   "/proto.DBMS/GetProjectSwcNamesByProjectUuid",
   "/proto.DBMS/UpdateSwcNParentInfo",
   "/proto.DBMS/ClearAllNodes",
+  "/proto.DBMS/OverwriteSwcNodeData",
 };
 
 std::unique_ptr< DBMS::Stub> DBMS::NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options) {
@@ -149,6 +150,7 @@ DBMS::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, cons
   , rpcmethod_GetProjectSwcNamesByProjectUuid_(DBMS_method_names[56], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   , rpcmethod_UpdateSwcNParentInfo_(DBMS_method_names[57], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   , rpcmethod_ClearAllNodes_(DBMS_method_names[58], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_OverwriteSwcNodeData_(DBMS_method_names[59], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   {}
 
 ::grpc::Status DBMS::Stub::CreateUser(::grpc::ClientContext* context, const ::proto::CreateUserRequest& request, ::proto::CreateUserResponse* response) {
@@ -1508,6 +1510,29 @@ void DBMS::Stub::async::ClearAllNodes(::grpc::ClientContext* context, const ::pr
   return result;
 }
 
+::grpc::Status DBMS::Stub::OverwriteSwcNodeData(::grpc::ClientContext* context, const ::proto::OverwriteSwcNodeDataRequest& request, ::proto::OverwriteSwcNodeDataResponse* response) {
+  return ::grpc::internal::BlockingUnaryCall< ::proto::OverwriteSwcNodeDataRequest, ::proto::OverwriteSwcNodeDataResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_OverwriteSwcNodeData_, context, request, response);
+}
+
+void DBMS::Stub::async::OverwriteSwcNodeData(::grpc::ClientContext* context, const ::proto::OverwriteSwcNodeDataRequest* request, ::proto::OverwriteSwcNodeDataResponse* response, std::function<void(::grpc::Status)> f) {
+  ::grpc::internal::CallbackUnaryCall< ::proto::OverwriteSwcNodeDataRequest, ::proto::OverwriteSwcNodeDataResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_OverwriteSwcNodeData_, context, request, response, std::move(f));
+}
+
+void DBMS::Stub::async::OverwriteSwcNodeData(::grpc::ClientContext* context, const ::proto::OverwriteSwcNodeDataRequest* request, ::proto::OverwriteSwcNodeDataResponse* response, ::grpc::ClientUnaryReactor* reactor) {
+  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_OverwriteSwcNodeData_, context, request, response, reactor);
+}
+
+::grpc::ClientAsyncResponseReader< ::proto::OverwriteSwcNodeDataResponse>* DBMS::Stub::PrepareAsyncOverwriteSwcNodeDataRaw(::grpc::ClientContext* context, const ::proto::OverwriteSwcNodeDataRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::proto::OverwriteSwcNodeDataResponse, ::proto::OverwriteSwcNodeDataRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_OverwriteSwcNodeData_, context, request);
+}
+
+::grpc::ClientAsyncResponseReader< ::proto::OverwriteSwcNodeDataResponse>* DBMS::Stub::AsyncOverwriteSwcNodeDataRaw(::grpc::ClientContext* context, const ::proto::OverwriteSwcNodeDataRequest& request, ::grpc::CompletionQueue* cq) {
+  auto* result =
+    this->PrepareAsyncOverwriteSwcNodeDataRaw(context, request, cq);
+  result->StartCall();
+  return result;
+}
+
 DBMS::Service::Service() {
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       DBMS_method_names[0],
@@ -2099,6 +2124,16 @@ DBMS::Service::Service() {
              ::proto::ClearAllNodesResponse* resp) {
                return service->ClearAllNodes(ctx, req, resp);
              }, this)));
+  AddMethod(new ::grpc::internal::RpcServiceMethod(
+      DBMS_method_names[59],
+      ::grpc::internal::RpcMethod::NORMAL_RPC,
+      new ::grpc::internal::RpcMethodHandler< DBMS::Service, ::proto::OverwriteSwcNodeDataRequest, ::proto::OverwriteSwcNodeDataResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
+          [](DBMS::Service* service,
+             ::grpc::ServerContext* ctx,
+             const ::proto::OverwriteSwcNodeDataRequest* req,
+             ::proto::OverwriteSwcNodeDataResponse* resp) {
+               return service->OverwriteSwcNodeData(ctx, req, resp);
+             }, this)));
 }
 
 DBMS::Service::~Service() {
@@ -2511,6 +2546,13 @@ DBMS::Service::~Service() {
 }
 
 ::grpc::Status DBMS::Service::ClearAllNodes(::grpc::ServerContext* context, const ::proto::ClearAllNodesRequest* request, ::proto::ClearAllNodesResponse* response) {
+  (void) context;
+  (void) request;
+  (void) response;
+  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+}
+
+::grpc::Status DBMS::Service::OverwriteSwcNodeData(::grpc::ServerContext* context, const ::proto::OverwriteSwcNodeDataRequest* request, ::proto::OverwriteSwcNodeDataResponse* response) {
   (void) context;
   (void) request;
   (void) response;

@@ -1456,6 +1456,38 @@
         ]
       }
     },
+    "/proto.DBMS/OverwriteSwcNodeData": {
+      "post": {
+        "operationId": "DBMS_OverwriteSwcNodeData",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/protoOverwriteSwcNodeDataResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/protoOverwriteSwcNodeDataRequest"
+            }
+          }
+        ],
+        "tags": [
+          "DBMS"
+        ]
+      }
+    },
     "/proto.DBMS/RevertSwcVersion": {
       "post": {
         "operationId": "DBMS_RevertSwcVersion",
@@ -3245,6 +3277,37 @@
         "Parent": {
           "type": "integer",
           "format": "int32"
+        }
+      }
+    },
+    "protoOverwriteSwcNodeDataRequest": {
+      "type": "object",
+      "properties": {
+        "metaInfo": {
+          "$ref": "#/definitions/protoRequestMetaInfoV1"
+        },
+        "UserVerifyInfo": {
+          "$ref": "#/definitions/protoUserVerifyInfoV1"
+        },
+        "SwcUuid": {
+          "type": "string"
+        },
+        "SwcData": {
+          "$ref": "#/definitions/protoSwcDataV1"
+        }
+      }
+    },
+    "protoOverwriteSwcNodeDataResponse": {
+      "type": "object",
+      "properties": {
+        "metaInfo": {
+          "$ref": "#/definitions/protoResponseMetaInfoV1"
+        },
+        "CreatedNodesUuid": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
         }
       }
     },

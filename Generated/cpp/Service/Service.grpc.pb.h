@@ -448,6 +448,13 @@ class DBMS final {
     std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::proto::ClearAllNodesResponse>> PrepareAsyncClearAllNodes(::grpc::ClientContext* context, const ::proto::ClearAllNodesRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::proto::ClearAllNodesResponse>>(PrepareAsyncClearAllNodesRaw(context, request, cq));
     }
+    virtual ::grpc::Status OverwriteSwcNodeData(::grpc::ClientContext* context, const ::proto::OverwriteSwcNodeDataRequest& request, ::proto::OverwriteSwcNodeDataResponse* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::proto::OverwriteSwcNodeDataResponse>> AsyncOverwriteSwcNodeData(::grpc::ClientContext* context, const ::proto::OverwriteSwcNodeDataRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::proto::OverwriteSwcNodeDataResponse>>(AsyncOverwriteSwcNodeDataRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::proto::OverwriteSwcNodeDataResponse>> PrepareAsyncOverwriteSwcNodeData(::grpc::ClientContext* context, const ::proto::OverwriteSwcNodeDataRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::proto::OverwriteSwcNodeDataResponse>>(PrepareAsyncOverwriteSwcNodeDataRaw(context, request, cq));
+    }
     class async_interface {
      public:
       virtual ~async_interface() {}
@@ -569,6 +576,8 @@ class DBMS final {
       virtual void UpdateSwcNParentInfo(::grpc::ClientContext* context, const ::proto::UpdateSwcNParentInfoRequest* request, ::proto::UpdateSwcNParentInfoResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
       virtual void ClearAllNodes(::grpc::ClientContext* context, const ::proto::ClearAllNodesRequest* request, ::proto::ClearAllNodesResponse* response, std::function<void(::grpc::Status)>) = 0;
       virtual void ClearAllNodes(::grpc::ClientContext* context, const ::proto::ClearAllNodesRequest* request, ::proto::ClearAllNodesResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      virtual void OverwriteSwcNodeData(::grpc::ClientContext* context, const ::proto::OverwriteSwcNodeDataRequest* request, ::proto::OverwriteSwcNodeDataResponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void OverwriteSwcNodeData(::grpc::ClientContext* context, const ::proto::OverwriteSwcNodeDataRequest* request, ::proto::OverwriteSwcNodeDataResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
     };
     typedef class async_interface experimental_async_interface;
     virtual class async_interface* async() { return nullptr; }
@@ -692,6 +701,8 @@ class DBMS final {
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::proto::UpdateSwcNParentInfoResponse>* PrepareAsyncUpdateSwcNParentInfoRaw(::grpc::ClientContext* context, const ::proto::UpdateSwcNParentInfoRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::proto::ClearAllNodesResponse>* AsyncClearAllNodesRaw(::grpc::ClientContext* context, const ::proto::ClearAllNodesRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::proto::ClearAllNodesResponse>* PrepareAsyncClearAllNodesRaw(::grpc::ClientContext* context, const ::proto::ClearAllNodesRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::proto::OverwriteSwcNodeDataResponse>* AsyncOverwriteSwcNodeDataRaw(::grpc::ClientContext* context, const ::proto::OverwriteSwcNodeDataRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::proto::OverwriteSwcNodeDataResponse>* PrepareAsyncOverwriteSwcNodeDataRaw(::grpc::ClientContext* context, const ::proto::OverwriteSwcNodeDataRequest& request, ::grpc::CompletionQueue* cq) = 0;
   };
   class Stub final : public StubInterface {
    public:
@@ -1109,6 +1120,13 @@ class DBMS final {
     std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::proto::ClearAllNodesResponse>> PrepareAsyncClearAllNodes(::grpc::ClientContext* context, const ::proto::ClearAllNodesRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::proto::ClearAllNodesResponse>>(PrepareAsyncClearAllNodesRaw(context, request, cq));
     }
+    ::grpc::Status OverwriteSwcNodeData(::grpc::ClientContext* context, const ::proto::OverwriteSwcNodeDataRequest& request, ::proto::OverwriteSwcNodeDataResponse* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::proto::OverwriteSwcNodeDataResponse>> AsyncOverwriteSwcNodeData(::grpc::ClientContext* context, const ::proto::OverwriteSwcNodeDataRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::proto::OverwriteSwcNodeDataResponse>>(AsyncOverwriteSwcNodeDataRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::proto::OverwriteSwcNodeDataResponse>> PrepareAsyncOverwriteSwcNodeData(::grpc::ClientContext* context, const ::proto::OverwriteSwcNodeDataRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::proto::OverwriteSwcNodeDataResponse>>(PrepareAsyncOverwriteSwcNodeDataRaw(context, request, cq));
+    }
     class async final :
       public StubInterface::async_interface {
      public:
@@ -1230,6 +1248,8 @@ class DBMS final {
       void UpdateSwcNParentInfo(::grpc::ClientContext* context, const ::proto::UpdateSwcNParentInfoRequest* request, ::proto::UpdateSwcNParentInfoResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
       void ClearAllNodes(::grpc::ClientContext* context, const ::proto::ClearAllNodesRequest* request, ::proto::ClearAllNodesResponse* response, std::function<void(::grpc::Status)>) override;
       void ClearAllNodes(::grpc::ClientContext* context, const ::proto::ClearAllNodesRequest* request, ::proto::ClearAllNodesResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      void OverwriteSwcNodeData(::grpc::ClientContext* context, const ::proto::OverwriteSwcNodeDataRequest* request, ::proto::OverwriteSwcNodeDataResponse* response, std::function<void(::grpc::Status)>) override;
+      void OverwriteSwcNodeData(::grpc::ClientContext* context, const ::proto::OverwriteSwcNodeDataRequest* request, ::proto::OverwriteSwcNodeDataResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
      private:
       friend class Stub;
       explicit async(Stub* stub): stub_(stub) { }
@@ -1359,6 +1379,8 @@ class DBMS final {
     ::grpc::ClientAsyncResponseReader< ::proto::UpdateSwcNParentInfoResponse>* PrepareAsyncUpdateSwcNParentInfoRaw(::grpc::ClientContext* context, const ::proto::UpdateSwcNParentInfoRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::proto::ClearAllNodesResponse>* AsyncClearAllNodesRaw(::grpc::ClientContext* context, const ::proto::ClearAllNodesRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::proto::ClearAllNodesResponse>* PrepareAsyncClearAllNodesRaw(::grpc::ClientContext* context, const ::proto::ClearAllNodesRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::proto::OverwriteSwcNodeDataResponse>* AsyncOverwriteSwcNodeDataRaw(::grpc::ClientContext* context, const ::proto::OverwriteSwcNodeDataRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::proto::OverwriteSwcNodeDataResponse>* PrepareAsyncOverwriteSwcNodeDataRaw(::grpc::ClientContext* context, const ::proto::OverwriteSwcNodeDataRequest& request, ::grpc::CompletionQueue* cq) override;
     const ::grpc::internal::RpcMethod rpcmethod_CreateUser_;
     const ::grpc::internal::RpcMethod rpcmethod_DeleteUser_;
     const ::grpc::internal::RpcMethod rpcmethod_UpdateUser_;
@@ -1418,6 +1440,7 @@ class DBMS final {
     const ::grpc::internal::RpcMethod rpcmethod_GetProjectSwcNamesByProjectUuid_;
     const ::grpc::internal::RpcMethod rpcmethod_UpdateSwcNParentInfo_;
     const ::grpc::internal::RpcMethod rpcmethod_ClearAllNodes_;
+    const ::grpc::internal::RpcMethod rpcmethod_OverwriteSwcNodeData_;
   };
   static std::unique_ptr<Stub> NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options = ::grpc::StubOptions());
 
@@ -1484,6 +1507,7 @@ class DBMS final {
     virtual ::grpc::Status GetProjectSwcNamesByProjectUuid(::grpc::ServerContext* context, const ::proto::GetProjectSwcNamesByProjectUuidRequest* request, ::proto::GetProjectSwcNamesByProjectUuidResponse* response);
     virtual ::grpc::Status UpdateSwcNParentInfo(::grpc::ServerContext* context, const ::proto::UpdateSwcNParentInfoRequest* request, ::proto::UpdateSwcNParentInfoResponse* response);
     virtual ::grpc::Status ClearAllNodes(::grpc::ServerContext* context, const ::proto::ClearAllNodesRequest* request, ::proto::ClearAllNodesResponse* response);
+    virtual ::grpc::Status OverwriteSwcNodeData(::grpc::ServerContext* context, const ::proto::OverwriteSwcNodeDataRequest* request, ::proto::OverwriteSwcNodeDataResponse* response);
   };
   template <class BaseClass>
   class WithAsyncMethod_CreateUser : public BaseClass {
@@ -2665,7 +2689,27 @@ class DBMS final {
       ::grpc::Service::RequestAsyncUnary(58, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
-  typedef WithAsyncMethod_CreateUser<WithAsyncMethod_DeleteUser<WithAsyncMethod_UpdateUser<WithAsyncMethod_GetUserByUuid<WithAsyncMethod_GetUserByName<WithAsyncMethod_GetAllUser<WithAsyncMethod_UserLogin<WithAsyncMethod_UserLogout<WithAsyncMethod_UserOnlineHeartBeatNotifications<WithAsyncMethod_GetUserPermissionGroup<WithAsyncMethod_GetPermissionGroupByUuid<WithAsyncMethod_GetPermissionGroupByName<WithAsyncMethod_GetAllPermissionGroup<WithAsyncMethod_ChangeUserPermissionGroup<WithAsyncMethod_CreateProject<WithAsyncMethod_DeleteProject<WithAsyncMethod_UpdateProject<WithAsyncMethod_GetProject<WithAsyncMethod_GetAllProject<WithAsyncMethod_CreateSwc<WithAsyncMethod_DeleteSwc<WithAsyncMethod_UpdateSwc<WithAsyncMethod_GetSwcMetaInfo<WithAsyncMethod_GetAllSwcMetaInfo<WithAsyncMethod_CreateSwcSnapshot<WithAsyncMethod_GetAllSnapshotMetaInfo<WithAsyncMethod_GetSnapshot<WithAsyncMethod_GetAllIncrementOperationMetaInfo<WithAsyncMethod_GetIncrementOperation<WithAsyncMethod_CreateSwcNodeData<WithAsyncMethod_DeleteSwcNodeData<WithAsyncMethod_UpdateSwcNodeData<WithAsyncMethod_GetSwcNodeData<WithAsyncMethod_GetSwcFullNodeData<WithAsyncMethod_GetSwcNodeDataListByTimeAndUser<WithAsyncMethod_CreateDailyStatistics<WithAsyncMethod_DeleteDailyStatistics<WithAsyncMethod_UpdateDailyStatistics<WithAsyncMethod_GetDailyStatistics<WithAsyncMethod_GetAllDailyStatistics<WithAsyncMethod_CreateSwcAttachmentAno<WithAsyncMethod_DeleteSwcAttachmentAno<WithAsyncMethod_UpdateSwcAttachmentAno<WithAsyncMethod_GetSwcAttachmentAno<WithAsyncMethod_CreateSwcAttachmentApo<WithAsyncMethod_DeleteSwcAttachmentApo<WithAsyncMethod_UpdateSwcAttachmentApo<WithAsyncMethod_GetSwcAttachmentApo<WithAsyncMethod_RevertSwcVersion<WithAsyncMethod_CreateSwcAttachmentSwc<WithAsyncMethod_DeleteSwcAttachmentSwc<WithAsyncMethod_UpdateSwcAttachmentSwc<WithAsyncMethod_GetSwcAttachmentSwc<WithAsyncMethod_CreatePermissionGroup<WithAsyncMethod_DeletePermissionGroup<WithAsyncMethod_UpdatePermissionGroup<WithAsyncMethod_GetProjectSwcNamesByProjectUuid<WithAsyncMethod_UpdateSwcNParentInfo<WithAsyncMethod_ClearAllNodes<Service > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > AsyncService;
+  template <class BaseClass>
+  class WithAsyncMethod_OverwriteSwcNodeData : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithAsyncMethod_OverwriteSwcNodeData() {
+      ::grpc::Service::MarkMethodAsync(59);
+    }
+    ~WithAsyncMethod_OverwriteSwcNodeData() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status OverwriteSwcNodeData(::grpc::ServerContext* /*context*/, const ::proto::OverwriteSwcNodeDataRequest* /*request*/, ::proto::OverwriteSwcNodeDataResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestOverwriteSwcNodeData(::grpc::ServerContext* context, ::proto::OverwriteSwcNodeDataRequest* request, ::grpc::ServerAsyncResponseWriter< ::proto::OverwriteSwcNodeDataResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(59, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  typedef WithAsyncMethod_CreateUser<WithAsyncMethod_DeleteUser<WithAsyncMethod_UpdateUser<WithAsyncMethod_GetUserByUuid<WithAsyncMethod_GetUserByName<WithAsyncMethod_GetAllUser<WithAsyncMethod_UserLogin<WithAsyncMethod_UserLogout<WithAsyncMethod_UserOnlineHeartBeatNotifications<WithAsyncMethod_GetUserPermissionGroup<WithAsyncMethod_GetPermissionGroupByUuid<WithAsyncMethod_GetPermissionGroupByName<WithAsyncMethod_GetAllPermissionGroup<WithAsyncMethod_ChangeUserPermissionGroup<WithAsyncMethod_CreateProject<WithAsyncMethod_DeleteProject<WithAsyncMethod_UpdateProject<WithAsyncMethod_GetProject<WithAsyncMethod_GetAllProject<WithAsyncMethod_CreateSwc<WithAsyncMethod_DeleteSwc<WithAsyncMethod_UpdateSwc<WithAsyncMethod_GetSwcMetaInfo<WithAsyncMethod_GetAllSwcMetaInfo<WithAsyncMethod_CreateSwcSnapshot<WithAsyncMethod_GetAllSnapshotMetaInfo<WithAsyncMethod_GetSnapshot<WithAsyncMethod_GetAllIncrementOperationMetaInfo<WithAsyncMethod_GetIncrementOperation<WithAsyncMethod_CreateSwcNodeData<WithAsyncMethod_DeleteSwcNodeData<WithAsyncMethod_UpdateSwcNodeData<WithAsyncMethod_GetSwcNodeData<WithAsyncMethod_GetSwcFullNodeData<WithAsyncMethod_GetSwcNodeDataListByTimeAndUser<WithAsyncMethod_CreateDailyStatistics<WithAsyncMethod_DeleteDailyStatistics<WithAsyncMethod_UpdateDailyStatistics<WithAsyncMethod_GetDailyStatistics<WithAsyncMethod_GetAllDailyStatistics<WithAsyncMethod_CreateSwcAttachmentAno<WithAsyncMethod_DeleteSwcAttachmentAno<WithAsyncMethod_UpdateSwcAttachmentAno<WithAsyncMethod_GetSwcAttachmentAno<WithAsyncMethod_CreateSwcAttachmentApo<WithAsyncMethod_DeleteSwcAttachmentApo<WithAsyncMethod_UpdateSwcAttachmentApo<WithAsyncMethod_GetSwcAttachmentApo<WithAsyncMethod_RevertSwcVersion<WithAsyncMethod_CreateSwcAttachmentSwc<WithAsyncMethod_DeleteSwcAttachmentSwc<WithAsyncMethod_UpdateSwcAttachmentSwc<WithAsyncMethod_GetSwcAttachmentSwc<WithAsyncMethod_CreatePermissionGroup<WithAsyncMethod_DeletePermissionGroup<WithAsyncMethod_UpdatePermissionGroup<WithAsyncMethod_GetProjectSwcNamesByProjectUuid<WithAsyncMethod_UpdateSwcNParentInfo<WithAsyncMethod_ClearAllNodes<WithAsyncMethod_OverwriteSwcNodeData<Service > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > AsyncService;
   template <class BaseClass>
   class WithCallbackMethod_CreateUser : public BaseClass {
    private:
@@ -4259,7 +4303,34 @@ class DBMS final {
     virtual ::grpc::ServerUnaryReactor* ClearAllNodes(
       ::grpc::CallbackServerContext* /*context*/, const ::proto::ClearAllNodesRequest* /*request*/, ::proto::ClearAllNodesResponse* /*response*/)  { return nullptr; }
   };
-  typedef WithCallbackMethod_CreateUser<WithCallbackMethod_DeleteUser<WithCallbackMethod_UpdateUser<WithCallbackMethod_GetUserByUuid<WithCallbackMethod_GetUserByName<WithCallbackMethod_GetAllUser<WithCallbackMethod_UserLogin<WithCallbackMethod_UserLogout<WithCallbackMethod_UserOnlineHeartBeatNotifications<WithCallbackMethod_GetUserPermissionGroup<WithCallbackMethod_GetPermissionGroupByUuid<WithCallbackMethod_GetPermissionGroupByName<WithCallbackMethod_GetAllPermissionGroup<WithCallbackMethod_ChangeUserPermissionGroup<WithCallbackMethod_CreateProject<WithCallbackMethod_DeleteProject<WithCallbackMethod_UpdateProject<WithCallbackMethod_GetProject<WithCallbackMethod_GetAllProject<WithCallbackMethod_CreateSwc<WithCallbackMethod_DeleteSwc<WithCallbackMethod_UpdateSwc<WithCallbackMethod_GetSwcMetaInfo<WithCallbackMethod_GetAllSwcMetaInfo<WithCallbackMethod_CreateSwcSnapshot<WithCallbackMethod_GetAllSnapshotMetaInfo<WithCallbackMethod_GetSnapshot<WithCallbackMethod_GetAllIncrementOperationMetaInfo<WithCallbackMethod_GetIncrementOperation<WithCallbackMethod_CreateSwcNodeData<WithCallbackMethod_DeleteSwcNodeData<WithCallbackMethod_UpdateSwcNodeData<WithCallbackMethod_GetSwcNodeData<WithCallbackMethod_GetSwcFullNodeData<WithCallbackMethod_GetSwcNodeDataListByTimeAndUser<WithCallbackMethod_CreateDailyStatistics<WithCallbackMethod_DeleteDailyStatistics<WithCallbackMethod_UpdateDailyStatistics<WithCallbackMethod_GetDailyStatistics<WithCallbackMethod_GetAllDailyStatistics<WithCallbackMethod_CreateSwcAttachmentAno<WithCallbackMethod_DeleteSwcAttachmentAno<WithCallbackMethod_UpdateSwcAttachmentAno<WithCallbackMethod_GetSwcAttachmentAno<WithCallbackMethod_CreateSwcAttachmentApo<WithCallbackMethod_DeleteSwcAttachmentApo<WithCallbackMethod_UpdateSwcAttachmentApo<WithCallbackMethod_GetSwcAttachmentApo<WithCallbackMethod_RevertSwcVersion<WithCallbackMethod_CreateSwcAttachmentSwc<WithCallbackMethod_DeleteSwcAttachmentSwc<WithCallbackMethod_UpdateSwcAttachmentSwc<WithCallbackMethod_GetSwcAttachmentSwc<WithCallbackMethod_CreatePermissionGroup<WithCallbackMethod_DeletePermissionGroup<WithCallbackMethod_UpdatePermissionGroup<WithCallbackMethod_GetProjectSwcNamesByProjectUuid<WithCallbackMethod_UpdateSwcNParentInfo<WithCallbackMethod_ClearAllNodes<Service > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > CallbackService;
+  template <class BaseClass>
+  class WithCallbackMethod_OverwriteSwcNodeData : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithCallbackMethod_OverwriteSwcNodeData() {
+      ::grpc::Service::MarkMethodCallback(59,
+          new ::grpc::internal::CallbackUnaryHandler< ::proto::OverwriteSwcNodeDataRequest, ::proto::OverwriteSwcNodeDataResponse>(
+            [this](
+                   ::grpc::CallbackServerContext* context, const ::proto::OverwriteSwcNodeDataRequest* request, ::proto::OverwriteSwcNodeDataResponse* response) { return this->OverwriteSwcNodeData(context, request, response); }));}
+    void SetMessageAllocatorFor_OverwriteSwcNodeData(
+        ::grpc::MessageAllocator< ::proto::OverwriteSwcNodeDataRequest, ::proto::OverwriteSwcNodeDataResponse>* allocator) {
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(59);
+      static_cast<::grpc::internal::CallbackUnaryHandler< ::proto::OverwriteSwcNodeDataRequest, ::proto::OverwriteSwcNodeDataResponse>*>(handler)
+              ->SetMessageAllocator(allocator);
+    }
+    ~WithCallbackMethod_OverwriteSwcNodeData() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status OverwriteSwcNodeData(::grpc::ServerContext* /*context*/, const ::proto::OverwriteSwcNodeDataRequest* /*request*/, ::proto::OverwriteSwcNodeDataResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerUnaryReactor* OverwriteSwcNodeData(
+      ::grpc::CallbackServerContext* /*context*/, const ::proto::OverwriteSwcNodeDataRequest* /*request*/, ::proto::OverwriteSwcNodeDataResponse* /*response*/)  { return nullptr; }
+  };
+  typedef WithCallbackMethod_CreateUser<WithCallbackMethod_DeleteUser<WithCallbackMethod_UpdateUser<WithCallbackMethod_GetUserByUuid<WithCallbackMethod_GetUserByName<WithCallbackMethod_GetAllUser<WithCallbackMethod_UserLogin<WithCallbackMethod_UserLogout<WithCallbackMethod_UserOnlineHeartBeatNotifications<WithCallbackMethod_GetUserPermissionGroup<WithCallbackMethod_GetPermissionGroupByUuid<WithCallbackMethod_GetPermissionGroupByName<WithCallbackMethod_GetAllPermissionGroup<WithCallbackMethod_ChangeUserPermissionGroup<WithCallbackMethod_CreateProject<WithCallbackMethod_DeleteProject<WithCallbackMethod_UpdateProject<WithCallbackMethod_GetProject<WithCallbackMethod_GetAllProject<WithCallbackMethod_CreateSwc<WithCallbackMethod_DeleteSwc<WithCallbackMethod_UpdateSwc<WithCallbackMethod_GetSwcMetaInfo<WithCallbackMethod_GetAllSwcMetaInfo<WithCallbackMethod_CreateSwcSnapshot<WithCallbackMethod_GetAllSnapshotMetaInfo<WithCallbackMethod_GetSnapshot<WithCallbackMethod_GetAllIncrementOperationMetaInfo<WithCallbackMethod_GetIncrementOperation<WithCallbackMethod_CreateSwcNodeData<WithCallbackMethod_DeleteSwcNodeData<WithCallbackMethod_UpdateSwcNodeData<WithCallbackMethod_GetSwcNodeData<WithCallbackMethod_GetSwcFullNodeData<WithCallbackMethod_GetSwcNodeDataListByTimeAndUser<WithCallbackMethod_CreateDailyStatistics<WithCallbackMethod_DeleteDailyStatistics<WithCallbackMethod_UpdateDailyStatistics<WithCallbackMethod_GetDailyStatistics<WithCallbackMethod_GetAllDailyStatistics<WithCallbackMethod_CreateSwcAttachmentAno<WithCallbackMethod_DeleteSwcAttachmentAno<WithCallbackMethod_UpdateSwcAttachmentAno<WithCallbackMethod_GetSwcAttachmentAno<WithCallbackMethod_CreateSwcAttachmentApo<WithCallbackMethod_DeleteSwcAttachmentApo<WithCallbackMethod_UpdateSwcAttachmentApo<WithCallbackMethod_GetSwcAttachmentApo<WithCallbackMethod_RevertSwcVersion<WithCallbackMethod_CreateSwcAttachmentSwc<WithCallbackMethod_DeleteSwcAttachmentSwc<WithCallbackMethod_UpdateSwcAttachmentSwc<WithCallbackMethod_GetSwcAttachmentSwc<WithCallbackMethod_CreatePermissionGroup<WithCallbackMethod_DeletePermissionGroup<WithCallbackMethod_UpdatePermissionGroup<WithCallbackMethod_GetProjectSwcNamesByProjectUuid<WithCallbackMethod_UpdateSwcNParentInfo<WithCallbackMethod_ClearAllNodes<WithCallbackMethod_OverwriteSwcNodeData<Service > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > CallbackService;
   typedef CallbackService ExperimentalCallbackService;
   template <class BaseClass>
   class WithGenericMethod_CreateUser : public BaseClass {
@@ -5260,6 +5331,23 @@ class DBMS final {
     }
     // disable synchronous version of this method
     ::grpc::Status ClearAllNodes(::grpc::ServerContext* /*context*/, const ::proto::ClearAllNodesRequest* /*request*/, ::proto::ClearAllNodesResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+  };
+  template <class BaseClass>
+  class WithGenericMethod_OverwriteSwcNodeData : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithGenericMethod_OverwriteSwcNodeData() {
+      ::grpc::Service::MarkMethodGeneric(59);
+    }
+    ~WithGenericMethod_OverwriteSwcNodeData() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status OverwriteSwcNodeData(::grpc::ServerContext* /*context*/, const ::proto::OverwriteSwcNodeDataRequest* /*request*/, ::proto::OverwriteSwcNodeDataResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -6442,6 +6530,26 @@ class DBMS final {
     }
     void RequestClearAllNodes(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(58, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_OverwriteSwcNodeData : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawMethod_OverwriteSwcNodeData() {
+      ::grpc::Service::MarkMethodRaw(59);
+    }
+    ~WithRawMethod_OverwriteSwcNodeData() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status OverwriteSwcNodeData(::grpc::ServerContext* /*context*/, const ::proto::OverwriteSwcNodeDataRequest* /*request*/, ::proto::OverwriteSwcNodeDataResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestOverwriteSwcNodeData(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(59, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -7740,6 +7848,28 @@ class DBMS final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     virtual ::grpc::ServerUnaryReactor* ClearAllNodes(
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
+  };
+  template <class BaseClass>
+  class WithRawCallbackMethod_OverwriteSwcNodeData : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawCallbackMethod_OverwriteSwcNodeData() {
+      ::grpc::Service::MarkMethodRawCallback(59,
+          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->OverwriteSwcNodeData(context, request, response); }));
+    }
+    ~WithRawCallbackMethod_OverwriteSwcNodeData() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status OverwriteSwcNodeData(::grpc::ServerContext* /*context*/, const ::proto::OverwriteSwcNodeDataRequest* /*request*/, ::proto::OverwriteSwcNodeDataResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerUnaryReactor* OverwriteSwcNodeData(
       ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
   };
   template <class BaseClass>
@@ -9335,9 +9465,36 @@ class DBMS final {
     // replace default version of method with streamed unary
     virtual ::grpc::Status StreamedClearAllNodes(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::proto::ClearAllNodesRequest,::proto::ClearAllNodesResponse>* server_unary_streamer) = 0;
   };
-  typedef WithStreamedUnaryMethod_CreateUser<WithStreamedUnaryMethod_DeleteUser<WithStreamedUnaryMethod_UpdateUser<WithStreamedUnaryMethod_GetUserByUuid<WithStreamedUnaryMethod_GetUserByName<WithStreamedUnaryMethod_GetAllUser<WithStreamedUnaryMethod_UserLogin<WithStreamedUnaryMethod_UserLogout<WithStreamedUnaryMethod_UserOnlineHeartBeatNotifications<WithStreamedUnaryMethod_GetUserPermissionGroup<WithStreamedUnaryMethod_GetPermissionGroupByUuid<WithStreamedUnaryMethod_GetPermissionGroupByName<WithStreamedUnaryMethod_GetAllPermissionGroup<WithStreamedUnaryMethod_ChangeUserPermissionGroup<WithStreamedUnaryMethod_CreateProject<WithStreamedUnaryMethod_DeleteProject<WithStreamedUnaryMethod_UpdateProject<WithStreamedUnaryMethod_GetProject<WithStreamedUnaryMethod_GetAllProject<WithStreamedUnaryMethod_CreateSwc<WithStreamedUnaryMethod_DeleteSwc<WithStreamedUnaryMethod_UpdateSwc<WithStreamedUnaryMethod_GetSwcMetaInfo<WithStreamedUnaryMethod_GetAllSwcMetaInfo<WithStreamedUnaryMethod_CreateSwcSnapshot<WithStreamedUnaryMethod_GetAllSnapshotMetaInfo<WithStreamedUnaryMethod_GetSnapshot<WithStreamedUnaryMethod_GetAllIncrementOperationMetaInfo<WithStreamedUnaryMethod_GetIncrementOperation<WithStreamedUnaryMethod_CreateSwcNodeData<WithStreamedUnaryMethod_DeleteSwcNodeData<WithStreamedUnaryMethod_UpdateSwcNodeData<WithStreamedUnaryMethod_GetSwcNodeData<WithStreamedUnaryMethod_GetSwcFullNodeData<WithStreamedUnaryMethod_GetSwcNodeDataListByTimeAndUser<WithStreamedUnaryMethod_CreateDailyStatistics<WithStreamedUnaryMethod_DeleteDailyStatistics<WithStreamedUnaryMethod_UpdateDailyStatistics<WithStreamedUnaryMethod_GetDailyStatistics<WithStreamedUnaryMethod_GetAllDailyStatistics<WithStreamedUnaryMethod_CreateSwcAttachmentAno<WithStreamedUnaryMethod_DeleteSwcAttachmentAno<WithStreamedUnaryMethod_UpdateSwcAttachmentAno<WithStreamedUnaryMethod_GetSwcAttachmentAno<WithStreamedUnaryMethod_CreateSwcAttachmentApo<WithStreamedUnaryMethod_DeleteSwcAttachmentApo<WithStreamedUnaryMethod_UpdateSwcAttachmentApo<WithStreamedUnaryMethod_GetSwcAttachmentApo<WithStreamedUnaryMethod_RevertSwcVersion<WithStreamedUnaryMethod_CreateSwcAttachmentSwc<WithStreamedUnaryMethod_DeleteSwcAttachmentSwc<WithStreamedUnaryMethod_UpdateSwcAttachmentSwc<WithStreamedUnaryMethod_GetSwcAttachmentSwc<WithStreamedUnaryMethod_CreatePermissionGroup<WithStreamedUnaryMethod_DeletePermissionGroup<WithStreamedUnaryMethod_UpdatePermissionGroup<WithStreamedUnaryMethod_GetProjectSwcNamesByProjectUuid<WithStreamedUnaryMethod_UpdateSwcNParentInfo<WithStreamedUnaryMethod_ClearAllNodes<Service > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > StreamedUnaryService;
+  template <class BaseClass>
+  class WithStreamedUnaryMethod_OverwriteSwcNodeData : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithStreamedUnaryMethod_OverwriteSwcNodeData() {
+      ::grpc::Service::MarkMethodStreamed(59,
+        new ::grpc::internal::StreamedUnaryHandler<
+          ::proto::OverwriteSwcNodeDataRequest, ::proto::OverwriteSwcNodeDataResponse>(
+            [this](::grpc::ServerContext* context,
+                   ::grpc::ServerUnaryStreamer<
+                     ::proto::OverwriteSwcNodeDataRequest, ::proto::OverwriteSwcNodeDataResponse>* streamer) {
+                       return this->StreamedOverwriteSwcNodeData(context,
+                         streamer);
+                  }));
+    }
+    ~WithStreamedUnaryMethod_OverwriteSwcNodeData() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable regular version of this method
+    ::grpc::Status OverwriteSwcNodeData(::grpc::ServerContext* /*context*/, const ::proto::OverwriteSwcNodeDataRequest* /*request*/, ::proto::OverwriteSwcNodeDataResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    // replace default version of method with streamed unary
+    virtual ::grpc::Status StreamedOverwriteSwcNodeData(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::proto::OverwriteSwcNodeDataRequest,::proto::OverwriteSwcNodeDataResponse>* server_unary_streamer) = 0;
+  };
+  typedef WithStreamedUnaryMethod_CreateUser<WithStreamedUnaryMethod_DeleteUser<WithStreamedUnaryMethod_UpdateUser<WithStreamedUnaryMethod_GetUserByUuid<WithStreamedUnaryMethod_GetUserByName<WithStreamedUnaryMethod_GetAllUser<WithStreamedUnaryMethod_UserLogin<WithStreamedUnaryMethod_UserLogout<WithStreamedUnaryMethod_UserOnlineHeartBeatNotifications<WithStreamedUnaryMethod_GetUserPermissionGroup<WithStreamedUnaryMethod_GetPermissionGroupByUuid<WithStreamedUnaryMethod_GetPermissionGroupByName<WithStreamedUnaryMethod_GetAllPermissionGroup<WithStreamedUnaryMethod_ChangeUserPermissionGroup<WithStreamedUnaryMethod_CreateProject<WithStreamedUnaryMethod_DeleteProject<WithStreamedUnaryMethod_UpdateProject<WithStreamedUnaryMethod_GetProject<WithStreamedUnaryMethod_GetAllProject<WithStreamedUnaryMethod_CreateSwc<WithStreamedUnaryMethod_DeleteSwc<WithStreamedUnaryMethod_UpdateSwc<WithStreamedUnaryMethod_GetSwcMetaInfo<WithStreamedUnaryMethod_GetAllSwcMetaInfo<WithStreamedUnaryMethod_CreateSwcSnapshot<WithStreamedUnaryMethod_GetAllSnapshotMetaInfo<WithStreamedUnaryMethod_GetSnapshot<WithStreamedUnaryMethod_GetAllIncrementOperationMetaInfo<WithStreamedUnaryMethod_GetIncrementOperation<WithStreamedUnaryMethod_CreateSwcNodeData<WithStreamedUnaryMethod_DeleteSwcNodeData<WithStreamedUnaryMethod_UpdateSwcNodeData<WithStreamedUnaryMethod_GetSwcNodeData<WithStreamedUnaryMethod_GetSwcFullNodeData<WithStreamedUnaryMethod_GetSwcNodeDataListByTimeAndUser<WithStreamedUnaryMethod_CreateDailyStatistics<WithStreamedUnaryMethod_DeleteDailyStatistics<WithStreamedUnaryMethod_UpdateDailyStatistics<WithStreamedUnaryMethod_GetDailyStatistics<WithStreamedUnaryMethod_GetAllDailyStatistics<WithStreamedUnaryMethod_CreateSwcAttachmentAno<WithStreamedUnaryMethod_DeleteSwcAttachmentAno<WithStreamedUnaryMethod_UpdateSwcAttachmentAno<WithStreamedUnaryMethod_GetSwcAttachmentAno<WithStreamedUnaryMethod_CreateSwcAttachmentApo<WithStreamedUnaryMethod_DeleteSwcAttachmentApo<WithStreamedUnaryMethod_UpdateSwcAttachmentApo<WithStreamedUnaryMethod_GetSwcAttachmentApo<WithStreamedUnaryMethod_RevertSwcVersion<WithStreamedUnaryMethod_CreateSwcAttachmentSwc<WithStreamedUnaryMethod_DeleteSwcAttachmentSwc<WithStreamedUnaryMethod_UpdateSwcAttachmentSwc<WithStreamedUnaryMethod_GetSwcAttachmentSwc<WithStreamedUnaryMethod_CreatePermissionGroup<WithStreamedUnaryMethod_DeletePermissionGroup<WithStreamedUnaryMethod_UpdatePermissionGroup<WithStreamedUnaryMethod_GetProjectSwcNamesByProjectUuid<WithStreamedUnaryMethod_UpdateSwcNParentInfo<WithStreamedUnaryMethod_ClearAllNodes<WithStreamedUnaryMethod_OverwriteSwcNodeData<Service > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > StreamedUnaryService;
   typedef Service SplitStreamedService;
-  typedef WithStreamedUnaryMethod_CreateUser<WithStreamedUnaryMethod_DeleteUser<WithStreamedUnaryMethod_UpdateUser<WithStreamedUnaryMethod_GetUserByUuid<WithStreamedUnaryMethod_GetUserByName<WithStreamedUnaryMethod_GetAllUser<WithStreamedUnaryMethod_UserLogin<WithStreamedUnaryMethod_UserLogout<WithStreamedUnaryMethod_UserOnlineHeartBeatNotifications<WithStreamedUnaryMethod_GetUserPermissionGroup<WithStreamedUnaryMethod_GetPermissionGroupByUuid<WithStreamedUnaryMethod_GetPermissionGroupByName<WithStreamedUnaryMethod_GetAllPermissionGroup<WithStreamedUnaryMethod_ChangeUserPermissionGroup<WithStreamedUnaryMethod_CreateProject<WithStreamedUnaryMethod_DeleteProject<WithStreamedUnaryMethod_UpdateProject<WithStreamedUnaryMethod_GetProject<WithStreamedUnaryMethod_GetAllProject<WithStreamedUnaryMethod_CreateSwc<WithStreamedUnaryMethod_DeleteSwc<WithStreamedUnaryMethod_UpdateSwc<WithStreamedUnaryMethod_GetSwcMetaInfo<WithStreamedUnaryMethod_GetAllSwcMetaInfo<WithStreamedUnaryMethod_CreateSwcSnapshot<WithStreamedUnaryMethod_GetAllSnapshotMetaInfo<WithStreamedUnaryMethod_GetSnapshot<WithStreamedUnaryMethod_GetAllIncrementOperationMetaInfo<WithStreamedUnaryMethod_GetIncrementOperation<WithStreamedUnaryMethod_CreateSwcNodeData<WithStreamedUnaryMethod_DeleteSwcNodeData<WithStreamedUnaryMethod_UpdateSwcNodeData<WithStreamedUnaryMethod_GetSwcNodeData<WithStreamedUnaryMethod_GetSwcFullNodeData<WithStreamedUnaryMethod_GetSwcNodeDataListByTimeAndUser<WithStreamedUnaryMethod_CreateDailyStatistics<WithStreamedUnaryMethod_DeleteDailyStatistics<WithStreamedUnaryMethod_UpdateDailyStatistics<WithStreamedUnaryMethod_GetDailyStatistics<WithStreamedUnaryMethod_GetAllDailyStatistics<WithStreamedUnaryMethod_CreateSwcAttachmentAno<WithStreamedUnaryMethod_DeleteSwcAttachmentAno<WithStreamedUnaryMethod_UpdateSwcAttachmentAno<WithStreamedUnaryMethod_GetSwcAttachmentAno<WithStreamedUnaryMethod_CreateSwcAttachmentApo<WithStreamedUnaryMethod_DeleteSwcAttachmentApo<WithStreamedUnaryMethod_UpdateSwcAttachmentApo<WithStreamedUnaryMethod_GetSwcAttachmentApo<WithStreamedUnaryMethod_RevertSwcVersion<WithStreamedUnaryMethod_CreateSwcAttachmentSwc<WithStreamedUnaryMethod_DeleteSwcAttachmentSwc<WithStreamedUnaryMethod_UpdateSwcAttachmentSwc<WithStreamedUnaryMethod_GetSwcAttachmentSwc<WithStreamedUnaryMethod_CreatePermissionGroup<WithStreamedUnaryMethod_DeletePermissionGroup<WithStreamedUnaryMethod_UpdatePermissionGroup<WithStreamedUnaryMethod_GetProjectSwcNamesByProjectUuid<WithStreamedUnaryMethod_UpdateSwcNParentInfo<WithStreamedUnaryMethod_ClearAllNodes<Service > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > StreamedService;
+  typedef WithStreamedUnaryMethod_CreateUser<WithStreamedUnaryMethod_DeleteUser<WithStreamedUnaryMethod_UpdateUser<WithStreamedUnaryMethod_GetUserByUuid<WithStreamedUnaryMethod_GetUserByName<WithStreamedUnaryMethod_GetAllUser<WithStreamedUnaryMethod_UserLogin<WithStreamedUnaryMethod_UserLogout<WithStreamedUnaryMethod_UserOnlineHeartBeatNotifications<WithStreamedUnaryMethod_GetUserPermissionGroup<WithStreamedUnaryMethod_GetPermissionGroupByUuid<WithStreamedUnaryMethod_GetPermissionGroupByName<WithStreamedUnaryMethod_GetAllPermissionGroup<WithStreamedUnaryMethod_ChangeUserPermissionGroup<WithStreamedUnaryMethod_CreateProject<WithStreamedUnaryMethod_DeleteProject<WithStreamedUnaryMethod_UpdateProject<WithStreamedUnaryMethod_GetProject<WithStreamedUnaryMethod_GetAllProject<WithStreamedUnaryMethod_CreateSwc<WithStreamedUnaryMethod_DeleteSwc<WithStreamedUnaryMethod_UpdateSwc<WithStreamedUnaryMethod_GetSwcMetaInfo<WithStreamedUnaryMethod_GetAllSwcMetaInfo<WithStreamedUnaryMethod_CreateSwcSnapshot<WithStreamedUnaryMethod_GetAllSnapshotMetaInfo<WithStreamedUnaryMethod_GetSnapshot<WithStreamedUnaryMethod_GetAllIncrementOperationMetaInfo<WithStreamedUnaryMethod_GetIncrementOperation<WithStreamedUnaryMethod_CreateSwcNodeData<WithStreamedUnaryMethod_DeleteSwcNodeData<WithStreamedUnaryMethod_UpdateSwcNodeData<WithStreamedUnaryMethod_GetSwcNodeData<WithStreamedUnaryMethod_GetSwcFullNodeData<WithStreamedUnaryMethod_GetSwcNodeDataListByTimeAndUser<WithStreamedUnaryMethod_CreateDailyStatistics<WithStreamedUnaryMethod_DeleteDailyStatistics<WithStreamedUnaryMethod_UpdateDailyStatistics<WithStreamedUnaryMethod_GetDailyStatistics<WithStreamedUnaryMethod_GetAllDailyStatistics<WithStreamedUnaryMethod_CreateSwcAttachmentAno<WithStreamedUnaryMethod_DeleteSwcAttachmentAno<WithStreamedUnaryMethod_UpdateSwcAttachmentAno<WithStreamedUnaryMethod_GetSwcAttachmentAno<WithStreamedUnaryMethod_CreateSwcAttachmentApo<WithStreamedUnaryMethod_DeleteSwcAttachmentApo<WithStreamedUnaryMethod_UpdateSwcAttachmentApo<WithStreamedUnaryMethod_GetSwcAttachmentApo<WithStreamedUnaryMethod_RevertSwcVersion<WithStreamedUnaryMethod_CreateSwcAttachmentSwc<WithStreamedUnaryMethod_DeleteSwcAttachmentSwc<WithStreamedUnaryMethod_UpdateSwcAttachmentSwc<WithStreamedUnaryMethod_GetSwcAttachmentSwc<WithStreamedUnaryMethod_CreatePermissionGroup<WithStreamedUnaryMethod_DeletePermissionGroup<WithStreamedUnaryMethod_UpdatePermissionGroup<WithStreamedUnaryMethod_GetProjectSwcNamesByProjectUuid<WithStreamedUnaryMethod_UpdateSwcNParentInfo<WithStreamedUnaryMethod_ClearAllNodes<WithStreamedUnaryMethod_OverwriteSwcNodeData<Service > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > StreamedService;
 };
 
 }  // namespace proto

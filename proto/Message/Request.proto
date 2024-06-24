@@ -383,3 +383,10 @@ message ClearAllNodesRequest{
     UserVerifyInfoV1 UserVerifyInfo = 2;
     string SwcUuid = 3;
 }
+
+message OverwriteSwcNodeDataRequest{
+    RequestMetaInfoV1 metaInfo = 1;
+    UserVerifyInfoV1 UserVerifyInfo = 2;
+    string SwcUuid = 3;
+    SwcDataV1 SwcData = 4;
+}
