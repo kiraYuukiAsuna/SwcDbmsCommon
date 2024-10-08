@@ -3930,6 +3930,7 @@ class SwcNodeDataV1 final :
   enum : int {
     kCreatorFieldNumber = 3,
     kCheckerUserUuidFieldNumber = 6,
+    kDeviceTypeFieldNumber = 7,
     kBaseFieldNumber = 1,
     kSwcNodeInternalDataFieldNumber = 2,
     kCreateTimeFieldNumber = 4,
@@ -3965,6 +3966,22 @@ class SwcNodeDataV1 final :
   inline PROTOBUF_ALWAYS_INLINE void _internal_set_checkeruseruuid(
       const std::string& value);
   std::string* _internal_mutable_checkeruseruuid();
+
+  public:
+  // string DeviceType = 7;
+  void clear_devicetype() ;
+  const std::string& devicetype() const;
+  template <typename Arg_ = const std::string&, typename... Args_>
+  void set_devicetype(Arg_&& arg, Args_... args);
+  std::string* mutable_devicetype();
+  PROTOBUF_NODISCARD std::string* release_devicetype();
+  void set_allocated_devicetype(std::string* value);
+
+  private:
+  const std::string& _internal_devicetype() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_devicetype(
+      const std::string& value);
+  std::string* _internal_mutable_devicetype();
 
   public:
   // .proto.MetaInfoBase Base = 1;
@@ -4033,8 +4050,8 @@ class SwcNodeDataV1 final :
 
   friend class ::google::protobuf::internal::TcParser;
   static const ::google::protobuf::internal::TcParseTable<
-      3, 6, 4,
-      50, 2>
+      3, 7, 4,
+      60, 2>
       _table_;
   friend class ::google::protobuf::MessageLite;
   friend class ::google::protobuf::Arena;
@@ -4054,6 +4071,7 @@ class SwcNodeDataV1 final :
     mutable ::google::protobuf::internal::CachedSize _cached_size_;
     ::google::protobuf::internal::ArenaStringPtr creator_;
     ::google::protobuf::internal::ArenaStringPtr checkeruseruuid_;
+    ::google::protobuf::internal::ArenaStringPtr devicetype_;
     ::proto::MetaInfoBase* base_;
     ::proto::SwcNodeInternalDataV1* swcnodeinternaldata_;
     ::google::protobuf::Timestamp* createtime_;
@@ -13894,6 +13912,59 @@ inline void SwcNodeDataV1::set_allocated_checkeruseruuid(std::string* value) {
         }
   #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   // @@protoc_insertion_point(field_set_allocated:proto.SwcNodeDataV1.CheckerUserUuid)
+}
+
+// string DeviceType = 7;
+inline void SwcNodeDataV1::clear_devicetype() {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  _impl_.devicetype_.ClearToEmpty();
+}
+inline const std::string& SwcNodeDataV1::devicetype() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:proto.SwcNodeDataV1.DeviceType)
+  return _internal_devicetype();
+}
+template <typename Arg_, typename... Args_>
+inline PROTOBUF_ALWAYS_INLINE void SwcNodeDataV1::set_devicetype(Arg_&& arg,
+                                                     Args_... args) {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  ;
+  _impl_.devicetype_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:proto.SwcNodeDataV1.DeviceType)
+}
+inline std::string* SwcNodeDataV1::mutable_devicetype() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  std::string* _s = _internal_mutable_devicetype();
+  // @@protoc_insertion_point(field_mutable:proto.SwcNodeDataV1.DeviceType)
+  return _s;
+}
+inline const std::string& SwcNodeDataV1::_internal_devicetype() const {
+  PROTOBUF_TSAN_READ(&_impl_._tsan_detect_race);
+  return _impl_.devicetype_.Get();
+}
+inline void SwcNodeDataV1::_internal_set_devicetype(const std::string& value) {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  ;
+  _impl_.devicetype_.Set(value, GetArena());
+}
+inline std::string* SwcNodeDataV1::_internal_mutable_devicetype() {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  ;
+  return _impl_.devicetype_.Mutable( GetArena());
+}
+inline std::string* SwcNodeDataV1::release_devicetype() {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  // @@protoc_insertion_point(field_release:proto.SwcNodeDataV1.DeviceType)
+  return _impl_.devicetype_.Release();
+}
+inline void SwcNodeDataV1::set_allocated_devicetype(std::string* value) {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  _impl_.devicetype_.SetAllocated(value, GetArena());
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+        if (_impl_.devicetype_.IsDefault()) {
+          _impl_.devicetype_.Set("", GetArena());
+        }
+  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:proto.SwcNodeDataV1.DeviceType)
 }
 
 // -------------------------------------------------------------------

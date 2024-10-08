@@ -432,6 +432,9 @@ inline constexpr SwcNodeDataV1::Impl_::Impl_(
         checkeruseruuid_(
             &::google::protobuf::internal::fixed_address_empty_string,
             ::_pbi::ConstantInitialized()),
+        devicetype_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
         base_{nullptr},
         swcnodeinternaldata_{nullptr},
         createtime_{nullptr},
@@ -1173,11 +1176,13 @@ const ::uint32_t TableStruct_Message_2fMessage_2eproto::offsets[] PROTOBUF_SECTI
     PROTOBUF_FIELD_OFFSET(::proto::SwcNodeDataV1, _impl_.createtime_),
     PROTOBUF_FIELD_OFFSET(::proto::SwcNodeDataV1, _impl_.lastmodifiedtime_),
     PROTOBUF_FIELD_OFFSET(::proto::SwcNodeDataV1, _impl_.checkeruseruuid_),
+    PROTOBUF_FIELD_OFFSET(::proto::SwcNodeDataV1, _impl_.devicetype_),
     0,
     1,
     ~0u,
     2,
     3,
+    ~0u,
     ~0u,
     ~0u,  // no _has_bits_
     PROTOBUF_FIELD_OFFSET(::proto::SwcDataV1, _internal_metadata_),
@@ -1349,15 +1354,15 @@ static const ::_pbi::MigrationSchema
         {269, -1, -1, sizeof(::proto::SwcAttachmentApoMetaInfoV1)},
         {278, 301, -1, sizeof(::proto::SwcMetaInfoV1)},
         {316, -1, -1, sizeof(::proto::SwcNodeInternalDataV1)},
-        {336, 350, -1, sizeof(::proto::SwcNodeDataV1)},
-        {356, -1, -1, sizeof(::proto::SwcDataV1)},
-        {365, 390, -1, sizeof(::proto::DailyStatisticsMetaInfoV1)},
-        {407, -1, -1, sizeof(::proto::UserVerifyInfoV1)},
-        {418, -1, -1, sizeof(::proto::RequestMetaInfoV1)},
-        {427, -1, -1, sizeof(::proto::ResponseMetaInfoV1)},
-        {438, 449, -1, sizeof(::proto::SwcAttachmentAnoV1)},
-        {452, 476, -1, sizeof(::proto::SwcAttachmentApoV1)},
-        {492, -1, -1, sizeof(::proto::SwcUuidName)},
+        {336, 351, -1, sizeof(::proto::SwcNodeDataV1)},
+        {358, -1, -1, sizeof(::proto::SwcDataV1)},
+        {367, 392, -1, sizeof(::proto::DailyStatisticsMetaInfoV1)},
+        {409, -1, -1, sizeof(::proto::UserVerifyInfoV1)},
+        {420, -1, -1, sizeof(::proto::RequestMetaInfoV1)},
+        {429, -1, -1, sizeof(::proto::ResponseMetaInfoV1)},
+        {440, 451, -1, sizeof(::proto::SwcAttachmentAnoV1)},
+        {454, 478, -1, sizeof(::proto::SwcAttachmentApoV1)},
+        {494, -1, -1, sizeof(::proto::SwcUuidName)},
 };
 
 static const ::_pb::Message* const file_default_instances[] = {
@@ -1502,46 +1507,47 @@ const char descriptor_table_protodef_Message_2fMessage_2eproto[] PROTOBUF_SECTIO
     "\022\t\n\001Y\030\004 \001(\002\022\t\n\001Z\030\005 \001(\002\022\016\n\006Radius\030\006 \001(\002\022\016"
     "\n\006Parent\030\007 \001(\005\022\016\n\006Seg_id\030\010 \001(\005\022\r\n\005Level\030"
     "\t \001(\005\022\014\n\004Mode\030\n \001(\005\022\021\n\tTimestamp\030\013 \001(\005\022\025"
-    "\n\rFeature_value\030\014 \001(\005\"\375\001\n\rSwcNodeDataV1\022"
+    "\n\rFeature_value\030\014 \001(\005\"\221\002\n\rSwcNodeDataV1\022"
     "!\n\004Base\030\001 \001(\0132\023.proto.MetaInfoBase\0229\n\023Sw"
     "cNodeInternalData\030\002 \001(\0132\034.proto.SwcNodeI"
     "nternalDataV1\022\017\n\007Creator\030\003 \001(\t\022.\n\nCreate"
     "Time\030\004 \001(\0132\032.google.protobuf.Timestamp\0224"
     "\n\020LastModifiedTime\030\005 \001(\0132\032.google.protob"
-    "uf.Timestamp\022\027\n\017CheckerUserUuid\030\006 \001(\t\"2\n"
-    "\tSwcDataV1\022%\n\007SwcData\030\001 \003(\0132\024.proto.SwcN"
-    "odeDataV1\"\331\003\n\031DailyStatisticsMetaInfoV1\022"
-    "!\n\004Base\030\001 \001(\0132\023.proto.MetaInfoBase\022\014\n\004Na"
-    "me\030\002 \001(\t\022\023\n\013Description\030\003 \001(\t\022\013\n\003Day\030\004 \001"
-    "(\t\022\034\n\024CreatedProjectNumber\030\005 \001(\005\022\030\n\020Crea"
-    "tedSwcNumber\030\006 \001(\005\022\033\n\023CreateSwcNodeNumbe"
-    "r\030\007 \001(\005\022\034\n\024DeletedProjectNumber\030\010 \001(\005\022\030\n"
-    "\020DeletedSwcNumber\030\t \001(\005\022\034\n\024DeletedSwcNod"
-    "eNumber\030\n \001(\005\022\035\n\025ModifiedProjectNumber\030\013"
-    " \001(\005\022\031\n\021ModifiedSwcNumber\030\014 \001(\005\022\035\n\025Modif"
-    "iedSwcNodeNumber\030\r \001(\005\022\032\n\022ProjectQueryNu"
-    "mber\030\016 \001(\005\022\026\n\016SwcQueryNumber\030\017 \001(\005\022\027\n\017No"
-    "deQueryNumber\030\020 \001(\005\022\030\n\020ActiveUserNumber\030"
-    "\021 \001(\005\"M\n\020UserVerifyInfoV1\022\020\n\010UserName\030\001 "
-    "\001(\t\022\021\n\tUserToken\030\002 \001(\t\022\024\n\014UserPassword\030\003"
-    " \001(\t\"\'\n\021RequestMetaInfoV1\022\022\n\nApiVersion\030"
-    "\001 \001(\t\"A\n\022ResponseMetaInfoV1\022\016\n\006Status\030\001 "
-    "\001(\010\022\n\n\002Id\030\002 \001(\t\022\017\n\007Message\030\003 \001(\t\"Y\n\022SwcA"
-    "ttachmentAnoV1\022!\n\004Base\030\001 \001(\0132\023.proto.Met"
-    "aInfoBase\022\017\n\007APOFILE\030\002 \001(\t\022\017\n\007SWCFILE\030\003 "
-    "\001(\t\"\225\002\n\022SwcAttachmentApoV1\022!\n\004Base\030\001 \001(\013"
-    "2\023.proto.MetaInfoBase\022\t\n\001N\030\002 \001(\005\022\021\n\tOrde"
-    "rinfo\030\003 \001(\t\022\014\n\004Name\030\004 \001(\t\022\017\n\007Comment\030\005 \001"
-    "(\t\022\t\n\001Z\030\006 \001(\002\022\t\n\001X\030\007 \001(\002\022\t\n\001Y\030\010 \001(\002\022\016\n\006P"
-    "ixmax\030\t \001(\002\022\021\n\tIntensity\030\n \001(\002\022\014\n\004Sdev\030\013"
-    " \001(\002\022\017\n\007Volsize\030\014 \001(\002\022\014\n\004Mass\030\r \001(\002\022\016\n\006C"
-    "olorR\030\016 \001(\005\022\016\n\006ColorG\030\017 \001(\005\022\016\n\006ColorB\030\020 "
-    "\001(\005\"/\n\013SwcUuidName\022\017\n\007SwcUuid\030\001 \001(\t\022\017\n\007S"
-    "wcName\030\002 \001(\t*z\n\024IncrementOperationV1\022\013\n\007"
-    "Unknown\020\000\022\n\n\006Create\020\001\022\n\n\006Delete\020\002\022\n\n\006Upd"
-    "ate\020\003\022\021\n\rUpdateNParent\020\004\022\014\n\010ClearAll\020\005\022\020"
-    "\n\014OverwriteAll\020\006B/Z-DBMS/SwcDbmsCommon/G"
-    "enerated/go/proto/messageP\000b\006proto3"
+    "uf.Timestamp\022\027\n\017CheckerUserUuid\030\006 \001(\t\022\022\n"
+    "\nDeviceType\030\007 \001(\t\"2\n\tSwcDataV1\022%\n\007SwcDat"
+    "a\030\001 \003(\0132\024.proto.SwcNodeDataV1\"\331\003\n\031DailyS"
+    "tatisticsMetaInfoV1\022!\n\004Base\030\001 \001(\0132\023.prot"
+    "o.MetaInfoBase\022\014\n\004Name\030\002 \001(\t\022\023\n\013Descript"
+    "ion\030\003 \001(\t\022\013\n\003Day\030\004 \001(\t\022\034\n\024CreatedProject"
+    "Number\030\005 \001(\005\022\030\n\020CreatedSwcNumber\030\006 \001(\005\022\033"
+    "\n\023CreateSwcNodeNumber\030\007 \001(\005\022\034\n\024DeletedPr"
+    "ojectNumber\030\010 \001(\005\022\030\n\020DeletedSwcNumber\030\t "
+    "\001(\005\022\034\n\024DeletedSwcNodeNumber\030\n \001(\005\022\035\n\025Mod"
+    "ifiedProjectNumber\030\013 \001(\005\022\031\n\021ModifiedSwcN"
+    "umber\030\014 \001(\005\022\035\n\025ModifiedSwcNodeNumber\030\r \001"
+    "(\005\022\032\n\022ProjectQueryNumber\030\016 \001(\005\022\026\n\016SwcQue"
+    "ryNumber\030\017 \001(\005\022\027\n\017NodeQueryNumber\030\020 \001(\005\022"
+    "\030\n\020ActiveUserNumber\030\021 \001(\005\"M\n\020UserVerifyI"
+    "nfoV1\022\020\n\010UserName\030\001 \001(\t\022\021\n\tUserToken\030\002 \001"
+    "(\t\022\024\n\014UserPassword\030\003 \001(\t\"\'\n\021RequestMetaI"
+    "nfoV1\022\022\n\nApiVersion\030\001 \001(\t\"A\n\022ResponseMet"
+    "aInfoV1\022\016\n\006Status\030\001 \001(\010\022\n\n\002Id\030\002 \001(\t\022\017\n\007M"
+    "essage\030\003 \001(\t\"Y\n\022SwcAttachmentAnoV1\022!\n\004Ba"
+    "se\030\001 \001(\0132\023.proto.MetaInfoBase\022\017\n\007APOFILE"
+    "\030\002 \001(\t\022\017\n\007SWCFILE\030\003 \001(\t\"\225\002\n\022SwcAttachmen"
+    "tApoV1\022!\n\004Base\030\001 \001(\0132\023.proto.MetaInfoBas"
+    "e\022\t\n\001N\030\002 \001(\005\022\021\n\tOrderinfo\030\003 \001(\t\022\014\n\004Name\030"
+    "\004 \001(\t\022\017\n\007Comment\030\005 \001(\t\022\t\n\001Z\030\006 \001(\002\022\t\n\001X\030\007"
+    " \001(\002\022\t\n\001Y\030\010 \001(\002\022\016\n\006Pixmax\030\t \001(\002\022\021\n\tInten"
+    "sity\030\n \001(\002\022\014\n\004Sdev\030\013 \001(\002\022\017\n\007Volsize\030\014 \001("
+    "\002\022\014\n\004Mass\030\r \001(\002\022\016\n\006ColorR\030\016 \001(\005\022\016\n\006Color"
+    "G\030\017 \001(\005\022\016\n\006ColorB\030\020 \001(\005\"/\n\013SwcUuidName\022\017"
+    "\n\007SwcUuid\030\001 \001(\t\022\017\n\007SwcName\030\002 \001(\t*z\n\024Incr"
+    "ementOperationV1\022\013\n\007Unknown\020\000\022\n\n\006Create\020"
+    "\001\022\n\n\006Delete\020\002\022\n\n\006Update\020\003\022\021\n\rUpdateNPare"
+    "nt\020\004\022\014\n\010ClearAll\020\005\022\020\n\014OverwriteAll\020\006B/Z-"
+    "DBMS/SwcDbmsCommon/Generated/go/proto/me"
+    "ssageP\000b\006proto3"
 };
 static const ::_pbi::DescriptorTable* const descriptor_table_Message_2fMessage_2eproto_deps[1] =
     {
@@ -1551,7 +1557,7 @@ static ::absl::once_flag descriptor_table_Message_2fMessage_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_Message_2fMessage_2eproto = {
     false,
     false,
-    5995,
+    6015,
     descriptor_table_protodef_Message_2fMessage_2eproto,
     "Message/Message.proto",
     &descriptor_table_Message_2fMessage_2eproto_once,
@@ -8528,7 +8534,8 @@ inline PROTOBUF_NDEBUG_INLINE SwcNodeDataV1::Impl_::Impl_(
       : _has_bits_{from._has_bits_},
         _cached_size_{0},
         creator_(arena, from.creator_),
-        checkeruseruuid_(arena, from.checkeruseruuid_) {}
+        checkeruseruuid_(arena, from.checkeruseruuid_),
+        devicetype_(arena, from.devicetype_) {}
 
 SwcNodeDataV1::SwcNodeDataV1(
     ::google::protobuf::Arena* arena,
@@ -8560,7 +8567,8 @@ inline PROTOBUF_NDEBUG_INLINE SwcNodeDataV1::Impl_::Impl_(
     ::google::protobuf::Arena* arena)
       : _cached_size_{0},
         creator_(arena),
-        checkeruseruuid_(arena) {}
+        checkeruseruuid_(arena),
+        devicetype_(arena) {}
 
 inline void SwcNodeDataV1::SharedCtor(::_pb::Arena* arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
@@ -8580,6 +8588,7 @@ inline void SwcNodeDataV1::SharedDtor() {
   ABSL_DCHECK(GetArena() == nullptr);
   _impl_.creator_.Destroy();
   _impl_.checkeruseruuid_.Destroy();
+  _impl_.devicetype_.Destroy();
   delete _impl_.base_;
   delete _impl_.swcnodeinternaldata_;
   delete _impl_.createtime_;
@@ -8596,6 +8605,7 @@ PROTOBUF_NOINLINE void SwcNodeDataV1::Clear() {
 
   _impl_.creator_.ClearToEmpty();
   _impl_.checkeruseruuid_.ClearToEmpty();
+  _impl_.devicetype_.ClearToEmpty();
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x0000000fu) {
     if (cached_has_bits & 0x00000001u) {
@@ -8627,15 +8637,15 @@ const char* SwcNodeDataV1::_InternalParse(
 
 
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<3, 6, 4, 50, 2> SwcNodeDataV1::_table_ = {
+const ::_pbi::TcParseTable<3, 7, 4, 60, 2> SwcNodeDataV1::_table_ = {
   {
     PROTOBUF_FIELD_OFFSET(SwcNodeDataV1, _impl_._has_bits_),
     0, // no _extensions_
-    6, 56,  // max_field_number, fast_idx_mask
+    7, 56,  // max_field_number, fast_idx_mask
     offsetof(decltype(_table_), field_lookup_table),
-    4294967232,  // skipmap
+    4294967168,  // skipmap
     offsetof(decltype(_table_), field_entries),
-    6,  // num_field_entries
+    7,  // num_field_entries
     4,  // num_aux_entries
     offsetof(decltype(_table_), aux_entries),
     &_SwcNodeDataV1_default_instance_._instance,
@@ -8660,7 +8670,9 @@ const ::_pbi::TcParseTable<3, 6, 4, 50, 2> SwcNodeDataV1::_table_ = {
     // string CheckerUserUuid = 6;
     {::_pbi::TcParser::FastUS1,
      {50, 63, 0, PROTOBUF_FIELD_OFFSET(SwcNodeDataV1, _impl_.checkeruseruuid_)}},
-    {::_pbi::TcParser::MiniParse, {}},
+    // string DeviceType = 7;
+    {::_pbi::TcParser::FastUS1,
+     {58, 63, 0, PROTOBUF_FIELD_OFFSET(SwcNodeDataV1, _impl_.devicetype_)}},
   }}, {{
     65535, 65535
   }}, {{
@@ -8682,16 +8694,20 @@ const ::_pbi::TcParseTable<3, 6, 4, 50, 2> SwcNodeDataV1::_table_ = {
     // string CheckerUserUuid = 6;
     {PROTOBUF_FIELD_OFFSET(SwcNodeDataV1, _impl_.checkeruseruuid_), -1, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
+    // string DeviceType = 7;
+    {PROTOBUF_FIELD_OFFSET(SwcNodeDataV1, _impl_.devicetype_), -1, 0,
+    (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
   }}, {{
     {::_pbi::TcParser::GetTable<::proto::MetaInfoBase>()},
     {::_pbi::TcParser::GetTable<::proto::SwcNodeInternalDataV1>()},
     {::_pbi::TcParser::GetTable<::google::protobuf::Timestamp>()},
     {::_pbi::TcParser::GetTable<::google::protobuf::Timestamp>()},
   }}, {{
-    "\23\0\0\7\0\0\17\0"
+    "\23\0\0\7\0\0\17\12"
     "proto.SwcNodeDataV1"
     "Creator"
     "CheckerUserUuid"
+    "DeviceType"
   }},
 };
 
@@ -8747,6 +8763,14 @@ const ::_pbi::TcParseTable<3, 6, 4, 50, 2> SwcNodeDataV1::_table_ = {
     target = stream->WriteStringMaybeAliased(6, _s, target);
   }
 
+  // string DeviceType = 7;
+  if (!this->_internal_devicetype().empty()) {
+    const std::string& _s = this->_internal_devicetype();
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "proto.SwcNodeDataV1.DeviceType");
+    target = stream->WriteStringMaybeAliased(7, _s, target);
+  }
+
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target =
         ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
@@ -8774,6 +8798,12 @@ const ::_pbi::TcParseTable<3, 6, 4, 50, 2> SwcNodeDataV1::_table_ = {
   if (!this->_internal_checkeruseruuid().empty()) {
     total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
                                     this->_internal_checkeruseruuid());
+  }
+
+  // string DeviceType = 7;
+  if (!this->_internal_devicetype().empty()) {
+    total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                    this->_internal_devicetype());
   }
 
   cached_has_bits = _impl_._has_bits_[0];
@@ -8828,6 +8858,9 @@ void SwcNodeDataV1::MergeImpl(::google::protobuf::Message& to_msg, const ::googl
   if (!from._internal_checkeruseruuid().empty()) {
     _this->_internal_set_checkeruseruuid(from._internal_checkeruseruuid());
   }
+  if (!from._internal_devicetype().empty()) {
+    _this->_internal_set_devicetype(from._internal_devicetype());
+  }
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x0000000fu) {
     if (cached_has_bits & 0x00000001u) {
@@ -8872,6 +8905,7 @@ void SwcNodeDataV1::InternalSwap(SwcNodeDataV1* PROTOBUF_RESTRICT other) {
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.creator_, &other->_impl_.creator_, arena);
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.checkeruseruuid_, &other->_impl_.checkeruseruuid_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.devicetype_, &other->_impl_.devicetype_, arena);
   ::google::protobuf::internal::memswap<
       PROTOBUF_FIELD_OFFSET(SwcNodeDataV1, _impl_.lastmodifiedtime_)
       + sizeof(SwcNodeDataV1::_impl_.lastmodifiedtime_)
