@@ -390,3 +390,8 @@ message OverwriteSwcNodeDataRequest{
     string SwcUuid = 3;
     SwcDataV1 SwcData = 4;
 }
+
+message GetAllFreeSwcMetaInfoRequest{
+    RequestMetaInfoV1 metaInfo = 1;
+    UserVerifyInfoV1 UserVerifyInfo = 2;
+}

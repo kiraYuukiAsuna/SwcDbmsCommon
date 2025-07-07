@@ -296,3 +296,8 @@ message OverwriteSwcNodeDataResponse{
     ResponseMetaInfoV1 metaInfo = 1;
     repeated string CreatedNodesUuid = 2;
 }
+
+message GetAllFreeSwcMetaInfoResponse{
+    ResponseMetaInfoV1 metaInfo = 1;
+    repeated SwcUuidName swcUuidName = 2;
+}
