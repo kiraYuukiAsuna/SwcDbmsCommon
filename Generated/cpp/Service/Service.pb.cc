@@ -33,7 +33,7 @@ const char descriptor_table_protodef_Service_2fService_2eproto[] PROTOBUF_SECTIO
     "\n\025Service/Service.proto\022\005proto\032\037google/p"
     "rotobuf/timestamp.proto\032\025Message/Message"
     ".proto\032\025Message/Request.proto\032\026Message/R"
-    "esponse.proto2\304,\n\004DBMS\022C\n\nCreateUser\022\030.p"
+    "esponse.proto2\266-\n\004DBMS\022C\n\nCreateUser\022\030.p"
     "roto.CreateUserRequest\032\031.proto.CreateUse"
     "rResponse\"\000\022C\n\nDeleteUser\022\030.proto.Delete"
     "UserRequest\032\031.proto.DeleteUserResponse\"\000"
@@ -175,9 +175,12 @@ const char descriptor_table_protodef_Service_2fService_2eproto[] PROTOBUF_SECTIO
     "NodeDataRequest\032#.proto.OverwriteSwcNode"
     "DataResponse\"\000\022d\n\025GetAllFreeSwcMetaInfo\022"
     "#.proto.GetAllFreeSwcMetaInfoRequest\032$.p"
-    "roto.GetAllFreeSwcMetaInfoResponse\"\000B/Z-"
-    "DBMS/SwcDbmsCommon/Generated/go/proto/se"
-    "rviceP\000b\006proto3"
+    "roto.GetAllFreeSwcMetaInfoResponse\"\000\022p\n\031"
+    "GetProjectsDefinedSomaSwc\022\'.proto.GetPro"
+    "jectsDefinedSomaSwcRequest\032(.proto.GetPr"
+    "ojectsDefinedSomaSwcResponse\"\000B/Z-DBMS/S"
+    "wcDbmsCommon/Generated/go/proto/serviceP"
+    "\000b\006proto3"
 };
 static const ::_pbi::DescriptorTable* const descriptor_table_Service_2fService_2eproto_deps[4] =
     {
@@ -190,7 +193,7 @@ static ::absl::once_flag descriptor_table_Service_2fService_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_Service_2fService_2eproto = {
     false,
     false,
-    5895,
+    6009,
     descriptor_table_protodef_Service_2fService_2eproto,
     "Service/Service.proto",
     &descriptor_table_Service_2fService_2eproto_once,

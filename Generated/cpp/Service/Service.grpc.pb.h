@@ -462,6 +462,13 @@ class DBMS final {
     std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::proto::GetAllFreeSwcMetaInfoResponse>> PrepareAsyncGetAllFreeSwcMetaInfo(::grpc::ClientContext* context, const ::proto::GetAllFreeSwcMetaInfoRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::proto::GetAllFreeSwcMetaInfoResponse>>(PrepareAsyncGetAllFreeSwcMetaInfoRaw(context, request, cq));
     }
+    virtual ::grpc::Status GetProjectsDefinedSomaSwc(::grpc::ClientContext* context, const ::proto::GetProjectsDefinedSomaSwcRequest& request, ::proto::GetProjectsDefinedSomaSwcResponse* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::proto::GetProjectsDefinedSomaSwcResponse>> AsyncGetProjectsDefinedSomaSwc(::grpc::ClientContext* context, const ::proto::GetProjectsDefinedSomaSwcRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::proto::GetProjectsDefinedSomaSwcResponse>>(AsyncGetProjectsDefinedSomaSwcRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::proto::GetProjectsDefinedSomaSwcResponse>> PrepareAsyncGetProjectsDefinedSomaSwc(::grpc::ClientContext* context, const ::proto::GetProjectsDefinedSomaSwcRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::proto::GetProjectsDefinedSomaSwcResponse>>(PrepareAsyncGetProjectsDefinedSomaSwcRaw(context, request, cq));
+    }
     class async_interface {
      public:
       virtual ~async_interface() {}
@@ -587,6 +594,8 @@ class DBMS final {
       virtual void OverwriteSwcNodeData(::grpc::ClientContext* context, const ::proto::OverwriteSwcNodeDataRequest* request, ::proto::OverwriteSwcNodeDataResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
       virtual void GetAllFreeSwcMetaInfo(::grpc::ClientContext* context, const ::proto::GetAllFreeSwcMetaInfoRequest* request, ::proto::GetAllFreeSwcMetaInfoResponse* response, std::function<void(::grpc::Status)>) = 0;
       virtual void GetAllFreeSwcMetaInfo(::grpc::ClientContext* context, const ::proto::GetAllFreeSwcMetaInfoRequest* request, ::proto::GetAllFreeSwcMetaInfoResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      virtual void GetProjectsDefinedSomaSwc(::grpc::ClientContext* context, const ::proto::GetProjectsDefinedSomaSwcRequest* request, ::proto::GetProjectsDefinedSomaSwcResponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void GetProjectsDefinedSomaSwc(::grpc::ClientContext* context, const ::proto::GetProjectsDefinedSomaSwcRequest* request, ::proto::GetProjectsDefinedSomaSwcResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
     };
     typedef class async_interface experimental_async_interface;
     virtual class async_interface* async() { return nullptr; }
@@ -714,6 +723,8 @@ class DBMS final {
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::proto::OverwriteSwcNodeDataResponse>* PrepareAsyncOverwriteSwcNodeDataRaw(::grpc::ClientContext* context, const ::proto::OverwriteSwcNodeDataRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::proto::GetAllFreeSwcMetaInfoResponse>* AsyncGetAllFreeSwcMetaInfoRaw(::grpc::ClientContext* context, const ::proto::GetAllFreeSwcMetaInfoRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::proto::GetAllFreeSwcMetaInfoResponse>* PrepareAsyncGetAllFreeSwcMetaInfoRaw(::grpc::ClientContext* context, const ::proto::GetAllFreeSwcMetaInfoRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::proto::GetProjectsDefinedSomaSwcResponse>* AsyncGetProjectsDefinedSomaSwcRaw(::grpc::ClientContext* context, const ::proto::GetProjectsDefinedSomaSwcRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::proto::GetProjectsDefinedSomaSwcResponse>* PrepareAsyncGetProjectsDefinedSomaSwcRaw(::grpc::ClientContext* context, const ::proto::GetProjectsDefinedSomaSwcRequest& request, ::grpc::CompletionQueue* cq) = 0;
   };
   class Stub final : public StubInterface {
    public:
@@ -1145,6 +1156,13 @@ class DBMS final {
     std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::proto::GetAllFreeSwcMetaInfoResponse>> PrepareAsyncGetAllFreeSwcMetaInfo(::grpc::ClientContext* context, const ::proto::GetAllFreeSwcMetaInfoRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::proto::GetAllFreeSwcMetaInfoResponse>>(PrepareAsyncGetAllFreeSwcMetaInfoRaw(context, request, cq));
     }
+    ::grpc::Status GetProjectsDefinedSomaSwc(::grpc::ClientContext* context, const ::proto::GetProjectsDefinedSomaSwcRequest& request, ::proto::GetProjectsDefinedSomaSwcResponse* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::proto::GetProjectsDefinedSomaSwcResponse>> AsyncGetProjectsDefinedSomaSwc(::grpc::ClientContext* context, const ::proto::GetProjectsDefinedSomaSwcRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::proto::GetProjectsDefinedSomaSwcResponse>>(AsyncGetProjectsDefinedSomaSwcRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::proto::GetProjectsDefinedSomaSwcResponse>> PrepareAsyncGetProjectsDefinedSomaSwc(::grpc::ClientContext* context, const ::proto::GetProjectsDefinedSomaSwcRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::proto::GetProjectsDefinedSomaSwcResponse>>(PrepareAsyncGetProjectsDefinedSomaSwcRaw(context, request, cq));
+    }
     class async final :
       public StubInterface::async_interface {
      public:
@@ -1270,6 +1288,8 @@ class DBMS final {
       void OverwriteSwcNodeData(::grpc::ClientContext* context, const ::proto::OverwriteSwcNodeDataRequest* request, ::proto::OverwriteSwcNodeDataResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
       void GetAllFreeSwcMetaInfo(::grpc::ClientContext* context, const ::proto::GetAllFreeSwcMetaInfoRequest* request, ::proto::GetAllFreeSwcMetaInfoResponse* response, std::function<void(::grpc::Status)>) override;
       void GetAllFreeSwcMetaInfo(::grpc::ClientContext* context, const ::proto::GetAllFreeSwcMetaInfoRequest* request, ::proto::GetAllFreeSwcMetaInfoResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      void GetProjectsDefinedSomaSwc(::grpc::ClientContext* context, const ::proto::GetProjectsDefinedSomaSwcRequest* request, ::proto::GetProjectsDefinedSomaSwcResponse* response, std::function<void(::grpc::Status)>) override;
+      void GetProjectsDefinedSomaSwc(::grpc::ClientContext* context, const ::proto::GetProjectsDefinedSomaSwcRequest* request, ::proto::GetProjectsDefinedSomaSwcResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
      private:
       friend class Stub;
       explicit async(Stub* stub): stub_(stub) { }
@@ -1403,6 +1423,8 @@ class DBMS final {
     ::grpc::ClientAsyncResponseReader< ::proto::OverwriteSwcNodeDataResponse>* PrepareAsyncOverwriteSwcNodeDataRaw(::grpc::ClientContext* context, const ::proto::OverwriteSwcNodeDataRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::proto::GetAllFreeSwcMetaInfoResponse>* AsyncGetAllFreeSwcMetaInfoRaw(::grpc::ClientContext* context, const ::proto::GetAllFreeSwcMetaInfoRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::proto::GetAllFreeSwcMetaInfoResponse>* PrepareAsyncGetAllFreeSwcMetaInfoRaw(::grpc::ClientContext* context, const ::proto::GetAllFreeSwcMetaInfoRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::proto::GetProjectsDefinedSomaSwcResponse>* AsyncGetProjectsDefinedSomaSwcRaw(::grpc::ClientContext* context, const ::proto::GetProjectsDefinedSomaSwcRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::proto::GetProjectsDefinedSomaSwcResponse>* PrepareAsyncGetProjectsDefinedSomaSwcRaw(::grpc::ClientContext* context, const ::proto::GetProjectsDefinedSomaSwcRequest& request, ::grpc::CompletionQueue* cq) override;
     const ::grpc::internal::RpcMethod rpcmethod_CreateUser_;
     const ::grpc::internal::RpcMethod rpcmethod_DeleteUser_;
     const ::grpc::internal::RpcMethod rpcmethod_UpdateUser_;
@@ -1464,6 +1486,7 @@ class DBMS final {
     const ::grpc::internal::RpcMethod rpcmethod_ClearAllNodes_;
     const ::grpc::internal::RpcMethod rpcmethod_OverwriteSwcNodeData_;
     const ::grpc::internal::RpcMethod rpcmethod_GetAllFreeSwcMetaInfo_;
+    const ::grpc::internal::RpcMethod rpcmethod_GetProjectsDefinedSomaSwc_;
   };
   static std::unique_ptr<Stub> NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options = ::grpc::StubOptions());
 
@@ -1532,6 +1555,7 @@ class DBMS final {
     virtual ::grpc::Status ClearAllNodes(::grpc::ServerContext* context, const ::proto::ClearAllNodesRequest* request, ::proto::ClearAllNodesResponse* response);
     virtual ::grpc::Status OverwriteSwcNodeData(::grpc::ServerContext* context, const ::proto::OverwriteSwcNodeDataRequest* request, ::proto::OverwriteSwcNodeDataResponse* response);
     virtual ::grpc::Status GetAllFreeSwcMetaInfo(::grpc::ServerContext* context, const ::proto::GetAllFreeSwcMetaInfoRequest* request, ::proto::GetAllFreeSwcMetaInfoResponse* response);
+    virtual ::grpc::Status GetProjectsDefinedSomaSwc(::grpc::ServerContext* context, const ::proto::GetProjectsDefinedSomaSwcRequest* request, ::proto::GetProjectsDefinedSomaSwcResponse* response);
   };
   template <class BaseClass>
   class WithAsyncMethod_CreateUser : public BaseClass {
@@ -2753,7 +2777,27 @@ class DBMS final {
       ::grpc::Service::RequestAsyncUnary(60, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
-  typedef WithAsyncMethod_CreateUser<WithAsyncMethod_DeleteUser<WithAsyncMethod_UpdateUser<WithAsyncMethod_GetUserByUuid<WithAsyncMethod_GetUserByName<WithAsyncMethod_GetAllUser<WithAsyncMethod_UserLogin<WithAsyncMethod_UserLogout<WithAsyncMethod_UserOnlineHeartBeatNotifications<WithAsyncMethod_GetUserPermissionGroup<WithAsyncMethod_GetPermissionGroupByUuid<WithAsyncMethod_GetPermissionGroupByName<WithAsyncMethod_GetAllPermissionGroup<WithAsyncMethod_ChangeUserPermissionGroup<WithAsyncMethod_CreateProject<WithAsyncMethod_DeleteProject<WithAsyncMethod_UpdateProject<WithAsyncMethod_GetProject<WithAsyncMethod_GetAllProject<WithAsyncMethod_CreateSwc<WithAsyncMethod_DeleteSwc<WithAsyncMethod_UpdateSwc<WithAsyncMethod_GetSwcMetaInfo<WithAsyncMethod_GetAllSwcMetaInfo<WithAsyncMethod_CreateSwcSnapshot<WithAsyncMethod_GetAllSnapshotMetaInfo<WithAsyncMethod_GetSnapshot<WithAsyncMethod_GetAllIncrementOperationMetaInfo<WithAsyncMethod_GetIncrementOperation<WithAsyncMethod_CreateSwcNodeData<WithAsyncMethod_DeleteSwcNodeData<WithAsyncMethod_UpdateSwcNodeData<WithAsyncMethod_GetSwcNodeData<WithAsyncMethod_GetSwcFullNodeData<WithAsyncMethod_GetSwcNodeDataListByTimeAndUser<WithAsyncMethod_CreateDailyStatistics<WithAsyncMethod_DeleteDailyStatistics<WithAsyncMethod_UpdateDailyStatistics<WithAsyncMethod_GetDailyStatistics<WithAsyncMethod_GetAllDailyStatistics<WithAsyncMethod_CreateSwcAttachmentAno<WithAsyncMethod_DeleteSwcAttachmentAno<WithAsyncMethod_UpdateSwcAttachmentAno<WithAsyncMethod_GetSwcAttachmentAno<WithAsyncMethod_CreateSwcAttachmentApo<WithAsyncMethod_DeleteSwcAttachmentApo<WithAsyncMethod_UpdateSwcAttachmentApo<WithAsyncMethod_GetSwcAttachmentApo<WithAsyncMethod_RevertSwcVersion<WithAsyncMethod_CreateSwcAttachmentSwc<WithAsyncMethod_DeleteSwcAttachmentSwc<WithAsyncMethod_UpdateSwcAttachmentSwc<WithAsyncMethod_GetSwcAttachmentSwc<WithAsyncMethod_CreatePermissionGroup<WithAsyncMethod_DeletePermissionGroup<WithAsyncMethod_UpdatePermissionGroup<WithAsyncMethod_GetProjectSwcNamesByProjectUuid<WithAsyncMethod_UpdateSwcNParentInfo<WithAsyncMethod_ClearAllNodes<WithAsyncMethod_OverwriteSwcNodeData<WithAsyncMethod_GetAllFreeSwcMetaInfo<Service > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > AsyncService;
+  template <class BaseClass>
+  class WithAsyncMethod_GetProjectsDefinedSomaSwc : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithAsyncMethod_GetProjectsDefinedSomaSwc() {
+      ::grpc::Service::MarkMethodAsync(61);
+    }
+    ~WithAsyncMethod_GetProjectsDefinedSomaSwc() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetProjectsDefinedSomaSwc(::grpc::ServerContext* /*context*/, const ::proto::GetProjectsDefinedSomaSwcRequest* /*request*/, ::proto::GetProjectsDefinedSomaSwcResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestGetProjectsDefinedSomaSwc(::grpc::ServerContext* context, ::proto::GetProjectsDefinedSomaSwcRequest* request, ::grpc::ServerAsyncResponseWriter< ::proto::GetProjectsDefinedSomaSwcResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(61, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  typedef WithAsyncMethod_CreateUser<WithAsyncMethod_DeleteUser<WithAsyncMethod_UpdateUser<WithAsyncMethod_GetUserByUuid<WithAsyncMethod_GetUserByName<WithAsyncMethod_GetAllUser<WithAsyncMethod_UserLogin<WithAsyncMethod_UserLogout<WithAsyncMethod_UserOnlineHeartBeatNotifications<WithAsyncMethod_GetUserPermissionGroup<WithAsyncMethod_GetPermissionGroupByUuid<WithAsyncMethod_GetPermissionGroupByName<WithAsyncMethod_GetAllPermissionGroup<WithAsyncMethod_ChangeUserPermissionGroup<WithAsyncMethod_CreateProject<WithAsyncMethod_DeleteProject<WithAsyncMethod_UpdateProject<WithAsyncMethod_GetProject<WithAsyncMethod_GetAllProject<WithAsyncMethod_CreateSwc<WithAsyncMethod_DeleteSwc<WithAsyncMethod_UpdateSwc<WithAsyncMethod_GetSwcMetaInfo<WithAsyncMethod_GetAllSwcMetaInfo<WithAsyncMethod_CreateSwcSnapshot<WithAsyncMethod_GetAllSnapshotMetaInfo<WithAsyncMethod_GetSnapshot<WithAsyncMethod_GetAllIncrementOperationMetaInfo<WithAsyncMethod_GetIncrementOperation<WithAsyncMethod_CreateSwcNodeData<WithAsyncMethod_DeleteSwcNodeData<WithAsyncMethod_UpdateSwcNodeData<WithAsyncMethod_GetSwcNodeData<WithAsyncMethod_GetSwcFullNodeData<WithAsyncMethod_GetSwcNodeDataListByTimeAndUser<WithAsyncMethod_CreateDailyStatistics<WithAsyncMethod_DeleteDailyStatistics<WithAsyncMethod_UpdateDailyStatistics<WithAsyncMethod_GetDailyStatistics<WithAsyncMethod_GetAllDailyStatistics<WithAsyncMethod_CreateSwcAttachmentAno<WithAsyncMethod_DeleteSwcAttachmentAno<WithAsyncMethod_UpdateSwcAttachmentAno<WithAsyncMethod_GetSwcAttachmentAno<WithAsyncMethod_CreateSwcAttachmentApo<WithAsyncMethod_DeleteSwcAttachmentApo<WithAsyncMethod_UpdateSwcAttachmentApo<WithAsyncMethod_GetSwcAttachmentApo<WithAsyncMethod_RevertSwcVersion<WithAsyncMethod_CreateSwcAttachmentSwc<WithAsyncMethod_DeleteSwcAttachmentSwc<WithAsyncMethod_UpdateSwcAttachmentSwc<WithAsyncMethod_GetSwcAttachmentSwc<WithAsyncMethod_CreatePermissionGroup<WithAsyncMethod_DeletePermissionGroup<WithAsyncMethod_UpdatePermissionGroup<WithAsyncMethod_GetProjectSwcNamesByProjectUuid<WithAsyncMethod_UpdateSwcNParentInfo<WithAsyncMethod_ClearAllNodes<WithAsyncMethod_OverwriteSwcNodeData<WithAsyncMethod_GetAllFreeSwcMetaInfo<WithAsyncMethod_GetProjectsDefinedSomaSwc<Service > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > AsyncService;
   template <class BaseClass>
   class WithCallbackMethod_CreateUser : public BaseClass {
    private:
@@ -4401,7 +4445,34 @@ class DBMS final {
     virtual ::grpc::ServerUnaryReactor* GetAllFreeSwcMetaInfo(
       ::grpc::CallbackServerContext* /*context*/, const ::proto::GetAllFreeSwcMetaInfoRequest* /*request*/, ::proto::GetAllFreeSwcMetaInfoResponse* /*response*/)  { return nullptr; }
   };
-  typedef WithCallbackMethod_CreateUser<WithCallbackMethod_DeleteUser<WithCallbackMethod_UpdateUser<WithCallbackMethod_GetUserByUuid<WithCallbackMethod_GetUserByName<WithCallbackMethod_GetAllUser<WithCallbackMethod_UserLogin<WithCallbackMethod_UserLogout<WithCallbackMethod_UserOnlineHeartBeatNotifications<WithCallbackMethod_GetUserPermissionGroup<WithCallbackMethod_GetPermissionGroupByUuid<WithCallbackMethod_GetPermissionGroupByName<WithCallbackMethod_GetAllPermissionGroup<WithCallbackMethod_ChangeUserPermissionGroup<WithCallbackMethod_CreateProject<WithCallbackMethod_DeleteProject<WithCallbackMethod_UpdateProject<WithCallbackMethod_GetProject<WithCallbackMethod_GetAllProject<WithCallbackMethod_CreateSwc<WithCallbackMethod_DeleteSwc<WithCallbackMethod_UpdateSwc<WithCallbackMethod_GetSwcMetaInfo<WithCallbackMethod_GetAllSwcMetaInfo<WithCallbackMethod_CreateSwcSnapshot<WithCallbackMethod_GetAllSnapshotMetaInfo<WithCallbackMethod_GetSnapshot<WithCallbackMethod_GetAllIncrementOperationMetaInfo<WithCallbackMethod_GetIncrementOperation<WithCallbackMethod_CreateSwcNodeData<WithCallbackMethod_DeleteSwcNodeData<WithCallbackMethod_UpdateSwcNodeData<WithCallbackMethod_GetSwcNodeData<WithCallbackMethod_GetSwcFullNodeData<WithCallbackMethod_GetSwcNodeDataListByTimeAndUser<WithCallbackMethod_CreateDailyStatistics<WithCallbackMethod_DeleteDailyStatistics<WithCallbackMethod_UpdateDailyStatistics<WithCallbackMethod_GetDailyStatistics<WithCallbackMethod_GetAllDailyStatistics<WithCallbackMethod_CreateSwcAttachmentAno<WithCallbackMethod_DeleteSwcAttachmentAno<WithCallbackMethod_UpdateSwcAttachmentAno<WithCallbackMethod_GetSwcAttachmentAno<WithCallbackMethod_CreateSwcAttachmentApo<WithCallbackMethod_DeleteSwcAttachmentApo<WithCallbackMethod_UpdateSwcAttachmentApo<WithCallbackMethod_GetSwcAttachmentApo<WithCallbackMethod_RevertSwcVersion<WithCallbackMethod_CreateSwcAttachmentSwc<WithCallbackMethod_DeleteSwcAttachmentSwc<WithCallbackMethod_UpdateSwcAttachmentSwc<WithCallbackMethod_GetSwcAttachmentSwc<WithCallbackMethod_CreatePermissionGroup<WithCallbackMethod_DeletePermissionGroup<WithCallbackMethod_UpdatePermissionGroup<WithCallbackMethod_GetProjectSwcNamesByProjectUuid<WithCallbackMethod_UpdateSwcNParentInfo<WithCallbackMethod_ClearAllNodes<WithCallbackMethod_OverwriteSwcNodeData<WithCallbackMethod_GetAllFreeSwcMetaInfo<Service > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > CallbackService;
+  template <class BaseClass>
+  class WithCallbackMethod_GetProjectsDefinedSomaSwc : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithCallbackMethod_GetProjectsDefinedSomaSwc() {
+      ::grpc::Service::MarkMethodCallback(61,
+          new ::grpc::internal::CallbackUnaryHandler< ::proto::GetProjectsDefinedSomaSwcRequest, ::proto::GetProjectsDefinedSomaSwcResponse>(
+            [this](
+                   ::grpc::CallbackServerContext* context, const ::proto::GetProjectsDefinedSomaSwcRequest* request, ::proto::GetProjectsDefinedSomaSwcResponse* response) { return this->GetProjectsDefinedSomaSwc(context, request, response); }));}
+    void SetMessageAllocatorFor_GetProjectsDefinedSomaSwc(
+        ::grpc::MessageAllocator< ::proto::GetProjectsDefinedSomaSwcRequest, ::proto::GetProjectsDefinedSomaSwcResponse>* allocator) {
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(61);
+      static_cast<::grpc::internal::CallbackUnaryHandler< ::proto::GetProjectsDefinedSomaSwcRequest, ::proto::GetProjectsDefinedSomaSwcResponse>*>(handler)
+              ->SetMessageAllocator(allocator);
+    }
+    ~WithCallbackMethod_GetProjectsDefinedSomaSwc() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetProjectsDefinedSomaSwc(::grpc::ServerContext* /*context*/, const ::proto::GetProjectsDefinedSomaSwcRequest* /*request*/, ::proto::GetProjectsDefinedSomaSwcResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerUnaryReactor* GetProjectsDefinedSomaSwc(
+      ::grpc::CallbackServerContext* /*context*/, const ::proto::GetProjectsDefinedSomaSwcRequest* /*request*/, ::proto::GetProjectsDefinedSomaSwcResponse* /*response*/)  { return nullptr; }
+  };
+  typedef WithCallbackMethod_CreateUser<WithCallbackMethod_DeleteUser<WithCallbackMethod_UpdateUser<WithCallbackMethod_GetUserByUuid<WithCallbackMethod_GetUserByName<WithCallbackMethod_GetAllUser<WithCallbackMethod_UserLogin<WithCallbackMethod_UserLogout<WithCallbackMethod_UserOnlineHeartBeatNotifications<WithCallbackMethod_GetUserPermissionGroup<WithCallbackMethod_GetPermissionGroupByUuid<WithCallbackMethod_GetPermissionGroupByName<WithCallbackMethod_GetAllPermissionGroup<WithCallbackMethod_ChangeUserPermissionGroup<WithCallbackMethod_CreateProject<WithCallbackMethod_DeleteProject<WithCallbackMethod_UpdateProject<WithCallbackMethod_GetProject<WithCallbackMethod_GetAllProject<WithCallbackMethod_CreateSwc<WithCallbackMethod_DeleteSwc<WithCallbackMethod_UpdateSwc<WithCallbackMethod_GetSwcMetaInfo<WithCallbackMethod_GetAllSwcMetaInfo<WithCallbackMethod_CreateSwcSnapshot<WithCallbackMethod_GetAllSnapshotMetaInfo<WithCallbackMethod_GetSnapshot<WithCallbackMethod_GetAllIncrementOperationMetaInfo<WithCallbackMethod_GetIncrementOperation<WithCallbackMethod_CreateSwcNodeData<WithCallbackMethod_DeleteSwcNodeData<WithCallbackMethod_UpdateSwcNodeData<WithCallbackMethod_GetSwcNodeData<WithCallbackMethod_GetSwcFullNodeData<WithCallbackMethod_GetSwcNodeDataListByTimeAndUser<WithCallbackMethod_CreateDailyStatistics<WithCallbackMethod_DeleteDailyStatistics<WithCallbackMethod_UpdateDailyStatistics<WithCallbackMethod_GetDailyStatistics<WithCallbackMethod_GetAllDailyStatistics<WithCallbackMethod_CreateSwcAttachmentAno<WithCallbackMethod_DeleteSwcAttachmentAno<WithCallbackMethod_UpdateSwcAttachmentAno<WithCallbackMethod_GetSwcAttachmentAno<WithCallbackMethod_CreateSwcAttachmentApo<WithCallbackMethod_DeleteSwcAttachmentApo<WithCallbackMethod_UpdateSwcAttachmentApo<WithCallbackMethod_GetSwcAttachmentApo<WithCallbackMethod_RevertSwcVersion<WithCallbackMethod_CreateSwcAttachmentSwc<WithCallbackMethod_DeleteSwcAttachmentSwc<WithCallbackMethod_UpdateSwcAttachmentSwc<WithCallbackMethod_GetSwcAttachmentSwc<WithCallbackMethod_CreatePermissionGroup<WithCallbackMethod_DeletePermissionGroup<WithCallbackMethod_UpdatePermissionGroup<WithCallbackMethod_GetProjectSwcNamesByProjectUuid<WithCallbackMethod_UpdateSwcNParentInfo<WithCallbackMethod_ClearAllNodes<WithCallbackMethod_OverwriteSwcNodeData<WithCallbackMethod_GetAllFreeSwcMetaInfo<WithCallbackMethod_GetProjectsDefinedSomaSwc<Service > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > CallbackService;
   typedef CallbackService ExperimentalCallbackService;
   template <class BaseClass>
   class WithGenericMethod_CreateUser : public BaseClass {
@@ -5436,6 +5507,23 @@ class DBMS final {
     }
     // disable synchronous version of this method
     ::grpc::Status GetAllFreeSwcMetaInfo(::grpc::ServerContext* /*context*/, const ::proto::GetAllFreeSwcMetaInfoRequest* /*request*/, ::proto::GetAllFreeSwcMetaInfoResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+  };
+  template <class BaseClass>
+  class WithGenericMethod_GetProjectsDefinedSomaSwc : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithGenericMethod_GetProjectsDefinedSomaSwc() {
+      ::grpc::Service::MarkMethodGeneric(61);
+    }
+    ~WithGenericMethod_GetProjectsDefinedSomaSwc() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetProjectsDefinedSomaSwc(::grpc::ServerContext* /*context*/, const ::proto::GetProjectsDefinedSomaSwcRequest* /*request*/, ::proto::GetProjectsDefinedSomaSwcResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -6658,6 +6746,26 @@ class DBMS final {
     }
     void RequestGetAllFreeSwcMetaInfo(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(60, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_GetProjectsDefinedSomaSwc : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawMethod_GetProjectsDefinedSomaSwc() {
+      ::grpc::Service::MarkMethodRaw(61);
+    }
+    ~WithRawMethod_GetProjectsDefinedSomaSwc() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetProjectsDefinedSomaSwc(::grpc::ServerContext* /*context*/, const ::proto::GetProjectsDefinedSomaSwcRequest* /*request*/, ::proto::GetProjectsDefinedSomaSwcResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestGetProjectsDefinedSomaSwc(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(61, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -8000,6 +8108,28 @@ class DBMS final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     virtual ::grpc::ServerUnaryReactor* GetAllFreeSwcMetaInfo(
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
+  };
+  template <class BaseClass>
+  class WithRawCallbackMethod_GetProjectsDefinedSomaSwc : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawCallbackMethod_GetProjectsDefinedSomaSwc() {
+      ::grpc::Service::MarkMethodRawCallback(61,
+          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->GetProjectsDefinedSomaSwc(context, request, response); }));
+    }
+    ~WithRawCallbackMethod_GetProjectsDefinedSomaSwc() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetProjectsDefinedSomaSwc(::grpc::ServerContext* /*context*/, const ::proto::GetProjectsDefinedSomaSwcRequest* /*request*/, ::proto::GetProjectsDefinedSomaSwcResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerUnaryReactor* GetProjectsDefinedSomaSwc(
       ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
   };
   template <class BaseClass>
@@ -9649,9 +9779,36 @@ class DBMS final {
     // replace default version of method with streamed unary
     virtual ::grpc::Status StreamedGetAllFreeSwcMetaInfo(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::proto::GetAllFreeSwcMetaInfoRequest,::proto::GetAllFreeSwcMetaInfoResponse>* server_unary_streamer) = 0;
   };
-  typedef WithStreamedUnaryMethod_CreateUser<WithStreamedUnaryMethod_DeleteUser<WithStreamedUnaryMethod_UpdateUser<WithStreamedUnaryMethod_GetUserByUuid<WithStreamedUnaryMethod_GetUserByName<WithStreamedUnaryMethod_GetAllUser<WithStreamedUnaryMethod_UserLogin<WithStreamedUnaryMethod_UserLogout<WithStreamedUnaryMethod_UserOnlineHeartBeatNotifications<WithStreamedUnaryMethod_GetUserPermissionGroup<WithStreamedUnaryMethod_GetPermissionGroupByUuid<WithStreamedUnaryMethod_GetPermissionGroupByName<WithStreamedUnaryMethod_GetAllPermissionGroup<WithStreamedUnaryMethod_ChangeUserPermissionGroup<WithStreamedUnaryMethod_CreateProject<WithStreamedUnaryMethod_DeleteProject<WithStreamedUnaryMethod_UpdateProject<WithStreamedUnaryMethod_GetProject<WithStreamedUnaryMethod_GetAllProject<WithStreamedUnaryMethod_CreateSwc<WithStreamedUnaryMethod_DeleteSwc<WithStreamedUnaryMethod_UpdateSwc<WithStreamedUnaryMethod_GetSwcMetaInfo<WithStreamedUnaryMethod_GetAllSwcMetaInfo<WithStreamedUnaryMethod_CreateSwcSnapshot<WithStreamedUnaryMethod_GetAllSnapshotMetaInfo<WithStreamedUnaryMethod_GetSnapshot<WithStreamedUnaryMethod_GetAllIncrementOperationMetaInfo<WithStreamedUnaryMethod_GetIncrementOperation<WithStreamedUnaryMethod_CreateSwcNodeData<WithStreamedUnaryMethod_DeleteSwcNodeData<WithStreamedUnaryMethod_UpdateSwcNodeData<WithStreamedUnaryMethod_GetSwcNodeData<WithStreamedUnaryMethod_GetSwcFullNodeData<WithStreamedUnaryMethod_GetSwcNodeDataListByTimeAndUser<WithStreamedUnaryMethod_CreateDailyStatistics<WithStreamedUnaryMethod_DeleteDailyStatistics<WithStreamedUnaryMethod_UpdateDailyStatistics<WithStreamedUnaryMethod_GetDailyStatistics<WithStreamedUnaryMethod_GetAllDailyStatistics<WithStreamedUnaryMethod_CreateSwcAttachmentAno<WithStreamedUnaryMethod_DeleteSwcAttachmentAno<WithStreamedUnaryMethod_UpdateSwcAttachmentAno<WithStreamedUnaryMethod_GetSwcAttachmentAno<WithStreamedUnaryMethod_CreateSwcAttachmentApo<WithStreamedUnaryMethod_DeleteSwcAttachmentApo<WithStreamedUnaryMethod_UpdateSwcAttachmentApo<WithStreamedUnaryMethod_GetSwcAttachmentApo<WithStreamedUnaryMethod_RevertSwcVersion<WithStreamedUnaryMethod_CreateSwcAttachmentSwc<WithStreamedUnaryMethod_DeleteSwcAttachmentSwc<WithStreamedUnaryMethod_UpdateSwcAttachmentSwc<WithStreamedUnaryMethod_GetSwcAttachmentSwc<WithStreamedUnaryMethod_CreatePermissionGroup<WithStreamedUnaryMethod_DeletePermissionGroup<WithStreamedUnaryMethod_UpdatePermissionGroup<WithStreamedUnaryMethod_GetProjectSwcNamesByProjectUuid<WithStreamedUnaryMethod_UpdateSwcNParentInfo<WithStreamedUnaryMethod_ClearAllNodes<WithStreamedUnaryMethod_OverwriteSwcNodeData<WithStreamedUnaryMethod_GetAllFreeSwcMetaInfo<Service > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > StreamedUnaryService;
+  template <class BaseClass>
+  class WithStreamedUnaryMethod_GetProjectsDefinedSomaSwc : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithStreamedUnaryMethod_GetProjectsDefinedSomaSwc() {
+      ::grpc::Service::MarkMethodStreamed(61,
+        new ::grpc::internal::StreamedUnaryHandler<
+          ::proto::GetProjectsDefinedSomaSwcRequest, ::proto::GetProjectsDefinedSomaSwcResponse>(
+            [this](::grpc::ServerContext* context,
+                   ::grpc::ServerUnaryStreamer<
+                     ::proto::GetProjectsDefinedSomaSwcRequest, ::proto::GetProjectsDefinedSomaSwcResponse>* streamer) {
+                       return this->StreamedGetProjectsDefinedSomaSwc(context,
+                         streamer);
+                  }));
+    }
+    ~WithStreamedUnaryMethod_GetProjectsDefinedSomaSwc() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable regular version of this method
+    ::grpc::Status GetProjectsDefinedSomaSwc(::grpc::ServerContext* /*context*/, const ::proto::GetProjectsDefinedSomaSwcRequest* /*request*/, ::proto::GetProjectsDefinedSomaSwcResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    // replace default version of method with streamed unary
+    virtual ::grpc::Status StreamedGetProjectsDefinedSomaSwc(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::proto::GetProjectsDefinedSomaSwcRequest,::proto::GetProjectsDefinedSomaSwcResponse>* server_unary_streamer) = 0;
+  };
+  typedef WithStreamedUnaryMethod_CreateUser<WithStreamedUnaryMethod_DeleteUser<WithStreamedUnaryMethod_UpdateUser<WithStreamedUnaryMethod_GetUserByUuid<WithStreamedUnaryMethod_GetUserByName<WithStreamedUnaryMethod_GetAllUser<WithStreamedUnaryMethod_UserLogin<WithStreamedUnaryMethod_UserLogout<WithStreamedUnaryMethod_UserOnlineHeartBeatNotifications<WithStreamedUnaryMethod_GetUserPermissionGroup<WithStreamedUnaryMethod_GetPermissionGroupByUuid<WithStreamedUnaryMethod_GetPermissionGroupByName<WithStreamedUnaryMethod_GetAllPermissionGroup<WithStreamedUnaryMethod_ChangeUserPermissionGroup<WithStreamedUnaryMethod_CreateProject<WithStreamedUnaryMethod_DeleteProject<WithStreamedUnaryMethod_UpdateProject<WithStreamedUnaryMethod_GetProject<WithStreamedUnaryMethod_GetAllProject<WithStreamedUnaryMethod_CreateSwc<WithStreamedUnaryMethod_DeleteSwc<WithStreamedUnaryMethod_UpdateSwc<WithStreamedUnaryMethod_GetSwcMetaInfo<WithStreamedUnaryMethod_GetAllSwcMetaInfo<WithStreamedUnaryMethod_CreateSwcSnapshot<WithStreamedUnaryMethod_GetAllSnapshotMetaInfo<WithStreamedUnaryMethod_GetSnapshot<WithStreamedUnaryMethod_GetAllIncrementOperationMetaInfo<WithStreamedUnaryMethod_GetIncrementOperation<WithStreamedUnaryMethod_CreateSwcNodeData<WithStreamedUnaryMethod_DeleteSwcNodeData<WithStreamedUnaryMethod_UpdateSwcNodeData<WithStreamedUnaryMethod_GetSwcNodeData<WithStreamedUnaryMethod_GetSwcFullNodeData<WithStreamedUnaryMethod_GetSwcNodeDataListByTimeAndUser<WithStreamedUnaryMethod_CreateDailyStatistics<WithStreamedUnaryMethod_DeleteDailyStatistics<WithStreamedUnaryMethod_UpdateDailyStatistics<WithStreamedUnaryMethod_GetDailyStatistics<WithStreamedUnaryMethod_GetAllDailyStatistics<WithStreamedUnaryMethod_CreateSwcAttachmentAno<WithStreamedUnaryMethod_DeleteSwcAttachmentAno<WithStreamedUnaryMethod_UpdateSwcAttachmentAno<WithStreamedUnaryMethod_GetSwcAttachmentAno<WithStreamedUnaryMethod_CreateSwcAttachmentApo<WithStreamedUnaryMethod_DeleteSwcAttachmentApo<WithStreamedUnaryMethod_UpdateSwcAttachmentApo<WithStreamedUnaryMethod_GetSwcAttachmentApo<WithStreamedUnaryMethod_RevertSwcVersion<WithStreamedUnaryMethod_CreateSwcAttachmentSwc<WithStreamedUnaryMethod_DeleteSwcAttachmentSwc<WithStreamedUnaryMethod_UpdateSwcAttachmentSwc<WithStreamedUnaryMethod_GetSwcAttachmentSwc<WithStreamedUnaryMethod_CreatePermissionGroup<WithStreamedUnaryMethod_DeletePermissionGroup<WithStreamedUnaryMethod_UpdatePermissionGroup<WithStreamedUnaryMethod_GetProjectSwcNamesByProjectUuid<WithStreamedUnaryMethod_UpdateSwcNParentInfo<WithStreamedUnaryMethod_ClearAllNodes<WithStreamedUnaryMethod_OverwriteSwcNodeData<WithStreamedUnaryMethod_GetAllFreeSwcMetaInfo<WithStreamedUnaryMethod_GetProjectsDefinedSomaSwc<Service > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > StreamedUnaryService;
   typedef Service SplitStreamedService;
-  typedef WithStreamedUnaryMethod_CreateUser<WithStreamedUnaryMethod_DeleteUser<WithStreamedUnaryMethod_UpdateUser<WithStreamedUnaryMethod_GetUserByUuid<WithStreamedUnaryMethod_GetUserByName<WithStreamedUnaryMethod_GetAllUser<WithStreamedUnaryMethod_UserLogin<WithStreamedUnaryMethod_UserLogout<WithStreamedUnaryMethod_UserOnlineHeartBeatNotifications<WithStreamedUnaryMethod_GetUserPermissionGroup<WithStreamedUnaryMethod_GetPermissionGroupByUuid<WithStreamedUnaryMethod_GetPermissionGroupByName<WithStreamedUnaryMethod_GetAllPermissionGroup<WithStreamedUnaryMethod_ChangeUserPermissionGroup<WithStreamedUnaryMethod_CreateProject<WithStreamedUnaryMethod_DeleteProject<WithStreamedUnaryMethod_UpdateProject<WithStreamedUnaryMethod_GetProject<WithStreamedUnaryMethod_GetAllProject<WithStreamedUnaryMethod_CreateSwc<WithStreamedUnaryMethod_DeleteSwc<WithStreamedUnaryMethod_UpdateSwc<WithStreamedUnaryMethod_GetSwcMetaInfo<WithStreamedUnaryMethod_GetAllSwcMetaInfo<WithStreamedUnaryMethod_CreateSwcSnapshot<WithStreamedUnaryMethod_GetAllSnapshotMetaInfo<WithStreamedUnaryMethod_GetSnapshot<WithStreamedUnaryMethod_GetAllIncrementOperationMetaInfo<WithStreamedUnaryMethod_GetIncrementOperation<WithStreamedUnaryMethod_CreateSwcNodeData<WithStreamedUnaryMethod_DeleteSwcNodeData<WithStreamedUnaryMethod_UpdateSwcNodeData<WithStreamedUnaryMethod_GetSwcNodeData<WithStreamedUnaryMethod_GetSwcFullNodeData<WithStreamedUnaryMethod_GetSwcNodeDataListByTimeAndUser<WithStreamedUnaryMethod_CreateDailyStatistics<WithStreamedUnaryMethod_DeleteDailyStatistics<WithStreamedUnaryMethod_UpdateDailyStatistics<WithStreamedUnaryMethod_GetDailyStatistics<WithStreamedUnaryMethod_GetAllDailyStatistics<WithStreamedUnaryMethod_CreateSwcAttachmentAno<WithStreamedUnaryMethod_DeleteSwcAttachmentAno<WithStreamedUnaryMethod_UpdateSwcAttachmentAno<WithStreamedUnaryMethod_GetSwcAttachmentAno<WithStreamedUnaryMethod_CreateSwcAttachmentApo<WithStreamedUnaryMethod_DeleteSwcAttachmentApo<WithStreamedUnaryMethod_UpdateSwcAttachmentApo<WithStreamedUnaryMethod_GetSwcAttachmentApo<WithStreamedUnaryMethod_RevertSwcVersion<WithStreamedUnaryMethod_CreateSwcAttachmentSwc<WithStreamedUnaryMethod_DeleteSwcAttachmentSwc<WithStreamedUnaryMethod_UpdateSwcAttachmentSwc<WithStreamedUnaryMethod_GetSwcAttachmentSwc<WithStreamedUnaryMethod_CreatePermissionGroup<WithStreamedUnaryMethod_DeletePermissionGroup<WithStreamedUnaryMethod_UpdatePermissionGroup<WithStreamedUnaryMethod_GetProjectSwcNamesByProjectUuid<WithStreamedUnaryMethod_UpdateSwcNParentInfo<WithStreamedUnaryMethod_ClearAllNodes<WithStreamedUnaryMethod_OverwriteSwcNodeData<WithStreamedUnaryMethod_GetAllFreeSwcMetaInfo<Service > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > StreamedService;
+  typedef WithStreamedUnaryMethod_CreateUser<WithStreamedUnaryMethod_DeleteUser<WithStreamedUnaryMethod_UpdateUser<WithStreamedUnaryMethod_GetUserByUuid<WithStreamedUnaryMethod_GetUserByName<WithStreamedUnaryMethod_GetAllUser<WithStreamedUnaryMethod_UserLogin<WithStreamedUnaryMethod_UserLogout<WithStreamedUnaryMethod_UserOnlineHeartBeatNotifications<WithStreamedUnaryMethod_GetUserPermissionGroup<WithStreamedUnaryMethod_GetPermissionGroupByUuid<WithStreamedUnaryMethod_GetPermissionGroupByName<WithStreamedUnaryMethod_GetAllPermissionGroup<WithStreamedUnaryMethod_ChangeUserPermissionGroup<WithStreamedUnaryMethod_CreateProject<WithStreamedUnaryMethod_DeleteProject<WithStreamedUnaryMethod_UpdateProject<WithStreamedUnaryMethod_GetProject<WithStreamedUnaryMethod_GetAllProject<WithStreamedUnaryMethod_CreateSwc<WithStreamedUnaryMethod_DeleteSwc<WithStreamedUnaryMethod_UpdateSwc<WithStreamedUnaryMethod_GetSwcMetaInfo<WithStreamedUnaryMethod_GetAllSwcMetaInfo<WithStreamedUnaryMethod_CreateSwcSnapshot<WithStreamedUnaryMethod_GetAllSnapshotMetaInfo<WithStreamedUnaryMethod_GetSnapshot<WithStreamedUnaryMethod_GetAllIncrementOperationMetaInfo<WithStreamedUnaryMethod_GetIncrementOperation<WithStreamedUnaryMethod_CreateSwcNodeData<WithStreamedUnaryMethod_DeleteSwcNodeData<WithStreamedUnaryMethod_UpdateSwcNodeData<WithStreamedUnaryMethod_GetSwcNodeData<WithStreamedUnaryMethod_GetSwcFullNodeData<WithStreamedUnaryMethod_GetSwcNodeDataListByTimeAndUser<WithStreamedUnaryMethod_CreateDailyStatistics<WithStreamedUnaryMethod_DeleteDailyStatistics<WithStreamedUnaryMethod_UpdateDailyStatistics<WithStreamedUnaryMethod_GetDailyStatistics<WithStreamedUnaryMethod_GetAllDailyStatistics<WithStreamedUnaryMethod_CreateSwcAttachmentAno<WithStreamedUnaryMethod_DeleteSwcAttachmentAno<WithStreamedUnaryMethod_UpdateSwcAttachmentAno<WithStreamedUnaryMethod_GetSwcAttachmentAno<WithStreamedUnaryMethod_CreateSwcAttachmentApo<WithStreamedUnaryMethod_DeleteSwcAttachmentApo<WithStreamedUnaryMethod_UpdateSwcAttachmentApo<WithStreamedUnaryMethod_GetSwcAttachmentApo<WithStreamedUnaryMethod_RevertSwcVersion<WithStreamedUnaryMethod_CreateSwcAttachmentSwc<WithStreamedUnaryMethod_DeleteSwcAttachmentSwc<WithStreamedUnaryMethod_UpdateSwcAttachmentSwc<WithStreamedUnaryMethod_GetSwcAttachmentSwc<WithStreamedUnaryMethod_CreatePermissionGroup<WithStreamedUnaryMethod_DeletePermissionGroup<WithStreamedUnaryMethod_UpdatePermissionGroup<WithStreamedUnaryMethod_GetProjectSwcNamesByProjectUuid<WithStreamedUnaryMethod_UpdateSwcNParentInfo<WithStreamedUnaryMethod_ClearAllNodes<WithStreamedUnaryMethod_OverwriteSwcNodeData<WithStreamedUnaryMethod_GetAllFreeSwcMetaInfo<WithStreamedUnaryMethod_GetProjectsDefinedSomaSwc<Service > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > StreamedService;
 };
 
 }  // namespace proto

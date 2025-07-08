@@ -1136,6 +1136,38 @@
         ]
       }
     },
+    "/proto.DBMS/GetProjectsDefinedSomaSwc": {
+      "post": {
+        "operationId": "DBMS_GetProjectsDefinedSomaSwc",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/protoGetProjectsDefinedSomaSwcResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/protoGetProjectsDefinedSomaSwcRequest"
+            }
+          }
+        ],
+        "tags": [
+          "DBMS"
+        ]
+      }
+    },
     "/proto.DBMS/GetSnapshot": {
       "post": {
         "operationId": "DBMS_GetSnapshot",
@@ -2978,6 +3010,37 @@
           "items": {
             "type": "object",
             "$ref": "#/definitions/protoSwcUuidName"
+          }
+        }
+      }
+    },
+    "protoGetProjectsDefinedSomaSwcRequest": {
+      "type": "object",
+      "properties": {
+        "metaInfo": {
+          "$ref": "#/definitions/protoRequestMetaInfoV1"
+        },
+        "UserVerifyInfo": {
+          "$ref": "#/definitions/protoUserVerifyInfoV1"
+        },
+        "ProjectUuid": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "protoGetProjectsDefinedSomaSwcResponse": {
+      "type": "object",
+      "properties": {
+        "metaInfo": {
+          "$ref": "#/definitions/protoResponseMetaInfoV1"
+        },
+        "SwcUuids": {
+          "type": "array",
+          "items": {
+            "type": "string"
           }
         }
       }

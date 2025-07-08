@@ -218,6 +218,26 @@ struct OverwriteSwcNodeDataResponseDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
     PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 OverwriteSwcNodeDataResponseDefaultTypeInternal _OverwriteSwcNodeDataResponse_default_instance_;
 
+inline constexpr GetProjectsDefinedSomaSwcResponse::Impl_::Impl_(
+    ::_pbi::ConstantInitialized) noexcept
+      : _cached_size_{0},
+        swcuuids_{},
+        metainfo_{nullptr} {}
+
+template <typename>
+PROTOBUF_CONSTEXPR GetProjectsDefinedSomaSwcResponse::GetProjectsDefinedSomaSwcResponse(::_pbi::ConstantInitialized)
+    : _impl_(::_pbi::ConstantInitialized()) {}
+struct GetProjectsDefinedSomaSwcResponseDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR GetProjectsDefinedSomaSwcResponseDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~GetProjectsDefinedSomaSwcResponseDefaultTypeInternal() {}
+  union {
+    GetProjectsDefinedSomaSwcResponse _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetProjectsDefinedSomaSwcResponseDefaultTypeInternal _GetProjectsDefinedSomaSwcResponse_default_instance_;
+
 inline constexpr GetProjectSwcNamesByProjectUuidResponse::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
       : _cached_size_{0},
@@ -1242,7 +1262,7 @@ struct GetIncrementOperationResponseDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
     PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetIncrementOperationResponseDefaultTypeInternal _GetIncrementOperationResponse_default_instance_;
 }  // namespace proto
-static ::_pb::Metadata file_level_metadata_Message_2fResponse_2eproto[61];
+static ::_pb::Metadata file_level_metadata_Message_2fResponse_2eproto[62];
 static constexpr const ::_pb::EnumDescriptor**
     file_level_enum_descriptors_Message_2fResponse_2eproto = nullptr;
 static constexpr const ::_pb::ServiceDescriptor**
@@ -1961,6 +1981,18 @@ const ::uint32_t TableStruct_Message_2fResponse_2eproto::offsets[] PROTOBUF_SECT
     PROTOBUF_FIELD_OFFSET(::proto::GetAllFreeSwcMetaInfoResponse, _impl_.swcuuidname_),
     0,
     ~0u,
+    PROTOBUF_FIELD_OFFSET(::proto::GetProjectsDefinedSomaSwcResponse, _impl_._has_bits_),
+    PROTOBUF_FIELD_OFFSET(::proto::GetProjectsDefinedSomaSwcResponse, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::proto::GetProjectsDefinedSomaSwcResponse, _impl_.metainfo_),
+    PROTOBUF_FIELD_OFFSET(::proto::GetProjectsDefinedSomaSwcResponse, _impl_.swcuuids_),
+    0,
+    ~0u,
 };
 
 static const ::_pbi::MigrationSchema
@@ -2026,6 +2058,7 @@ static const ::_pbi::MigrationSchema
         {676, 686, -1, sizeof(::proto::ClearAllNodesResponse)},
         {688, 698, -1, sizeof(::proto::OverwriteSwcNodeDataResponse)},
         {700, 710, -1, sizeof(::proto::GetAllFreeSwcMetaInfoResponse)},
+        {712, 722, -1, sizeof(::proto::GetProjectsDefinedSomaSwcResponse)},
 };
 
 static const ::_pb::Message* const file_default_instances[] = {
@@ -2090,6 +2123,7 @@ static const ::_pb::Message* const file_default_instances[] = {
     &::proto::_ClearAllNodesResponse_default_instance_._instance,
     &::proto::_OverwriteSwcNodeDataResponse_default_instance_._instance,
     &::proto::_GetAllFreeSwcMetaInfoResponse_default_instance_._instance,
+    &::proto::_GetProjectsDefinedSomaSwcResponse_default_instance_._instance,
 };
 const char descriptor_table_protodef_Message_2fResponse_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
     "\n\026Message/Response.proto\022\005proto\032\037google/"
@@ -2264,9 +2298,11 @@ const char descriptor_table_protodef_Message_2fResponse_2eproto[] PROTOBUF_SECTI
     "CreatedNodesUuid\030\002 \003(\t\"u\n\035GetAllFreeSwcM"
     "etaInfoResponse\022+\n\010metaInfo\030\001 \001(\0132\031.prot"
     "o.ResponseMetaInfoV1\022\'\n\013swcUuidName\030\002 \003("
-    "\0132\022.proto.SwcUuidNameB0Z.DBMS/SwcDbmsCom"
-    "mon/Generated/go/proto/responseP\000b\006proto"
-    "3"
+    "\0132\022.proto.SwcUuidName\"b\n!GetProjectsDefi"
+    "nedSomaSwcResponse\022+\n\010metaInfo\030\001 \001(\0132\031.p"
+    "roto.ResponseMetaInfoV1\022\020\n\010SwcUuids\030\002 \003("
+    "\tB0Z.DBMS/SwcDbmsCommon/Generated/go/pro"
+    "to/responseP\000b\006proto3"
 };
 static const ::_pbi::DescriptorTable* const descriptor_table_Message_2fResponse_2eproto_deps[2] =
     {
@@ -2277,13 +2313,13 @@ static ::absl::once_flag descriptor_table_Message_2fResponse_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_Message_2fResponse_2eproto = {
     false,
     false,
-    6961,
+    7061,
     descriptor_table_protodef_Message_2fResponse_2eproto,
     "Message/Response.proto",
     &descriptor_table_Message_2fResponse_2eproto_once,
     descriptor_table_Message_2fResponse_2eproto_deps,
     2,
-    61,
+    62,
     schemas,
     file_default_instances,
     TableStruct_Message_2fResponse_2eproto::offsets,
@@ -17636,6 +17672,246 @@ void GetAllFreeSwcMetaInfoResponse::InternalSwap(GetAllFreeSwcMetaInfoResponse* 
   return ::_pbi::AssignDescriptors(
       &descriptor_table_Message_2fResponse_2eproto_getter, &descriptor_table_Message_2fResponse_2eproto_once,
       file_level_metadata_Message_2fResponse_2eproto[60]);
+}
+// ===================================================================
+
+class GetProjectsDefinedSomaSwcResponse::_Internal {
+ public:
+  using HasBits = decltype(std::declval<GetProjectsDefinedSomaSwcResponse>()._impl_._has_bits_);
+  static constexpr ::int32_t kHasBitsOffset =
+    8 * PROTOBUF_FIELD_OFFSET(GetProjectsDefinedSomaSwcResponse, _impl_._has_bits_);
+  static const ::proto::ResponseMetaInfoV1& metainfo(const GetProjectsDefinedSomaSwcResponse* msg);
+  static void set_has_metainfo(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+};
+
+const ::proto::ResponseMetaInfoV1& GetProjectsDefinedSomaSwcResponse::_Internal::metainfo(const GetProjectsDefinedSomaSwcResponse* msg) {
+  return *msg->_impl_.metainfo_;
+}
+void GetProjectsDefinedSomaSwcResponse::clear_metainfo() {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  if (_impl_.metainfo_ != nullptr) _impl_.metainfo_->Clear();
+  _impl_._has_bits_[0] &= ~0x00000001u;
+}
+GetProjectsDefinedSomaSwcResponse::GetProjectsDefinedSomaSwcResponse(::google::protobuf::Arena* arena)
+    : ::google::protobuf::Message(arena) {
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:proto.GetProjectsDefinedSomaSwcResponse)
+}
+inline PROTOBUF_NDEBUG_INLINE GetProjectsDefinedSomaSwcResponse::Impl_::Impl_(
+    ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
+    const Impl_& from)
+      : _has_bits_{from._has_bits_},
+        _cached_size_{0},
+        swcuuids_{visibility, arena, from.swcuuids_} {}
+
+GetProjectsDefinedSomaSwcResponse::GetProjectsDefinedSomaSwcResponse(
+    ::google::protobuf::Arena* arena,
+    const GetProjectsDefinedSomaSwcResponse& from)
+    : ::google::protobuf::Message(arena) {
+  GetProjectsDefinedSomaSwcResponse* const _this = this;
+  (void)_this;
+  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
+      from._internal_metadata_);
+  new (&_impl_) Impl_(internal_visibility(), arena, from._impl_);
+  ::uint32_t cached_has_bits = _impl_._has_bits_[0];
+  _impl_.metainfo_ = (cached_has_bits & 0x00000001u)
+                ? CreateMaybeMessage<::proto::ResponseMetaInfoV1>(arena, *from._impl_.metainfo_)
+                : nullptr;
+
+  // @@protoc_insertion_point(copy_constructor:proto.GetProjectsDefinedSomaSwcResponse)
+}
+inline PROTOBUF_NDEBUG_INLINE GetProjectsDefinedSomaSwcResponse::Impl_::Impl_(
+    ::google::protobuf::internal::InternalVisibility visibility,
+    ::google::protobuf::Arena* arena)
+      : _cached_size_{0},
+        swcuuids_{visibility, arena} {}
+
+inline void GetProjectsDefinedSomaSwcResponse::SharedCtor(::_pb::Arena* arena) {
+  new (&_impl_) Impl_(internal_visibility(), arena);
+  _impl_.metainfo_ = {};
+}
+GetProjectsDefinedSomaSwcResponse::~GetProjectsDefinedSomaSwcResponse() {
+  // @@protoc_insertion_point(destructor:proto.GetProjectsDefinedSomaSwcResponse)
+  _internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
+  SharedDtor();
+}
+inline void GetProjectsDefinedSomaSwcResponse::SharedDtor() {
+  ABSL_DCHECK(GetArena() == nullptr);
+  delete _impl_.metainfo_;
+  _impl_.~Impl_();
+}
+
+PROTOBUF_NOINLINE void GetProjectsDefinedSomaSwcResponse::Clear() {
+// @@protoc_insertion_point(message_clear_start:proto.GetProjectsDefinedSomaSwcResponse)
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _impl_.swcuuids_.Clear();
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    ABSL_DCHECK(_impl_.metainfo_ != nullptr);
+    _impl_.metainfo_->Clear();
+  }
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+}
+
+const char* GetProjectsDefinedSomaSwcResponse::_InternalParse(
+    const char* ptr, ::_pbi::ParseContext* ctx) {
+  ptr = ::_pbi::TcParser::ParseLoop(this, ptr, ctx, &_table_.header);
+  return ptr;
+}
+
+
+PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
+const ::_pbi::TcParseTable<1, 2, 1, 56, 2> GetProjectsDefinedSomaSwcResponse::_table_ = {
+  {
+    PROTOBUF_FIELD_OFFSET(GetProjectsDefinedSomaSwcResponse, _impl_._has_bits_),
+    0, // no _extensions_
+    2, 8,  // max_field_number, fast_idx_mask
+    offsetof(decltype(_table_), field_lookup_table),
+    4294967292,  // skipmap
+    offsetof(decltype(_table_), field_entries),
+    2,  // num_field_entries
+    1,  // num_aux_entries
+    offsetof(decltype(_table_), aux_entries),
+    &_GetProjectsDefinedSomaSwcResponse_default_instance_._instance,
+    ::_pbi::TcParser::GenericFallback,  // fallback
+  }, {{
+    // repeated string SwcUuids = 2;
+    {::_pbi::TcParser::FastUR1,
+     {18, 63, 0, PROTOBUF_FIELD_OFFSET(GetProjectsDefinedSomaSwcResponse, _impl_.swcuuids_)}},
+    // .proto.ResponseMetaInfoV1 metaInfo = 1;
+    {::_pbi::TcParser::FastMtS1,
+     {10, 0, 0, PROTOBUF_FIELD_OFFSET(GetProjectsDefinedSomaSwcResponse, _impl_.metainfo_)}},
+  }}, {{
+    65535, 65535
+  }}, {{
+    // .proto.ResponseMetaInfoV1 metaInfo = 1;
+    {PROTOBUF_FIELD_OFFSET(GetProjectsDefinedSomaSwcResponse, _impl_.metainfo_), _Internal::kHasBitsOffset + 0, 0,
+    (0 | ::_fl::kFcOptional | ::_fl::kMessage | ::_fl::kTvTable)},
+    // repeated string SwcUuids = 2;
+    {PROTOBUF_FIELD_OFFSET(GetProjectsDefinedSomaSwcResponse, _impl_.swcuuids_), -1, 0,
+    (0 | ::_fl::kFcRepeated | ::_fl::kUtf8String | ::_fl::kRepSString)},
+  }}, {{
+    {::_pbi::TcParser::GetTable<::proto::ResponseMetaInfoV1>()},
+  }}, {{
+    "\47\0\10\0\0\0\0\0"
+    "proto.GetProjectsDefinedSomaSwcResponse"
+    "SwcUuids"
+  }},
+};
+
+::uint8_t* GetProjectsDefinedSomaSwcResponse::_InternalSerialize(
+    ::uint8_t* target,
+    ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:proto.GetProjectsDefinedSomaSwcResponse)
+  ::uint32_t cached_has_bits = 0;
+  (void)cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  if (cached_has_bits & 0x00000001u) {
+    target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+        1, _Internal::metainfo(this),
+        _Internal::metainfo(this).GetCachedSize(), target, stream);
+  }
+
+  // repeated string SwcUuids = 2;
+  for (int i = 0, n = this->_internal_swcuuids_size(); i < n; ++i) {
+    const auto& s = this->_internal_swcuuids().Get(i);
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+        s.data(), static_cast<int>(s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "proto.GetProjectsDefinedSomaSwcResponse.SwcUuids");
+    target = stream->WriteString(2, s, target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target =
+        ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+            _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:proto.GetProjectsDefinedSomaSwcResponse)
+  return target;
+}
+
+::size_t GetProjectsDefinedSomaSwcResponse::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:proto.GetProjectsDefinedSomaSwcResponse)
+  ::size_t total_size = 0;
+
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // repeated string SwcUuids = 2;
+  total_size += 1 * ::google::protobuf::internal::FromIntSize(_internal_swcuuids().size());
+  for (int i = 0, n = _internal_swcuuids().size(); i < n; ++i) {
+    total_size += ::google::protobuf::internal::WireFormatLite::StringSize(
+        _internal_swcuuids().Get(i));
+  }
+  // .proto.ResponseMetaInfoV1 metaInfo = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    total_size +=
+        1 + ::google::protobuf::internal::WireFormatLite::MessageSize(*_impl_.metainfo_);
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::google::protobuf::Message::ClassData GetProjectsDefinedSomaSwcResponse::_class_data_ = {
+    GetProjectsDefinedSomaSwcResponse::MergeImpl,
+    nullptr,  // OnDemandRegisterArenaDtor
+};
+const ::google::protobuf::Message::ClassData* GetProjectsDefinedSomaSwcResponse::GetClassData() const {
+  return &_class_data_;
+}
+
+void GetProjectsDefinedSomaSwcResponse::MergeImpl(::google::protobuf::Message& to_msg, const ::google::protobuf::Message& from_msg) {
+  auto* const _this = static_cast<GetProjectsDefinedSomaSwcResponse*>(&to_msg);
+  auto& from = static_cast<const GetProjectsDefinedSomaSwcResponse&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:proto.GetProjectsDefinedSomaSwcResponse)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  _this->_internal_mutable_swcuuids()->MergeFrom(from._internal_swcuuids());
+  if ((from._impl_._has_bits_[0] & 0x00000001u) != 0) {
+    _this->_internal_mutable_metainfo()->::proto::ResponseMetaInfoV1::MergeFrom(
+        from._internal_metainfo());
+  }
+  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void GetProjectsDefinedSomaSwcResponse::CopyFrom(const GetProjectsDefinedSomaSwcResponse& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:proto.GetProjectsDefinedSomaSwcResponse)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+PROTOBUF_NOINLINE bool GetProjectsDefinedSomaSwcResponse::IsInitialized() const {
+  return true;
+}
+
+::_pbi::CachedSize* GetProjectsDefinedSomaSwcResponse::AccessCachedSize() const {
+  return &_impl_._cached_size_;
+}
+void GetProjectsDefinedSomaSwcResponse::InternalSwap(GetProjectsDefinedSomaSwcResponse* PROTOBUF_RESTRICT other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  _impl_.swcuuids_.InternalSwap(&other->_impl_.swcuuids_);
+  swap(_impl_.metainfo_, other->_impl_.metainfo_);
+}
+
+::google::protobuf::Metadata GetProjectsDefinedSomaSwcResponse::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_Message_2fResponse_2eproto_getter, &descriptor_table_Message_2fResponse_2eproto_once,
+      file_level_metadata_Message_2fResponse_2eproto[61]);
 }
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace proto

@@ -301,3 +301,8 @@ message GetAllFreeSwcMetaInfoResponse{
     ResponseMetaInfoV1 metaInfo = 1;
     repeated SwcUuidName swcUuidName = 2;
 }
+
+message GetProjectsDefinedSomaSwcResponse{
+    ResponseMetaInfoV1 metaInfo = 1;
+    repeated string SwcUuids = 2;
+}

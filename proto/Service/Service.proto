@@ -87,5 +87,5 @@ service DBMS {
     rpc OverwriteSwcNodeData(OverwriteSwcNodeDataRequest) returns (OverwriteSwcNodeDataResponse){}
 
     rpc GetAllFreeSwcMetaInfo(GetAllFreeSwcMetaInfoRequest) returns (GetAllFreeSwcMetaInfoResponse){}
-
+    rpc GetProjectsDefinedSomaSwc(GetProjectsDefinedSomaSwcRequest) returns (GetProjectsDefinedSomaSwcResponse){}
 }

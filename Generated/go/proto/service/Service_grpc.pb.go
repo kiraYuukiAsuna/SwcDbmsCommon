@@ -82,6 +82,7 @@ const (
 	DBMS_ClearAllNodes_FullMethodName                    = "/proto.DBMS/ClearAllNodes"
 	DBMS_OverwriteSwcNodeData_FullMethodName             = "/proto.DBMS/OverwriteSwcNodeData"
 	DBMS_GetAllFreeSwcMetaInfo_FullMethodName            = "/proto.DBMS/GetAllFreeSwcMetaInfo"
+	DBMS_GetProjectsDefinedSomaSwc_FullMethodName        = "/proto.DBMS/GetProjectsDefinedSomaSwc"
 )
 
 // DBMSClient is the client API for DBMS service.
@@ -149,6 +150,7 @@ type DBMSClient interface {
 	ClearAllNodes(ctx context.Context, in *request.ClearAllNodesRequest, opts ...grpc.CallOption) (*response.ClearAllNodesResponse, error)
 	OverwriteSwcNodeData(ctx context.Context, in *request.OverwriteSwcNodeDataRequest, opts ...grpc.CallOption) (*response.OverwriteSwcNodeDataResponse, error)
 	GetAllFreeSwcMetaInfo(ctx context.Context, in *request.GetAllFreeSwcMetaInfoRequest, opts ...grpc.CallOption) (*response.GetAllFreeSwcMetaInfoResponse, error)
+	GetProjectsDefinedSomaSwc(ctx context.Context, in *request.GetProjectsDefinedSomaSwcRequest, opts ...grpc.CallOption) (*response.GetProjectsDefinedSomaSwcResponse, error)
 }
 
 type dBMSClient struct {
@@ -708,6 +710,15 @@ func (c *dBMSClient) GetAllFreeSwcMetaInfo(ctx context.Context, in *request.GetA
 	return out, nil
 }
 
+func (c *dBMSClient) GetProjectsDefinedSomaSwc(ctx context.Context, in *request.GetProjectsDefinedSomaSwcRequest, opts ...grpc.CallOption) (*response.GetProjectsDefinedSomaSwcResponse, error) {
+	out := new(response.GetProjectsDefinedSomaSwcResponse)
+	err := c.cc.Invoke(ctx, DBMS_GetProjectsDefinedSomaSwc_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // DBMSServer is the server API for DBMS service.
 // All implementations must embed UnimplementedDBMSServer
 // for forward compatibility
@@ -773,6 +784,7 @@ type DBMSServer interface {
 	ClearAllNodes(context.Context, *request.ClearAllNodesRequest) (*response.ClearAllNodesResponse, error)
 	OverwriteSwcNodeData(context.Context, *request.OverwriteSwcNodeDataRequest) (*response.OverwriteSwcNodeDataResponse, error)
 	GetAllFreeSwcMetaInfo(context.Context, *request.GetAllFreeSwcMetaInfoRequest) (*response.GetAllFreeSwcMetaInfoResponse, error)
+	GetProjectsDefinedSomaSwc(context.Context, *request.GetProjectsDefinedSomaSwcRequest) (*response.GetProjectsDefinedSomaSwcResponse, error)
 	mustEmbedUnimplementedDBMSServer()
 }
 
@@ -962,6 +974,9 @@ func (UnimplementedDBMSServer) OverwriteSwcNodeData(context.Context, *request.Ov
 }
 func (UnimplementedDBMSServer) GetAllFreeSwcMetaInfo(context.Context, *request.GetAllFreeSwcMetaInfoRequest) (*response.GetAllFreeSwcMetaInfoResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetAllFreeSwcMetaInfo not implemented")
+}
+func (UnimplementedDBMSServer) GetProjectsDefinedSomaSwc(context.Context, *request.GetProjectsDefinedSomaSwcRequest) (*response.GetProjectsDefinedSomaSwcResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetProjectsDefinedSomaSwc not implemented")
 }
 func (UnimplementedDBMSServer) mustEmbedUnimplementedDBMSServer() {}
 
@@ -2074,6 +2089,24 @@ func _DBMS_GetAllFreeSwcMetaInfo_Handler(srv interface{}, ctx context.Context, d
 	return interceptor(ctx, in, info, handler)
 }
 
+func _DBMS_GetProjectsDefinedSomaSwc_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(request.GetProjectsDefinedSomaSwcRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(DBMSServer).GetProjectsDefinedSomaSwc(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: DBMS_GetProjectsDefinedSomaSwc_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(DBMSServer).GetProjectsDefinedSomaSwc(ctx, req.(*request.GetProjectsDefinedSomaSwcRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // DBMS_ServiceDesc is the grpc.ServiceDesc for DBMS service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -2324,6 +2357,10 @@ var DBMS_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "GetAllFreeSwcMetaInfo",
 			Handler:    _DBMS_GetAllFreeSwcMetaInfo_Handler,
+		},
+		{
+			MethodName: "GetProjectsDefinedSomaSwc",
+			Handler:    _DBMS_GetProjectsDefinedSomaSwc_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

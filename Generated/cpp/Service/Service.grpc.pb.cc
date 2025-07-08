@@ -83,6 +83,7 @@ static const char* DBMS_method_names[] = {
   "/proto.DBMS/ClearAllNodes",
   "/proto.DBMS/OverwriteSwcNodeData",
   "/proto.DBMS/GetAllFreeSwcMetaInfo",
+  "/proto.DBMS/GetProjectsDefinedSomaSwc",
 };
 
 std::unique_ptr< DBMS::Stub> DBMS::NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options) {
@@ -153,6 +154,7 @@ DBMS::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, cons
   , rpcmethod_ClearAllNodes_(DBMS_method_names[58], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   , rpcmethod_OverwriteSwcNodeData_(DBMS_method_names[59], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   , rpcmethod_GetAllFreeSwcMetaInfo_(DBMS_method_names[60], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_GetProjectsDefinedSomaSwc_(DBMS_method_names[61], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   {}
 
 ::grpc::Status DBMS::Stub::CreateUser(::grpc::ClientContext* context, const ::proto::CreateUserRequest& request, ::proto::CreateUserResponse* response) {
@@ -1558,6 +1560,29 @@ void DBMS::Stub::async::GetAllFreeSwcMetaInfo(::grpc::ClientContext* context, co
   return result;
 }
 
+::grpc::Status DBMS::Stub::GetProjectsDefinedSomaSwc(::grpc::ClientContext* context, const ::proto::GetProjectsDefinedSomaSwcRequest& request, ::proto::GetProjectsDefinedSomaSwcResponse* response) {
+  return ::grpc::internal::BlockingUnaryCall< ::proto::GetProjectsDefinedSomaSwcRequest, ::proto::GetProjectsDefinedSomaSwcResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_GetProjectsDefinedSomaSwc_, context, request, response);
+}
+
+void DBMS::Stub::async::GetProjectsDefinedSomaSwc(::grpc::ClientContext* context, const ::proto::GetProjectsDefinedSomaSwcRequest* request, ::proto::GetProjectsDefinedSomaSwcResponse* response, std::function<void(::grpc::Status)> f) {
+  ::grpc::internal::CallbackUnaryCall< ::proto::GetProjectsDefinedSomaSwcRequest, ::proto::GetProjectsDefinedSomaSwcResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetProjectsDefinedSomaSwc_, context, request, response, std::move(f));
+}
+
+void DBMS::Stub::async::GetProjectsDefinedSomaSwc(::grpc::ClientContext* context, const ::proto::GetProjectsDefinedSomaSwcRequest* request, ::proto::GetProjectsDefinedSomaSwcResponse* response, ::grpc::ClientUnaryReactor* reactor) {
+  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetProjectsDefinedSomaSwc_, context, request, response, reactor);
+}
+
+::grpc::ClientAsyncResponseReader< ::proto::GetProjectsDefinedSomaSwcResponse>* DBMS::Stub::PrepareAsyncGetProjectsDefinedSomaSwcRaw(::grpc::ClientContext* context, const ::proto::GetProjectsDefinedSomaSwcRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::proto::GetProjectsDefinedSomaSwcResponse, ::proto::GetProjectsDefinedSomaSwcRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_GetProjectsDefinedSomaSwc_, context, request);
+}
+
+::grpc::ClientAsyncResponseReader< ::proto::GetProjectsDefinedSomaSwcResponse>* DBMS::Stub::AsyncGetProjectsDefinedSomaSwcRaw(::grpc::ClientContext* context, const ::proto::GetProjectsDefinedSomaSwcRequest& request, ::grpc::CompletionQueue* cq) {
+  auto* result =
+    this->PrepareAsyncGetProjectsDefinedSomaSwcRaw(context, request, cq);
+  result->StartCall();
+  return result;
+}
+
 DBMS::Service::Service() {
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       DBMS_method_names[0],
@@ -2169,6 +2194,16 @@ DBMS::Service::Service() {
              ::proto::GetAllFreeSwcMetaInfoResponse* resp) {
                return service->GetAllFreeSwcMetaInfo(ctx, req, resp);
              }, this)));
+  AddMethod(new ::grpc::internal::RpcServiceMethod(
+      DBMS_method_names[61],
+      ::grpc::internal::RpcMethod::NORMAL_RPC,
+      new ::grpc::internal::RpcMethodHandler< DBMS::Service, ::proto::GetProjectsDefinedSomaSwcRequest, ::proto::GetProjectsDefinedSomaSwcResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
+          [](DBMS::Service* service,
+             ::grpc::ServerContext* ctx,
+             const ::proto::GetProjectsDefinedSomaSwcRequest* req,
+             ::proto::GetProjectsDefinedSomaSwcResponse* resp) {
+               return service->GetProjectsDefinedSomaSwc(ctx, req, resp);
+             }, this)));
 }
 
 DBMS::Service::~Service() {
@@ -2595,6 +2630,13 @@ DBMS::Service::~Service() {
 }
 
 ::grpc::Status DBMS::Service::GetAllFreeSwcMetaInfo(::grpc::ServerContext* context, const ::proto::GetAllFreeSwcMetaInfoRequest* request, ::proto::GetAllFreeSwcMetaInfoResponse* response) {
+  (void) context;
+  (void) request;
+  (void) response;
+  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+}
+
+::grpc::Status DBMS::Service::GetProjectsDefinedSomaSwc(::grpc::ServerContext* context, const ::proto::GetProjectsDefinedSomaSwcRequest* request, ::proto::GetProjectsDefinedSomaSwcResponse* response) {
   (void) context;
   (void) request;
   (void) response;

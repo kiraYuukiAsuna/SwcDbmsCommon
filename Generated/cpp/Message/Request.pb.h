@@ -163,6 +163,9 @@ extern GetProjectRequestDefaultTypeInternal _GetProjectRequest_default_instance_
 class GetProjectSwcNamesByProjectUuidRequest;
 struct GetProjectSwcNamesByProjectUuidRequestDefaultTypeInternal;
 extern GetProjectSwcNamesByProjectUuidRequestDefaultTypeInternal _GetProjectSwcNamesByProjectUuidRequest_default_instance_;
+class GetProjectsDefinedSomaSwcRequest;
+struct GetProjectsDefinedSomaSwcRequestDefaultTypeInternal;
+extern GetProjectsDefinedSomaSwcRequestDefaultTypeInternal _GetProjectsDefinedSomaSwcRequest_default_instance_;
 class GetSnapshotRequest;
 struct GetSnapshotRequestDefaultTypeInternal;
 extern GetSnapshotRequestDefaultTypeInternal _GetSnapshotRequest_default_instance_;
@@ -3857,6 +3860,234 @@ class GetSnapshotRequest final :
     ::google::protobuf::internal::HasBits<1> _has_bits_;
     mutable ::google::protobuf::internal::CachedSize _cached_size_;
     ::google::protobuf::internal::ArenaStringPtr swcsnapshotcollectionname_;
+    ::proto::RequestMetaInfoV1* metainfo_;
+    ::proto::UserVerifyInfoV1* userverifyinfo_;
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_Message_2fRequest_2eproto;
+};// -------------------------------------------------------------------
+
+class GetProjectsDefinedSomaSwcRequest final :
+    public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:proto.GetProjectsDefinedSomaSwcRequest) */ {
+ public:
+  inline GetProjectsDefinedSomaSwcRequest() : GetProjectsDefinedSomaSwcRequest(nullptr) {}
+  ~GetProjectsDefinedSomaSwcRequest() override;
+  template<typename = void>
+  explicit PROTOBUF_CONSTEXPR GetProjectsDefinedSomaSwcRequest(::google::protobuf::internal::ConstantInitialized);
+
+  inline GetProjectsDefinedSomaSwcRequest(const GetProjectsDefinedSomaSwcRequest& from)
+      : GetProjectsDefinedSomaSwcRequest(nullptr, from) {}
+  GetProjectsDefinedSomaSwcRequest(GetProjectsDefinedSomaSwcRequest&& from) noexcept
+    : GetProjectsDefinedSomaSwcRequest() {
+    *this = ::std::move(from);
+  }
+
+  inline GetProjectsDefinedSomaSwcRequest& operator=(const GetProjectsDefinedSomaSwcRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline GetProjectsDefinedSomaSwcRequest& operator=(GetProjectsDefinedSomaSwcRequest&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetArena() == from.GetArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::google::protobuf::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::google::protobuf::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const GetProjectsDefinedSomaSwcRequest& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const GetProjectsDefinedSomaSwcRequest* internal_default_instance() {
+    return reinterpret_cast<const GetProjectsDefinedSomaSwcRequest*>(
+               &_GetProjectsDefinedSomaSwcRequest_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    61;
+
+  friend void swap(GetProjectsDefinedSomaSwcRequest& a, GetProjectsDefinedSomaSwcRequest& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(GetProjectsDefinedSomaSwcRequest* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetArena() != nullptr &&
+        GetArena() == other->GetArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetArena() == other->GetArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(GetProjectsDefinedSomaSwcRequest* other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  GetProjectsDefinedSomaSwcRequest* New(::google::protobuf::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<GetProjectsDefinedSomaSwcRequest>(arena);
+  }
+  using ::google::protobuf::Message::CopyFrom;
+  void CopyFrom(const GetProjectsDefinedSomaSwcRequest& from);
+  using ::google::protobuf::Message::MergeFrom;
+  void MergeFrom( const GetProjectsDefinedSomaSwcRequest& from) {
+    GetProjectsDefinedSomaSwcRequest::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::google::protobuf::Message& to_msg, const ::google::protobuf::Message& from_msg);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  ::size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::google::protobuf::internal::ParseContext* ctx) final;
+  ::uint8_t* _InternalSerialize(
+      ::uint8_t* target, ::google::protobuf::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const { return _impl_._cached_size_.Get(); }
+
+  private:
+  ::google::protobuf::internal::CachedSize* AccessCachedSize() const final;
+  void SharedCtor(::google::protobuf::Arena* arena);
+  void SharedDtor();
+  void InternalSwap(GetProjectsDefinedSomaSwcRequest* other);
+
+  private:
+  friend class ::google::protobuf::internal::AnyMetadata;
+  static ::absl::string_view FullMessageName() {
+    return "proto.GetProjectsDefinedSomaSwcRequest";
+  }
+  protected:
+  explicit GetProjectsDefinedSomaSwcRequest(::google::protobuf::Arena* arena);
+  GetProjectsDefinedSomaSwcRequest(::google::protobuf::Arena* arena, const GetProjectsDefinedSomaSwcRequest& from);
+  public:
+
+  static const ClassData _class_data_;
+  const ::google::protobuf::Message::ClassData*GetClassData() const final;
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kProjectUuidFieldNumber = 3,
+    kMetaInfoFieldNumber = 1,
+    kUserVerifyInfoFieldNumber = 2,
+  };
+  // repeated string ProjectUuid = 3;
+  int projectuuid_size() const;
+  private:
+  int _internal_projectuuid_size() const;
+
+  public:
+  void clear_projectuuid() ;
+  const std::string& projectuuid(int index) const;
+  std::string* mutable_projectuuid(int index);
+  void set_projectuuid(int index, const std::string& value);
+  void set_projectuuid(int index, std::string&& value);
+  void set_projectuuid(int index, const char* value);
+  void set_projectuuid(int index, const char* value, std::size_t size);
+  void set_projectuuid(int index, absl::string_view value);
+  std::string* add_projectuuid();
+  void add_projectuuid(const std::string& value);
+  void add_projectuuid(std::string&& value);
+  void add_projectuuid(const char* value);
+  void add_projectuuid(const char* value, std::size_t size);
+  void add_projectuuid(absl::string_view value);
+  const ::google::protobuf::RepeatedPtrField<std::string>& projectuuid() const;
+  ::google::protobuf::RepeatedPtrField<std::string>* mutable_projectuuid();
+
+  private:
+  const ::google::protobuf::RepeatedPtrField<std::string>& _internal_projectuuid() const;
+  ::google::protobuf::RepeatedPtrField<std::string>* _internal_mutable_projectuuid();
+
+  public:
+  // .proto.RequestMetaInfoV1 metaInfo = 1;
+  bool has_metainfo() const;
+  void clear_metainfo() ;
+  const ::proto::RequestMetaInfoV1& metainfo() const;
+  PROTOBUF_NODISCARD ::proto::RequestMetaInfoV1* release_metainfo();
+  ::proto::RequestMetaInfoV1* mutable_metainfo();
+  void set_allocated_metainfo(::proto::RequestMetaInfoV1* value);
+  void unsafe_arena_set_allocated_metainfo(::proto::RequestMetaInfoV1* value);
+  ::proto::RequestMetaInfoV1* unsafe_arena_release_metainfo();
+
+  private:
+  const ::proto::RequestMetaInfoV1& _internal_metainfo() const;
+  ::proto::RequestMetaInfoV1* _internal_mutable_metainfo();
+
+  public:
+  // .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
+  bool has_userverifyinfo() const;
+  void clear_userverifyinfo() ;
+  const ::proto::UserVerifyInfoV1& userverifyinfo() const;
+  PROTOBUF_NODISCARD ::proto::UserVerifyInfoV1* release_userverifyinfo();
+  ::proto::UserVerifyInfoV1* mutable_userverifyinfo();
+  void set_allocated_userverifyinfo(::proto::UserVerifyInfoV1* value);
+  void unsafe_arena_set_allocated_userverifyinfo(::proto::UserVerifyInfoV1* value);
+  ::proto::UserVerifyInfoV1* unsafe_arena_release_userverifyinfo();
+
+  private:
+  const ::proto::UserVerifyInfoV1& _internal_userverifyinfo() const;
+  ::proto::UserVerifyInfoV1* _internal_mutable_userverifyinfo();
+
+  public:
+  // @@protoc_insertion_point(class_scope:proto.GetProjectsDefinedSomaSwcRequest)
+ private:
+  class _Internal;
+
+  friend class ::google::protobuf::internal::TcParser;
+  static const ::google::protobuf::internal::TcParseTable<
+      2, 3, 2,
+      58, 2>
+      _table_;
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+
+        inline explicit constexpr Impl_(
+            ::google::protobuf::internal::ConstantInitialized) noexcept;
+        inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                              ::google::protobuf::Arena* arena);
+        inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                              ::google::protobuf::Arena* arena, const Impl_& from);
+    ::google::protobuf::internal::HasBits<1> _has_bits_;
+    mutable ::google::protobuf::internal::CachedSize _cached_size_;
+    ::google::protobuf::RepeatedPtrField<std::string> projectuuid_;
     ::proto::RequestMetaInfoV1* metainfo_;
     ::proto::UserVerifyInfoV1* userverifyinfo_;
     PROTOBUF_TSAN_DECLARE_MEMBER
@@ -30246,6 +30477,293 @@ inline void GetAllFreeSwcMetaInfoRequest::set_allocated_userverifyinfo(::proto::
 
   _impl_.userverifyinfo_ = reinterpret_cast<::proto::UserVerifyInfoV1*>(value);
   // @@protoc_insertion_point(field_set_allocated:proto.GetAllFreeSwcMetaInfoRequest.UserVerifyInfo)
+}
+
+// -------------------------------------------------------------------
+
+// GetProjectsDefinedSomaSwcRequest
+
+// .proto.RequestMetaInfoV1 metaInfo = 1;
+inline bool GetProjectsDefinedSomaSwcRequest::has_metainfo() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  PROTOBUF_ASSUME(!value || _impl_.metainfo_ != nullptr);
+  return value;
+}
+inline const ::proto::RequestMetaInfoV1& GetProjectsDefinedSomaSwcRequest::_internal_metainfo() const {
+  PROTOBUF_TSAN_READ(&_impl_._tsan_detect_race);
+  const ::proto::RequestMetaInfoV1* p = _impl_.metainfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::RequestMetaInfoV1&>(::proto::_RequestMetaInfoV1_default_instance_);
+}
+inline const ::proto::RequestMetaInfoV1& GetProjectsDefinedSomaSwcRequest::metainfo() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:proto.GetProjectsDefinedSomaSwcRequest.metaInfo)
+  return _internal_metainfo();
+}
+inline void GetProjectsDefinedSomaSwcRequest::unsafe_arena_set_allocated_metainfo(::proto::RequestMetaInfoV1* value) {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  if (GetArena() == nullptr) {
+    delete reinterpret_cast<::google::protobuf::MessageLite*>(_impl_.metainfo_);
+  }
+  _impl_.metainfo_ = reinterpret_cast<::proto::RequestMetaInfoV1*>(value);
+  if (value != nullptr) {
+    _impl_._has_bits_[0] |= 0x00000001u;
+  } else {
+    _impl_._has_bits_[0] &= ~0x00000001u;
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.GetProjectsDefinedSomaSwcRequest.metaInfo)
+}
+inline ::proto::RequestMetaInfoV1* GetProjectsDefinedSomaSwcRequest::release_metainfo() {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  ::proto::RequestMetaInfoV1* released = _impl_.metainfo_;
+  _impl_.metainfo_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old = reinterpret_cast<::google::protobuf::MessageLite*>(released);
+  released = ::google::protobuf::internal::DuplicateIfNonNull(released);
+  if (GetArena() == nullptr) {
+    delete old;
+  }
+#else   // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArena() != nullptr) {
+    released = ::google::protobuf::internal::DuplicateIfNonNull(released);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return released;
+}
+inline ::proto::RequestMetaInfoV1* GetProjectsDefinedSomaSwcRequest::unsafe_arena_release_metainfo() {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  // @@protoc_insertion_point(field_release:proto.GetProjectsDefinedSomaSwcRequest.metaInfo)
+
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  ::proto::RequestMetaInfoV1* temp = _impl_.metainfo_;
+  _impl_.metainfo_ = nullptr;
+  return temp;
+}
+inline ::proto::RequestMetaInfoV1* GetProjectsDefinedSomaSwcRequest::_internal_mutable_metainfo() {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  _impl_._has_bits_[0] |= 0x00000001u;
+  if (_impl_.metainfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::RequestMetaInfoV1>(GetArena());
+    _impl_.metainfo_ = reinterpret_cast<::proto::RequestMetaInfoV1*>(p);
+  }
+  return _impl_.metainfo_;
+}
+inline ::proto::RequestMetaInfoV1* GetProjectsDefinedSomaSwcRequest::mutable_metainfo() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  ::proto::RequestMetaInfoV1* _msg = _internal_mutable_metainfo();
+  // @@protoc_insertion_point(field_mutable:proto.GetProjectsDefinedSomaSwcRequest.metaInfo)
+  return _msg;
+}
+inline void GetProjectsDefinedSomaSwcRequest::set_allocated_metainfo(::proto::RequestMetaInfoV1* value) {
+  ::google::protobuf::Arena* message_arena = GetArena();
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  if (message_arena == nullptr) {
+    delete reinterpret_cast<::google::protobuf::MessageLite*>(_impl_.metainfo_);
+  }
+
+  if (value != nullptr) {
+    ::google::protobuf::Arena* submessage_arena = reinterpret_cast<::google::protobuf::MessageLite*>(value)->GetArena();
+    if (message_arena != submessage_arena) {
+      value = ::google::protobuf::internal::GetOwnedMessage(message_arena, value, submessage_arena);
+    }
+    _impl_._has_bits_[0] |= 0x00000001u;
+  } else {
+    _impl_._has_bits_[0] &= ~0x00000001u;
+  }
+
+  _impl_.metainfo_ = reinterpret_cast<::proto::RequestMetaInfoV1*>(value);
+  // @@protoc_insertion_point(field_set_allocated:proto.GetProjectsDefinedSomaSwcRequest.metaInfo)
+}
+
+// .proto.UserVerifyInfoV1 UserVerifyInfo = 2;
+inline bool GetProjectsDefinedSomaSwcRequest::has_userverifyinfo() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  PROTOBUF_ASSUME(!value || _impl_.userverifyinfo_ != nullptr);
+  return value;
+}
+inline const ::proto::UserVerifyInfoV1& GetProjectsDefinedSomaSwcRequest::_internal_userverifyinfo() const {
+  PROTOBUF_TSAN_READ(&_impl_._tsan_detect_race);
+  const ::proto::UserVerifyInfoV1* p = _impl_.userverifyinfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::UserVerifyInfoV1&>(::proto::_UserVerifyInfoV1_default_instance_);
+}
+inline const ::proto::UserVerifyInfoV1& GetProjectsDefinedSomaSwcRequest::userverifyinfo() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:proto.GetProjectsDefinedSomaSwcRequest.UserVerifyInfo)
+  return _internal_userverifyinfo();
+}
+inline void GetProjectsDefinedSomaSwcRequest::unsafe_arena_set_allocated_userverifyinfo(::proto::UserVerifyInfoV1* value) {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  if (GetArena() == nullptr) {
+    delete reinterpret_cast<::google::protobuf::MessageLite*>(_impl_.userverifyinfo_);
+  }
+  _impl_.userverifyinfo_ = reinterpret_cast<::proto::UserVerifyInfoV1*>(value);
+  if (value != nullptr) {
+    _impl_._has_bits_[0] |= 0x00000002u;
+  } else {
+    _impl_._has_bits_[0] &= ~0x00000002u;
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.GetProjectsDefinedSomaSwcRequest.UserVerifyInfo)
+}
+inline ::proto::UserVerifyInfoV1* GetProjectsDefinedSomaSwcRequest::release_userverifyinfo() {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+
+  _impl_._has_bits_[0] &= ~0x00000002u;
+  ::proto::UserVerifyInfoV1* released = _impl_.userverifyinfo_;
+  _impl_.userverifyinfo_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old = reinterpret_cast<::google::protobuf::MessageLite*>(released);
+  released = ::google::protobuf::internal::DuplicateIfNonNull(released);
+  if (GetArena() == nullptr) {
+    delete old;
+  }
+#else   // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArena() != nullptr) {
+    released = ::google::protobuf::internal::DuplicateIfNonNull(released);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return released;
+}
+inline ::proto::UserVerifyInfoV1* GetProjectsDefinedSomaSwcRequest::unsafe_arena_release_userverifyinfo() {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  // @@protoc_insertion_point(field_release:proto.GetProjectsDefinedSomaSwcRequest.UserVerifyInfo)
+
+  _impl_._has_bits_[0] &= ~0x00000002u;
+  ::proto::UserVerifyInfoV1* temp = _impl_.userverifyinfo_;
+  _impl_.userverifyinfo_ = nullptr;
+  return temp;
+}
+inline ::proto::UserVerifyInfoV1* GetProjectsDefinedSomaSwcRequest::_internal_mutable_userverifyinfo() {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  _impl_._has_bits_[0] |= 0x00000002u;
+  if (_impl_.userverifyinfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::UserVerifyInfoV1>(GetArena());
+    _impl_.userverifyinfo_ = reinterpret_cast<::proto::UserVerifyInfoV1*>(p);
+  }
+  return _impl_.userverifyinfo_;
+}
+inline ::proto::UserVerifyInfoV1* GetProjectsDefinedSomaSwcRequest::mutable_userverifyinfo() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  ::proto::UserVerifyInfoV1* _msg = _internal_mutable_userverifyinfo();
+  // @@protoc_insertion_point(field_mutable:proto.GetProjectsDefinedSomaSwcRequest.UserVerifyInfo)
+  return _msg;
+}
+inline void GetProjectsDefinedSomaSwcRequest::set_allocated_userverifyinfo(::proto::UserVerifyInfoV1* value) {
+  ::google::protobuf::Arena* message_arena = GetArena();
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  if (message_arena == nullptr) {
+    delete reinterpret_cast<::google::protobuf::MessageLite*>(_impl_.userverifyinfo_);
+  }
+
+  if (value != nullptr) {
+    ::google::protobuf::Arena* submessage_arena = reinterpret_cast<::google::protobuf::MessageLite*>(value)->GetArena();
+    if (message_arena != submessage_arena) {
+      value = ::google::protobuf::internal::GetOwnedMessage(message_arena, value, submessage_arena);
+    }
+    _impl_._has_bits_[0] |= 0x00000002u;
+  } else {
+    _impl_._has_bits_[0] &= ~0x00000002u;
+  }
+
+  _impl_.userverifyinfo_ = reinterpret_cast<::proto::UserVerifyInfoV1*>(value);
+  // @@protoc_insertion_point(field_set_allocated:proto.GetProjectsDefinedSomaSwcRequest.UserVerifyInfo)
+}
+
+// repeated string ProjectUuid = 3;
+inline int GetProjectsDefinedSomaSwcRequest::_internal_projectuuid_size() const {
+  return _internal_projectuuid().size();
+}
+inline int GetProjectsDefinedSomaSwcRequest::projectuuid_size() const {
+  return _internal_projectuuid_size();
+}
+inline void GetProjectsDefinedSomaSwcRequest::clear_projectuuid() {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  _impl_.projectuuid_.Clear();
+}
+inline std::string* GetProjectsDefinedSomaSwcRequest::add_projectuuid()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  std::string* _s = _internal_mutable_projectuuid()->Add();
+  // @@protoc_insertion_point(field_add_mutable:proto.GetProjectsDefinedSomaSwcRequest.ProjectUuid)
+  return _s;
+}
+inline const std::string& GetProjectsDefinedSomaSwcRequest::projectuuid(int index) const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:proto.GetProjectsDefinedSomaSwcRequest.ProjectUuid)
+  return _internal_projectuuid().Get(index);
+}
+inline std::string* GetProjectsDefinedSomaSwcRequest::mutable_projectuuid(int index)
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_mutable:proto.GetProjectsDefinedSomaSwcRequest.ProjectUuid)
+  return _internal_mutable_projectuuid()->Mutable(index);
+}
+inline void GetProjectsDefinedSomaSwcRequest::set_projectuuid(int index, const std::string& value) {
+  _internal_mutable_projectuuid()->Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set:proto.GetProjectsDefinedSomaSwcRequest.ProjectUuid)
+}
+inline void GetProjectsDefinedSomaSwcRequest::set_projectuuid(int index, std::string&& value) {
+  _internal_mutable_projectuuid()->Mutable(index)->assign(std::move(value));
+  // @@protoc_insertion_point(field_set:proto.GetProjectsDefinedSomaSwcRequest.ProjectUuid)
+}
+inline void GetProjectsDefinedSomaSwcRequest::set_projectuuid(int index, const char* value) {
+  ABSL_DCHECK(value != nullptr);
+  _internal_mutable_projectuuid()->Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:proto.GetProjectsDefinedSomaSwcRequest.ProjectUuid)
+}
+inline void GetProjectsDefinedSomaSwcRequest::set_projectuuid(int index, const char* value,
+                              std::size_t size) {
+  _internal_mutable_projectuuid()->Mutable(index)->assign(
+      reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_set_pointer:proto.GetProjectsDefinedSomaSwcRequest.ProjectUuid)
+}
+inline void GetProjectsDefinedSomaSwcRequest::set_projectuuid(int index, absl::string_view value) {
+  _internal_mutable_projectuuid()->Mutable(index)->assign(value.data(),
+                                                     value.size());
+  // @@protoc_insertion_point(field_set_string_piece:proto.GetProjectsDefinedSomaSwcRequest.ProjectUuid)
+}
+inline void GetProjectsDefinedSomaSwcRequest::add_projectuuid(const std::string& value) {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  _internal_mutable_projectuuid()->Add()->assign(value);
+  // @@protoc_insertion_point(field_add:proto.GetProjectsDefinedSomaSwcRequest.ProjectUuid)
+}
+inline void GetProjectsDefinedSomaSwcRequest::add_projectuuid(std::string&& value) {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  _internal_mutable_projectuuid()->Add(std::move(value));
+  // @@protoc_insertion_point(field_add:proto.GetProjectsDefinedSomaSwcRequest.ProjectUuid)
+}
+inline void GetProjectsDefinedSomaSwcRequest::add_projectuuid(const char* value) {
+  ABSL_DCHECK(value != nullptr);
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  _internal_mutable_projectuuid()->Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:proto.GetProjectsDefinedSomaSwcRequest.ProjectUuid)
+}
+inline void GetProjectsDefinedSomaSwcRequest::add_projectuuid(const char* value, std::size_t size) {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  _internal_mutable_projectuuid()->Add()->assign(
+      reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:proto.GetProjectsDefinedSomaSwcRequest.ProjectUuid)
+}
+inline void GetProjectsDefinedSomaSwcRequest::add_projectuuid(absl::string_view value) {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  _internal_mutable_projectuuid()->Add()->assign(value.data(), value.size());
+  // @@protoc_insertion_point(field_add_string_piece:proto.GetProjectsDefinedSomaSwcRequest.ProjectUuid)
+}
+inline const ::google::protobuf::RepeatedPtrField<std::string>&
+GetProjectsDefinedSomaSwcRequest::projectuuid() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_list:proto.GetProjectsDefinedSomaSwcRequest.ProjectUuid)
+  return _internal_projectuuid();
+}
+inline ::google::protobuf::RepeatedPtrField<std::string>*
+GetProjectsDefinedSomaSwcRequest::mutable_projectuuid() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_mutable_list:proto.GetProjectsDefinedSomaSwcRequest.ProjectUuid)
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  return _internal_mutable_projectuuid();
+}
+inline const ::google::protobuf::RepeatedPtrField<std::string>&
+GetProjectsDefinedSomaSwcRequest::_internal_projectuuid() const {
+  PROTOBUF_TSAN_READ(&_impl_._tsan_detect_race);
+  return _impl_.projectuuid_;
+}
+inline ::google::protobuf::RepeatedPtrField<std::string>*
+GetProjectsDefinedSomaSwcRequest::_internal_mutable_projectuuid() {
+  PROTOBUF_TSAN_READ(&_impl_._tsan_detect_race);
+  return &_impl_.projectuuid_;
 }
 
 #ifdef __GNUC__
